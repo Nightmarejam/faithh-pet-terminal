@@ -1,0 +1,137 @@
+version: '3.8'
+
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['1']
+              capabilities: [gpu]
+        limits:
+          memory: 28G
+    volumes:
+      - ollama_models:/root/.ollama
+      - /home/jonat/ai-stack/models/active:/models:ro
+      - /home/jonat/ai-stack/configs:/configs:ro
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+      - OLLAMA_NUM_PARALLEL=2
+      - OLLAMA_MAX_LOADED_MODELS=2
+      - OLLAMA_ORIGINS=*
+    ports:
+      - "11434:11434"
+
+  ollama-embed:
+    image: ollama/ollama:latest
+    container_name: ollama-embed
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['0']
+              capabilities: [gpu]
+        limits:
+          memory: 12G
+    volumes:
+      - ollama_embed_models:/root/.ollama
+      - /home/jonat/ai-stack/models/active:/models:ro
+      - /home/jonat/ai-stack/configs:/configs:ro
+    environment:
+      - OLLAMA_KEEP_ALIVE=24h
+      - OLLAMA_ORIGINS=*
+    ports:
+      - "11435:11434"
+
+  ollama-qwen:
+    image: ollama/ollama:latest
+    container_name: ollama-qwen
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['1']
+              capabilities: [gpu]
+        limits:
+          memory: 32G
+    volumes:
+      - ollama_qwen_models:/root/.ollama
+      - /home/jonat/ai-stack/models/active:/models:ro
+      - /home/jonat/ai-stack/configs:/configs:ro
+    environment:
+      - OLLAMA_KEEP_ALIVE=1h
+      - OLLAMA_NUM_PARALLEL=1
+      - OLLAMA_MAX_LOADED_MODELS=1
+      - OLLAMA_ORIGINS=*
+    ports:
+      - "11436:11434"
+
+  langflow:
+    image: langflowai/langflow:latest
+    container_name: langflow
+    restart: unless-stopped
+    depends_on:
+      - ollama
+      - postgres
+    ports:
+      - "7860:7860"
+    volumes:
+      - langflow_data:/app/langflow
+    environment:
+      - LANGFLOW_DATABASE_URL=postgresql://langflow:langflow@postgres:5432/langflow
+      - PYTHONWARNINGS=ignore::ResourceWarning
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=langflow
+      - POSTGRES_PASSWORD=langflow
+      - POSTGRES_DB=langflow
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chromadb
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      - chromadb_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=FALSE
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+
+volumes:
+  ollama_models:
+  ollama_embed_models:
+  ollama_qwen_models:
+  langflow_data:
+  postgres_data:
+  chromadb_data:
+
+networks:
+  default:
+    name: ai-stack

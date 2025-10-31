@@ -32,6 +32,7 @@ secrets.json
 # OS
 .DS_Store
 Thumbs.db
+*.Zone.Identifier
 
 # Large files
 *.mp4
@@ -42,3 +43,34 @@ Thumbs.db
 tmp/
 temp/
 *.tmp
+
+# Optional: Export folders (if you don't want to track them)
+ChatGPT_exports/
+ClaudeChat_exports/
+GrokChat_exports/
+
+# Server
+.server.pid
+
+# Backups
+*.backup
+*.bak
+
+# Databases
+data/
+cache/
+faithh_rag/
+chroma.sqlite3
+*.sqlite3
+
+# Models
+models/
+
+# Test/diagnostic files
+test_*.py
+*_diagnostic.py
+find-*.sh
+
+# Old versions
+*_backup.*
+*.backup
