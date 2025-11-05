@@ -4,3 +4,13 @@ flask-sock>=0.6.0
 google-generativeai>=0.3.0
 pyyaml>=6.0
 requests>=2.31.0
+
+# RAG Dependencies
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# Streamlit UI
+streamlit>=1.28.0
+
+# Additional utilities
+python-dotenv>=1.0.0
