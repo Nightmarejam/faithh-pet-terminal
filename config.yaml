@@ -1,0 +1,63 @@
+# FAITHH Tool System Configuration
+# Battle Chip execution and security settings
+
+security:
+  # Allowed directories for file operations
+  allowed_directories:
+    - /home/jonat/ai-stack
+    - /home/jonat/faithh
+    - /tmp/faithh
+  
+  # Blocked shell commands for safety
+  blocked_commands:
+    - rm
+    - dd
+    - mkfs
+    - format
+    - fdisk
+    - shutdown
+    - reboot
+    - halt
+  
+  # Default permissions for tools
+  default_permissions:
+    - file.read
+    - process.read
+    - rag.query
+
+# Tool execution settings
+tools:
+  execution_timeout_ms: 30000
+  max_concurrent_executions: 5
+  enable_combos: true
+  combo_bonus_multiplier: 1.5
+
+# API configuration
+api:
+  host: localhost
+  port: 5555
+  websocket_path: /ws/tools
+  enable_cors: true
+  allowed_origins:
+    - http://localhost:8080
+    - http://127.0.0.1:8080
+
+# Logging configuration
+logging:
+  level: INFO
+  file: logs/tool_execution.log
+  max_file_size_mb: 10
+  backup_count: 5
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+
+# AI Provider configuration
+ai:
+  primary_provider: gemini
+  fallback_provider: ollama
+  gemini:
+    model: gemini-2.0-flash-exp
+    temperature: 0.7
+    max_tokens: 2048
+  ollama:
+    model: mistral:latest
+    base_url: http://localhost:11434
