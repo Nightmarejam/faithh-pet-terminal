@@ -74,3 +74,24 @@ find-*.sh
 # Old versions
 *_backup.*
 *.backup
+# Additional safety items
+*.pid
+.backend.pid
+.server.pid
+
+# Uploads
+uploads/
+
+# Backups folder
+backups/
+
+# ComfyUI and Stable Diffusion (in parent directory)
+../ComfyUI/
+../stable-diffusion-webui/
+
+# Node modules if any
+node_modules/
+
+# Large temporary files
+file_list_*.txt
+discovery_*.txt

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAITHH - AI Assistant v4</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --secondary: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-medium: #1e293b;
+            --bg-light: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #475569;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Main Layout */
+        .app-container {
+            display: grid;
+            grid-template-columns: 300px 1fr 350px;
+            grid-template-rows: 60px 1fr;
+            height: 100vh;
+            gap: 1px;
+            background: var(--border);
+        }
+
+        /* Header */
+        .header {
+            grid-column: 1 / -1;
+            background: var(--bg-medium);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: var(--bg-light);
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .header-right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        /* Model Selector */
+        .model-selector {
+            position: relative;
+        }
+
+        .model-selector select {
+            background: var(--bg-light);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 8px 35px 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+
+        .model-selector select:focus {
+            outline: 2px solid var(--primary);
+            outline-offset: 2px;
+        }
+
+        /* Sidebar - Chat History */
+        .sidebar {
+            background: var(--bg-medium);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sidebar-header h2 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .new-chat-btn {
+            width: 100%;
+            padding: 10px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .new-chat-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        .chat-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .chat-item {
+            padding: 12px;
+            margin-bottom: 6px;
+            background: var(--bg-light);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .chat-item:hover {
+            background: var(--bg-dark);
+        }
+
+        .chat-item.active {
+            background: var(--primary);
+        }
+
+        /* Main Chat Area */
+        .main-content {
+            background: var(--bg-medium);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .messages-container {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 12px;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .user-avatar {
+            background: var(--primary);
+        }
+
+        .assistant-avatar {
+            background: var(--success);
+        }
+
+        .message-content {
+            flex: 1;
+            background: var(--bg-light);
+            padding: 12px 16px;
+            border-radius: 12px;
+            line-height: 1.6;
+        }
+
+        .message-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .message.user .message-content {
+            background: var(--primary);
+        }
+
+        /* Input Area */
+        .input-area {
+            padding: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .input-container {
+            display: flex;
+            gap: 10px;
+            background: var(--bg-light);
+            padding: 12px;
+            border-radius: 12px;
+            border: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .input-container:focus-within {
+            border-color: var(--primary);
+        }
+
+        .input-container textarea {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 15px;
+            font-family: inherit;
+            resize: none;
+            outline: none;
+            max-height: 200px;
+        }
+
+        .input-container textarea::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+            align-self: flex-end;
+        }
+
+        .send-btn:hover:not(:disabled) {
+            background: var(--primary-hover);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Context Panel */
+        .context-panel {
+            background: var(--bg-medium);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .context-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .context-header h2 {
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+
+        .context-subtitle {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .context-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .context-tab {
+            flex: 1;
+            padding: 12px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .context-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .context-tab:hover {
+            background: var(--bg-light);
+        }
+
+        .context-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+        }
+
+        .context-item {
+            background: var(--bg-light);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .context-item-title {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-primary);
+        }
+
+        .context-item-value {
+            color: var(--text-secondary);
+            font-size: 12px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background: var(--bg-light);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: flex;
+            gap: 4px;
+            padding: 12px 16px;
+        }
+
+        .loading-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--text-secondary);
+            animation: loadingDots 1.4s infinite ease-in-out both;
+        }
+
+        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loadingDots {
+            0%, 80%, 100% { opacity: 0.3; }
+            40% { opacity: 1; }
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--bg-light);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--border);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .context-panel {
+                display: none;
+            }
+            .app-container {
+                grid-template-columns: 250px 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .app-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div class="logo">⚡ FAITHH</div>
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span id="status-text">Connected</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="model-selector">
+                    <select id="model-select">
+                        <option value="gemini-pro">Gemini Pro</option>
+                        <option value="gemini-flash">Gemini Flash</option>
+                        <option value="ollama-llama2">Ollama Llama 2</option>
+                        <option value="ollama-mistral">Ollama Mistral</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar - Chat History -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Conversations</h2>
+                <button class="new-chat-btn" onclick="app.newChat()">+ New Chat</button>
+            </div>
+            <div class="chat-list" id="chat-list">
+                <div class="chat-item active">Current Session</div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-content">
+            <div class="messages-container" id="messages">
+                <div class="message assistant">
+                    <div class="message-avatar assistant-avatar">F</div>
+                    <div class="message-content">
+                        <div class="message-meta">FAITHH • Just now</div>
+                        <div>Hello! I'm FAITHH, your AI assistant. I have access to 91,302 documents in my knowledge base. How can I help you today?</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-container">
+                    <textarea 
+                        id="user-input" 
+                        placeholder="Ask me anything..." 
+                        rows="1"
+                        onkeydown="app.handleKeyPress(event)"
+                    ></textarea>
+                    <button class="send-btn" onclick="app.sendMessage()" id="send-btn">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Context Panel -->
+        <div class="context-panel">
+            <div class="context-header">
+                <h2>Context</h2>
+                <div class="context-subtitle">Active session information</div>
+            </div>
+            <div class="context-tabs">
+                <button class="context-tab active" onclick="app.switchTab('stats')">Stats</button>
+                <button class="context-tab" onclick="app.switchTab('rag')">RAG</button>
+                <button class="context-tab" onclick="app.switchTab('system')">System</button>
+            </div>
+            <div class="context-content" id="context-content">
+                <!-- Stats Tab (default) -->
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="message-count">0</div>
+                        <div class="stat-label">Messages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="token-count">0</div>
+                        <div class="stat-label">Tokens</div>
+                    </div>
+                </div>
+                <div class="context-item">
+                    <div class="context-item-title">Session Started</div>
+                    <div class="context-item-value" id="session-time">Just now</div>
+                </div>
+                <div class="context-item">
+                    <div class="context-item-title">Model</div>
+                    <div class="context-item-value" id="current-model">Gemini Pro</div>
+                </div>
+                <div class="context-item">
+                    <div class="context-item-title">ChromaDB Status</div>
+                    <div class="context-item-value" id="chromadb-status">91,302 documents loaded</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Application State
+        const app = {
+            config: {
+                backendUrl: 'http://localhost:5557',
+                endpoints: {
+                    chat: '/chat',
+                    search: '/search',
+                    status: '/status',
+                    models: '/models'
+                }
+            },
+            state: {
+                messages: [],
+                messageCount: 0,
+                tokenCount: 0,
+                sessionStart: new Date(),
+                currentModel: 'gemini-pro',
+                isProcessing: false
+            },
+
+            // Initialize app
+            async init() {
+                console.log('🚀 Initializing FAITHH UI v4...');
+                this.setupEventListeners();
+                await this.checkBackendStatus();
+                this.updateSessionTime();
+                setInterval(() => this.updateSessionTime(), 60000); // Update every minute
+            },
+
+            // Setup event listeners
+            setupEventListeners() {
+                const modelSelect = document.getElementById('model-select');
+                modelSelect.addEventListener('change', (e) => {
+                    this.state.currentModel = e.target.value;
+                    document.getElementById('current-model').textContent = 
+                        e.target.options[e.target.selectedIndex].text;
+                    console.log('Model changed to:', this.state.currentModel);
+                });
+
+                // Auto-resize textarea
+                const textarea = document.getElementById('user-input');
+                textarea.addEventListener('input', function() {
+                    this.style.height = 'auto';
+                    this.style.height = Math.min(this.scrollHeight, 200) + 'px';
+                });
+            },
+
+            // Check backend connection
+            async checkBackendStatus() {
+                try {
+                    const response = await fetch(`${this.config.backendUrl}${this.config.endpoints.status}`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        this.updateStatus('connected', 'Connected');
+                        console.log('✅ Backend connected:', data);
+                        return data;
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Backend not available:', error.message);
+                    this.updateStatus('disconnected', 'Offline Mode');
+                }
+                return null;
+            },
+
+            // Update connection status
+            updateStatus(status, text) {
+                const statusDot = document.querySelector('.status-dot');
+                const statusText = document.getElementById('status-text');
+                
+                if (status === 'connected') {
+                    statusDot.style.background = 'var(--success)';
+                } else {
+                    statusDot.style.background = 'var(--danger)';
+                }
+                statusText.textContent = text;
+            },
+
+            // Handle keyboard shortcuts
+            handleKeyPress(event) {
+                if (event.key === 'Enter' && !event.shiftKey) {
+                    event.preventDefault();
+                    this.sendMessage();
+                }
+            },
+
+            // Send message
+            async sendMessage() {
+                const input = document.getElementById('user-input');
+                const message = input.value.trim();
+                
+                if (!message || this.state.isProcessing) return;
+
+                // Add user message
+                this.addMessage('user', message);
+                input.value = '';
+                input.style.height = 'auto';
+                
+                // Update UI
+                this.state.isProcessing = true;
+                this.updateSendButton(false);
+                
+                // Show loading
+                const loadingId = this.addLoadingMessage();
+                
+                try {
+                    // Call backend
+                    const response = await this.callBackend(message);
+                    
+                    // Remove loading
+                    this.removeMessage(loadingId);
+                    
+                    // Add assistant response
+                    this.addMessage('assistant', response.text || response.message || 'I received your message.');
+                    
+                    // Update stats
+                    this.updateStats(response);
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    this.removeMessage(loadingId);
+                    this.addMessage('assistant', '⚠️ Sorry, I encountered an error. Please check the console for details.');
+                } finally {
+                    this.state.isProcessing = false;
+                    this.updateSendButton(true);
+                }
+            },
+
+            // Call backend API
+            async callBackend(message) {
+                // Try to connect to real backend
+                try {
+                    const response = await fetch(`${this.config.backendUrl}${this.config.endpoints.chat}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            message: message,
+                            model: this.state.currentModel,
+                            use_rag: true
+                        })
+                    });
+
+                    if (response.ok) {
+                        return await response.json();
+                    }
+                    
+                    throw new Error(`Backend returned ${response.status}`);
+                    
+                } catch (error) {
+                    console.warn('Backend call failed, using mock response:', error.message);
+                    
+                    // Mock response for demo/development
+                    return {
+                        text: `I received your message: "${message}". (Backend connection not available - this is a mock response. Real backend should be at ${this.config.backendUrl})`,
+                        tokens: Math.floor(message.length * 1.3),
+                        sources: []
+                    };
+                }
+            },
+
+            // Add message to chat
+            addMessage(role, content) {
+                const messagesContainer = document.getElementById('messages');
+                const messageId = Date.now();
+                
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message ${role}`;
+                messageDiv.id = `msg-${messageId}`;
+                
+                const avatar = role === 'user' ? 'U' : 'F';
+                const avatarClass = role === 'user' ? 'user-avatar' : 'assistant-avatar';
+                const roleName = role === 'user' ? 'You' : 'FAITHH';
+                
+                messageDiv.innerHTML = `
+                    <div class="message-avatar ${avatarClass}">${avatar}</div>
+                    <div class="message-content">
+                        <div class="message-meta">${roleName} • Just now</div>
+                        <div>${this.formatMessage(content)}</div>
+                    </div>
+                `;
+                
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                this.state.messages.push({ role, content, timestamp: new Date() });
+                this.state.messageCount++;
+                document.getElementById('message-count').textContent = this.state.messageCount;
+                
+                return messageId;
+            },
+
+            // Add loading message
+            addLoadingMessage() {
+                const messagesContainer = document.getElementById('messages');
+                const loadingId = Date.now();
+                
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message assistant';
+                messageDiv.id = `msg-${loadingId}`;
+                
+                messageDiv.innerHTML = `
+                    <div class="message-avatar assistant-avatar">F</div>
+                    <div class="message-content">
+                        <div class="loading">
+                            <div class="loading-dot"></div>
+                            <div class="loading-dot"></div>
+                            <div class="loading-dot"></div>
+                        </div>
+                    </div>
+                `;
+                
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                
+                return loadingId;
+            },
+
+            // Remove message
+            removeMessage(messageId) {
+                const messageElement = document.getElementById(`msg-${messageId}`);
+                if (messageElement) {
+                    messageElement.remove();
+                }
+            },
+
+            // Format message text
+            formatMessage(text) {
+                // Basic formatting - could be enhanced with markdown parser
+                return text
+                    .replace(/\n/g, '<br>')
+                    .replace(/`([^`]+)`/g, '<code>$1</code>');
+            },
+
+            // Update send button state
+            updateSendButton(enabled) {
+                const btn = document.getElementById('send-btn');
+                btn.disabled = !enabled;
+                btn.textContent = enabled ? 'Send' : 'Sending...';
+            },
+
+            // Update statistics
+            updateStats(response) {
+                if (response.tokens) {
+                    this.state.tokenCount += response.tokens;
+                    document.getElementById('token-count').textContent = 
+                        this.state.tokenCount.toLocaleString();
+                }
+            },
+
+            // Update session time
+            updateSessionTime() {
+                const elapsed = Date.now() - this.state.sessionStart;
+                const minutes = Math.floor(elapsed / 60000);
+                const hours = Math.floor(minutes / 60);
+                
+                let timeText = 'Just now';
+                if (hours > 0) {
+                    timeText = `${hours}h ${minutes % 60}m ago`;
+                } else if (minutes > 0) {
+                    timeText = `${minutes}m ago`;
+                }
+                
+                document.getElementById('session-time').textContent = timeText;
+            },
+
+            // Switch context tabs
+            switchTab(tab) {
+                // Update tab buttons
+                document.querySelectorAll('.context-tab').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                event.target.classList.add('active');
+
+                // Update content based on tab
+                const content = document.getElementById('context-content');
+                
+                if (tab === 'stats') {
+                    content.innerHTML = `
+                        <div class="stat-grid">
+                            <div class="stat-card">
+                                <div class="stat-value" id="message-count">${this.state.messageCount}</div>
+                                <div class="stat-label">Messages</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value" id="token-count">${this.state.tokenCount}</div>
+                                <div class="stat-label">Tokens</div>
+                            </div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">Session Started</div>
+                            <div class="context-item-value" id="session-time">Just now</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">Model</div>
+                            <div class="context-item-value" id="current-model">${document.getElementById('model-select').options[document.getElementById('model-select').selectedIndex].text}</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">ChromaDB Status</div>
+                            <div class="context-item-value" id="chromadb-status">91,302 documents loaded</div>
+                        </div>
+                    `;
+                    this.updateSessionTime();
+                } else if (tab === 'rag') {
+                    content.innerHTML = `
+                        <div class="context-item">
+                            <div class="context-item-title">RAG Status</div>
+                            <div class="context-item-value">Active</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">Documents</div>
+                            <div class="context-item-value">91,302 indexed</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">Last Query</div>
+                            <div class="context-item-value">None yet</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">Retrieved Sources</div>
+                            <div class="context-item-value">0</div>
+                        </div>
+                    `;
+                } else if (tab === 'system') {
+                    content.innerHTML = `
+                        <div class="context-item">
+                            <div class="context-item-title">Backend</div>
+                            <div class="context-item-value">localhost:5557</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">Version</div>
+                            <div class="context-item-value">v4.0</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">ChromaDB</div>
+                            <div class="context-item-value">Running</div>
+                        </div>
+                        <div class="context-item">
+                            <div class="context-item-title">Memory</div>
+                            <div class="context-item-value">~120MB</div>
+                        </div>
+                    `;
+                }
+            },
+
+            // New chat
+            newChat() {
+                if (confirm('Start a new conversation? Current chat will be saved.')) {
+                    this.state.messages = [];
+                    this.state.messageCount = 0;
+                    this.state.tokenCount = 0;
+                    this.state.sessionStart = new Date();
+                    
+                    document.getElementById('messages').innerHTML = `
+                        <div class="message assistant">
+                            <div class="message-avatar assistant-avatar">F</div>
+                            <div class="message-content">
+                                <div class="message-meta">FAITHH • Just now</div>
+                                <div>Hello! I'm FAITHH, your AI assistant. I have access to 91,302 documents in my knowledge base. How can I help you today?</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    this.switchTab('stats');
+                    console.log('🆕 New chat started');
+                }
+            }
+        };
+
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => app.init());
+        } else {
+            app.init();
+        }
+    </script>
+</body>
+</html>

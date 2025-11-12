@@ -996,12 +996,14 @@
         });
 
         // Chat functionality
-        function sendMessage() {
+        async function sendMessage() {
             const input = document.getElementById('chatInput');
             const message = input.value.trim();
             
             if (message) {
                 const chatDisplay = document.getElementById('chatDisplay');
+                
+                // Add user message
                 const messageDiv = document.createElement('div');
                 messageDiv.className = 'message';
                 messageDiv.innerHTML = `
@@ -1013,17 +1015,58 @@
                 
                 input.value = '';
                 
-                // Simulate FAITHH response
-                setTimeout(() => {
+                // Show typing indicator
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'message typing-indicator';
+                typingDiv.innerHTML = `
+                    <div class="message-header">FAITHH</div>
+                    <div class="message-content">Processing...</div>
+                `;
+                chatDisplay.appendChild(typingDiv);
+                chatDisplay.scrollTop = chatDisplay.scrollHeight;
+                
+                try {
+                    // Send to backend
+                    const response = await fetch('http://localhost:5557/api/chat', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            message: message,
+                            model: 'llama3.1-8b'  // Default model
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    // Remove typing indicator
+                    chatDisplay.removeChild(typingDiv);
+                    
+                    // Add FAITHH response
                     const responseDiv = document.createElement('div');
                     responseDiv.className = 'message';
                     responseDiv.innerHTML = `
                         <div class="message-header">FAITHH</div>
-                        <div class="message-content">Processing your request...</div>
+                        <div class="message-content">${data.response || 'No response received'}</div>
                     `;
                     chatDisplay.appendChild(responseDiv);
                     chatDisplay.scrollTop = chatDisplay.scrollHeight;
-                }, 500);
+                    
+                } catch (error) {
+                    // Remove typing indicator
+                    chatDisplay.removeChild(typingDiv);
+                    
+                    // Show error message
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'message';
+                    errorDiv.innerHTML = `
+                        <div class="message-header">SYSTEM</div>
+                        <div class="message-content" style="color: #ff6666;">Connection error. Please ensure the backend is running on port 5557.</div>
+                    `;
+                    chatDisplay.appendChild(errorDiv);
+                    chatDisplay.scrollTop = chatDisplay.scrollHeight;
+                }
             }
         }
 
@@ -1041,6 +1084,38 @@
                 this.classList.add('active');
             });
         });
+
+        // Check system status
+        async function checkSystemStatus() {
+            try {
+                const response = await fetch('http://localhost:5557/api/status');
+                const data = await response.json();
+                
+                if (data.success && data.services) {
+                    // Update status display
+                    const statusList = document.querySelector('.status-list');
+                    statusList.innerHTML = '';
+                    
+                    for (const [service, status] of Object.entries(data.services)) {
+                        const statusItem = document.createElement('div');
+                        statusItem.className = 'status-item';
+                        const statusIcon = status === 'online' || status === 'configured' ? '●' : '○';
+                        const statusColor = status === 'online' || status === 'configured' ? '' : 'style="color: #ff6666;"';
+                        statusItem.innerHTML = `
+                            <span class="status-name">${service}</span>
+                            <span class="status-value" ${statusColor}>${statusIcon} ${status.toUpperCase()}</span>
+                        `;
+                        statusList.appendChild(statusItem);
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to check status:', error);
+            }
+        }
+        
+        // Check status on load and every 30 seconds
+        checkSystemStatus();
+        setInterval(checkSystemStatus, 30000);
     </script>
 </body>
 </html>

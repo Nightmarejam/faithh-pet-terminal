@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET TERMINAL v4.0</title>
+    
+    <!-- ========================================
+         CONFIGURATION SECTION
+         Easy to update settings in one place
+         ======================================== -->
+    <script>
+        // UI Configuration - Update these values to customize behavior
+        const UI_CONFIG = {
+            // Backend connection
+            backend: {
+                url: 'http://localhost:5557',
+                endpoints: {
+                    chat: '/api/chat',
+                    status: '/api/status',
+                    search: '/api/search'
+                },
+                timeout: 30000
+            },
+            
+            // Model settings
+            models: {
+                default: 'gemini-pro',
+                available: [
+                    { id: 'gemini-pro', name: 'GEMINI PRO', color: '#00ffff' },
+                    { id: 'gemini-flash', name: 'GEMINI FLASH', color: '#ffa500' },
+                    { id: 'llama3.1-8b', name: 'LLAMA 3.1', color: '#b44cff' },
+                    { id: 'mistral', name: 'MISTRAL', color: '#ff6666' }
+                ]
+            },
+            
+            // Feature toggles
+            features: {
+                rag: true,              // Enable RAG by default
+                autoScroll: true,       // Auto-scroll chat
+                soundEffects: false,    // Sound effects (future)
+                saveHistory: true       // Save chat to localStorage
+            },
+            
+            // UI behavior
+            ui: {
+                typingDelay: 50,        // Typing animation speed (ms)
+                messageDelay: 500,      // Delay before showing response
+                maxMessages: 100,       // Max messages to keep in memory
+                statusCheckInterval: 30000  // Check backend status every 30s
+            },
+            
+            // Customization
+            theme: {
+                primaryColor: '#00ffff',
+                secondaryColor: '#ffa500',
+                accentColor: '#b44cff',
+                errorColor: '#ff6666',
+                successColor: '#00ff00'
+            }
+        };
+    </script>
+    
+    <style>
+        /* ===================================
+           BASE STYLES
+           Core styles - minimal changes needed
+           =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #00ffff;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* ===================================
+           SCANLINE EFFECTS
+           Classic CRT monitor feel
+           =================================== */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 255, 255, 0.05) 0px,
+                rgba(0, 255, 255, 0.05) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.2) 0px,
+                transparent 1px,
+                transparent 3px
+            );
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        /* ===================================
+           CORNER ACCENT SYSTEM
+           Signature PET terminal corners
+           =================================== */
+        .corner-accent {
+            position: relative;
+        }
+
+        .corner-accent::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 25px;
+            height: 25px;
+            border-top: 3px solid #00ffff;
+            border-left: 3px solid #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+            z-index: 10;
+        }
+
+        .corner-accent::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            width: 25px;
+            height: 25px;
+            border-top: 3px solid #00ffff;
+            border-right: 3px solid #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+            z-index: 10;
+        }
+
+        .corner-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 25px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .corner-bottom::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: -3px;
+            width: 25px;
+            height: 25px;
+            border-bottom: 3px solid #00ffff;
+            border-left: 3px solid #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        }
+
+        .corner-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            width: 25px;
+            height: 25px;
+            border-bottom: 3px solid #00ffff;
+            border-right: 3px solid #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+        }
+
+        /* ===================================
+           MAIN CONTAINER
+           =================================== */
+        .pet-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(10, 14, 39, 0.95);
+            border: 3px solid #3b5a9d;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 
+                0 0 30px rgba(59, 90, 157, 0.5),
+                inset 0 0 50px rgba(0, 0, 0, 0.3);
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes subtle-pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(59, 90, 157, 0.5), inset 0 0 50px rgba(0, 0, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(59, 90, 157, 0.7), inset 0 0 50px rgba(0, 0, 0, 0.3); }
+        }
+
+        /* ===================================
+           HEADER COMPONENT
+           Top navigation with clock and status
+           =================================== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(59, 90, 157, 0.2);
+            border: 2px solid #3b5a9d;
+            border-radius: 10px;
+        }
+
+        .pet-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffa500;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        .status-dot.offline {
+            background: #ff6666;
+            animation: none;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .terminal-title {
+            font-size: 28px;
+            letter-spacing: 4px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .clock {
+            font-size: 18px;
+            color: #ffa500;
+            letter-spacing: 2px;
+        }
+
+        /* ===================================
+           MODEL SELECTOR COMPONENT - NEW!
+           Choose AI model from dropdown
+           =================================== */
+        .model-selector-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #ffa500;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .model-selector-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .model-selector-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #ffa500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .model-select {
+            background: rgba(59, 90, 157, 0.3);
+            border: 2px solid #ffa500;
+            border-radius: 8px;
+            color: #00ffff;
+            padding: 8px 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .model-select:hover {
+            background: rgba(59, 90, 157, 0.5);
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+
+        .model-select option {
+            background: #0a0e27;
+            color: #00ffff;
+        }
+
+        .model-info {
+            font-size: 11px;
+            color: #8899aa;
+            margin-top: 5px;
+        }
+
+        /* ===================================
+           TOP SECTION (Stats + Avatar)
+           MegaMan.EXE and PULSE displays
+           =================================== */
+        .top-section {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stats-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .stat-card {
+            background: rgba(59, 90, 157, 0.3);
+            border: 2px solid #3b5a9d;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(59, 90, 157, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .stat-value {
+            font-size: 32px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #8899aa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .mega-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #ffa500;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .mega-label {
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            font-size: 10px;
+            color: #ffa500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .mega-avatar-container {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(0, 255, 255, 0.2));
+            border: 3px solid #ffa500;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+        }
+
+        .mega-name {
+            font-size: 18px;
+            color: #ffa500;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #8899aa;
+        }
+
+        .status-online {
+            color: #00ff00;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.8);
+        }
+
+        /* ===================================
+           AVATAR PANEL (PULSE)
+           System monitor avatar
+           =================================== */
+        .avatar-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #b44cff;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .watchdog-label {
+            position: absolute;
+            top: 8px;
+            left: 12px;
+            font-size: 10px;
+            color: #b44cff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .pulse-avatar-container {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, rgba(180, 76, 255, 0.2), rgba(255, 102, 102, 0.2));
+            border: 3px solid #b44cff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(180, 76, 255, 0.5);
+        }
+
+        .pulse-name {
+            font-size: 18px;
+            color: #b44cff;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .pulse-subtitle {
+            font-size: 11px;
+            color: #8899aa;
+        }
+
+        /* ===================================
+           NAVIGATION TABS
+           Switch between different views
+           =================================== */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            background: rgba(59, 90, 157, 0.3);
+            border: 2px solid #3b5a9d;
+            border-radius: 10px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            color: #8899aa;
+            white-space: nowrap;
+        }
+
+        .nav-tab:hover {
+            background: rgba(59, 90, 157, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+            color: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+        }
+
+        .tab-icon {
+            font-size: 18px;
+        }
+
+        /* ===================================
+           BOTTOM SECTION (Chat + Status)
+           Main interaction area
+           =================================== */
+        .bottom-section {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 20px;
+        }
+
+        /* ===================================
+           CHAT PANEL COMPONENT
+           Message display and input
+           =================================== */
+        .chat-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-height: 400px;
+            max-height: 600px;
+            position: relative;
+        }
+
+        .chat-display {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .chat-display::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-display::-webkit-scrollbar-track {
+            background: rgba(59, 90, 157, 0.2);
+            border-radius: 4px;
+        }
+
+        .chat-display::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            animation: message-appear 0.3s ease-out;
+        }
+
+        @keyframes message-appear {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message-header {
+            font-size: 12px;
+            color: #ffa500;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .message.user .message-header {
+            color: #00ffff;
+        }
+
+        .message-content {
+            background: rgba(59, 90, 157, 0.3);
+            border-left: 3px solid #ffa500;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .message.user .message-content {
+            background: rgba(0, 255, 255, 0.15);
+            border-left-color: #00ffff;
+        }
+
+        .message.typing-indicator .message-content {
+            background: rgba(180, 76, 255, 0.15);
+            border-left-color: #b44cff;
+        }
+
+        /* Sources display within message */
+        .message-sources {
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 6px;
+            font-size: 11px;
+        }
+
+        .source-item {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .source-item:last-child {
+            border-bottom: none;
+        }
+
+        .source-name {
+            color: #b44cff;
+            font-weight: bold;
+        }
+
+        .source-score {
+            color: #00ff00;
+            margin-left: 10px;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(59, 90, 157, 0.3);
+            border: 2px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 12px 15px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input:focus {
+            border-color: #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .chat-input::placeholder {
+            color: #8899aa;
+        }
+
+        .btn-send {
+            background: linear-gradient(135deg, #00ffff, #00cccc);
+            border: 2px solid #00ffff;
+            border-radius: 8px;
+            padding: 12px 30px;
+            color: #0a0e27;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .btn-send:hover {
+            background: linear-gradient(135deg, #00ffff, #00dddd);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+            transform: translateY(-2px);
+        }
+
+        .btn-send:active {
+            transform: translateY(0);
+        }
+
+        .btn-send:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* ===================================
+           STATUS PANEL COMPONENT - ENHANCED
+           System status with RAG indicator
+           =================================== */
+        .status-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #b44cff;
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .status-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #b44cff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(180, 76, 255, 0.3);
+        }
+
+        .status-icon {
+            font-size: 18px;
+        }
+
+        .status-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: rgba(59, 90, 157, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .status-item:hover {
+            background: rgba(59, 90, 157, 0.4);
+        }
+
+        .status-name {
+            font-size: 13px;
+            color: #8899aa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-value {
+            font-size: 12px;
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .status-value.offline {
+            color: #ff6666;
+        }
+
+        /* RAG toggle */
+        .rag-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .rag-toggle:hover {
+            background: rgba(0, 255, 255, 0.2);
+        }
+
+        .rag-toggle.active {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+        }
+
+        .rag-label {
+            font-size: 12px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .toggle-switch {
+            width: 40px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .rag-toggle.active .toggle-switch {
+            background: #00ffff;
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .rag-toggle.active .toggle-switch::after {
+            left: 22px;
+        }
+
+        /* Session stats */
+        .session-stats {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(180, 76, 255, 0.3);
+        }
+
+        .session-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 12px;
+        }
+
+        .session-stat-label {
+            color: #8899aa;
+        }
+
+        .session-stat-value {
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        /* ===================================
+           RESPONSIVE DESIGN
+           Mobile and tablet layouts
+           =================================== */
+        @media (max-width: 1024px) {
+            .top-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .bottom-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-tabs {
+                flex-wrap: wrap;
+            }
+            
+            .terminal-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========================================
+         PET TERMINAL MAIN CONTAINER
+         MegaMan Battle Network themed interface
+         ======================================== -->
+    <div class="pet-container">
+        
+        <!-- ===================================
+             HEADER COMPONENT
+             Clock, title, and connection status
+             =================================== -->
+        <div class="header">
+            <div class="pet-indicator">
+                <div class="status-dot" id="connectionDot"></div>
+                <span>PET</span>
+            </div>
+            <div class="terminal-title">FAITHH v4.0</div>
+            <div class="clock" id="clock">00:00:00 AM</div>
+        </div>
+
+        <!-- ===================================
+             MODEL SELECTOR COMPONENT - NEW!
+             Choose which AI model to use
+             =================================== -->
+        <div class="model-selector-panel corner-accent">
+            <div class="corner-bottom"></div>
+            <div class="model-selector-header">
+                <div class="model-selector-title">
+                    <span>🤖</span>
+                    <span>AI MODEL</span>
+                </div>
+                <select class="model-select" id="modelSelect" onchange="changeModel()">
+                    <!-- Models populated from config -->
+                </select>
+            </div>
+            <div class="model-info" id="modelInfo">
+                Select AI model for responses
+            </div>
+        </div>
+
+        <!-- ===================================
+             TOP SECTION
+             Stats display and character avatars
+             =================================== -->
+        <div class="top-section">
+            <!-- STATS PANEL - Shows session statistics -->
+            <div class="stats-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="model-selector-title" style="color: #00ffff; margin-bottom: 10px;">
+                    <span>📊</span>
+                    <span>SESSION STATS</span>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="messageCount">0</div>
+                        <div class="stat-label">Messages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="tokenCount">0</div>
+                        <div class="stat-label">Tokens</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="sessionTime">0m</div>
+                        <div class="stat-label">Session</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEGA PANEL - MegaMan.EXE avatar -->
+            <div class="mega-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="mega-label">NET NAVI</div>
+                <div class="mega-avatar-container">
+                    🤖
+                </div>
+                <div class="mega-name">FAITHH.EXE</div>
+                <div class="status-indicator">
+                    <span>AI Assistant •</span>
+                    <span class="status-online" id="aiStatus">Online</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================================
+             NAVIGATION TABS
+             Switch between different views
+             =================================== -->
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-tab="chat">
+                <span class="tab-icon">💬</span>
+                <span>CHAT</span>
+            </div>
+            <div class="nav-tab" data-tab="stats">
+                <span class="tab-icon">📊</span>
+                <span>STATS</span>
+            </div>
+            <div class="nav-tab" data-tab="pulse">
+                <span class="tab-icon">🤖</span>
+                <span>PULSE</span>
+            </div>
+            <div class="nav-tab" data-tab="settings">
+                <span class="tab-icon">⚙️</span>
+                <span>SETTINGS</span>
+            </div>
+        </div>
+
+        <!-- ===================================
+             BOTTOM SECTION
+             Main interaction area
+             =================================== -->
+        <div class="bottom-section">
+            <!-- ===================================
+                 CHAT PANEL COMPONENT
+                 Message display and input
+                 =================================== -->
+            <div class="chat-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="chat-display" id="chatDisplay">
+                    <div class="message">
+                        <div class="message-header">FAITHH.EXE</div>
+                        <div class="message-content">System initialized. All models online. How can I assist you today, Operator?</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <input 
+                        type="text" 
+                        class="chat-input" 
+                        id="chatInput" 
+                        placeholder="Enter your message..."
+                        autocomplete="off"
+                    >
+                    <button class="btn-send" onclick="sendMessage()" id="sendBtn">SEND</button>
+                </div>
+            </div>
+
+            <!-- ===================================
+                 STATUS PANEL COMPONENT - ENHANCED
+                 System status and controls
+                 =================================== -->
+            <div class="status-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="status-header">
+                    <span class="status-icon">⚡</span>
+                    <span>SYSTEM STATUS</span>
+                </div>
+                
+                <div class="status-list" id="statusList">
+                    <div class="status-item">
+                        <span class="status-name">Backend</span>
+                        <span class="status-value" id="backendStatus">● CHECKING</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-name">ChromaDB</span>
+                        <span class="status-value" id="chromaStatus">● CHECKING</span>
+                    </div>
+                </div>
+
+                <!-- RAG Toggle -->
+                <div class="rag-toggle active" id="ragToggle" onclick="toggleRAG()">
+                    <span class="rag-label">Knowledge Base (RAG)</span>
+                    <div class="toggle-switch"></div>
+                </div>
+
+                <!-- Session Statistics -->
+                <div class="session-stats">
+                    <div class="session-stat">
+                        <span class="session-stat-label">Model:</span>
+                        <span class="session-stat-value" id="currentModel">GEMINI PRO</span>
+                    </div>
+                    <div class="session-stat">
+                        <span class="session-stat-label">Response Time:</span>
+                        <span class="session-stat-value" id="responseTime">--</span>
+                    </div>
+                    <div class="session-stat">
+                        <span class="session-stat-label">Sources Used:</span>
+                        <span class="session-stat-value" id="sourcesUsed">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         APPLICATION LOGIC
+         Main JavaScript functionality
+         ======================================== -->
+    <script>
+        // ========================================
+        // APPLICATION STATE
+        // Track current session data
+        // ========================================
+        const APP_STATE = {
+            currentModel: UI_CONFIG.models.default,
+            ragEnabled: UI_CONFIG.features.rag,
+            messages: [],
+            sessionStart: new Date(),
+            stats: {
+                messageCount: 0,
+                tokenCount: 0,
+                sourcesUsed: 0
+            },
+            lastResponseTime: 0,
+            isProcessing: false
+        };
+
+        // ========================================
+        // INITIALIZATION
+        // Run when page loads
+        // ========================================
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 FAITHH PET Terminal v4.0 initializing...');
+            
+            // Initialize components
+            initializeModels();
+            initializeClock();
+            initializeSystemCheck();
+            initializeEventListeners();
+            loadChatHistory();
+            
+            console.log('✅ System ready');
+        });
+
+        // ========================================
+        // MODEL MANAGEMENT
+        // Handle AI model selection
+        // ========================================
+        function initializeModels() {
+            const modelSelect = document.getElementById('modelSelect');
+            
+            // Populate model dropdown from config
+            UI_CONFIG.models.available.forEach(model => {
+                const option = document.createElement('option');
+                option.value = model.id;
+                option.textContent = model.name;
+                option.style.color = model.color;
+                if (model.id === UI_CONFIG.models.default) {
+                    option.selected = true;
+                }
+                modelSelect.appendChild(option);
+            });
+        }
+
+        function changeModel() {
+            const modelSelect = document.getElementById('modelSelect');
+            APP_STATE.currentModel = modelSelect.value;
+            
+            // Update display
+            const modelName = modelSelect.options[modelSelect.selectedIndex].textContent;
+            document.getElementById('currentModel').textContent = modelName;
+            
+            // Add system message
+            addSystemMessage(`Model switched to ${modelName}`);
+            
+            console.log('Model changed to:', APP_STATE.currentModel);
+        }
+
+        // ========================================
+        // CLOCK COMPONENT
+        // Real-time clock display
+        // ========================================
+        function initializeClock() {
+            updateClock();
+            setInterval(updateClock, 1000);
+            setInterval(updateSessionTime, 1000);
+        }
+
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = (hours % 12 || 12).toString().padStart(2, '0');
+            
+            document.getElementById('clock').textContent = `${displayHours}:${minutes}:${seconds} ${ampm}`;
+        }
+
+        function updateSessionTime() {
+            const now = new Date();
+            const elapsed = Math.floor((now - APP_STATE.sessionStart) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const hours = Math.floor(minutes / 60);
+            
+            let timeText = `${minutes}m`;
+            if (hours > 0) {
+                timeText = `${hours}h ${minutes % 60}m`;
+            }
+            
+            document.getElementById('sessionTime').textContent = timeText;
+        }
+
+        // ========================================
+        // SYSTEM STATUS CHECKING
+        // Monitor backend and services
+        // ========================================
+        function initializeSystemCheck() {
+            checkSystemStatus();
+            setInterval(checkSystemStatus, UI_CONFIG.ui.statusCheckInterval);
+        }
+
+        async function checkSystemStatus() {
+            try {
+                const response = await fetch(`${UI_CONFIG.backend.url}${UI_CONFIG.backend.endpoints.status}`, {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    updateSystemStatus(data);
+                    updateConnectionIndicator(true);
+                } else {
+                    updateConnectionIndicator(false);
+                }
+            } catch (error) {
+                console.warn('Backend connection failed:', error.message);
+                updateConnectionIndicator(false);
+            }
+        }
+
+        function updateSystemStatus(data) {
+            // Update backend status
+            document.getElementById('backendStatus').textContent = '● ONLINE';
+            document.getElementById('backendStatus').classList.remove('offline');
+            
+            // Update ChromaDB status if available
+            if (data.chromadb) {
+                const chromaStatus = data.chromadb.connected ? '● ONLINE' : '● OFFLINE';
+                document.getElementById('chromaStatus').textContent = chromaStatus;
+                
+                if (!data.chromadb.connected) {
+                    document.getElementById('chromaStatus').classList.add('offline');
+                }
+            }
+            
+            // Update AI status
+            document.getElementById('aiStatus').textContent = 'Online';
+        }
+
+        function updateConnectionIndicator(connected) {
+            const dot = document.getElementById('connectionDot');
+            if (connected) {
+                dot.classList.remove('offline');
+            } else {
+                dot.classList.add('offline');
+                document.getElementById('backendStatus').textContent = '● OFFLINE';
+                document.getElementById('backendStatus').classList.add('offline');
+                document.getElementById('aiStatus').textContent = 'Offline';
+            }
+        }
+
+        // ========================================
+        // CHAT FUNCTIONALITY
+        // Send and receive messages
+        // ========================================
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message || APP_STATE.isProcessing) return;
+            
+            // Add user message to display
+            addMessage('user', message);
+            
+            // Clear input
+            input.value = '';
+            
+            // Update state
+            APP_STATE.isProcessing = true;
+            APP_STATE.stats.messageCount++;
+            updateStats();
+            updateSendButton(false);
+            
+            // Show typing indicator
+            const typingId = addTypingIndicator();
+            
+            // Prepare request
+            const requestData = {
+                message: message,
+                model: APP_STATE.currentModel,
+                use_rag: APP_STATE.ragEnabled
+            };
+            
+            const startTime = Date.now();
+            
+            try {
+                // Call backend
+                const response = await fetch(`${UI_CONFIG.backend.url}${UI_CONFIG.backend.endpoints.chat}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(requestData),
+                    signal: AbortSignal.timeout(UI_CONFIG.backend.timeout)
+                });
+                
+                const data = await response.json();
+                
+                // Calculate response time
+                APP_STATE.lastResponseTime = ((Date.now() - startTime) / 1000).toFixed(2);
+                document.getElementById('responseTime').textContent = `${APP_STATE.lastResponseTime}s`;
+                
+                // Remove typing indicator
+                removeMessage(typingId);
+                
+                // Add assistant response
+                addMessage('assistant', data.response || data.text || 'No response received', data.sources);
+                
+                // Update token count if available
+                if (data.tokens) {
+                    APP_STATE.stats.tokenCount += data.tokens;
+                    updateStats();
+                }
+                
+                // Update sources used
+                if (data.sources && data.sources.length > 0) {
+                    APP_STATE.stats.sourcesUsed += data.sources.length;
+                    document.getElementById('sourcesUsed').textContent = APP_STATE.stats.sourcesUsed;
+                }
+                
+            } catch (error) {
+                console.error('Chat error:', error);
+                removeMessage(typingId);
+                addErrorMessage('Connection error. Please ensure the backend is running.');
+            } finally {
+                APP_STATE.isProcessing = false;
+                updateSendButton(true);
+            }
+        }
+
+        function addMessage(role, content, sources = null) {
+            const chatDisplay = document.getElementById('chatDisplay');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${role}`;
+            
+            const header = role === 'user' ? 'OPERATOR' : 'FAITHH.EXE';
+            
+            let sourcesHTML = '';
+            if (sources && sources.length > 0) {
+                sourcesHTML = '<div class="message-sources"><strong>📚 Sources:</strong>';
+                sources.forEach(source => {
+                    const score = source.relevance ? (source.relevance * 100).toFixed(0) : '--';
+                    sourcesHTML += `
+                        <div class="source-item">
+                            <span class="source-name">${source.document || 'Unknown'}</span>
+                            <span class="source-score">${score}%</span>
+                        </div>
+                    `;
+                });
+                sourcesHTML += '</div>';
+            }
+            
+            messageDiv.innerHTML = `
+                <div class="message-header">${header}</div>
+                <div class="message-content">${escapeHtml(content)}${sourcesHTML}</div>
+            `;
+            
+            chatDisplay.appendChild(messageDiv);
+            
+            if (UI_CONFIG.features.autoScroll) {
+                chatDisplay.scrollTop = chatDisplay.scrollHeight;
+            }
+            
+            // Store message
+            APP_STATE.messages.push({ role, content, timestamp: new Date(), sources });
+            
+            // Save to localStorage if enabled
+            if (UI_CONFIG.features.saveHistory) {
+                saveChatHistory();
+            }
+        }
+
+        function addSystemMessage(content) {
+            const chatDisplay = document.getElementById('chatDisplay');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            
+            messageDiv.innerHTML = `
+                <div class="message-header">SYSTEM</div>
+                <div class="message-content" style="border-left-color: #b44cff;">${escapeHtml(content)}</div>
+            `;
+            
+            chatDisplay.appendChild(messageDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+        }
+
+        function addErrorMessage(content) {
+            const chatDisplay = document.getElementById('chatDisplay');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message';
+            
+            messageDiv.innerHTML = `
+                <div class="message-header">ERROR</div>
+                <div class="message-content" style="border-left-color: #ff6666; color: #ff9999;">${escapeHtml(content)}</div>
+            `;
+            
+            chatDisplay.appendChild(messageDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+        }
+
+        function addTypingIndicator() {
+            const chatDisplay = document.getElementById('chatDisplay');
+            const typingId = `typing-${Date.now()}`;
+            const typingDiv = document.createElement('div');
+            typingDiv.id = typingId;
+            typingDiv.className = 'message typing-indicator';
+            typingDiv.innerHTML = `
+                <div class="message-header">FAITHH.EXE</div>
+                <div class="message-content">Processing...</div>
+            `;
+            
+            chatDisplay.appendChild(typingDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+            
+            return typingId;
+        }
+
+        function removeMessage(messageId) {
+            const element = document.getElementById(messageId);
+            if (element) {
+                element.remove();
+            }
+        }
+
+        function updateSendButton(enabled) {
+            const btn = document.getElementById('sendBtn');
+            btn.disabled = !enabled;
+            btn.textContent = enabled ? 'SEND' : 'WAIT';
+        }
+
+        // ========================================
+        // STATS UPDATE
+        // Update session statistics display
+        // ========================================
+        function updateStats() {
+            document.getElementById('messageCount').textContent = APP_STATE.stats.messageCount;
+            document.getElementById('tokenCount').textContent = APP_STATE.stats.tokenCount.toLocaleString();
+        }
+
+        // ========================================
+        // RAG TOGGLE
+        // Enable/disable knowledge base
+        // ========================================
+        function toggleRAG() {
+            APP_STATE.ragEnabled = !APP_STATE.ragEnabled;
+            const toggle = document.getElementById('ragToggle');
+            
+            if (APP_STATE.ragEnabled) {
+                toggle.classList.add('active');
+                addSystemMessage('Knowledge Base (RAG) enabled');
+            } else {
+                toggle.classList.remove('active');
+                addSystemMessage('Knowledge Base (RAG) disabled');
+            }
+        }
+
+        // ========================================
+        // EVENT LISTENERS
+        // Keyboard shortcuts and interactions
+        // ========================================
+        function initializeEventListeners() {
+            // Enter key to send message
+            document.getElementById('chatInput').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+            
+            // Tab navigation
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Future: Switch views based on tab
+                    const tabName = this.getAttribute('data-tab');
+                    console.log('Switched to tab:', tabName);
+                });
+            });
+        }
+
+        // ========================================
+        // CHAT HISTORY PERSISTENCE
+        // Save/load chat history from localStorage
+        // ========================================
+        function saveChatHistory() {
+            try {
+                localStorage.setItem('faithh_chat_history', JSON.stringify(APP_STATE.messages));
+            } catch (e) {
+                console.warn('Failed to save chat history:', e);
+            }
+        }
+
+        function loadChatHistory() {
+            try {
+                const saved = localStorage.getItem('faithh_chat_history');
+                if (saved) {
+                    const messages = JSON.parse(saved);
+                    // Optional: Restore previous session
+                    console.log(`Found ${messages.length} previous messages`);
+                }
+            } catch (e) {
+                console.warn('Failed to load chat history:', e);
+            }
+        }
+
+        // ========================================
+        // UTILITY FUNCTIONS
+        // Helper functions
+        // ========================================
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // ========================================
+        // CONSOLE WELCOME MESSAGE
+        // Developer info
+        // ========================================
+        console.log(`
+╔════════════════════════════════════════╗
+║   FAITHH PET TERMINAL v4.0            ║
+║   MegaMan Battle Network Theme         ║
+║   Enhanced with Modular Components     ║
+╚════════════════════════════════════════╝
+
+Available commands:
+- APP_STATE: View current application state
+- UI_CONFIG: View configuration
+- sendMessage(): Send a message programmatically
+
+Ready for Jack-In!
+        `);
+    </script>
+</body>
+</html>
