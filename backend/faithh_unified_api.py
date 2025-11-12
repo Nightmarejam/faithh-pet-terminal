@@ -51,8 +51,10 @@ CONFIG = {
     'embed_model': 'nomic-embed',
 }
 
-# Get Gemini API key
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'AIzaSyDk_tSE7RCO5sS0tvcTFls6kgo3PzGlGro')
+# Get Gemini API key from environment variable (DO NOT hardcode keys!)
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+if not GEMINI_API_KEY:
+    logger.warning("GEMINI_API_KEY not found in environment. Gemini features will be disabled.")
 
 # Initialize Gemini
 gemini_model = None

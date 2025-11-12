@@ -30,7 +30,7 @@ CONFIG = {
 }
 
 # Get Gemini API Key
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', 'AIzaSyDk_tSE7RCO5sS0tvcTFls6kgo3PzGlGro')
+GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')  # API key removed for security
 
 # Initialize Gemini
 if GEMINI_AVAILABLE and GEMINI_API_KEY:

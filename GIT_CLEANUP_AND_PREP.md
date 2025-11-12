@@ -217,7 +217,7 @@ git commit -m "security: remove .env from git"
 
 ⚠️ **Your .env file contains:**
 ```
-GEMINI_API_KEY=AIzaSyDk_tSE7RCO5sS0tvcTFls6kgo3PzGlGro
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
 ```
 
 **Action needed:**

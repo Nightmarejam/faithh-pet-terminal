@@ -71,7 +71,7 @@ git gc --prune=now --aggressive
 
 ⚠️ **Your .env contains:**
 ```
-GEMINI_API_KEY=AIzaSyDk_tSE7RCO5sS0tvcTFls6kgo3PzGlGro
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE
 ```
 
 **Status:** ✅ .gitignore already excludes .env
