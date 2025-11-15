@@ -1,97 +1,30 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
-.Python
 venv/
-env/
-*.egg-info/
-dist/
-build/
-
-# Logs
-logs/
 *.log
-
-# Environment variables
-.env
-.env.local
-
-# API Keys (IMPORTANT!)
-*_api_key*
-*.key
-secrets.json
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
+nohup.out
+*.backup*
+backups/
 .DS_Store
-Thumbs.db
-*.Zone.Identifier
 
-# Large files
-*.mp4
-*.mov
-*.avi
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-
-# Optional: Export folders (if you don't want to track them)
-ChatGPT_exports/
-ClaudeChat_exports/
-GrokChat_exports/
-
-# Server
-.server.pid
-
-# Backups
-*.backup
-*.bak
-
-# Databases
-data/
-cache/
+# Large data folders (DO NOT COMMIT)
+AI_Chat_Exports/
+chroma_data/
 faithh_rag/
-chroma.sqlite3
-*.sqlite3
-
-# Models
 models/
+uploads/
+static/
 
-# Test/diagnostic files
-test_*.py
-*_diagnostic.py
-find-*.sh
-
-# Old versions
-*_backup.*
-*.backup
-# Additional safety items
-*.pid
+# Temporary/generated files
+*.npy
+*.pkl
 .backend.pid
 .server.pid
+.env
+diagnostic_report.txt
 
-# Uploads
-uploads/
-
-# Backups folder
-backups/
-
-# ComfyUI and Stable Diffusion (in parent directory)
-../ComfyUI/
-../stable-diffusion-webui/
-
-# Node modules if any
-node_modules/
-
-# Large temporary files
-file_list_*.txt
-discovery_*.txt
+# Broken/backup files
+*.broken*
+*_recovery.html
+*.Zone.Identifier

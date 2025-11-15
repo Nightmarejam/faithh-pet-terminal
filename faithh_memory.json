@@ -1,0 +1,180 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-11-14T15:30:00",
+  "user_profile": {
+    "name": "Jonathan",
+    "role": "Audio Producer & AI Developer",
+    "work": {
+      "primary": "Boutique audio production label",
+      "handles": ["customer IP", "copyrights", "royalties"],
+      "partner": "Business partner with M2 Mac Mini + Luna DAW",
+      "tools": {
+        "daw": "Luna DAW",
+        "mastering": "WaveLab 11.2",
+        "interface_main": "UAD Volt 1",
+        "interface_recording": "PreSonus Studio 1810c",
+        "remote_audio": "SonosBus for network transmission"
+      }
+    },
+    "personal": {
+      "adhd": true,
+      "preferences": {
+        "documentation": "comprehensive, auto-updating systems essential",
+        "workflow": "needs tracking and decision logging",
+        "aesthetics": "MegaMan Battle Network theme",
+        "ai_rotation": "Claude Chat, Claude Code, Grok, local Ollama when hitting limits"
+      },
+      "interests": ["video game streaming", "MegaMan Battle Network", "AI workflow integration"],
+      "hardware": {
+        "laptop": "M1 MacBook Pro",
+        "gpu": "RTX 3090 for local image generation"
+      }
+    }
+  },
+  "ongoing_projects": {
+    "FAITHH": {
+      "full_name": "Friendly AI Teaching & Helping Hub",
+      "status": "active_development",
+      "started": "2025-10",
+      "last_session": "2025-11-14",
+      "description": "Personal AI system with MegaMan Battle Network-inspired interface",
+      "components": {
+        "ui": {
+          "current": "faithh_pet_v3.html",
+          "theme": "MegaMan Battle Network retro-futuristic",
+          "characters": {
+            "FAITHH": "cyan-themed friendly assistant",
+            "PULSE": "blue-themed technical monitor"
+          }
+        },
+        "backend": {
+          "file": "faithh_professional_backend_fixed.py",
+          "framework": "Flask",
+          "port": 5557,
+          "features": ["RAG integration", "ChromaDB", "Ollama", "Gemini API"]
+        },
+        "rag_system": {
+          "database": "ChromaDB",
+          "port": 8000,
+          "collection": "documents_768",
+          "embedding_model": "all-mpnet-base-v2",
+          "total_documents": 91604,
+          "categories": [
+            "documentation",
+            "claude_conversation_chunk",
+            "claude_conversation",
+            "parity_files",
+            "code"
+          ]
+        },
+        "llm": {
+          "local": ["llama3.1-8b", "qwen2.5-7b"],
+          "cloud": "Gemini API"
+        }
+      },
+      "current_focus": [
+        "Optimizing RAG retrieval for conversation chunks",
+        "Adding persistent memory system",
+        "Auto-indexing new conversations"
+      ],
+      "next_steps": [
+        "Fix conversation chunk prioritization",
+        "Index ChatGPT and Grok exports",
+        "Implement auto-indexing system",
+        "Add session logging"
+      ],
+      "completed_milestones": [
+        "RAG system operational (91,604 docs)",
+        "Indexed 118 recent documentation files",
+        "Indexed 39 Claude conversations (145 chunks)",
+        "Created smart_rag_query function",
+        "Updated all parity files",
+        "Beautiful MegaMan UI working"
+      ]
+    },
+    "ComfyUI": {
+      "status": "setup_complete",
+      "purpose": "Local image generation with RTX 3090",
+      "achievements": ["UI variations created", "Character avatars generated"]
+    },
+    "Constella": {
+      "status": "planning",
+      "purpose": "AI-powered journaling framework"
+    }
+  },
+  "conversation_context": {
+    "recent_topics": [
+      {
+        "date": "2025-11-14",
+        "topic": "RAG system optimization",
+        "subtopics": [
+          "Conversation chunk indexing",
+          "Backend debugging",
+          "smart_rag_query function creation",
+          "where clause category filtering"
+        ],
+        "status": "in_progress",
+        "next_action": "Add claude_conversation_chunk to where clause"
+      }
+    ],
+    "unresolved_issues": [
+      {
+        "issue": "Conversation chunks not prioritized in RAG search",
+        "cause": "claude_conversation_chunk missing from backend where clause",
+        "proposed_fix": "Add category to filter list",
+        "priority": "high"
+      }
+    ],
+    "decisions_made": [
+      {
+        "date": "2025-11-14",
+        "decision": "Use all-mpnet-base-v2 for embeddings",
+        "reason": "768 dimensions, good balance of performance and accuracy"
+      },
+      {
+        "date": "2025-11-14",
+        "decision": "Chunk conversations into 3-4 message segments",
+        "reason": "Better semantic matching than full conversations"
+      },
+      {
+        "date": "2025-11-14",
+        "decision": "Prioritize conversation chunks for dev queries",
+        "reason": "User asks about past discussions, not generic docs"
+      },
+      {
+        "date": "2025-11-14",
+        "decision": "Implement persistent memory system",
+        "reason": "Maintain continuity across FAITHH sessions"
+      }
+    ],
+    "awaiting_response": []
+  },
+  "knowledge_base_status": {
+    "total_documents": 91604,
+    "breakdown": {
+      "original_docs": 91302,
+      "recent_docs": 118,
+      "full_conversations": 39,
+      "conversation_chunks": 145
+    },
+    "last_indexed": "2025-11-14T14:00:00",
+    "pending_indexing": {
+      "chatgpt_chats": "AI_Chat_Exports/Chat_GPT_Chats/",
+      "grok_chats": "AI_Chat_Exports/Grok_Chats/ttl/",
+      "total_files": 1052,
+      "size": "453MB"
+    }
+  },
+  "session_stats": {
+    "total_sessions": 1,
+    "last_session_date": "2025-11-14",
+    "total_queries": 0,
+    "successful_rag_queries": 0
+  },
+  "meta": {
+    "memory_file_purpose": "Persistent knowledge about user and ongoing projects",
+    "update_frequency": "After each significant conversation or milestone",
+    "auto_updated": true,
+    "manual_edits_allowed": true
+  }
+}

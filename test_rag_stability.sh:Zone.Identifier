@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://claude.ai/chat/f129ea83-9797-45ba-bd32-aa04438375b7
+HostUrl=https://claude.ai/api/organizations/e9d2bd0b-986d-4cc8-a200-a4689bd637a0/conversations/f129ea83-9797-45ba-bd32-aa04438375b7/wiggle/download-file?path=%2Fmnt%2Fuser-data%2Foutputs%2Ftest_rag_stability.sh

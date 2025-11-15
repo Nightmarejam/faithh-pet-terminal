@@ -1,27 +1,22 @@
 #!/usr/bin/env python3
 """
-FAITHH Professional Backend v3
-Fixed embedding dimensions, model identification, file handling
+FAITHH Professional Backend v3.1
+Fixed embedding model to match 768-dimensional embeddings
 """
 
 from flask import Flask, request, jsonify, send_from_directory, send_file
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import requests
-import requests
 import json
-import json
-import os
 import os
 from pathlib import Path
 import chromadb
-import chromadb
+from chromadb.utils import embedding_functions
 from datetime import datetime
-import base64
 import base64
 import mimetypes
 from dotenv import load_dotenv
-import os
 
 
 # Load environment variables
@@ -42,13 +37,22 @@ UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
 # Base directory
 BASE_DIR = Path(__file__).parent
 
-# Initialize ChromaDB with text search (avoiding embedding dimension issues)
+# Initialize ChromaDB with correct 768-dim embedding function
 try:
+    # Use all-mpnet-base-v2 (768 dimensions) to match the stored embeddings
+    embedding_func = embedding_functions.SentenceTransformerEmbeddingFunction(
+        model_name="sentence-transformers/all-mpnet-base-v2"
+    )
+    
     chroma_client = chromadb.HttpClient(host="localhost", port=8000)
-    collection = chroma_client.get_collection(name="documents")
+    collection = chroma_client.get_collection(
+        name="documents",
+        embedding_function=embedding_func
+    )
     CHROMA_CONNECTED = True
     doc_count = collection.count()
     print(f"✅ ChromaDB connected: {doc_count} documents available")
+    print(f"✅ Using 768-dim embeddings (all-mpnet-base-v2)")
 except Exception as e:
     CHROMA_CONNECTED = False
     collection = None
@@ -95,10 +99,9 @@ def chat():
         context = ""
         rag_results = []
         
-        # RAG search using text (avoiding embedding issues)
+        # RAG search with proper 768-dim embeddings
         if use_rag and CHROMA_CONNECTED:
             try:
-                # Use query_texts instead of embeddings
                 results = collection.query(
                     query_texts=[message],
                     n_results=3
@@ -177,12 +180,6 @@ def chat():
                 'rag_used': use_rag and bool(context),
                 'rag_results': rag_results
             })
-        else:
-            return jsonify({
-                'success': False,
-                'error': f"Ollama returned status {response.status_code}",
-                'response': "Failed to get response from Ollama"
-            }), 500
             
     except Exception as e:
         return jsonify({
@@ -230,7 +227,7 @@ def upload_file():
 
 @app.route('/api/rag_search', methods=['POST'])
 def rag_search():
-    """Fixed RAG search using text queries"""
+    """RAG search with correct 768-dim embeddings"""
     if not CHROMA_CONNECTED:
         return jsonify({'success': False, 'error': 'ChromaDB not connected'}), 503
     
@@ -239,7 +236,6 @@ def rag_search():
         query = data.get('query', '')
         n_results = data.get('n_results', 5)
         
-        # Use query_texts to avoid embedding dimension issues
         results = collection.query(
             query_texts=[query],
             n_results=n_results
@@ -253,7 +249,7 @@ def rag_search():
             'results': documents,
             'distances': distances,
             'total_documents': collection.count(),
-            'embedding_note': 'Using text-based search (dimension-agnostic)'
+            'embedding_model': 'all-mpnet-base-v2 (768-dim)'
         })
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
@@ -283,7 +279,7 @@ def status():
     services['chromadb'] = {
         'status': 'online' if CHROMA_CONNECTED else 'offline',
         'documents': collection.count() if CHROMA_CONNECTED else 0,
-        'note': 'Using text-based search'
+        'embedding_model': 'all-mpnet-base-v2 (768-dim)'
     }
     
     # Gemini status
@@ -364,15 +360,15 @@ def scan_workspace():
 def health():
     return jsonify({
         'status': 'healthy',
-        'service': 'FAITHH Professional Backend v3',
-        'features': ['chat', 'rag', 'upload', 'workspace_scan', 'model_identification']
+        'service': 'FAITHH Professional Backend v3.1',
+        'features': ['chat', 'rag', 'upload', 'workspace_scan', 'model_identification', '768-dim embeddings']
     })
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("FAITHH PROFESSIONAL BACKEND v3")
+    print("FAITHH PROFESSIONAL BACKEND v3.1")
     print("=" * 60)
-    print(f"✅ Fixed embedding dimensions (using text search)")
+    print(f"✅ 768-dim embeddings (all-mpnet-base-v2)")
     print(f"✅ Model identification enabled")
     print(f"✅ File upload support")
     print(f"✅ Workspace scanning")

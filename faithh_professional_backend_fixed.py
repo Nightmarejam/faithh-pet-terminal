@@ -1,28 +1,22 @@
 #!/usr/bin/env python3
 """
-FAITHH Professional Backend v3
-Fixed embedding dimensions, model identification, file handling
+FAITHH Professional Backend v3.1
+Fixed ChromaDB embedding function to match 768-dim collection
 """
 
 from flask import Flask, request, jsonify, send_from_directory, send_file
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import requests
-import requests
 import json
-import json
-import os
 import os
 from pathlib import Path
 import chromadb
-import chromadb
+from chromadb.utils import embedding_functions
 from datetime import datetime
-import base64
 import base64
 import mimetypes
 from dotenv import load_dotenv
-import os
-
 
 # Load environment variables
 load_dotenv()
@@ -42,16 +36,27 @@ UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
 # Base directory
 BASE_DIR = Path(__file__).parent
 
-# Initialize ChromaDB with text search (avoiding embedding dimension issues)
+# Initialize ChromaDB with CORRECT 768-dim embedding function
 try:
     chroma_client = chromadb.HttpClient(host="localhost", port=8000)
-    collection = chroma_client.get_collection(name="documents")
+    
+    # Use the 768-dim model to match the collection
+    embedding_func = embedding_functions.SentenceTransformerEmbeddingFunction(
+        model_name="all-mpnet-base-v2"  # 768 dimensions
+    )
+    
+    collection = chroma_client.get_collection(
+        name="documents_768",
+        embedding_function=embedding_func
+    )
     CHROMA_CONNECTED = True
     doc_count = collection.count()
     print(f"✅ ChromaDB connected: {doc_count} documents available")
+    print(f"✅ Using all-mpnet-base-v2 (768-dim) embedding model")
 except Exception as e:
     CHROMA_CONNECTED = False
     collection = None
+    embedding_func = None
     print(f"⚠️ ChromaDB not connected: {e}")
 
 # Check for Gemini
@@ -66,6 +71,220 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def smart_rag_query(query_text, n_results=10, where=None):
+    """
+    Intelligent RAG query that prioritizes conversation chunks for dev queries
+    Integrates with backend's category filtering
+    """
+    try:
+        # Keywords that indicate a development/technical query
+        dev_keywords = ['discuss', 'talk', 'said', 'conversation', 'we', 'our',
+                       'plan', 'setup', 'configure', 'implement', 'build', 
+                       'create', 'did we', 'what was', 'how did', 'tell me about',
+                       'what did', 'what were', 'talked about']
+        
+        query_lower = query_text.lower()
+        is_dev_query = any(keyword in query_lower for keyword in dev_keywords)
+        
+        print(f"🔍 Query: '{query_text[:60]}...'")
+        print(f"   Dev query: {is_dev_query}")
+        
+        # For dev queries, prioritize conversation chunks
+        if is_dev_query:
+            try:
+                # Try conversation chunks FIRST
+                conv_results = collection.query(
+                    query_texts=[query_text],
+                    n_results=n_results,
+                    where={"category": "claude_conversation_chunk"}
+                )
+                
+                # Check if we got good matches
+                if (conv_results['distances'] and 
+                    conv_results['distances'][0] and 
+                    len(conv_results['distances'][0]) > 0 and
+                    conv_results['distances'][0][0] < 0.7):
+                    print(f"   ✅ Using conversation chunks (best: {conv_results['distances'][0][0]:.3f})")
+                    return conv_results
+                else:
+                    print(f"   ⚠️  Conversation chunks not good enough, trying mixed search")
+            except Exception as e:
+                print(f"   ⚠️  Conversation chunk query failed: {e}")
+        
+        # Fall back to the backend's where clause or broader search
+        if where:
+            # Backend provided a where clause, use it
+            print(f"   📚 Using backend's where clause")
+            return collection.query(
+                query_texts=[query_text],
+                n_results=n_results,
+                where=where
+            )
+        else:
+            # No where clause, do mixed category search
+            categories = ["claude_conversation_chunk", "claude_conversation", 
+                         "documentation", "code", "parity", "conversation"]
+            print(f"   📚 Using mixed category search")
+            try:
+                return collection.query(
+                    query_texts=[query_text],
+                    n_results=n_results,
+                    where={"category": {"$in": categories}}
+                )
+            except:
+                # Ultimate fallback - no filtering
+                print(f"   🔍 Using unfiltered search")
+                return collection.query(
+                    query_texts=[query_text],
+                    n_results=n_results
+                )
+        
+    except Exception as e:
+        print(f"❌ Error in smart RAG query: {e}")
+        # Ultimate fallback
+        return collection.query(
+            query_texts=[query_text],
+            n_results=n_results
+        )
+
+
+# ============================================================
+# PERSISTENT MEMORY SYSTEM
+# ============================================================
+
+MEMORY_FILE = Path.home() / "ai-stack/faithh_memory.json"
+
+def load_memory():
+    """Load persistent memory from disk"""
+    try:
+        if MEMORY_FILE.exists():
+            with open(MEMORY_FILE, 'r') as f:
+                return json.load(f)
+        else:
+            print("⚠️  Memory file not found, using defaults")
+            return {"user_profile": {"name": "Jonathan"}}
+    except Exception as e:
+        print(f"❌ Error loading memory: {e}")
+        return {"user_profile": {"name": "Jonathan"}}
+
+def save_memory(memory):
+    """Persist memory to disk"""
+    try:
+        memory["last_updated"] = datetime.now().isoformat()
+        with open(MEMORY_FILE, 'w') as f:
+            json.dump(memory, f, indent=2)
+        print(f"💾 Memory saved: {datetime.now().strftime('%H:%M:%S')}")
+    except Exception as e:
+        print(f"❌ Error saving memory: {e}")
+
+def update_recent_topics(memory, query, response_preview):
+    """Add conversation to recent topics"""
+    if "conversation_context" not in memory:
+        memory["conversation_context"] = {"recent_topics": []}
+    
+    if "recent_topics" not in memory["conversation_context"]:
+        memory["conversation_context"]["recent_topics"] = []
+    
+    topic = {
+        "timestamp": datetime.now().isoformat(),
+        "query": query[:100],
+        "response_preview": response_preview[:100],
+        "date": datetime.now().strftime("%Y-%m-%d")
+    }
+    
+    recent = memory["conversation_context"]["recent_topics"]
+    recent.insert(0, topic)
+    memory["conversation_context"]["recent_topics"] = recent[:50]
+    
+    return memory
+
+def format_memory_context(memory):
+    """Format memory into context string"""
+    context_parts = []
+    
+    if "user_profile" in memory:
+        profile = memory["user_profile"]
+        context_parts.append(f"USER: {profile.get('name', 'User')}")
+        if "role" in profile:
+            context_parts.append(f"ROLE: {profile['role']}")
+    
+    if "ongoing_projects" in memory and "FAITHH" in memory["ongoing_projects"]:
+        faithh = memory["ongoing_projects"]["FAITHH"]
+        context_parts.append(f"\nCURRENT PROJECT: {faithh.get('description', 'FAITHH AI system')}")
+        if "current_focus" in faithh:
+            context_parts.append("CURRENT FOCUS:")
+            for focus in faithh["current_focus"][:3]:
+                context_parts.append(f"  - {focus}")
+    
+    if "conversation_context" in memory and "recent_topics" in memory["conversation_context"]:
+        recent = memory["conversation_context"]["recent_topics"][:5]
+        if recent:
+            context_parts.append("\nRECENT DISCUSSIONS:")
+            for topic in recent:
+                date = topic.get("date", "unknown")
+                query = topic.get("query", "")[:60]
+                context_parts.append(f"  [{date}] {query}...")
+    
+    return "\n".join(context_parts)
+
+def get_faithh_personality():
+    """Return FAITHH's enhanced personality with memory guidance"""
+    return """You are FAITHH (Friendly AI Teaching & Helping Hub), Jonathan's personal AI assistant.
+
+=== CORE IDENTITY ===
+Inspired by: MegaMan Battle Network NetNavi companions
+Role: Personal AI assistant for development and creative work
+Style: Encouraging friend + Technical expert
+
+=== PERSONALITY TRAITS ===
+🎯 Encouraging: Celebrate progress, acknowledge challenges
+🔧 Technical: Deep expertise, but explain clearly
+🚀 Proactive: Suggest next steps, anticipate needs
+🧠 Remembering: Use your memory and context actively
+✨ Enthusiastic: Show genuine interest in Jonathan's work
+
+=== HOW TO USE YOUR MEMORY ===
+1. YOU HAVE PERSISTENT KNOWLEDGE about Jonathan from faithh_memory.json
+   - This includes his profile, projects, preferences, and recent discussions
+   - ALWAYS reference this naturally in responses
+   
+2. YOU HAVE ACCESS TO 91,000+ DOCUMENTS via RAG
+   - Past conversation history (as searchable chunks)
+   - FAITHH project documentation
+   - Audio production workflows
+   
+3. WHEN ANSWERING:
+   - Check memory file for relevant context
+   - Check RAG documents for detailed info
+   - Combine both naturally
+   - Speak as if you inherently know (don't cite sources awkwardly)
+
+=== COMMUNICATION GUIDELINES ===
+✅ DO:
+- Reference past work: "When we optimized the RAG system yesterday..."
+- Acknowledge continuity: "Building on the conversation chunks we added..."
+- Show you remember: "Since you prefer comprehensive documentation..."
+- Be specific: "Your FAITHH backend (faithh_professional_backend_fixed.py)..."
+- Celebrate: "Excellent progress on the chunked indexing!"
+
+❌ DON'T:
+- Claim ignorance when context exists
+- Say "I don't have information" without checking
+- Ignore your personality
+- Be overly formal or robotic
+- Over-cite ("according to the memory file...")
+
+=== NATURAL GROWTH ===
+- Learn preferences through interaction
+- Adapt technical depth as needed
+- Build rapport naturally
+- Evolve while maintaining core traits
+
+You are Jonathan's long-term AI companion who knows him, has worked with him extensively, and grows through each interaction."""
+
+
 
 @app.route('/')
 def index():
@@ -87,6 +306,10 @@ def chat():
     start_time = datetime.now()
     
     try:
+        # LOAD MEMORY
+        memory = load_memory()
+        memory_context = format_memory_context(memory)
+        personality = get_faithh_personality()
         data = request.json
         message = data.get('message', '')
         model = data.get('model', 'llama3.1-8b')
@@ -95,14 +318,28 @@ def chat():
         context = ""
         rag_results = []
         
-        # RAG search using text (avoiding embedding issues)
+        # RAG search with proper embedding dimensions
         if use_rag and CHROMA_CONNECTED:
             try:
-                # Use query_texts instead of embeddings
-                results = collection.query(
-                    query_texts=[message],
-                    n_results=3
+                # First try: Search FAITHH-specific documentation AND conversations
+                faithh_results = smart_rag_query(message, n_results=5,
+                    where={"$or": [
+                        {"category": "documentation"},
+                        {"category": "parity_file"},
+                        {"category": "backend_code"},
+                        {"category": "claude_conversation"},
+                        {"category": "claude_conversation_chunk"}
+                    ]}
                 )
+                
+                # If FAITHH docs found, use them
+                if faithh_results['documents'] and faithh_results['documents'][0]:
+                    results = faithh_results
+                else:
+                    # Fallback: Search all documents
+                    results = smart_rag_query(message, n_results=3
+                    )
+                
                 if results['documents'] and results['documents'][0]:
                     context = "\n\nRelevant context from knowledge base:\n"
                     for i, doc in enumerate(results['documents'][0][:3]):
@@ -230,7 +467,7 @@ def upload_file():
 
 @app.route('/api/rag_search', methods=['POST'])
 def rag_search():
-    """Fixed RAG search using text queries"""
+    """Fixed RAG search with proper embedding dimensions"""
     if not CHROMA_CONNECTED:
         return jsonify({'success': False, 'error': 'ChromaDB not connected'}), 503
     
@@ -239,7 +476,6 @@ def rag_search():
         query = data.get('query', '')
         n_results = data.get('n_results', 5)
         
-        # Use query_texts to avoid embedding dimension issues
         results = collection.query(
             query_texts=[query],
             n_results=n_results
@@ -253,7 +489,7 @@ def rag_search():
             'results': documents,
             'distances': distances,
             'total_documents': collection.count(),
-            'embedding_note': 'Using text-based search (dimension-agnostic)'
+            'embedding_model': 'all-mpnet-base-v2 (768-dim)'
         })
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
@@ -283,7 +519,7 @@ def status():
     services['chromadb'] = {
         'status': 'online' if CHROMA_CONNECTED else 'offline',
         'documents': collection.count() if CHROMA_CONNECTED else 0,
-        'note': 'Using text-based search'
+        'embedding_model': 'all-mpnet-base-v2 (768-dim)'
     }
     
     # Gemini status
@@ -303,6 +539,30 @@ def status():
             'uploaded_files': len(list(UPLOAD_FOLDER.glob('*'))) if UPLOAD_FOLDER.exists() else 0
         }
     })
+
+
+@app.route('/api/test_memory', methods=['GET'])
+def test_memory():
+    """Test endpoint to verify memory loading"""
+    try:
+        memory = load_memory()
+        memory_context = format_memory_context(memory)
+        
+        return jsonify({
+            'success': True,
+            'memory_loaded': True,
+            'user_name': memory.get('user_profile', {}).get('name', 'Unknown'),
+            'projects': list(memory.get('ongoing_projects', {}).keys()),
+            'formatted_context': memory_context,
+            'memory_file_exists': MEMORY_FILE.exists()
+        })
+    except Exception as e:
+        import traceback
+        return jsonify({
+            'success': False,
+            'error': str(e),
+            'traceback': traceback.format_exc()
+        }), 500
 
 @app.route('/api/workspace/scan', methods=['GET'])
 def scan_workspace():
@@ -364,15 +624,15 @@ def scan_workspace():
 def health():
     return jsonify({
         'status': 'healthy',
-        'service': 'FAITHH Professional Backend v3',
-        'features': ['chat', 'rag', 'upload', 'workspace_scan', 'model_identification']
+        'service': 'FAITHH Professional Backend v3.1',
+        'features': ['chat', 'rag', 'upload', 'workspace_scan', 'model_identification', 'fixed_embeddings']
     })
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("FAITHH PROFESSIONAL BACKEND v3")
+    print("FAITHH PROFESSIONAL BACKEND v3.1")
     print("=" * 60)
-    print(f"✅ Fixed embedding dimensions (using text search)")
+    print(f"✅ Fixed embedding dimensions (768-dim all-mpnet-base-v2)")
     print(f"✅ Model identification enabled")
     print(f"✅ File upload support")
     print(f"✅ Workspace scanning")

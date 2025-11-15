@@ -1034,7 +1034,8 @@
                         },
                         body: JSON.stringify({
                             message: message,
-                            model: 'llama3.1-8b'  // Default model
+                            model: 'llama3.1-8b',  // Default model
+                            use_rag: true  // Enable RAG for document context
                         })
                     });
                     

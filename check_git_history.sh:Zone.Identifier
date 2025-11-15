@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://claude.ai/chat/2fd5ff66-ee32-4a1e-9e25-7a37b803fa4a
+HostUrl=https://claude.ai/api/organizations/e9d2bd0b-986d-4cc8-a200-a4689bd637a0/conversations/2fd5ff66-ee32-4a1e-9e25-7a37b803fa4a/wiggle/download-file?path=%2Fmnt%2Fuser-data%2Foutputs%2Fcheck_git_history.sh
