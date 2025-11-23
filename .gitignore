@@ -28,3 +28,15 @@ diagnostic_report.txt
 *.broken*
 *_recovery.html
 *.Zone.Identifier
+
+# Network Security - DO NOT COMMIT
+network-backups/*_audit*.txt
+network-backups/*_passwords*.txt
+network-backups/unifi_backup*.unf
+parity/*_private.md
+*.pcap
+*_credentials*
+
+# Keep structure files only
+!network-backups/*.md
+!parity/network_infrastructure.md
