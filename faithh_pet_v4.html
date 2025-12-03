@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET TERMINAL v4.0</title>
+    <style>
+        /* ===================================
+           BASE STYLES
+           =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #00ffff;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* ===================================
+           SCANLINE EFFECTS
+           =================================== */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 255, 255, 0.05) 0px,
+                rgba(0, 255, 255, 0.05) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.2) 0px,
+                transparent 1px,
+                transparent 3px
+            );
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        /* ===================================
+           CORNER ACCENT SYSTEM
+           =================================== */
+        .corner-accent {
+            position: relative;
+        }
+
+        .corner-accent::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid #00ffff;
+            border-left: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+            z-index: 10;
+        }
+
+        .corner-accent::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid #00ffff;
+            border-right: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+            z-index: 10;
+        }
+
+        .corner-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .corner-bottom::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: -3px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 3px solid #00ffff;
+            border-left: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        .corner-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 3px solid #00ffff;
+            border-right: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        /* ===================================
+           MAIN CONTAINER
+           =================================== */
+        .pet-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(10, 14, 39, 0.95);
+            border: 3px solid #3b5a9d;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 
+                0 0 30px rgba(59, 90, 157, 0.5),
+                inset 0 0 50px rgba(0, 0, 0, 0.3);
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes subtle-pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(59, 90, 157, 0.5), inset 0 0 50px rgba(0, 0, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(59, 90, 157, 0.7), inset 0 0 50px rgba(0, 0, 0, 0.3); }
+        }
+
+        /* ===================================
+           HEADER
+           =================================== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: rgba(59, 90, 157, 0.2);
+            border: 2px solid #3b5a9d;
+            border-radius: 10px;
+        }
+
+        .pet-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffa500;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .terminal-title {
+            font-size: 24px;
+            letter-spacing: 4px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .clock {
+            font-size: 16px;
+            color: #ffa500;
+            letter-spacing: 2px;
+        }
+
+        /* ===================================
+           MAIN CONTENT AREA
+           =================================== */
+        .main-content {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            min-height: 500px;
+        }
+
+        /* ===================================
+           LEFT SIDEBAR - FAITHH PANEL
+           =================================== */
+        .faithh-sidebar {
+            width: 200px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .avatar-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .avatar-container {
+            width: 120px;
+            height: 150px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+        }
+
+        .avatar-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .avatar-subtitle {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .status-online {
+            color: #00ff00;
+            font-size: 12px;
+        }
+
+        /* ===================================
+           ACTIVE CHIPS MINI PANEL
+           =================================== */
+        .active-chips-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #b44cff;
+            border-radius: 15px;
+            padding: 12px;
+        }
+
+        .active-chips-title {
+            font-size: 11px;
+            color: #b44cff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .active-chips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .mini-chip {
+            aspect-ratio: 1;
+            background: rgba(30, 35, 60, 0.8);
+            border: 2px solid #3b5a9d;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .mini-chip.active {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.15);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+        }
+
+        .mini-chip.empty {
+            border-style: dashed;
+            border-color: #2a3050;
+        }
+
+        .mini-chip .chip-icon {
+            opacity: 0.3;
+        }
+
+        .mini-chip.active .chip-icon {
+            opacity: 1;
+        }
+
+        /* ===================================
+           CHAT PANEL
+           =================================== */
+        .chat-panel {
+            flex: 1;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-display {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            background: rgba(5, 10, 25, 0.5);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            min-height: 350px;
+            max-height: 450px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(20, 25, 50, 0.6);
+            border-left: 3px solid #3b5a9d;
+        }
+
+        .message.user-message {
+            border-left-color: #ffa500;
+            background: rgba(255, 165, 0, 0.1);
+        }
+
+        .message.system-message {
+            border-left-color: #b44cff;
+            background: rgba(180, 76, 255, 0.1);
+        }
+
+        .message-header {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00ffff;
+        }
+
+        .message.user-message .message-header {
+            color: #ffa500;
+        }
+
+        .message-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #e0e0e0;
+            white-space: pre-wrap;
+        }
+
+        .message-meta {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(59, 90, 157, 0.3);
+            font-size: 11px;
+            color: #666;
+        }
+
+        .chips-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .chip-tag {
+            background: rgba(0, 255, 255, 0.15);
+            border: 1px solid #00ffff;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 10px;
+            color: #00ffff;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(5, 10, 25, 0.8);
+            border: 2px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 12px 15px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .chat-input::placeholder {
+            color: #4a5a7a;
+        }
+
+        .btn-send {
+            background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 25px;
+            color: #0a0e27;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 165, 0, 0.4);
+        }
+
+        /* ===================================
+           NAVIGATION TABS
+           =================================== */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-tab {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 10px;
+            padding: 12px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .nav-tab:hover {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        .nav-tab.active {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .tab-icon {
+            font-size: 16px;
+        }
+
+        /* ===================================
+           PAGE CONTAINERS
+           =================================== */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: flex;
+        }
+
+        /* ===================================
+           CHIPS PAGE
+           =================================== */
+        .chips-page {
+            flex-direction: column;
+            gap: 20px;
+            min-height: 500px;
+        }
+
+        .chips-page-content {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .chip-library {
+            flex: 1;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #b44cff;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .chip-library-title {
+            font-size: 16px;
+            color: #b44cff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(180, 76, 255, 0.3);
+        }
+
+        .chip-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .chip-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(30, 35, 60, 0.6);
+            border: 2px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .chip-item:hover {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        .chip-item.selected {
+            border-color: #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        .chip-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chip-icon-large {
+            font-size: 24px;
+        }
+
+        .chip-details h4 {
+            color: #00ffff;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .chip-details p {
+            color: #666;
+            font-size: 11px;
+        }
+
+        .chip-toggle {
+            background: rgba(59, 90, 157, 0.3);
+            border: 2px solid #3b5a9d;
+            border-radius: 6px;
+            padding: 8px 15px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chip-toggle:hover {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+        }
+
+        .chip-item.selected .chip-toggle {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+
+        .loadout-panel {
+            width: 300px;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .loadout-title {
+            font-size: 16px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .loadout-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .loadout-slot {
+            aspect-ratio: 1;
+            background: rgba(30, 35, 60, 0.8);
+            border: 2px solid #3b5a9d;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .loadout-slot.filled {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.15);
+        }
+
+        .loadout-slot.empty {
+            border-style: dashed;
+            border-color: #2a3050;
+        }
+
+        .loadout-slot .slot-label {
+            font-size: 9px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .auto-select-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(30, 35, 60, 0.6);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .toggle-switch {
+            width: 40px;
+            height: 22px;
+            background: #2a3050;
+            border-radius: 11px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-switch.on {
+            background: rgba(0, 255, 0, 0.4);
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-switch.on::after {
+            left: 20px;
+            background: #00ff00;
+        }
+
+        .toggle-label {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* ===================================
+           STATUS PAGE
+           =================================== */
+        .status-page {
+            gap: 20px;
+            min-height: 500px;
+        }
+
+        .pulse-panel {
+            width: 200px;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b82f6;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pulse-avatar-container {
+            width: 120px;
+            height: 150px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pulse-avatar-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+        }
+
+        .pulse-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #3b82f6;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .pulse-subtitle {
+            font-size: 11px;
+            color: #888;
+        }
+
+        .status-panels {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .status-section {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 15px;
+            padding: 15px 20px;
+        }
+
+        .status-section-title {
+            font-size: 14px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: rgba(30, 35, 60, 0.4);
+            border-radius: 6px;
+        }
+
+        .status-name {
+            color: #888;
+            font-size: 12px;
+        }
+
+        .status-value {
+            color: #00ff00;
+            font-size: 12px;
+        }
+
+        .status-value.offline {
+            color: #ff6666;
+        }
+
+        .status-value.warning {
+            color: #ffa500;
+        }
+
+        /* ===================================
+           SCROLLBAR STYLING
+           =================================== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b5a9d;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ffff;
+        }
+
+        /* ===================================
+           TYPING INDICATOR
+           =================================== */
+        .typing-indicator .message-content::after {
+            content: '...';
+            animation: typing 1s infinite;
+        }
+
+        @keyframes typing {
+            0%, 100% { content: '.'; }
+            33% { content: '..'; }
+            66% { content: '...'; }
+        }
+    </style>
+</head>
+<body>
+    <div class="pet-container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="pet-indicator">
+                <div class="status-dot"></div>
+                <span>PET</span>
+            </div>
+            <div class="terminal-title">TERMINAL v4.0</div>
+            <div class="clock" id="clock">00:00:00 AM</div>
+        </div>
+
+        <!-- ==================== CHAT PAGE ==================== -->
+        <div class="main-content page active" id="chatPage">
+            <!-- LEFT SIDEBAR -->
+            <div class="faithh-sidebar">
+                <!-- FAITHH Avatar Panel -->
+                <div class="avatar-panel corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="avatar-container">
+                        <img src="images/faithh.png" alt="FAITHH">
+                    </div>
+                    <div class="avatar-name">FAITHH</div>
+                    <div class="avatar-subtitle">AI Assistant</div>
+                    <span class="status-online">● Online</span>
+                </div>
+
+                <!-- Active Chips Mini Panel -->
+                <div class="active-chips-panel corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="active-chips-title">
+                        <span>🎴</span>
+                        <span>ACTIVE CHIPS</span>
+                    </div>
+                    <div class="active-chips-grid" id="activeChipsGrid">
+                        <!-- Chips will be populated dynamically -->
+                        <div class="mini-chip empty"><span class="chip-icon">+</span></div>
+                        <div class="mini-chip empty"><span class="chip-icon">+</span></div>
+                        <div class="mini-chip empty"><span class="chip-icon">+</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAT PANEL -->
+            <div class="chat-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="chat-display" id="chatDisplay">
+                    <div class="message">
+                        <div class="message-header">FAITHH</div>
+                        <div class="message-content">System initialized. Battle chips loaded. How can I assist you today?</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Enter your message...">
+                    <button class="btn-send" onclick="sendMessage()">SEND</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CHIPS PAGE ==================== -->
+        <div class="chips-page page" id="chipsPage">
+            <div class="chips-page-content">
+                <!-- Chip Library -->
+                <div class="chip-library corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="chip-library-title">📚 Available Chips</div>
+                    <div class="chip-list" id="chipList">
+                        <!-- Chips populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Active Loadout -->
+                <div class="loadout-panel corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="loadout-title">⚔️ Active Loadout</div>
+                    <div class="loadout-grid" id="loadoutGrid">
+                        <!-- 6 slots max -->
+                    </div>
+                    <div class="auto-select-toggle" onclick="toggleAutoSelect()">
+                        <div class="toggle-switch on" id="autoSelectToggle"></div>
+                        <span class="toggle-label">Auto-select chips based on query</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== STATUS PAGE ==================== -->
+        <div class="status-page page" id="statusPage">
+            <!-- PULSE Panel -->
+            <div class="pulse-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="pulse-avatar-container">
+                    <img src="images/pulse.png" alt="PULSE">
+                </div>
+                <div class="pulse-name">PULSE</div>
+                <div class="pulse-subtitle">System Monitor</div>
+            </div>
+
+            <!-- Status Panels -->
+            <div class="status-panels">
+                <div class="status-section corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="status-section-title">
+                        <span>⚡</span>
+                        <span>SERVICES</span>
+                    </div>
+                    <div class="status-grid" id="servicesGrid">
+                        <div class="status-item">
+                            <span class="status-name">Backend</span>
+                            <span class="status-value" id="statusBackend">● CHECKING</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">ChromaDB</span>
+                            <span class="status-value" id="statusChroma">● CHECKING</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Ollama</span>
+                            <span class="status-value" id="statusOllama">● CHECKING</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Gemini</span>
+                            <span class="status-value" id="statusGemini">● CHECKING</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-section corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="status-section-title">
+                        <span>🗄️</span>
+                        <span>RAG DATABASE</span>
+                    </div>
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <span class="status-name">Total Documents</span>
+                            <span class="status-value" id="totalDocs">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Last Indexed</span>
+                            <span class="status-value" id="lastIndexed">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Collections</span>
+                            <span class="status-value" id="collections">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Embedding Model</span>
+                            <span class="status-value" id="embeddingModel">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-section corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="status-section-title">
+                        <span>📊</span>
+                        <span>SESSION</span>
+                    </div>
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <span class="status-name">Queries This Session</span>
+                            <span class="status-value" id="sessionQueries">0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Avg Response Time</span>
+                            <span class="status-value" id="avgResponseTime">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Active Model</span>
+                            <span class="status-value" id="activeModel">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Session Started</span>
+                            <span class="status-value" id="sessionStarted">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION TABS -->
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-page="chatPage">
+                <span class="tab-icon">💬</span>
+                <span>CHAT</span>
+            </div>
+            <div class="nav-tab" data-page="chipsPage">
+                <span class="tab-icon">🎴</span>
+                <span>CHIPS</span>
+            </div>
+            <div class="nav-tab" data-page="statusPage">
+                <span class="tab-icon">⚙️</span>
+                <span>STATUS</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ===================================
+        // CHIP DEFINITIONS
+        // ===================================
+        const CHIPS = {
+            'rag_search': {
+                name: 'RAG Search',
+                icon: '📚',
+                description: 'Semantic search across all documents',
+                color: '#00ffff'
+            },
+            'constella': {
+                name: 'Constella',
+                icon: '🏛️',
+                description: 'Civic governance framework context',
+                color: '#b44cff'
+            },
+            'scaffolding': {
+                name: 'Scaffolding',
+                icon: '🧭',
+                description: 'Position awareness and orientation',
+                color: '#00ff00'
+            },
+            'decisions': {
+                name: 'Decisions',
+                icon: '📋',
+                description: 'Decision history and rationale',
+                color: '#ffa500'
+            },
+            'life_map': {
+                name: 'Life Map',
+                icon: '🗺️',
+                description: 'High-level direction and priorities',
+                color: '#ff6b6b'
+            },
+            'self_query': {
+                name: 'Self Query',
+                icon: '🤖',
+                description: 'FAITHH self-awareness context',
+                color: '#4ecdc4'
+            }
+        };
+
+        // ===================================
+        // STATE
+        // ===================================
+        let activeChips = new Set();
+        let autoSelectEnabled = true;
+        let sessionQueries = 0;
+        let totalResponseTime = 0;
+        let sessionStartTime = new Date();
+
+        // ===================================
+        // CLOCK
+        // ===================================
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = (hours % 12 || 12).toString().padStart(2, '0');
+            document.getElementById('clock').textContent = `${displayHours}:${minutes}:${seconds} ${ampm}`;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // ===================================
+        // NAVIGATION
+        // ===================================
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update tab active state
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+
+                // Show corresponding page
+                const pageId = this.dataset.page;
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById(pageId).classList.add('active');
+            });
+        });
+
+        // ===================================
+        // CHAT FUNCTIONALITY
+        // ===================================
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            const chatDisplay = document.getElementById('chatDisplay');
+            
+            // Add user message
+            const userDiv = document.createElement('div');
+            userDiv.className = 'message user-message';
+            userDiv.innerHTML = `
+                <div class="message-header">USER</div>
+                <div class="message-content">${escapeHtml(message)}</div>
+            `;
+            chatDisplay.appendChild(userDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+            
+            input.value = '';
+            
+            // Show typing indicator
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message typing-indicator';
+            typingDiv.innerHTML = `
+                <div class="message-header">FAITHH</div>
+                <div class="message-content">Processing</div>
+            `;
+            chatDisplay.appendChild(typingDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+
+            const startTime = Date.now();
+            
+            try {
+                const response = await fetch('http://localhost:5557/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: message,
+                        model: 'llama3.1-8b',
+                        use_rag: true
+                    })
+                });
+                
+                const data = await response.json();
+                const responseTime = Date.now() - startTime;
+                
+                // Update stats
+                sessionQueries++;
+                totalResponseTime += responseTime;
+                document.getElementById('sessionQueries').textContent = sessionQueries;
+                document.getElementById('avgResponseTime').textContent = 
+                    Math.round(totalResponseTime / sessionQueries) + 'ms';
+                
+                // Remove typing indicator
+                chatDisplay.removeChild(typingDiv);
+                
+                // Parse integrations used from response
+                const integrationsUsed = parseIntegrations(data);
+                updateActiveChips(integrationsUsed);
+                
+                // Add FAITHH response
+                const responseDiv = document.createElement('div');
+                responseDiv.className = 'message';
+                
+                let chipsHtml = '';
+                if (integrationsUsed.length > 0) {
+                    chipsHtml = `
+                        <div class="message-meta">
+                            <span>Chips used:</span>
+                            <div class="chips-used">
+                                ${integrationsUsed.map(chip => 
+                                    `<span class="chip-tag">${CHIPS[chip]?.icon || '📎'} ${CHIPS[chip]?.name || chip}</span>`
+                                ).join('')}
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                responseDiv.innerHTML = `
+                    <div class="message-header">FAITHH</div>
+                    <div class="message-content">${escapeHtml(data.response || 'No response received')}</div>
+                    ${chipsHtml}
+                `;
+                chatDisplay.appendChild(responseDiv);
+                chatDisplay.scrollTop = chatDisplay.scrollHeight;
+                
+            } catch (error) {
+                chatDisplay.removeChild(typingDiv);
+                
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'message system-message';
+                errorDiv.innerHTML = `
+                    <div class="message-header">SYSTEM</div>
+                    <div class="message-content" style="color: #ff6666;">Connection error. Please ensure the backend is running on port 5557.</div>
+                `;
+                chatDisplay.appendChild(errorDiv);
+                chatDisplay.scrollTop = chatDisplay.scrollHeight;
+            }
+        }
+
+        // Parse which integrations were used from backend response
+        function parseIntegrations(data) {
+            const integrations = [];
+            
+            // Check for integration hints in response metadata
+            // This assumes backend returns integration info - adjust based on actual backend
+            if (data.integrations_used) {
+                return data.integrations_used;
+            }
+            
+            // Fallback: detect from response content or context
+            if (data.context_sources) {
+                if (data.context_sources.includes('constella')) integrations.push('constella');
+                if (data.context_sources.includes('scaffolding')) integrations.push('scaffolding');
+                if (data.context_sources.includes('decisions')) integrations.push('decisions');
+                if (data.context_sources.includes('self')) integrations.push('self_query');
+                if (data.context_sources.includes('rag')) integrations.push('rag_search');
+            }
+            
+            // If backend doesn't provide this info yet, show RAG as default when use_rag is true
+            if (integrations.length === 0 && data.response) {
+                integrations.push('rag_search');
+            }
+            
+            return integrations;
+        }
+
+        // Update the active chips display in sidebar
+        function updateActiveChips(chipIds) {
+            const grid = document.getElementById('activeChipsGrid');
+            grid.innerHTML = '';
+            
+            // Always show at least 3 slots, expand to 6 if needed
+            const slotCount = Math.max(3, Math.min(6, chipIds.length));
+            const showSecondRow = chipIds.length > 3;
+            
+            for (let i = 0; i < slotCount; i++) {
+                const chip = document.createElement('div');
+                if (i < chipIds.length && CHIPS[chipIds[i]]) {
+                    chip.className = 'mini-chip active';
+                    chip.innerHTML = `<span class="chip-icon">${CHIPS[chipIds[i]].icon}</span>`;
+                    chip.title = CHIPS[chipIds[i]].name;
+                } else {
+                    chip.className = 'mini-chip empty';
+                    chip.innerHTML = '<span class="chip-icon">+</span>';
+                }
+                grid.appendChild(chip);
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Enter key to send
+        document.getElementById('chatInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // ===================================
+        // CHIPS PAGE
+        // ===================================
+        function initChipsPage() {
+            const chipList = document.getElementById('chipList');
+            const loadoutGrid = document.getElementById('loadoutGrid');
+            
+            // Populate chip library
+            chipList.innerHTML = '';
+            for (const [id, chip] of Object.entries(CHIPS)) {
+                const item = document.createElement('div');
+                item.className = 'chip-item' + (activeChips.has(id) ? ' selected' : '');
+                item.dataset.chipId = id;
+                item.innerHTML = `
+                    <div class="chip-info">
+                        <span class="chip-icon-large">${chip.icon}</span>
+                        <div class="chip-details">
+                            <h4>${chip.name}</h4>
+                            <p>${chip.description}</p>
+                        </div>
+                    </div>
+                    <button class="chip-toggle">${activeChips.has(id) ? 'REMOVE' : 'ADD'}</button>
+                `;
+                item.querySelector('.chip-toggle').addEventListener('click', () => toggleChip(id));
+                chipList.appendChild(item);
+            }
+            
+            // Populate loadout grid
+            loadoutGrid.innerHTML = '';
+            const chipArray = Array.from(activeChips);
+            for (let i = 0; i < 6; i++) {
+                const slot = document.createElement('div');
+                if (i < chipArray.length && CHIPS[chipArray[i]]) {
+                    slot.className = 'loadout-slot filled';
+                    slot.innerHTML = `
+                        <span>${CHIPS[chipArray[i]].icon}</span>
+                        <span class="slot-label">${CHIPS[chipArray[i]].name}</span>
+                    `;
+                } else {
+                    slot.className = 'loadout-slot empty';
+                    slot.innerHTML = `
+                        <span style="color: #2a3050;">+</span>
+                        <span class="slot-label">EMPTY</span>
+                    `;
+                }
+                loadoutGrid.appendChild(slot);
+            }
+        }
+
+        function toggleChip(chipId) {
+            if (activeChips.has(chipId)) {
+                activeChips.delete(chipId);
+            } else if (activeChips.size < 6) {
+                activeChips.add(chipId);
+            }
+            initChipsPage();
+            updateActiveChips(Array.from(activeChips));
+        }
+
+        function toggleAutoSelect() {
+            autoSelectEnabled = !autoSelectEnabled;
+            const toggle = document.getElementById('autoSelectToggle');
+            toggle.classList.toggle('on', autoSelectEnabled);
+        }
+
+        // ===================================
+        // STATUS PAGE
+        // ===================================
+        async function checkSystemStatus() {
+            try {
+                const response = await fetch('http://localhost:5557/api/status');
+                const data = await response.json();
+                
+                if (data.success) {
+                    // Update service statuses
+                    document.getElementById('statusBackend').innerHTML = '● ONLINE';
+                    document.getElementById('statusBackend').className = 'status-value';
+                    
+                    if (data.services) {
+                        updateServiceStatus('statusChroma', data.services.chromadb);
+                        updateServiceStatus('statusOllama', data.services.ollama);
+                        updateServiceStatus('statusGemini', data.services.gemini);
+                    }
+                    
+                    // Update RAG stats if available
+                    if (data.rag_stats) {
+                        document.getElementById('totalDocs').textContent = 
+                            data.rag_stats.total_documents?.toLocaleString() || '--';
+                        document.getElementById('collections').textContent = 
+                            data.rag_stats.collections || '--';
+                    }
+                    
+                    if (data.model) {
+                        document.getElementById('activeModel').textContent = data.model;
+                    }
+                }
+            } catch (error) {
+                document.getElementById('statusBackend').innerHTML = '● OFFLINE';
+                document.getElementById('statusBackend').className = 'status-value offline';
+            }
+        }
+
+        function updateServiceStatus(elementId, status) {
+            const el = document.getElementById(elementId);
+            if (status === 'online' || status === 'configured') {
+                el.innerHTML = '● ONLINE';
+                el.className = 'status-value';
+            } else if (status === 'offline' || status === 'error') {
+                el.innerHTML = '● OFFLINE';
+                el.className = 'status-value offline';
+            } else {
+                el.innerHTML = '● ' + (status?.toUpperCase() || 'UNKNOWN');
+                el.className = 'status-value warning';
+            }
+        }
+
+        // ===================================
+        // INITIALIZATION
+        // ===================================
+        function init() {
+            // Set session start time
+            document.getElementById('sessionStarted').textContent = 
+                sessionStartTime.toLocaleTimeString();
+            
+            // Initialize chips page
+            initChipsPage();
+            
+            // Check system status
+            checkSystemStatus();
+            setInterval(checkSystemStatus, 30000);
+            
+            // Set initial active chips display
+            updateActiveChips([]);
+        }
+
+        init();
+    </script>
+</body>
+</html>

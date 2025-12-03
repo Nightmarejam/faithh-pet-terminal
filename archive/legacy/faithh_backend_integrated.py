@@ -73,86 +73,6 @@ GEMINI_AVAILABLE = bool(GEMINI_API_KEY)
 CURRENT_MODEL = {"name": "unknown", "provider": "unknown", "last_response_time": 0}
 
 # ============================================================
-# SECTION 1: Conversation Memory Data Structures & Functions
-# Add after: CURRENT_MODEL = {"name": "unknown", ...}
-# ============================================================
-
-conversation_sessions = {}
-SESSION_TIMEOUT = 3600  # 1 hour in seconds
-
-def cleanup_old_sessions():
-    """Remove sessions older than timeout"""
-    from datetime import datetime
-    now = datetime.now()
-    to_remove = []
-    for session_id, session in conversation_sessions.items():
-        last_activity = datetime.fromisoformat(session["last_activity"])
-        if (now - last_activity).total_seconds() > SESSION_TIMEOUT:
-            to_remove.append(session_id)
-    
-    for session_id in to_remove:
-        del conversation_sessions[session_id]
-        print(f"🧹 Cleaned up session: {session_id}")
-
-def get_or_create_session(session_id):
-    """Get existing session or create new one"""
-    from datetime import datetime
-    if not session_id:
-        session_id = f"session_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-    
-    if session_id not in conversation_sessions:
-        conversation_sessions[session_id] = {
-            "started": datetime.now().isoformat(),
-            "last_activity": datetime.now().isoformat(),
-            "history": []
-        }
-        print(f"🆕 Created session: {session_id}")
-    else:
-        conversation_sessions[session_id]["last_activity"] = datetime.now().isoformat()
-    
-    # Cleanup old sessions periodically
-    if len(conversation_sessions) > 50:
-        cleanup_old_sessions()
-    
-    return session_id
-
-def add_to_conversation_history(session_id, user_msg, assistant_msg, intent=None):
-    """Add exchange to session history"""
-    from datetime import datetime
-    if session_id not in conversation_sessions:
-        return
-    
-    conversation_sessions[session_id]["history"].append({
-        "timestamp": datetime.now().isoformat(),
-        "user": user_msg,
-        "assistant": assistant_msg,
-        "intent": intent or {}
-    })
-    
-    # Keep only last 10 exchanges (configurable)
-    if len(conversation_sessions[session_id]["history"]) > 10:
-        conversation_sessions[session_id]["history"] = conversation_sessions[session_id]["history"][-10:]
-
-def format_conversation_history(history, last_n=5):
-    """Format conversation history for context"""
-    if not history:
-        return None
-    
-    recent = history[-last_n:]
-    formatted = []
-    
-    for exchange in recent:
-        formatted.append(f"User: {exchange['user']}")
-        # Truncate long responses but keep enough for context
-        assistant_text = exchange['assistant']
-        if len(assistant_text) > 500:
-            assistant_text = assistant_text[:500] + "..."
-        formatted.append(f"Assistant: {assistant_text}")
-        formatted.append("")
-    
-    return "\n".join(formatted)
-
-# ============================================================
 # AUTO-INDEX QUEUE (Background thread for conversation indexing)
 # ============================================================
 
@@ -217,7 +137,6 @@ def allowed_file(filename):
 MEMORY_FILE = Path.home() / "ai-stack/faithh_memory.json"
 DECISIONS_LOG = Path.home() / "ai-stack/decisions_log.json"
 PROJECT_STATES = Path.home() / "ai-stack/project_states.json"
-SCAFFOLDING_FILE = Path.home() / "ai-stack/scaffolding_state.json"
 
 def load_json_file(filepath):
     """Generic JSON file loader"""
@@ -246,20 +165,6 @@ def load_project_states():
     """Load project states"""
     return load_json_file(PROJECT_STATES)
 
-def load_scaffolding():
-    """Load scaffolding state for structural awareness"""
-    return load_json_file(SCAFFOLDING_FILE)
-
-def save_scaffolding(scaffolding):
-    """Persist scaffolding state to disk"""
-    try:
-        scaffolding['meta']['last_updated'] = datetime.now().isoformat()
-        with open(SCAFFOLDING_FILE, 'w') as f:
-            json.dump(scaffolding, f, indent=2)
-        print(f"🏗️  Scaffolding saved: {datetime.now().strftime('%H:%M:%S')}")
-    except Exception as e:
-        print(f"❌ Error saving scaffolding: {e}")
-
 def save_memory(memory):
     """Persist memory to disk"""
     try:
@@ -285,8 +190,6 @@ def detect_query_intent(query_text):
         'is_why_question': False,
         'is_next_action_query': False,
         'is_constella_query': False,
-        'needs_orientation': False,
-        'is_tangent': False,
         'patterns_matched': []
     }
     
@@ -342,26 +245,6 @@ def detect_query_intent(query_text):
     if any(kw in query_lower for kw in constella_keywords):
         intent['is_constella_query'] = True
     
-    # Pattern 5: Orientation queries (scaffolding - where am I?)
-    orientation_patterns = [
-        r'where (was i|did i leave off|am i|are we)',
-        r'what was i (working on|doing)',
-        r'catch me up',
-        r'bring me up to speed',
-        r"what('s| is) (the |my )?(status|progress)",
-        r"(my |the |what('s| is) )progress",
-        r"what('s| is| have i) (been )?(done|complete|finished)",
-        r'am i on track',
-        r'where (did we|do we) stand',
-        r'what have (i|we) (done|accomplished|completed)',
-        r'update me'
-    ]
-    for pattern in orientation_patterns:
-        if re.search(pattern, query_lower):
-            intent['needs_orientation'] = True
-            intent['patterns_matched'].append(f"orientation: {pattern}")
-            break
-    
     return intent
 
 def get_self_awareness_context():
@@ -379,38 +262,6 @@ Hero workflow: {sa.get('hero_workflow', '')}
 Current capability: {sa.get('current_capability', '')}
 Target capability: {sa.get('target_capability', '')}
 ==============================
-"""
-        return context.strip()
-    return None
-
-def get_constella_awareness_context():
-    """Extract Constella awareness section from memory"""
-    memory = load_memory()
-    if 'constella_awareness' in memory:
-        ca = memory['constella_awareness']
-        context = f"""
-=== CONSTELLA FRAMEWORK AWARENESS ===
-What it is: {ca.get('what_it_is', '')}
-What it is NOT: {ca.get('what_it_is_NOT', '')}
-Core philosophy: {ca.get('core_philosophy', '')}
-
-Key Components:
-  Tokens:
-    - Astris: {ca.get('key_components', {}).get('tokens', {}).get('Astris', '')}
-    - Auctor: {ca.get('key_components', {}).get('tokens', {}).get('Auctor', '')}
-  
-  Governance:
-    - Penumbra Accord: {ca.get('key_components', {}).get('governance_mechanisms', {}).get('Penumbra_Accord', '')}
-    - UCF: {ca.get('key_components', {}).get('governance_mechanisms', {}).get('UCF', '')}
-    - Civic Tome: {ca.get('key_components', {}).get('governance_mechanisms', {}).get('Civic_Tome', '')}
-  
-  Evidence Framework: {ca.get('key_components', {}).get('evidence_framework', '')}
-
-Connection to FAITHH: {ca.get('connection_to_faithh', '')}
-Current Status: {ca.get('current_status', '')}
-
-CRITICAL: {ca.get('when_asked_about_constella', '')}
-======================================
 """
         return context.strip()
     return None
@@ -497,88 +348,6 @@ Current Priorities:
     context += "============================\n"
     
     return context.strip()
-
-
-def get_scaffolding_context(query_text=None):
-    """
-    Build orientation context from scaffolding state.
-    This is the "You are HERE" function for persistent structural awareness.
-    """
-    scaffolding = load_scaffolding()
-    if not scaffolding:
-        return None
-    
-    context_parts = []
-    
-    # Active context - where you are right now
-    active = scaffolding.get('active_context', {})
-    if active:
-        context_parts.append(f"""
-=== CURRENT STRUCTURAL POSITION ===
-Project: {active.get('primary_project', 'Unknown').upper()}
-Position: {active.get('structural_position', 'Unknown')}
-Goal: {active.get('phase_goal', 'Not defined')}
-
-Summary: {active.get('position_summary', '')}
-====================================""")
-    
-    # Recent completions - what's done (with permission to move on)
-    completions = scaffolding.get('recent_completions', [])
-    if completions:
-        latest = completions[0]
-        context_parts.append(f"""
-=== RECENTLY COMPLETED ===
-What: {latest.get('what', '')}
-When: {latest.get('when', '')}
-Significance: {latest.get('structural_significance', '')}
-What remains: {latest.get('what_remains', '')}
-Permission: {latest.get('permission', '')}
-===========================""")
-    
-    # Open loops - what's in progress
-    open_loops = scaffolding.get('open_loops', [])
-    active_loops = [l for l in open_loops if l.get('status') != 'completed']
-    if active_loops:
-        context_parts.append("\n=== OPEN LOOPS ===")
-        for loop in active_loops[:3]:
-            context_parts.append(f"• {loop.get('item', '')}")
-            context_parts.append(f"  Why structural: {loop.get('why_structural', '')}")
-            context_parts.append(f"  Status: {loop.get('status', 'unknown')}")
-            if loop.get('suggested_action'):
-                context_parts.append(f"  Suggested: {loop.get('suggested_action', '')}")
-        context_parts.append("==================")
-    
-    # Parked tangents - check if query relates to a parked idea
-    tangents = scaffolding.get('parked_tangents', [])
-    if tangents and query_text:
-        query_lower = query_text.lower()
-        for tangent in tangents:
-            tangent_words = [w for w in tangent.get('idea', '').lower().split() if len(w) > 4]
-            if any(word in query_lower for word in tangent_words):
-                context_parts.append(f"""
-=== PARKED TANGENT DETECTED ===
-You previously parked: "{tangent.get('idea', '')}"
-Why parked: {tangent.get('why_parked', '')}
-Revisit when: {tangent.get('revisit_when', '')}
-
-This is noted but not your current structural priority. Consider if this is important right now or should stay parked.
-================================""")
-                break
-    
-    # Project milestones - show progression
-    milestones = scaffolding.get('project_structural_milestones', {})
-    primary_project = active.get('primary_project', '').lower()
-    if primary_project in milestones:
-        proj_milestones = milestones[primary_project]
-        context_parts.append(f"""
-=== {primary_project.upper()} MILESTONE PROGRESSION ===
-Completed: {', '.join(proj_milestones.get('completed', [])[-3:])}
-Current: {proj_milestones.get('current', 'Unknown')}
-Next: {proj_milestones.get('next', 'Unknown')}
-After that: {proj_milestones.get('after_that', 'Unknown')}
-=============================================""")
-    
-    return "\n".join(context_parts) if context_parts else None
 
 
 def smart_rag_query(query_text, n_results=10, where=None, intent=None):
@@ -675,30 +444,12 @@ def smart_rag_query(query_text, n_results=10, where=None, intent=None):
         )
 
 
-# ============================================================
-# SECTION 2: Modified build_integrated_context
-# This REPLACES your existing build_integrated_context function
-# ============================================================
-
-def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
+def build_integrated_context(query_text, intent, use_rag=True):
     """
     Build context from all available sources based on query intent
-    NOW WITH CONVERSATION MEMORY! (Phase 1)
+    This is the KEY integration function!
     """
     context_parts = []
-    
-    # Integration 0: Conversation History (NEW - PHASE 1!)
-    if session_id and session_id in conversation_sessions:
-        history = conversation_sessions[session_id]["history"]
-        if history:
-            history_text = format_conversation_history(history, last_n=5)
-            if history_text:
-                context_parts.append(f"""
-=== RECENT CONVERSATION ===
-{history_text}
-============================
-""")
-                print(f"   💬 Added conversation history ({len(history)} exchanges)")
     
     # Integration 1: Self-Awareness Boost
     if intent['is_self_query']:
@@ -706,13 +457,6 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
         if self_context:
             context_parts.append(self_context)
             print("   ✅ Added self-awareness context")
-    
-    # Integration 1b: Constella Awareness Boost
-    if intent['is_constella_query']:
-        constella_context = get_constella_awareness_context()
-        if constella_context:
-            context_parts.append(constella_context)
-            print("   ✅ Added Constella awareness context")
     
     # Integration 2: Decision Citation
     if intent['is_why_question']:
@@ -735,39 +479,27 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
             context_parts.append(state_context)
             print("   ✅ Added project state context")
     
-    # Integration 4: Scaffolding (structural orientation)
-    if intent.get('needs_orientation') or intent.get('is_next_action_query'):
-        scaffolding_context = get_scaffolding_context(query_text)
-        if scaffolding_context:
-            context_parts.append(scaffolding_context)
-            print("   🏗️  Added scaffolding context (orientation)")
-    
-    # Integration 5: RAG (if not a pure self-query)
+    # Integration 4: RAG (if not a pure self-query)
     rag_results = []
     if use_rag and CHROMA_CONNECTED and not intent['is_self_query']:
-        # Skip RAG for pure orientation queries - scaffolding has the answer
-        if intent.get('needs_orientation') and not intent.get('is_constella_query'):
-            print("   ⭐ Skipping RAG for orientation query - using scaffolding")
-        else:
-            try:
-                results = smart_rag_query(query_text, n_results=5, intent=intent)
-                
-                if results and results['documents'] and results['documents'][0]:
-                    rag_context = "\n=== KNOWLEDGE BASE ===\n"
-                    for i, doc in enumerate(results['documents'][0][:3]):
-                        rag_context += f"{i+1}. {doc[:1000]}...\n\n"
-                        rag_results.append(doc[:500])
-                    rag_context += "=====================\n"
-                    context_parts.append(rag_context.strip())
-                    print(f"   ✅ Added RAG context ({len(results['documents'][0])} results)")
-            except Exception as e:
-                print(f"   ⚠️  RAG query failed: {e}")
+        try:
+            results = smart_rag_query(query_text, n_results=5, intent=intent)
+            
+            if results and results['documents'] and results['documents'][0]:
+                rag_context = "\n=== KNOWLEDGE BASE ===\n"
+                for i, doc in enumerate(results['documents'][0][:3]):
+                    rag_context += f"{i+1}. {doc[:1000]}...\n\n"
+                    rag_results.append(doc[:500])
+                rag_context += "=====================\n"
+                context_parts.append(rag_context.strip())
+                print(f"   ✅ Added RAG context ({len(results['documents'][0])} results)")
+        except Exception as e:
+            print(f"   ⚠️  RAG query failed: {e}")
     
     # Combine all context
     full_context = "\n\n".join(context_parts) if context_parts else ""
     
     return full_context, rag_results
-
 
 
 def update_recent_topics(memory, query, response_preview):
@@ -917,14 +649,11 @@ def chat():
         message = data.get('message', '')
         model = data.get('model', 'llama3.1-8b')
         use_rag = data.get('use_rag', True)
-        session_id = data.get('session_id', None)
-        session_id = get_or_create_session(session_id)
         
         # STEP 1: Detect query intent
         intent = detect_query_intent(message)
         print(f"\n{'='*60}")
         print(f"📨 Query: {message[:80]}...")
-        print(f"💬 Session: {session_id}")
         print(f"🎯 Intent Analysis:")
         for key, value in intent.items():
             if key != 'patterns_matched' and value:
@@ -933,7 +662,7 @@ def chat():
             print(f"   Patterns: {', '.join(intent['patterns_matched'])}")
         
         # STEP 2: Build integrated context from all sources
-        context, rag_results = build_integrated_context(message, intent, use_rag, session_id)
+        context, rag_results = build_integrated_context(message, intent, use_rag)
         
         # STEP 3: Build final prompt
         personality = get_faithh_personality()
@@ -954,41 +683,33 @@ def chat():
                 gemini_model = genai.GenerativeModel('gemini-2.0-flash-exp')
                 response = gemini_model.generate_content(full_prompt)
                 
-                assistant_response = response.text  # Store response
-                
                 CURRENT_MODEL = {
                     "name": "gemini-2.0-flash-exp",
                     "provider": "Google",
                     "last_response_time": (datetime.now() - start_time).total_seconds()
                 }
                 
-                # PHASE 1: Add to conversation history BEFORE returning
-                add_to_conversation_history(session_id, message, assistant_response, intent)
-                
                 # Index conversation
                 if CHROMA_CONNECTED:
                     index_queue.put({
                         'user_msg': message,
-                        'assistant_msg': assistant_response,
+                        'assistant_msg': response.text,
                         'metadata': {
                             'model': 'gemini-2.0-flash-exp',
                             'rag_used': bool(context),
-                            'intent_summary': ','.join(intent.get('patterns_matched', [])),
-                            'session_id': session_id
+                            'intent': intent
                         }
                     })
                 
                 return jsonify({
                     'success': True,
-                    'response': assistant_response,
+                    'response': response.text,
                     'model_used': CURRENT_MODEL['name'],
                     'provider': CURRENT_MODEL['provider'],
                     'response_time': CURRENT_MODEL['last_response_time'],
                     'rag_used': bool(context),
                     'rag_results': rag_results,
-                    'intent_detected': intent,
-                    'session_id': session_id,  # PHASE 1: Return session info
-                    'conversation_depth': len(conversation_sessions.get(session_id, {}).get('history', []))
+                    'intent_detected': intent
                 })
             except Exception as e:
                 print(f"Gemini error: {e}")
@@ -1006,7 +727,6 @@ def chat():
         
         if response.status_code == 200:
             result = response.json()
-            assistant_response = result.get('response', 'No response generated')  # Store response
             
             model_info = result.get('model', model)
             if 'llama' in model_info.lower():
@@ -1022,33 +742,27 @@ def chat():
                 "last_response_time": (datetime.now() - start_time).total_seconds()
             }
             
-            # PHASE 1: Add to conversation history BEFORE returning
-            add_to_conversation_history(session_id, message, assistant_response, intent)
-            
             # Index conversation
             if CHROMA_CONNECTED:
                 index_queue.put({
                     'user_msg': message,
-                    'assistant_msg': assistant_response,
+                    'assistant_msg': result.get('response', ''),
                     'metadata': {
                         'model': model_info,
                         'rag_used': bool(context),
-                        'intent_summary': ','.join(intent.get('patterns_matched', [])),
-                        'session_id': session_id
+                        'intent': intent
                     }
                 })
             
             return jsonify({
                 'success': True,
-                'response': assistant_response,
+                'response': result.get('response', 'No response generated'),
                 'model_used': CURRENT_MODEL['name'],
                 'provider': CURRENT_MODEL['provider'],
                 'response_time': CURRENT_MODEL['last_response_time'],
                 'rag_used': bool(context),
                 'rag_results': rag_results,
-                'intent_detected': intent,
-                'session_id': session_id,  # PHASE 1: Return session info
-                'conversation_depth': len(conversation_sessions.get(session_id, {}).get('history', []))
+                'intent_detected': intent
             })
         else:
             return jsonify({
@@ -1170,8 +884,7 @@ def status():
     services['integrations'] = {
         'memory': MEMORY_FILE.exists(),
         'decisions_log': DECISIONS_LOG.exists(),
-        'project_states': PROJECT_STATES.exists(),
-        'scaffolding': SCAFFOLDING_FILE.exists()
+        'project_states': PROJECT_STATES.exists()
     }
     
     services['current_model'] = CURRENT_MODEL
@@ -1179,7 +892,7 @@ def status():
     return jsonify({
         'success': True,
         'services': services,
-        'version': 'v3.3-scaffolding',
+        'version': 'v3.2-integrated',
         'workspace': {
             'upload_folder': str(UPLOAD_FOLDER),
             'uploaded_files': len(list(UPLOAD_FOLDER.glob('*'))) if UPLOAD_FOLDER.exists() else 0
@@ -1225,19 +938,17 @@ def health():
         'features': [
             'chat', 'rag', 'upload',
             'self_awareness_boost', 'decision_citation', 'project_state_awareness',
-            'scaffolding_awareness', 'orientation_detection',
             'intent_detection', 'smart_context_building'
         ]
     })
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("FAITHH PROFESSIONAL BACKEND v3.3 - SCAFFOLDING")
+    print("FAITHH PROFESSIONAL BACKEND v3.2 - INTEGRATED")
     print("=" * 60)
     print(f"✅ Self-awareness boost (faithh_memory.json)")
     print(f"✅ Decision citation (decisions_log.json)")
     print(f"✅ Project state awareness (project_states.json)")
-    print(f"✅ Scaffolding awareness (scaffolding_state.json)")
     print(f"✅ Smart intent detection")
     print(f"✅ Integrated context building")
     print("=" * 60)

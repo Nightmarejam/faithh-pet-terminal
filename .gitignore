@@ -34,6 +34,8 @@ network-backups/*_audit*.txt
 network-backups/*_passwords*.txt
 network-backups/unifi_backup*.unf
 parity/*_private.md
+*_secrets.md
+credentials.yaml
 *.pcap
 *_credentials*
 

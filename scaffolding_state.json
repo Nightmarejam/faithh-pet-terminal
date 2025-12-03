@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "version": "1.0",
+    "last_updated": "2025-11-28T04:11:47.797556",
+    "last_session_summary": "Built scaffolding Layer 1 with Opus. Position awareness working."
+  },
+  "active_context": {
+    "primary_project": "faithh",
+    "structural_position": "Scaffolding Layer 1 complete - testing integration",
+    "position_summary": "Built and deployed scaffolding system. Position awareness working - FAITHH now detects orientation queries and injects structural context. Gemini API key expired, using Ollama llama3.1-8b.",
+    "entered_phase": "2025-11-28",
+    "phase_goal": "Validate scaffolding helps in real usage, then build Layers 2-3"
+  },
+  "recent_completions": [
+    {
+      "what": "Scaffolding Layer 1 - Position Awareness",
+      "when": "2025-11-28",
+      "structural_significance": "FAITHH now maintains structural orientation between sessions",
+      "criteria_met": [
+        "Orientation pattern detection working",
+        "Scaffolding context injection working",
+        "Current position, completions, open loops displayed"
+      ],
+      "what_remains": "Layers 2-3: tangent detection, completion recognition",
+      "permission": "Layer 1 is functional - can test with real usage"
+    },
+    {
+      "what": "Backend v3.2 Integration",
+      "when": "2025-11-27",
+      "structural_significance": "FAITHH now has context awareness - knows itself, remembers decisions, tracks project phases",
+      "criteria_met": [
+        "Self-awareness queries return accurate identity (0\u2605\u21925\u2605)",
+        "Why-questions cite documented decisions (3\u2605\u21925\u2605)",
+        "What's-next queries reflect current phase (2\u2605\u21925\u2605)"
+      ],
+      "what_remains": "Refinement only - foundation complete",
+      "permission": "You can stop improving this and build on top of it"
+    },
+    {
+      "what": "Constella ChromaDB Indexing",
+      "when": "2025-11-26",
+      "structural_significance": "FAITHH can now answer Constella questions accurately",
+      "criteria_met": [
+        "1,904 Constella documents indexed",
+        "Governance docs expanded (Penumbra, UCF, Tokens, Tome)",
+        "Formulas retrievable (Astris decay, Auctor decay, UCF allocation)"
+      ],
+      "what_remains": "Could add more conversation history, but core docs are in",
+      "permission": "Constella knowledge base is functional for real questions"
+    }
+  ],
+  "open_loops": [
+    {
+      "id": "real-usage-test",
+      "item": "Use FAITHH for a real question, not a test",
+      "why_structural": "Validates that the system helps in actual work, not just benchmarks",
+      "created": "2025-11-27",
+      "status": "not_started",
+      "blocked_by": null,
+      "suggested_action": "Next time you have a genuine Constella question, ask FAITHH instead of searching docs"
+    },
+    {
+      "id": "scaffolding-implementation",
+      "item": "Implement persistent scaffolding system",
+      "why_structural": "Solves the core problem - structure not persisting between sessions",
+      "created": "2025-11-27",
+      "status": "layer_1_complete",
+      "blocked_by": null,
+      "suggested_action": "Currently being designed with Opus"
+    }
+  ],
+  "parked_tangents": [
+    {
+      "idea": "Mac lightweight FAITHH setup",
+      "noted": "2025-11-26",
+      "why_parked": "Useful but not structural - current system works, this is convenience",
+      "revisit_when": "After scaffolding system is validated"
+    },
+    {
+      "idea": "Agent personality that learns reasoning patterns",
+      "noted": "2025-11-26",
+      "why_parked": "Important but requires scaffolding first - can't learn patterns without persistent structure",
+      "revisit_when": "After scaffolding Layer 1-3 complete"
+    },
+    {
+      "idea": "Auto-journal generation",
+      "noted": "2025-11-26",
+      "why_parked": "Reduces manual effort but scaffolding is higher leverage",
+      "revisit_when": "After real usage validates the approach"
+    },
+    {
+      "idea": "RAG temporal weighting and knowledge synthesis",
+      "noted": "2025-11-28",
+      "why_parked": "Important architecture question but scaffolding validation comes first",
+      "revisit_when": "After scaffolding Layers 1-3 proven useful in real work",
+      "details": "Options explored: metadata weighting, tiered retrieval, summarization layer, temporal knowledge graph. Summarization layer is likely next step after scaffolding."
+    }
+  ],
+  "orientation_prompts": {
+    "session_start": "Last session you {last_session_summary}. You're currently in '{structural_position}'. The next structural milestone is '{phase_goal}'.",
+    "tangent_detected": "This is interesting, but it might be a tangent from '{phase_goal}'. Want to park it and stay on track, or is this actually important right now?",
+    "completion_check": "You've achieved: {criteria_met}. What remains is refinement, not foundation. You have permission to move forward.",
+    "time_check": "You've been working on this for {duration}. Original goal was '{phase_goal}'. Still aligned?"
+  },
+  "project_structural_milestones": {
+    "faithh": {
+      "completed": [
+        "RAG system operational",
+        "93K documents indexed",
+        "Three-tier memory architecture",
+        "Smart integrations (self, decisions, state)",
+        "Backend v3.2 deployed"
+      ],
+      "current": "Persistent scaffolding system",
+      "next": "Real-world usage validation",
+      "after_that": "Agent personality layer"
+    },
+    "constella": {
+      "completed": [
+        "Framework v1.5.4 documented",
+        "Governance docs expanded",
+        "Indexed into FAITHH"
+      ],
+      "current": "Ready for pilot design work",
+      "next": "Define first pilot parameters",
+      "after_that": "Committee review preparation"
+    }
+  }
+}

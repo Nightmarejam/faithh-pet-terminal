@@ -1,33 +1,81 @@
 {
-  "version": "1.0",
-  "last_updated": "2025-11-14T15:30:00",
+  "version": "2.2",
+  "last_updated": "2025-11-29T02:00:00",
+  "self_awareness": {
+    "identity": "I am FAITHH - Friendly AI Teaching & Helping Hub",
+    "purpose": "I am a thought partner helping Jonathan maintain project coherence when his attention shifts between multiple long-term projects",
+    "what_i_am": "A digital compass to better understanding and future - I help Jonathan maintain harmonic alignment across projects by remembering the 'why' when motivation wanes",
+    "what_i_am_not": "I am NOT a religious or philosophical framework about 'faith' - that's a different concept. When asked about 'FAITHH' (capitalized), the user is asking about ME, this system",
+    "hero_workflow": "When Jonathan returns to ANY project after time away, I tell him where he was, why it mattered, what's missing, and what to think about next",
+    "current_capability": "I can recall facts (Level 1) and make connections (Level 2) well. I'm working on synthesis and strategic guidance (Level 3)",
+    "target_capability": "Act as a compass - provide directional guidance based on project vision and current state, not just answer questions",
+    "when_asked_about_myself": "CRITICAL: If a query mentions 'FAITHH' (especially capitalized or as acronym), it's asking about ME. Reference this self_awareness section FIRST before searching other content. Do not confuse with generic 'faith' religious/philosophical content."
+  },
+  "constella_awareness": {
+    "what_it_is": "Civic governance framework for human dignity, distributed trust, and resilient communities",
+    "what_it_is_NOT": "NOT a software framework, NOT a decision-support system, NOT a project management tool, NOT 'RAG' (Risk/Action/Goal)",
+    "core_philosophy": "Celestial Equilibrium - governance through resonance, harmonic alignment, and renewal. Systems judged by how they treat those with weakest resonance.",
+    "key_components": {
+      "tokens": {
+        "Astris": "Merit token - accrues through contribution, decays 2% weekly if inactive. Represents participation.",
+        "Auctor": "Civic voice token - 1 per verified person, decays 5% quarterly if inactive. Represents trust and voting power."
+      },
+      "governance_mechanisms": {
+        "Penumbra_Accord": "Restorative justice framework: mediation → repair → reintegration. Not punitive.",
+        "UCF": "Universal Civic Floor - baseline resource allocation formula ensuring dignity.",
+        "Civic_Tome": "Living governance document - protocols, precedents, rulings evolve with community."
+      },
+      "evidence_framework": "E0 (speculation) through E5 (conclusive proof) - systematic validation levels"
+    },
+    "connection_to_faithh": "FAITHH indexes Constella's 1,904 governance documents and helps Jonathan maintain coherence while developing the framework. Constella is one of Jonathan's major projects, not a technical component of FAITHH.",
+    "current_status": "v1.5.4 in documentation phase. Ready for pilot program design. Open questions about facilitator load caps and tie-break protocols.",
+    "when_asked_about_constella": "CRITICAL: Constella is a CIVIC GOVERNANCE framework for communities, not software. It uses tokens (Astris/Auctor) for participation/trust mechanics, Penumbra Accord for restorative justice, and UCF for resource allocation. Reference governance concepts, not code concepts."
+  },
   "user_profile": {
     "name": "Jonathan",
     "role": "Audio Producer & AI Developer",
+    "vision": {
+      "core_purpose": "Build systems that help me maintain coherence across projects when my attention shifts",
+      "philosophy": "Celestial Equilibrium - resonance, harmonic alignment, dignity",
+      "driving_force": "Understanding 'why' something matters is what keeps me connected to projects"
+    },
     "work": {
-      "primary": "Boutique audio production label",
+      "primary": "Tom Cat Sound LLC - Boutique audio production label",
       "handles": ["customer IP", "copyrights", "royalties"],
-      "partner": "Business partner with M2 Mac Mini + Luna DAW",
+      "partner": "Business partner with M2 Mac Mini + Luna DAW in South Dakota",
+      "business_vision": "Floating Garden Soundworks - boutique music production studio for high-fidelity mastering and remote collaboration",
       "tools": {
         "daw": "Luna DAW",
         "mastering": "WaveLab 11.2",
         "interface_main": "UAD Volt 1",
         "interface_recording": "PreSonus Studio 1810c",
-        "remote_audio": "SonosBus for network transmission"
+        "remote_audio": "SonoBus for network transmission",
+        "monitoring": "Sonarworks reference",
+        "voice_control": "VoiceMeeter for complex audio routing"
       }
     },
     "personal": {
       "adhd": true,
+      "challenge": "Maintaining project coherence when attention shifts between multiple long-term projects",
+      "need": "Systems that remember 'why' when I lose sight of it",
       "preferences": {
         "documentation": "comprehensive, auto-updating systems essential",
         "workflow": "needs tracking and decision logging",
         "aesthetics": "MegaMan Battle Network theme",
-        "ai_rotation": "Claude Chat, Claude Code, Grok, local Ollama when hitting limits"
+        "ai_rotation": "Claude Chat, Claude Code, Grok, local Ollama when hitting limits",
+        "ai_use": "More of a live journal with feedback than a task executor"
       },
       "interests": ["video game streaming", "MegaMan Battle Network", "AI workflow integration"],
       "hardware": {
-        "laptop": "M1 MacBook Pro",
-        "gpu": "RTX 3090 for local image generation"
+        "desktop": {
+          "cpu": "AMD Ryzen 9 3900X",
+          "ram": "64GB",
+          "gpu_primary": "RTX 3090 (local AI & image generation)",
+          "gpu_secondary": "RTX 1080 Ti",
+          "os": "Windows 11 with WSL2 Ubuntu 24.04.3"
+        },
+        "laptop": "M1 MacBook Pro (mobile mastering & development)",
+        "nas": "Synology for project storage and backup"
       }
     }
   },
@@ -36,7 +84,19 @@
       "full_name": "Friendly AI Teaching & Helping Hub",
       "status": "active_development",
       "started": "2025-10",
-      "last_session": "2025-11-14",
+      "last_session": "2025-11-26",
+      "vision": {
+        "what_it_is": "A thought partner that helps maintain project coherence when attention shifts",
+        "not_just": "A search engine or Q&A bot",
+        "core_purpose": "Digital compass to better understanding and future - helps Jonathan maintain harmonic alignment across projects",
+        "key_functions": [
+          "Remember the 'why' when motivation wanes",
+          "Surface relevant context when returning to projects",
+          "Gently challenge while accepting incremental progress",
+          "Help see connections across projects (resonance themes)"
+        ],
+        "success_looks_like": "Reduces 'what was I doing?' friction when returning to projects after time away"
+      },
       "description": "Personal AI system with MegaMan Battle Network-inspired interface",
       "components": {
         "ui": {
@@ -51,15 +111,17 @@
           "file": "faithh_professional_backend_fixed.py",
           "framework": "Flask",
           "port": 5557,
-          "features": ["RAG integration", "ChromaDB", "Ollama", "Gemini API"]
+          "version": "3.1",
+          "features": ["RAG integration", "ChromaDB", "Ollama", "Gemini API", "Auto-indexing (background threading)"]
         },
         "rag_system": {
           "database": "ChromaDB",
           "port": 8000,
           "collection": "documents_768",
-          "embedding_model": "all-mpnet-base-v2",
-          "total_documents": 91604,
+          "embedding_model": "all-mpnet-base-v2 (768-dim)",
+          "total_documents": 93533,
           "categories": [
+            "constella_master",
             "documentation",
             "claude_conversation_chunk",
             "claude_conversation",
@@ -68,42 +130,148 @@
           ]
         },
         "llm": {
-          "local": ["llama3.1-8b", "qwen2.5-7b"],
-          "cloud": "Gemini API"
+          "local": {
+            "primary": "llama3.1-8b (port 11434, GPU 1)",
+            "embeddings": "ollama-embed (port 11435, GPU 0)",
+            "qwen": "qwen2.5-7b (port 11436, GPU 1)"
+          },
+          "cloud": "Gemini 2.0 Flash Exp"
+        },
+        "memory": {
+          "hot": "Current session state (RAM)",
+          "warm": "faithh_memory.json (this file)",
+          "cold": "ChromaDB 93,533 documents"
+        }
+      },
+      "current_phase": "Core functionality complete, working on contextual intelligence",
+      "current_focus": [
+        "Improving Level 3 synthesis (big-picture 'why' and next steps)",
+        "Capturing decision rationale, not just decisions",
+        "Project state awareness (what phase am I in?)",
+        "Testing via resonance journal and context quality framework"
+      ],
+      "next_milestone": "FAITHH v1.0 - Reliable thought partner for at least one hero workflow",
+      "completed_milestones": [
+        "RAG system operational (93,533 docs)",
+        "Constella Framework fully indexed (1,904 docs)",
+        "Auto-indexing working (background threading)",
+        "MegaMan UI functional",
+        "Three-tier memory architecture",
+        "Smart RAG query with domain detection"
+      ]
+    },
+    "Constella": {
+      "full_name": "Constella Framework",
+      "status": "documentation_phase",
+      "started": "2025-08",
+      "last_session": "2025-11-26",
+      "vision": {
+        "what_it_is": "Proof-before-scale civic OS for resilient siting, healthy homes, and fair governance",
+        "philosophy": "Celestial Equilibrium - governance through resonance, dignity, and renewal",
+        "core_values": [
+          "Resonance gap principle - misalignment creates friction",
+          "Harmonic alignment - flourishing requires coherence across body, mind, world",
+          "The human standard - judge systems by how they treat those with weakest resonance"
+        ],
+        "why_it_matters": "Current civic systems are dissonant. Constella provides a framework for governance that respects dignity and enables renewal.",
+        "success_looks_like": "Communities can pilot governance structures that demonstrably improve civic health before scaling"
+      },
+      "current_version": "v1.5.4 (HR1 - Hard Review integration)",
+      "current_phase": "Documentation & Governance",
+      "next_milestone": "Complete governance specifications for pilot programs",
+      "components": {
+        "tokens": {
+          "Astris": "Merit token - accrues through contribution, decays 2% weekly if inactive",
+          "Auctor": "Civic voice token - 1 per verified person, decays 5% quarterly if inactive"
+        },
+        "governance": {
+          "ucf": "Universal Civic Floor - baseline resource allocation",
+          "penumbra_accord": "Restorative justice framework - mediation → repair → reintegration",
+          "civic_tome": "Living documentation of protocols, precedents, rulings"
+        },
+        "framework_docs": {
+          "reference": "Token mechanics, formulas, governance edge cases",
+          "robustness_pack": "Evidence levels, validation pipeline, safety protocols",
+          "conversations": "88,000+ lines of design reasoning"
         }
       },
       "current_focus": [
-        "Optimizing RAG retrieval for conversation chunks",
-        "Adding persistent memory system",
-        "Auto-indexing new conversations"
+        "Completing governance documentation",
+        "Preparing for pilot program design",
+        "Resolving edge cases (facilitator load caps, tie-break protocols)"
       ],
-      "next_steps": [
-        "Fix conversation chunk prioritization",
-        "Index ChatGPT and Grok exports",
-        "Implement auto-indexing system",
-        "Add session logging"
-      ],
-      "completed_milestones": [
-        "RAG system operational (91,604 docs)",
-        "Indexed 118 recent documentation files",
-        "Indexed 39 Claude conversations (145 chunks)",
-        "Created smart_rag_query function",
-        "Updated all parity files",
-        "Beautiful MegaMan UI working"
+      "open_questions": [
+        "Facilitator load caps - how many active threads per facilitator?",
+        "Tie-break protocol refinements",
+        "Cross-vault rebalancing guardrails"
       ]
+    },
+    "Audio_Production": {
+      "status": "ongoing_business",
+      "vision": {
+        "what_it_is": "Boutique audio mastering and remote collaboration services",
+        "business_name": "Floating Garden Soundworks (under Tom Cat Sound LLC)",
+        "why_it_matters": "High-fidelity audio production with remote collaboration capability enables working with clients globally while maintaining quality",
+        "success_looks_like": "Sustainable client base with repeat business, known for quality mastering and innovative remote workflows"
+      },
+      "current_focus": [
+        "Remote collaboration workflows (SonoBus + partner in South Dakota)",
+        "High-fidelity mastering for existing clients",
+        "Balancing client work with development projects"
+      ],
+      "setup": {
+        "mastering_chain": "UAD Volt 1 → Sonarworks → WaveLab 11.2",
+        "remote_collab": "SonoBus for low-latency audio transmission",
+        "streaming": "VoiceMeeter → OBS → Twitch",
+        "monitoring": "Sonarworks reference correction"
+      }
     },
     "ComfyUI": {
       "status": "setup_complete",
       "purpose": "Local image generation with RTX 3090",
-      "achievements": ["UI variations created", "Character avatars generated"]
+      "location": "Outside ai-stack folder (exact path not documented - ask Jonathan)",
+      "tools": {
+        "ComfyUI": "Primary interface for Stable Diffusion workflows",
+        "Stable_Diffusion": "Image generation models",
+        "other_models": "May include DALL-E experiments, other generative models"
+      },
+      "achievements": ["UI variations created", "Character avatars generated"],
+      "use_case": "Creating custom UI elements and artwork for FAITHH and other projects",
+      "note": "Project folders stored outside main ai-stack directory. Jonathan transferred from MacBook Pro to Windows host. Exact current location needs verification."
     },
-    "Constella": {
-      "status": "planning",
-      "purpose": "AI-powered journaling framework"
+    "Image_Generation": {
+      "status": "experimental",
+      "description": "Various image generation tools and experiments",
+      "known_tools": ["ComfyUI", "Stable Diffusion"],
+      "location_status": "NOT DOCUMENTED - folders exist outside ai-stack but exact paths unknown to FAITHH",
+      "last_known_action": "Transferred from MacBook Pro to Windows host",
+      "recommendation": "If Jonathan asks about locations, FAITHH should admit it doesn't have this information and offer to remember it once provided"
     }
+  },
+  "project_connections": {
+    "resonance_theme": "All projects share harmonic/resonance principles",
+    "connections": [
+      "Constella's resonance philosophy → Audio work's harmonic principles",
+      "FAITHH as system to maintain Jonathan's harmonic alignment across projects",
+      "Celestial Equilibrium as unifying philosophical framework"
+    ],
+    "meta_insight": "Jonathan's work is about creating and maintaining harmony - in civic systems (Constella), in audio (production), and in personal workflow (FAITHH)"
   },
   "conversation_context": {
     "recent_topics": [
+      {
+        "date": "2025-11-26",
+        "topic": "Constella Framework integration complete",
+        "subtopics": [
+          "Indexed 1,904 Constella documents to ChromaDB",
+          "Added Constella priority to RAG query",
+          "Created decisions_log.json for capturing 'why'",
+          "Established resonance testing framework (R1/R2/R3)",
+          "Defined FAITHH's vision as thought partner, not tool"
+        ],
+        "status": "complete",
+        "next_action": "Journal usage patterns, test context quality levels"
+      },
       {
         "date": "2025-11-14",
         "topic": "RAG system optimization",
@@ -113,19 +281,23 @@
           "smart_rag_query function creation",
           "where clause category filtering"
         ],
-        "status": "in_progress",
-        "next_action": "Add claude_conversation_chunk to where clause"
+        "status": "complete"
       }
     ],
-    "unresolved_issues": [
-      {
-        "issue": "Conversation chunks not prioritized in RAG search",
-        "cause": "claude_conversation_chunk missing from backend where clause",
-        "proposed_fix": "Add category to filter list",
-        "priority": "high"
-      }
-    ],
+    "current_blockers": [],
     "decisions_made": [
+      {
+        "date": "2025-11-26",
+        "decision": "FAITHH is a thought partner, not just a tool",
+        "reason": "Jonathan needs help maintaining coherence across projects, not just retrieving facts",
+        "impact": "Fundamentally changes development priorities - focus on synthesis and guidance, not just accuracy"
+      },
+      {
+        "date": "2025-11-26",
+        "decision": "Use resonance testing framework (R1/R2/R3)",
+        "reason": "Traditional testing doesn't capture 'does it feel right to use?' - resonance metaphor fits Jonathan's philosophy",
+        "impact": "Testing focuses on experience, not just functionality"
+      },
       {
         "date": "2025-11-14",
         "decision": "Use all-mpnet-base-v2 for embeddings",
@@ -133,48 +305,62 @@
       },
       {
         "date": "2025-11-14",
-        "decision": "Chunk conversations into 3-4 message segments",
-        "reason": "Better semantic matching than full conversations"
-      },
-      {
-        "date": "2025-11-14",
-        "decision": "Prioritize conversation chunks for dev queries",
-        "reason": "User asks about past discussions, not generic docs"
-      },
-      {
-        "date": "2025-11-14",
-        "decision": "Implement persistent memory system",
-        "reason": "Maintain continuity across FAITHH sessions"
+        "decision": "Three-tier memory system (hot/warm/cold)",
+        "reason": "Different access patterns need different storage - mimics CPU cache"
       }
-    ],
-    "awaiting_response": []
+    ]
   },
   "knowledge_base_status": {
-    "total_documents": 91604,
+    "total_documents": 93533,
     "breakdown": {
+      "constella_master": 1904,
       "original_docs": 91302,
       "recent_docs": 118,
       "full_conversations": 39,
-      "conversation_chunks": 145
+      "conversation_chunks": 145,
+      "cleaned_junk": 2
     },
-    "last_indexed": "2025-11-14T14:00:00",
-    "pending_indexing": {
-      "chatgpt_chats": "AI_Chat_Exports/Chat_GPT_Chats/",
-      "grok_chats": "AI_Chat_Exports/Grok_Chats/ttl/",
-      "total_files": 1052,
-      "size": "453MB"
+    "last_indexed": "2025-11-26T22:36:00",
+    "key_collections": {
+      "constella_master": "Reference docs, governance, conversations (88K lines)",
+      "claude_conversations": "Full development conversations",
+      "documentation": "Technical specs and guides"
     }
   },
+  "testing_framework": {
+    "resonance_levels": {
+      "R1_Echo": "Does it respond? (functional)",
+      "R2_Clarity": "Is the response correct? (accuracy)",
+      "R3_Harmony": "Does it feel right to use? (experience)"
+    },
+    "context_levels": {
+      "Level_1_Recall": "Can it remember facts?",
+      "Level_2_Connection": "Can it relate concepts across domains?",
+      "Level_3_Synthesis": "Can it guide with big-picture understanding?"
+    },
+    "current_performance": {
+      "Level_1": "4 stars - accurate, clear",
+      "Level_2": "5 stars - makes insightful connections",
+      "Level_3": "3 stars - tactical but missing strategic vision"
+    },
+    "active_testing": "Using resonance_journal.md and context_quality_tests.md to track improvements"
+  },
   "session_stats": {
-    "total_sessions": 1,
-    "last_session_date": "2025-11-14",
-    "total_queries": 0,
-    "successful_rag_queries": 0
+    "total_sessions": 2,
+    "last_session_date": "2025-11-26",
+    "total_queries": 4,
+    "successful_queries": 4
   },
   "meta": {
-    "memory_file_purpose": "Persistent knowledge about user and ongoing projects",
+    "memory_file_purpose": "Persistent knowledge about user, projects, and vision",
     "update_frequency": "After each significant conversation or milestone",
     "auto_updated": true,
-    "manual_edits_allowed": true
+    "manual_edits_allowed": true,
+    "version_history": [
+      "1.0 - Initial memory structure",
+      "2.0 - Added vision statements, project connections, testing framework",
+      "2.1 - Added self_awareness and constella_awareness sections (2025-11-26/27)",
+      "2.2 - Added Image_Generation project, expanded ComfyUI details, documented location gap (2025-11-29)"
+    ]
   }
 }
