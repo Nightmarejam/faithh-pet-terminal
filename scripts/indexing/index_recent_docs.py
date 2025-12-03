@@ -197,7 +197,13 @@ def main():
     if results['documents'] and results['documents'][0]:
         print(f"✅ Test query successful!")
         print(f"   Query: '{test_query}'")
-        print(f"   Top result: {results['metadatas'][0][0]['source']}")
+        try:
+            if results['metadatas'] and results['metadatas'][0]:
+                meta = results['metadatas'][0][0]
+                source = meta.get('source', meta.get('filename', 'unknown'))
+                print(f"   Top result: {source}")
+        except (IndexError, KeyError):
+            print(f"   Top result: (metadata unavailable)")
     else:
         print(f"⚠️  Test query returned no results")
     

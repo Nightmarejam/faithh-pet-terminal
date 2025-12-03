@@ -686,6 +686,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
     NOW WITH CONVERSATION MEMORY! (Phase 1)
     """
     context_parts = []
+    integrations_used = []  # Track which integrations fired
     
     # Integration 0: Conversation History (NEW - PHASE 1!)
     if session_id and session_id in conversation_sessions:
@@ -699,6 +700,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
 ============================
 """)
                 print(f"   💬 Added conversation history ({len(history)} exchanges)")
+                integrations_used.append('conversation_history')
     
     # Integration 1: Self-Awareness Boost
     if intent['is_self_query']:
@@ -706,6 +708,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
         if self_context:
             context_parts.append(self_context)
             print("   ✅ Added self-awareness context")
+            integrations_used.append('self_awareness')
     
     # Integration 1b: Constella Awareness Boost
     if intent['is_constella_query']:
@@ -713,6 +716,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
         if constella_context:
             context_parts.append(constella_context)
             print("   ✅ Added Constella awareness context")
+            integrations_used.append('constella')
     
     # Integration 2: Decision Citation
     if intent['is_why_question']:
@@ -720,6 +724,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
         if decisions_context:
             context_parts.append(decisions_context)
             print("   ✅ Added decisions log context")
+            integrations_used.append('decisions')
     
     # Integration 3: Project State Awareness
     if intent['is_next_action_query']:
@@ -734,6 +739,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
         if state_context:
             context_parts.append(state_context)
             print("   ✅ Added project state context")
+            integrations_used.append('project_state')
     
     # Integration 4: Scaffolding (structural orientation)
     if intent.get('needs_orientation') or intent.get('is_next_action_query'):
@@ -741,6 +747,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
         if scaffolding_context:
             context_parts.append(scaffolding_context)
             print("   🏗️  Added scaffolding context (orientation)")
+            integrations_used.append('scaffolding')
     
     # Integration 5: RAG (if not a pure self-query)
     rag_results = []
@@ -760,13 +767,14 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
                     rag_context += "=====================\n"
                     context_parts.append(rag_context.strip())
                     print(f"   ✅ Added RAG context ({len(results['documents'][0])} results)")
+                    integrations_used.append('rag_search')
             except Exception as e:
                 print(f"   ⚠️  RAG query failed: {e}")
     
     # Combine all context
     full_context = "\n\n".join(context_parts) if context_parts else ""
     
-    return full_context, rag_results
+    return full_context, rag_results, integrations_used
 
 
 
@@ -933,7 +941,7 @@ def chat():
             print(f"   Patterns: {', '.join(intent['patterns_matched'])}")
         
         # STEP 2: Build integrated context from all sources
-        context, rag_results = build_integrated_context(message, intent, use_rag, session_id)
+        context, rag_results, integrations_used = build_integrated_context(message, intent, use_rag, session_id)
         
         # STEP 3: Build final prompt
         personality = get_faithh_personality()
@@ -988,7 +996,8 @@ def chat():
                     'rag_results': rag_results,
                     'intent_detected': intent,
                     'session_id': session_id,  # PHASE 1: Return session info
-                    'conversation_depth': len(conversation_sessions.get(session_id, {}).get('history', []))
+                    'conversation_depth': len(conversation_sessions.get(session_id, {}).get('history', [])),
+                    'integrations_used': integrations_used  # Show which integrations fired
                 })
             except Exception as e:
                 print(f"Gemini error: {e}")
@@ -1048,7 +1057,8 @@ def chat():
                 'rag_results': rag_results,
                 'intent_detected': intent,
                 'session_id': session_id,  # PHASE 1: Return session info
-                'conversation_depth': len(conversation_sessions.get(session_id, {}).get('history', []))
+                'conversation_depth': len(conversation_sessions.get(session_id, {}).get('history', [])),
+                'integrations_used': integrations_used  # Show which integrations fired
             })
         else:
             return jsonify({
