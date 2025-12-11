@@ -1,8 +1,18 @@
 # FAITHH System - Master Context & Priority Matrix
 
-**Last Updated:** 2024-11-14 23:45
-**Current Session:** RAG restoration & documentation system setup
-**System Status:** Backend operational, RAG broken (embedding mismatch)
+**Last Updated:** 2024-12-11
+**Current Session:** Harmony Framework integration
+**System Status:** Backend operational, RAG working (199 documents indexed)
+
+---
+
+## 🆕 NEW: Harmony Framework Integration
+
+**Status:** ✅ Fully indexed in ChromaDB
+**Documents:** 4 files, 114 chunks total
+**See:** `HARMONY_CONTEXT.md` for quick reference
+
+Harmony is a biomechanical framework describing how the body maintains stability under load. It maps to AI architecture via the Harmony-AI Bridge, proposing four mechanisms (Output-Coherence Sensor, Attention Rebalancer, Phase-Flip Controller, Micro-Buoyancy Manager) to give transformers a stabilizing return loop.
 
 ---
 
