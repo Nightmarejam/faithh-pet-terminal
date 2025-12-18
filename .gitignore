@@ -28,6 +28,8 @@ diagnostic_report.txt
 *.broken*
 *_recovery.html
 *.Zone.Identifier
+*:Zone.Identifier
+*.Identifier
 
 # Network Security - DO NOT COMMIT
 network-backups/*_audit*.txt

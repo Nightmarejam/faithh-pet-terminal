@@ -1,178 +1,44 @@
 {
+  "last_updated": "2025-12-18",
+  "timezone": "America/Los_Angeles",
   "projects": {
-    "constella": {
-      "full_name": "Constella Framework",
-      "current_phase": "Documentation & Governance",
-      "phase_description": "Completing governance specifications before pilot programs",
-      "last_worked": "2025-11-26",
-      "next_milestone": {
-        "name": "Complete governance docs for pilots",
-        "target_date": "2025-12-15",
-        "blockers": [
-          "Facilitator load caps need definition",
-          "Tie-break protocol needs refinement"
-        ]
-      },
-      "vision_statement": "Proof-before-scale civic OS for resilient siting, healthy homes, and fair governance. Judge systems by how they treat those with weakest resonance.",
-      "why_it_matters": "Current civic systems create dissonance. Constella provides governance framework that respects dignity and enables renewal through harmonic alignment.",
-      "current_priorities": [
-        "Finalize governance edge cases",
-        "Prepare pilot program designs",
-        "Index complete framework into FAITHH"
+    "FAITHH": {
+      "name": "FAITHH",
+      "category": "AI assistant / local stack",
+      "status": "active",
+      "phase": "Phase 2",
+      "phase_status": "complete",
+      "summary": "Multi-provider routing is merged into the main backend. doc_grounded mode enforcement is working and the UI shows provider/model/latency badges.",
+      "key_capabilities": [
+        "Multi-provider LLM routing (Groq primary, local fallbacks)",
+        "doc_grounded enforcement (refuses persona answers when docs are required)",
+        "RAG integration via ChromaDB",
+        "Provider badge in UI (provider/model/latency)",
+        "Backward-compatible /api/chat request normalization"
       ],
-      "success_criteria": "Communities can pilot governance structures that demonstrably improve civic health before scaling",
-      "progress_markers": {
-        "v1.2": "Framework master completed",
-        "v1.5.4": "Hard review integration - token mechanics, governance edge cases",
-        "v1.5.5": "Next - governance refinements for pilot readiness"
-      }
-    },
-    "faithh": {
-      "full_name": "FAITHH - Friendly AI Teaching & Helping Hub",
-      "current_phase": "v3.3-scaffolding - Production Ready",
-      "phase_description": "Core system validated at 4.5★+ average. Infrastructure expanded to dual-system (Windows Full + MacBook Lite). Ready for daily usage testing.",
-      "last_worked": "2025-12-07",
-      "next_milestone": {
-        "name": "FAITHH v1.0 - Daily Usage Validation",
-        "target_date": "2025-12-31",
-        "success_criteria": [
-          "Used daily for real work (not just testing)",
-          "Jonathan uses FAITHH for 50%+ of orientation questions",
-          "Gaps identified through real usage inform improvements",
-          "Free tier + FAITHH workflow established"
-        ]
-      },
-      "vision_statement": "A thought partner that helps maintain project coherence when attention shifts. Digital compass to better understanding and future.",
-      "why_it_matters": "Jonathan has multiple complex, long-term projects. ADHD makes context-switching hard. FAITHH remembers 'why' when motivation wanes and maintains continuity across projects.",
-      "current_priorities": [
-        "Use FAITHH daily for real work",
-        "Log gaps in resonance journal",
-        "Fix only critical issues that block usage",
-        "Defer architectural changes until usage patterns clear"
-      ],
-      "infrastructure": {
-        "windows_full": {
-          "status": "Production ready",
-          "documents": 93629,
-          "models": ["llama3.1-8b", "qwen2.5-coder:7b", "qwen2.5-7b"],
-          "integrations": ["self-awareness", "constella", "decisions", "scaffolding", "project_states"],
-          "tailscale_ip": "100.115.225.100"
-        },
-        "macbook_lite": {
-          "status": "Operational",
-          "model": "llama3.1:8b",
-          "context_files": ["life_map", "constella", "audio"],
-          "response_time": "~2 seconds",
-          "tailscale_ip": "100.122.56.106"
-        }
-      },
-      "progress_markers": {
-        "RAG_operational": "93,629 documents, semantic search working",
-        "Constella_integrated": "1,904 Constella docs indexed with priority",
-        "Scaffolding_Layer_1": "Position awareness complete",
-        "Tasks_1_2_complete": "Constella awareness + RAG priority tuning validated",
-        "Testing_validated": "4.58★ average across all tests",
-        "MacBook_Lite": "Operational with Tailscale access (2025-12-05)",
-        "NAS_organized": "3.6TB reorganized, 794GB freed (2025-12-06)"
-      },
-      "known_issues": [
-        "Conversational gap: No multi-turn memory, can't generate code (known, accepted for now)",
-        "Knowledge boundaries: Should say 'I don't know' instead of hallucinating paths",
-        "Level 3 synthesis weak: Gives tactics not vision"
+      "next_steps": [
+        "Run acceptance tests after any dependency or model_config change",
+        "Confirm Groq model selection in model_config.yaml matches desired default behavior"
       ]
     },
-    "audio_production": {
-      "full_name": "Floating Garden Soundworks / Tom Cat Sound LLC",
-      "current_phase": "Primary Income Focus",
-      "phase_description": "Income generation is top priority. FAITHH/infrastructure work should support this, not distract from it.",
-      "last_worked": "2025-11-20",
-      "next_milestone": {
-        "name": "Establish sustainable client pipeline",
-        "target_date": "2025-Q1",
-        "success_criteria": [
-          "2-3 active clients per month",
-          "Repeat business from existing clients",
-          "Remote workflow proven with South Dakota partner"
-        ]
+    "gen8_services": {
+      "name": "Gen8 MicroServer (Home Services Box)",
+      "category": "Home infrastructure",
+      "status": "active",
+      "phase": "Build-out",
+      "phase_status": "parts_ordered",
+      "summary": "HP ProLiant MicroServer Gen8 being upgraded as home services box.",
+      "parts_ordered": {
+        "cpu": "Intel Xeon E3-1265L v2",
+        "ram": "2x8GB DDR3-1600 ECC UDIMM (16GB max)"
       },
-      "vision_statement": "Boutique audio mastering and remote collaboration services. High-fidelity production with global reach through innovative remote workflows.",
-      "why_it_matters": "Primary income source. Everything else depends on this being sustainable.",
-      "current_priorities": [
-        "Find and serve paying clients",
-        "Complete partner Tailscale setup for remote collaboration",
-        "Define service packages with pricing",
-        "Create portfolio/samples"
-      ],
-      "tools_and_setup": {
-        "mastering": "WaveLab 11.2 on Windows desktop",
-        "interface": "UAD Volt 1",
-        "monitoring": "Sonarworks reference correction",
-        "remote_collab": "SonoBus/JackTrip with partner's M2 Mac Mini + Luna DAW",
-        "nas_storage": "Tom Cat Productions at /volume1/Audio/tomcat/"
-      }
-    },
-    "infrastructure": {
-      "full_name": "Hardware & Network Infrastructure",
-      "current_phase": "Production Ready",
-      "phase_description": "All critical infrastructure operational. NAS organized, Tailscale connected, documentation complete.",
-      "last_worked": "2025-12-07",
-      "next_milestone": {
-        "name": "ProLiant Server Activation",
-        "target_date": "When $130 budget available",
-        "blockers": ["Budget constraints"],
-        "upgrade_cost": {
-          "cpu": "$50-60 (Xeon E3-1265L v2)",
-          "ram": "$60-80 (2x 8GB DDR3 ECC)",
-          "total": "$110-130"
-        }
-      },
-      "devices": {
-        "windows_desktop": "FAITHH Full, AI inference, primary workstation",
-        "macbook_pro": "FAITHH Lite, mobile mastering, Constella dev",
-        "ds220j_nas": "File storage only, organized structure",
-        "proliant_gen8": "OFFLINE - future ChromaDB/Plex server",
-        "phone": "Tailscale access to Windows FAITHH",
-        "partner_mac_mini": "Pending Tailscale setup"
-      },
-      "nas_structure": {
-        "Personal": "1.4TB - videos, photos, docs, private",
-        "Audio": "152GB - Tom Cat Productions, stems, backups",
-        "Backups": "1012GB - Windows host, legacy",
-        "AI": "177GB - Learning Portal, datasets",
-        "Archive": "~30GB - ISOs, old software",
-        "Inbox_Sorted": "66GB - needs manual sorting"
-      }
+      "planned_services": ["Pi-hole", "Uptime Kuma"],
+      "role": "Services box (not router)",
+      "next_steps": [
+        "Install Ubuntu Server + Docker when parts arrive",
+        "Assign static IP for Gen8",
+        "Deploy Pi-hole, set UDM DHCP DNS to Pi-hole"
+      ]
     }
-  },
-  "cross_project_themes": {
-    "resonance_and_harmony": "All projects involve creating or maintaining harmony - civic (Constella), sonic (audio), personal workflow (FAITHH)",
-    "celestial_equilibrium": "Unifying philosophy across projects - resonance gap, harmonic alignment, the human standard",
-    "proof_before_scale": "Both Constella and FAITHH follow this - validate core functionality before expanding",
-    "affordable_but_mighty": "High ROI upgrades, repurpose hardware efficiently, budget-conscious decisions"
-  },
-  "time_allocation": {
-    "current_balance": {
-      "audio_client_work": "60% (PRIMARY INCOME FOCUS)",
-      "faithh_maintenance": "20% (daily usage, not building)",
-      "constella_development": "10% (documentation when inspired)",
-      "infrastructure": "10% (maintenance only)"
-    },
-    "rationale": "FGS income must be sustainable before investing more time in FAITHH/Constella development"
-  },
-  "_schema_version": "1.1",
-  "_last_updated": "2025-12-07",
-  "_update_protocol": {
-    "when_to_update": [
-      "When starting work on a project after time away",
-      "When completing a milestone",
-      "When priorities shift",
-      "Weekly review (recommended)"
-    ],
-    "how_faithh_uses_this": [
-      "Knows what phase you're in for each project",
-      "Can answer 'what should I work on next?' questions",
-      "Provides context when you return to a project",
-      "Helps maintain vision when you lose sight of it"
-    ]
   }
 }
