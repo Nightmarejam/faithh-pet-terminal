@@ -1,0 +1,16 @@
+{
+  "total_documents": 93892,
+  "sample_size": 5000,
+  "missing_source_count": 5000,
+  "missing_source_pct": 100.0,
+  "missing_category_count": 5000,
+  "top_sources": {
+    "(unknown/missing)": 5000
+  },
+  "categories": {
+    "(missing)": 5000
+  },
+  "types": {
+    "MISSING": 5000
+  }
+}
