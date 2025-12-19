@@ -1,0 +1,2366 @@
+{
+  "directories_found": [
+    "/home/jonat/ai-stack/AI_Chat_Exports"
+  ],
+  "files_by_type": {
+    ".json": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/all_recent_convos.json",
+        "size_mb": 5.52
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/recent_faithh_convos.json",
+        "size_mb": 0.69
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/sora.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/shared_conversations.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/conversations.json",
+        "size_mb": 73.77
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/group_chats.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/shopping.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/message_feedback.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/memories.json",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/conversations.json",
+        "size_mb": 31.83
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/projects.json",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/users.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-auth-mgmt-api.json",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-grok-backend.json",
+        "size_mb": 14.68
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-billing.json",
+        "size_mb": 0.0
+      }
+    ],
+    ".png": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WQcbQbN3JcsdimxjkBmzs8-95e46d64-b835-448f-b581-3eebeb36b2ec.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-QvgvbWkCUHFNCevXCabhuj-525dfbdd-eae9-4d2d-9038-66342c61083a.png",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-6eSpXKxZoCiXv6tvXbkace-2441c760-8312-4e0a-b195-bd25692554b0.png",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-TWogr6gpcEm81zUBRx97kD-63ded494-3985-42a0-92ed-38b7b29b2aee.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-QpmyJDwXvyXfrTiLjJL6D8-51a7f493-1e1f-42b7-8784-b1311218247c.png",
+        "size_mb": 0.13
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-4TkAQgyHd4uSnPbk9uV6yv-13ca2209-228e-40bb-ad4d-b151c89ee837.png",
+        "size_mb": 0.93
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-F92fEBtBLijjPHgvvza6Fx-4caa7d2f-5324-4517-900a-3ba3a7780d0a.png",
+        "size_mb": 1.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PUWcbyHMZhcBxavLiPm73F-e77716ba-c1f6-4c50-ac99-4e81c5e3b47d.png",
+        "size_mb": 0.15
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-8xKDH3y7JXdTDdwtTUspiA-b4416a2a-7bae-4390-8bbc-6440fb166ca6.png",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-H6Tn4TRSoH9pwsMpW6p4SP-3e2a8504-98c6-433e-bfb7-41ece238e9ab.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-ERjK4QBuWS18oSoj1TtNzc-Screenshot 2025-08-15 at 5.42.11\u202fpm.png",
+        "size_mb": 0.34
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WryCZNksoL3GSPiuN3Cgu3-Screenshot 2025-08-19 at 7.14.05\u202fpm.png",
+        "size_mb": 0.45
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CuUTdM3HRX2UiA6UnNBcbt-ca31280c-e4dd-4181-ab28-18baaf7fa237.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CofdRnrZi11K5swyLfeASE-3ed6b15e-2759-41f0-b821-43887a6fa8ba.png",
+        "size_mb": 1.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-LihwpNSsjRUznheiGw4Ei5-e40ce7f1-4640-41e9-9d35-74c5f40d3dcb.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1bYENmCpnEcvyKrcAvASHm-22a1979f-8b6d-40c0-9b85-b3f8e0feba85.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_0000000069f471f5b7ae3ffd862ce68b-sanitized.png",
+        "size_mb": 1.92
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Qfxe6kozCikVU4tfG8qmtL-6415bda3-fceb-4950-ac35-0d48252c731f.png",
+        "size_mb": 0.27
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WPJ2M1ih8HDZMT49Z8k1U3-d2a566a1-73d5-401f-acc8-189c9d584b3c.png",
+        "size_mb": 0.55
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VgdxdcpbmEU3JoyuwpMdo5-6d865e65-5b9d-4b8b-856e-c6044694c938.png",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-JgXZYJVuVB34Ck4KDqpXyK-c58a863b-231c-44da-a440-4bbaad98555b.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-9NVrv6d8Zh5NoSgyNAUMxd-ce103b1c-4d0e-49b8-b159-ff91a675038b.png",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2vGKiD4f6a85BngXEt7py4-f3a29fc0-e21d-4055-9aed-de2afbb6a057.png",
+        "size_mb": 1.36
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-72wnVpfztBvbssRuKtNRe3-b0cdff0d-aa9a-4885-9345-09e005bc7ac5.png",
+        "size_mb": 0.06
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-UyABCJ9Qm8voah928FNkzE-ab02385a-c628-476b-b05b-d4d4eefb9a9d.png",
+        "size_mb": 1.18
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PzNnCjHZa2NyCWcbNAH97N-Screenshot 2025-08-15 at 5.41.33\u202fpm.png",
+        "size_mb": 0.36
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-4nbsbsKkuoQob3Hf7i3ycr-c9807e0d-3b57-47d0-80d7-b7cf8aac5ca7.png",
+        "size_mb": 0.6
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FKinmZ15yTsiy2JLRfEcdE-6908538b-8299-4074-81a7-db6c59ab4bd9.png",
+        "size_mb": 0.92
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-HSaXpTxaB7TmoCCuAjEF9q-9262e537-5d77-40e8-b871-8b3da023f736.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-NW4nPffGNH84S3rGAuiGeU-5450d95c-26bc-46b0-90fb-555b16422eb4.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-K8ZDFtYipubqRE9Zz51J4f-099a3e86-338d-4160-a54e-29be978ff4a4.png",
+        "size_mb": 1.31
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-6Robt99JFfuhREm8EcAVb2-f15602a1-5b32-416a-9f3e-711e0a8b27b9.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-47TZKM9N3VF16kgJWqrmpy-637d9fff-a96d-4b44-8ce8-07e7452ca40d.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-QgCexLcYrW1yEYopnUSwkq-19cfe825-1897-4606-8ce5-537673f544a8.png",
+        "size_mb": 0.22
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DjvQ5ZpYgcdwgrXm3UeNxG-d63ecb0a-e044-4909-9ad4-6e817738a92c.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-6BPNDKrj6xPWmAcpqq22Mh-ea0c1111-a696-45e6-a9cb-15662d3c1c2e.png",
+        "size_mb": 0.99
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-LAxZ99zxRsrPQy8aKF5B15-Screenshot 2025-08-12 at 3.49.36\u202fpm.png",
+        "size_mb": 0.45
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VWrPzkzEE1L7t6xFR1x9uF-dedb2cd5-01f2-430a-9ebf-12ff2363ffdf.png",
+        "size_mb": 0.32
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-L4Z2HCGqPUDSZcktZt79Dp-2676484e-0593-4c2f-a291-e8677d231d13.png",
+        "size_mb": 0.83
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-67vRqR8guRpmz3tfC2knaH-bfdae46f-d282-4088-a93e-ff047105a318.png",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-75dxiYr2ZrfndX8HoZyy9w-Screenshot 2025-08-12 at 1.32.56\u202fpm.png",
+        "size_mb": 1.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-ECKofuVP24ogPtzQLk4Nca-868e3638-d073-43eb-b9d4-2eebd0bcfdde.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WhAhkV4jSRtJYy9ntJGPWk-acefaa55-006a-4111-8e74-83306c432de7.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-LB2d18NvvsPMSvNtSqeku8-1000009138.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-W1g5Lhps1qV5m3AnY7LJKT-a8f455fa-4b7c-435b-a0d9-f2456ada1a03.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-BPhjiE6xLSqkUkLbEaatck-Screenshot 2025-08-16 at 1.46.37\u202fam.png",
+        "size_mb": 0.42
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WDUqo1fuUJ3gaQQsVirFE5-Screenshot 2025-08-12 at 4.17.02\u202fpm.png",
+        "size_mb": 0.4
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2navp28JW1xNz7PSaFqt4h-66f59088-6b73-4e9f-8a68-c474536ffe07.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Q98W8dxRFzgDTi6t6nWHqT-fef02088-5a01-4b84-9752-643be09aec23.png",
+        "size_mb": 1.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-TyEoHpDUWUDZjFwLUQKkud-c2615f47-c515-45b0-8da2-9375e0ed1041.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1PFUicTxM458EF1hCQbvWS-8c875cc6-7022-48f1-9a64-7b63da43b53f.png",
+        "size_mb": 0.22
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PL6ZV4Mt6aaemtKtvKyBrT-fed66cfe-6b0b-438c-8a9e-d8c92fbe8b84.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-YAgexdiFVmYQvUePsP5dos-1000009110.png",
+        "size_mb": 0.29
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Tp4ucEsnaf7YT2ZHcgWpiw-c5ca8a11-8209-4663-8efc-7b91f5b39c54.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-3bWPCVR1GdmBsHZUcTHztF-f9406b04-4388-4a09-8f11-5a2f5f0946dc.png",
+        "size_mb": 0.57
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-HiR7bZfgxsnEwAURAECQ9n-ad6c9c40-72c7-4a97-9dd4-84cc8114f4b7.png",
+        "size_mb": 0.06
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-H6UgFfTwvfvN2yvV5fzvZ7-ed698e88-e18d-44f8-8596-25a5f14084f9.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FJnwaExog1aUZYwg1TgpGs-648fe7af-dc58-4322-8075-99750e16e9cc.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-SGd4HrhinJT7YPSoHJBRc5-d4c88ee1-ca06-4893-9eea-de3b8ef856e3.png",
+        "size_mb": 0.7
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-JQ6HUwUgrcok87YYcXJXLc-9fc8119d-74a8-4e9d-8f7f-389245b31cf6.png",
+        "size_mb": 0.26
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1aZq95Piq77BA4DeB7AhYM-c3cc12ed-9982-4153-bc4c-f7121c2487ab.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PfYQTir51ThuPB9yAJ9CwJ-1000009108.png",
+        "size_mb": 0.42
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-HTsCCzXdqi6Udc2sLqzBuk-4b8552b2-7974-487d-8b1c-2ebc49c4e36e.png",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DimbTbgyw3D1xUSGyEzwit-25155f6d-fd9f-4890-be79-0fb0ca2b7a6f.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-6zhPrTSJHfjJtUtVhhEmT4-a879f7aa-7b0a-4cf3-b0d2-429dbbbda171.png",
+        "size_mb": 0.96
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-91sxBy5x5ujvpw1cQiMm53-b1488f77-0a03-4280-9086-f33984aeb402.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-9oikUVgymic44wxvd9hygA-14cd33b5-0d90-49c1-bc4d-abb07efffd10.png",
+        "size_mb": 0.22
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CXowk1fJ826UWWGuZhKTjz-Screenshot 2025-08-19 at 4.14.54\u202fpm.png",
+        "size_mb": 0.8
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-6GnuYCNt48X5cgWfpj6ZFW-798a745b-2e92-487d-8302-250a67b803ba.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-H8PkbBa9UmjUiCK5iDsJht-9bb703d6-39d6-4708-b80f-d510bca73add.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Lw1FQCzpVgPgMpqBLKZeqk-bb9e034c-a720-4e52-855d-7893945d5b80.png",
+        "size_mb": 0.22
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-T2EyR6TKH7zmNWWAPvyG2J-e67f9639-9484-42e9-af0c-f9a83ef6867f.png",
+        "size_mb": 0.31
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-9A4WVGJP5UUppZTKXuAFDp-52060bb8-8573-4aa7-9c11-c3d8b631d6c2.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-ApPmTEja7EKjy6wm6TLK1c-4596275f-9235-478f-91ab-9d3b7dcc8eab.png",
+        "size_mb": 1.4
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DmrZbRy4MRHY4RF4479sw9-44249b88-f3a9-4040-b3a9-d7a3c6ae3120.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-SnubbyteBav36ozYDQ9Vt7-8b0d3da6-591f-40f1-b413-575684fac821.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-XraCHiakzEQH1oSxmUh1xi-de370b08-d852-4b5d-9d72-efffb60a714c.png",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-F53N9JjVvBk5d3iEESj4FH-e62bcd7a-313b-4b01-86df-9677c7e31203.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-7UZiSuzC3PNj4sVcVrbcJv-1f585462-ae16-45b2-9702-c48846651ba2.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CZE9BpBqgcDA3B1B8RMp8q-3c7956b2-995e-47ea-a74a-a1e6ff233032.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FGpHxHk86VhLHX98oBadT7-4539fe66-eb87-46a1-8ac7-6a0f83506a1d.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-RhiNxGPmN7zxDCda8c5XW7-efc9a9de-10f0-4014-b48f-0fa99dca6392.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-NdVSE69PpJiCqb9MJXYMcB-8c714f7a-824d-46a8-87e3-3641794eb684.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WXyeGe2WvpZ7dNpQeRMKYM-f70c1242-c3c0-4b5b-89c5-f2c47e0ee5ec.png",
+        "size_mb": 0.83
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-XSkzYAQZjKAgWZJnHjspEE-9d0748b8-dc4e-42f3-9646-3bf83e709a8c.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DeecJ2UkRJeMGLHM3f7RPV-389c1156-c328-428b-ac6c-d489a415c45b.png",
+        "size_mb": 0.58
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DKVLFpQiiiGhxUBxjLKt14-e17d02e5-40b5-4bff-8bef-463d07614dc7.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-EjMpDr7jWgtSuT6vcdzKdh-360384c9-5be2-48ad-bf4b-245cca362725.png",
+        "size_mb": 0.3
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-RgzzjUiYgdHTy3Bxh6uHDE-9832c6bd-6728-4e8d-8b6b-fc190bb65cce.png",
+        "size_mb": 0.16
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-NjgyWuUBTWsLautuxy2oiu-7732a2ca-b1ca-4935-87bb-71e10b2a1489.png",
+        "size_mb": 0.06
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-4F9et2gmPvFggwoCbQm8nG-Screenshot 2025-08-19 at 7.20.46\u202fpm.png",
+        "size_mb": 0.55
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CaVzyC2yjX4nZrwFPyZ2Vi-25a9c4e0-a89e-4756-9cd5-f8a0f0e55f9c.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-RUM39W2CdcsyWa2otwpc6S-733ce775-8001-4ac3-b335-790886974085.png",
+        "size_mb": 1.16
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FLqTRxEPxqCjuhoTuvW7tS-Screenshot 2025-08-12 at 4.04.19\u202fpm.png",
+        "size_mb": 0.56
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Mgwq7Nx3w5AmmcNkoGWwQQ-4c85f2d4-64c6-417c-91db-1a9a35889fe3.png",
+        "size_mb": 0.2
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-JgL965vyi5ichdpi4uqrJH-42d6ceae-3f69-4b31-900d-4a228470a63c.png",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-R2mAtkJWXAFJLinW7iQBwK-a732cb38-5a53-49bf-99b5-4ae2d5250450.png",
+        "size_mb": 0.72
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DLNVLRUkG5qTrQ9fGCtGaj-065c7a79-2aab-44c6-8e96-6cf1bd637e1e.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FpJbxBdQVomXpcJkcH1NBv-Screenshot 2025-08-18 at 10.39.20\u202fpm.png",
+        "size_mb": 2.26
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CLUELhPD5ch4GqAahi75Fe-fd712573-eae7-4cd8-9717-c737389d895b.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-LdpNKCrtYwtG3x2UseuEuB-5fd5932d-9873-4857-a75d-67e72fd0f52d.png",
+        "size_mb": 0.06
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Do7kUfH5DstixofNdHbgb9-f5a304cb-a317-4dff-8a67-f19a30da4dbf.png",
+        "size_mb": 0.74
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-E3wh2JhoPBa3NRiya9FzhJ-32a34879-9a46-4b9f-a600-65490046bb02.png",
+        "size_mb": 0.35
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-TXhcH9UpxWnvQdALk5vbVy-6c404aa5-8246-4884-a76e-9e260aa5bc24.png",
+        "size_mb": 0.2
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MeS24bd56k5YMh2z5JSdNE-cceb0e67-9847-423a-b2fe-2479c63037a9.png",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-UBC8vKpGr2akjKM89WHsmA-191c8baa-afc0-45ee-bf32-8e7c7dce09e2.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-EVpafjmk3dF1xuj5DC3hhC-b470fbaa-9d02-4c8c-8395-516a9cab4cf3.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Egfs2Vo9ubNqK4MKULVZYq-093eacf5-3560-4829-8b8e-93aa5f251814.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-UzPtXjfsGrYPn4sRLwyWc1-490106f7-a857-4fd2-96a9-9dc7574cb26c.png",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VKFqZcRmxu1xBx8vTTwHm8-Screenshot 2025-08-19 at 7.16.51\u202fpm.png",
+        "size_mb": 0.63
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-H78VsL5kftjxUziEguVdkZ-240a5cf5-abe7-4c1a-ad5e-047f3da6e61c.png",
+        "size_mb": 0.13
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000745c71f7873146732563d456-sanitized.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-RyRVE9zSbnLW51ExkTHixD-a8fa4fce-1233-46fc-ab0b-6fb06e221c51.png",
+        "size_mb": 1.35
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WT11zKPTbzvSMqvsKwvT13-bde14c21-9dc5-46f1-810e-1bf7c2841301.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-4ZwLQXXPBLQYAv6AukfYcH-3d57c956-5969-4d54-92ec-1785b24e4207.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-9yDPQQqWYe7bmqeuCnYXqM-7219734b-6c82-4fca-bc59-571f4dc128c8.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Q86Q7ghxMLPKWdHNvfuvsN-06099c9e-561e-4a3e-acdd-c1271e393764.png",
+        "size_mb": 0.85
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1vSmnaP3UYewaRHmr3XQTZ-Screenshot 2025-08-19 at 7.31.24\u202fpm.png",
+        "size_mb": 0.57
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-ANbaeJ9hYvSWYc9QVakycy-Screenshot 2025-08-19 at 4.44.40\u202fpm.png",
+        "size_mb": 0.35
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FCP8hWb5AEPzfw1ACLMRk6-925db1d6-8ed8-4147-85a3-e1468a2c68a2.png",
+        "size_mb": 0.26
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-XCFwuc2zniejE9p9wT35EN-0d948a45-e798-4bd6-ab9b-7457e9268eca.png",
+        "size_mb": 1.06
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Wh75CZMoSdzEWKUU5qmA7r-adceed48-389a-4db0-807c-ca41c92dc667.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-JsgMhaHb9Hw4G21xvkLeST-cad43433-8669-48e1-8345-6e9c1ed98953.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-TjTvoqnMuXou3WGYSTosQu-22fecbc3-0d53-4e94-9b36-7bc8f8263f8e.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PN5i4mA1YPe4kf41UdpAkH-47cfae2c-f6b4-4a53-957e-937766cad675.png",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000202871fdadb5c9bb1cb7306f-sanitized.png",
+        "size_mb": 1.25
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-GW8JrcEsBYyufGopyrYhQR-6cde174a-a4c5-44cc-917c-b6cf6bf06c7e.png",
+        "size_mb": 0.16
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DK3NUvdpUwZDNn9tet6EP7-c4a08669-f1a0-4b4c-a7b6-0748dd0cc2e3.png",
+        "size_mb": 0.15
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Ta2Qg91TGG5cyNLjoseFyG-Screenshot 2025-08-19 at 8.20.05\u202fpm.png",
+        "size_mb": 0.39
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-ALZsgzg7LqtQta1e8JBF6X-Screenshot 2025-08-19 at 4.14.54\u202fpm.png",
+        "size_mb": 0.8
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Va4YyTfyzSUTsmLR3vry4Z-c109baa1-2721-4b12-9aa7-4a4b1e85d2f2.png",
+        "size_mb": 0.18
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-KX2uxSZgJhHCRCFBReqddJ-bd9bce80-c372-425f-8057-d0e6ef225d0a.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-4ixSSGMEQvBihUJpYL8a6L-Screenshot 2025-08-19 at 7.05.37\u202fpm.png",
+        "size_mb": 0.47
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Gmznvw6j69gSuy8LVRp4qk-d1375976-6047-4758-8b18-9686780ea090.png",
+        "size_mb": 1.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-9CQWdJifVRP3sidChYtfsF-c87c25af-fe56-4863-a91c-446b3ac3b5e1.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-UdL4bwAsSWV3xo51rU5oms-dd68fe26-9b45-4f39-b2af-832db560c505.png",
+        "size_mb": 0.72
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-F8dR1WKfeB99UeZYWtDhz5-cee5cbaf-07bd-4958-976f-7b07c4a25669.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MfdUcS3z2gAMU2aM9CeTmk-ede7661f-543a-4913-bc93-1e93a0f3e0ae.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000aea071fd9c78ee4a36517428-sanitized.png",
+        "size_mb": 1.16
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MseyZW4Wn7Z8qkMP48MBrq-3d755885-63de-4f73-8ce8-ffafc7f60603.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MzA13pxpyaJspr8sfgkmjh-b8be37a9-066e-49f5-a0d1-8ca2bcbb5063.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-9GUtWhh8ZPcYx9sxeo1UfQ-6e1973de-3193-4bac-b436-13037109c9e6.png",
+        "size_mb": 0.16
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-TTsuKts6JhHibcQyw82qpo-d8ddd452-f124-4c5f-942b-ab9d7a84579b.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-GXhum5UvyutSDefMLHxVZz-51fb0539-19bc-4085-a2ad-22d8e429e77f.png",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-AcuVnyBBFDeEcsCVHTZBpr-a81a3a9a-3126-4ff4-8660-5179bd5e4f22.png",
+        "size_mb": 0.18
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-7WKxPbmhc5x8fc8dNmJpWf-c80cd38b-81e3-478f-b554-06bf141282ab.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-HGtzE1qHd9iNbKuqQUBzH1-file_000000009dc061f98537cd3befacb387.png",
+        "size_mb": 1.65
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-R4EY5qubMi4iHmdN3gvFQL-d5e403f3-731f-4c00-bdb0-8a74f90304b8.png",
+        "size_mb": 0.21
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-TkJPeCfguKU6ef66WQUSdG-0a2c28c8-5c4f-49b7-8f7b-7ce875c19e75.png",
+        "size_mb": 0.49
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-6ssbJAo8dAR6KQgnwTvwh4-e28658e0-daeb-4396-9e9c-fafd18203b32.png",
+        "size_mb": 0.95
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000943871fdbc55f45651cfba23-sanitized.png",
+        "size_mb": 1.25
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1n6pTNqEmzcomUjKjKknGX-136db368-a636-44be-ad18-383d8d55949c.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-7ZcU2pPsHfxfUWioTwJamH-68c94834-24f0-4a21-aff2-9a10f42f7b7b.png",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-HpGEqXvB42pmYD9HUNjRtQ-Screenshot 2025-08-12 at 2.42.29\u202fpm.png",
+        "size_mb": 0.45
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-7Af5sxNXd1g1UVAEo7PJaE-21af9042-088a-4242-90a3-18e4780f9f4b.png",
+        "size_mb": 1.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VhEx93Htq3fDeeL8Ms6y1N-1000009243.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DwxfxhPoy2xj5Sejvwms2z-56381776-f3d8-4660-b69e-1f63e45bebf6.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VeSXPFbnpiLDkouSXZggyT-de98face-405f-4022-ae87-d2cd0b4a6b5f.png",
+        "size_mb": 0.14
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MMJ1kGwbU1VF16u1AqwUNe-Screenshot 2025-08-20 at 6.48.57\u202fpm.png",
+        "size_mb": 0.42
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2Aeg4v4UVaAprVT3n6Rymm-Screenshot 2025-08-20 at 1.37.04\u202fam.png",
+        "size_mb": 0.56
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VswA8FTLZ3vKdwKfhYk6xv-Screenshot 2025-08-19 at 6.23.23\u202fpm.png",
+        "size_mb": 0.34
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-XTLpecxN33JixpYhLjYESj-19b3772b-c227-43df-9668-9af1743af6c3.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-W24Zw2AW7xwBT3uU6LtzpR-bd95f523-df38-40b1-9484-deb91d5e7efd.png",
+        "size_mb": 0.13
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1wVFRw1BHJZRBpCFf87s7h-e36f5b4c-7bb8-4899-8758-380f35d9fb0d.png",
+        "size_mb": 0.14
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-56B4ugZmbEAiiFUPx7EqTf-5b8c72fc-0e1d-4710-a45e-497fcea60e45.png",
+        "size_mb": 0.39
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-7Bgy6QHfyEtthhjafKBu9v-30a4dd3c-3335-419c-ac75-933fb623a633.png",
+        "size_mb": 0.35
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CM68mkdhcLmTPzPbjGfsUN-794ab2d0-8d36-489a-a153-2a1025fde4cc.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-F7PWeHnDw8mUFqRWu15UTv-4bd741a3-85ae-4ada-aa04-7c2c2bf78257.png",
+        "size_mb": 1.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2A8dbsEaNXj4EyuSVoNu78-90f40894-8175-45ca-8c8c-92bece92d272.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MYymzrJy379jvpbFyraSZt-Screenshot 2025-08-12 at 2.33.49\u202fpm.png",
+        "size_mb": 0.58
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WHQ51jLNYSnCWsoD2uzJy6-4c06ca73-ecf5-4ead-8ab5-3d9b94436a09.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FaxjHKuQoiqUSkvAPoRN18-1fcb40cc-66be-4b25-b518-d8f3adf87d77.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-9jJnQAMuV4jFPv4Ca5gzJP-5ac8d5dd-6cf7-419a-a2f4-b1dd08696d49.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-8UCXUjvjV21TeM12XErDFp-e9ab0470-bc3a-4d49-af5a-87cc59db4c5f.png",
+        "size_mb": 0.16
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-8KvpE4A1dwwYnwcYKFNtVz-2b4c1452-fb82-4603-a1b1-d0d4a7738b3c.png",
+        "size_mb": 0.14
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-TasGBGgfm1zzAvqyr4WqwL-file_000000009dc061f98537cd3befacb387.png",
+        "size_mb": 1.65
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-BMdY2L8QTeVUPfiWktQnBS-92dc05f5-b088-4cf2-8e14-b4d117be7d15.png",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-XoGoJtxeeSh1DaoA5gfdSN-64934441-9a46-4f09-924f-bd32198f1b4e.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-KQCigxckPeUFax5jiSSRht-f2c73f39-e8af-412f-95ed-edeecb2816ef.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-QoDnxJcNyK3o3yJAtTnj45-75c2afc3-8c5a-47bb-8424-b99b630a0399.png",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-R7CGSAKcbhi36hK6ArrZEy-48fd53ed-f303-49e6-8227-985cb143440c.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FbFBtB3SwhWR41tW2sdnwr-8a090404-c4f5-44c5-9883-3eeacf90cd3f.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MqPpHMwXtSvmN3ZBywi669-Screenshot 2025-08-19 at 8.11.38\u202fpm.png",
+        "size_mb": 0.36
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2sCS6CKyEM61mq2YLdbD6f-a62ca219-3966-441c-834a-b3d0fa8192ef.png",
+        "size_mb": 0.89
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-ATWPpwbesqRpEHBNbvfB9x-d865bdae-b5fc-4ca9-be89-8878f0bc88d6.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-T7ryYMGjGGPnEk5PEpDiuW-1000009136.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-AYjyNaLFrzSuPKdmSiypVe-1000009290.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-8vsZ5Wn4yicA5XzAxK9THJ-45bc8ec7-9095-4782-a1f0-b3776728f966.png",
+        "size_mb": 0.81
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-SymJB4EWJ3RpY2KEdnHFZU-7b6c990c-ba53-46b6-9307-6741a3999dca.png",
+        "size_mb": 0.23
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CDYuxhbXNiXSKRFWCjPQHr-ca4bd490-2173-4b8d-bc37-ed53d0a9fa3b.png",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-LujhomoggWAt8J6W9YhKgY-6001c4b1-4ca8-4c65-987b-a80cbfc95545.png",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1AySdHqcneRtSMLKYkUAzo-8d7e3480-65fa-4c7e-959e-daae833bd7a8.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-4YL9rY3cdWFzfvAZfJZyyK-f5562d1f-ef87-416d-9e6c-5839fe098b60.png",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-KkRUsS9JQbUNvXa6bZCcom-585d6a6a-f93a-43a0-9e05-b3ade62d0e18.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2cM7KKTd2VzFZJRs54E9eh-3ee880dd-d429-4a35-9c7c-52b614cc9f97.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2bs8uHMaPLDc4HAmuPEesk-7bec4169-bf7e-4359-81c3-2f8856ee8382.png",
+        "size_mb": 0.49
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-YSMQHyXa3jGcQRzxfNkZHA-4fd48f97-a08a-4b61-ad47-db64727be64f.png",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-G1NVoWiRMbDaopYhR5nzwH-f002f37b-ade3-48af-ba2c-b165e89ebc4c.png",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FHwBG8Z7BhqAeSQgx5YDwU-717d8c85-d276-426b-b57d-82ac38fb3ea5.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-XFeJfvX9HiQpp9Pj31bcuL-a787ac56-55a5-4baa-bfbd-25d3b7dea911.png",
+        "size_mb": 0.15
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-RA5waaS2okrtGezhJWQZLF-4cc820e8-1e01-4243-b385-7769c48ad998.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1sFEzRvUeygpZQh5ywtnwJ-Screenshot 2025-08-19 at 7.14.05\u202fpm.png",
+        "size_mb": 0.45
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FttWfXT3FWCqZ5RV6qa9g8-7baf3966-7579-4ba6-9b18-bcf5080ef0e9.png",
+        "size_mb": 0.8
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PryZX3pLtJwC57ExWzoU4v-d26caaea-b609-4ef2-aa90-dfbe9e57c909.png",
+        "size_mb": 0.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-MgaXegWSyuaPNmm758yyxT-c2879c33-2a22-4bb3-8e1e-e4789b8a5f9c.png",
+        "size_mb": 0.74
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-5feEwN7Nz6jVvMSnqsVoTZ-bf1ccd16-c1e6-4271-880a-971928260e56.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-11fHCfnphZA7Fj9NuLip93-d5888a12-28b0-4453-a4ee-506860fb9615.png",
+        "size_mb": 0.58
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-8NZP6ojwf1ymW9Uun2Habq-5648243e-f0fa-4a00-b098-195efc4dc569.png",
+        "size_mb": 1.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1WZ7bno5ivzSsDSDYLjY3f-c9559620-786c-4b26-8e41-4f09e9894b85.png",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-RkH5Hzx4fnAgUdaUkvBRXq-99379fd3-457d-4af3-a7ce-544bb5a18b2a.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000f19471fdad99e507ac16f026-sanitized.png",
+        "size_mb": 1.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-N3D7pXr9smSmSRddYgJHSj-e9853d60-3ba8-487a-90aa-9349310742b2.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-B6JqWfusu2RF7yhHYDKvNo-f9cae717-4bb0-4f19-a322-b40c2ea61b27.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FfLy7ZikXb2fAxFjSFPEGs-Screenshot 2025-08-19 at 7.55.01\u202fpm.png",
+        "size_mb": 0.58
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-FgiDEmxpwvmXy8nmRWoSpA-da834a9a-a4cd-4e40-a046-b265e4c2386f.png",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Sv8ixGRoBRk5ezDxaCmePM-55432d18-e055-4664-b58a-32e1d8b3c280.png",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-1Fa2r5VMELe3cvASmAn15u-e529a939-8bc9-45b3-8c29-c99c14eb3ff7.png",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CC4z2z62sep5ot3Gap6m1i-cc62a934-d107-42c2-ae10-11a6c3a9b475.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-R9yySLT5BMw9d4CUDYJ8Uu-1c3d90d3-a04a-4d59-ba75-e3daae908d35.png",
+        "size_mb": 0.95
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Q29aMXZXLsqB9vYALxVVfH-3993b41e-2a97-417b-904a-cc548f4dda65.png",
+        "size_mb": 0.85
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Yc1fAn6JS36q5jdgM9MS9K-cbe0ca7c-4e96-4b3a-a417-f9724cebc499.png",
+        "size_mb": 0.22
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PLAw3mbQmV2VXZATnkMLxf-386a309c-6f62-49ce-a36f-f87262da7244.png",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-BWLaUNacGSgNt6Eqm5CGS9-c1cb1f19-3759-4a57-8783-c237b3d5479a.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-K5hSr9jLwdby6oCTkKgfK1-c64eddf5-6e99-4ac0-b6cb-e8e281849561.png",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-KJqpEC99o3FH4qYMw5YgW9-b60aaf9e-bb4f-41d9-aa2a-32c461710c9c.png",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-WWFJZ42NSybbh4fQpD9QYx-7e25bd4d-5de6-47ed-ada9-354db027bd4f.png",
+        "size_mb": 0.71
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-BXEbzFrvXwNxDD6PPuyg6V-057ec0ac-b957-4709-9b43-ce38cd78d7e9.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-NjGcEpYej8VcufqCT6pX44-cd59e656-cd22-4580-9795-4d1064e875c6.png",
+        "size_mb": 0.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-YF869kD2iFh6Fv4QmhDjyQ-9f0f0df7-52a4-415c-8591-3346fe17258a.png",
+        "size_mb": 0.92
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-LYydYDUEnzLuFwJxWx3t19-e6666a7c-2196-43d4-a2cd-376d24adfb1c.png",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2GcF3dyT72NNkPEs67ZxgH-18d82831-acab-478e-a0d7-2c83c60891d3.png",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-PWXdbHWLJWdMSwXL6NZk9P-ea9497b6-c796-4e80-816b-4981e8436eea.png",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-SL25RjExJRV4jx3Qi2qmC5-9693f045-4427-45fd-9fd6-1186154d40b9.png",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-CyA1DGbJKQWSmoQMzwp5MU-87fe9d98-8730-4697-a289-f8116633afb4.png",
+        "size_mb": 1.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-RzMTTzJpd1fhB6rpJ5A9ZW-f2ef6a5d-6068-483a-9a65-61970515b95a.png",
+        "size_mb": 0.13
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-DiG8szD7qDKsqMmmViry8g-26f496cd-ca00-42f2-aef8-347b2bf84648.png",
+        "size_mb": 0.77
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000009dc061f98537cd3befacb387-2c391468-e313-468b-87d3-39ffcd9f5a7e.png",
+        "size_mb": 1.7
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000d7e46246adbf9a6372ac5841-756cdba7-e958-4f44-880e-0f7bdf878dd0.png",
+        "size_mb": 1.83
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000098506230a30ba7467923b283-d6d83ec3-e25d-4b75-9c86-9982877b8aa8.png",
+        "size_mb": 1.47
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000b0f0620a9d40759dd1e74e90-53fa635b-9603-45f3-a410-b46b3a9ec4f5.png",
+        "size_mb": 1.58
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000080cc622fa771a2ad91591c4c-f3240091-cba5-43e9-873e-4f8949a5a4d3.png",
+        "size_mb": 3.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000006ca061fdbed5c719d3d605e1-c4978e6f-129f-48c1-8fa4-4020f7c1aea2.png",
+        "size_mb": 1.39
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000000ca8622f87ed85c48ce4819b-f61f46d0-e1bd-4ef8-93d2-97ddb0a3ab01.png",
+        "size_mb": 1.88
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000eae061f884dc885d703904c6-9979972a-255b-4fdb-9d13-74ee3f0db4ea.png",
+        "size_mb": 2.32
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000002d1061f89ebc33fab09ae884-353d2c69-d3af-4ed7-89f5-1c5201ed2350.png",
+        "size_mb": 1.34
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000768062309ea895c71b481908-ab7529ca-796e-4c9b-9d9f-e9c2d39b0131.png",
+        "size_mb": 1.29
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000a02c61faacba2084ccbf9e5e-781817c0-d2ac-4868-b304-430eded00bc2.png",
+        "size_mb": 2.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000013c062309c3b75ef264ed50c-ed907392-d871-4bd6-8935-607f6d49cb61.png",
+        "size_mb": 2.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000009f886246b88c77a7786ff68d-8eb833a4-eed6-4799-af69-39981df6c932.png",
+        "size_mb": 2.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000baec622f8aa4ad16037737fc-0181f688-1526-40b8-a663-ac7f681db53f.png",
+        "size_mb": 2.34
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000019a0622f864660d52ea104db-f8c1e634-177e-44cf-91f9-325c6f30c463.png",
+        "size_mb": 3.57
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000b57061f5a56684863cddacac-60166774-9c0c-4806-bd8b-b8a60c07de28.png",
+        "size_mb": 2.29
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000026cc61f8a144e2104e41a5d8-e61047f9-eb11-4d33-af98-b4ae7cb0fe99.png",
+        "size_mb": 1.52
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000007ca461f7ad3101a933d1e4bd-a7f1d6b8-18a8-4b0f-bf69-5b3fbea7de9b.png",
+        "size_mb": 2.87
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000066a061fd921520c8d554aad3-13cb46e8-baf8-4821-a649-10853da7e5c4.png",
+        "size_mb": 2.21
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000e7f861fd9478ee537e949580-b2060f77-58e1-4365-aacb-adab0ea77613.png",
+        "size_mb": 2.58
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000064ac61f59a78730c762bdac5-47bf0a47-a195-48fd-a17b-a2ac94eaab35.png",
+        "size_mb": 1.87
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000b32c61f5adeba541a90e499c-a1ef33b3-5e69-434f-80d1-10c2e3ab3921.png",
+        "size_mb": 1.92
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000005cd461f8b57724f31a0461c4-c7b2d825-ab4e-437a-8369-de71d27ed8a0.png",
+        "size_mb": 0.91
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000d2b8622fb3ec331b9758d95b-b4bea460-f85a-4553-8fe1-864d8b325630.png",
+        "size_mb": 2.76
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000008d28622f9e3514c6b1931f2c-34d4ecd7-8ffb-4eca-a8e0-d2be6de2ac98.png",
+        "size_mb": 1.68
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000016dc61f894e0dfbbdd38b80b-d7875650-41d4-4ad7-8e23-6313d8c7e55d.png",
+        "size_mb": 1.35
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000b4e861f9af197e7703c4a000-2d6eebd7-d2c1-4bf5-af30-61cb620cd6ac.png",
+        "size_mb": 1.98
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000c37062309b79baaf1b2d7086-3b105600-e7d1-4b5a-bfa1-54d36f690dc6.png",
+        "size_mb": 2.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000919c61fda691b2aabe64ef4f-af75bb69-7ad7-4e32-8ace-3f75558675cb.png",
+        "size_mb": 1.31
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000000d3061f8a7847ce967eb64c1-00f1e446-5716-42c5-b1fa-1cc0cb4186c7.png",
+        "size_mb": 1.83
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000026386246b2ed9e75a79ac0cf-c1702c79-b7c6-422d-b08d-7599313d8cff.png",
+        "size_mb": 2.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000008a80622fa82d159ae5c173d9-017a4a8f-32c3-4d1f-b2a3-c8b883158773.png",
+        "size_mb": 2.59
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000028c0622fb4b8ce1305cbe5df-c8e5f525-d8c4-4570-bd16-4bbacd0f4c3e.png",
+        "size_mb": 1.21
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000740c62308136f1f3d9fa6928-954c0031-bafe-419b-8a55-e83fc3fba926.png",
+        "size_mb": 1.31
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000a82861f58ebc2c78801d5faa-0231db86-1d46-453e-9a6d-41eaed9bb1f4.png",
+        "size_mb": 1.37
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000e48c622f8de5f29f072d0855-2315ee11-319f-46ba-afd2-c295e1520d4d.png",
+        "size_mb": 2.27
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000189861f5a0cc6ac167c99d4c-cd57bd20-54f1-4c75-a46e-cabf2421c39b.png",
+        "size_mb": 3.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000005968722f8cda059845576d42-d69adf79-632f-4a04-a4cf-f52614e032bf.png",
+        "size_mb": 1.74
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000055861f7b7601c1e0fde2850-371bdd83-94e6-4c4a-9c60-2aed3585ff08.png",
+        "size_mb": 3.46
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000003300623092d9bc997eccc00f-cce82e58-5ec1-4eb3-874c-c6523006224a.png",
+        "size_mb": 1.42
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000007530622faeadb66c45b15aa4-65712a6b-3f82-4dfb-a9e3-faa998051ebf.png",
+        "size_mb": 2.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000002e2861f6b3968b329640b319-0bcbf3a3-ae7f-48e9-b2a5-45e7e67d85b2.png",
+        "size_mb": 1.98
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000031a861f598fd162b0c72ac8a-57f6b3d2-4aa4-4b3d-87c0-97c3830baf48.png",
+        "size_mb": 2.11
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000af3c624399a19023855e0466-7b21c1e0-c5e2-4fee-8e2a-8a38e8a08a90.png",
+        "size_mb": 1.48
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000e9c0622f8be4e44b55165c4c-ec1df3e1-51ef-4117-a795-25dfabec521a.png",
+        "size_mb": 1.43
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000007ca861f8b312cb99ee79fe43-ca678959-4b87-44bf-ad23-ed3460095982.png",
+        "size_mb": 1.49
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000294861fdb56c19c8a7fe6e5b-0d7b8a7b-5369-4d58-b066-c97d612ffd5e.png",
+        "size_mb": 1.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000363c622f8a1c79971b61a823-e4eb6272-7354-4074-9712-592639f6d70c.png",
+        "size_mb": 2.36
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000008624622fac8f36618c685af2-fe8141f0-76c7-486e-bbaa-cb79429dedc2.png",
+        "size_mb": 2.39
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000004b5c61f89094a95d0476340b-dbdbccb8-54ab-4863-b16c-1b01b2b909a6.png",
+        "size_mb": 2.3
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000f71061f5a16b6765f84b4b55-aa611c7f-be0e-4701-b57b-af294280573c.png",
+        "size_mb": 2.65
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000c77061fba6c92b5c6dc5d37b-71e059f2-ede0-458d-bb46-ba536be28a16.png",
+        "size_mb": 1.99
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000005e88622f868ea24a1bbbd320-43454b13-0772-4488-95d7-1ae18bda28f0.png",
+        "size_mb": 2.64
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000005ec86230b78eb0da6d361479-37c3854e-4eea-4f9e-987d-9f2a1d581431.png",
+        "size_mb": 2.56
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_000000001b0061fb9ed305aa7795ea47-1ad871c8-c827-451e-b40b-f2fa5fef0a04.png",
+        "size_mb": 2.95
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000362861f68b4bca5d5fd33cc5-b85b83ff-f463-4868-83a8-d9803c095431.png",
+        "size_mb": 2.8
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_00000000a634622f80c20bb9585c916a-c7001749-63cb-48bd-a265-3fe69b770fb0.png",
+        "size_mb": 1.4
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/user-uScvRlMMDKNTQH5EOY1qGlXB/file_0000000077f461f78376ebc67a3f3c86-bd6d7328-da0f-431a-89bf-9bec47a58fa6.png",
+        "size_mb": 1.53
+      }
+    ],
+    ".jpg": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/056fb4c5d5d1054#file_00000000d1cc71fdb35acb7a32b0bbb3#p_0.jpg-p_0.jpg",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/f94eaf28ac4c402#file_0000000063ec71fdbdde9330e7610420#p_0.jpg-p_0.jpg",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/a9a4f98c3417927#file_0000000063ec71fdbdde9330e7610420#p_10.jpg-p_10.jpg",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-ENSAoV3z6Hux83PQdVZ1k2-chatgpt-1757376424983.jpg",
+        "size_mb": 0.22
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/628a2e7a9d36563#file_0000000063ec71fdbdde9330e7610420#p_6.jpg-p_6.jpg",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VCBz7uJQxcxVBJqdC5afi1-chatgpt-1757376353048.jpg",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/ea7be9808d74d73#file_00000000d1cc71fdb35acb7a32b0bbb3#p_7.jpg-p_7.jpg",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/4be635fb914f606#file_0000000063ec71fdbdde9330e7610420#p_8.jpg-p_8.jpg",
+        "size_mb": 0.12
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/640da9996163b91#file_00000000d1cc71fdb35acb7a32b0bbb3#p_5.jpg-p_5.jpg",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/be00f9149b59cad#file_0000000063ec71fdbdde9330e7610420#p_11.jpg-p_11.jpg",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000ec80622f83e011997e4b721e-sanitized.jpg",
+        "size_mb": 0.18
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/f61f6dd88339c83#file_0000000063ec71fdbdde9330e7610420#p_9.jpg-p_9.jpg",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/d4adf91ba1baabc#file_0000000063ec71fdbdde9330e7610420#p_5.jpg-p_5.jpg",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-AHKsbRw9ME8pM6ResF8JoF-chatgpt-1757378675102.jpg",
+        "size_mb": 0.22
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000e9c071fda417536fa1f09ed3-sanitized.jpg",
+        "size_mb": 0.38
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/c81b87a89d87574#file_00000000d1cc71fdb35acb7a32b0bbb3#p_9.jpg-p_9.jpg",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-EwLvRbCCqNH4ShYbrtox2p-chatgpt-1757376626391.jpg",
+        "size_mb": 0.21
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-Wo9TvokTbR2EaF8oitKFzF-chatgpt-1757376952362.jpg",
+        "size_mb": 0.21
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/6300509ccd26e7b#file_00000000d1cc71fdb35acb7a32b0bbb3#p_1.jpg-p_1.jpg",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/75fb0f2267e40d2#file_00000000d1cc71fdb35acb7a32b0bbb3#p_2.jpg-p_2.jpg",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/6748b5d43a98a13#file_00000000d1cc71fdb35acb7a32b0bbb3#p_8.jpg-p_8.jpg",
+        "size_mb": 0.08
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-VkX9nzdyGDhKTQcnwmjEXG-chatgpt-1757375907013.jpg",
+        "size_mb": 0.23
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/c8789f0f2ca77e3#file_00000000d1cc71fdb35acb7a32b0bbb3#p_6.jpg-p_6.jpg",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/46a0cf9e246e31f#file_00000000d1cc71fdb35acb7a32b0bbb3#p_4.jpg-p_4.jpg",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-BuMhNNNQtpRjrxtYujEov6-chatgpt-1757375925617.jpg",
+        "size_mb": 0.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/5a4390a15e3154a#file_00000000d1cc71fdb35acb7a32b0bbb3#p_3.jpg-p_3.jpg",
+        "size_mb": 0.1
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-D2X5yceasLoUM9tj26famp-chatgpt-1757378690592.jpg",
+        "size_mb": 0.2
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-2CQVhRaxhyknDS9Wbbys8c-chatgpt-1757378469212.jpg",
+        "size_mb": 0.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-BPXmvMY1s97XWMMfZ9nwmH-0db87636-39f2-4208-9c7b-e88c3e608e44.jpg",
+        "size_mb": 0.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-LNMiD17jg1BEeCXoFRHrwC-chatgpt-1757376010642.jpg",
+        "size_mb": 0.24
+      }
+    ],
+    ".jpeg": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000e06471fdb288c7fec2184285-sanitized.jpeg",
+        "size_mb": 0.19
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_00000000ae7471fd90b2dd83fcb2644c-sanitized.jpeg",
+        "size_mb": 0.18
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file_000000001bc071fdab457cc96023271c-sanitized.jpeg",
+        "size_mb": 0.21
+      }
+    ],
+    ".gif": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/file-NGBDoY1wdJa1bH6jJGe2da-7ae617ad-2b30-40b1-9cf5-3d082a4d9287.gif",
+        "size_mb": 1.36
+      }
+    ],
+    ".html": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Chat_GPT_Exports/chat.html",
+        "size_mb": 76.1
+      }
+    ],
+    ".identifier": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/users.json:Zone.Identifier",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/memories.json:Zone.Identifier",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/conversations.json:Zone.Identifier",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Claude_Exports/projects.json:Zone.Identifier",
+        "size_mb": 0.0
+      }
+    ],
+    ".webp": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/9RN9ahI8ZjpgZZWH-profile-picture.webp",
+        "size_mb": 0.0
+      }
+    ],
+    "": [
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/acf70194-acc4-41ba-ad05-ca6eb1175919/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1e7fb92d-6513-4bf7-9968-51428ba975d0/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/eb3a8099-2cd2-428e-a9f9-fa3f592db8ec/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/7e977ac2-6f30-4f91-a7c0-7f03b806947c/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d9c25621-a747-4a0b-8faa-971430f757c3/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/a85c97ea-ef35-4f21-8647-3290bdf225c2/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/bbb9d006-6671-41bf-8dc3-67b9d12c5387/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/413d1238-a9b7-4455-9690-015138833de7/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/bad3742a-d013-4016-80a9-c04784c03360/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/39a786b3-2e66-410c-a1db-5525076aefd3/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/143c8d9d-f947-4a4b-8c3b-006b82e43ff5/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/98567f05-441e-4739-b5be-95657b99b463/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b43a05f9-af95-45fb-855a-1f4bf3ddb568/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/cab01bfc-6b5b-4b2d-958c-914ab555c0c8/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/99a7d735-416b-419d-9af6-8623861b2508/content",
+        "size_mb": 0.75
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/656c7afe-4699-4f6a-85d4-d8b7f2bfdbc6/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/794f0ed8-db97-4342-a1d9-cce04cc816f2/content",
+        "size_mb": 0.59
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/3445fdc9-2d19-4fa8-839d-714dc50caf0f/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/411dad9a-d8e0-4b7d-bf4d-9e28a5f35c54/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/65bd6c06-3c6f-410b-bae6-985d4e78cb37/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f2fc559e-c6d9-4577-96ff-37cd9a601c64/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/20a560ca-9038-41fd-9ad1-bbe900554195/content",
+        "size_mb": 3.21
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/6f5d057d-d4e5-4760-9dbc-2e3608e7c04f/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d9ac9657-08a4-414b-a67b-2938ad456006/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/3515c962-ad68-4577-a0ab-77e955a05070/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1e6ce40c-20a7-4f1c-833e-7a0eb584695c/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/74404f7f-2550-4509-b66e-d6c2c9fcd505/content",
+        "size_mb": 0.58
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f46c041c-4c39-4286-89ba-c783cf759826/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d0599a4d-d96a-4427-96ba-528b8031287b/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c1a43f20-1aa7-4a68-b664-0e099d19f4bd/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8a7f8974-756a-429a-840a-7c3e70650c69/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8214c071-d552-4c7e-b3bb-31e93a2fb8b1/content",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/2ab5724b-7f92-4706-94f3-c1fc2691ff43/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/5814d0de-8b69-4898-ba34-3583bfaa9044/content",
+        "size_mb": 1.7
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/81aa7006-4a6f-4add-9380-3b5771923ec1/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c0dfd795-3622-4c4f-b922-e210fd42c488/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/36fcb7c6-8e21-4d9f-9aea-5827bc02a2c5/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/9113d255-f33e-4baf-a993-d04d46b100bb/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c2213945-28c7-4776-9cd0-85e6761fe6af/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/508cf53a-e34f-4a40-8b66-a593a4336b0c/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/21635eca-4a83-4a10-93bb-ffabec4ae0a1/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d816de9c-deb0-4c06-ae18-d5c90904da85/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/794f3735-d821-4067-99e4-04d5ae0e2983/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/9d1e1c8b-8a57-4b21-b8fd-133c4b4f0d62/content",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b8176426-29c1-419e-a8f0-ca00ce9cb335/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/361b2f9d-1625-42a5-9933-530b63dd1864/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f793928f-16d2-4ec1-a56f-335521516f54/content",
+        "size_mb": 0.75
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/66e1c18b-a53f-48d2-942e-cd1512c11272/content",
+        "size_mb": 0.59
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d0cce384-c943-4c96-9fcc-31d52cc18f7d/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b5dd279d-0143-4414-8750-507b296926ac/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/ec370907-57d7-4d2a-a7fb-4b7b7ffc1418/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/75ab9be5-5ac3-4fea-a4d0-631b04c29f5c/content",
+        "size_mb": 19.32
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/edbecb38-2061-4b01-a5ff-23e680dbab53/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/08881617-90f2-4dfa-9589-035fa19ee2bb/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/48ce1511-79a3-4bfe-907b-d8cc5e8ef28a/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/603f1f94-38c3-4526-a312-a04e3681fc18/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/3a62a5f8-abaf-478c-a0ac-a5435ff4b002/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/344f2d00-5206-40f6-9e38-dc9c1c10f2fa/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/625929a2-8536-417d-b45c-ad1f7af3d0e6/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/489eea94-c951-4a5f-8578-cc2ea2657421/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8970c9c3-158b-4b61-be1f-8a2f3d10df1e/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/e332621d-2d77-4fbe-8271-1c7fc2522731/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/4c949053-ed3d-4003-ab5e-d57085e7d317/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8b44ba52-8d18-476c-9019-728fe874a79f/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/96c3faa9-06e8-4332-820c-26c3be346ddf/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1abb9975-1a91-48af-920a-a2c783567a6d/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/71c6bb51-fa51-4be1-94e4-563e15ca87c3/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/aa6763ec-9e26-4d3d-b71d-122e1005b630/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/2ba5d697-cdad-4e2b-b7da-b8e210c1b7a9/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f0cf6198-2e50-4b67-9350-bc8ec85b370d/content",
+        "size_mb": 0.17
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/2b0d55a1-4562-41b4-9b89-94988affbf25/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/382d7ae8-9e2d-4968-ab36-8ce37ee9bf59/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/5b1228e4-05b6-4380-9256-03b0a3966901/content",
+        "size_mb": 0.6
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/61fc4578-87c9-4434-88f0-602d668e8ef5/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/483afa79-1660-4499-af55-a028e5471922/content",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/485b3528-851f-4c4a-9190-ae577103733f/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/715dc426-3c87-41b7-af98-112e49706eb0/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8f813cf8-1fde-4bb9-a173-053898afee92/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/5023edcb-db83-4ed6-b7d2-297f970da5c0/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b6e0f5cd-28e4-4631-a853-56f3b6303fd2/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/5bf5f21f-d637-42c0-9dc5-534b0c6061f7/content",
+        "size_mb": 0.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/27dd60bd-a284-4f04-9605-8bb94180c70a/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c5bda888-a6af-4754-b1bf-63a275ea70a4/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c6656ed0-dd61-4e2f-9493-8d51b84f73ee/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/bdd44e77-35c4-44dc-a7e9-97e76a7a218d/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8f1b84dc-a1d6-4ec4-9d18-63f71e326090/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b2b5a8f5-3e4d-4c89-9b2c-8d7e2a1b4c6d/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/325ba1e0-51ec-4c28-a650-8f395a7c8abd/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/04063a2b-6327-4993-8421-afc7dbca7320/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/6a2d29b6-c14c-42db-b968-4a6101a0cbcd/content",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/261f8ca7-e733-497e-bfbb-5e16f6babe23/content",
+        "size_mb": 0.04
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/7f4e9d6a-8b2c-4e3d-a1f5-2c8d4e6f7a9b/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/787dcf49-4313-4190-8eaf-7cf56c76392f/content",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/a70b1082-9421-41f6-b1c8-7211e7294fe9/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b3603bc6-25ed-44b7-a2e5-804cd0dfe51a/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/98eb578e-47d1-48cd-892c-64f75b92a3c9/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c80cf381-eec5-489f-8fba-9e327ef7388a/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/10f185ec-9f5c-4903-a9b9-77243303d20e/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/42519ad4-f9e6-424e-b595-9caefb8066e7/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/2cff06d5-3f4a-4666-b25a-34b06a2dcf3f/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1d4e8e4f-5a8c-4b5a-9c8d-7e2f3a4b5c6d/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/29099742-d34a-476a-85c9-11ef19145aad/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/eadd0137-cb0c-4278-8867-7687c823ad5b/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/ef484818-7bb0-49ab-90d4-fcf699149644/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c07d89cf-ea98-4a3f-85ec-fdcee832d5ef/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1ace08bf-796e-4006-ba41-652f30dec712/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/72aadc95-a4dc-4110-a1b7-aeb95ca124fc/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/4c5d6e7f-8a9b-0c1d-2e3f-4a5b6c7d8e9f/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8605d697-641e-4bd7-b4b6-a67b3a6f9e1d/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b1bdcec1-8adb-482d-8453-feca6b6a7097/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/065c1e11-a79e-4929-94e0-e8456070ad6a/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f1e44697-af62-4d9b-8dbd-072dd08eee34/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/82ece8ad-ed09-469b-865c-41e099822ba3/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1afe6ab7-756d-443f-914f-2433991a0c09/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/ce50c157-8198-4c91-afed-09c37dec2538/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/6b0467f0-a275-4c4d-8cbc-05b6d82055da/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/89f68aa8-3739-4ebf-a8c6-75cf27d92af2/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/3e4f5a6b-7c8d-9e0f-1a2b-3c4d5e6f7a8b/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1f190166-48e0-45cf-9aa3-5082c94cbdb0/content",
+        "size_mb": 0.59
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/e84002b0-5823-4edf-a331-c034ead7edcf/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/69395c91-6e46-403c-82a9-e8fe6f4e59df/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/0c9e8408-95aa-4cd8-8fc9-67736e4b3180/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/0dafc60c-a185-43f5-ac4e-b3b286620af8/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/922ecb43-9d5c-4ed4-9b7c-6af5408af4b8/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/cd78757f-b740-45bd-b457-b7ac3cef7c41/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f8d9b2c3-a4e5-4b6c-8d7e-1f2a3b4c5d6e/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/fe28b0a9-49d1-440e-9048-c062bfd3ae79/content",
+        "size_mb": 0.35
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c438566c-c779-4e80-8ed3-3fd9a576309f/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/74c752ec-1143-4595-8681-b7a7f4d62a13/content",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/10949eb8-82a4-42d3-8082-1ce47ac43eab/content",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/da83d8dc-224d-40cb-8066-60a147f96ae2/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/fbefd036-5ac1-45b4-b58d-fdcde5f9368f/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/e0d0de1a-aa12-4118-9cc0-6e500b6404c7/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8cdcc08d-ab5d-4185-b242-7949f4252f26/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/765a5a7d-3894-425b-adc8-630aa5a1bae9/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/047f0d44-982f-439d-a44c-be8e9c91f4d9/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/6c3d95db-103e-444b-aaac-f868296e5ae9/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b7ed41fa-5c57-4a76-8c49-556c94c98938/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/fc85c1e6-9188-495d-80eb-b511d71b91dd/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/9a0d83c2-445e-4bfb-b67d-a451e092a0f2/content",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/14076b72-a501-485d-8313-0dba735cc79f/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/449fa6af-cc84-4f73-b66e-c871aee74da9/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/e6a6e2db-b63b-4204-8593-0d564165e7dd/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/6c47a505-0b5b-47c3-9cbb-8d82883e6936/content",
+        "size_mb": 19.32
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/685a1c1f-344a-44da-9f21-545fe6b294b6/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/9d86d933-22eb-4e15-b859-ae93e673f7b7/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/4e628f78-d450-4c29-9974-517a070bd917/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/7b8f4e1a-5c3d-4e8b-9a7f-2d1e6c0b8f9a/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/4112e845-e55f-4e8d-9d62-f4b0c1478d57/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/ac8f3cc1-19c4-470e-8192-611a8fcd4b6a/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/9f81eac1-3a96-42ac-a065-a8816162894a/content",
+        "size_mb": 0.07
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/bbc96011-afa2-4cad-a90b-6271e52a377b/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/4598da22-35ed-47c3-806c-21678044c6ab/content",
+        "size_mb": 1.28
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/0e5ea399-c2a7-49f9-a38c-c9b7c967aa53/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f1416720-cb96-48ab-8a4a-ac90e3996680/content",
+        "size_mb": 0.13
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/a3261287-55a3-4b93-8b4c-d9000dfaad1b/content",
+        "size_mb": 0.4
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/3109d6fc-ef66-4d59-b764-0778bf524877/content",
+        "size_mb": 0.46
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1b46da93-78a8-455b-b0e1-9e26a2307775/content",
+        "size_mb": 20.92
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/90612e07-1d5a-4f2c-99ce-6691dc4d3842/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f1912c8a-a202-4e91-b561-f7b4fd13b28a/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/a847fb19-4ecc-4663-a974-a87f93d61d93/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/940c54e4-0ffc-4e46-9683-9feb01a00f92/content",
+        "size_mb": 0.03
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/75a802d5-5680-428e-93c9-b0afdc6429eb/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/4edcdd54-4118-42c1-8052-2a383f761f25/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/a3e4d8b1-5c7d-4f8a-b2e9-1f6a8d3b7c9e/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f0e2cdaa-1296-4b20-bfcb-5bc66c7597d2/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8a46b48a-50c2-4954-a337-6932c3624d11/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/830de38f-1874-4afb-94e0-be7e148b02eb/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d64622c9-4f48-4bff-832b-e762c84d45e2/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/59b3337a-dc72-4055-87a6-c61a319c40e2/content",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/35072597-ab82-406d-bd3c-9a5b7a467813/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c2424888-c946-4bb9-a339-f3601b698a6b/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/e96273f8-3852-4159-90c8-278123f29163/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/98d25d14-d4d6-4123-b7fc-fd8dc6e3c4d2/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/3d92bab7-9639-4634-9df4-532669cf16a7/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/a3bed54b-880c-4672-9192-5fe836d02a4e/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b1b9650e-7c1f-45fb-8565-9b2b63617640/content",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/df50c592-3af3-4956-b940-fe11814fbced/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/4ac483b9-3de8-46d1-af7e-2096c2bb428b/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/85691369-84e9-48c6-ba62-9fabce2d163e/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/873d6742-9532-42e8-8696-051bd02a51ea/content",
+        "size_mb": 0.09
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/ba4d6246-3d37-403d-9489-13217716e02f/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1c3321a1-bb50-4c01-8367-a5d625a6658a/content",
+        "size_mb": 0.24
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/007a127e-d3bd-4bf7-b2e0-7e137b6d8bda/content",
+        "size_mb": 1.9
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d93ea623-dbad-4908-9ff7-8a8b13d6e38c/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/408bab6f-c6b7-4d59-b46d-b47f230ced5d/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/5e7a29d0-3214-4d35-8608-dea9cb53f430/content",
+        "size_mb": 0.38
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/27928673-2dbe-4db8-ac48-0e1f18414190/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/50a79357-7c64-4e88-95b6-32ed5bc49d34/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/c361d0c3-f906-4fe1-b8b8-16ee2b3e80ea/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/d34e3f7c-15c1-412d-8a49-153f94ba8d29/content",
+        "size_mb": 11.94
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/2e29b683-2074-4700-93ad-8148da9dd101/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/a2071000-2788-4fe7-8e92-c043678c5523/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/f8e5d4c3-2a1b-4c5d-9e8f-7a6b5c4d3e2f/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/717a008e-3f59-4b16-aa5c-a34275557893/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/0a357bdf-205f-4648-9c21-a8c023399b27/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/65764862-5f7d-499d-8982-2b0457e2fab1/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/2b58d083-0974-45ad-8919-a897edc0fec7/content",
+        "size_mb": 0.05
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1832304b-02ca-4ec8-a1f8-b5578fa92c6e/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/199620cd-315f-47e7-a5c9-22a3519c14f4/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/6cdeb4bc-6e6a-4328-97ab-2f7591e84c47/content",
+        "size_mb": 0.02
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/1873e257-a476-4e33-8e9f-fda6e815d83b/content",
+        "size_mb": 0.26
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/0b2d503f-f2a4-4b1a-9d8e-b729d03295b8/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/0dec0ea3-fd56-48d6-a510-dfc35af78a18/content",
+        "size_mb": 0.01
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/8e4c5c2a-7f6e-4d5b-9c3e-1a2b8d9e5f7a/content",
+        "size_mb": 0.0
+      },
+      {
+        "path": "/home/jonat/ai-stack/AI_Chat_Exports/Grok_Exports/ttl/30d/export_data/6fe45935-cd7c-4b07-ab91-a6d97b844d29/prod-mc-asset-server/_/b8a5f7d4-8c5e-4a9b-9e4d-3f2a1b5c6d7e/content",
+        "size_mb": 0.0
+      }
+    ]
+  },
+  "platforms_detected": {
+    "chatgpt": 336,
+    "claude": 8,
+    "grok": 211
+  },
+  "total_size_mb": 496.5855770111084,
+  "structures": {
+    "AI_Chat_Exports/all_recent_convos.json": {
+      "type": "array",
+      "count": 10,
+      "sample_keys": [
+        "title",
+        "date",
+        "days_ago",
+        "id",
+        "mapping"
+      ]
+    },
+    "AI_Chat_Exports/recent_faithh_convos.json": {
+      "type": "array",
+      "count": 2,
+      "sample_keys": [
+        "title",
+        "date",
+        "id",
+        "mapping"
+      ]
+    },
+    "AI_Chat_Exports/Chat_GPT_Exports/shared_conversations.json": {
+      "type": "array",
+      "count": 5,
+      "sample_keys": [
+        "id",
+        "conversation_id",
+        "title",
+        "is_anonymous"
+      ]
+    },
+    "AI_Chat_Exports/Chat_GPT_Exports/conversations.json": {
+      "type": "array",
+      "count": 177,
+      "sample_keys": [
+        "title",
+        "create_time",
+        "update_time",
+        "mapping",
+        "moderation_results",
+        "current_node",
+        "plugin_ids",
+        "conversation_id",
+        "conversation_template_id",
+        "gizmo_id",
+        "gizmo_type",
+        "is_archived",
+        "is_starred",
+        "safe_urls",
+        "blocked_urls",
+        "default_model_slug",
+        "conversation_origin",
+        "is_read_only",
+        "voice",
+        "async_status",
+        "disabled_tool_ids",
+        "is_do_not_remember",
+        "memory_scope",
+        "context_scopes",
+        "sugar_item_id",
+        "sugar_item_visible",
+        "pinned_time",
+        "is_study_mode",
+        "owner",
+        "id"
+      ]
+    },
+    "AI_Chat_Exports/Claude_Exports/memories.json": {
+      "type": "array",
+      "count": 1,
+      "sample_keys": [
+        "conversations_memory",
+        "project_memories",
+        "account_uuid"
+      ]
+    },
+    "AI_Chat_Exports/Claude_Exports/conversations.json": {
+      "type": "array",
+      "count": 68,
+      "sample_keys": [
+        "uuid",
+        "name",
+        "summary",
+        "created_at",
+        "updated_at",
+        "account",
+        "chat_messages"
+      ]
+    },
+    "AI_Chat_Exports/Claude_Exports/projects.json": {
+      "type": "array",
+      "count": 1,
+      "sample_keys": [
+        "uuid",
+        "name",
+        "description",
+        "is_private",
+        "is_starter_project",
+        "prompt_template",
+        "created_at",
+        "updated_at",
+        "creator",
+        "docs"
+      ]
+    }
+  }
+}
