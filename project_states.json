@@ -1,44 +1,156 @@
 {
-  "last_updated": "2025-12-18",
+  "last_updated": "2025-12-20",
   "timezone": "America/Los_Angeles",
   "projects": {
     "FAITHH": {
-      "name": "FAITHH",
+      "name": "FAITHH (AI Stack)",
       "category": "AI assistant / local stack",
       "status": "active",
-      "phase": "Phase 2",
-      "phase_status": "complete",
-      "summary": "Multi-provider routing is merged into the main backend. doc_grounded mode enforcement is working and the UI shows provider/model/latency badges.",
+      "phase": "Phase 2 Complete / Phase 3 Planning",
+      "phase_status": "operational",
+      "summary": "Multi-provider LLM routing with RAG integration. Backend supports OpenRouter, Anthropic, and planned local inference. RAG system ready for tiered architecture migration.",
       "key_capabilities": [
-        "Multi-provider LLM routing (Groq primary, local fallbacks)",
-        "doc_grounded enforcement (refuses persona answers when docs are required)",
-        "RAG integration via ChromaDB",
-        "Provider badge in UI (provider/model/latency)",
-        "Backward-compatible /api/chat request normalization"
+        "Multi-provider LLM routing (OpenRouter primary, Anthropic direct)",
+        "RAG integration via ChromaDB (27,732 chunks indexed)",
+        "Coherence detection (experimental)",
+        "Streaming responses",
+        "Provider abstraction layer (llm_providers.py)",
+        "Token counting and cost tracking"
       ],
+      "infrastructure": {
+        "database": "ChromaDB (local, single-tier)",
+        "chunks_ready": 27732,
+        "documents_in_db": 93000,
+        "note": "93k includes duplicates; needs cleanup and re-index"
+      },
       "next_steps": [
-        "Run acceptance tests after any dependency or model_config change",
-        "Confirm Groq model selection in model_config.yaml matches desired default behavior"
+        "Design and implement tiered RAG architecture (see TIERED_DATABASE_DESIGN.md)",
+        "Re-index RAG with metadata tracking",
+        "Migrate ChromaDB to Gen8 for Tier 2 storage",
+        "Add local LLM inference support (Ollama/llama.cpp)"
       ]
     },
     "gen8_services": {
-      "name": "Gen8 MicroServer (Home Services Box)",
+      "name": "Gen8 MicroServer (servicebox)",
       "category": "Home infrastructure",
-      "status": "active",
-      "phase": "Build-out",
-      "phase_status": "parts_ordered",
-      "summary": "HP ProLiant MicroServer Gen8 being upgraded as home services box.",
-      "parts_ordered": {
-        "cpu": "Intel Xeon E3-1265L v2",
-        "ram": "2x8GB DDR3-1600 ECC UDIMM (16GB max)"
+      "status": "operational",
+      "phase": "Initial deployment",
+      "phase_status": "pihole_deployed",
+      "summary": "HP ProLiant MicroServer Gen8 running Ubuntu 22.04 with Docker. Currently hosting Pi-hole for network-wide ad blocking.",
+      "specs": {
+        "hostname": "servicebox",
+        "os": "Ubuntu 22.04 LTS",
+        "docker": "v28.2.2",
+        "ips": {
+          "lan": "192.158.1.243",
+          "tailscale": "100.79.85.32"
+        }
       },
-      "planned_services": ["Pi-hole", "Uptime Kuma"],
-      "role": "Services box (not router)",
+      "services_deployed": {
+        "pihole": {
+          "status": "running",
+          "location": "~/services/pihole/",
+          "dns_port": 53,
+          "web_port": 80,
+          "web_url": "http://192.158.1.243/admin",
+          "upstream_dns": ["1.1.1.1", "1.0.0.1"],
+          "deployed": "2025-12-20",
+          "notes": "Password needs update from default"
+        }
+      },
+      "services_planned": [
+        "ChromaDB (Tier 2 RAG storage)",
+        "Local LLM inference (Ollama/llama.cpp)",
+        "Uptime Kuma (monitoring)",
+        "Backup/sync services"
+      ],
       "next_steps": [
-        "Install Ubuntu Server + Docker when parts arrive",
-        "Assign static IP for Gen8",
-        "Deploy Pi-hole, set UDM DHCP DNS to Pi-hole"
+        "Change Pi-hole admin password",
+        "Configure network devices to use Pi-hole DNS",
+        "Deploy ChromaDB for tiered RAG architecture",
+        "Set up local LLM inference",
+        "Configure automated backups"
       ]
+    },
+    "tomcat_sound": {
+      "name": "Tom Cat Sound LLC",
+      "category": "Business / Professional",
+      "status": "active",
+      "phase": "Operations & Growth",
+      "phase_status": "ongoing",
+      "summary": "Audio engineering and production business. Financial tracking, client management, and grant applications in progress.",
+      "location": "projects/tomcat-sound/",
+      "key_activities": [
+        "Client audio production and mixing",
+        "Financial record keeping and tax preparation",
+        "Equipment inventory management",
+        "Grant research and applications"
+      ],
+      "recent_work": [
+        "Equipment inventory analysis (Dec 2025)",
+        "Client payment reconciliation",
+        "Venmo transaction tracking (Jan-Apr 2025)",
+        "Grant opportunity research"
+      ],
+      "documentation": [
+        "Operating Agreement",
+        "EIN documentation",
+        "Business insurance",
+        "Financial ledger (Excel + tracking docs)"
+      ],
+      "next_steps": [
+        "Complete Q4 2025 financial reconciliation",
+        "File quarterly taxes",
+        "Update equipment inventory",
+        "Apply for identified grants",
+        "Formalize client payment tracking system"
+      ]
+    },
+    "constella_harmony": {
+      "name": "Constella Harmony Framework",
+      "category": "Personal project / Creative framework",
+      "status": "active",
+      "phase": "Phase 1 Integration",
+      "phase_status": "in_progress",
+      "summary": "Personal framework for multi-modal creativity, coherence detection, and real-time feedback systems.",
+      "location": "projects/constella-framework/",
+      "components": [
+        "Coherence sensing algorithms",
+        "Multi-modal integration (text, audio, visual)",
+        "Real-time feedback systems",
+        "Documentation framework"
+      ],
+      "integration_status": {
+        "coherence_sensor": "implemented (backend/coherence_sensor.py)",
+        "documentation": "in_progress",
+        "examples": "planned"
+      },
+      "references": [
+        "PHASE1_INTEGRATION_GUIDE.md",
+        "docs/compass_artifact_wf-*.md (archived design docs)"
+      ],
+      "next_steps": [
+        "Complete Phase 1 integration per guide",
+        "Build example applications",
+        "Document framework patterns",
+        "Test coherence detection in real workflows"
+      ]
+    }
+  },
+  "meta": {
+    "documentation": {
+      "master_context": "MASTER_CONTEXT.md",
+      "update_protocol": "docs/UPDATE_PROTOCOL.md",
+      "portfolio_overview": "docs/PORTFOLIO_OVERVIEW.md",
+      "session_reports": "docs/session-reports/"
+    },
+    "git_status": {
+      "branch": "main",
+      "uncommitted_work": true,
+      "note": "Multiple projects and docs pending commit (see git status)"
+    },
+    "ssh_access": {
+      "gen8": "ssh -i ~/.ssh/servicebox_ed25519 jonat@100.79.85.32"
     }
   }
 }
