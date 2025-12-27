@@ -44,3 +44,5 @@ credentials.yaml
 # Keep structure files only
 !network-backups/*.md
 !parity/network_infrastructure.md
+knowledge_base/imports/
+knowledge_base/venv/
