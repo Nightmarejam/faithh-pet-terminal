@@ -2,12 +2,12 @@
 
 ## Snapshot you reported (faithh vs servicebox)
 
-| Host | `hostname` | `HEAD` | `origin` |
-|------|----------------|--------|----------|
-| Inference VM | `faithh` | `38d2f6f` — *Document faithh vs Gen8 git divergence…* | _(none — add the same URL as Gen8 when ready)_ |
-| Gen8 | `servicebox` | `b8c7271` — *docs(ops): multi-host audit tooling…* | `https://github.com/Nightmarejam/faithh-pet-terminal.git` |
+| Host | `hostname` | Typical `HEAD` | `origin` |
+|------|----------------|----------------|----------|
+| Inference VM | `faithh` | e.g. `bd42eba` — ops + divergence docs | `https://github.com/Nightmarejam/faithh-pet-terminal.git` (after `git remote add`) |
+| Gen8 | `servicebox` | e.g. `b8c7271` — Gen8 scaffold commit | same URL |
 
-Until **faithh** has `origin` and has **pushed**, GitHub only knows what **servicebox** (or others) pushed. Faithh’s `38d2f6f` chain is **local-only** on the inference VM.
+Until **faithh** has run **`git push`** for the inference branch, GitHub will not show `faithh-ops-from-inference-vm` even if `origin` and `git fetch` already work.
 
 **Lowest-risk publish path:** on faithh, add `origin`, `git fetch`, then push **to a new remote branch** (do not `git push --force` `main` unless you mean it):
 
@@ -17,6 +17,15 @@ git remote add origin https://github.com/Nightmarejam/faithh-pet-terminal.git   
 git fetch origin
 git push -u origin main:faithh-ops-from-inference-vm
 ```
+
+**Verify the push** (the big “Receiving objects …” block is from **`fetch`**, not `push`):
+
+```bash
+git ls-remote origin refs/heads/faithh-ops-from-inference-vm
+# expect one line: <hash> refs/heads/faithh-ops-from-inference-vm
+```
+
+If that ref is missing, run the `git push` line again and fix any auth error Git prints.
 
 On **servicebox** (or via GitHub PR):
 
