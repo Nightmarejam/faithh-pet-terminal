@@ -4,17 +4,25 @@
 
 Use this checklist when bringing **Gen8** online as the homelab / backend plane while **faithh** handles GPU inference.
 
-## 1. Sync the repo
+## 1. Sync the repo (read before `git pull`)
 
-On **servicebox**:
+**faithh-only commits** (ops, `wsl_migration` removal notes, audit script) do not appear on GitHub until someone **`git push`** from a clone that has them. **Gen8-only commits** (e.g. scaffolding on `servicebox`) are likewise invisible to faithh until fetched.
+
+If `git rev-list --left-right --count origin/main...main` shows **both** sides non-zero, history is **divergent** — a plain `git pull` becomes a merge/rebase decision, not a one-liner. See **[GIT_DIVERGENCE.md](GIT_DIVERGENCE.md)** for strategies (push faithh branch, merge `origin/main`, side branch, or `git remote add faithh …`).
+
+On **servicebox**, always:
 
 ```bash
+hostname   # expect servicebox
 cd ~/ai-stack
 git remote -v
-git pull   # or merge from the branch faithh uses, once remotes match
+git fetch origin
+git rev-list --left-right --count origin/main...main 2>/dev/null || true
 ```
 
-Resolve any merge conflicts, then run a quick audit:
+Then choose merge, rebase, or branch push per **GIT_DIVERGENCE.md** — not blind `git pull`.
+
+Resolve any merge conflicts (watch **`scripts/`** and **`docs/ops/`** duplicates), then run a quick audit:
 
 ```bash
 mkdir -p ~/audit

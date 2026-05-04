@@ -53,3 +53,7 @@ Do **not** add `/home/jonat/faithh` unless that directory exists on that host.
 ## Git remotes
 
 `ai-stack` may have **no `origin`** on one clone and **GitHub `origin`** on another. Run `git remote -v` on the machine you are editing and treat that clone as source of truth until remotes are unified.
+
+If **faithh** and **Gen8** both have `main` but `git rev-list --left-right --count origin/main...main` is “ahead / behind” on both sides, see **[GIT_DIVERGENCE.md](GIT_DIVERGENCE.md)** before pulling.
+
+**Compare heads** (paste from each host): `hostname; git -C ~/ai-stack log -1 --oneline; git -C ~/ai-stack remote -v`
