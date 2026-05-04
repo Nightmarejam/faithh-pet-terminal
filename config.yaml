@@ -4,8 +4,9 @@
 security:
   # Allowed directories for file operations
   allowed_directories:
+    # Canonical tool/workspace tree (no separate /home/jonat/faithh on disk).
+    # /tmp/faithh: optional scratch; mkdir if listed (see docs/ops/MULTI_HOST_AUDIT.md).
     - /home/jonat/ai-stack
-    - /home/jonat/faithh
     - /tmp/faithh
   
   # Blocked shell commands for safety
