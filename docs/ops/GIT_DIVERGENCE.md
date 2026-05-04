@@ -1,5 +1,36 @@
 # When `main` on faithh and Gen8 disagree (no fast-forward)
 
+## Snapshot you reported (faithh vs servicebox)
+
+| Host | `hostname` | `HEAD` | `origin` |
+|------|----------------|--------|----------|
+| Inference VM | `faithh` | `38d2f6f` — *Document faithh vs Gen8 git divergence…* | _(none — add the same URL as Gen8 when ready)_ |
+| Gen8 | `servicebox` | `b8c7271` — *docs(ops): multi-host audit tooling…* | `https://github.com/Nightmarejam/faithh-pet-terminal.git` |
+
+Until **faithh** has `origin` and has **pushed**, GitHub only knows what **servicebox** (or others) pushed. Faithh’s `38d2f6f` chain is **local-only** on the inference VM.
+
+**Lowest-risk publish path:** on faithh, add `origin`, `git fetch`, then push **to a new remote branch** (do not `git push --force` `main` unless you mean it):
+
+```bash
+cd ~/ai-stack
+git remote add origin https://github.com/Nightmarejam/faithh-pet-terminal.git   # skip if already added
+git fetch origin
+git push -u origin main:faithh-ops-from-inference-vm
+```
+
+On **servicebox** (or via GitHub PR):
+
+```bash
+cd ~/ai-stack
+git fetch origin
+git merge origin/faithh-ops-from-inference-vm
+# resolve conflicts (expect overlap in docs/ops/* and scripts/*)
+```
+
+Then push reconciled `main` to `origin`, and on **faithh** run `git pull` (or `git fetch && git merge origin/main`) so both hosts share one history.
+
+---
+
 You can have **two valid lines of history** that never shared a recent merge-base with `origin/main`:
 
 - **faithh** may have commits (e.g. `wsl_migration` removal, ops docs) that were **never pushed** because `git remote` was empty or push was skipped.
