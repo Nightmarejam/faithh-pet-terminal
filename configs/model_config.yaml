@@ -21,7 +21,9 @@ providers:
   local_webui:
     type: "openai_compatible"
     base_url: "http://127.0.0.1:8000/v1"
-    # MUST match an "id" from: curl -sS http://127.0.0.1:8000/v1/models
+    # MUST match an "id" from /v1/models. On faithh after vLLM is up:
+    #   ./venv/bin/python scripts/ops/print_first_vllm_model_id.py
+    # Or: curl -sS http://127.0.0.1:8000/v1/models | head -c 2000
     model: "REPLACE_WITH_ID_FROM_V1_MODELS"
     temperature: 0.2
     max_tokens: 900

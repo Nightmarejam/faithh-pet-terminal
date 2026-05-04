@@ -38,8 +38,18 @@ If **`grep`** shows nothing, you are **before** the commit that added **`anthrop
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-api03-...
+FAITHH_FORCE_LOCAL=0
 chmod 600 ~/ai-stack/.env
 ```
+
+**Pick `model` for `model_config.yaml`:** with vLLM running:
+
+```bash
+./venv/bin/python scripts/ops/print_first_vllm_model_id.py
+# other port: ./venv/bin/python scripts/ops/print_first_vllm_model_id.py --url http://127.0.0.1:8010/v1/models
+```
+
+Paste the printed **`id`** into **`providers.local_webui.model`** (replace **`REPLACE_WITH_ID_FROM_V1_MODELS`**).
 
 Restart the backend (**`./restart_backend.sh`**). Smoke: **`curl -sS http://127.0.0.1:5557/health | head -c 800`** — when the full backend exposes it, **`providers.anthropic`** (or similar) should reflect the key.
 
