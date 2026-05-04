@@ -51,7 +51,8 @@ logging:
   backup_count: 5
   format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 
-# AI Provider configuration
+# AI Provider configuration (tool defaults; full FAITHH chat routing uses configs/model_config.yaml on faithh).
+# Lean stack: docs/ops/LEAN_LLM_VLLM_FIRST.md
 ai:
   primary_provider: ollama
   fallback_provider: anthropic

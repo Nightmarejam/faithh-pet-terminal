@@ -69,3 +69,8 @@ On the inference VM, handoff tables live under **`~/audit/ECOSYSTEM-TOPOLOGY.md`
 - **VHD**: offline disk image.
 
 Use those for any **`ml_output`** or **`projects`** recovery — they were not bulk-copied to NAS during faithh cleanup.
+
+## 8. Lean operational path (Gen8 + faithh)
+
+- **[LEAN_LLM_VLLM_FIRST.md](LEAN_LLM_VLLM_FIRST.md)** — vLLM on faithh, Chroma on Gen8, **`ANTHROPIC_API_KEY`** in **`.env`**, **`FAITHH_FORCE_LOCAL=0`** for YAML route order, optional Ollama.  
+- **[RUNBOOK.md](../../RUNBOOK.md)** — short index + handoff note.
