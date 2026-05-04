@@ -36,6 +36,10 @@ Default output: `~/audit/audit-<slug>-YYYY-MM-DD.md`.
 - After auditing **servicebox (Gen8)**, copy or `scp` the generated `~/audit/audit-servicebox-*.md` next to faithh audits or commit under `docs/ops/` if you want history in git.
 - **Handoffs are optional** — not required in git to operate; see **[LEAN_LLM_VLLM_FIRST.md](LEAN_LLM_VLLM_FIRST.md)** and **[RUNBOOK.md](../../RUNBOOK.md)**.
 
+## Lean LLM (vLLM vs Ollama)
+
+When bringing chat back with **one** GPU path on faithh, follow **[LEAN_LLM_VLLM_FIRST.md](LEAN_LLM_VLLM_FIRST.md)**. **`FAITHH_FORCE_LOCAL=0`** enables **`configs/model_config.yaml`** route order (vLLM can still be `127.0.0.1` on faithh).
+
 ## `config.yaml` and `allowed_directories`
 
 Every host should list **paths that exist**:

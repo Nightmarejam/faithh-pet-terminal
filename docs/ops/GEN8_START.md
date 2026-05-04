@@ -72,5 +72,5 @@ Use those for any **`ml_output`** or **`projects`** recovery — they were not b
 
 ## 8. Lean operational path (Gen8 + faithh)
 
-- **[LEAN_LLM_VLLM_FIRST.md](LEAN_LLM_VLLM_FIRST.md)** — vLLM on faithh, Chroma on Gen8, **`ANTHROPIC_API_KEY`** in **`.env`**, **`FAITHH_FORCE_LOCAL=0`** for YAML route order, optional Ollama.  
+- **[LEAN_LLM_VLLM_FIRST.md](LEAN_LLM_VLLM_FIRST.md)** — vLLM on faithh, Chroma on Gen8, **`ANTHROPIC_API_KEY`** in **`.env`**, **`FAITHH_FORCE_LOCAL=0`** for YAML route order (not “remote-only” — see that doc), optional Ollama.
 - **[RUNBOOK.md](../../RUNBOOK.md)** — short index + handoff note.
