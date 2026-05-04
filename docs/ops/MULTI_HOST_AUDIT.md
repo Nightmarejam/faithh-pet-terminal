@@ -35,6 +35,10 @@ Default output: `~/audit/audit-<slug>-YYYY-MM-DD.md`.
 - On **faithh**, the full handoff table lives at `~/audit/ECOSYSTEM-TOPOLOGY.md` (if that directory exists).
 - After auditing **servicebox (Gen8)**, copy or `scp` the generated `~/audit/audit-servicebox-*.md` next to faithh audits or commit under `docs/ops/` if you want history in git.
 
+## Lean LLM (vLLM vs Ollama)
+
+When bringing chat back with **one** GPU path on faithh, follow **[LEAN_LLM_VLLM_FIRST.md](LEAN_LLM_VLLM_FIRST.md)**. **`FAITHH_FORCE_LOCAL=0`** enables **`configs/model_config.yaml`** route order (vLLM can still be `127.0.0.1` on faithh).
+
 ## `config.yaml` and `allowed_directories`
 
 Every host should list **paths that exist**:
