@@ -182,7 +182,7 @@ if [ -n "$INCLUDE_FAITHH_HANDOFF" ]; then
   echo "- **QwQ smoke**: A6 model on disk + A5 listener; start server per handoff Section 6 when ready."
   echo "- **Static IP**: Phase A2 netplan + DHCP note."
   echo "- **MOTU / USB disk / Proxmox disk move**: blocked from Linux; handoff Phase D."
-  echo "- **Chroma**: source \`~/wsl_migration/knowledge_base/\`; prior host 100.79.85.32 per handoff."
+  echo "- **Chroma**: runs on Gen8 (e.g. Tailscale); \`~/wsl_migration\` removed on faithh — raw KB snapshot: NAS \`backups/wsl-migration-archive-2026-05-04/knowledge_base/\` (see docs/ops/WSL_MIGRATION_REMOVAL.md)."
   echo "- **Tailscale on Ubuntu**: A2."
   echo
   echo "## Canonical handoff reference"

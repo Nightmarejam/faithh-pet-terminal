@@ -6,7 +6,7 @@ Use this page when you are **not sure which machine Cursor is on**. Inventory an
 
 | Hostname (example) | Role | Typical stack |
 |--------------------|------|----------------|
-| **faithh** | Inference VM (vLLM, NAS models, optional `~/wsl_migration`) | Ports like **8000** (vLLM), **5557** (tool API), `/mnt/nas` |
+| **faithh** | Inference VM (vLLM, NAS models, `~/ai-stack` only — **`~/wsl_migration` removed 2026-05-04**) | Ports like **8000** (vLLM), **5557** (tool API), `/mnt/nas` |
 | **servicebox** | Gen8 homelab / backend (per your naming); Docker services, Chroma, Gitea, etc. | Many listeners (22, 53, 80, 3000, 5557, 8000, …); Tailscale |
 
 Run:
@@ -46,7 +46,7 @@ Do **not** add `/home/jonat/faithh` unless that directory exists on that host.
 
 ## Gen8 / PVE / Windows
 
-- **Gen8**: parity audit = same script; optional SSH from faithh via `~/audit/run_remote_linux_audit.sh` when `REMOTE_HOST` is set.
+- **Gen8**: after faithh cleanup, follow [GEN8_START.md](GEN8_START.md); parity audit = same script; optional SSH from faithh via `~/audit/run_remote_linux_audit.sh` when `REMOTE_HOST` is set.
 - **PVE**: run `~/audit/collect_pve_inventory.sh` on the hypervisor only; see `~/audit/pve-inventory-*.md` on faithh.
 - **Windows**: see `~/audit/WINDOWS-CURSOR-SYNC.md` on faithh (or duplicate these bullets into this repo).
 
