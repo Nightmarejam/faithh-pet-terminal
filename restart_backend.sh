@@ -52,6 +52,16 @@ if [[ "${VLLM_AUTOSTART:-0}" == "1" ]]; then
   #   source venv/bin/activate && vllm serve /path/to/model --host 0.0.0.0 --port 8000
   tmux new-session -d -s "$VLLM_TMUX_SESSION" "cd \"$REPO_DIR\" && bash -c $(printf '%q' "$VLLM_START_CMD")"
   sleep "${VLLM_BOOT_SLEEP_SEC:-8}"
+  if ! tmux has-session -t "$VLLM_TMUX_SESSION" 2>/dev/null; then
+    echo "error: tmux session $VLLM_TMUX_SESSION was not created — check tmux / disk / permissions." >&2
+    exit 1
+  fi
+  if ! curl -fsS -m 3 "$VLLM_MODELS_URL" >/dev/null 2>&1; then
+    echo "⚠️  vLLM tmux is running but $VLLM_MODELS_URL still down (model still loading or wrong port)." >&2
+    echo "    Last lines from tmux $VLLM_TMUX_SESSION:" >&2
+    tmux capture-pane -t "$VLLM_TMUX_SESSION" -p -S -30 2>/dev/null | tail -20 >&2 || true
+    echo "    Fix VLLM_START_CMD / --port or raise VLLM_BOOT_SLEEP_SEC; then re-run this script." >&2
+  fi
 fi
 
 # --- Warn when YAML routing expects local_webui but nothing answers on :8000 ---
