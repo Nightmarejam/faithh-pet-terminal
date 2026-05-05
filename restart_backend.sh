@@ -63,13 +63,28 @@ if [[ "${VLLM_AUTOSTART:-0}" == "1" ]]; then
   VLLM_TMUX_SESSION="${VLLM_TMUX_SESSION:-vllm}"
   echo "🚀 Starting vLLM tmux session: $VLLM_TMUX_SESSION"
   tmux kill-session -t "$VLLM_TMUX_SESSION" 2>/dev/null || true
-  # VLLM_START_CMD should be one shell line (no raw double-quotes inside), e.g.
-  #   source venv/bin/activate && vllm serve /path/to/model --host 0.0.0.0 --port 8000
-  tmux new-session -d -s "$VLLM_TMUX_SESSION" "cd \"$REPO_DIR\" && bash -c $(printf '%q' "$VLLM_START_CMD")"
+  # Write VLLM_START_CMD into a temp script so tmux does not fight nested quoting (long lines, &&, etc.).
+  # Example .env: VLLM_START_CMD='source venv/bin/activate && vllm serve MODEL --host 0.0.0.0 --port 8000'
+  VLLM_LAUNCHER="$(mktemp "${TMPDIR:-/tmp}/faithh-vllm-XXXXXX.sh")"
+  {
+    echo '#!/usr/bin/env bash'
+    echo 'set -euo pipefail'
+    printf 'cd %q\n' "$REPO_DIR"
+    printf '%s\n' "$VLLM_START_CMD"
+  } > "$VLLM_LAUNCHER"
+  chmod +x "$VLLM_LAUNCHER"
+  if ! tmux new-session -d -s "$VLLM_TMUX_SESSION" "$VLLM_LAUNCHER"; then
+    echo "error: tmux new-session failed (see script below and \`tmux -V\`)." >&2
+    sed 's/^/    /' "$VLLM_LAUNCHER" >&2
+    rm -f "$VLLM_LAUNCHER"
+    exit 1
+  fi
+  (sleep 2; rm -f "$VLLM_LAUNCHER") &
   sleep "${VLLM_BOOT_SLEEP_SEC:-8}"
   if ! tmux has-session -t "$VLLM_TMUX_SESSION" 2>/dev/null; then
-    echo "error: tmux session $VLLM_TMUX_SESSION was not created — check tmux / disk / permissions." >&2
-    exit 1
+    echo "⚠️  tmux session $VLLM_TMUX_SESSION not listed — vLLM may have exited immediately." >&2
+    tmux ls 2>&1 | sed 's/^/    /' >&2 || echo "    (tmux ls failed)" >&2
+    echo "    Attach any leftover pane: tmux attach -l" >&2
   fi
   if ! curl -fsS -m 3 "$VLLM_MODELS_URL" >/dev/null 2>&1; then
     echo "⚠️  vLLM tmux is running but $VLLM_MODELS_URL still down (model still loading or wrong port)." >&2
