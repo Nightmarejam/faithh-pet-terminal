@@ -57,6 +57,17 @@ Restart the backend (**`./restart_backend.sh`**). Smoke: **`curl -sS http://127.
 
 ## 3. vLLM first (faithh)
 
+### `restart_backend.sh` only starts Flask (unless you opt in)
+
+**`./restart_backend.sh`** starts the **FAITHH API** in tmux session **`faithh`**. It does **not** start vLLM unless you enable the sidecar:
+
+| Approach | What to do |
+|----------|------------|
+| **Manual (common)** | In another tmux session **`vllm`**, run your **`vllm serve …`** (or use **`scripts/ops/run_vllm.sh.example`** → copy to **`run_vllm.sh`**, edit, **`chmod +x`**, then **`tmux new -s vllm ./scripts/ops/run_vllm.sh`**). Then **`./restart_backend.sh`**. |
+| **Auto from `.env`** | Set **`VLLM_AUTOSTART=1`** and **`VLLM_START_CMD`** to **one shell line** (see comment in **`restart_backend.sh`**). Optional **`VLLM_BOOT_SLEEP_SEC`**, **`VLLM_TMUX_SESSION`**, **`VLLM_MODELS_URL`** for the pre-flight curl. |
+
+If **`FAITHH_FORCE_LOCAL=0`** and **`VLLM_MODELS_URL`** (default **`http://127.0.0.1:8000/v1/models`**) is down, the script **warns** and still starts Flask — fix vLLM, then retry chat or re-run restart.
+
 1. **Serve vLLM** (e.g. port **8000**). Check: **`curl -sS "http://127.0.0.1:8000/v1/models"`**. If you see **Connection refused**, vLLM is not bound there yet — **`ss -tlnp | grep -E ':8000|:8010'`** to see what listens; start vLLM or pass **`--url`** to match your real port (or use the Windows / other host LAN IP if the server runs there).
 2. **`configs/model_config.yaml`:** set **`providers.local_webui.base_url`** to your **`/v1`** URL (often **`http://127.0.0.1:8000/v1`**). Set **`model`** to an **`id`** from that JSON (replace **`REPLACE_WITH_ID_FROM_V1_MODELS`**).
 3. **`~/ai-stack/.env`:** **`FAITHH_FORCE_LOCAL=0`** so YAML routes apply (see note at top).
