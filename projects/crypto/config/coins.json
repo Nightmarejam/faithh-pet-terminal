@@ -1,0 +1,20 @@
+{
+  "holdings": [
+    { "id": "ethereum-classic", "symbol": "ETC", "held": 20 },
+    { "id": "zcash", "symbol": "ZEC", "held": 1 },
+    { "id": "polymath-network", "symbol": "POLY", "held": true },
+    { "id": "pudgy-penguins", "symbol": "PENGU", "held": true }
+  ],
+  "watchlist": [
+    { "id": "bitcoin", "symbol": "BTC" },
+    { "id": "ethereum", "symbol": "ETH" },
+    { "id": "kaspa", "symbol": "KAS" },
+    { "id": "ravencoin", "symbol": "RVN" },
+    { "id": "ergo", "symbol": "ERG" }
+  ],
+  "settings": {
+    "fetch_interval_minutes": 15,
+    "price_history_days": 30,
+    "signal_threshold": 0.05
+  }
+}
