@@ -1,20 +1,118 @@
 {
   "holdings": [
-    { "id": "ethereum-classic", "symbol": "ETC", "held": 20 },
-    { "id": "zcash", "symbol": "ZEC", "held": 1 },
-    { "id": "polymath-network", "symbol": "POLY", "held": true },
-    { "id": "pudgy-penguins", "symbol": "PENGU", "held": true }
+    {
+      "id": "ethereum-classic",
+      "symbol": "ETC",
+      "held": 20,
+      "wallet": "coinbase"
+    },
+    {
+      "id": "zcash",
+      "symbol": "ZEC",
+      "held": 1,
+      "wallet": "coinbase"
+    },
+    {
+      "id": "polymath",
+      "symbol": "POLY",
+      "held": true,
+      "wallet": "coinbase"
+    },
+    {
+      "id": "pudgy-penguins",
+      "symbol": "PENGU",
+      "held": true,
+      "wallet": "coinbase"
+    }
   ],
-  "watchlist": [
-    { "id": "bitcoin", "symbol": "BTC" },
-    { "id": "ethereum", "symbol": "ETH" },
-    { "id": "kaspa", "symbol": "KAS" },
-    { "id": "ravencoin", "symbol": "RVN" },
-    { "id": "ergo", "symbol": "ERG" }
+  "mining_targets": [
+    {
+      "id": "ethereum-classic",
+      "symbol": "ETC",
+      "algorithm": "ETChash",
+      "gpu": [
+        "3090",
+        "1080ti"
+      ]
+    },
+    {
+      "id": "ergo",
+      "symbol": "ERG",
+      "algorithm": "Autolykos2",
+      "gpu": [
+        "3090",
+        "1080ti"
+      ]
+    },
+    {
+      "id": "ravencoin",
+      "symbol": "RVN",
+      "algorithm": "KawPoW",
+      "gpu": [
+        "3090",
+        "1080ti"
+      ]
+    },
+    {
+      "id": "vertcoin",
+      "symbol": "VTC",
+      "algorithm": "Verthash",
+      "gpu": [
+        "3090",
+        "1080ti"
+      ]
+    }
+  ],
+  "market_context": [
+    {
+      "id": "bitcoin",
+      "symbol": "BTC"
+    },
+    {
+      "id": "ethereum",
+      "symbol": "ETH"
+    },
+    {
+      "id": "kaspa",
+      "symbol": "KAS"
+    }
   ],
   "settings": {
     "fetch_interval_minutes": 15,
     "price_history_days": 30,
-    "signal_threshold": 0.05
+    "signal_threshold": 0.05,
+    "mining_profitability_target_usd_per_day": 5.0,
+    "trader_bot": {
+      "job1_description": "Convert mined coins to USDC via Coinbase",
+      "job1_target_currency": "USDC",
+      "sell_triggers": {
+        "ETC": {
+          "min_balance": 2.0,
+          "min_usd_value": 15
+        },
+        "ERG": {
+          "min_balance": 50.0,
+          "min_usd_value": 15
+        },
+        "RVN": {
+          "min_balance": 500.0,
+          "min_usd_value": 15
+        },
+        "ZEC": {
+          "min_balance": 0.1,
+          "min_usd_value": 15
+        },
+        "FLUX": {
+          "min_balance": 20.0,
+          "min_usd_value": 15
+        },
+        "VTC": {
+          "min_balance": 100.0,
+          "min_usd_value": 15
+        }
+      },
+      "paper_trade_first": true,
+      "paper_trade_cycles": 10
+    }
   }
 }

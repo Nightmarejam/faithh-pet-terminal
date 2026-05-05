@@ -60,7 +60,7 @@ def load_targets(config_path: Path) -> list[CoinTarget]:
     payload = json.loads(config_path.read_text(encoding="utf-8"))
     targets: dict[str, CoinTarget] = {}
 
-    for section in ("holdings", "watchlist"):
+    for section in ("holdings", "mining_targets", "market_context"):
         for entry in payload.get(section, []):
             coin_id = entry.get("id")
             symbol = entry.get("symbol")
