@@ -19,6 +19,8 @@ ls -1 faithh_professional_backend_fixed.py configs/model_config.yaml 2>/dev/null
 
 If those files are missing, you are on a **slim** clone or old tip — **`git pull origin main`** (see **[GIT_DIVERGENCE.md](GIT_DIVERGENCE.md)**) before tuning LLM.
 
+**`restart_backend.sh`** picks the first entrypoint that exists: **`faithh_professional_backend_fixed.py`** → **`backend/faithh_enhanced_backend.py`** → **`backend/faithh_backend_adapter.py`**, or **`FAITHH_MAIN`** in **`.env`** (path relative to repo root). For the full v4 stack, **`git pull`** until **`faithh_professional_backend_fixed.py`** is present.
+
 ---
 
 ## 2. Anthropic SDK (`ModuleNotFoundError: anthropic`)

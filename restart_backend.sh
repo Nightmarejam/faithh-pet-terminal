@@ -11,17 +11,6 @@ set -euo pipefail
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$REPO_DIR"
 
-FAITHH_MAIN="${FAITHH_MAIN:-faithh_professional_backend_fixed.py}"
-if [[ ! -f "$REPO_DIR/$FAITHH_MAIN" ]]; then
-  echo "error: missing $REPO_DIR/$FAITHH_MAIN — wrong clone or set FAITHH_MAIN=..." >&2
-  exit 1
-fi
-
-if [[ ! -x "$REPO_DIR/venv/bin/python" ]]; then
-  echo "error: missing $REPO_DIR/venv/bin/python — create venv: python3 -m venv venv && ./venv/bin/pip install -r requirements.txt" >&2
-  exit 1
-fi
-
 ENV_FILE="$REPO_DIR/.env"
 if [[ -f "$ENV_FILE" ]]; then
   echo "📄 Loading $ENV_FILE"
@@ -31,6 +20,32 @@ if [[ -f "$ENV_FILE" ]]; then
   set +a
 else
   echo "   (no .env — copy a template and set CHROMA_*, keys, etc.)"
+fi
+
+# Flask entrypoint (override with FAITHH_MAIN in .env). Slim clones may not have faithh_professional_backend_fixed.py.
+if [[ -z "${FAITHH_MAIN:-}" ]]; then
+  for candidate in \
+      faithh_professional_backend_fixed.py \
+      backend/faithh_enhanced_backend.py \
+      backend/faithh_backend_adapter.py; do
+    if [[ -f "$REPO_DIR/$candidate" ]]; then
+      FAITHH_MAIN=$candidate
+      break
+    fi
+  done
+fi
+if [[ -z "${FAITHH_MAIN:-}" ]] || [[ ! -f "$REPO_DIR/$FAITHH_MAIN" ]]; then
+  echo "error: no Flask entrypoint found — expected one of:" >&2
+  echo "  faithh_professional_backend_fixed.py (full FAITHH)" >&2
+  echo "  backend/faithh_enhanced_backend.py (lighter)" >&2
+  echo "Set FAITHH_MAIN=relative/path/to/file.py in .env or git pull a complete tree." >&2
+  exit 1
+fi
+echo "   Entrypoint: $FAITHH_MAIN"
+
+if [[ ! -x "$REPO_DIR/venv/bin/python" ]]; then
+  echo "error: missing $REPO_DIR/venv/bin/python — create venv: python3 -m venv venv && ./venv/bin/pip install -r requirements.txt" >&2
+  exit 1
 fi
 
 # Default 1 = Ollama-only route lists in backend; 0 = use configs/model_config.yaml order (vLLM / local_webui first).
