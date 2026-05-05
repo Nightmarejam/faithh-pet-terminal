@@ -31,6 +31,13 @@ def main() -> int:
             body = json.load(resp)
     except urllib.error.URLError as e:
         print(f"error: could not reach {args.url}: {e}", file=sys.stderr)
+        if "111" in str(e) or "Connection refused" in str(e):
+            print(
+                "hint: nothing is listening on that host:port — start vLLM first, or use "
+                "a different port (--url http://127.0.0.1:PORT/v1/models). "
+                "Check: ss -tlnp | grep -E ':8000|:8010'",
+                file=sys.stderr,
+            )
         return 2
     except json.JSONDecodeError as e:
         print(f"error: not JSON from {args.url}: {e}", file=sys.stderr)

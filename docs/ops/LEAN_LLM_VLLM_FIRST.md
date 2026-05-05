@@ -57,7 +57,7 @@ Restart the backend (**`./restart_backend.sh`**). Smoke: **`curl -sS http://127.
 
 ## 3. vLLM first (faithh)
 
-1. **Serve vLLM** (e.g. port **8000**). Check: **`curl -sS "http://127.0.0.1:8000/v1/models"`**.
+1. **Serve vLLM** (e.g. port **8000**). Check: **`curl -sS "http://127.0.0.1:8000/v1/models"`**. If you see **Connection refused**, vLLM is not bound there yet — **`ss -tlnp | grep -E ':8000|:8010'`** to see what listens; start vLLM or pass **`--url`** to match your real port (or use the Windows / other host LAN IP if the server runs there).
 2. **`configs/model_config.yaml`:** set **`providers.local_webui.base_url`** to your **`/v1`** URL (often **`http://127.0.0.1:8000/v1`**). Set **`model`** to an **`id`** from that JSON (replace **`REPLACE_WITH_ID_FROM_V1_MODELS`**).
 3. **`~/ai-stack/.env`:** **`FAITHH_FORCE_LOCAL=0`** so YAML routes apply (see note at top).
 4. **`restart_backend.sh`** sources **`.env`** then uses **`: "${FAITHH_FORCE_LOCAL:=1}"`** — a literal **`0`** in **`.env`** is preserved.
