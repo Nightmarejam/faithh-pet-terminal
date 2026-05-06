@@ -84,3 +84,55 @@ Outputs:
 
 - `data/monitoring/latest_status.json` (human-readable state + alerts)
 - `data/monitoring/crypto_stack.prom` (Prometheus text format)
+
+### Paper execution (trader bot)
+
+Run paper-first execution for mined coin -> USDC conversion:
+
+```bash
+python pipeline/trader_execution.py --mode paper --log-level INFO
+```
+
+Outputs:
+
+- `data/trading/paper_balances.json` (virtual balances)
+- `data/trading/paper_orders_YYYYMM.csv` (simulated executed orders)
+- `data/trading/latest_paper_summary.json` (run summary + skipped reasons)
+
+Notes:
+
+- Live mode is intentionally blocked until paper results are validated.
+- Put future Coinbase credentials in `projects/crypto/.env` (see `.env.example`).
+
+### Paper trade journal (learning loop)
+
+Score paper decisions over 1h/6h/24h horizons:
+
+```bash
+python pipeline/paper_trade_journal.py --log-level INFO
+```
+
+Outputs:
+
+- `data/trading/paper_journal_YYYYMM.csv` (decision outcomes by horizon)
+- `data/trading/latest_paper_journal_summary.json` (win-rate and average edge)
+
+### Miner stats in shared data pool
+
+`pipeline/mining_ledger.py` now exports miner context for other pipeline stages:
+
+- `data/pool/latest_miner_stats.json` (latest snapshot)
+- `data/pool/miner_stats_YYYYMMDD.jsonl` (append-only stream)
+
+### Profit candidates (hourly ranking)
+
+Generate ranked mine-now / hold / avoid candidates:
+
+```bash
+python pipeline/profit_candidates.py --log-level INFO
+```
+
+Outputs:
+
+- `data/signals/profit_candidates_YYYYMMDD.json`
+- `data/signals/latest_candidates.json`

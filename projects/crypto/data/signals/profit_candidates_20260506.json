@@ -1,0 +1,67 @@
+{
+  "ranked": [
+    {
+      "coin": "RVN",
+      "coin_id": "ravencoin",
+      "algorithm": "KawPoW",
+      "network_hashrate_hs": 1813307762618.434,
+      "avg_block_time_s": 70.37,
+      "block_reward_coin": 2500.0,
+      "price_usd": 0.00611291,
+      "hashrate_hs": 45000000.0,
+      "power_watts": 320.0,
+      "electricity_cost_kwh": 0.12,
+      "expected_daily_coin": 76.1740757,
+      "expected_daily_usd": 0.46564527,
+      "power_cost_usd": 0.9216,
+      "net_daily_usd": -0.45595473,
+      "action": "avoid"
+    },
+    {
+      "coin": "ERG",
+      "coin_id": "ergo",
+      "algorithm": "Autolykos2",
+      "network_hashrate_hs": 1336119075040.0,
+      "avg_block_time_s": 130.03,
+      "block_reward_coin": 3.0,
+      "price_usd": 0.309742,
+      "hashrate_hs": 200000000.0,
+      "power_watts": 250.0,
+      "electricity_cost_kwh": 0.12,
+      "expected_daily_coin": 0.2983845,
+      "expected_daily_usd": 0.09242221,
+      "power_cost_usd": 0.72,
+      "net_daily_usd": -0.62757779,
+      "action": "avoid"
+    },
+    {
+      "coin": "ETC",
+      "coin_id": "ethereum-classic",
+      "algorithm": "ETChash",
+      "network_hashrate_hs": 189122049588885.0,
+      "avg_block_time_s": 13.46,
+      "block_reward_coin": 2.048,
+      "price_usd": 9.24,
+      "hashrate_hs": 65000000.0,
+      "power_watts": 300.0,
+      "electricity_cost_kwh": 0.12,
+      "expected_daily_coin": 0.00451825,
+      "expected_daily_usd": 0.04174859,
+      "power_cost_usd": 0.864,
+      "net_daily_usd": -0.82225141,
+      "action": "avoid"
+    },
+    {
+      "coin": "VTC",
+      "coin_id": "vertcoin",
+      "algorithm": "Verthash",
+      "action": "unknown",
+      "reason": "missing_stats"
+    }
+  ],
+  "current_miner": "ETC",
+  "switch_recommended": false,
+  "switch_to": null,
+  "switch_threshold_pct": 20.0,
+  "generated_at": "2026-05-06T07:43:52.695229+00:00"
+}
