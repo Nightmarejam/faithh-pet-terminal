@@ -1,0 +1,57 @@
+{
+  "profiles": {
+    "ETC": {
+      "algorithm": "ETChash",
+      "gpu": "RTX3090",
+      "power_limit_w": 220,
+      "expected_hashrate_mhs": 95,
+      "core_offset_mhz": 0,
+      "mem_offset_mhz": 1000,
+      "notes": "conservative start — tune up from here"
+    },
+    "ERG": {
+      "algorithm": "Autolykos2",
+      "gpu": "RTX3090",
+      "power_limit_w": 200,
+      "expected_hashrate_mhs": 185,
+      "core_offset_mhz": 100,
+      "mem_offset_mhz": 500,
+      "notes": "Autolykos is core-heavy, less memory dependent"
+    },
+    "RVN": {
+      "algorithm": "KawPoW",
+      "gpu": "RTX3090",
+      "power_limit_w": 270,
+      "expected_hashrate_mhs": 42,
+      "core_offset_mhz": 150,
+      "mem_offset_mhz": 1000,
+      "notes": "KawPoW needs more core than ETChash"
+    },
+    "ZEC": {
+      "algorithm": "Equihash",
+      "gpu": "RTX3090",
+      "power_limit_w": 250,
+      "expected_hashrate_mhs": 0,
+      "expected_hashrate_sols": 750,
+      "core_offset_mhz": 100,
+      "mem_offset_mhz": 500,
+      "notes": "ZEC uses Sol/s not MH/s"
+    },
+    "VTC": {
+      "algorithm": "Verthash",
+      "gpu": "RTX3090",
+      "power_limit_w": 180,
+      "expected_hashrate_mhs": 1.8,
+      "core_offset_mhz": 0,
+      "mem_offset_mhz": 0,
+      "notes": "low power algo, mostly memory bandwidth"
+    }
+  },
+  "defaults": {
+    "power_limit_w": 250,
+    "efficiency_target_khw": 350,
+    "stale_reject_threshold_pct": 2.0,
+    "effective_reported_ratio_min": 0.88
+  },
+  "tuning_log": []
+}
