@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-05-06T06:49:02.970105+00:00",
+  "mode": "mixed",
+  "services": {
+    "faithh_backend_http_ok": true,
+    "chroma_http_ok": true,
+    "vllm_http_ok": false,
+    "vllm_systemd_active": true,
+    "miner_process_running": true
+  },
+  "pipeline_freshness": {
+    "prices_file": "/home/jonat/ai-stack/projects/crypto/data/prices/prices_20260506.csv",
+    "signals_file": "/home/jonat/ai-stack/projects/crypto/data/signals/latest_signals.json",
+    "latest_fetch_at": "2026-05-06T06:45:02.379799+00:00",
+    "latest_signal_at": "2026-05-05T23:32:01.814640+00:00",
+    "fetch_age_min": 4.009779433333334,
+    "signal_age_min": 437.01919910000004
+  },
+  "mining": {
+    "hashrate_mhs": 107.8,
+    "last_share_ok": "2026-05-06T06:47:42+00:00",
+    "miner_log": "/home/jonat/miners/trex/miner.log"
+  },
+  "raw": {
+    "vllm_state": "active",
+    "miner_process": "27983 bash -c pgrep -af '/home/jonat/miners/trex/t-rex' || true",
+    "gpu_compute_processes": "27790, VLLM::EngineCore, 9964 MiB"
+  },
+  "alerts": [
+    "signals_stale"
+  ],
+  "status": "degraded"
+}
