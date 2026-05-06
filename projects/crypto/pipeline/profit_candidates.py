@@ -18,6 +18,7 @@ LOGGER = logging.getLogger("crypto.profit_candidates")
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "config" / "coins.json"
+POWER_PROFILES_PATH = ROOT / "config" / "power_profiles.json"
 ENV_PATH = ROOT / ".env"
 SIGNALS_DIR = ROOT / "data" / "signals"
 
@@ -70,6 +71,12 @@ def parse_args() -> argparse.Namespace:
 
 def load_config() -> dict[str, Any]:
     return json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+
+
+def load_power_profiles() -> dict[str, Any]:
+    if not POWER_PROFILES_PATH.exists():
+        return {"profiles": {}, "defaults": {}}
+    return json.loads(POWER_PROFILES_PATH.read_text(encoding="utf-8"))
 
 
 def load_env_file(path: Path) -> dict[str, str]:
@@ -149,14 +156,42 @@ def expected_daily_coin_units(
     return (your_hashrate_hs / network_hashrate_hs) * blocks_per_day * block_reward_coin
 
 
+def profile_hashrate_hs(symbol: str, algo: str, profile: dict[str, Any], env: dict[str, str]) -> float:
+    # Equihash profiles may provide Sol/s directly.
+    if algo == "Equihash":
+        mhs = to_float(profile.get("expected_hashrate_mhs"), -1.0)
+        if mhs > 0:
+            return mhs * 1_000_000.0
+        sols = to_float(profile.get("expected_hashrate_sols"), 0.0)
+        if sols > 0:
+            return sols
+        return env_float(env, "HASHRATE_EQUIHASH", ALGO_HASHRATE_DEFAULTS.get("Equihash", 800.0))
+
+    profile_mhs = to_float(profile.get("expected_hashrate_mhs"), -1.0)
+    if profile_mhs > 0:
+        return profile_mhs * 1_000_000.0
+    return env_float(env, f"HASHRATE_{algo.upper()}", ALGO_HASHRATE_DEFAULTS.get(algo, 0.0))
+
+
+def to_float(value: Any, fallback: float = 0.0) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return fallback
+
+
 def rank_candidates(
     config: dict[str, Any],
+    power_profiles: dict[str, Any],
     prices: dict[str, float],
     env: dict[str, str],
     switch_threshold_pct: float,
     current_miner: str,
 ) -> dict[str, Any]:
     electricity_cost = env_float(env, "ELECTRICITY_COST_KWH", 0.12)
+    profiles = power_profiles.get("profiles", {})
+    profile_defaults = power_profiles.get("defaults", {})
+    default_power_w = to_float(profile_defaults.get("power_limit_w"), 250.0)
     ranked: list[dict[str, Any]] = []
 
     for target in config.get("mining_targets", []):
@@ -196,8 +231,9 @@ def rank_candidates(
         network_hashrate_hs = float(node.get("networkhashps") or 0.0)
         avg_block_time_s = float(node.get("avgBlockTime") or 0.0)
         block_reward_coin = env_float(env, f"BLOCK_REWARD_{symbol}", BLOCK_REWARD_DEFAULTS.get(symbol, 0.0))
-        hashrate_hs = env_float(env, f"HASHRATE_{algo.upper()}", ALGO_HASHRATE_DEFAULTS.get(algo, 0.0))
-        power_watts = env_float(env, f"POWER_WATTS_{algo.upper()}", ALGO_POWER_WATTS_DEFAULTS.get(algo, 300.0))
+        coin_profile = profiles.get(symbol, {})
+        hashrate_hs = profile_hashrate_hs(symbol, algo, coin_profile, env)
+        power_watts = to_float(coin_profile.get("power_limit_w"), default_power_w)
 
         daily_coin = expected_daily_coin_units(hashrate_hs, network_hashrate_hs, avg_block_time_s, block_reward_coin)
         gross_usd = daily_coin * price_usd
@@ -221,6 +257,7 @@ def rank_candidates(
                 "price_usd": round(price_usd, 8),
                 "hashrate_hs": round(hashrate_hs, 4),
                 "power_watts": round(power_watts, 4),
+                "profile_used": bool(coin_profile),
                 "electricity_cost_kwh": electricity_cost,
                 "expected_daily_coin": round(daily_coin, 8),
                 "expected_daily_usd": round(gross_usd, 8),
@@ -275,10 +312,12 @@ def main() -> int:
         format="%(asctime)s %(levelname)s %(name)s - %(message)s",
     )
     config = load_config()
+    power_profiles = load_power_profiles()
     env = merged_env()
     prices = load_latest_prices()
     payload = rank_candidates(
         config=config,
+        power_profiles=power_profiles,
         prices=prices,
         env=env,
         switch_threshold_pct=args.switch_threshold_pct,
