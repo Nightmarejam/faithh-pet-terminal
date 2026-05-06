@@ -2,3 +2,11 @@ venv/
 __pycache__/
 *.pyc
 data/prices/*.csv
+.env
+data/mining/*.csv
+data/mining/*.log
+data/trading/*.csv
+data/trading/*.json
+data/trading/*.log
+data/pool/*.json
+data/pool/*.jsonl

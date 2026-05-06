@@ -17,6 +17,7 @@ LOGGER = logging.getLogger("crypto.mining_ledger")
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "config" / "coins.json"
 OUTPUT_DIR = ROOT / "data" / "mining"
+POOL_DIR = ROOT / "data" / "pool"
 TWOMINERS_API = "https://etc.2miners.com/api/accounts/{address}"
 UNITS_PER_ETC = 1_000_000_000
 
@@ -168,6 +169,35 @@ def write_ledger(rows: list[dict]) -> Path:
     return file_path
 
 
+def write_pool_exports(rows: list[dict], pool_data: dict, etc_price_usd: float) -> tuple[Path, Path]:
+    POOL_DIR.mkdir(parents=True, exist_ok=True)
+    now = datetime.now(timezone.utc)
+    payload = {
+        "generated_at_utc": now.isoformat(),
+        "source": "2miners_accounts_api",
+        "coin": "ETC",
+        "etc_price_usd": round(etc_price_usd, 6),
+        "workers": rows,
+        "pool": {
+            "current_hashrate_hs": pool_data.get("currentHashrate"),
+            "average_hashrate_hs": pool_data.get("hashrate"),
+            "workers_online": pool_data.get("workersOnline"),
+            "workers_total": pool_data.get("workersTotal"),
+            "shares_valid": pool_data.get("sharesValid"),
+            "shares_stale": pool_data.get("sharesStale"),
+            "shares_invalid": pool_data.get("sharesInvalid"),
+            "last_share_epoch": pool_data.get("stats", {}).get("lastShare"),
+        },
+    }
+    latest_path = POOL_DIR / "latest_miner_stats.json"
+    latest_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    stream_path = POOL_DIR / f"miner_stats_{now:%Y%m%d}.jsonl"
+    with stream_path.open("a", encoding="utf-8") as fp:
+        fp.write(json.dumps(payload) + "\n")
+    return latest_path, stream_path
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Poll mining stats into a CSV ledger.")
     parser.add_argument("--electricity-cost", type=float, default=0.12)
@@ -193,6 +223,7 @@ def main() -> int:
     etc_price_usd = fetch_etc_price()
     rows = parse_rows(pool_data, etc_price_usd, args.electricity_cost, workers_cfg)
     output_path = write_ledger(rows)
+    latest_pool_path, stream_path = write_pool_exports(rows, pool_data, etc_price_usd)
 
     for row in rows:
         LOGGER.info(
@@ -205,6 +236,7 @@ def main() -> int:
             row["net_daily_usd"],
         )
     LOGGER.info("ledger_written=%s", output_path)
+    LOGGER.info("pool_latest_written=%s pool_stream_appended=%s", latest_pool_path, stream_path)
     return 0
 
 
