@@ -1,0 +1,3 @@
+timestamp,worker,reported_hashrate_mhs,effective_hashrate_mhs,pool_hashrate_mhs,shares_valid,shares_stale,shares_invalid,unpaid_etc,immature_etc,total_pending_etc,usd_per_etc,pending_usd,estimated_daily_etc,estimated_daily_usd,electricity_cost_usd,net_daily_usd
+2026-05-06T06:47:01.736543+00:00,faithh,107.8,106.58,106.58,37,0,0,0.001626185,0.000162263,0.001788448,9.24,0.0165,0.001788448,0.0165,0.72,-0.7035
+2026-05-06T06:50:02.110601+00:00,faithh,107.8,106.58,106.58,38,0,0,0.001626185,0.000162263,0.001788448,9.22,0.0165,0.001788448,0.0165,0.72,-0.7035

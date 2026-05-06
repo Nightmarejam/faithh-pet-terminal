@@ -114,5 +114,24 @@
       "paper_trade_first": true,
       "paper_trade_cycles": 10
     }
+  },
+  "wallet_addresses": {
+    "ETC": "0xF99275b70cB816c76F4E19328dF229483d6Ce8D2",
+    "pool": "2miners",
+    "pool_dashboard": "https://etc.2miners.com/account/0xF99275b70cB816c76F4E19328dF229483d6Ce8D2",
+    "pool_api": "https://etc.2miners.com/api/accounts/0xF99275b70cB816c76F4E19328dF229483d6Ce8D2",
+    "workers": {
+      "faithh-3090": {
+        "gpu": "3090",
+        "host": "faithh VM",
+        "ip": "192.158.1.100"
+      },
+      "faithh-1080ti": {
+        "gpu": "1080ti",
+        "host": "Windows VM 101",
+        "ip": "TBD"
+      }
+    },
+    "miner_software": "T-Rex"
   }
 }
