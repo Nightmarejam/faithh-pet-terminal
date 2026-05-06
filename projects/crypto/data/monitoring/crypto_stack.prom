@@ -1,9 +1,0 @@
-faithh_backend_up 1.0
-chroma_up 1.0
-vllm_up 1.0
-vllm_systemd_active 1.0
-miner_running 1.0
-monitor_alerts_total 1.0
-prices_age_minutes 14.012868099999999
-signals_age_minutes 492.01396065
-miner_hashrate_mhs 107.8
