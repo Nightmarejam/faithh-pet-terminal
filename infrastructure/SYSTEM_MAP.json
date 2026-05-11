@@ -81,7 +81,7 @@
       "hostnames": ["servicebox"],
       "addresses": {
         "tailscale": ["100.79.85.32"],
-        "lan": ["192.158.1.243"]
+        "lan": ["192.158.1.10"]
       },
       "hardware": {
         "cpu": "Intel Xeon E3-1220L V2",
@@ -91,9 +91,9 @@
       "services": ["chromadb-gen8", "pihole", "uptime-kuma"],
       "access": {
         "ssh": "ssh -i ~/.ssh/servicebox_ed25519 jonat@100.79.85.32",
-        "notes": "Primary data services. No GPU available."
+        "notes": "Primary data services. ChromaDB on port 8000. No GPU available."
       },
-      "notes": "Verify OS version and LAN IP if needed."
+      "notes": "ChromaDB accessible from FAITHH VM at 192.158.1.10:8000"
     },
     {
       "id": "synology-nas",
@@ -142,7 +142,7 @@
         "version": "unknown"
       },
       "hostnames": ["DESKTOP-JJ1SUHB"],
-      "notes": "Hosts WSL2 and GPUs. Add Windows-specific workflows and paths."
+      "notes": "Dev workstation with Windsurf/Cursor. No longer hosts WSL2 or GPUs - moved to Proxmox VM."
     },
     {
       "id": "cloud-services",
@@ -268,24 +268,24 @@
   ],
   "connections": [
     {
-      "from_unit": "wsl2-ubuntu",
+      "from_unit": "faithh-vm",
       "to_unit": "gen8-servicebox",
-      "type": "tailscale",
+      "type": "lan",
       "ports": [8000],
-      "description": "FAITHH uses Gen8 ChromaDB"
+      "description": "FAITHH VM uses Gen8 ChromaDB over LAN (192.158.1.10:8000)"
     },
     {
-      "from_unit": "wsl2-ubuntu",
+      "from_unit": "faithh-vm",
       "to_unit": "cloud-services",
       "type": "https",
       "ports": [443],
-      "description": "LLM API calls (Groq/Gemini/Claude)"
+      "description": "LLM API calls (Groq primary, Anthropic/Gemini fallback)"
     },
     {
       "from_unit": "windows-host",
-      "to_unit": "wsl2-ubuntu",
-      "type": "wsl",
-      "description": "Windows host runs WSL2 environment"
+      "to_unit": "faithh-vm",
+      "type": "ssh",
+      "description": "Windows dev workstation connects to FAITHH VM via SSH"
     },
     {
       "from_unit": "udm-gen1",
@@ -295,15 +295,15 @@
     },
     {
       "from_unit": "udm-gen1",
+      "to_unit": "gen8-servicebox",
+      "type": "lan",
+      "description": "Gen8 servicebox connected on LAN behind UDM"
+    },
+    {
+      "from_unit": "udm-gen1",
       "to_unit": "synology-nas",
       "type": "lan",
       "description": "NAS is connected on the LAN behind the UDM"
-    },
-    {
-      "from_unit": "wsl2-ubuntu",
-      "to_unit": "synology-nas",
-      "type": "tailscale",
-      "description": "NAS reachable via Tailscale"
     }
   ]
 }

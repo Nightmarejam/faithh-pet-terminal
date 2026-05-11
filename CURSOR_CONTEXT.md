@@ -80,7 +80,7 @@ Recovery branch: recovery/march14 (keep, useful reference)
 `~/ai-stack/.env` — contains GROQ_API_KEY, CHROMA_*, BACKEND_PORT=5557
 
 ## Key facts — don't re-investigate
-- Inner monologue engine: design concept only, never committed as code
+- Inner monologue engine (IME): WAS committed as C++ code (commit 201523d, March 2026) with journal_reader.cpp, resonance_gate.cpp, tests, and documentation. Removed during P2V backup recovery. Can be restored from git history if needed.
 - All files in ~/ai-stack/backend/ from P2V backup are Ollama/Gemini era (wrong stack)
 - faithh_professional_backend_fixed.py is the ONLY correct entrypoint
 - ChromaDB collections: faithh_knowledge_base (54,342), governance_corpus (18,768)
