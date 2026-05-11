@@ -1,0 +1,57 @@
+{
+  "experiment": "band2_cooperation",
+  "generation": 5,
+  "randomness_source": "oracle_urandom",
+  "population_A": {
+    "agent_count": 30,
+    "ticks": 15,
+    "mean_fitness": 0.9150370176829725,
+    "max_fitness": 1.152215613170422,
+    "cooperation_events": 704,
+    "defection_events": 145,
+    "mean_signal_accuracy": 1.0,
+    "band3_candidates": [],
+    "stable_cooperative_networks": 45,
+    "mutual_benefit_events": 372,
+    "false_cooperation_events": 332,
+    "mutual_benefit_rate": 0.5284090909090909,
+    "false_cooperation_rate": 0.4715909090909091,
+    "mean_net_resource_from_cooperation": 0.9829076844708935,
+    "trust_network_stability": 0.8573469873779471,
+    "mean_band3_score": 1.7530999999999999
+  },
+  "population_B": {
+    "agent_count": 30,
+    "ticks": 15,
+    "mean_fitness": 0.8503554636834478,
+    "max_fitness": 1.0560682713212914,
+    "cooperation_events": 738,
+    "defection_events": 100,
+    "mean_signal_accuracy": 0.9045969080949661,
+    "band3_candidates": [
+      "B_02",
+      "B_14",
+      "B_28"
+    ],
+    "stable_cooperative_networks": 48,
+    "mutual_benefit_events": 391,
+    "false_cooperation_events": 347,
+    "mutual_benefit_rate": 0.5298102981029811,
+    "false_cooperation_rate": 0.470189701897019,
+    "mean_net_resource_from_cooperation": 0.9415850776608378,
+    "trust_network_stability": 0.8774500813164676,
+    "mean_band3_score": 1.7269333333333334
+  },
+  "band3_score_gap": 0.02616666666666645,
+  "hypothesis_check": {
+    "A_higher_mutual_benefit_rate": false,
+    "A_lower_false_cooperation_rate": false,
+    "A_more_band3_candidates": false,
+    "A_higher_trust_stability": false,
+    "A_better_net_resource": true,
+    "A_higher_mean_band3_score": true,
+    "hypothesis_supported": false
+  },
+  "alife_lineage_before": 74250,
+  "alife_lineage_after": 75150
+}

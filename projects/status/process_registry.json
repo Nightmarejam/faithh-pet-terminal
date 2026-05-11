@@ -1,0 +1,830 @@
+{
+  "generated": "2026-04-03",
+  "source_files": {
+    "backend": "faithh_professional_backend_fixed.py",
+    "ui": "faithh_pet_v4.html",
+    "compose": "docker-compose.yml"
+  },
+  "scan_notes": {
+    "backend_log_404s_top": [
+      {
+        "count": 12065,
+        "path": "/api/plc/state",
+        "log": "backend.log"
+      },
+      {
+        "count": 2012,
+        "path": "/api/usage",
+        "log": "backend.log"
+      },
+      {
+        "count": 1,
+        "path": "/api/models",
+        "log": "backend.log"
+      }
+    ],
+    "ss_listen_sample_20260403": "127.0.0.1:11434; 0.0.0.0:11435,11436,3000,9090,8080; *:9100 node_exporter; FAITHH :5557 not in sample",
+    "docker_ps_sample_20260403": "monitoring-grafana:3000, monitoring-prometheus:9090, monitoring-cadvisor:8080, ollama-qwen:11436, ollama-embed:11435, postgres (5432 internal)",
+    "langflow": "compose service defined; not in docker ps sample; curl :7860/health empty",
+    "flask_route_count": 101
+  },
+  "ui_polls": [
+    {
+      "path": "/api/pulse/security/scan",
+      "method": "POST",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/pulse/health/check",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/pulse/health/heal",
+      "method": "POST",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/pulse/audit/summary",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/pulse/audit/recent",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/compass/director",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/focus/health",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/focus/active-concepts",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/focus/pipeline",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/focus/concepts",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/pulse/chips",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/status",
+      "method": "GET",
+      "source": "faithh_pet_v4.html",
+      "notes": "fetch('/api/status') without buildApiUrl"
+    },
+    {
+      "path": "/api/context/collectors/status",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/chat",
+      "method": "POST",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/ml/chips",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/ml/chips/activate",
+      "method": "POST",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/journal",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/journal/generate",
+      "method": "POST",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/journal/view/<date>",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/compass/refresh",
+      "method": "POST",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/constitution/summary",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/constitution/principles",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/compass/log",
+      "method": "POST",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "/api/usage",
+      "method": "GET",
+      "source": "faithh_pet_v4.html",
+      "notes": "stub added 2026-04-03"
+    },
+    {
+      "path": "/api/plc/state",
+      "method": "GET",
+      "source": "faithh_pet_v4.html",
+      "notes": "reads process_registry.json; added 2026-04-03"
+    },
+    {
+      "path": "/api/pulse/state",
+      "method": "GET",
+      "source": "faithh_pet_v4.html"
+    },
+    {
+      "path": "http://localhost:8080/dashboard_data.json",
+      "method": "GET",
+      "source": "faithh_pet_v4.html",
+      "notes": "hardcoded; not FAITHH backend"
+    }
+  ],
+  "ui_poll_drift": [
+    {
+      "path": "http://localhost:8080/dashboard_data.json",
+      "method": "GET",
+      "source": "faithh_pet_v4.html",
+      "notes": "hardcoded; not FAITHH backend",
+      "drift": "external_host"
+    }
+  ],
+  "services": [
+    {
+      "id": "faithh_backend",
+      "name": "FAITHH Backend",
+      "file": "faithh_professional_backend_fixed.py",
+      "port": 5557,
+      "start_cmd": "./restart_backend.sh",
+      "compose_service": null,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/cockpit",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/faithh_live_state.json",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/images/<path:filename>",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/favicon.ico",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/manifest.json",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/sw.js",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/icons/<path:filename>",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/models",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/chat",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/search",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/search/status",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/upload",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/rag_search",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/genomic/impedance-sensor",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/genomic/biasing-analysis",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/genomic/sensor-readings/<organism_id>",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/genomic/analyze-sensors",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/genomic/biasing-patterns",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/compass/director",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/pulse/security/scan",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/health/check",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/pulse/health/heal",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/audit/summary",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/audit/recent",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/status",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/context/collectors",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/collectors/status",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/context/collectors/run",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/context/collectors/status",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/test_integrations",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/ml-learning",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/ui-layout",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/ui-layout",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/cache",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/performance",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/program-advance/stats",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/program-advance/optimization",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/analytics/comprehensive",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/analytics/stats",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/analytics/metrics",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/ux/personalized",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/ux/optimize-response",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/ux/track-interaction",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/ux/analytics",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/health",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/health",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/usage",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/plc/state",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/monitoring/services",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/monitoring/enhanced",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/status",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/proposals",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/pulse/approve",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/pulse/reject",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/chips",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/ml/chips",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/ml/chips/activate",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/ml/chips/resync",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/ml/chips/reload",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/reflection/status",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/reflection/staleness",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/reflection/divergence",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/reflection/branches",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/pulse/reflection/run",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/pulse/state",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/pulse/state/refresh",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/journal",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/journal/generate",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/avatar",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/avatar/generate",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/filesystem",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/filesystem/capabilities",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/compass",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/compass/log",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/metrics",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/metrics",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/compass/status",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/compare",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/journal/view/<date>",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/compass/refresh",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/register",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/login",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/verify",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/refresh",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/logout",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/auth/profile",
+          "status": "registered"
+        },
+        {
+          "method": "PUT",
+          "path": "/api/auth/profile",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/change-password",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/auth/users",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/auth/users/<user_id>/deactivate",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/auth/statistics",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/constitution/summary",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/constitution/evaluate",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/constitution/principles",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/constitution/update-modern-rights",
+          "status": "registered"
+        },
+        {
+          "method": "POST",
+          "path": "/api/focus/capture-concept",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/focus/concepts",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/focus/pipeline",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/focus/health",
+          "status": "registered"
+        },
+        {
+          "method": "GET",
+          "path": "/api/focus/active-concepts",
+          "status": "registered"
+        }
+      ],
+      "polled_by": [
+        "faithh_pet_v4.html"
+      ],
+      "depends_on": [
+        "chromadb",
+        "ollama_primary",
+        "optional_text_generation_webui",
+        "optional_groq"
+      ],
+      "status": "unknown"
+    },
+    {
+      "id": "ollama_primary",
+      "name": "Ollama (primary)",
+      "port": 11434,
+      "compose_service": "ollama",
+      "start_cmd": "docker compose up -d ollama",
+      "health_path": "GET /api/tags",
+      "polled_by": [
+        "faithh_backend"
+      ],
+      "depends_on": [],
+      "status": "live",
+      "notes": "ss: LISTEN 127.0.0.1:11434 (WSL sample)"
+    },
+    {
+      "id": "ollama_embed",
+      "name": "Ollama embed",
+      "port": 11435,
+      "compose_service": "ollama-embed",
+      "container_name": "ollama-embed",
+      "polled_by": [],
+      "depends_on": [],
+      "status": "live"
+    },
+    {
+      "id": "ollama_qwen",
+      "name": "Ollama qwen",
+      "port": 11436,
+      "compose_service": "ollama-qwen",
+      "container_name": "ollama-qwen",
+      "polled_by": [],
+      "depends_on": [],
+      "status": "live"
+    },
+    {
+      "id": "chromadb",
+      "name": "ChromaDB",
+      "port": 8000,
+      "compose_service": "chromadb",
+      "health_path": "GET /api/v2/heartbeat (container)",
+      "polled_by": [
+        "faithh_backend"
+      ],
+      "depends_on": [],
+      "status": "unknown",
+      "notes": "May be remote; not in ss sample"
+    },
+    {
+      "id": "langflow",
+      "name": "Langflow",
+      "port": 7860,
+      "compose_service": "langflow",
+      "polled_by": [],
+      "depends_on": [
+        "postgres",
+        "ollama"
+      ],
+      "status": "stopped_or_absent",
+      "notes": "No FAITHH Python caller; only docker-compose + ML chip text"
+    },
+    {
+      "id": "postgres",
+      "name": "Postgres (Langflow)",
+      "port": 5432,
+      "compose_service": "postgres",
+      "polled_by": [
+        "langflow"
+      ],
+      "depends_on": [],
+      "status": "live"
+    },
+    {
+      "id": "monitoring_grafana",
+      "name": "Grafana",
+      "port": 3000,
+      "container_name": "monitoring-grafana",
+      "polled_by": [],
+      "status": "live"
+    },
+    {
+      "id": "monitoring_prometheus",
+      "name": "Prometheus",
+      "port": 9090,
+      "container_name": "monitoring-prometheus",
+      "polled_by": [],
+      "status": "live"
+    },
+    {
+      "id": "monitoring_cadvisor",
+      "name": "cAdvisor",
+      "port": 8080,
+      "container_name": "monitoring-cadvisor",
+      "polled_by": [],
+      "status": "live"
+    },
+    {
+      "id": "node_exporter",
+      "name": "node_exporter",
+      "port": 9100,
+      "polled_by": [
+        "prometheus"
+      ],
+      "status": "live"
+    },
+    {
+      "id": "text_generation_webui",
+      "name": "text-generation-webui",
+      "port": 7001,
+      "polled_by": [
+        "faithh_backend_llm_routing"
+      ],
+      "status": "unknown"
+    },
+    {
+      "id": "fail2ban_exporter",
+      "name": "fail2ban exporter",
+      "port": 9635,
+      "polled_by": [
+        "prometheus"
+      ],
+      "status": "unknown"
+    }
+  ]
+}

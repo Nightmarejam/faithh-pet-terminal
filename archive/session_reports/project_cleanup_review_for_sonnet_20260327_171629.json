@@ -1,0 +1,306 @@
+{
+  "review_type": "Project Cleanup and Architecture Review",
+  "timestamp": "2026-03-27T17:16:29.834769",
+  "prepared_for": "Sonnet Scientific Review Board",
+  "urgency": "HIGH - Architecture Confusion Blocking Progress",
+  "critical_issues": {
+    "backend_proliferation": {
+      "problem": "51 backend files causing confusion and redundancy",
+      "impact": "Development paralysis, unclear which backend to use",
+      "backend_files": [
+        {
+          "name": "faithh_backend_v2_logging.py",
+          "size": 9978,
+          "modified": "2026-03-27T13:35:04.302348"
+        },
+        {
+          "name": "faithh_backend_cosmic.py",
+          "size": 18568,
+          "modified": "2026-03-27T15:35:52.540385"
+        },
+        {
+          "name": "minimal_backend_stage1.py",
+          "size": 2874,
+          "modified": "2026-03-27T13:04:30.269941"
+        },
+        {
+          "name": "test_backend_working.py",
+          "size": 809,
+          "modified": "2026-03-27T13:10:22.020050"
+        },
+        {
+          "name": "faithh_backend_phase3b.py",
+          "size": 26148,
+          "modified": "2026-03-27T15:08:58.884873"
+        },
+        {
+          "name": "faithh_backend_v2.py",
+          "size": 6744,
+          "modified": "2026-03-27T13:16:52.604513"
+        },
+        {
+          "name": "faithh_backend_v2_complete.py",
+          "size": 6793,
+          "modified": "2026-03-27T13:23:00.648252"
+        },
+        {
+          "name": "faithh_professional_backend.py",
+          "size": 321,
+          "modified": "2026-01-07T02:19:47.276418"
+        },
+        {
+          "name": "faithh_backend_v2_success.py",
+          "size": 6765,
+          "modified": "2026-03-27T13:20:51.903282"
+        },
+        {
+          "name": "faithh_backend_v2_final.py",
+          "size": 6775,
+          "modified": "2026-03-27T13:21:42.438681"
+        },
+        {
+          "name": "faithh_backend_standing_wave.py",
+          "size": 18709,
+          "modified": "2026-03-27T14:42:23.918658"
+        },
+        {
+          "name": "faithh_backend_v2_stable.py",
+          "size": 6772,
+          "modified": "2026-03-27T13:20:13.714053"
+        },
+        {
+          "name": "test_backend_v2.py",
+          "size": 4992,
+          "modified": "2026-03-27T13:17:01.374328"
+        },
+        {
+          "name": "minimal_backend_stage2.py",
+          "size": 4575,
+          "modified": "2026-03-27T13:07:12.297888"
+        },
+        {
+          "name": "minimal_backend_stage3.py",
+          "size": 8103,
+          "modified": "2026-03-27T13:09:04.211210"
+        },
+        {
+          "name": "faithh_backend_v2_clean.py",
+          "size": 6772,
+          "modified": "2026-03-27T13:22:29.604111"
+        },
+        {
+          "name": "faithh_backend_v2_logging_fixed.py",
+          "size": 9996,
+          "modified": "2026-03-27T13:35:36.336060"
+        },
+        {
+          "name": "faithh_professional_backend_fixed.py",
+          "size": 157814,
+          "modified": "2026-03-27T12:55:24.021611"
+        },
+        {
+          "name": "faithh_backend_alife_fixed.py",
+          "size": 15712,
+          "modified": "2026-03-27T14:30:49.230123"
+        },
+        {
+          "name": "faithh_backend_final.py",
+          "size": 15725,
+          "modified": "2026-03-27T14:31:39.532287"
+        },
+        {
+          "name": "faithh_backend_optimized.py",
+          "size": 26066,
+          "modified": "2026-03-27T16:24:50.804010"
+        },
+        {
+          "name": "faithh_backend_moon_damping.py",
+          "size": 20206,
+          "modified": "2026-03-27T14:52:01.718274"
+        },
+        {
+          "name": "faithh_backend_v2_working.py",
+          "size": 6761,
+          "modified": "2026-03-27T13:19:40.377964"
+        },
+        {
+          "name": "faithh_backend.py",
+          "size": 12525,
+          "modified": "2026-03-27T14:26:59.557613"
+        },
+        {
+          "name": "faithh_backend_with_alife.py",
+          "size": 15023,
+          "modified": "2026-03-27T14:29:34.936497"
+        },
+        {
+          "name": "faithh_backend_parasitic.py",
+          "size": 23370,
+          "modified": "2026-03-27T15:04:32.067142"
+        },
+        {
+          "name": "faithh_backend_universal.py",
+          "size": 19297,
+          "modified": "2026-03-27T15:40:29.152267"
+        }
+      ],
+      "canonical_backend": "faithh_professional_backend_fixed.py (per SYSTEM_FINGERPRINT.md)",
+      "genomic_backend": "faithh_backend_optimized.py",
+      "current_running": "faithh_professional_backend_fixed.py (no genomic endpoints)"
+    },
+    "documentation_drift": {
+      "problem": "Top-level documents not updated with recent changes",
+      "impact": "New sessions can't understand current state",
+      "critical_docs": [
+        "SYSTEM_FINGERPRINT.md",
+        "AGENTS.md",
+        "CONTEXT.md",
+        "README.md"
+      ]
+    },
+    "experiment_isolation": {
+      "problem": "Genomic experiments completed but backend endpoints missing",
+      "impact": "190 organisms tested but can't continue experiments",
+      "experiments_completed": [
+        "Phase 1: Large-Scale Genomic Testing (100 organisms)",
+        "Phase 2: Environmental Adaptation (50 organisms)",
+        "Phase 3: Multi-Generational Evolution (40 organisms, 5 generations)"
+      ]
+    }
+  },
+  "project_structure_analysis": {
+    "root_level_clutter": {
+      "problem": "Too many files at project root",
+      "files_at_root": 217,
+      "recommended_max": 20,
+      "actual_count": 217
+    },
+    "archive_organization": {
+      "problem": "Inconsistent archiving of old files",
+      "archive_locations": [
+        "archive/",
+        "archive/legacy/",
+        "docs/archive/"
+      ],
+      "needs_consolidation": true
+    },
+    "experiment_organization": {
+      "problem": "Experiments scattered, no dedicated structure",
+      "current_locations": [
+        "experiments/",
+        "scripts/",
+        "root level"
+      ],
+      "recommended": "experiments/ with proper substructure"
+    }
+  },
+  "immediate_needs": {
+    "backend_consolidation": {
+      "priority": 1,
+      "action": "Consolidate genomic endpoints into canonical backend",
+      "target": "faithh_professional_backend_fixed.py",
+      "backup": "Archive all other backend variants"
+    },
+    "documentation_update": {
+      "priority": 2,
+      "action": "Update all top-level documentation",
+      "documents": [
+        "SYSTEM_FINGERPRINT.md - Update backend architecture",
+        "AGENTS.md - Add cleanup protocols",
+        "CONTEXT.md - Regenerate with current state",
+        "README.md - Update project overview"
+      ]
+    },
+    "file_organization": {
+      "priority": 3,
+      "action": "Implement consistent file organization",
+      "structure": {
+        "root_level": "Only essential files",
+        "experiments/": "All experimental code",
+        "archive/": "Consolidated archive",
+        "docs/": "Living documentation"
+      }
+    }
+  },
+  "proposed_cleanup_protocol": {
+    "name": "FAITHH Project Maintenance Protocol",
+    "frequency": "Monthly major cleanup, weekly minor maintenance",
+    "components": [
+      {
+        "component": "Backend Architecture Review",
+        "frequency": "Monthly",
+        "checks": [
+          "Verify single canonical backend",
+          "Archive experimental variants",
+          "Update SYSTEM_FINGERPRINT.md"
+        ]
+      },
+      {
+        "component": "Documentation Synchronization",
+        "frequency": "Weekly",
+        "checks": [
+          "Regenerate CONTEXT.md",
+          "Update project_states.json",
+          "Review decisions_log.json"
+        ]
+      },
+      {
+        "component": "File Organization Audit",
+        "frequency": "Monthly",
+        "checks": [
+          "Archive legacy files",
+          "Organize experiments/",
+          "Clean root directory"
+        ]
+      }
+    ]
+  },
+  "sonnet_guidance_requested": {
+    "backend_strategy": {
+      "question": "Should we consolidate all features into single canonical backend or maintain feature-specific backends?",
+      "context": "SYSTEM_FINGERPRINT.md specifies faithh_professional_backend_fixed.py as canonical, but genomic endpoints are in faithh_backend_optimized.py"
+    },
+    "cleanup_priorities": {
+      "question": "What should be the priority order for cleanup tasks?",
+      "options": [
+        "Backend consolidation first",
+        "Documentation update first",
+        "File organization first",
+        "Parallel approach"
+      ]
+    },
+    "maintenance_protocol": {
+      "question": "Is the proposed maintenance protocol appropriate or should it be modified?",
+      "suggestions": "Request improvements to frequency, scope, or automation"
+    },
+    "project_structure": {
+      "question": "What is the ideal long-term project structure for FAITHH?",
+      "considerations": [
+        "Scalability for new features",
+        "Clarity for new AI sessions",
+        "Maintenance burden",
+        "Documentation accessibility"
+      ]
+    }
+  },
+  "success_metrics": {
+    "cleanup_complete": {
+      "backend_files": "Reduce from 51 to 1 canonical + archived variants",
+      "root_files": "Reduce to < 20 essential files",
+      "documentation": "All top-level docs updated and synchronized",
+      "experiments": "All experiments working with canonical backend"
+    },
+    "protocol_working": {
+      "monthly_cleanup": "Automated cleanup script running",
+      "documentation_sync": "CONTEXT.md auto-updated weekly",
+      "backend_health": "Single backend verified monthly"
+    }
+  },
+  "next_steps_after_sonnet_review": [
+    "Execute backend consolidation based on Sonnet's guidance",
+    "Implement cleanup protocol with automation scripts",
+    "Update all top-level documentation",
+    "Test consolidated system with genomic experiments",
+    "Archive legacy files according to new protocol"
+  ]
+}

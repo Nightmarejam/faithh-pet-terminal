@@ -2,10 +2,9 @@ flask>=2.3.0
 flask-cors>=4.0.0
 flask-sock>=0.6.0
 google-generativeai>=0.3.0
-# Claude / Messages API (faithh backend + backend/llm_providers)
-anthropic>=0.25.0
 pyyaml>=6.0
 requests>=2.31.0
+prometheus-client>=0.20.0
 
 # RAG Dependencies
 chromadb>=0.4.0
@@ -16,6 +15,8 @@ streamlit>=1.28.0
 
 # Additional utilities
 python-dotenv>=1.0.0
+psutil>=5.9.0
+rich>=13.0.0
 
 # Test Dependencies
 pytest>=7.0.0

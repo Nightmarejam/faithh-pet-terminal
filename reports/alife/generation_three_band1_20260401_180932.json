@@ -1,0 +1,95 @@
+{
+  "experiment": "generation_three",
+  "generation": 3,
+  "population": "A",
+  "parameters": {
+    "agents": 50,
+    "ticks": 10,
+    "starting_resources": 3.0,
+    "acquisition": "0.3-1.2",
+    "loss": "0.5-1.5",
+    "option": "A_B_combined"
+  },
+  "timestamp": "2026-04-01T18:09:32.002474",
+  "fitness_summary": {
+    "mean": 6.818,
+    "max": 8.968,
+    "min": 4.458,
+    "stdev": 1.021,
+    "top_10pct_threshold": 8.303
+  },
+  "survival": {
+    "agents_with_any_depletion": 15,
+    "agents_fully_survived": 35,
+    "total_depletion_events": 45,
+    "avg_depleted_ticks": 0.9
+  },
+  "band2_candidates": 35,
+  "top_5_agents": [
+    {
+      "id": "gen3_agent_009",
+      "fitness": 8.968,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen3_agent_015",
+      "fitness": 8.536,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen3_agent_039",
+      "fitness": 8.527,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen3_agent_007",
+      "fitness": 8.319,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen3_agent_022",
+      "fitness": 8.303,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    }
+  ],
+  "bottom_5_agents": [
+    {
+      "id": "gen3_agent_020",
+      "fitness": 5.504,
+      "survival_ticks": 7,
+      "depleted_ticks": 3
+    },
+    {
+      "id": "gen3_agent_012",
+      "fitness": 5.165,
+      "survival_ticks": 6,
+      "depleted_ticks": 4
+    },
+    {
+      "id": "gen3_agent_017",
+      "fitness": 4.925,
+      "survival_ticks": 7,
+      "depleted_ticks": 3
+    },
+    {
+      "id": "gen3_agent_016",
+      "fitness": 4.82,
+      "survival_ticks": 5,
+      "depleted_ticks": 5
+    },
+    {
+      "id": "gen3_agent_034",
+      "fitness": 4.458,
+      "survival_ticks": 8,
+      "depleted_ticks": 2
+    }
+  ],
+  "chroma_documents_written": 500,
+  "alife_lineage_count_before": 51950,
+  "alife_lineage_count_after": 52450
+}

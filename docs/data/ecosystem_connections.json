@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-04-08",
+  "description": "Operational edges (transport + probe + contract pointer). Complements logical depends_on in projects/status/component_map.json.",
+  "connections": [
+    {
+      "id": "conn_faithh_client_http",
+      "from_component": "faithh_pet_v4",
+      "to_component": "api_chat",
+      "transport": "http",
+      "base_url": "http://127.0.0.1:5557",
+      "health_probe": "GET /api/plc/state",
+      "contract_ref": "docs/architecture/BACKEND_API.md; faithh_status in PLC JSON"
+    },
+    {
+      "id": "conn_backend_chromadb",
+      "from_component": "faithh_backend",
+      "to_component": "chromadb",
+      "transport": "http",
+      "base_url": "http://192.158.1.243:8000",
+      "health_probe": "GET /api/v2/heartbeat",
+      "contract_ref": "backend/connection_monitor.py ServiceHealth chromadb; Chroma v2 API"
+    },
+    {
+      "id": "conn_backend_ollama",
+      "from_component": "faithh_backend",
+      "to_component": "ollama",
+      "transport": "http",
+      "base_url": "http://127.0.0.1:11434",
+      "health_probe": "GET /api/tags",
+      "contract_ref": "backend/connection_monitor.py; configs/model_config.yaml providers.ollama"
+    },
+    {
+      "id": "conn_backend_groq",
+      "from_component": "faithh_backend",
+      "to_component": "groq_api",
+      "transport": "https",
+      "base_url": "https://api.groq.com/openai/v1",
+      "health_probe": "GET /v1/models (Bearer GROQ_API_KEY)",
+      "contract_ref": "backend/llm_providers.py call_groq_chat"
+    },
+    {
+      "id": "conn_backend_gemini",
+      "from_component": "faithh_backend",
+      "to_component": "google_generative_language",
+      "transport": "https",
+      "base_url": "https://generativelanguage.googleapis.com/v1",
+      "health_probe": "GET /v1/models",
+      "contract_ref": "backend/connection_monitor.py gemini entry"
+    },
+    {
+      "id": "conn_health_aggregate",
+      "from_component": "api_health",
+      "to_component": "connection_monitor",
+      "transport": "in_process",
+      "base_url": null,
+      "health_probe": "GET /api/health",
+      "contract_ref": "faithh_professional_backend_fixed.py enhanced_health"
+    },
+    {
+      "id": "conn_probe_plc",
+      "from_component": "scripts/ecosystem_baseline_probe.py",
+      "to_component": "api_plc_state",
+      "transport": "http",
+      "base_url": "configurable --base-url",
+      "health_probe": "GET /api/plc/state",
+      "contract_ref": "docs/architecture/ECOSYSTEM_METRICS.md"
+    }
+  ]
+}

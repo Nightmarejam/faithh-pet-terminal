@@ -1,0 +1,41 @@
+ {backend => archive/backend_unused}/advanced_analytics.py                                       |      0
+ {backend => archive/backend_unused}/faithh_backend_adapter.py                                   |      0
+ {backend => archive/backend_unused}/faithh_backend_v4_template.py                               |      0
+ {backend => archive/backend_unused}/faithh_enhanced_backend.py                                  |      0
+ {backend => archive/backend_unused}/faithh_unified_api.py                                       |      0
+ archive/backend_unused/plc_state_manager.py                                                     |    313 [32m+[m
+ archive/windsurf_artifacts/collect_constella_data.py                                            |    699 [32m+[m
+ archive/windsurf_artifacts/comprehensive_project_analysis_execution.py                          |    672 [32m+[m
+ archive/windsurf_artifacts/constella_ai_integration.py                                          |    446 [32m+[m
+ archive/windsurf_artifacts/enhanced_service_monitor.py                                          |    368 [32m+[m
+ archive/windsurf_artifacts/merge_anthropic_chips.py                                             |     69 [32m+[m
+ archive/windsurf_artifacts/minimal_flask_app.py                                                 |     30 [32m+[m
+ archive/windsurf_artifacts/monitor_knowledge_base.py                                            |    378 [32m+[m
+ archive/windsurf_artifacts/monitor_response_quality.py                                          |    462 [32m+[m
+ archive/windsurf_artifacts/present_to_sonnet_for_review.py                                      |    274 [32m+[m
+ archive/windsurf_artifacts/project_cleanup_review_for_sonnet.py                                 |    296 [32m+[m
+ archive/windsurf_artifacts/robust_command_executor.py                                           |    209 [32m+[m
+ run_phase2_experiments.py => archive/windsurf_artifacts/run_phase2_experiments.py               |      0
+ archive/windsurf_artifacts/send_ui_genomic_plan_to_sonnet.py                                    |    269 [32m+[m
+ exp3_final.log                                                                                  |    189 [31m-[m
+ exp3_intent_final.log                                                                           | 129496 [31m------------------------------------------------[m
+ exp3_overnight.log                                                                              |    106 [31m-[m
+ exp3_quick_check.log                                                                            |     78 [31m-[m
+ exp3_run7_output.log                                                                            |     60 [31m-[m
+ exp3_stealth.log                                                                                |     62 [31m-[m
+ exp3_stealth_final.log                                                                          |  58229 [31m----------------------[m
+ faithh_backend.py                                                                               |    302 [31m-[m
+ faithh_professional_backend.py                                                                  |      9 [31m-[m
+ projects/alife/experiments/{ => archive}/exp5_poison.py                                         |      0
+ projects/alife/experiments/{ => archive}/exp6_cognitive.py                                      |      0
+ projects/alife/experiments/{ => archive}/exp7_social_cognition.py                               |      0
+ projects/alife/{ => experiments/archive}/exp7_social_cognition_results.json                     |      0
+ projects/alife/experiments/{ => archive}/exp8_cultural_transmission_fixed.py                    |      0
+ projects/alife/experiments/{ => archive}/exp8_protocol_evolution.py                             |      0
+ projects/alife/experiments/{ => archive}/exp8_simple_transmission.py                            |      0
+ projects/alife/experiments/{ => archive}/exp9_complex_cultural_evolution.py                     |      0
+ projects/alife/{results => experiments/archive}/experiment_8/analysis_report.md                 |      0
+ projects/alife/{results => experiments/archive}/experiment_8/cultural_transmission_results.json |      0
+ projects/alife/{results => experiments/archive}/experiment_9/analysis_report.md                 |      0
+ projects/alife/{results => experiments/archive}/experiment_9/complex_evolution_results.json     |      0
+ 40 files changed, 4485 insertions(+), 188531 deletions(-)

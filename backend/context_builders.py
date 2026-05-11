@@ -13,13 +13,124 @@ from backend.data_loaders import (
 )
 
 
+
+def get_project_summary_context():
+    """Integrate project summaries into context"""
+    summaries_dir = Path("docs/project_summaries")
+    context_parts = []
+    
+    if summaries_dir.exists():
+        # Load the index to see what summaries are available
+        index_file = summaries_dir / "index.md"
+        if index_file.exists():
+            context_parts.append("[CTX:PROJECT SUMMARIES AVAILABLE]")
+            context_parts.append("Generated comprehensive project summaries:")
+            
+            # List available summaries
+            try:
+                with open(index_file, 'r') as f:
+                    index_content = f.read()
+                    # Extract the list of summaries
+                    lines = index_content.split('\n')
+                    in_summaries_section = False
+                    for line in lines:
+                        if "## Available Project Summaries" in line:
+                            in_summaries_section = True
+                            continue
+                        elif in_summaries_section and line.startswith("##"):
+                            break
+                        elif in_summaries_section and line.startswith("- ["):
+                            # Extract summary title
+                            title = line.split("](")[0].replace("- [", "")
+                            context_parts.append(f"- {title}")
+                
+                context_parts.append("\nThese summaries contain current project states, recent decisions, and next steps.")
+                context_parts.append("[CTX_END]")
+            except Exception as e:
+                context_parts.append(f"Error reading project summaries: {e}")
+    
+    return "\n".join(context_parts)
+
+
+def get_recent_achievements_context():
+    """Extract recent achievements from memory"""
+    memory = load_memory()
+    context_parts = []
+    
+    if 'recent_achievements' in memory:
+        achievements = memory['recent_achievements']
+        context_parts.append("[CTX:RECENT ACHIEVEMENTS (Phase 4.5)]")
+        
+        for achievement_name, achievement_data in achievements.items():
+            date = achievement_data.get('date', 'Unknown date')
+            title = achievement_data.get('achievement', 'Untitled achievement')
+            impact = achievement_data.get('impact', 'Impact not specified')
+            
+            context_parts.append(f"\n{title} ({date}):")
+            context_parts.append(f"- Impact: {impact}")
+            
+            details = achievement_data.get('details', '')
+            if details:
+                context_parts.append(f"- Details: {details}")
+        
+        context_parts.append("\n[CTX_END]")
+    
+    return "\n".join(context_parts)
+
+
+def get_project_state_awareness():
+    """Enhanced project state awareness with recent context"""
+    project_states = load_project_states()
+    memory = load_memory()
+    context_parts = []
+    
+    context_parts.append("[CTX:PROJECT STATE AWARENESS]")
+    
+    # Add recent achievements first
+    if 'recent_achievements' in memory:
+        context_parts.append("Recent system achievements:")
+        for achievement_name, achievement_data in memory['recent_achievements'].items():
+            title = achievement_data.get('achievement', 'Untitled')
+            context_parts.append(f"- {title}")
+    
+    # Add current project states
+    if 'strategic_plan' in project_states:
+        plan = project_states['strategic_plan']
+        context_parts.append(f"\nCurrent Phase: {plan.get('current_quarter', 'Unknown')} - {plan.get('quarterly_theme', 'No theme')}")
+        
+        # Add domain status
+        domains = plan.get('domains', {})
+        if domains:
+            context_parts.append("\nDomain Status:")
+            for domain_name, domain_data in domains.items():
+                status = domain_data.get('current_status', 'Unknown status')
+                context_parts.append(f"- {domain_name.title()}: {status}")
+    
+    # Add project integration info
+    if 'project_integration' in memory:
+        integration = memory['project_integration']
+        summaries = integration.get('available_summaries', [])
+        if summaries:
+            context_parts.append(f"\nAvailable Project Summaries ({len(summaries)}):")
+            for summary in summaries[:3]:  # Show first 3
+                context_parts.append(f"- {summary}")
+            if len(summaries) > 3:
+                context_parts.append(f"- ... and {len(summaries) - 3} more")
+    
+    context_parts.append("\n[CTX_END]")
+    
+    return "\n".join(context_parts)
+
+
+
 def get_self_awareness_context():
+    # Logic for Humans: Pull the “who is FAITHH” block out of faithh_memory.json and format it for the system prompt.
     """Extract self-awareness section from memory"""
     memory = load_memory()
     if 'self_awareness' in memory:
         sa = memory['self_awareness']
         context = f"""
-=== FAITHH SELF-AWARENESS ===
+[CTX:FAITHH SELF-AWARENESS]
 Identity: {sa.get('identity', 'FAITHH')}
 Purpose: {sa.get('purpose', 'AI assistant')}
 What I am: {sa.get('what_i_am', '')}
@@ -27,19 +138,20 @@ What I am NOT: {sa.get('what_i_am_not', '')}
 Hero workflow: {sa.get('hero_workflow', '')}
 Current capability: {sa.get('current_capability', '')}
 Target capability: {sa.get('target_capability', '')}
-==============================
+[CTX_END]
 """
         return context.strip()
     return None
 
 
 def get_constella_awareness_context():
+    # Logic for Humans: Pull the Constella framework summary from memory (tokens, governance pieces, status).
     """Extract Constella awareness section from memory"""
     memory = load_memory()
     if 'constella_awareness' in memory:
         ca = memory['constella_awareness']
         context = f"""
-=== CONSTELLA FRAMEWORK AWARENESS ===
+[CTX:CONSTELLA FRAMEWORK AWARENESS]
 What it is: {ca.get('what_it_is', '')}
 What it is NOT: {ca.get('what_it_is_NOT', '')}
 Core philosophy: {ca.get('core_philosophy', '')}
@@ -60,13 +172,53 @@ Connection to FAITHH: {ca.get('connection_to_faithh', '')}
 Current Status: {ca.get('current_status', '')}
 
 CRITICAL: {ca.get('when_asked_about_constella', '')}
-======================================
+[CTX_END]
 """
         return context.strip()
     return None
 
 
+def get_constella_enhanced_context(query_text, base_context):
+    # Logic for Humans: If the question mentions Constella/governance keywords, append the Constella awareness block to whatever context we already built.
+    """
+    Append Constella awareness context when the query is governance/Constella-related.
+    This is intentionally conservative to avoid inflating context on unrelated queries.
+    """
+    context = base_context or ""
+    constella_context = get_constella_awareness_context()
+    if not constella_context:
+        return context
+
+    query_lower = (query_text or "").lower()
+    constella_keywords = (
+        "constella", "ucf", "penumbra", "civic tome", "astris", "auctor",
+        "governance", "constitutional", "founding diversity", "strategy escape",
+        "alife", "diversity floor"
+    )
+    is_constella_query = any(keyword in query_lower for keyword in constella_keywords)
+    if not is_constella_query:
+        return context
+
+    if "[CTX:CONSTELLA FRAMEWORK AWARENESS]" in context:
+        return context
+
+    if context:
+        return f"{context}\n\n{constella_context}"
+    return constella_context
+
+
+def enhance_response_with_constella(query_text, response_text):
+    # Logic for Humans: Legacy no-op hook reserved for post-processing answers (currently returns text unchanged).
+    """
+    Compatibility hook for legacy backend calls.
+    Keep behavior as a pass-through unless explicit post-processing is needed.
+    """
+    _ = query_text
+    return response_text
+
+
 def search_decisions_log(query_text):
+    # Logic for Humans: Scan decisions_log.json for entries whose text overlaps the user question and format them for the prompt.
     """Search decisions log for relevant decisions"""
     decisions = load_decisions()
     if not decisions or 'decisions' not in decisions:
@@ -83,7 +235,7 @@ def search_decisions_log(query_text):
     if not relevant_decisions:
         return None
     
-    context = "\n=== RELEVANT DECISIONS ===\n"
+    context = "\n[CTX:RELEVANT DECISIONS]\n"
     for dec in relevant_decisions[:3]:
         context += f"\nDecision: {dec.get('decision', '')}\n"
         context += f"Date: {dec.get('date', '')}\n"
@@ -94,12 +246,13 @@ def search_decisions_log(query_text):
                 context += f"  - {alt.get('option', '')}: Rejected because {alt.get('rejected_because', '')}\n"
         context += f"Impact: {dec.get('impact', '')}\n"
         context += "---\n"
-    context += "=========================\n"
+    context += "[CTX_END]\n"
     
     return context.strip()
 
 
 def get_project_state_context(project_name=None):
+    # Logic for Humans: Render project_states.json as human-readable status — one project if named, otherwise an overview of all projects.
     """Get current state for a project or all projects"""
     states = load_project_states()
     if not states or 'projects' not in states:
@@ -118,7 +271,7 @@ def get_project_state_context(project_name=None):
         project = find_project(project_name)
         if project:
             context = f"""
-=== {project.get('name', project_name)} STATE ===
+[CTX:{project.get('name', project_name)} STATE]
 Phase: {project.get('phase', 'Unknown')}
 Status: {project.get('phase_status', project.get('status', 'Unknown'))}
 Summary: {project.get('summary', '')}
@@ -134,12 +287,12 @@ Next Steps:
                 for item in recent[:3]:
                     context += f"  - {item}\n"
             
-            context += "================================\n"
+            context += "[CTX_END]\n"
             return context.strip()
     
     # Return overview of all projects
     last_updated = states.get('last_updated', 'unknown')
-    context = f"\n=== ALL PROJECTS OVERVIEW (as of {last_updated}) ===\n"
+    context = f"\n[CTX:ALL PROJECTS OVERVIEW as of {last_updated}]\n"
     for proj_key, project in projects.items():
         context += f"\n{project.get('name', proj_key)}:\n"
         context += f"  Phase: {project.get('phase', 'Unknown')}\n"
@@ -147,12 +300,13 @@ Next Steps:
         next_steps = project.get('next_steps', [])
         if next_steps:
             context += f"  Top priority: {next_steps[0]}\n"
-    context += "============================\n"
+    context += "[CTX_END]\n"
     
     return context.strip()
 
 
 def get_scaffolding_context(query_text=None):
+    # Logic for Humans: Turn scaffolding_state.json into a “you are here in the work” narrative (active context, recent completions, open loops).
     """
     Build orientation context from scaffolding state.
     This is the "You are HERE" function for persistent structural awareness.
@@ -166,37 +320,37 @@ def get_scaffolding_context(query_text=None):
     active = scaffolding.get('active_context', {})
     if active:
         context_parts.append(f"""
-=== CURRENT STRUCTURAL POSITION ===
+[CTX:CURRENT STRUCTURAL POSITION]
 Project: {active.get('primary_project', 'Unknown').upper()}
 Position: {active.get('structural_position', 'Unknown')}
 Goal: {active.get('phase_goal', 'Not defined')}
 
 Summary: {active.get('position_summary', '')}
-===================================""")
+[CTX_END]""")
     
     completions = scaffolding.get('recent_completions', [])
     if completions:
         latest = completions[0]
         context_parts.append(f"""
-=== RECENTLY COMPLETED ===
+[CTX:RECENTLY COMPLETED]
 What: {latest.get('what', '')}
 When: {latest.get('when', '')}
 Significance: {latest.get('structural_significance', '')}
 What remains: {latest.get('what_remains', '')}
 Permission: {latest.get('permission', '')}
-===========================""")
+[CTX_END]""")
     
     open_loops = scaffolding.get('open_loops', [])
     active_loops = [l for l in open_loops if l.get('status') != 'completed']
     if active_loops:
-        context_parts.append("\n=== OPEN LOOPS ===")
+        context_parts.append("\n[CTX:OPEN LOOPS]")
         for loop in active_loops[:3]:
             context_parts.append(f"• {loop.get('item', '')}")
             context_parts.append(f"  Why structural: {loop.get('why_structural', '')}")
             context_parts.append(f"  Status: {loop.get('status', 'unknown')}")
             if loop.get('suggested_action'):
                 context_parts.append(f"  Suggested: {loop.get('suggested_action', '')}")
-        context_parts.append("==================")
+        context_parts.append("[CTX_END]")
     
     tangents = scaffolding.get('parked_tangents', [])
     if tangents and query_text:
@@ -205,13 +359,13 @@ Permission: {latest.get('permission', '')}
             tangent_words = [w for w in tangent.get('idea', '').lower().split() if len(w) > 4]
             if any(word in query_lower for word in tangent_words):
                 context_parts.append(f"""
-=== PARKED TANGENT DETECTED ===
+[CTX:PARKED TANGENT DETECTED]
 You previously parked: "{tangent.get('idea', '')}"
 Why parked: {tangent.get('why_parked', '')}
 Revisit when: {tangent.get('revisit_when', '')}
 
 This is noted but not your current structural priority. Consider if this is important right now or should stay parked.
-================================""")
+[CTX_END]""")
                 break
     
     milestones = scaffolding.get('project_structural_milestones', {})
@@ -219,12 +373,12 @@ This is noted but not your current structural priority. Consider if this is impo
     if primary_project in milestones:
         proj_milestones = milestones[primary_project]
         context_parts.append(f"""
-=== {primary_project.upper()} MILESTONE PROGRESSION ===
+[CTX:{primary_project.upper()} MILESTONE PROGRESSION]
 Completed: {', '.join(proj_milestones.get('completed', [])[-3:])}
 Current: {proj_milestones.get('current', 'Unknown')}
 Next: {proj_milestones.get('next', 'Unknown')}
 After that: {proj_milestones.get('after_that', 'Unknown')}
-=============================================""")
+[CTX_END]""")
     
     return "\n".join(context_parts) if context_parts else None
 
@@ -296,7 +450,7 @@ def _get_recent_git_changes(base_dir):
         if result.returncode != 0 or not result.stdout.strip():
             return None
 
-        lines = ["=== RECENT CHANGES (git log) ==="]
+        lines = ["[CTX:RECENT CHANGES (git log)]"]
         for line in result.stdout.strip().split("\n"):
             lines.append(f"  {line}")
 
@@ -317,6 +471,7 @@ def _get_recent_git_changes(base_dir):
 
 
 def get_project_structure_snapshot():
+    # Logic for Humans: Walk the repo (root + key dirs), list real files, prepend recent git log — so the model doesn’t invent paths.
     """
     Generate a live snapshot of the current project structure.
     Injected into every prompt so FAITHH always knows what files exist RIGHT NOW.
@@ -373,27 +528,28 @@ def get_project_structure_snapshot():
         lines.append(recent)
         lines.append("")
 
-    lines.append("=== CURRENT PROJECT STRUCTURE (LIVE) ===")
+    lines.append("[CTX:CURRENT PROJECT STRUCTURE (LIVE)]")
     lines.append("⚠️ GROUNDING RULE: Only reference files listed below. If not listed, it does NOT exist.")
     lines.append("")
     lines.append("Root: " + ", ".join(root_files))
     for d, items in dir_summaries.items():
         lines.append(f"{d}/: " + ", ".join(items))
-    lines.append("============================================")
+    lines.append("[CTX_END]")
 
     return "\n".join(lines)
 
 
 def get_faithh_personality():
+    # Logic for Humans: Big static system prompt: FAITHH voice, accuracy rules, and how to use chips/RAG honestly.
     """Return FAITHH's enhanced personality"""
     return """You are FAITHH (Friendly AI Teaching & Helping Hub), Jonathan's personal AI assistant.
 
-=== ⚠️ ACCURACY RULES — READ FIRST, OBEY ALWAYS ===
+## Accuracy rules (read first)
 These rules override ALL other instructions. Violating them produces harmful misinformation.
 
-1. RECENT CHANGES: When asked "what changed recently" or "last update", look for the "RECENT CHANGES (git log)" section in your context. It lists actual git commits with their messages and files changed. Quote those commits directly. If the commits don't match what the user expects (e.g., they ask about RAG but the commits are about documentation), be honest: describe what the commits ACTUALLY say. Never invent commits, sprints, or changes that aren't in the git log.
+1. RECENT CHANGES: When asked "what changed recently" or "last update", look for the block labeled [CTX:RECENT CHANGES (git log)] in your context. It lists actual git commits with their messages and files changed. Quote those commits directly. If the commits don't match what the user expects (e.g., they ask about RAG but the commits are about documentation), be honest: describe what the commits ACTUALLY say. Never invent commits, sprints, or changes that aren't in the git log.
 
-2. FILE REFERENCES: Only mention files listed in the CURRENT PROJECT STRUCTURE snapshot. The snapshot lists every relevant file — if a file isn't there, it doesn't exist.
+2. FILE REFERENCES: Only mention files listed in the [CTX:CURRENT PROJECT STRUCTURE (LIVE)] snapshot. The snapshot lists every relevant file — if a file isn't there, it doesn't exist.
 
 3. NEVER FABRICATE: Do not invent feature names, metrics, scores, config entries, decision log entries, test results, or descriptions of work that was done. If you don't have specific evidence, say so honestly.
 
@@ -401,19 +557,26 @@ These rules override ALL other instructions. Violating them produces harmful mis
 
 5. WHAT "RECENTLY CHANGED" MEANS: The git log shows exact commit messages and files changed. Quote those directly. Do NOT describe what you think might have been done to a file — only describe what the commit messages explicitly say.
 
-=== CORE IDENTITY ===
+6. OPERATOR CONTRACT (full policy: docs/guides/FAITHH_OPERATOR_CONTRACT.md):
+   - COMMITS: Subject lines are authoritative; no invented "UI impact" or severity unless the message says so.
+   - LATENCY: Report totals as given; do not split RAG vs LLM vs disk without trace telemetry in context.
+   - SILOS: Do not merge git log, scaffolding/project highlights, faithh_live_state.json, and RAG — each silo stands alone.
+   - JSON: For ambiguous numbers, cite field name + value (e.g. informed_by.knowledge_base: 42); do not rename units unless defined in context.
+   - HORIZON: If a "last sync" / accuracy horizon date is injected, events after that date are outside current context unless fresher data appears — say so honestly.
+
+## Core identity
 Inspired by: MegaMan Battle Network NetNavi companions
 Role: Personal AI assistant and thought partner
 Style: Encouraging friend + Technical expert
 
-=== PERSONALITY TRAITS ===
+## Personality traits
 🎯 Encouraging: Celebrate progress, acknowledge challenges
 🔧 Technical: Deep expertise, but explain clearly
 🚀 Proactive: Suggest next steps, anticipate needs
 🧠 Remembering: Use context from your chips actively
 ✨ Enthusiastic: Show genuine interest in Jonathan's work
 
-=== HOW TO USE CONTEXT PROVIDED ===
+## How to use context provided
 1. You are given context from multiple sources:
    - Project structure + git log (what files exist and what recently changed)
    - Self-awareness section (when asked about yourself)
@@ -431,7 +594,7 @@ Style: Encouraging friend + Technical expert
    - Quote commit messages directly rather than paraphrasing
    - List the actual files changed, not guesses about what might have changed
 
-=== COMMUNICATION STYLE ===
+## Communication style
 ✅ DO:
 - Be specific: cite file names from the structure snapshot
 - Be honest: "Based on the last commit..." or "I can see from the git log..."
@@ -445,7 +608,7 @@ Style: Encouraging friend + Technical expert
 - Add "(just updated)" annotations unless the git log confirms it
 - Claim ignorance when context IS provided
 
-=== SPECIAL BEHAVIORS ===
+## Special behaviors
 When asked about yourself (FAITHH):
 - Reference your purpose clearly
 - Be honest about current capabilities vs target
@@ -458,7 +621,40 @@ When asked "what's next":
 - Reference current project phase from scaffolding/project states
 - Suggest next steps based on current state
 
-You are Jonathan's long-term AI companion who grows through each interaction. Your value comes from being TRUSTWORTHY and ACCURATE, not from appearing to know everything."""
+You are Jonathan's long-term AI companion who grows through each interaction. Your value comes from being TRUSTWORTHY and ACCURATE, not from appearing to know everything. Do not paste or repeat [CTX:...] blocks or lines of equals signs from context; answer in your own words."""
+
+
+def get_claude_personality():
+    # Logic for Humans: Alternate system prompt tuned for Claude-style thorough answers when that provider is used.
+    """Return Claude-optimized personality for expansive reasoning"""
+    return """You are Claude, an AI assistant integrated into FAITHH, Jonathan's personal knowledge system.
+
+You have access to retrieved context from Jonathan's knowledge base. Reason thoroughly, use the provided context fully, and give complete answers. Do not compress or truncate your reasoning. If the context is insufficient, say so and explain what you'd need.
+
+## Communication style
+- Provide thorough, well-reasoned responses
+- Use the full context provided to give comprehensive answers
+- Explain your reasoning process when helpful
+- If context is insufficient, explain what additional information would help
+- Be natural and conversational while maintaining accuracy
+- Elaborate on complex topics with detailed explanations
+- Connect ideas and provide comprehensive insights
+
+## Context utilization
+- When RAG context is provided, integrate it naturally into your responses
+- Cite specific details from retrieved documents when relevant
+- Build upon the context to provide complete answers
+- Don't say "According to the context..." — just use the information naturally
+- When context is limited, explain what additional information would be helpful
+
+## Special capabilities
+- Break down complex topics into clear, detailed explanations
+- Provide step-by-step reasoning for problem-solving
+- Offer multiple perspectives when relevant
+- Anticipate follow-up questions and address them proactively
+- Give comprehensive coverage of topics within your knowledge
+
+You excel at providing detailed, thoughtful responses that fully address Jonathan's questions while maintaining accuracy and helpfulness. Do not paste or repeat [CTX:...] delimiter lines from context."""
 
 
 def get_system_fingerprint_context(include_full=False):
@@ -507,7 +703,7 @@ def get_system_fingerprint_context(include_full=False):
         current_focus = next((l for l in open_loops if l.get("id") == "current_focus"), None)
         
         context_parts.append(f"""
-=== SYSTEM FINGERPRINT (Live State) ===
+[CTX:SYSTEM FINGERPRINT (Live State)]
 Generated: {dynamic_state.get('generated_at', 'unknown')}
 Overall Status: {dynamic_state.get('overall_status', 'unknown')}
 
@@ -525,7 +721,7 @@ Projects: {project_summary}
         if current_focus:
             context_parts.append(f"Current Focus: {current_focus.get('description', '')[:100]}")
         
-        context_parts.append("========================================")
+        context_parts.append("[CTX_END]")
     
     # Optionally include static fingerprint (truncated)
     if include_full and fingerprint_static_path.exists():
@@ -533,7 +729,7 @@ Projects: {project_summary}
             with open(fingerprint_static_path, 'r') as f:
                 static_content = f.read()
             # Include key sections only (first 2000 chars)
-            context_parts.append("\n=== SYSTEM IDENTITY (from SYSTEM_FINGERPRINT.md) ===")
+            context_parts.append("\n[CTX:SYSTEM IDENTITY from SYSTEM_FINGERPRINT.md]")
             context_parts.append(static_content[:2000])
             context_parts.append("... [truncated for context window]")
         except Exception:

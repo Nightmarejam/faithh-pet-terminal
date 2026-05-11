@@ -1,0 +1,86 @@
+{
+  "version": "v0.1",
+  "generated_at": "2026-04-02T00:00:00Z",
+  "query": "alife governance experiment execution and verification",
+  "seed_id": "runbook-seed-alife-governance-experiment-execution",
+  "title": "ALife governance experiment execution (seeded draft)",
+  "intent": "Run an ALife generation, capture quality metrics, and verify outcomes in ChromaDB.",
+  "tags": [
+    "alife",
+    "governance",
+    "experiment",
+    "verification"
+  ],
+  "prerequisites": [
+    "Gen8 ChromaDB reachable at 100.79.85.32:8000",
+    "Python virtual environment activated",
+    "Experiment script selected and parameters documented"
+  ],
+  "suggested_steps": [
+    "Verify collection connectivity and baseline count in alife_lineage.",
+    "Run the experiment script with explicit parameters and capture the generated report path.",
+    "Run post-check count and confirm expected delta.",
+    "Synthesize report metrics into a run-history note."
+  ],
+  "verification_checks": [
+    "alife_lineage document count increases by expected amount",
+    "report file is written to reports/alife",
+    "key quality metrics are present in report JSON"
+  ],
+  "known_failure_modes": [
+    "Chroma connection fails due to host/port mismatch",
+    "Telemetry warning appears due to dependency mismatch",
+    "Run script exits early without writing report artifact"
+  ],
+  "notes": [
+    "Oracle randomness means run-level variance is expected.",
+    "Use aggregate comparisons for parameter decisions."
+  ],
+  "source_evidence": [
+    {
+      "collection": "alife_lineage",
+      "document_id": "band2_coop_20260402_100353_001",
+      "score": 0.91,
+      "excerpt": "Band2 agent A_01 pop=A tick=1: signal=0.54 resources=4.88 coop=1 defect=0 fitness=0.991",
+      "metadata": {
+        "experiment": "band2_cooperation",
+        "generation": 8,
+        "population": "A"
+      }
+    }
+  ],
+  "runbook_frontmatter_suggestion": {
+    "id": "2026-04-02-alife-governance-experiment-execution-seeded",
+    "title": "ALife governance experiment execution (seeded)",
+    "tags": [
+      "alife",
+      "governance",
+      "experiment"
+    ],
+    "status": "draft",
+    "replicated_by": [],
+    "sandbox_ref": "",
+    "created": "2026-04-02",
+    "last_verified": "2026-04-02",
+    "constella": true
+  },
+  "future_stacking": {
+    "suggested_prereq_ids": [
+      "2026-03-31-session-anchor-workflow"
+    ],
+    "suggested_next_ids": [
+      "2026-04-02-noise-sweep-analysis"
+    ],
+    "learning_objective_tags": [
+      "experiment-design",
+      "metric-validation",
+      "governance-signal"
+    ]
+  },
+  "validation": {
+    "required_fields_ok": true,
+    "source_evidence_non_empty": true,
+    "step_count_ok": true,
+    "issues": []
+  }
+}

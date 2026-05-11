@@ -1,0 +1,6 @@
+track_id,name,status,current_gate,last_activity,total_gates,completed_gates,pending_gates,notes,export_date
+T1,Resonant compressor build,active,C1,2026-04-05,7,2,4,"BOM v3 complete. MS encoding and soft clipper added (C7/C8). Next physical action: order Gate C1 parts (Metglas + Nafion, <$100). C6 wiring documented but blocked on C1.",2026-04-07
+T2,ALife experiments,paused,A1,2026-04-02,5,0,4,Gen10 ALife head-to-head needs 26 more runs (bias=-0.05 at 14/40). Paused for hardware work. Resume after T1 C1 complete.,2026-04-07
+T3,Power BI / financial intake,planned,,2026-04-04,0,0,0,,2026-04-07
+T4,Gen8 / NAS ops,planned,,2026-03-30,0,0,0,,2026-04-07
+T5,Plugin development (JUCE),planned,PL1,2026-04-04,2,0,1,,2026-04-07

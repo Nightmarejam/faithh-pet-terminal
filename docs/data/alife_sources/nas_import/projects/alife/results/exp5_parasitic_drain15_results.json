@@ -1,0 +1,60 @@
+{
+  "experiment": "Experiment 5 — The Parasitic Emergence",
+  "run_date": "2026-03-29",
+  "parameters": {
+    "ticks": 50000,
+    "parasite_drain_rate": 1.5,
+    "thermal_drain_rate": 0.2,
+    "parasite_redirect_fraction": 0.3,
+    "parasite_redirect_tick": 5000,
+    "toxin_unlock_tick": 15000,
+    "exp5_wave_interval": 500,
+    "adaptation_rate": 0.20,
+    "adaptation_check_interval": 1000,
+    "shield_dominance_threshold": 0.50,
+    "initial_population": 200,
+    "seed_genome": "DEFENDER (Shield + Reproduce + Memory)"
+  },
+  "outcome": "COLLAPSE",
+  "collapse_tick": 10039,
+  "final_population": 0,
+  "wave_count": 20,
+  "predator_kills": 28636,
+  "parasitic_kills": 23,
+  "redirect_events": 4,
+  "thermal_deaths": 296,
+  "total_reproductions": 37585,
+  "total_deaths": 37785,
+  "first_parasite_tick": 57,
+  "first_parasite_agent": "agent_812",
+  "first_parasite_generation": 2,
+  "adaptation_at_parasite_emergence": 0.0,
+  "first_toxin_tick": 1840,
+  "first_toxin_agent": "agent_7228",
+  "first_toxin_generation": 20,
+  "final_adaptation": 1.50,
+  "final_shield_effectiveness_pct": 0,
+  "population_timeline": [
+    {"tick": 0,    "phase": "A", "pop": 345, "defenders": 345, "parasites": 0,  "toxin": 0, "naked": 0, "adapt": 0.00, "shield_eff_pct": 100, "avg_energy": 118, "avg_gen": 0},
+    {"tick": 1000, "phase": "A", "pop": 860, "defenders": 859, "parasites": 1,  "toxin": 0, "naked": 0, "adapt": 0.20, "shield_eff_pct": 80,  "avg_energy": 224, "avg_gen": 6},
+    {"tick": 2000, "phase": "A", "pop": 914, "defenders": 906, "parasites": 4,  "toxin": 1, "naked": 3, "adapt": 0.40, "shield_eff_pct": 60,  "avg_energy": 227, "avg_gen": 18},
+    {"tick": 3000, "phase": "A", "pop": 909, "defenders": 889, "parasites": 15, "toxin": 4, "naked": 1, "adapt": 0.60, "shield_eff_pct": 40,  "avg_energy": 224, "avg_gen": 26},
+    {"tick": 4000, "phase": "A", "pop": 1112,"defenders": 1111,"parasites": 0,  "toxin": 1, "naked": 0, "adapt": 0.80, "shield_eff_pct": 20,  "avg_energy": 179, "avg_gen": 41},
+    {"tick": 5000, "phase": "B", "pop": 884, "defenders": 882, "parasites": 0,  "toxin": 2, "naked": 0, "adapt": 1.00, "shield_eff_pct": 0,   "avg_energy": 193, "avg_gen": 48},
+    {"tick": 6000, "phase": "B", "pop": 799, "defenders": 797, "parasites": 1,  "toxin": 0, "naked": 1, "adapt": 1.20, "shield_eff_pct": 0,   "avg_energy": 161, "avg_gen": 54},
+    {"tick": 7000, "phase": "B", "pop": 800, "defenders": 799, "parasites": 0,  "toxin": 1, "naked": 0, "adapt": 1.40, "shield_eff_pct": 0,   "avg_energy": 164, "avg_gen": 66},
+    {"tick": 8000, "phase": "B", "pop": 836, "defenders": 836, "parasites": 0,  "toxin": 0, "naked": 0, "adapt": 1.50, "shield_eff_pct": 0,   "avg_energy": 167, "avg_gen": 82},
+    {"tick": 9000, "phase": "B", "pop": 797, "defenders": 796, "parasites": 1,  "toxin": 0, "naked": 0, "adapt": 1.50, "shield_eff_pct": 0,   "avg_energy": 164, "avg_gen": 96},
+    {"tick": 10000,"phase": "B", "pop": 749, "defenders": 749, "parasites": 0,  "toxin": 0, "naked": 0, "adapt": 1.50, "shield_eff_pct": 0,   "avg_energy": 161, "avg_gen": 109}
+  ],
+  "analysis": {
+    "collapse_cause": "Predator adaptation reached 1.5 (shields fully broken) by tick 8000. With no effective defense remaining and 20 waves landed, the population could not sustain itself. Parasites emerged early (tick 57) but remained marginal (peak 15 agents at tick 3000). Toxin emerged at tick 1840 but also remained marginal. Neither strategy reached critical mass before shield collapse made the whole population vulnerable.",
+    "comparison_to_drain_1_0": "drain=1.0 run (previous session) showed stable oscillation. drain=1.5 (this run) collapsed at tick 10039 — roughly the point where Phase B (threat redirection) activated and adaptation hit max. The higher drain rate did not directly cause collapse; rather, it prevented the parasitic/toxin counter-strategies from scaling fast enough to matter before the predator fully adapted.",
+    "constella_mapping": {
+      "principle": "Astris token decay",
+      "finding": "drain=1.5 represents a decay rate that exceeds the system's recovery capacity when combined with maxed predator pressure. This validates the Astris decay design principle: if decay is too fast relative to contribution rate, civic participation collapses entirely rather than reaching a new equilibrium.",
+      "implication": "The 2% weekly Astris decay rate needs to be calibrated against the 'predator pressure' analog (governance complexity, meeting frequency, participation demands) to stay below the collapse threshold."
+    }
+  },
+  "next_experiment": "Experiment 6 — Lagrange Point / Standing Wave. Design needs UCF floor parameter (min_energy threshold) and Penumbra reintegration phase for low-energy agents."
+}

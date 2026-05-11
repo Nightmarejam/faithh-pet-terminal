@@ -130,8 +130,8 @@ class Agent:
         """Track op usage for REG_LEARN."""
         self.op_usage[op_code] = self.op_usage.get(op_code, 0) + 1
     
-    def create_child(self, child_x: int, child_y: int, child_genome: bytes) -> 'Agent':
-        """Create a child agent."""
+    def create_child(self, child_x: int, child_y: int, child_genome: bytes, on_reproduce=None) -> 'Agent':
+        """Create a child agent. on_reproduce(parent, child) called if provided."""
         from config import REPRODUCTION_COST
         
         child = Agent(child_x, child_y, genome=child_genome, parent_id=self.id)
@@ -145,6 +145,9 @@ class Agent:
         # Inherit dual wave timing knowledge (Exp 4+)
         child.wave1_arrival_times = self.wave1_arrival_times.copy()
         child.wave2_arrival_times = self.wave2_arrival_times.copy()
+        
+        if on_reproduce is not None:
+            on_reproduce(self, child)
         
         return child
     

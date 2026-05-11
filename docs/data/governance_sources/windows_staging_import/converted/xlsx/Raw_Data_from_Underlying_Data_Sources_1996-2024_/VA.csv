@@ -1,0 +1,1001 @@
+DataSourceCode,Organization,DataSource,indicator,econ_code,econ_name,region,income_class,production_year,wgi_dimension,value,minimum,maximum,orientation
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,va,0.389,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,va,0.253,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,va,0.528,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,va,0.552,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,va,0.547,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2002,va,0.714,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,va,0.67,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2002,va,0.395,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,va,0.504,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,va,0.115,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,va,0.581,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,va,0.715,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2002,va,0.492,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,va,0.331,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,va,0.418,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,va,0.431,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,va,0.802,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,va,0.451,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,va,0.892,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,va,0.671,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,va,0.741,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,va,0.5549999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,va,0.8240000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,va,0.729,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,va,0.847,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,va,0.481,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,va,0.883,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,va,0.639,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,va,0.864,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,va,0.5569999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MLI,Mali,Sub-Saharan Africa,Low income,2005,va,0.708,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2005,va,0.77,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,va,0.851,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,va,0.837,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MWI,Malawi,Sub-Saharan Africa,Low income,2005,va,0.4590000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2005,va,0.538,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,va,0.828,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,va,0.724,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,va,0.349,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,va,0.226,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,va,0.897,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,va,0.667,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,va,0.953,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,va,0.911,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2005,va,0.725,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2005,va,0.718,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,va,0.813,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,va,0.617,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,va,0.35,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,va,0.418,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,va,0.386,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,va,0.361,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,va,0.903,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,va,0.569,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,va,0.7949999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,va,0.718,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,va,0.937,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,va,0.692,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,va,0.8180000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,va,0.507,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,va,0.873,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,va,0.644,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,va,0.2090000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,va,0.49,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LBR,Liberia,Sub-Saharan Africa,Low income,2008,va,0.733,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LBR,Liberia,Sub-Saharan Africa,Low income,2008,va,0.412,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,va,0.638,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,va,0.518,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,va,0.876,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,va,0.542,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MLI,Mali,Sub-Saharan Africa,Low income,2008,va,0.736,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2008,va,0.635,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,va,0.865,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,va,0.77,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MWI,Malawi,Sub-Saharan Africa,Low income,2008,va,0.692,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2008,va,0.558,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,va,0.864,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,va,0.7230000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,va,0.333,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,va,0.345,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,va,0.6970000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,va,0.402,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,va,0.922,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,va,0.842,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2008,va,0.5389999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2008,va,0.538,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,va,0.784,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,va,0.493,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,va,0.492,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,va,0.495,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,va,0.484,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,va,0.611,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BDI,Burundi,Sub-Saharan Africa,Low income,2011,va,0.85,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BDI,Burundi,Sub-Saharan Africa,Low income,2011,va,0.74,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,va,0.74,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,va,0.6,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,va,0.71,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,va,0.6,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,va,0.8200000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,va,0.54,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,va,0.35,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,va,0.47,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,va,0.46,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,va,0.42,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,va,0.76,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,va,0.5800000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,va,0.48,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,va,0.42,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,va,0.45,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,va,0.21,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,va,0.79,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,va,0.49,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,va,0.62,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,va,0.52,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,va,0.32,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,va,0.49,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LBR,Liberia,Sub-Saharan Africa,Low income,2011,va,0.76,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LBR,Liberia,Sub-Saharan Africa,Low income,2011,va,0.47,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,va,0.8200000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,va,0.52,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,va,0.4,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,va,0.23,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,va,0.53,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MLI,Mali,Sub-Saharan Africa,Low income,2011,va,0.5700000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2011,va,0.43,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,va,0.64,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,va,0.61,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,va,0.9000000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,va,0.65,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MWI,Malawi,Sub-Saharan Africa,Low income,2011,va,0.6900000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2011,va,0.64,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,va,0.75,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,va,0.65,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NER,Niger,Sub-Saharan Africa,Low income,2011,va,0.76,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NER,Niger,Sub-Saharan Africa,Low income,2011,va,0.71,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,va,0.71,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,va,0.27,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,va,0.91,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,va,0.56,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,va,0.67,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,va,0.55,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,va,0.67,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,va,0.54,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TGO,Togo,Sub-Saharan Africa,Low income,2011,va,0.47,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TGO,Togo,Sub-Saharan Africa,Low income,2011,va,0.37,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,va,0.66,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,va,0.22,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,va,0.8400000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,va,0.76,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2011,va,0.64,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2011,va,0.6799999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,va,0.77,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,va,0.56,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,va,0.85,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,va,0.54,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,va,0.38,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,va,0.56,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BDI,Burundi,Sub-Saharan Africa,Low income,2014,va,0.809,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BDI,Burundi,Sub-Saharan Africa,Low income,2014,va,0.7070000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,va,0.657,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,va,0.485,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,va,0.7749999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,va,0.558,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,va,0.548,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,va,0.452,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,va,0.5640000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,va,0.444,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,va,0.5640000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,va,0.451,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,va,0.467,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,va,0.36,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,va,0.6100000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,va,0.525,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,va,0.747,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,va,0.4419999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,va,0.839,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,va,0.422,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MLI,Mali,Sub-Saharan Africa,Low income,2014,va,0.833,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2014,va,0.622,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,va,0.914,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,va,0.5660000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MWI,Malawi,Sub-Saharan Africa,Low income,2014,va,0.6980000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2014,va,0.507,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,va,0.791,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,va,0.75,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,va,0.48,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,va,0.264,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,va,0.869,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,va,0.483,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,va,0.752,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,va,0.576,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TGO,Togo,Sub-Saharan Africa,Low income,2014,va,0.609,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TGO,Togo,Sub-Saharan Africa,Low income,2014,va,0.404,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,va,0.757,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,va,0.706,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,va,0.7779999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,va,0.467,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,va,0.5569999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,va,0.52,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,va,0.642,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,va,0.629,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,va,0.417,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,va,0.304,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,va,0.607,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,va,0.0,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,va,0.665,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,va,0.536,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LBR,Liberia,Sub-Saharan Africa,Low income,2015,va,0.528,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LBR,Liberia,Sub-Saharan Africa,Low income,2015,va,0.293,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NER,Niger,Sub-Saharan Africa,Low income,2015,va,0.828,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NER,Niger,Sub-Saharan Africa,Low income,2015,va,0.707,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SDN,Sudan,Sub-Saharan Africa,Low income,2015,va,0.306,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SDN,Sudan,Sub-Saharan Africa,Low income,2015,va,0.345,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,va,0.695,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,va,0.331,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,va,0.708,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,va,0.485,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2015,va,0.6859999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2015,va,0.608,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,va,0.7170000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,va,0.393,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,va,0.8079999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,va,0.526,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,va,0.8109999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,va,0.648,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,va,0.852,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,va,0.515,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,va,0.662,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,va,0.505,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,va,0.436,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,va,0.433,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,va,0.654,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,va,0.398,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,va,0.175,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,va,0.201,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,va,0.873,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,va,0.557,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,va,0.61,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,va,0.3779999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,va,0.7689999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,va,0.612,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,va,0.622,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,va,0.4370000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LBR,Liberia,Sub-Saharan Africa,Low income,2017,va,0.838,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LBR,Liberia,Sub-Saharan Africa,Low income,2017,va,0.373,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,va,0.7909999999999999,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,va,0.483,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,va,0.249,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,va,0.134,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,va,0.7040000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,va,0.3440000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MLI,Mali,Sub-Saharan Africa,Low income,2017,va,0.757,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2017,va,0.492,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,va,0.532,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,va,0.541,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,va,0.836,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,va,0.277,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MWI,Malawi,Sub-Saharan Africa,Low income,2017,va,0.328,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2017,va,0.405,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,va,0.8220000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,va,0.471,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NER,Niger,Sub-Saharan Africa,Low income,2017,va,0.602,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NER,Niger,Sub-Saharan Africa,Low income,2017,va,0.523,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,va,0.674,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,va,0.238,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SDN,Sudan,Sub-Saharan Africa,Low income,2017,va,0.286,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SDN,Sudan,Sub-Saharan Africa,Low income,2017,va,0.24,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,va,0.5890000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,va,0.461,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,va,0.807,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,va,0.632,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,va,0.675,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,va,0.26,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,va,0.731,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,va,0.5840000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TGO,Togo,Sub-Saharan Africa,Low income,2017,va,0.396,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TGO,Togo,Sub-Saharan Africa,Low income,2017,va,0.294,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,va,0.477,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,va,0.206,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,va,0.85,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,va,0.666,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2017,va,0.605,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2017,va,0.513,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,va,0.687,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,va,0.322,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,va,0.6040000000000001,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,va,0.469,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,va,0.493,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,va,0.556,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,va,0.4826212823390961,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,va,0.3210714161396027,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,va,0.6549551486968994,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,va,0.4252215027809143,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,va,0.8648273348808289,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,va,0.5152406692504883,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,va,0.8071078062057495,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,va,0.4062467515468597,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,va,0.6215814352035522,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,va,0.392453134059906,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,va,0.4832740128040314,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,va,0.3753031492233276,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,va,0.6441905498504639,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,va,0.3348868787288666,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ETH,Ethiopia,Sub-Saharan Africa,,2019,va,0.4747679531574249,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ETH,Ethiopia,Sub-Saharan Africa,,2019,va,0.4720571339130402,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,va,0.2997169494628906,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,va,0.2177997082471848,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,va,0.8075256943702698,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,va,0.4069636762142181,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,va,0.627450704574585,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,va,0.3818127512931824,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,va,0.7100259065628052,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,va,0.4390808045864105,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,va,0.6282942891120911,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,va,0.5004909038543701,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LBR,Liberia,Sub-Saharan Africa,Low income,2019,va,0.8395220041275024,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LBR,Liberia,Sub-Saharan Africa,Low income,2019,va,0.2280572652816772,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,va,0.632724404335022,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,va,0.2000605016946793,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,va,0.5459693670272827,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,va,0.3565220534801483,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MLI,Mali,Sub-Saharan Africa,Low income,2019,va,0.6813191175460815,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2019,va,0.3702228367328644,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,va,0.625541090965271,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,va,0.3991997241973877,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MWI,Malawi,Sub-Saharan Africa,Low income,2019,va,0.4137333631515503,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2019,va,0.5309779047966003,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,va,0.6313172578811646,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,va,0.4510846138000488,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NER,Niger,Sub-Saharan Africa,Low income,2019,va,0.6679617166519165,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NER,Niger,Sub-Saharan Africa,Low income,2019,va,0.5368210673332214,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,va,0.6709929704666138,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,va,0.252148300409317,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SDN,Sudan,Sub-Saharan Africa,Low income,2019,va,0.2069219052791595,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,va,0.6806480288505554,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,va,0.3270070552825928,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,va,0.7951436042785645,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,va,0.3325380980968475,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,va,0.7634167671203613,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,va,0.4990098178386688,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TGO,Togo,Sub-Saharan Africa,Low income,2019,va,0.565453827381134,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TGO,Togo,Sub-Saharan Africa,Low income,2019,va,0.3930066525936127,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,va,0.6873075366020203,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,va,0.2181041836738586,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,va,0.9072980284690857,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,va,0.8968434929847717,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2019,va,0.6248738169670105,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2019,va,0.4564826488494873,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,va,0.61055988073349,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,va,0.2745791673660278,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,va,0.6239444017410278,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,va,0.4748574793338776,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,va,0.4544166624546051,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,va,0.2521755397319794,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,va,0.6483649611473083,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,va,0.4406560957431793,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,va,0.6753203272819519,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,va,0.5605844855308533,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,va,0.3120985627174377,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,va,0.563718855381012,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,va,0.3950476348400116,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,va,0.4278435111045837,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,va,0.3630540668964386,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,va,0.7280787229537964,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,va,0.4821699261665344,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,va,0.2397496402263641,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,va,0.2060589790344238,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,va,0.6419671177864075,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,va,0.2768336534500122,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,va,0.424905389547348,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,va,0.6815791130065918,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,va,0.3799742460250854,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LBR,Liberia,Sub-Saharan Africa,Low income,2022,va,0.8522652983665466,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LBR,Liberia,Sub-Saharan Africa,Low income,2022,va,0.232920303940773,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,va,0.5452198386192322,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,va,0.1852988451719284,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,va,0.3925595581531525,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,va,0.2448439449071884,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,va,0.8108474016189575,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,va,0.3996622264385223,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MLI,Mali,Sub-Saharan Africa,Low income,2022,va,0.4269808828830719,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MLI,Mali,Sub-Saharan Africa,Low income,2022,va,0.5362082123756409,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,va,0.6028337478637695,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,va,0.4762542843818665,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,va,0.5380207300186157,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,va,0.3821520507335663,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MWI,Malawi,Sub-Saharan Africa,Low income,2022,va,0.5141260623931885,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MWI,Malawi,Sub-Saharan Africa,Low income,2022,va,0.3349210917949677,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NER,Niger,Sub-Saharan Africa,Low income,2022,va,0.7579615116119385,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NER,Niger,Sub-Saharan Africa,Low income,2022,va,0.5748910307884216,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,va,0.5465036630630493,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,va,0.1714818030595779,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SDN,Sudan,Sub-Saharan Africa,Low income,2022,va,0.2377101182937622,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,va,0.6828919649124146,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,va,0.2707303762435913,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,va,0.8150777816772461,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,va,0.3259235620498657,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,va,0.705649197101593,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,va,0.3017894327640533,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,va,0.7174654006958008,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,va,0.2536395192146301,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TGO,Togo,Sub-Saharan Africa,Low income,2022,va,0.5829241871833801,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TGO,Togo,Sub-Saharan Africa,Low income,2022,va,0.4637908041477203,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,va,0.5635886192321777,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,va,0.8712102770805359,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,va,0.7937728762626648,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2022,va,0.5599849820137024,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2022,va,0.529453694820404,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,va,0.5045679211616516,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,va,0.2416559755802155,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,va,0.8327774405479431,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,va,0.4349454343318939,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,va,0.4239945411682129,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,va,0.4233614802360535,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,va,0.2158137857913971,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,va,0.2479348480701447,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,va,0.4503414928913116,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,va,0.4305742979049683,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,va,0.366230845451355,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,va,0.3393028080463409,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,va,0.533750057220459,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,va,0.4491632580757141,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,va,0.2304820418357849,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,va,0.2751854360103607,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,va,0.3336196839809418,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,va,0.2295588850975037,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,va,0.4551967680454254,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,va,0.3090170621871948,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,ETH,Ethiopia,Sub-Saharan Africa,,2023,va,0.6573590636253357,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,ETH,Ethiopia,Sub-Saharan Africa,,2023,va,0.4443734288215637,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,va,0.1539802998304367,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,va,0.3815940618515015,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,va,0.3806674182415009,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,va,0.2515831291675568,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,va,0.5042080283164978,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,va,0.4022679626941681,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,va,0.6189851760864258,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,va,0.3635104894638062,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,va,0.3357678055763245,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,va,0.4367730915546417,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,va,0.5988759994506836,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,va,0.297187864780426,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,va,0.2211544960737228,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,va,0.3606601655483246,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,va,0.6147838830947876,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,va,0.5575578212738037,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,va,0.2386325597763062,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,va,0.3590936064720154,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2023,va,0.3972470462322235,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2023,va,0.3568308353424072,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,SYC,Seychelles,Sub-Saharan Africa,High income,2023,va,0.6847911477088928,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,SYC,Seychelles,Sub-Saharan Africa,High income,2023,va,0.3933237493038177,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TCD,Chad,Sub-Saharan Africa,Low income,2023,va,0.3239119052886963,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TCD,Chad,Sub-Saharan Africa,Low income,2023,va,0.3356385231018066,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,va,0.4073043465614319,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,va,0.204271137714386,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Freeness and fairness of the last national election,UGA,Uganda,Sub-Saharan Africa,Low income,2023,va,0.3937177956104279,0,1.0,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust parliament/national assembly,UGA,Uganda,Sub-Saharan Africa,Low income,2023,va,0.4762628674507141,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,DZA,Algeria,Middle East & North Africa,Upper middle income,2006,va,0.2904884219169617,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,JOR,Jordan,Middle East & North Africa,Lower middle income,2006,va,0.5880149602890015,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2006,va,0.4029209613800049,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2006,va,0.6994267106056213,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MAR,Morocco,Middle East & North Africa,Lower middle income,2007,va,0.2668350040912628,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2007,va,0.2996894419193268,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,BHR,Bahrain,Middle East & North Africa,High income,2009,va,0.4600000083446503,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,JOR,Jordan,Middle East & North Africa,Lower middle income,2010,va,0.5068554282188416,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2010,va,0.2605706453323364,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2010,va,0.4691189527511597,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,SDN,Sudan,Sub-Saharan Africa,Low income,2010,va,0.4945161640644073,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,va,0.1969586610794067,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2011,va,0.2867210805416107,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2011,va,0.2788686752319336,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2012,va,0.4945826530456543,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,DZA,Algeria,Middle East & North Africa,Upper middle income,2013,va,0.4256030321121216,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2013,va,0.1974883377552032,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2013,va,0.2543580532073975,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,JOR,Jordan,Middle East & North Africa,Lower middle income,2013,va,0.4462836682796478,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2013,va,0.2002129703760147,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,SDN,Sudan,Sub-Saharan Africa,Low income,2013,va,0.3431331515312195,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2013,va,0.3239400386810303,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2013,va,0.3437903225421906,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,KWT,Kuwait,Middle East & North Africa,High income,2014,va,0.7715312838554382,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBY,Libya,Middle East & North Africa,Upper middle income,2014,va,0.1332223117351532,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MAR,Morocco,Middle East & North Africa,Lower middle income,2014,va,0.3029428720474243,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,DZA,Algeria,Middle East & North Africa,Upper middle income,2016,va,0.1775553673505783,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2016,va,0.5065661072731018,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,JOR,Jordan,Middle East & North Africa,Lower middle income,2016,va,0.2648520171642303,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2016,va,0.1049467846751213,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MAR,Morocco,Middle East & North Africa,Lower middle income,2016,va,0.2737241089344025,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2016,va,0.2946481704711914,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,QAT,Qatar,Middle East & North Africa,High income,2016,va,0.873428225517273,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2016,va,0.2106695622205734,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2018,va,0.3192910552024841,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,JOR,Jordan,Middle East & North Africa,Lower middle income,2018,va,0.1398066580295563,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2018,va,0.1757544428110123,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MAR,Morocco,Middle East & North Africa,Lower middle income,2018,va,0.2306820303201675,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2018,va,0.2851165533065796,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,QAT,Qatar,Middle East & North Africa,High income,2018,va,0.9133416414260864,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,SDN,Sudan,Sub-Saharan Africa,Low income,2018,va,0.2972655296325684,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2018,va,0.1480119377374649,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2018,va,0.3260541558265686,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2019,va,0.1279539316892624,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,KWT,Kuwait,Middle East & North Africa,High income,2019,va,0.3345219790935516,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBY,Libya,Middle East & North Africa,Upper middle income,2019,va,0.089011587202549,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2021,va,0.0889187306165695,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2022,va,0.1950565576553345,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,JOR,Jordan,Middle East & North Africa,Lower middle income,2022,va,0.1699749380350113,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2022,va,0.0963605120778084,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBY,Libya,Middle East & North Africa,Upper middle income,2022,va,0.1566333323717117,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,va,0.3380827009677887,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,va,0.3989049196243286,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,SDN,Sudan,Sub-Saharan Africa,Low income,2022,va,0.2954767048358917,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,JOR,Jordan,Middle East & North Africa,Lower middle income,2023,va,0.2434254437685013,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are bribed",JOR,Jordan,Middle East & North Africa,Lower middle income,2023,va,0.2278995960950851,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are offered a genuine choice in elections",JOR,Jordan,Middle East & North Africa,Lower middle income,2023,va,0.6408426761627197,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Votes are counted fairly",JOR,Jordan,Middle East & North Africa,Lower middle income,2023,va,0.6107958555221558,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,va,0.231396272778511,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are bribed",TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,va,0.3351625502109528,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are offered a genuine choice in elections",TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,va,0.7865503430366516,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Votes are counted fairly",TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,va,0.657741129398346,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2024,va,0.2128808945417404,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are bribed",IRQ,Iraq,Middle East & North Africa,Upper middle income,2024,va,0.2073936313390732,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are offered a genuine choice in elections",IRQ,Iraq,Middle East & North Africa,Upper middle income,2024,va,0.530711829662323,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Votes are counted fairly",IRQ,Iraq,Middle East & North Africa,Upper middle income,2024,va,0.4183879196643829,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2024,va,0.0922249630093575,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are bribed",LBN,Lebanon,Middle East & North Africa,Lower middle income,2024,va,0.1368357390165329,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are offered a genuine choice in elections",LBN,Lebanon,Middle East & North Africa,Lower middle income,2024,va,0.7308033108711243,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Votes are counted fairly",LBN,Lebanon,Middle East & North Africa,Lower middle income,2024,va,0.6549327373504639,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MAR,Morocco,Middle East & North Africa,Lower middle income,2024,va,0.3863578736782074,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are bribed",MAR,Morocco,Middle East & North Africa,Lower middle income,2024,va,0.254371702671051,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are offered a genuine choice in elections",MAR,Morocco,Middle East & North Africa,Lower middle income,2024,va,0.6385517716407776,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Votes are counted fairly",MAR,Morocco,Middle East & North Africa,Lower middle income,2024,va,0.6880377531051636,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,How much trust you have in the elected council of representatives (the parliament)?,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2024,va,0.39559406042099,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are bribed",MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2024,va,0.3582718372344971,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Voters are offered a genuine choice in elections",MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2024,va,0.5276674628257751,0,1.0,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, do the following occur during the elections in your country? Votes are counted fairly",MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2024,va,0.5949473977088928,0,1.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2001,va,2.595254182815552,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,TWN,"Taiwan, China",East Asia & Pacific,High income,2001,va,1.994062423706055,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,TWN,"Taiwan, China",East Asia & Pacific,High income,2001,va,2.54568076133728,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,CHN,China,East Asia & Pacific,Upper middle income,2002,va,3.904205560684204,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,PHL,Philippines,East Asia & Pacific,Lower middle income,2002,va,2.398353099822998,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,PHL,Philippines,East Asia & Pacific,Lower middle income,2002,va,2.41444730758667,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,THA,Thailand,East Asia & Pacific,Upper middle income,2002,va,2.68120288848877,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,THA,Thailand,East Asia & Pacific,Upper middle income,2002,va,2.863216638565063,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,JPN,Japan,East Asia & Pacific,High income,2003,va,1.899149656295776,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,JPN,Japan,East Asia & Pacific,High income,2003,va,2.716943025588989,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KOR,"Korea, Rep.",East Asia & Pacific,High income,2003,va,1.825883865356445,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MNG,Mongolia,East Asia & Pacific,Upper middle income,2003,va,2.648684024810791,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MNG,Mongolia,East Asia & Pacific,Upper middle income,2003,va,2.774933576583862,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",PHL,Philippines,East Asia & Pacific,Lower middle income,2005,va,2.448909044265747,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,PHL,Philippines,East Asia & Pacific,Lower middle income,2005,va,2.389045715332031,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,PHL,Philippines,East Asia & Pacific,Lower middle income,2005,va,2.72431492805481,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,PHL,Philippines,East Asia & Pacific,Lower middle income,2005,va,2.074438095092773,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,PHL,Philippines,East Asia & Pacific,Lower middle income,2005,va,2.358177423477173,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,PHL,Philippines,East Asia & Pacific,Lower middle income,2005,va,2.27007007598877,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,PHL,Philippines,East Asia & Pacific,Lower middle income,2005,va,2.16983699798584,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,va,2.497101545333862,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,va,2.970106840133667,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,va,1.806947231292725,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,va,1.944337844848633,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,va,2.256497859954834,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,va,2.589192628860474,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,va,2.653369903564453,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,va,2.313722848892212,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,va,1.999037742614746,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,va,2.408619403839111,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,va,2.424472570419312,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,va,2.347419023513794,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,va,1.656581521034241,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,va,1.984225273132324,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,va,2.198576927185059,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,va,2.560053586959839,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,va,1.979519128799438,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,va,2.412193059921265,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,va,2.591823816299438,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,va,2.452334403991699,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",SGP,Singapore,East Asia & Pacific,High income,2006,va,2.523890972137451,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,SGP,Singapore,East Asia & Pacific,High income,2006,va,2.906927108764648,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,SGP,Singapore,East Asia & Pacific,High income,2006,va,2.524321317672729,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,SGP,Singapore,East Asia & Pacific,High income,2006,va,2.770660638809204,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,SGP,Singapore,East Asia & Pacific,High income,2006,va,1.97193706035614,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,SGP,Singapore,East Asia & Pacific,High income,2006,va,3.042550563812256,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",THA,Thailand,East Asia & Pacific,Upper middle income,2006,va,2.293783903121948,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,THA,Thailand,East Asia & Pacific,Upper middle income,2006,va,2.966880798339844,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,THA,Thailand,East Asia & Pacific,Upper middle income,2006,va,2.045808553695679,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,THA,Thailand,East Asia & Pacific,Upper middle income,2006,va,1.991247177124023,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,THA,Thailand,East Asia & Pacific,Upper middle income,2006,va,2.39091968536377,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,THA,Thailand,East Asia & Pacific,Upper middle income,2006,va,2.708267688751221,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,THA,Thailand,East Asia & Pacific,Upper middle income,2006,va,2.670804738998413,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",TWN,"Taiwan, China",East Asia & Pacific,High income,2006,va,2.312633514404297,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,va,2.383745670318604,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,va,2.485111474990845,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,va,2.168453454971313,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,va,2.453131675720215,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,va,1.989039421081543,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,va,2.554295539855957,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,va,2.644766092300415,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,va,1.781449913978577,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,va,1.579870700836182,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,va,1.893392086029053,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,va,1.595808386802673,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,va,3.673241853713989,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,va,3.5,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2007,va,2.844972133636475,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2007,va,2.499294757843018,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2007,va,2.069343090057373,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2007,va,2.357047080993652,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2007,va,2.691092014312744,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",JPN,Japan,East Asia & Pacific,High income,2007,va,2.085289239883423,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,JPN,Japan,East Asia & Pacific,High income,2007,va,2.257148504257202,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,JPN,Japan,East Asia & Pacific,High income,2007,va,2.603412389755249,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,JPN,Japan,East Asia & Pacific,High income,2007,va,2.517349004745483,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,JPN,Japan,East Asia & Pacific,High income,2007,va,2.583798885345459,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,JPN,Japan,East Asia & Pacific,High income,2007,va,1.98403537273407,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,JPN,Japan,East Asia & Pacific,High income,2007,va,2.579511404037476,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MYS,Malaysia,East Asia & Pacific,Upper middle income,2007,va,2.235085248947144,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2007,va,2.191474914550781,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2007,va,2.375814199447632,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MYS,Malaysia,East Asia & Pacific,Upper middle income,2007,va,2.148190021514893,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2007,va,2.228157520294189,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MYS,Malaysia,East Asia & Pacific,Upper middle income,2007,va,2.817910671234131,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MYS,Malaysia,East Asia & Pacific,Upper middle income,2007,va,2.762978076934814,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",CHN,China,East Asia & Pacific,Upper middle income,2008,va,2.510583877563477,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,CHN,China,East Asia & Pacific,Upper middle income,2008,va,2.954760313034058,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,CHN,China,East Asia & Pacific,Upper middle income,2008,va,2.030420780181885,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,CHN,China,East Asia & Pacific,Upper middle income,2008,va,3.583694696426392,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,va,2.182873010635376,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,va,3.006050825119019,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,va,1.976782321929932,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,va,2.095337152481079,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,va,1.888128399848938,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,va,2.941445350646973,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,1.764150023460388,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,1.854977965354919,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,2.065934658050537,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,2.745201110839844,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,2.266361236572266,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,2.965630054473877,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,2.930051803588867,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,va,3.016856908798218,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,2.674859285354614,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,2.425555944442749,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,2.119815349578857,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,2.231044769287109,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,1.858633875846863,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,2.138280868530273,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,2.606770515441895,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,va,2.412906408309937,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,SGP,Singapore,East Asia & Pacific,High income,2010,va,2.110429525375366,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",SGP,Singapore,East Asia & Pacific,High income,2010,va,2.493949413299561,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,SGP,Singapore,East Asia & Pacific,High income,2010,va,3.19418478012085,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,SGP,Singapore,East Asia & Pacific,High income,2010,va,2.772823810577393,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,SGP,Singapore,East Asia & Pacific,High income,2010,va,2.570990800857544,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,SGP,Singapore,East Asia & Pacific,High income,2010,va,2.078431367874146,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,SGP,Singapore,East Asia & Pacific,High income,2010,va,1.982346892356873,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,SGP,Singapore,East Asia & Pacific,High income,2010,va,2.39945650100708,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,1.560888409614563,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,2.317156791687012,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,2.676867723464966,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,1.81407618522644,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,1.715401649475098,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,2.4628586769104,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,2.49805212020874,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,THA,Thailand,East Asia & Pacific,Upper middle income,2010,va,2.127779722213745,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.560367584228516,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.341688871383667,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.339108467102051,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.389053583145142,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.14455771446228,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.565683841705322,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.984750509262085,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,va,2.404408693313599,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,1.611734867095947,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,2.86333441734314,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,2.507730722427368,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,1.641421556472778,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,2.002805471420288,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,1.717538356781006,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,1.422739505767822,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,va,1.605117440223694,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,CHN,China,East Asia & Pacific,Upper middle income,2011,va,2.229410409927368,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,CHN,China,East Asia & Pacific,Upper middle income,2011,va,2.627923011779785,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,CHN,China,East Asia & Pacific,Upper middle income,2011,va,2.249889135360718,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,CHN,China,East Asia & Pacific,Upper middle income,2011,va,2.202721357345581,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,CHN,China,East Asia & Pacific,Upper middle income,2011,va,2.067324876785278,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,CHN,China,East Asia & Pacific,Upper middle income,2011,va,1.56084668636322,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,1.992293953895569,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,2.507191896438599,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,2.548474073410034,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,1.850225210189819,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,2.002036333084106,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,2.289140224456787,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,2.535717010498047,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,IDN,Indonesia,East Asia & Pacific,Upper middle income,2011,va,2.298771619796753,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,JPN,Japan,East Asia & Pacific,High income,2011,va,2.596396207809448,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",JPN,Japan,East Asia & Pacific,High income,2011,va,2.137089967727661,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,JPN,Japan,East Asia & Pacific,High income,2011,va,2.171097278594971,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,JPN,Japan,East Asia & Pacific,High income,2011,va,2.512593746185303,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,JPN,Japan,East Asia & Pacific,High income,2011,va,2.414996385574341,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,JPN,Japan,East Asia & Pacific,High income,2011,va,2.884655714035034,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,JPN,Japan,East Asia & Pacific,High income,2011,va,3.103488683700562,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,JPN,Japan,East Asia & Pacific,High income,2011,va,2.32541036605835,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,2.767175197601318,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,2.199522733688354,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,2.03160285949707,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,2.393205404281616,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,2.500308513641357,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,2.483906030654907,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,3.306199550628662,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,KOR,"Korea, Rep.",East Asia & Pacific,High income,2011,va,2.56315016746521,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,1.989588022232056,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,2.516289234161377,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,2.370720624923706,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,2.234330415725708,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,1.821541905403137,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,2.069230794906616,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,2.102760076522827,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MYS,Malaysia,East Asia & Pacific,Upper middle income,2011,va,2.118150949478149,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,2.219291687011719,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,2.341397523880005,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,2.736002445220947,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,2.660664558410645,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,1.947718501091003,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,2.354360342025757,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,2.467184782028198,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2012,va,2.211077690124512,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,1.951088309288025,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,2.159759521484375,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,2.782336950302124,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,2.131214618682861,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,2.129486799240112,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,1.929170370101929,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,1.935821533203125,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,KHM,Cambodia,East Asia & Pacific,Lower middle income,2012,va,1.865344166755676,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,1.884967803955078,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,2.06169605255127,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,2.266273498535156,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,2.612981557846069,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,2.185777425765991,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,2.792392492294312,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,2.846957921981812,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MNG,Mongolia,East Asia & Pacific,Upper middle income,2014,va,2.766392230987549,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,2.107268810272217,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,2.529058456420898,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,2.227439880371094,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,2.162358283996582,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,1.820969223976135,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,2.154613733291626,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,2.163591861724854,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MYS,Malaysia,East Asia & Pacific,Upper middle income,2014,va,2.146650791168213,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.66125226020813,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.414862871170044,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.216235876083374,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.379390478134155,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.050939559936523,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.164025068283081,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.676239490509033,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,PHL,Philippines,East Asia & Pacific,Lower middle income,2014,va,2.381560802459717,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,SGP,Singapore,East Asia & Pacific,High income,2014,va,2.057133674621582,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",SGP,Singapore,East Asia & Pacific,High income,2014,va,2.409430503845215,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,SGP,Singapore,East Asia & Pacific,High income,2014,va,2.961511850357056,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,SGP,Singapore,East Asia & Pacific,High income,2014,va,2.536349296569824,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,SGP,Singapore,East Asia & Pacific,High income,2014,va,2.622978448867798,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,SGP,Singapore,East Asia & Pacific,High income,2014,va,2.04362678527832,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,SGP,Singapore,East Asia & Pacific,High income,2014,va,2.030282974243164,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,1.734343290328979,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,2.649117231369019,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,2.826366901397705,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,2.276426553726196,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,1.779848098754883,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,2.519251585006714,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,2.393173694610596,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,THA,Thailand,East Asia & Pacific,Upper middle income,2014,va,2.282397508621216,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,2.580885887145996,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,2.311835527420044,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,2.214555501937866,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,2.564222097396851,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,2.172790050506592,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,2.664980411529541,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,3.02091646194458,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,TWN,"Taiwan, China",East Asia & Pacific,High income,2014,va,2.533087491989136,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,CHN,China,East Asia & Pacific,Upper middle income,2015,va,2.139011383056641,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,CHN,China,East Asia & Pacific,Upper middle income,2015,va,2.547572135925293,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,CHN,China,East Asia & Pacific,Upper middle income,2015,va,2.385816335678101,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,CHN,China,East Asia & Pacific,Upper middle income,2015,va,2.177876949310303,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,CHN,China,East Asia & Pacific,Upper middle income,2015,va,2.106594085693359,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,CHN,China,East Asia & Pacific,Upper middle income,2015,va,1.767954230308533,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.1834876537323,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.257927656173706,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.582999706268311,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.058026552200317,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.209657430648804,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.216007947921753,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.280784845352173,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,KHM,Cambodia,East Asia & Pacific,Lower middle income,2015,va,2.12289023399353,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,2.692372798919678,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,2.23733115196228,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,2.145991563796997,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,2.535102844238281,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,2.503784656524658,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,2.410212755203247,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,3.282718181610107,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,KOR,"Korea, Rep.",East Asia & Pacific,High income,2015,va,2.626700639724731,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,2.299015283584595,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,2.122022151947021,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,2.549878597259521,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,3.075506925582886,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,2.154985427856445,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,2.509902000427246,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,2.415527582168579,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MMR,Myanmar,East Asia & Pacific,Lower middle income,2015,va,2.477793216705322,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,1.652895212173462,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,2.461733341217041,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,2.324265003204346,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,2.157832145690918,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,1.91435170173645,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,1.945539116859436,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,1.578725099563599,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2015,va,1.844418406486511,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.32611608505249,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.477688550949097,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.95540189743042,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.698567628860474,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.201070070266724,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.635032176971436,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.646759748458862,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2016,va,2.472598552703857,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,IDN,Indonesia,East Asia & Pacific,Upper middle income,2016,va,1.913744688034058,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",IDN,Indonesia,East Asia & Pacific,Upper middle income,2016,va,2.532411336898804,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2016,va,2.423760414123535,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2016,va,1.826794981956482,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,IDN,Indonesia,East Asia & Pacific,Upper middle income,2016,va,1.985042691230774,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2016,va,2.260097026824951,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,IDN,Indonesia,East Asia & Pacific,Upper middle income,2016,va,2.554551839828491,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,JPN,Japan,East Asia & Pacific,High income,2016,va,2.702019929885864,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",JPN,Japan,East Asia & Pacific,High income,2016,va,2.170850276947021,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,JPN,Japan,East Asia & Pacific,High income,2016,va,2.316797494888306,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,JPN,Japan,East Asia & Pacific,High income,2016,va,2.522608757019043,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,JPN,Japan,East Asia & Pacific,High income,2016,va,2.496182203292847,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,JPN,Japan,East Asia & Pacific,High income,2016,va,2.799119234085083,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,JPN,Japan,East Asia & Pacific,High income,2016,va,2.94058632850647,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,JPN,Japan,East Asia & Pacific,High income,2016,va,2.342900037765503,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,AUS,Australia,East Asia & Pacific,High income,2018,va,2.56873345375061,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",AUS,Australia,East Asia & Pacific,High income,2018,va,2.163134813308716,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,AUS,Australia,East Asia & Pacific,High income,2018,va,2.289279460906982,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,AUS,Australia,East Asia & Pacific,High income,2018,va,2.263477563858032,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,AUS,Australia,East Asia & Pacific,High income,2018,va,2.449891567230225,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,AUS,Australia,East Asia & Pacific,High income,2018,va,2.131822109222412,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,AUS,Australia,East Asia & Pacific,High income,2018,va,2.356786489486694,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,AUS,Australia,East Asia & Pacific,High income,2018,va,4.395905017852783,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,AUS,Australia,East Asia & Pacific,High income,2018,va,2.89859676361084,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,2.003831386566162,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,2.069053173065186,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,1.779654860496521,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,1.913625121116638,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,2.696680068969727,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,2.100565195083618,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,2.269784450531006,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,2.953144311904907,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,3.993097543716431,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MNG,Mongolia,East Asia & Pacific,Upper middle income,2018,va,3.723733901977539,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.214404106140137,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.361983776092529,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.049094200134277,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.434217929840088,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.392068386077881,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.19092583656311,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,1.913347482681274,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.01171612739563,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.99053955078125,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,PHL,Philippines,East Asia & Pacific,Lower middle income,2018,va,2.621697425842285,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,2.445389986038208,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,2.47150707244873,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,1.895630955696106,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,2.333063364028931,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,2.359126329421997,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,1.85838782787323,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,2.056761741638184,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,2.647246122360229,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,4.166141986846924,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,TWN,"Taiwan, China",East Asia & Pacific,High income,2018,va,3.416687726974487,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,1.667754650115967,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.566962718963623,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.156767129898071,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,1.979385375976563,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.209978818893433,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.350688219070435,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.062612771987915,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.038676738739014,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.395753622055054,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2018,va,2.627191066741943,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,CHN,China,East Asia & Pacific,Upper middle income,2019,va,2.14165472984314,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,CHN,China,East Asia & Pacific,Upper middle income,2019,va,2.806084632873535,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,CHN,China,East Asia & Pacific,Upper middle income,2019,va,2.2539222240448,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,CHN,China,East Asia & Pacific,Upper middle income,2019,va,1.979474186897278,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,CHN,China,East Asia & Pacific,Upper middle income,2019,va,1.680770397186279,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,1.939304232597351,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.470085382461548,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.356583118438721,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.644467115402222,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.448826313018799,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.209302425384521,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.157934188842773,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.171452045440674,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.717598915100098,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,IDN,Indonesia,East Asia & Pacific,Upper middle income,2019,va,2.421379327774048,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,IND,India,South Asia,Lower middle income,2019,va,2.395416736602783,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",IND,India,South Asia,Lower middle income,2019,va,2.304232358932495,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,IND,India,South Asia,Lower middle income,2019,va,1.763943910598755,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,IND,India,South Asia,Lower middle income,2019,va,2.432554721832275,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,IND,India,South Asia,Lower middle income,2019,va,2.131982803344727,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",IND,India,South Asia,Lower middle income,2019,va,2.169769048690796,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,IND,India,South Asia,Lower middle income,2019,va,2.302568912506104,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,IND,India,South Asia,Lower middle income,2019,va,2.060843229293823,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,IND,India,South Asia,Lower middle income,2019,va,2.794310092926025,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,IND,India,South Asia,Lower middle income,2019,va,2.682709932327271,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,JPN,Japan,East Asia & Pacific,High income,2019,va,2.692934513092041,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",JPN,Japan,East Asia & Pacific,High income,2019,va,2.22634220123291,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,JPN,Japan,East Asia & Pacific,High income,2019,va,2.431234121322632,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,JPN,Japan,East Asia & Pacific,High income,2019,va,2.184242010116577,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,JPN,Japan,East Asia & Pacific,High income,2019,va,2.537545680999756,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",JPN,Japan,East Asia & Pacific,High income,2019,va,2.230440855026245,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,JPN,Japan,East Asia & Pacific,High income,2019,va,2.636934518814087,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,JPN,Japan,East Asia & Pacific,High income,2019,va,2.85901927947998,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,JPN,Japan,East Asia & Pacific,High income,2019,va,3.943264245986938,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,JPN,Japan,East Asia & Pacific,High income,2019,va,3.147650718688965,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.74889063835144,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.455147504806519,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.2676682472229,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.355840444564819,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.705453157424927,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.326112270355225,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.470316410064697,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,2.451750755310059,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,4.628016948699951,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,KOR,"Korea, Rep.",East Asia & Pacific,High income,2019,va,3.533879280090332,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.043987274169922,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.297508001327515,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,1.764356255531311,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.897674322128296,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.769582509994507,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.272322416305542,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.152767181396484,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.221237897872925,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.540912628173828,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MMR,Myanmar,East Asia & Pacific,Lower middle income,2019,va,2.510011672973633,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,2.166284561157227,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,2.770022392272949,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,1.661915898323059,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,2.13151216506958,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,2.219152212142944,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,2.335588216781616,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,1.835305333137512,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,2.213889360427856,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,3.149986267089844,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,MYS,Malaysia,East Asia & Pacific,Upper middle income,2019,va,2.874200820922852,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,1.658741354942322,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,2.622464179992676,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,2.048240900039673,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,2.879276990890503,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,2.185193777084351,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,2.960490226745605,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,1.870744943618774,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,2.243294954299927,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,3.208431482315063,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,THA,Thailand,East Asia & Pacific,Upper middle income,2019,va,3.026725292205811,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,SGP,Singapore,East Asia & Pacific,High income,2020,va,2.10891056060791,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",SGP,Singapore,East Asia & Pacific,High income,2020,va,2.362474203109741,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,SGP,Singapore,East Asia & Pacific,High income,2020,va,2.342201232910156,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,SGP,Singapore,East Asia & Pacific,High income,2020,va,2.796491384506226,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,SGP,Singapore,East Asia & Pacific,High income,2020,va,2.522604465484619,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",SGP,Singapore,East Asia & Pacific,High income,2020,va,2.372056722640991,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,SGP,Singapore,East Asia & Pacific,High income,2020,va,2.71472430229187,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,SGP,Singapore,East Asia & Pacific,High income,2020,va,2.233129501342773,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,SGP,Singapore,East Asia & Pacific,High income,2020,va,2.652794599533081,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,2.466749429702759,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,2.324927091598511,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,3.006762027740479,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,2.725502252578735,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,3.229628801345825,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,2.694109678268433,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,2.776711225509644,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,2.828636169433594,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,3.663304567337036,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,2021,va,3.629292011260986,1,6.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,1.954993009567261,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.420267105102539,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.098867893218994,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.614468097686768,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.488745927810669,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: In our country, parties and candidates not in power have opportunities to be elected into government",IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.125776290893555,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: People are free to speak what they think without fear,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.164764642715454,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: To what extent is the legislature capable of keeping government leaders in check?,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.280559539794922,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: Parliament,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.44685173034668,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Trust in Institutions: The election commission,IDN,Indonesia,East Asia & Pacific,Upper middle income,2021,va,2.197413206100464,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: All citizens from different ethnic communities in [Country X] are treated equally by the government,KHM,Cambodia,East Asia & Pacific,Lower middle income,2021,va,2.048091411590576,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,"Quality of Governance: Between elections, the people have no way of holding the government responsible for its actions",KHM,Cambodia,East Asia & Pacific,Lower middle income,2021,va,2.207989931106567,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: Citizens are able to remove a government they don’t like through elections,KHM,Cambodia,East Asia & Pacific,Lower middle income,2021,va,1.782339572906494,1,4.0,0
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do government officials withhold important information from the public?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2021,va,2.962460994720459,1,4.0,1
+ASB,Asian Barometer,Asian Barometer Survey,Quality of Governance: How often do you think our elections offer the voters a real choice between different parties/candidates?,KHM,Cambodia,East Asia & Pacific,Lower middle income,2021,va,2.021781206130981,1,4.0,0

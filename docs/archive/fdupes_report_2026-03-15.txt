@@ -1,0 +1,42 @@
+=== NAS Dedup Scan Report (2026-03-15) ===
+
+SCAN METHOD: Native jdupes on NAS via SSH (SynoCommunity synocli-file)
+SCAN TIME: ~5 seconds (vs hours over SMB)
+TOOL: jdupes 1.30.0
+
+TARGETS SCANNED:
+- /volume1/AI/archives (27GB)
+- /volume1/AI/infrastructure/backups (111GB)
+
+RESULTS:
+- Duplicate sets found: 65,072
+- Total duplicated space: 33.5 GB
+
+TOP 5 LARGEST DUPLICATE SETS:
+1. 18.6 GB - Qwen3-30B-A3B-Instruct model (3 copies)
+2. 8.5 GB - Large model file
+3. 928 MB - Model/archive file
+4. 709 MB - Model/archive file  
+5. 654 MB - Model/archive file
+
+OBSERVATIONS:
+- Most duplicates are between FAITHH_20250929T110020Z and FAITHH_backup folders
+- Large AI models duplicated multiple times (Qwen3-30B, nomic-embed-text)
+- Python venv files duplicated extensively (.exe, .pyi, .py files)
+- JSON config files duplicated across backup snapshots
+
+RECOMMENDATIONS:
+1. Keep ONE copy of large models, delete duplicates (~25GB recoverable)
+2. Consider incremental backups instead of full snapshots
+3. Use jdupes -rdN to auto-delete duplicates (CAREFUL - review first)
+
+FULL REPORT: /volume1/AI/jdupes_report.txt (28MB, 354K lines)
+
+WSL FDUPES NOTE:
+The WSL fdupes scan (over SMB) never completed - killed after producing
+only progress output. Native NAS scanning is the correct approach.
+
+=== LESSON LEARNED ===
+Always SSH to NAS and run tools natively. SMB overhead makes bulk
+file operations extremely slow. jdupes on NAS: 5 seconds. fdupes
+over SMB: would have taken hours.

@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-03-31T01:26:42.604923+00:00",
+  "allowlist_path": "reports/inventory/nas_ingest_allowlist.csv",
+  "allowlist_rows": 34,
+  "allowlist_by_ingestion_scope": {
+    "alife": 10,
+    "constella": 10,
+    "governance": 14
+  },
+  "staging": {
+    "intake_root": "/home/jonat/ai-stack/docs/data",
+    "staged_files_by_folder": {
+      "governance_sources/nas_import": 14,
+      "alife_sources/nas_import": 10,
+      "constella_sources/nas_import": 9
+    },
+    "note": "Folder counts are all regular files present after staging (non-destructive copy)."
+  },
+  "policy_applied": {
+    "review_status": "approved_only",
+    "domain_group_excludes": [
+      "personal"
+    ],
+    "sensitivity_excludes": [
+      "private"
+    ],
+    "ingestion_scope_in": [
+      "governance",
+      "alife",
+      "constella"
+    ]
+  },
+  "last_stage_script_stdout_summary": {
+    "staged": 33,
+    "failed": 0,
+    "skipped_extension": 1,
+    "limit": 200
+  },
+  "allowlist_rows_skipped_by_extension_filter": [
+    {
+      "path": "/volume1/AI/projects/Constella_Field_Archive_v1/Constella_Onboarding_Field_Guide.pdf",
+      "ingestion_scope": "constella",
+      "extension": ".pdf"
+    }
+  ],
+  "allowed_extensions_for_staging": [
+    ".csv",
+    ".json",
+    ".md",
+    ".txt",
+    ".yaml",
+    ".yml"
+  ]
+}

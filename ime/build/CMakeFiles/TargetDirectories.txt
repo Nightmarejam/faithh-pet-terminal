@@ -1,0 +1,5 @@
+/home/jonat/ai-stack/ime/build/CMakeFiles/ime.dir
+/home/jonat/ai-stack/ime/build/CMakeFiles/test_ime.dir
+/home/jonat/ai-stack/ime/build/CMakeFiles/test.dir
+/home/jonat/ai-stack/ime/build/CMakeFiles/edit_cache.dir
+/home/jonat/ai-stack/ime/build/CMakeFiles/rebuild_cache.dir

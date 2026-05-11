@@ -1,0 +1,15 @@
+track_id,track_name,gate_id,title,status,blocker,export_date
+T1,Resonant compressor build,C1,Validate mechanoionic transduction,in_progress,Parts order,2026-04-07
+T1,Resonant compressor build,C2,Characterize resonant nodes,pending,,2026-04-07
+T1,Resonant compressor build,C3,Upgrade ionic interface,pending,,2026-04-07
+T1,Resonant compressor build,C4,Transformer core selection,completed,,2026-04-07
+T1,Resonant compressor build,C5,Tegeler Creme mod platform,completed,,2026-04-07
+T1,Resonant compressor build,C6,Ground-up compressor build — first pass,pending,Blocked until C1 parts on hand,2026-04-07
+T1,Resonant compressor build,C7,Voicing and refinement,pending,,2026-04-07
+T2,ALife experiments,A1,Define experiment spec,in_progress,,2026-04-07
+T2,ALife experiments,A2,Baseline simulation (Gray-Scott),pending,,2026-04-07
+T2,ALife experiments,A3,Add third dampening species,pending,,2026-04-07
+T2,ALife experiments,A4,Mutable prior,pending,,2026-04-07
+T2,ALife experiments,A5,FAITHH integration / corpus seeding,pending,,2026-04-07
+T5,Plugin development (JUCE),PL1,Create fgs-plugins GitHub + Projucer template,pending,Repo creation,2026-04-07
+T5,Plugin development (JUCE),PBI1,Power BI template automation via pbi-tools / REST API,planned,Microsoft 365 account / workspace,2026-04-07

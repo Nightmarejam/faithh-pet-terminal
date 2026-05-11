@@ -1,0 +1,211 @@
+{
+  "experiment": "exp9_complex_cultural_evolution",
+  "date": "2026-03-26T20:04:28.701474",
+  "parameters": {
+    "max_ticks": 40000,
+    "population": 60,
+    "protocol_complexity_levels": 5,
+    "cultural_memory_size": 15,
+    "innovation_rate": 0.03,
+    "transmission_fidelity": 0.85,
+    "generation_interval": 8000,
+    "cultural_centers": 3
+  },
+  "results": {
+    "total_protocols": 19889,
+    "avg_complexity": 2.1272562723113277,
+    "max_complexity": 5,
+    "knowledge_diversity": 6,
+    "cultural_diversity": 109,
+    "generations": 5,
+    "role_specialization": 0.933816945485606,
+    "cultural_accumulation": 0.0011061390718487606,
+    "transmission_events": 147444,
+    "persistent_protocols": 22,
+    "role_distribution": {
+      "integrator": 3,
+      "innovator": 3,
+      "archivist": 4,
+      "teacher": 1
+    }
+  },
+  "success_criteria": {
+    "complex_protocol_evolution": false,
+    "cultural_accumulation": false,
+    "social_specialization": false,
+    "multi_generational_persistence": true
+  },
+  "cultural_evolution_history": [
+    {
+      "tick": 31000,
+      "generation": 3,
+      "total_protocols": 16916,
+      "avg_complexity": 2.149858122487586,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 4,
+        "archivist": 7,
+        "innovator": 5,
+        "teacher": 3
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 108,
+      "total_transmissions": 146064,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 32000,
+      "generation": 4,
+      "total_protocols": 17283,
+      "avg_complexity": 2.147254527570445,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 108,
+      "total_transmissions": 146518,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 33000,
+      "generation": 4,
+      "total_protocols": 17588,
+      "avg_complexity": 2.143791221287241,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 146628,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 34000,
+      "generation": 4,
+      "total_protocols": 17892,
+      "avg_complexity": 2.1407332886206127,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 146737,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 35000,
+      "generation": 4,
+      "total_protocols": 18235,
+      "avg_complexity": 2.1378119001919385,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 146846,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 36000,
+      "generation": 4,
+      "total_protocols": 18560,
+      "avg_complexity": 2.1374461206896553,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 146966,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 37000,
+      "generation": 4,
+      "total_protocols": 18888,
+      "avg_complexity": 2.134900465904278,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 147074,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 38000,
+      "generation": 4,
+      "total_protocols": 19237,
+      "avg_complexity": 2.1335447315069915,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 147177,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 39000,
+      "generation": 4,
+      "total_protocols": 19557,
+      "avg_complexity": 2.130899422201769,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "archivist": 6,
+        "innovator": 4,
+        "teacher": 2
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 147296,
+      "persistent_protocols": 22
+    },
+    {
+      "tick": 40000,
+      "generation": 5,
+      "total_protocols": 19889,
+      "avg_complexity": 2.1272562723113277,
+      "max_complexity": 5,
+      "role_distribution": {
+        "integrator": 3,
+        "innovator": 3,
+        "archivist": 4,
+        "teacher": 1
+      },
+      "knowledge_diversity": 6,
+      "cultural_diversity": 109,
+      "total_transmissions": 147444,
+      "persistent_protocols": 22
+    }
+  ],
+  "transmission_events": 147444
+}

@@ -1,0 +1,57 @@
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+
+  Connecting to ChromaDB at 100.79.85.32:8000...
+  Connected. 42,370 chunks in faithh_knowledge_base
+  Sampling 500 chunks...
+  Classifying 500 chunks...
+
+==============================================================
+  [1mFAITHH ChromaDB Audit Report[0m
+  2026-03-12 07:43 UTC
+  Sample: 500 of 42,370 total chunks
+==============================================================
+
+  [1mSIGNAL vs NOISE[0m
+  [91m█████████[0m[2m░░░░░░░░░░░[0m  [91m45% signal[0m / [91m55% noise[0m
+  Avg quality score: [91m0.58[0m
+
+  Extrapolated from 500 sample → 42,370 total:
+  [92m~19,066 signal chunks[0m  / [91m~23,304 noise chunks[0m
+
+  [1mTYPE BREAKDOWN[0m
+  [92m[SIGNAL][0m technical_explanation     [92m███████[0m  113 (23%)
+  [91m[NOISE][0m terminal_command          [91m█████[0m   81 (16%)
+  [92m[SIGNAL][0m project_discussion        [92m███[0m   52 (10%)
+  [91m[NOISE][0m log_entry                 [91m███[0m   51 (10%)
+  [91m[NOISE][0m health_log                [91m███[0m   45 (9%)
+  [91m[NOISE][0m json_data                 [91m███[0m   45 (9%)
+  [92m[SIGNAL][0m document_content          [92m██[0m   33 (7%)
+  [91m[NOISE][0m stack_trace               [91m█[0m   26 (5%)
+  [92m[SIGNAL][0m conversation              [92m█[0m   20 (4%)
+  [91m[NOISE][0m metric_data               [91m█[0m   16 (3%)
+  [93m[?][0m unknown                   [93m█[0m   13 (3%)
+  [92m[SIGNAL][0m decision                  [92m█[0m    5 (1%)
+
+  [1mPROJECTED COLLECTION DISTRIBUTION[0m
+  faithh_system_logs                  ~18,643 chunks (44%)
+  faithh_documents                    ~12,287 chunks (29%)
+  faithh_conversations                ~ 5,932 chunks (14%)
+  faithh_ephemeral                    ~ 3,813 chunks (9%)
+  faithh_unclassified                 ~ 1,271 chunks (3%)
+  faithh_decisions                    ~   424 chunks (1%)
+
+  [93mUNCLASSIFIED: 13 chunks need review[0m
+
+  [1mRECOMMENDATIONS[0m
+  [91m✗[0m HIGH NOISE. Collection split is urgent.
+    ~23,304 chunks are degrading RAG search quality right now.
+    Recommend immediate reindex with gating rules.
+
+  [1mTTL ANALYSIS[0m
+  53% of chunks have TTL ≤ 30 days → ~22,456 chunks pruneable now
+  A nightly TTL sweep would keep database at ~19,914 chunks
+
+==============================================================
+
+  Exported to: /home/jonat/ai-stack/docs/archive/chroma_audit_2026-03-12.json
+  500 labeled samples saved (future ML training data)

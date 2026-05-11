@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-03-31T00:01:23.498527+00:00",
+  "input_root": "/home/jonat/ai-stack/docs/data/governance_sources",
+  "dry_run": true,
+  "files_discovered": 1,
+  "accepted_files": 1,
+  "skipped_files": 0,
+  "documents_prepared": 1,
+  "accepted": [
+    {
+      "path": "/home/jonat/ai-stack/docs/data/governance_sources/README.md",
+      "source_class": "charter",
+      "chunks": 1,
+      "content_hash": "3b645ada1ea6bcc4e8c653f547574ad0270d46a77dad6fcef5f748c51963c9c2"
+    }
+  ],
+  "skipped": []
+}

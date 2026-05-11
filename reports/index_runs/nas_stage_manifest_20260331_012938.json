@@ -1,0 +1,254 @@
+{
+  "timestamp_utc": "2026-03-31T01:29:38.127526+00:00",
+  "allowlist_path": "reports/inventory/nas_ingest_allowlist.csv",
+  "intake_root": "/home/jonat/ai-stack/docs/data",
+  "ssh_host": "nas",
+  "overwrite": false,
+  "extension_allowlist": [
+    ".csv",
+    ".json",
+    ".md",
+    ".txt",
+    ".yaml",
+    ".yml"
+  ],
+  "staging_limit": 200,
+  "hit_limit": false,
+  "policy_enforced_at_staging": {
+    "domain_group_not_personal": true,
+    "review_status_eq_approved": true,
+    "ingestion_scope_in": [
+      "alife",
+      "constella",
+      "governance"
+    ],
+    "sensitivity_not_private": true
+  },
+  "counters": {
+    "rows_in_allowlist_csv": 34,
+    "staged": 21,
+    "fetch_failed": 12,
+    "skipped_extension": 1,
+    "skipped_policy": 0,
+    "skipped_destination_exists": 0,
+    "skipped_limit": 0
+  },
+  "files": [
+    {
+      "source": "/volume1/AI/projects/Constella_Field_Archive_v1/Constella_Onboarding_Field_Guide.pdf",
+      "action": "skipped_extension",
+      "ingestion_scope": "constella",
+      "extension": ".pdf"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1beta.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1beta.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/civicinfo.v2.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/civicinfo.v2.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/genomics.v2alpha1.json",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/genomics.v2alpha1.json",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policyanalyzer.v1beta1.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policyanalyzer.v1beta1.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/bigquerydatapolicy.v1.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/bigquerydatapolicy.v1.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/chromepolicy.v1.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/chromepolicy.v1.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policyanalyzer.v1.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policyanalyzer.v1.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/datalineage.v1.json",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/datalineage.v1.json",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1beta1.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1beta1.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policytroubleshooter.v1.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policytroubleshooter.v1.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/genomics.v1.json",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/genomics.v1.json",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policytroubleshooter.v1beta.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policytroubleshooter.v1beta.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/orgpolicy.v2.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/orgpolicy.v2.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1alpha.json",
+      "action": "staged",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1alpha.json",
+      "ingestion_scope": "governance"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/genomics.v1alpha2.json",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/genomics.v1alpha2.json",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/litellm/proxy/_experimental/out/index.txt",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/litellm/proxy/_experimental/out/index.txt",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/litellm/proxy/_experimental/out/model_hub.txt",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/litellm/proxy/_experimental/out/model_hub.txt",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/litellm/proxy/_experimental/out/onboarding.txt",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/litellm/proxy/_experimental/out/onboarding.txt",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/langchain_experimental/cpal/README.md",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/.venv/Lib/site-packages/langchain_experimental/cpal/README.md",
+      "ingestion_scope": "alife"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/grok_texts/Constella v1_5_4_ Glossary and Priorities.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/grok_texts/Constella v1_5_4_ Glossary and Priorities.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/grok_texts/Constella: No such file or directory\ncat: v1_5_4_: No such file or directory\ncat: Glossary: No such file or directory\ncat: and: No such file or directory\ncat: Priorities.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/grok_texts/Constella Framework GitHub Repository Inquiry.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/grok_texts/Constella Framework GitHub Repository Inquiry.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/grok_texts/Constella: No such file or directory\ncat: Framework: No such file or directory\ncat: GitHub: No such file or directory\ncat: Repository: No such file or directory\ncat: Inquiry.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella v1_5_5 Priority Thread Ranking.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella v1_5_5 Priority Thread Ranking.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella: No such file or directory\ncat: v1_5_5: No such file or directory\ncat: Priority: No such file or directory\ncat: Thread: No such file or directory\ncat: Ranking.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Experimental Review Ranking Framework.txt",
+      "action": "fetch_failed",
+      "local_path": "alife_sources/nas_import/AI/infrastructure/backups/Conversation_exports/claude_texts/Experimental Review Ranking Framework.txt",
+      "ingestion_scope": "alife",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Experimental: No such file or directory\ncat: Review: No such file or directory\ncat: Ranking: No such file or directory\ncat: Framework.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella v1_5_5 AI Document Review.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella v1_5_5 AI Document Review.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella: No such file or directory\ncat: v1_5_5: No such file or directory\ncat: AI: No such file or directory\ncat: Document: No such file or directory\ncat: Review.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Civic Governance Framework Design.txt",
+      "action": "fetch_failed",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/Conversation_exports/claude_texts/Civic Governance Framework Design.txt",
+      "ingestion_scope": "governance",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Civic: No such file or directory\ncat: Governance: No such file or directory\ncat: Framework: No such file or directory\ncat: Design.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella Framework Critical Analysis.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella Framework Critical Analysis.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella: No such file or directory\ncat: Framework: No such file or directory\ncat: Critical: No such file or directory\ncat: Analysis.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella v1_5_5 AI Review Protocol.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella v1_5_5 AI Review Protocol.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/claude_texts/Constella: No such file or directory\ncat: v1_5_5: No such file or directory\ncat: AI: No such file or directory\ncat: Review: No such file or directory\ncat: Protocol.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Protecting Citizen Rights.txt",
+      "action": "fetch_failed",
+      "local_path": "governance_sources/nas_import/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Protecting Citizen Rights.txt",
+      "ingestion_scope": "governance",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Protecting: No such file or directory\ncat: Citizen: No such file or directory\ncat: Rights.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Attacking stocks with Constella.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Attacking stocks with Constella.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Attacking: No such file or directory\ncat: stocks: No such file or directory\ncat: with: No such file or directory\ncat: Constella.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Review Constella markdown.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Review Constella markdown.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Review: No such file or directory\ncat: Constella: No such file or directory\ncat: markdown.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Prioritizing Constella threads.txt",
+      "action": "fetch_failed",
+      "local_path": "constella_sources/nas_import/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Prioritizing Constella threads.txt",
+      "ingestion_scope": "constella",
+      "detail": "cat: /volume1/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Prioritizing: No such file or directory\ncat: Constella: No such file or directory\ncat: threads.txt: No such file or directory"
+    },
+    {
+      "source": "/volume1/projects/alife/results/exp5_parasitic_drain15_results.json",
+      "action": "staged",
+      "local_path": "alife_sources/nas_import/projects/alife/results/exp5_parasitic_drain15_results.json",
+      "ingestion_scope": "alife"
+    }
+  ]
+}

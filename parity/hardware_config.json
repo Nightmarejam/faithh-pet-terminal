@@ -1,0 +1,109 @@
+{
+  "last_updated": "2026-02-25T04:47:41.213585",
+  "cpu": {
+    "model": "AMD Ryzen 9 3900X 12-Core Processor",
+    "cores_physical": 12,
+    "cores_logical": 24,
+    "frequency_mhz": {
+      "current": 3792.8880000000013,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "usage_percent": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "usage_average": 0.6
+  },
+  "memory_total_gb": 47.04,
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce GTX 1080 Ti",
+      "memory_total_mb": 11264.0,
+      "pcie_gen": 3,
+      "pcie_width": 1
+    },
+    {
+      "index": 1,
+      "name": "NVIDIA GeForce RTX 3090",
+      "memory_total_mb": 24576.0,
+      "pcie_gen": 4,
+      "pcie_width": 16
+    }
+  ],
+  "storage": [
+    {
+      "device": "/dev/sdd",
+      "mountpoint": "/",
+      "fstype": "ext4",
+      "total_gb": 1006.85,
+      "used_gb": 281.11,
+      "free_gb": 674.53,
+      "percent_used": 29.4
+    },
+    {
+      "device": "/dev/sdd",
+      "mountpoint": "/mnt/wslg/distro",
+      "fstype": "ext4",
+      "total_gb": 1006.85,
+      "used_gb": 281.11,
+      "free_gb": 674.53,
+      "percent_used": 29.4
+    },
+    {
+      "device": "/dev/sdd",
+      "mountpoint": "/snap",
+      "fstype": "ext4",
+      "total_gb": 1006.85,
+      "used_gb": 281.11,
+      "free_gb": 674.53,
+      "percent_used": 29.4
+    },
+    {
+      "device": "/dev/sdd",
+      "mountpoint": "/var/lib/docker",
+      "fstype": "ext4",
+      "total_gb": 1006.85,
+      "used_gb": 281.11,
+      "free_gb": 674.53,
+      "percent_used": 29.4
+    }
+  ],
+  "network_interfaces": [
+    "lo",
+    "eth0",
+    "eth1",
+    "docker0",
+    "br-9f70d9cf7ad4",
+    "loopback0",
+    "veth944d10a",
+    "veth71978d8",
+    "vethdb51cee",
+    "veth5db585b",
+    "vethddb035e",
+    "vethc1e3bf8"
+  ]
+}

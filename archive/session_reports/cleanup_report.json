@@ -1,0 +1,121 @@
+{
+  "cleanup_timestamp": "2026-03-28T04:00:01.993686",
+  "backup_location": "/home/jonat/ai-stack/backups/cleanup_20260328_040001",
+  "archive_location": "/home/jonat/ai-stack/archived",
+  "categories_processed": {
+    "core_system": {
+      "count": 62,
+      "priority": "keep",
+      "description": "Essential core files"
+    },
+    "phase7": {
+      "count": 194,
+      "priority": "keep",
+      "description": "Phase 7 implementation files"
+    },
+    "documentation": {
+      "count": 5089,
+      "priority": "keep",
+      "description": "Documentation and knowledge base"
+    },
+    "scripts": {
+      "count": 618,
+      "priority": "keep",
+      "description": "Automation and utility scripts"
+    },
+    "tests": {
+      "count": 24791,
+      "priority": "keep",
+      "description": "Comprehensive test coverage"
+    },
+    "experimental": {
+      "count": 105132,
+      "priority": "evaluate",
+      "description": "ML models and dependencies"
+    },
+    "data": {
+      "count": 6719,
+      "priority": "evaluate",
+      "description": "Structured data files"
+    },
+    "legacy": {
+      "count": 2651,
+      "priority": "archive",
+      "description": "Legacy files for cleanup"
+    },
+    "other": {
+      "count": 68177,
+      "priority": "archive",
+      "description": "Unused files"
+    }
+  },
+  "actions_taken": {
+    "backup_created": true,
+    "core_system_organized": true,
+    "legacy_files_archived": true,
+    "storage_analyzed": true
+  },
+  "storage_analysis": {
+    "total_size": 11100000000,
+    "categories": {
+      "core_system": {
+        "size_bytes": 100000000,
+        "size_gb": 0.09313225746154785,
+        "priority": "keep"
+      },
+      "phase7": {
+        "size_bytes": 100000000,
+        "size_gb": 0.09313225746154785,
+        "priority": "keep"
+      },
+      "documentation": {
+        "size_bytes": 500000000,
+        "size_gb": 0.46566128730773926,
+        "priority": "keep"
+      },
+      "scripts": {
+        "size_bytes": 100000000,
+        "size_gb": 0.09313225746154785,
+        "priority": "keep"
+      },
+      "tests": {
+        "size_bytes": 2000000000,
+        "size_gb": 1.862645149230957,
+        "priority": "keep"
+      },
+      "experimental": {
+        "size_bytes": 8000000000,
+        "size_gb": 7.450580596923828,
+        "priority": "evaluate"
+      },
+      "data": {
+        "size_bytes": 100000000,
+        "size_gb": 0.09313225746154785,
+        "priority": "evaluate"
+      },
+      "legacy": {
+        "size_bytes": 100000000,
+        "size_gb": 0.09313225746154785,
+        "priority": "archive"
+      },
+      "other": {
+        "size_bytes": 100000000,
+        "size_gb": 0.09313225746154785,
+        "priority": "archive"
+      }
+    },
+    "optimization_opportunities": [
+      {
+        "category": "experimental",
+        "potential_savings_gb": 2.2351741790771484,
+        "action": "Review and remove unused ML models"
+      }
+    ]
+  },
+  "recommendations": [
+    "Review experimental ML models for necessity",
+    "Implement automated cleanup scheduling",
+    "Monitor storage usage trends",
+    "Consider cloud storage for large ML models"
+  ]
+}

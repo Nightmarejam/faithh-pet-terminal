@@ -1,0 +1,57 @@
+{
+  "date": "2026-03-14",
+  "activity_level": "\ud83d\udcdd Light",
+  "git": {
+    "commits": [
+      "0336adc feat: live cockpit data + model A/B compare"
+    ],
+    "commit_count": 1,
+    "files_changed": [
+      "faithh_cockpit.html",
+      "faithh_professional_backend_fixed.py"
+    ],
+    "files_changed_count": 2,
+    "stats": [
+      "2 files changed, 1159 insertions(+)"
+    ]
+  },
+  "conversations": {
+    "count": 0,
+    "conversations": [],
+    "note": "Shows conversations indexed on this date, not original conversation dates"
+  },
+  "pulse_reports": {
+    "staleness": {
+      "generated": "2026-03-14T02:30:25.438944",
+      "summary": [
+        "- **Critical:** 0 files",
+        "- **Warning:** 0 files",
+        "- **OK:** 57 files"
+      ]
+    },
+    "divergence": {
+      "generated": "2026-03-14T02:45:12.367693",
+      "summary": [
+        "- \u2753 **unknown:** 18"
+      ]
+    },
+    "branches": {
+      "generated": "2026-03-14T03:00:09.525938",
+      "summary": []
+    }
+  },
+  "collector_activity": {
+    "entries": 428,
+    "sample": [
+      "2026-03-14 00:00:04,862 - __main__ - INFO - Running terminal collector...",
+      "2026-03-14 00:00:04,862 - __main__ - INFO - Running terminal collector...",
+      "2026-03-14 00:00:04,862 - scripts.collectors.collector_runner - INFO - Running terminal (attempt 1/3)",
+      "2026-03-14 00:00:04,862 - scripts.collectors.collector_runner - INFO - Running terminal (attempt 1/3)",
+      "2026-03-14 00:00:04,863 - __main__ - INFO - Running git collector..."
+    ]
+  },
+  "work_log": [],
+  "decisions": [],
+  "generated_at": "2026-03-14T03:15:09.285320",
+  "summary": null
+}

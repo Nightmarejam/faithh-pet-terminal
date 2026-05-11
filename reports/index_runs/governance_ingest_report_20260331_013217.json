@@ -1,0 +1,124 @@
+{
+  "timestamp_utc": "2026-03-31T01:32:17.688659+00:00",
+  "input_root": "docs/data/governance_sources/nas_import",
+  "dry_run": false,
+  "files_discovered": 28,
+  "accepted_files": 0,
+  "skipped_files": 28,
+  "documents_prepared": 0,
+  "accepted": [],
+  "skipped": [
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/Conversation_exports/chatgpt_texts/Protecting Citizen Rights.txt",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/Conversation_exports/claude_texts/Civic Governance Framework Design.txt",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/bigquerydatapolicy.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/chromepolicy.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/civicinfo.v2.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/orgpolicy.v2.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policyanalyzer.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policyanalyzer.v1beta1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1alpha.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1beta.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policysimulator.v1beta1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policytroubleshooter.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/AI/infrastructure/backups/FAITHH_20250929T110020Z/archives/policytroubleshooter.v1beta.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/Civic Governance Framework Design.txt",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/Protecting Citizen Rights.txt",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/bigquerydatapolicy.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/chromepolicy.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/civicinfo.v2.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/orgpolicy.v2.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policyanalyzer.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policyanalyzer.v1beta1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1alpha.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1beta.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1beta1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policytroubleshooter.v1.json",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policytroubleshooter.v1beta.json",
+      "reason": "duplicate_hash"
+    }
+  ]
+}

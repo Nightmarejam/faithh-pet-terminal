@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "2026-03-31T02:49:00.990382+00:00",
+  "queue_path": "reports/inventory/x_staging_conversion_queue.csv",
+  "vdem_zip_rows_seen": 2,
+  "successful_extractions": 2,
+  "failures": [],
+  "extractions": [
+    {
+      "zip_path": "/mnt/c/Users/jonat/x_staging_cache/V-Dem-CD-v16_csv.zip",
+      "csv_member": "V-Dem-CD-v16.csv",
+      "csv_member_size_bytes": 840699684,
+      "rows_per_chunk": 25000,
+      "max_rows_per_file": 150000,
+      "data_rows_written": 78878,
+      "chunk_files_created": 4,
+      "schema_md": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/_vdem_chunk_schema.md",
+      "chunk_files": [
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_001.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_002.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_003.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_004.csv"
+      ]
+    },
+    {
+      "zip_path": "/mnt/c/Users/jonat/x_staging_cache/V-Dem-Coder-Level-v16_csv.zip",
+      "csv_member": "Coder-Level-Dataset-v16.csv",
+      "csv_member_size_bytes": 1863094606,
+      "rows_per_chunk": 25000,
+      "max_rows_per_file": 150000,
+      "data_rows_written": 150000,
+      "chunk_files_created": 6,
+      "schema_md": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/_vdem_chunk_schema.md",
+      "chunk_files": [
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_001.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_002.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_003.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_004.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_005.csv",
+        "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_006.csv"
+      ]
+    }
+  ]
+}

@@ -1,88 +1,27 @@
-# ============================================================
-# .cursorignore — hard exclusions for AI access (best-effort)
-# Keep this focused on secrets/private material.
-# Use .cursorindexingignore for large/noisy-but-nonsecret files.
-# ============================================================
+# WSL2 / 9P containment — keep Cursor from hammering heavy paths during agent sessions.
+# See handoff: WSL Crash Recovery — Cursor Server Reinstall Loop (2026-04-10).
 
-# Secrets and environment material
-.env
-.env.*
-*.env
-.envrc
-.env_backup
-secrets/
-private/
-**/private/
-**/secrets/
+**/chroma_db/**
+**/chroma/**
+**/.chroma/**
 
-# SSH and key material
-*.pem
-*.key
-*.p12
-*.pfx
-id_rsa
-id_rsa.pub
-id_ed25519
-id_ed25519.pub
-known_hosts
-authorized_keys
-.ssh/
-
-# Auth/token files
-*.token
-*.auth
-auth.json
-credentials.json
-service_account*.json
-**/*token*.json
-**/*secret*.json
-
-# VPN/tunnel secrets (target explicit files, not all .conf)
-tailscale-auth*
-wg*.conf
-**/wireguard/*.conf
-
-# Databases and vector-store runtime state
-chroma_data/
-chromadb/
-persist/
-*.chroma
-*.sqlite
-*.db
-
-# Local logs/runtime artifacts
+docs/current_file_inventory.log
+docs/db_map_raw_*.json
 *.log
-logs/
-log/
-backend.log*
 
-# Large local model artifacts
-models/
-*.gguf
-*.safetensors
-*.onnx
-*.pt
-*.pth
-*.bin
-*.h5
-
-# Build/runtime caches
+venv/
 __pycache__/
+**/__pycache__/
 *.pyc
 *.pyo
-*.pyd
-*.egg-info/
-dist/
-build/
-.eggs/
-venv/
-.venv/
-env/
-node_modules/
 
-# OS/editor junk
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-.idea/
+node_modules/
+.git/
+
+archive/
+
+faithh_pet_v4.html
+faithh_cockpit.html
+
+staging/
+tmp/

@@ -1,132 +1,220 @@
-#!/usr/bin/env bash
-# Restart FAITHH Flask backend in tmux session `faithh`.
-#
-# Important: this script does NOT start vLLM / OpenAI-compatible servers unless you opt in.
-# `restart_backend.sh` only starts the Python API (port 5557 by default). vLLM usually listens
-# on :8000 with a separate process — start it manually (tmux session `vllm`) or set VLLM_AUTOSTART=1
-# plus VLLM_START_CMD in ~/ai-stack/.env (see docs/ops/LEAN_LLM_VLLM_FIRST.md).
+#!/bin/bash
+# FAITHH Backend - Clean Shutdown & Restart
+# Gracefully stops all backend instances and restarts cleanly
 
-set -euo pipefail
+echo "🛑 FAITHH Backend - Clean Shutdown & Restart"
+echo "================================================"
+echo ""
 
-REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
+PY="$REPO_DIR/venv/bin/python"
+
+if [ ! -x "$PY" ]; then
+    echo "❌ Python not found at $PY"
+    echo "   Activate or create the venv at ./venv before running this script."
+    exit 1
+fi
+
+# Step 0: Kill ghost workers (gunicorn / duplicate backend) so new code always loads
+echo "🧹 Step 0: Stopping gunicorn and stray faithh_professional_backend_fixed.py (pkill)..."
+pkill -f "gunicorn" 2>/dev/null || true
+pkill -f "faithh_professional_backend_fixed.py" 2>/dev/null || true
+sleep 1
+
+# Step 1: Find all running instances
+echo "📋 Step 1: Finding running instances..."
+PIDS=$(ps aux | grep "faithh_professional_backend" | grep -v grep | awk '{print $2}')
+
+if [ -z "$PIDS" ]; then
+    echo "   ✅ No backend instances running"
+else
+    echo "   Found instances: $PIDS"
+    
+    # Step 2: Graceful shutdown (SIGTERM)
+    echo ""
+    echo "🔄 Step 2: Sending graceful shutdown signal (SIGTERM)..."
+    for PID in $PIDS; do
+        echo "   Stopping PID $PID..."
+        kill $PID 2>/dev/null
+    done
+    
+    # Wait for graceful shutdown
+    echo "   Waiting 3 seconds for graceful shutdown..."
+    sleep 3
+    
+    # Step 3: Check if still running
+    REMAINING=$(ps aux | grep "faithh_professional_backend" | grep -v grep | awk '{print $2}')
+    
+    if [ ! -z "$REMAINING" ]; then
+        echo ""
+        echo "⚠️  Step 3: Some processes still running, forcing shutdown (SIGKILL)..."
+        for PID in $REMAINING; do
+            echo "   Force killing PID $PID..."
+            kill -9 $PID 2>/dev/null
+        done
+        sleep 1
+    else
+        echo "   ✅ All instances stopped gracefully"
+    fi
+fi
+
+# Step 4: Check port is free
+echo ""
+echo "🔍 Step 4: Checking port 5557..."
+PORT_CHECK=$(lsof -i :5557 2>/dev/null)
+
+if [ ! -z "$PORT_CHECK" ]; then
+    echo "   ⚠️  Port 5557 still in use!"
+    echo "$PORT_CHECK"
+    echo ""
+    echo "   Forcing port release..."
+    fuser -k 5557/tcp 2>/dev/null
+    sleep 2
+fi
+
+echo "   ✅ Port 5557 is free"
+
+# Step 4b (optional): warm Ollama so first /api/chat avoids cold model load
+# Enable with: OLLAMA_WARMUP=1 ./restart_backend.sh
+# Override model: OLLAMA_WARMUP_MODEL=my-model:tag
+if [ "${OLLAMA_WARMUP:-0}" = "1" ] || [ "${OLLAMA_WARMUP:-}" = "true" ]; then
+    OLLAMA_BASE="${OLLAMA_HOST:-http://127.0.0.1:11434}"
+    OLLAMA_BASE="${OLLAMA_BASE%/}"
+    WARM_MODEL="${OLLAMA_WARMUP_MODEL:-qwen25-faithh-v3:latest}"
+    echo ""
+    echo "🔥 Step 4b: Ollama warm-up (model=${WARM_MODEL})..."
+    if curl -sS -m 180 -X POST "${OLLAMA_BASE}/api/generate" \
+        -H "Content-Type: application/json" \
+        -d "{\"model\":\"${WARM_MODEL}\",\"prompt\":\".\",\"stream\":false,\"options\":{\"num_predict\":8}}" \
+        -o /dev/null 2>/dev/null; then
+        echo "   ✅ Ollama generate OK (${OLLAMA_BASE})"
+    else
+        echo "   ⚠️  Ollama warm-up failed or timed out (non-fatal — continuing)"
+    fi
+fi
+
+# Step 5: Start fresh backend
+echo ""
+echo "🚀 Step 5: Starting fresh backend..."
 cd "$REPO_DIR"
 
+# Load .env so CUDA_VISIBLE_DEVICES, API keys, etc. apply to the backend process
 ENV_FILE="$REPO_DIR/.env"
-if [[ -f "$ENV_FILE" ]]; then
-  echo "📄 Loading $ENV_FILE"
-  set -a
-  # shellcheck disable=SC1090
-  source "$ENV_FILE"
-  set +a
+if [ -f "$ENV_FILE" ]; then
+    echo "📄 Loading environment from .env"
+    set -a
+    # shellcheck disable=SC1090
+    . "$ENV_FILE"
+    set +a
 else
-  echo "   (no .env — copy a template and set CHROMA_*, keys, etc.)"
+    echo "   (no .env file — copy .env.example to .env for CUDA/API keys)"
 fi
 
-# Flask entrypoint (override with FAITHH_MAIN in .env). Slim clones may not have faithh_professional_backend_fixed.py.
-if [[ -z "${FAITHH_MAIN:-}" ]]; then
-  for candidate in \
-      faithh_professional_backend_fixed.py \
-      backend/faithh_enhanced_backend.py \
-      backend/faithh_backend_adapter.py; do
-    if [[ -f "$REPO_DIR/$candidate" ]]; then
-      FAITHH_MAIN=$candidate
-      break
-    fi
-  done
-fi
-if [[ -z "${FAITHH_MAIN:-}" ]] || [[ ! -f "$REPO_DIR/$FAITHH_MAIN" ]]; then
-  echo "error: no Flask entrypoint found — expected one of:" >&2
-  echo "  faithh_professional_backend_fixed.py (full FAITHH)" >&2
-  echo "  backend/faithh_enhanced_backend.py (lighter)" >&2
-  echo "Set FAITHH_MAIN=relative/path/to/file.py in .env or git pull a complete tree." >&2
-  exit 1
-fi
-echo "   Entrypoint: $FAITHH_MAIN"
+# Local calibration: force Ollama-only /api/chat routing (no Groq fallbacks). Remove or set to 0 in .env to allow cloud.
+export FAITHH_FORCE_LOCAL=1
 
-if [[ ! -x "$REPO_DIR/venv/bin/python" ]]; then
-  echo "error: missing $REPO_DIR/venv/bin/python — create venv: python3 -m venv venv && ./venv/bin/pip install -r requirements.txt" >&2
-  exit 1
-fi
+# Kill any existing tmux session
+tmux kill-session -t faithh 2>/dev/null
 
-# Default 1 = Ollama-only route lists in backend; 0 = use configs/model_config.yaml order (vLLM / local_webui first).
-: "${FAITHH_FORCE_LOCAL:=1}"
-export FAITHH_FORCE_LOCAL
+# Start in tmux session for stability (prevents WSL from killing the process)
+tmux new-session -d -s faithh "cd $REPO_DIR && source venv/bin/activate && python3 faithh_professional_backend_fixed.py 2>&1 | tee backend.log"
+BACKEND_PID=$(tmux list-panes -t faithh -F '#{pane_pid}' 2>/dev/null | head -1)
 
-VLLM_MODELS_URL="${VLLM_MODELS_URL:-http://127.0.0.1:8000/v1/models}"
-
-# --- Optional: start vLLM in a second tmux session (same host as FAITHH) ---
-if [[ "${VLLM_AUTOSTART:-0}" == "1" ]]; then
-  if [[ -z "${VLLM_START_CMD:-}" ]]; then
-    echo "error: VLLM_AUTOSTART=1 but VLLM_START_CMD is empty — set it in .env to your full vLLM launch line." >&2
-    exit 1
-  fi
-  VLLM_TMUX_SESSION="${VLLM_TMUX_SESSION:-vllm}"
-  echo "🚀 Starting vLLM tmux session: $VLLM_TMUX_SESSION"
-  tmux kill-session -t "$VLLM_TMUX_SESSION" 2>/dev/null || true
-  # Write VLLM_START_CMD into a temp script so tmux does not fight nested quoting (long lines, &&, etc.).
-  # Example .env: VLLM_START_CMD='source venv/bin/activate && vllm serve MODEL --host 0.0.0.0 --port 8000'
-  VLLM_LAUNCHER="$(mktemp "${TMPDIR:-/tmp}/faithh-vllm-XXXXXX.sh")"
-  {
-    echo '#!/usr/bin/env bash'
-    echo 'set -euo pipefail'
-    printf 'cd %q\n' "$REPO_DIR"
-    printf '%s\n' "$VLLM_START_CMD"
-  } > "$VLLM_LAUNCHER"
-  chmod +x "$VLLM_LAUNCHER"
-  if ! tmux new-session -d -s "$VLLM_TMUX_SESSION" "$VLLM_LAUNCHER"; then
-    echo "error: tmux new-session failed (see script below and \`tmux -V\`)." >&2
-    sed 's/^/    /' "$VLLM_LAUNCHER" >&2
-    rm -f "$VLLM_LAUNCHER"
-    exit 1
-  fi
-  (sleep 2; rm -f "$VLLM_LAUNCHER") &
-  sleep "${VLLM_BOOT_SLEEP_SEC:-8}"
-  if ! tmux has-session -t "$VLLM_TMUX_SESSION" 2>/dev/null; then
-    echo "⚠️  tmux session $VLLM_TMUX_SESSION not listed — vLLM may have exited immediately." >&2
-    tmux ls 2>&1 | sed 's/^/    /' >&2 || echo "    (tmux ls failed)" >&2
-    echo "    Attach any leftover pane: tmux attach -l" >&2
-  fi
-  if ! curl -fsS -m 3 "$VLLM_MODELS_URL" >/dev/null 2>&1; then
-    echo "⚠️  vLLM tmux is running but $VLLM_MODELS_URL still down (model still loading or wrong port)." >&2
-    echo "    Last lines from tmux $VLLM_TMUX_SESSION:" >&2
-    tmux capture-pane -t "$VLLM_TMUX_SESSION" -p -S -30 2>/dev/null | tail -20 >&2 || true
-    echo "    Fix VLLM_START_CMD / --port or raise VLLM_BOOT_SLEEP_SEC; then re-run this script." >&2
-  fi
-fi
-
-# --- Warn when YAML routing expects local_webui but nothing answers on :8000 ---
-if [[ "$FAITHH_FORCE_LOCAL" == "0" ]]; then
-  if ! curl -fsS -m 3 "$VLLM_MODELS_URL" >/dev/null 2>&1; then
-    echo "⚠️  FAITHH_FORCE_LOCAL=0 (vLLM-first routes) but $VLLM_MODELS_URL is not reachable."
-    echo "    Start vLLM (e.g. tmux new -s vllm '…vllm serve…') or set VLLM_AUTOSTART=1 + VLLM_START_CMD in .env."
-    echo "    Continuing anyway — Flask will start; /api/chat may fail until vLLM is up."
-  fi
-fi
-
-echo ""
-echo "🚀 (re)starting FAITHH backend tmux session: faithh"
-tmux kill-session -t faithh 2>/dev/null || true
-tmux new-session -d -s faithh "cd \"$REPO_DIR\" && source venv/bin/activate && python3 \"$FAITHH_MAIN\" 2>&1 | tee -a backend.log"
-
+echo "   Backend started (PID: $BACKEND_PID)"
 echo "   Logs: $REPO_DIR/backend.log"
-echo "   Attach: tmux attach -t faithh   (Ctrl+B D to detach)"
 
-HEALTH_URL="${FAITHH_HEALTH_URL:-http://127.0.0.1:${BACKEND_PORT:-5557}/health}"
+# Step 6: Verify it's running (health-based)
+# Large imports (faithh_professional_backend_fixed.py) can exceed 30s on WSL; allow override.
+echo ""
+echo "✅ Step 6: Verifying backend health..."
 MAX_ATTEMPTS="${FAITHH_HEALTH_ATTEMPTS:-45}"
 SLEEP_SECONDS="${FAITHH_HEALTH_SLEEP:-2}"
-echo ""
-echo "✅ Waiting for HTTP $HEALTH_URL …"
+HEALTH_URL="${FAITHH_HEALTH_URL:-http://127.0.0.1:5557/health}"
 ATTEMPT=1
-while [[ $ATTEMPT -le $MAX_ATTEMPTS ]]; do
-  code="$(curl -s -o /dev/null -w '%{http_code}' --connect-timeout 2 --max-time 8 "$HEALTH_URL" 2>/dev/null || echo 000)"
-  if [[ "$code" == "200" ]]; then
-    echo "   Health OK (HTTP $code)"
-    exit 0
-  fi
-  echo "   attempt $ATTEMPT/$MAX_ATTEMPTS HTTP=$code — sleeping ${SLEEP_SECONDS}s"
-  sleep "$SLEEP_SECONDS"
-  ATTEMPT=$((ATTEMPT + 1))
+HEALTH_OK=0
+LAST_CODE=""
+
+while [ $ATTEMPT -le $MAX_ATTEMPTS ]; do
+    # Bounded curl: avoid hanging if port is closed or half-open
+    LAST_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+        --connect-timeout 2 --max-time 8 \
+        "$HEALTH_URL" 2>/dev/null || echo "000")
+    if [ "$LAST_CODE" = "200" ]; then
+        HEALTH_OK=1
+        break
+    fi
+    echo "   Waiting for health... ($ATTEMPT/$MAX_ATTEMPTS) HTTP ${LAST_CODE:-?}"
+    sleep "$SLEEP_SECONDS"
+    ATTEMPT=$((ATTEMPT + 1))
 done
 
-echo "error: health check did not return 200: $HEALTH_URL" >&2
-exit 1
+if [ $HEALTH_OK -eq 1 ]; then
+    echo "   ✅ Backend responding at $HEALTH_URL"
+    echo "   ✅ UI available at: http://localhost:5557"
+else
+    echo "   ❌ Backend failed health check (last HTTP: ${LAST_CODE:-unknown}, url: $HEALTH_URL)"
+    echo "   Tip: increase wait with FAITHH_HEALTH_ATTEMPTS=60 FAITHH_HEALTH_SLEEP=2 $0"
+    echo "   Last 120 lines of backend.log:"
+    tail -n 120 backend.log
+    exit 1
+fi
+
+# Step 6b: Service registry must not 500 (stale bytecode can break imports)
+REGISTRY_URL="${FAITHH_REGISTRY_URL:-http://127.0.0.1:5557/api/workspace/registry}"
+REGISTRY_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+    --connect-timeout 2 --max-time 10 \
+    "$REGISTRY_URL" 2>/dev/null || echo "000")
+if [ "$REGISTRY_CODE" = "500" ]; then
+    echo ""
+    echo "⚠️  Service registry returned HTTP 500 at $REGISTRY_URL"
+    echo "   Clearing __pycache__ under repo (skipping venv/.git) and restarting backend once..."
+    find "$REPO_DIR" \( -path "$REPO_DIR/venv" -o -path "$REPO_DIR/.git" \) -prune -o \
+        -type d -name __pycache__ -print0 2>/dev/null | xargs -0 rm -rf
+    tmux kill-session -t faithh 2>/dev/null
+    sleep 2
+    tmux new-session -d -s faithh "cd $REPO_DIR && source venv/bin/activate && python3 faithh_professional_backend_fixed.py 2>&1 | tee backend.log"
+    echo "   Re-waiting for health after recovery..."
+    ATTEMPT=1
+    HEALTH_OK=0
+    LAST_CODE=""
+    while [ $ATTEMPT -le $MAX_ATTEMPTS ]; do
+        LAST_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+            --connect-timeout 2 --max-time 8 \
+            "$HEALTH_URL" 2>/dev/null || echo "000")
+        if [ "$LAST_CODE" = "200" ]; then
+            HEALTH_OK=1
+            break
+        fi
+        echo "   Waiting for health... ($ATTEMPT/$MAX_ATTEMPTS) HTTP ${LAST_CODE:-?}"
+        sleep "$SLEEP_SECONDS"
+        ATTEMPT=$((ATTEMPT + 1))
+    done
+    if [ $HEALTH_OK -ne 1 ]; then
+        echo "   ❌ Health check failed after registry recovery (last HTTP: ${LAST_CODE:-unknown})"
+        tail -n 120 backend.log
+        exit 1
+    fi
+    REGISTRY_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+        --connect-timeout 2 --max-time 10 \
+        "$REGISTRY_URL" 2>/dev/null || echo "000")
+fi
+echo "   Service registry: HTTP $REGISTRY_CODE ($REGISTRY_URL)"
+
+echo ""
+echo "================================================"
+echo "✅ FAITHH BACKEND READY"
+echo "================================================"
+echo ""
+echo "To monitor:"
+echo "  tail -f ~/ai-stack/backend.log"
+echo "  tmux attach -t faithh  # (Ctrl+B, D to detach)"
+echo ""
+echo "To stop:"
+echo "  ./stop_backend.sh"
+echo "  tmux kill-session -t faithh"
+echo ""
+echo "To check status:"
+echo "  curl -s http://localhost:5557/api/plc/state | python3 -m json.tool | head -80"
+echo ""
+echo "UI: http://localhost:5557"
+echo "================================================"

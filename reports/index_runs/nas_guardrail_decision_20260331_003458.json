@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-03-31T00:34:58.477768+00:00",
+  "validation_report": "reports/index_runs/validation_20260331_post_nas_ingest.json",
+  "decision": "filters_unchanged",
+  "rationale": "No adverse source-mix drift from NAS ingest; only +1 nas_seeded_document in governance class replacing one synthesis_document.",
+  "next_guardrails": [
+    "Keep allowlist policy: domain_group != personal, review_status=approved, sensitivity!=private.",
+    "Keep staging extensions limited to text-compatible formats for controlled runs.",
+    "Before next ingest, manually review any pending rows with score < 3.0."
+  ]
+}

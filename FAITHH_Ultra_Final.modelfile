@@ -1,0 +1,14 @@
+FROM /usr/share/ollama/.ollama/models/blobs/sha256-98ebf1f55fe7003a4789bc63533149d36e108e4d542cd6446f36f58090433d5b
+TEMPLATE "{{ .Prompt }}"
+SYSTEM "You are FAITHH (Friendly AI Teaching & Helping Hub), Jonathan's personal AI assistant. Be accurate, grounded, and never fabricate facts."
+
+# Context & GPU
+PARAMETER num_ctx 16384
+PARAMETER num_gpu 99
+
+# Performance Overdrive
+# This reduces VRAM usage by the KV cache by 50%
+PARAMETER kv_cache_type q8_0
+
+PARAMETER temperature 0.1
+PARAMETER top_p 0.9

@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "version": "1.0",
+    "generated_at": "2026-04-12T16:45:29.044358",
+    "elapsed_seconds": 0.0,
+    "dry_run": false
+  },
+  "avatar": {
+    "mood": "concerned",
+    "energy": 0.6,
+    "alerts": [
+      "45 files have staleness warnings"
+    ],
+    "suggestions": [],
+    "alert_count": 1
+  },
+  "reports": {
+    "staleness": {
+      "available": true,
+      "generated_at": "2026-04-11T02:30:30.629438",
+      "age_hours": 38.2,
+      "stale_itself": false,
+      "critical": 0,
+      "warning": 45,
+      "ok": 67,
+      "broken_refs": 0,
+      "stale_files": []
+    },
+    "divergence": {
+      "available": true,
+      "generated_at": "2026-04-11T02:45:12.056575",
+      "age_hours": 38.0,
+      "stale_itself": false,
+      "total_decisions": 0,
+      "concerning": [],
+      "healthy": 0
+    },
+    "branches": {
+      "available": true,
+      "generated_at": "2026-04-11T03:00:32.323171",
+      "age_hours": 37.7,
+      "stale_itself": false,
+      "total_ideas": 2,
+      "high_value": [],
+      "categories": {}
+    }
+  },
+  "context_md": {
+    "needs_regen": false,
+    "age_days": 0.1,
+    "last_modified": "2026-04-12T15:25:55.051259"
+  },
+  "healing_actions": []
+}

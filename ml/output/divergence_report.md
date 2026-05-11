@@ -1,0 +1,126 @@
+# FAITHH Decision Divergence Report
+**Generated:** 2026-04-11 02:45
+**Analysis time:** 9.0s
+**Decisions analyzed:** 19
+
+## Summary
+- ❓ **unknown:** 19
+
+## Decision Analysis
+
+### ❓ phase4_completion_implementation: Complete Phase 4 Security, Performance, and AI Optimization Implementation for Single-User Deployment
+- **Date:** 2026-03-26 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ claude_desktop_mcp_configuration: Configure Claude Desktop with MCP filesystem server for direct FAITHH project access
+- **Date:** 2026-02-23 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ coherence_arbiter_phase2: Implement Phase 2 anchor validation for ground truth claim verification
+- **Date:** 2026-02-23 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ coherence_arbiter_phase3: Phase 3 Coherence Arbiter: UI surfacing, anchor expansion, behavior hints, tests
+- **Date:** 2026-02-23 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ coherence_arbiter_phase1: Implement Coherence Arbiter for RAG-Chip convergence measurement
+- **Date:** 2026-02-23 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ constella_001: 2% weekly Astris decay rate
+- **Date:** 2025-08-09 | **Project:** constella | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ constella_002: 5% quarterly Auctor decay
+- **Date:** 2025-08-09 | **Project:** constella | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_002: Three-tier memory system (hot/warm/cold)
+- **Date:** 2025-11-19 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_003: FAITHH is a thought partner, not just a search tool
+- **Date:** 2025-11-26 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_004: Reindex ChromaDB with all-MiniLM-L6-v2 (384-dim) and 1500-char chunking
+- **Date:** 2026-01-25 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ infra_001: Deploy 12 Docker services on Gen8 MicroServer
+- **Date:** 2026-01-20 | **Project:** infrastructure | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_005: Build context injection system (generate_context.py → CONTEXT.md)
+- **Date:** 2026-02-04 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_006: Set Groq (llama-3.3-70b-versatile) as default LLM provider
+- **Date:** 2026-02-07 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_007: Broaden chip activation to fire on general project and business queries
+- **Date:** 2026-02-07 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_008: Build PULSE Reflection Engine — tiered ML self-reflection protocol
+- **Date:** 2026-02-15 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_009: Set qwen25-grounded:latest as default model
+- **Date:** 2026-02-18 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_008: Fix qwen25-grounded chat template conflict
+- **Date:** 2026-02-18 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ faithh_007: Proceed with Qwen 2.5 14B grounding fine-tune
+- **Date:** 2026-02-16 | **Project:** faithh | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+### ❓ infra_002: Never load SentenceTransformer in WSL scripts — use ChromaDB default embedding or route through backend
+- **Date:** 2026-03-01 | **Project:** infrastructure | **Alignment:** ?/5
+- **Status:** unknown | **Rationale valid:** ?
+- **Recommendation:** N/A
+- **Reasoning:** N/A
+
+---
+*Generated by FAITHH PULSE Reflection Engine — Tier 2 Decision Divergence Tracker*

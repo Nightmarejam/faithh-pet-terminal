@@ -1,0 +1,1013 @@
+{
+  "timestamp": "2026-03-26T04:18:18.058673",
+  "metrics": {
+    "total_documents": 200,
+    "auto_tagged_documents": 51,
+    "schema_compliant": 191,
+    "source_type_distribution": {
+      "general": 22,
+      "business": 87,
+      "conversation": 9,
+      "decision": 8,
+      "technical": 74
+    },
+    "document_type_distribution": {
+      "document": 167,
+      "project": 4,
+      "chat_log": 5,
+      "decision": 4,
+      "implementation": 4,
+      "configuration": 4,
+      "financial": 2,
+      "client": 1,
+      "documentation": 5,
+      "unknown": 4
+    },
+    "content_level_distribution": {
+      "high_level": 138,
+      "detailed": 54,
+      "unknown": 4,
+      "analysis": 4
+    },
+    "recent_indexing": [
+      {
+        "doc_id": "live_conv_20260125_174211_800436",
+        "indexed_at": "2026-03-26T04:05:37.339443",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260125_232025_481428",
+        "indexed_at": "2026-03-26T04:05:37.502164",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260125_232028_311596",
+        "indexed_at": "2026-03-26T04:05:37.669119",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_011903_330442",
+        "indexed_at": "2026-03-26T04:05:37.832363",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_011912_133410",
+        "indexed_at": "2026-03-26T04:05:37.997810",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_034206_928271",
+        "indexed_at": "2026-03-26T04:05:42.071432",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_040056_504236",
+        "indexed_at": "2026-03-26T04:05:42.340840",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_040058_584204",
+        "indexed_at": "2026-03-26T04:05:42.536139",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042015_577598",
+        "indexed_at": "2026-03-26T04:05:43.703087",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042016_861795",
+        "indexed_at": "2026-03-26T04:05:43.870406",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042125_214563",
+        "indexed_at": "2026-03-26T04:05:44.035067",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042126_825607",
+        "indexed_at": "2026-03-26T04:05:44.201070",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220607_554024",
+        "indexed_at": "2026-03-26T04:05:44.365604",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220609_299127",
+        "indexed_at": "2026-03-26T04:05:45.531436",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220612_194101",
+        "indexed_at": "2026-03-26T04:05:45.702325",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220613_854201",
+        "indexed_at": "2026-03-26T04:05:45.866638",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220617_152286",
+        "indexed_at": "2026-03-26T04:05:46.031756",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220618_176769",
+        "indexed_at": "2026-03-26T04:05:46.219233",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220620_166847",
+        "indexed_at": "2026-03-26T04:05:47.407921",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220936_905370",
+        "indexed_at": "2026-03-26T04:05:47.578788",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220946_501959",
+        "indexed_at": "2026-03-26T04:05:47.743038",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220955_290081",
+        "indexed_at": "2026-03-26T04:05:48.007634",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220959_436054",
+        "indexed_at": "2026-03-26T04:05:49.189322",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221007_153855",
+        "indexed_at": "2026-03-26T04:05:49.463197",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221010_754572",
+        "indexed_at": "2026-03-26T04:05:49.655940",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221028_182733",
+        "indexed_at": "2026-03-26T04:05:49.851075",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221032_248045",
+        "indexed_at": "2026-03-26T04:05:51.018793",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221041_237576",
+        "indexed_at": "2026-03-26T04:05:51.191855",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260209_032237_520452",
+        "indexed_at": "2026-03-26T04:05:51.486932",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "dba431a9a24a6879",
+        "indexed_at": "2026-03-26T04:05:51.664562",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "5ac4b1ae06c2095c",
+        "indexed_at": "2026-03-26T04:05:52.836008",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "09a1995a6b556ed4",
+        "indexed_at": "2026-03-26T04:05:53.009112",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "6d810b3a26c4941c",
+        "indexed_at": "2026-03-26T04:05:53.176083",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "58afb9a63cd2ea84",
+        "indexed_at": "2026-03-26T04:05:53.345369",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "d0771a9f0585fa3d",
+        "indexed_at": "2026-03-26T04:05:53.512139",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "7862c1a568dee66e",
+        "indexed_at": "2026-03-26T04:05:54.684991",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "6a6236ce8901298b",
+        "indexed_at": "2026-03-26T04:05:54.854015",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "ab2f32fa4273104a",
+        "indexed_at": "2026-03-26T04:05:55.019746",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "f1b6964fd73a792b",
+        "indexed_at": "2026-03-26T04:05:55.187468",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "3638841968f0da7f",
+        "indexed_at": "2026-03-26T04:05:55.385186",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "4b47174bc3e3ce3b",
+        "indexed_at": "2026-03-26T04:05:56.553789",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "bc83a274ebcba3bd",
+        "indexed_at": "2026-03-26T04:05:56.748472",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "34c0281492ca92ea",
+        "indexed_at": "2026-03-26T04:05:56.909181",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "7594f6eb5b78b64f",
+        "indexed_at": "2026-03-26T04:05:57.076481",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "e81fa7becc8f702f",
+        "indexed_at": "2026-03-26T04:05:57.243613",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "2c862dea08739283",
+        "indexed_at": "2026-03-26T04:17:25.769981",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "7f85b9aec13902a2",
+        "indexed_at": "2026-03-26T04:18:00.870193",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "f64fd1f4423e480e",
+        "indexed_at": "2026-03-26T04:18:00.948131",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "972e5f5f741c2900",
+        "indexed_at": "2026-03-26T04:18:01.020286",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c05324949dc54d78",
+        "indexed_at": "2026-03-26T04:18:01.091432",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "5700b4ffbf3d0150",
+        "indexed_at": "2026-03-26T04:18:01.161850",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a478e0df41f91d53",
+        "indexed_at": "2026-03-26T04:18:01.235343",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "48f70c18108c7795",
+        "indexed_at": "2026-03-26T04:18:01.309890",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "babbce7ebf90f0aa",
+        "indexed_at": "2026-03-26T04:18:01.380540",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "baa60218cb193a11",
+        "indexed_at": "2026-03-26T04:18:01.451336",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "5807cd3318319330",
+        "indexed_at": "2026-03-26T04:18:01.584303",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "594e815dba2aed15",
+        "indexed_at": "2026-03-26T04:18:01.654470",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "ef54831e852c0e2e",
+        "indexed_at": "2026-03-26T04:18:01.726696",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "30d60999074d3250",
+        "indexed_at": "2026-03-26T04:18:01.816417",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "139c38cca468dc72",
+        "indexed_at": "2026-03-26T04:18:01.886877",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "465a864f0a15472c",
+        "indexed_at": "2026-03-26T04:18:01.961214",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "7f2f54c5f7debfe8",
+        "indexed_at": "2026-03-26T04:18:02.031469",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a4136f113c479fd5",
+        "indexed_at": "2026-03-26T04:18:02.105788",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "37568e63afc527ab",
+        "indexed_at": "2026-03-26T04:18:02.179559",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "23ffc4d0e14a4fa7",
+        "indexed_at": "2026-03-26T04:18:02.250254",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "47ed77b2906ee201",
+        "indexed_at": "2026-03-26T04:18:02.320922",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "aa86e9b267200e9d",
+        "indexed_at": "2026-03-26T04:18:02.395586",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "1b7c1ff9b29929a6",
+        "indexed_at": "2026-03-26T04:18:02.467442",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "8737d83b6f7ab23f",
+        "indexed_at": "2026-03-26T04:18:02.540872",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "1cc8307fdab64345",
+        "indexed_at": "2026-03-26T04:18:02.611585",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "eda3a1e3e7e71675",
+        "indexed_at": "2026-03-26T04:18:02.681083",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "accbff4539429c67",
+        "indexed_at": "2026-03-26T04:18:02.753937",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c9857098cf85c6ea",
+        "indexed_at": "2026-03-26T04:18:02.821889",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d58e3589239bd935",
+        "indexed_at": "2026-03-26T04:18:02.896423",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "3f2b30154f2c1c1e",
+        "indexed_at": "2026-03-26T04:18:02.970764",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "3610c9477c40e4df",
+        "indexed_at": "2026-03-26T04:18:03.040866",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d3350de3c0221dc2",
+        "indexed_at": "2026-03-26T04:18:03.114074",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "79be434b2527520b",
+        "indexed_at": "2026-03-26T04:18:03.186502",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "0325de7c37506a96",
+        "indexed_at": "2026-03-26T04:18:03.258754",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "e9b661ccb3c1fd6b",
+        "indexed_at": "2026-03-26T04:18:03.332712",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "1be0baa5477858a2",
+        "indexed_at": "2026-03-26T04:18:03.407743",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "27e3a4f7a658defb",
+        "indexed_at": "2026-03-26T04:18:03.480500",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "604facf01179d842",
+        "indexed_at": "2026-03-26T04:18:03.554700",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "e8d077d72b4469fe",
+        "indexed_at": "2026-03-26T04:18:03.627183",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "7629661166fb9937",
+        "indexed_at": "2026-03-26T04:18:03.700345",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d1d37742bce977f2",
+        "indexed_at": "2026-03-26T04:18:03.773614",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "96a92ed68b8671c5",
+        "indexed_at": "2026-03-26T04:18:03.847216",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "16c752b1d92ef5c9",
+        "indexed_at": "2026-03-26T04:18:03.920197",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d5eec7a91aada272",
+        "indexed_at": "2026-03-26T04:18:03.993875",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "058795bf921c1e1e",
+        "indexed_at": "2026-03-26T04:18:04.067247",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "99da5edabb12e244",
+        "indexed_at": "2026-03-26T04:18:04.139723",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "53d56d45da81a0f2",
+        "indexed_at": "2026-03-26T04:18:04.213531",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "67753bd4bcbac133",
+        "indexed_at": "2026-03-26T04:18:04.288449",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "234d82b95291cd73",
+        "indexed_at": "2026-03-26T04:18:04.363391",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c43c3262470b3ea0",
+        "indexed_at": "2026-03-26T04:18:04.437450",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "b264c14db209d204",
+        "indexed_at": "2026-03-26T04:18:04.513094",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "ff727b6d020ab7c7",
+        "indexed_at": "2026-03-26T04:18:04.586051",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "ac464ac05f6f4b45",
+        "indexed_at": "2026-03-26T04:18:04.660031",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "4c10f922c3001d16",
+        "indexed_at": "2026-03-26T04:18:04.734119",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "383ad2d32997d5b4",
+        "indexed_at": "2026-03-26T04:18:04.809316",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "eb401986790e7aab",
+        "indexed_at": "2026-03-26T04:18:04.885062",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "2378c48d67d669be",
+        "indexed_at": "2026-03-26T04:18:04.962106",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c66e44903d6bce23",
+        "indexed_at": "2026-03-26T04:18:05.038257",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "838a97595fadc551",
+        "indexed_at": "2026-03-26T04:18:05.113429",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "b93978ac7e889f50",
+        "indexed_at": "2026-03-26T04:18:05.189109",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "6c65aef7311b0307",
+        "indexed_at": "2026-03-26T04:18:05.263303",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d173f6f87295c859",
+        "indexed_at": "2026-03-26T04:18:05.339132",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "8d0dcecd67a4dfa6",
+        "indexed_at": "2026-03-26T04:18:05.414772",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a3d1c3097ed48fe9",
+        "indexed_at": "2026-03-26T04:18:05.490504",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "7f2f747fa37e9f5b",
+        "indexed_at": "2026-03-26T04:18:05.565491",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "4beedc5f11a36545",
+        "indexed_at": "2026-03-26T04:18:05.642056",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "1f5edd1103d558f0",
+        "indexed_at": "2026-03-26T04:18:05.718782",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "6c896545a71faead",
+        "indexed_at": "2026-03-26T04:18:05.795287",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "0faec5c51bc512ff",
+        "indexed_at": "2026-03-26T04:18:05.870809",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "0ba838748753b722",
+        "indexed_at": "2026-03-26T04:18:05.947590",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "7dec89a114165774",
+        "indexed_at": "2026-03-26T04:18:06.024513",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "bb922a9ad7b2cb71",
+        "indexed_at": "2026-03-26T04:18:06.099745",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "994b506fd69fa46f",
+        "indexed_at": "2026-03-26T04:18:06.183602",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "ed5424bb9537f50c",
+        "indexed_at": "2026-03-26T04:18:06.261680",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "3e6d3bef1a04a0b2",
+        "indexed_at": "2026-03-26T04:18:06.341916",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "5f67acf8ca10d970",
+        "indexed_at": "2026-03-26T04:18:06.421842",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "409a7ef9f5a4838f",
+        "indexed_at": "2026-03-26T04:18:06.498945",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "1e7eed24687f32b5",
+        "indexed_at": "2026-03-26T04:18:06.574955",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "6a709b963db23c0f",
+        "indexed_at": "2026-03-26T04:18:06.650158",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "6d9cfdf898571c70",
+        "indexed_at": "2026-03-26T04:18:06.726125",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c55ba601470cc4d8",
+        "indexed_at": "2026-03-26T04:18:06.801951",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d74f02f6afb4c22d",
+        "indexed_at": "2026-03-26T04:18:06.876728",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "edfb4fe612aece33",
+        "indexed_at": "2026-03-26T04:18:06.953914",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "8506f782b04a1b87",
+        "indexed_at": "2026-03-26T04:18:07.036293",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "0057bb16c344b78a",
+        "indexed_at": "2026-03-26T04:18:07.111688",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "53064e2c9f66f32b",
+        "indexed_at": "2026-03-26T04:18:07.193913",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "0812bc128fab81fd",
+        "indexed_at": "2026-03-26T04:18:07.275197",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "892ae9e1328dc996",
+        "indexed_at": "2026-03-26T04:18:07.351975",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "7cf06203ac4f102d",
+        "indexed_at": "2026-03-26T04:18:07.429120",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "6c553bf51f2c7a57",
+        "indexed_at": "2026-03-26T04:18:07.505794",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "178656e287164333",
+        "indexed_at": "2026-03-26T04:18:07.581158",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "cc581b0a2f8b615c",
+        "indexed_at": "2026-03-26T04:18:07.659502",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "95e14ef462dbe713",
+        "indexed_at": "2026-03-26T04:18:07.737592",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "6923deeb20c9e191",
+        "indexed_at": "2026-03-26T04:18:07.816694",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "9d8feb53004b1060",
+        "indexed_at": "2026-03-26T04:18:07.894347",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "2a6895258b7c2e6b",
+        "indexed_at": "2026-03-26T04:18:07.972150",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "afc5bf05a2c78ef9",
+        "indexed_at": "2026-03-26T04:18:08.053823",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "7161b89775cf144a",
+        "indexed_at": "2026-03-26T04:18:08.131921",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "263c1d4d0ebdeb5d",
+        "indexed_at": "2026-03-26T04:18:08.210201",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "430887dfe957bd2b",
+        "indexed_at": "2026-03-26T04:18:08.289448",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "48b55d20b10e0fa3",
+        "indexed_at": "2026-03-26T04:18:08.366468",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "9ce0438696a6c8da",
+        "indexed_at": "2026-03-26T04:18:08.444874",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "10585972964ce0a0",
+        "indexed_at": "2026-03-26T04:18:08.523497",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c37e7c4686a7041c",
+        "indexed_at": "2026-03-26T04:18:08.601861",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "718556c85200113b",
+        "indexed_at": "2026-03-26T04:18:08.679579",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "9d455e348851d083",
+        "indexed_at": "2026-03-26T04:18:08.759806",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a2ec10cf4598f705",
+        "indexed_at": "2026-03-26T04:18:08.838874",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "b4ba53dae411a9e7",
+        "indexed_at": "2026-03-26T04:18:08.916793",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "49f0ed585ef56e72",
+        "indexed_at": "2026-03-26T04:18:08.996676",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "eac01d5275958745",
+        "indexed_at": "2026-03-26T04:18:09.079686",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "e405a50243b80c25",
+        "indexed_at": "2026-03-26T04:18:09.161139",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "2641e62ed120b17e",
+        "indexed_at": "2026-03-26T04:18:09.242366",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c101e9954a092b7b",
+        "indexed_at": "2026-03-26T04:18:09.343769",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d63bc847e8c45c0e",
+        "indexed_at": "2026-03-26T04:18:09.429685",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "7a17a082fb49610f",
+        "indexed_at": "2026-03-26T04:18:09.509928",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "5da18c94939081ed",
+        "indexed_at": "2026-03-26T04:18:09.590489",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "e7e9f7a403d4205e",
+        "indexed_at": "2026-03-26T04:18:09.674138",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "9c0036e0326fe199",
+        "indexed_at": "2026-03-26T04:18:09.758824",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d5e0c39778705335",
+        "indexed_at": "2026-03-26T04:18:09.841750",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "62eebd35ca8aa248",
+        "indexed_at": "2026-03-26T04:18:09.923416",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "486f7118ff6e6233",
+        "indexed_at": "2026-03-26T04:18:10.002951",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "58f768640d038970",
+        "indexed_at": "2026-03-26T04:18:10.085057",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a879b5ee93d6f218",
+        "indexed_at": "2026-03-26T04:18:10.166366",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "0b5475eec4c32329",
+        "indexed_at": "2026-03-26T04:18:10.389179",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a95a07945022fa6f",
+        "indexed_at": "2026-03-26T04:18:10.442425",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d65510bc16ab41dd",
+        "indexed_at": "2026-03-26T04:18:10.495557",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "d91e8263b38ade3b",
+        "indexed_at": "2026-03-26T04:18:10.549790",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "c6ff1a77f5338ec2",
+        "indexed_at": "2026-03-26T04:18:10.604184",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "43a1c05d00bc15f1",
+        "indexed_at": "2026-03-26T04:18:10.657755",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "4b7e34c6bc6fff05",
+        "indexed_at": "2026-03-26T04:18:10.711095",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "3ee2baf9c1eccf63",
+        "indexed_at": "2026-03-26T04:18:10.765634",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a240f9928c9bbaf7",
+        "indexed_at": "2026-03-26T04:18:10.820223",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "b092051c1b8da9da",
+        "indexed_at": "2026-03-26T04:18:10.874470",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "cdbed02f9a5e1bf9",
+        "indexed_at": "2026-03-26T04:18:10.929411",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "6277daa806a036e5",
+        "indexed_at": "2026-03-26T04:18:10.983705",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "f3342f52819cd95d",
+        "indexed_at": "2026-03-26T04:18:11.037406",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "788fb62bf4d0f601",
+        "indexed_at": "2026-03-26T04:18:11.092297",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "f22caea24c81d695",
+        "indexed_at": "2026-03-26T04:18:11.147228",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "858f51f99bcbd38b",
+        "indexed_at": "2026-03-26T04:18:11.202122",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a5063574b43b4e91",
+        "indexed_at": "2026-03-26T04:18:11.256514",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "16e6dd9762385cec",
+        "indexed_at": "2026-03-26T04:18:11.311074",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "aa7b9d32999a01c8",
+        "indexed_at": "2026-03-26T04:18:11.365572",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "b330bfbbd7169665",
+        "indexed_at": "2026-03-26T04:18:11.418737",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "a2c3a60eda4fec4e",
+        "indexed_at": "2026-03-26T04:18:11.472811",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "4367c1e993452a8c",
+        "indexed_at": "2026-03-26T04:18:11.528398",
+        "auto_tagged": false
+      },
+      {
+        "doc_id": "f134acaab5881f86",
+        "indexed_at": "2026-03-26T04:18:11.583329",
+        "auto_tagged": false
+      }
+    ],
+    "validation_errors": {
+      "Field 'source_type' has invalid value 'conversation'. Allowed": 9,
+      "Field 'document_type' has invalid value 'chat_log'. Allowed": 5,
+      "Field 'category' has invalid value 'conversation'. Allowed": 5,
+      "Missing required field": 12,
+      "Field 'category' has invalid value 'project_docs'. Allowed": 4
+    },
+    "indexing_performance": []
+  },
+  "health_score": {
+    "overall": 74.6,
+    "components": {
+      "auto_tagging": 31.875,
+      "schema_compliance": 100,
+      "diversity": 50,
+      "activity": 100
+    },
+    "grades": {
+      "auto_tagging": "F",
+      "schema_compliance": "A",
+      "diversity": "F",
+      "activity": "A"
+    }
+  }
+}

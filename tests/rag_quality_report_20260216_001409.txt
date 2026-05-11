@@ -1,0 +1,104 @@
+
+================================================================================
+RAG RETRIEVAL QUALITY REPORT
+================================================================================
+Generated: 2026-02-16 00:14:09
+Connection: HttpClient(100.79.85.32:8000)
+Collection: faithh_knowledge_base
+Results Retrieved per Query: 5
+
+SUMMARY
+--------------------------------------------------------------------------------
+Total Tests: 10
+Total Score: 12/20 (60.0%)
+
+✅ Good Hits (2 pts):   2 ( 20.0%)
+⚠️  Partial Hits (1 pt):  8 ( 80.0%)
+❌ Misses (0 pts):      0 (  0.0%)
+
+QUALITY GRADE
+--------------------------------------------------------------------------------
+Grade: C (Acceptable)
+Assessment: RAG retrieval works but has notable accuracy issues.
+
+DETAILED RESULTS
+--------------------------------------------------------------------------------
+
+1. What is FAITHH?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Basic project identity query
+   Keywords found: ['friendly ai', 'teaching', 'helping', 'hub']
+   Sources found: []
+   Top result: unknown (distance: 0.4336)
+
+2. Describe the phase flip zone in Harmony
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Specific framework concept query
+   Keywords found: ['phase flip', 'controller', 'exploration', 'consolidation']
+   Sources found: []
+   Top result: ChatGPT: Multi-provider backend setup (distance: 0.6265)
+
+3. What is Constella?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Related project query
+   Keywords found: ['civic', 'governance', 'astris', 'auctor']
+   Sources found: []
+   Top result: Claude: AI stack system review and architecture analysis (distance: 0.7679)
+
+4. Why did we choose ChromaDB?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Technical decision rationale
+   Keywords found: ['vector', 'database']
+   Sources found: []
+   Top result: Claude: System handoff and priority task execution (distance: 0.9340)
+
+5. How do I start the FAITHH backend?
+   Status: ✅ GOOD | Score: 2/2
+   Type: Operational how-to query
+   Keywords found: ['python', '5557', 'backend']
+   Sources found: ['architecture', 'guide']
+   Top result: Claude: Continuing a previous conversation (distance: 0.7020)
+
+6. What embedding model does FAITHH use?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Technical specification query
+   Keywords found: []
+   Sources found: ['backend']
+   Top result: unknown (distance: 0.8768)
+
+7. What is the Penumbra Accord?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Specific Constella concept
+   Keywords found: ['mediation', 'governance', 'dispute']
+   Sources found: []
+   Top result: ChatGPT: IQ estimation and analysis (distance: 0.9338)
+
+8. What audio gear does Jonathan use?
+   Status: ✅ GOOD | Score: 2/2
+   Type: Personal context query
+   Keywords found: ['wavelab', 'volt']
+   Sources found: ['audio']
+   Top result: ChatGPT: Dock options for M1 Mac (distance: 1.1342)
+
+9. What providers does FAITHH support?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Current capabilities query
+   Keywords found: ['groq', 'ollama', 'local', 'webui', 'provider']
+   Sources found: []
+   Top result: Claude: Constella framework accuracy review (distance: 0.8469)
+
+10. What is the human standard?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Philosophical framework query
+   Keywords found: ['human standard', 'harmony']
+   Sources found: []
+   Top result: ChatGPT: Next steps for export (distance: 1.2382)
+
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+Issues detected. Consider:
+  • Improve document chunking strategy
+  • Add more context to document metadata
+  • Consider increasing n_results for retrieval
+
+================================================================================

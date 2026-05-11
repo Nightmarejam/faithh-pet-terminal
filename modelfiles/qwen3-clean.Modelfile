@@ -1,0 +1,14 @@
+# Clean Qwen3 30.5B MoE - No persona, optimized for RTX 3090
+# This removes the system prompt and parameter customizations for baseline testing
+
+FROM qwen3:30b-a3b
+
+# Optimized for RTX 3090 (24GB VRAM) + 47GB RAM
+# Note: 30.5B MoE only activates 3B params, fits comfortably in VRAM
+PARAMETER num_ctx 8192
+PARAMETER num_batch 256
+PARAMETER num_gpu 99
+
+# Stop tokens (required for Qwen3)
+PARAMETER stop <|im_end|>
+PARAMETER stop <|endoftext|>

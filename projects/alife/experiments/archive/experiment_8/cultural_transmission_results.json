@@ -1,0 +1,30 @@
+{
+  "experiment": "exp8_simple_transmission",
+  "date": "2026-03-26T19:12:58.452661",
+  "parameters": {
+    "max_ticks": 20000,
+    "population": 30,
+    "protocol_memory_size": 5,
+    "transmission_range": 100,
+    "learning_rate": 0.6,
+    "creation_rate": 0.02,
+    "sharing_probability": 0.1
+  },
+  "results": {
+    "total_protocols": 11981,
+    "total_transmissions": 17205,
+    "creation_events": 11981,
+    "transmission_events": 17205,
+    "sharing_events": 17205,
+    "avg_carriers_per_protocol": 2.436023704198314,
+    "max_carriers_per_protocol": 27,
+    "agents_with_protocols": 30,
+    "protocol_coverage": 1.0
+  },
+  "success_criteria": {
+    "protocol_creation": true,
+    "basic_transmission": true,
+    "knowledge_sharing": true,
+    "cultural_spread": true
+  }
+}

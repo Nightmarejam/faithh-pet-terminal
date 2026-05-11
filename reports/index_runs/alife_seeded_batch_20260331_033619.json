@@ -1,0 +1,60 @@
+{
+  "timestamp_utc": "2026-03-31T03:36:19.536191+00:00",
+  "batch_type": "seeded_alife_side_by_side",
+  "runs": [
+    {
+      "variant": "seed_001_ucf_stress_sweep",
+      "seed": 101,
+      "params": {
+        "NAKED_FLOOR_THRESHOLD": 0.17,
+        "NAKED_FLOOR_BONUS": 4,
+        "PARASITE_DRAIN_RATE": 1.5,
+        "ticks": 3000
+      },
+      "result_summary": {
+        "collapsed": false,
+        "collapse_tick": null,
+        "final_population": 544,
+        "floor_activations": 7,
+        "max_adapt_reached": 0.0,
+        "strategy_escape_tick": null
+      }
+    },
+    {
+      "variant": "seed_002_founding_window_map",
+      "seed": 202,
+      "params": {
+        "NAKED_FLOOR_THRESHOLD": 0.15,
+        "NAKED_FLOOR_BONUS": 3,
+        "PARASITE_DRAIN_RATE": 1.3,
+        "ticks": 3000
+      },
+      "result_summary": {
+        "collapsed": false,
+        "collapse_tick": null,
+        "final_population": 155,
+        "floor_activations": 2,
+        "max_adapt_reached": 0.4,
+        "strategy_escape_tick": null
+      }
+    },
+    {
+      "variant": "seed_003_adversarial_replay",
+      "seed": 303,
+      "params": {
+        "NAKED_FLOOR_THRESHOLD": 0.16,
+        "NAKED_FLOOR_BONUS": 3,
+        "PARASITE_DRAIN_RATE": 1.8,
+        "ticks": 3000
+      },
+      "result_summary": {
+        "collapsed": false,
+        "collapse_tick": null,
+        "final_population": 481,
+        "floor_activations": 7,
+        "max_adapt_reached": 0.4,
+        "strategy_escape_tick": null
+      }
+    }
+  ]
+}

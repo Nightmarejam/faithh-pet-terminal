@@ -1,0 +1,93 @@
+{
+  "experiment": "generation_one",
+  "generation": 1,
+  "population": "A",
+  "parameters": {
+    "agents": 50,
+    "ticks": 10,
+    "acquisition": "0.5-1.5",
+    "loss": "0.4-1.6"
+  },
+  "timestamp": "2026-04-01T18:03:22.885696",
+  "fitness_summary": {
+    "mean": 7.116,
+    "max": 8.554,
+    "min": 5.187,
+    "stdev": 0.868,
+    "top_10pct_threshold": 8.194
+  },
+  "survival": {
+    "agents_with_any_depletion": 0,
+    "agents_fully_survived": 50,
+    "total_depletion_events": 0,
+    "avg_depleted_ticks": 0
+  },
+  "band2_candidates": 50,
+  "top_5_agents": [
+    {
+      "id": "gen1_agent_024",
+      "fitness": 8.554,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_027",
+      "fitness": 8.55,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_005",
+      "fitness": 8.465,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_006",
+      "fitness": 8.452,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_038",
+      "fitness": 8.194,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    }
+  ],
+  "bottom_5_agents": [
+    {
+      "id": "gen1_agent_016",
+      "fitness": 5.886,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_030",
+      "fitness": 5.719,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_018",
+      "fitness": 5.63,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_007",
+      "fitness": 5.495,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen1_agent_046",
+      "fitness": 5.187,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    }
+  ],
+  "chroma_documents_written": 500,
+  "alife_lineage_count_before": 50950,
+  "alife_lineage_count_after": 51450
+}

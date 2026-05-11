@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-03-31T03:07:28.492363+00:00",
+  "phase": "scaled_ingest_full_process_test",
+  "vdem_chunked": {
+    "zip_rows_seen": 2,
+    "successful_extractions": 2,
+    "chunks_created_total": 10,
+    "rows_written_total": 228878
+  },
+  "governance_ingest": {
+    "files_discovered": 33,
+    "accepted_files": 4,
+    "documents_prepared": 40293
+  },
+  "validation_governance_source_mix": {
+    "governance_source": 5,
+    "project_discussion": 3,
+    "decision": 2,
+    "nas_seeded_document": 2,
+    "constella": 2,
+    "constella_synthesis": 1
+  },
+  "trial_result": {
+    "collapsed": false,
+    "collapse_tick": null,
+    "final_population": 217,
+    "floor_activations": 16,
+    "max_adapt_reached": 0.8,
+    "strategy_escape_tick": 4771
+  }
+}

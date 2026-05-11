@@ -1,0 +1,76 @@
+{
+  "experiment": "Experiment 7 — UCF Gated Floor + Penumbra Zone",
+  "run_date": "2026-03-29",
+  "parameters": {
+    "ticks": 50000,
+    "drain_rate": 1.5,
+    "ucf_gate_window": 500,
+    "ucf_grace_period": 300,
+    "ucf_injection_full": 5,
+    "ucf_injection_grace": 2,
+    "ucf_floor_threshold": 40,
+    "commons_initial": 500000,
+    "commons_regen_rate": 150,
+    "wave_interval": 500,
+    "adaptation_rate": 0.20,
+    "initial_population": 200
+  },
+  "outcome": "SURVIVED — full 50,000 tick run, no collapse",
+  "collapse_tick": null,
+  "final_population": 1330,
+  "baselines": {
+    "exp5_no_floor_collapse_tick": 10039,
+    "exp6_unconditional_floor_collapse_tick": 7410,
+    "exp7_gated_result": "SURVIVED 50,000 ticks"
+  },
+  "ucf_state_peaks": {
+    "penumbra_peak": 334,
+    "excluded_peak": 1460,
+    "active_supported_total": 0,
+    "penumbra_supported_total": 49182,
+    "commons_depleted_tick": null,
+    "final_commons_pool": 7958473
+  },
+  "emergence": {
+    "first_parasite_tick": 21,
+    "first_toxin_tick": 421,
+    "first_gamer_tick": null,
+    "gamer_peak": 0,
+    "total_gamers": 0
+  },
+  "final_strategy_distribution": {
+    "DEFENDER": {"count": 74, "pct": 5.6},
+    "NAKED": {"count": 1256, "pct": 94.4}
+  },
+  "wave_count": 99,
+  "predator_kills": 162091,
+  "total_reproductions": 169460,
+  "key_events": {
+    "strategy_escape_tick": "~7000-8000",
+    "defender_collapse": "tick 7000: 180 defenders -> tick 8000: 18 defenders",
+    "population_surge_after_escape": "tick 7000: 243 -> tick 10000: 1160",
+    "predator_deadapt_complete": "tick 20000 (adapt 1.5 -> 0.00)",
+    "shields_fully_effective_restored": "tick 20000 onward"
+  },
+  "pre_registered_hypothesis": {
+    "penumbra_10_25pct_of_pop": "PARTIAL — gate too tight, entire pop excluded from tick 1000 onward. Penumbra peak was 334 at tick 0 (birth state only)",
+    "collapse_beyond_exp6_7410": "CONFIRMED — no collapse at all",
+    "gaming_behavior_detected": "NOT OBSERVED — gate too tight for gaming to be viable"
+  },
+  "unexpected_findings": [
+    "Gate=500 was too tight for reproduction frequency under drain=1.5. 100% of population EXCLUDED from floor support by tick 1000. UCF played no material role in survival.",
+    "Survival was driven by strategy escape, not UCF mechanics. Population abandoned shield strategy (~tick 7500) when defenders could not sustain. NAKED strategy swept the population.",
+    "When shields disappeared, adaptive predator had nothing to adapt against. De-adapted from max (1.5) all the way to 0.00 by tick 20000.",
+    "With predator fully de-adapted, shields restored to 100% effectiveness. New stable equilibrium emerged that neither Exp 5 nor Exp 6 found.",
+    "Commons pool was never drawn against materially (final: 7,958,473 vs 500,000 initial — regen accumulated). UCF gate was irrelevant to outcome.",
+    "Final population 94.4% NAKED — no genome-level defense. Survival through strategy escape, not defense escalation."
+  ],
+  "constella_implications": {
+    "ucf_gate_design": "Gate=500 too tight for high-pressure environments. Gate must be calibrated to actual participation frequency under stress, not theoretical ideal frequency.",
+    "strategy_escape_finding": "EARNED finding — not designed for. When a governance mechanism is fully adapted against, temporarily abandoning it can allow adversarial pressure to de-adapt, restoring the mechanism's effectiveness. Persistence in a losing strategy accelerates collapse. Tactical dissolution preserves future viability.",
+    "penumbra_implication": "Penumbra zone did provide partial support (49,182 total penumbra-supported interventions) during the early phase, but the survival mechanism was biological strategy escape, not floor support.",
+    "next_calibration": "Exp 8 should test gate window = 2000-5000 ticks to find the range where gate is meaningful (excludes free-riders) without being so tight it excludes everyone."
+  },
+  "outcome_code": "UCF_GATED_SURVIVED_CLEAN",
+  "decision": "Gated UCF with Penumbra zone is a viable design architecture. Gate=500 is too tight for high-pressure environments — calibration needed. The survival mechanism revealed a new pattern (strategy escape) not present in prior experiments."
+}

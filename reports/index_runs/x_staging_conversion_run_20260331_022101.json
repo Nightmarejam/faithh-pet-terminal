@@ -1,0 +1,180 @@
+{
+  "timestamp_utc": "2026-03-31T02:19:41.150793+00:00",
+  "queue_path": "reports/inventory/x_staging_conversion_queue.csv",
+  "queue_out": "reports/inventory/x_staging_conversion_queue.csv",
+  "converted_root": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted",
+  "total_rows": 14,
+  "counts": {
+    "completed": 14
+  },
+  "results": [
+    {
+      "source_path": "X:\\staging\\codebook_ei_sept21_august2023.pdf",
+      "filename": "codebook_ei_sept21_august2023.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_ei_sept21_august2023.md",
+        "pages": 320,
+        "chars": 331342
+      }
+    },
+    {
+      "source_path": "X:\\staging\\codebook_eureg_nov20.pdf",
+      "filename": "codebook_eureg_nov20.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_eureg_nov20.md",
+        "pages": 257,
+        "chars": 329258
+      }
+    },
+    {
+      "source_path": "X:\\staging\\codebook_std_jan26.pdf",
+      "filename": "codebook_std_jan26.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_std_jan26.md",
+        "pages": 1154,
+        "chars": 1277139
+      }
+    },
+    {
+      "source_path": "X:\\staging\\Federal Register __ API Documentation.pdf",
+      "filename": "Federal Register __ API Documentation.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/Federal_Register____API_Documentation.md",
+        "pages": 3,
+        "chars": 3970
+      }
+    },
+    {
+      "source_path": "X:\\staging\\HDX Python API.pdf",
+      "filename": "HDX Python API.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/HDX_Python_API.md",
+        "pages": 29,
+        "chars": 44318
+      }
+    },
+    {
+      "source_path": "X:\\staging\\Home _ Worldwide Governance Indicators.pdf",
+      "filename": "Home _ Worldwide Governance Indicators.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/Home___Worldwide_Governance_Indicators.md",
+        "pages": 4,
+        "chars": 5541
+      }
+    },
+    {
+      "source_path": "X:\\staging\\Raw Data from Underlying Data Sources (1996-2024).xlsx",
+      "filename": "Raw Data from Underlying Data Sources (1996-2024).xlsx",
+      "converter": "xlsx_to_csv_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output_dir": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_",
+        "sheets": 6,
+        "files_created": 7
+      }
+    },
+    {
+      "source_path": "X:\\staging\\The Constitution of the United States_ A Transcription _ National Archives.pdf",
+      "filename": "The Constitution of the United States_ A Transcription _ National Archives.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/The_Constitution_of_the_United_States__A_Transcription___National_Archives.md",
+        "pages": 14,
+        "chars": 30963
+      }
+    },
+    {
+      "source_path": "X:\\staging\\UNdata _ api manual.pdf",
+      "filename": "UNdata _ api manual.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/UNdata___api_manual.md",
+        "pages": 3,
+        "chars": 6132
+      }
+    },
+    {
+      "source_path": "X:\\staging\\UNSD SDGs API.pdf",
+      "filename": "UNSD SDGs API.pdf",
+      "converter": "pdf_to_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/pdf/UNSD_SDGs_API.md",
+        "pages": 9,
+        "chars": 5039
+      }
+    },
+    {
+      "source_path": "X:\\staging\\V-Dem-CD-v16_csv.zip",
+      "filename": "V-Dem-CD-v16_csv.zip",
+      "converter": "zip_unpack_then_filter",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output_dir": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/zip/V-Dem-CD-v16_csv",
+        "members_scanned": 5,
+        "members_extracted": 0
+      }
+    },
+    {
+      "source_path": "X:\\staging\\V-Dem-Coder-Level-v16_csv.zip",
+      "filename": "V-Dem-Coder-Level-v16_csv.zip",
+      "converter": "zip_unpack_then_filter",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output_dir": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/zip/V-Dem-Coder-Level-v16_csv",
+        "members_scanned": 5,
+        "members_extracted": 0
+      }
+    },
+    {
+      "source_path": "X:\\staging\\wgidataset_with_sourcedata-2025.xlsx",
+      "filename": "wgidataset_with_sourcedata-2025.xlsx",
+      "converter": "xlsx_to_csv_markdown",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output_dir": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025",
+        "sheets": 6,
+        "files_created": 7
+      }
+    },
+    {
+      "source_path": "X:\\staging\\xml_uscAll@119-73.zip",
+      "filename": "xml_uscAll@119-73.zip",
+      "converter": "zip_unpack_then_filter",
+      "status": "completed",
+      "detail": "",
+      "outputs": {
+        "output_dir": "/home/jonat/ai-stack/docs/data/governance_sources/windows_staging_import/converted/zip/xml_uscAll_119-73",
+        "members_scanned": 58,
+        "members_extracted": 30
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp_utc": "2026-03-31T02:43:12.408781+00:00",
+  "trial_type": "seeded_action_item_trail_run",
+  "source_action_items_path": "reports/index_runs/alife_seeded_action_items.json",
+  "action_items_count": 3,
+  "seeded_overrides": {
+    "NAKED_FLOOR_THRESHOLD": 0.17,
+    "NAKED_FLOOR_BONUS": 4
+  },
+  "run_args": {
+    "ticks": 4000,
+    "log_interval": 500
+  },
+  "result_summary": {
+    "collapsed": false,
+    "collapse_tick": null,
+    "final_population": 840,
+    "floor_activations": 9,
+    "max_adapt_reached": 0.6000000000000001,
+    "strategy_escape_tick": null
+  },
+  "result_path_reference": "genomic_results/exp9_diversity_floor_results.json"
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-04-07",
+  "polar_reconstruction_error_mean": 0.1795448660850525,
+  "q4_reconstruction_error_mean": 0.1260112076997757,
+  "polar_dot_error_mean": 0.1980091631412506,
+  "q4_dot_error_mean": 0.1318998783826828,
+  "compression_ratio_polar_nominal": 4.129032258064516,
+  "head_dim": 128,
+  "n_vectors_evaluated": 240,
+  "kv_f16_32k_mib": 6144.0,
+  "kv_polar_32k_mib_est": 1488.0,
+  "kv_q4_32k_mib_est": 1536.0,
+  "vram_kv_budget_mib_est": 16120.0,
+  "simultaneous_states_f16_est": 2.6236979166666665,
+  "simultaneous_states_polar_est": 10.833333333333334,
+  "simultaneous_states_q4_est": 10.494791666666666,
+  "vendor_note": "vendor/polar_quant is CUDA kernels; Python matches README 4-level layout"
+}

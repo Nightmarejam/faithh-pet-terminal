@@ -1,0 +1,38 @@
+{
+  "created": "2026-03-26T15:07:11.004189",
+  "total_examples": 132,
+  "splits": {
+    "train": 92,
+    "validation": 26,
+    "test": 14
+  },
+  "categories": {
+    "experiment_0": 498,
+    "experiment_1": 2,
+    "cognitive_specialization": 446,
+    "mathematical_cognition": 475,
+    "evolutionary_dynamics": 2,
+    "energy_economics": 495,
+    "population_dynamics": 495,
+    "pattern_recognition": 475
+  },
+  "feature_stats": {
+    "content_length": {
+      "min": 154,
+      "max": 543,
+      "avg": 359.3863636363636
+    },
+    "feature_counts": {
+      "has_numbers": 132,
+      "has_cognitive": 123,
+      "has_energy": 130,
+      "has_population": 128
+    }
+  },
+  "source": "alife_lineage ChromaDB collection",
+  "chroma_info": {
+    "host": "100.79.85.32",
+    "port": 8000,
+    "total_documents": 50450
+  }
+}

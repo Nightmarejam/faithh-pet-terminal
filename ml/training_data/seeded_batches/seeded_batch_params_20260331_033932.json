@@ -1,0 +1,31 @@
+{
+  "generated_at_utc": "2026-03-31T03:39:32.169851+00:00",
+  "source_batch": "/home/jonat/ai-stack/reports/index_runs/alife_seeded_batch_20260331_033619.json",
+  "training_goal": "specialized governance-ALife reasoning model",
+  "recommended_recipe": {
+    "approach": "QLoRA first, full fine-tune later if needed",
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "lr_schedule": "cosine",
+    "warmup_ratio": 0.05,
+    "max_seq_len": 2048,
+    "lora_r": 16,
+    "lora_alpha": 16,
+    "batch_size": 1,
+    "grad_accumulation": 8,
+    "eval_every_steps": 25,
+    "early_stop_patience_evals": 4
+  },
+  "reporting_metrics": [
+    "heldout_loss",
+    "grounded_answer_rate",
+    "unsupported_claim_rate",
+    "governance_retrieval_precision_top5",
+    "alife_mechanism_alignment_score"
+  ],
+  "minimum_publishable_run_set": {
+    "seeded_batch_runs": 15,
+    "distinct_scenarios": 5,
+    "validation_queries_per_class": 12
+  }
+}

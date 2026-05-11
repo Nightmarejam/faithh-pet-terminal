@@ -1,6 +1,66 @@
 {
   "decisions": [
     {
+      "id": "phase4_completion_implementation",
+      "decision": "Complete Phase 4 Security, Performance, and AI Optimization Implementation for Single-User Deployment",
+      "date": "2026-03-26",
+      "project": "faithh",
+      "category": "milestone",
+      "rationale": "Successfully implement Phase 4 core systems including security middleware, connection monitoring, response caching, performance tracking, and local AI optimization. Optimize for single-user deployment while maintaining family deployment readiness. Rate limiting disabled for personal use but architecture supports re-enabling for family sharing.",
+      "alternatives_considered": [
+        "Continue with rate limiting enabled - would restrict single-user usage unnecessarily",
+        "Skip AI optimization - would miss performance improvements and model selection benefits",
+        "Delay implementation until family deployment - would delay immediate benefits",
+        "Implement full multi-user features now - would add complexity not needed yet"
+      ],
+      "chosen_approach": "Implement all Phase 4 systems with single-user optimization, disable rate limiting for personal use, maintain family deployment readiness",
+      "implementation": {
+        "security_middleware": {
+          "status": "Complete - Rate limiting disabled for single-user",
+          "features": "Rate limiting, input validation, request protection",
+          "family_ready": "Rate limiting can be re-enabled when needed"
+        },
+        "connection_monitor": {
+          "status": "Complete - Monitoring 5 services",
+          "services": "backend, chromadb, ollama, groq, gemini",
+          "features": "Health checks, graceful fallbacks, background monitoring"
+        },
+        "response_cache": {
+          "status": "Complete - 100MB cache with LRU eviction",
+          "ttl": "1-2 hours depending on content type",
+          "features": "Intelligent caching, background cleanup"
+        },
+        "performance_tracker": {
+          "status": "Complete - Real-time metrics collection",
+          "features": "Request tracking, system monitoring, performance analytics"
+        },
+        "local_ai_optimization": {
+          "status": "Complete - Working perfectly",
+          "features": "Query analysis, model selection, performance profiling",
+          "models": "qwen25-grounded:latest (working model)"
+        }
+      },
+      "explicitly_omitted": [
+        "Full multi-user authentication - not needed for single-user deployment",
+        "Complex rate limiting rules - simple enable/disable sufficient",
+        "Advanced caching strategies - basic caching provides good foundation",
+        "Comprehensive user analytics - privacy-focused approach preferred"
+      ],
+      "expected_impact": {
+        "performance": "AI optimization improving model selection and response quality",
+        "reliability": "Health monitoring and graceful fallbacks ensuring stability",
+        "security": "Protection framework ready for family deployment",
+        "scalability": "Architecture designed for multi-user scaling when needed"
+      },
+      "verification_steps": [
+        "Test chat endpoint functionality - ✅ Working",
+        "Verify AI optimization model selection - ✅ Working",
+        "Test multiple requests without rate limiting - ✅ Working",
+        "Validate health monitoring - ✅ Working",
+        "Confirm family deployment readiness - ✅ Architecture ready"
+      ]
+    },
+    {
       "id": "claude_desktop_mcp_configuration",
       "decision": "Configure Claude Desktop with MCP filesystem server for direct FAITHH project access",
       "date": "2026-02-23",
@@ -432,10 +492,31 @@
       "impact": "More capable grounded model for FAITHH responses",
       "status": "implemented",
       "related_docs": ["docs/archive/handoffs/HANDOFF_QWEN25_TRAINING.md"]
+    },
+    {
+      "id": "infra_002",
+      "decision": "Never load SentenceTransformer in WSL scripts — use ChromaDB default embedding or route through backend",
+      "date": "2026-03-01",
+      "project": "infrastructure",
+      "category": "operations",
+      "rationale": "Loading SentenceTransformer (all-MiniLM-L6-v2) in a WSL script triggers PyTorch CUDA initialization against the GTX 1080 Ti (sm_61 architecture). This causes catastrophic WSL memory pressure and crashes the entire WSL instance. The backend already has the model loaded lazily on CPU — use that instead. ChromaDB also supports default embedding functions that sidestep the issue entirely.",
+      "alternatives_considered": [
+        {
+          "option": "Use CUDA_VISIBLE_DEVICES='' to force CPU",
+          "rejected_because": "Tried and still crashes — PyTorch CUDA init happens before the env var takes effect in some load paths"
+        },
+        {
+          "option": "Load SentenceTransformer with device='cpu' explicitly",
+          "rejected_because": "Also triggers CUDA init on import of torch — the crash is at import time, not inference time"
+        }
+      ],
+      "impact": "All future indexer scripts must avoid importing sentence_transformers or torch directly. Use: (1) route through running FAITHH backend's /api/rag_search or embed endpoint, or (2) use ChromaDB collection.upsert() without embeddings and let the collection's default function handle it.",
+      "status": "implemented",
+      "related_docs": ["scripts/add_harmony_docs.py", "scripts/index_via_backend.py"]
     }
   ],
   "_schema_version": "1.0",
-  "_last_updated": "2026-02-18",
+  "_last_updated": "2026-03-01",
   "_instructions": {
     "purpose": "Captures the 'why' behind important decisions",
     "when_to_add": "Whenever you make a significant design choice or architectural decision",

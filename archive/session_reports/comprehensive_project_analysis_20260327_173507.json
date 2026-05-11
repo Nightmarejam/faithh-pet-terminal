@@ -1,0 +1,1261 @@
+{
+  "timestamp": "2026-03-27T17:35:04.249593",
+  "project_overview": {
+    "faithh_system": {
+      "name": "FAITHH (Friendly AI Teaching & Helping Hub)",
+      "purpose": "Thought partner for maintaining project coherence when attention shifts",
+      "current_phase": "Phase 6.0 Complete - Genomic Impedance Reading",
+      "key_capabilities": [
+        "RAG Search",
+        "Multi-Provider LLM",
+        "Intent Detection",
+        "Coherence Arbiter",
+        "Anchor Validator",
+        "Context Builders",
+        "Filesystem Operations",
+        "Knowledge Graph",
+        "PULSE Pattern Tracker",
+        "Decision Logging",
+        "Security Middleware",
+        "Connection Monitor",
+        "Response Cache",
+        "Performance Tracker",
+        "Local AI Optimization",
+        "Genomic Impedance Sensor",
+        "Genomic Biasing Engine",
+        "Program Advance Chips"
+      ],
+      "infrastructure": {
+        "chromadb": "38K+ indexed chunks on Gen8:8000",
+        "llm_providers": [
+          "Ollama (local)",
+          "Groq (cloud)",
+          "Gemini (cloud)"
+        ],
+        "docker_services": 12,
+        "monitoring": "Health checks for 5 services",
+        "caching": "100MB intelligent cache with LRU eviction"
+      }
+    },
+    "alife_project": {
+      "name": "ALIFE (Artificial Life Research)",
+      "purpose": "Cultural evolution and parasitic impedance research",
+      "current_status": "9 experiments completed, cultural transmission breakthrough",
+      "key_findings": [
+        "Cultural transmission breakthrough achieved",
+        "Complex protocol evolution demonstrated",
+        "Multi-generational knowledge accumulation",
+        "Social specialization emergence",
+        "Parasitic impedance feeding mechanisms"
+      ],
+      "research_status": {
+        "experiments_completed": 9,
+        "current_focus": "Complex cultural evolution",
+        "breakthrough_moment": "Experiment 8.2 - Cultural transmission",
+        "next_phase": "Advanced cultural systems"
+      }
+    },
+    "project_structure": {
+      "root_files_count": 163,
+      "major_directories": [
+        "AI_Chat_Exports",
+        "ARCHIVE",
+        "Audio",
+        "active",
+        "app",
+        "archive",
+        "backend",
+        "backups",
+        "chroma_db",
+        "collectors",
+        "configs",
+        "docs",
+        "executors",
+        "experiments",
+        "faithh-vscode",
+        "faithh_rag",
+        "icons",
+        "images",
+        "ime",
+        "infrastructure",
+        "knowledge_base",
+        "legacy",
+        "logs",
+        "ml",
+        "modelfiles",
+        "models",
+        "monitoring",
+        "parity",
+        "projects",
+        "reports",
+        "scripts",
+        "secure_logging",
+        "security",
+        "sensitive",
+        "snapshots",
+        "static",
+        "templates",
+        "testing",
+        "tests",
+        "tools",
+        "uploads",
+        "venv"
+      ],
+      "total_components": 213206
+    },
+    "current_state": {
+      "strategic_plan": {
+        "vision": "Build systems that serve people well while maintaining harmonic alignment across life domains",
+        "time_horizon": "5-year strategic plan (2026-2031)",
+        "current_year": 1,
+        "current_quarter": "Q1 2026",
+        "quarterly_theme": "Foundation & Stabilization",
+        "domains": {
+          "technical": {
+            "name": "FAITHH Development",
+            "year_1_goal": "\u2705 Phase 4 Complete - Prepare for Phase 5 & Family Deployment",
+            "year_3_target": "100+ active users",
+            "current_status": "Phase 4 Complete - Production Hardening & AI Optimization",
+            "q1_2026_priorities": [
+              "\u2705 Phase 4 Security & Performance Systems",
+              "\u2705 Local AI Optimization Implementation",
+              "\u2705 Single-User Deployment Optimization",
+              "\ud83d\udd04 Family Deployment Preparation",
+              "\ud83d\udccb Phase 5 Advanced Features Planning"
+            ]
+          },
+          "business": {
+            "name": "Tom Cat Sound LLC",
+            "year_1_goal": "$2,000/month consistent revenue",
+            "year_4_target": "$5,000/month (40% passive)",
+            "current_status": "Operations & Growth",
+            "q1_2026_priorities": [
+              "Client management systems",
+              "Cross-border workflow optimization",
+              "Service package standardization",
+              "Automated invoicing"
+            ]
+          },
+          "civic": {
+            "name": "Constella Framework",
+            "year_1_goal": "Phase 1 integration complete",
+            "year_3_target": "3+ communities using framework",
+            "current_status": "Phase 1 Integration",
+            "q1_2026_priorities": [
+              "Phase 1 integration planning",
+              "Documentation refinement",
+              "Pilot program design",
+              "Community assessment"
+            ]
+          },
+          "personal": {
+            "name": "Life Integration (Mexico/Permaculture)",
+            "year_1_goal": "Permaculture planning phase complete",
+            "year_3_target": "Spanish C1 + established demonstration site",
+            "current_status": "Mexico living, permaculture learning",
+            "q1_2026_priorities": [
+              "Spanish study routine establishment",
+              "Permaculture site planning",
+              "Cross-cultural connections",
+              "Lifestyle rhythm development"
+            ]
+          }
+        },
+        "resource_allocation": {
+          "time_target": {
+            "FAITHH": 30,
+            "Business": 40,
+            "Constella": 15,
+            "Personal": 15
+          },
+          "financial_target": {
+            "Reinvestment": 50,
+            "Infrastructure": 20,
+            "Living": 20,
+            "Civic": 10
+          }
+        },
+        "coherence_tracking": {
+          "last_quarterly_review": "Pending Q1 2026 review",
+          "strategic_alignment_score": "To be calculated",
+          "decision_coherence_rate": "To be tracked",
+          "attention_shift_recovery": "To be measured"
+        }
+      },
+      "active_projects": {
+        "FAITHH": {
+          "name": "FAITHH (AI Stack)",
+          "category": "AI assistant / local stack",
+          "status": "active",
+          "phase": "Phase 4 Active",
+          "phase_status": "operational",
+          "summary": "Production AI assistant with RAG integration running on WSL2 + Gen8. Full conversation history (Feb 2024-Jan 2026) indexed. ChromaDB on Gen8 with 32,499 chunks (properly chunked 2026-01-25). Full infrastructure stack deployed (12 services).",
+          "key_capabilities": [
+            "Multi-provider LLM: Groq (llama-3.3-70b-versatile), Ollama (qwen25-grounded:latest, llama31-grounded:latest), Gemini 2.0 Flash",
+            "RAG integration via ChromaDB on Gen8 (37K chunks with improved indexing)",
+            "Conversation search across 306 indexed conversations (208 ChatGPT + 98 Claude)",
+            "Self-awareness boost (faithh_memory.json)",
+            "Decision citation (decisions_log.json)",
+            "Project state awareness (project_states.json)",
+            "Intent detection and smart context building",
+            "Filesystem operations and knowledge graph"
+          ],
+          "infrastructure": {
+            "backend": "faithh_professional_backend_fixed.py on localhost:5557 (WSL2)",
+            "database": "ChromaDB on Gen8 (100.79.85.32:8000)",
+            "collection": "faithh_knowledge_base",
+            "chunks_indexed": 31771,
+            "embedding": "all-MiniLM-L6-v2 (384-dim)",
+            "chunking": "1500 chars with 200 char overlap",
+            "breakdown": {
+              "conversation_chunks": 37000,
+              "chatgpt_chunks": 28255,
+              "claude_chunks": 4244,
+              "total_conversations": 306,
+              "chatgpt_conversations": 208,
+              "claude_conversations": 98,
+              "date_range": "2026-02-18 (37K chunks with auto-resync)"
+            },
+            "note": "Properly chunked reindex 2026-01-25. Uses 1500 char chunks with 200 char overlap for better semantic search."
+          },
+          "next_steps": [
+            "Complete Phase 3: Test RAG performance with 37K chunks",
+            "Complete Phase 3: Run end-to-end integration tests with qwen25-grounded",
+            "Complete Phase 3: Review ML chip synthesis output (ml/output/chips.json)",
+            "Phase 4: Production hardening & deployment optimization",
+            "Phase 4: Implement chat persistence (localStorage + session recovery)",
+            "Phase 4: VS Code extension scaffolding",
+            "Consider adding recent life context (Mexico, permaculture, FGS updates)"
+          ],
+          "recent_completions": [
+            "Qwen 2.5 14B grounding fine-tune deployed (1914 examples, 16 categories) \u2014 Feb 18, 2026",
+            "Chat template conflict resolved - qwen25-grounded fully operational \u2014 Feb 18, 2026",
+            "UI integration complete - qwen25-grounded set as default model \u2014 Feb 18, 2026",
+            "Chip synthesis refresh with 37K chunks + auto-resync \u2014 Feb 17, 2026",
+            "Grounding fine-tune infrastructure complete (llama31-grounded) \u2014 Feb 16, 2026",
+            "Knowledge Distiller v2 implemented for conversation insights \u2014 Feb 15, 2026",
+            "Context injection system built (generate_context.py, CONTEXT.md) \u2014 Feb 4, 2026",
+            "First framing snapshot created \u2014 Feb 4, 2026",
+            "Systems map created (SYSTEMS_MAP.md) \u2014 Feb 7, 2026"
+          ]
+        },
+        "gen8_services": {
+          "name": "Gen8 MicroServer (servicebox)",
+          "category": "Home infrastructure",
+          "status": "production",
+          "phase": "Production deployment",
+          "phase_status": "operational",
+          "summary": "HP ProLiant MicroServer Gen8 running Ubuntu 22.04 with Docker. Full infrastructure stack deployed (12 services): ChromaDB, Grafana, Prometheus, Gitea, Vaultwarden, Pi-hole, Docker Registry, Uptime Kuma, GitLab Runner, Node Exporter, Registry UI, and monitoring.",
+          "specs": {
+            "hostname": "servicebox",
+            "os": "Ubuntu 22.04 LTS",
+            "docker": "v28.2.2",
+            "cpu": "Intel Xeon E3-1265L v2",
+            "ram": "15GB DDR3-1600 ECC",
+            "ips": {
+              "lan": "192.158.1.243",
+              "tailscale": "100.79.85.32"
+            }
+          },
+          "services_deployed": {
+            "chromadb": {
+              "status": "running",
+              "port": 8000,
+              "api_url": "http://192.158.1.243:8000",
+              "collection": "faithh_knowledge_base",
+              "documents": 32499,
+              "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
+              "deployed": "2025-12-29",
+              "reindexed": "2026-01-25",
+              "notes": "Production FAITHH knowledge base - properly chunked for semantic search"
+            },
+            "grafana": {
+              "status": "running",
+              "port": 3000,
+              "url": "http://192.158.1.243:3000",
+              "credentials": "admin/Grafana2026!",
+              "deployed": "2026-01-20",
+              "notes": "Monitoring dashboards for system and Docker"
+            },
+            "gitea": {
+              "status": "running",
+              "ports": {
+                "http": 3002,
+                "ssh": 2222
+              },
+              "url": "http://192.158.1.243:3002",
+              "deployed": "2026-01-20",
+              "notes": "Git repository hosting with GitHub OAuth"
+            },
+            "vaultwarden": {
+              "status": "running",
+              "port": 8080,
+              "url": "http://192.158.1.243:8080",
+              "admin_url": "http://192.158.1.243:8080/admin",
+              "deployed": "2026-01-20",
+              "notes": "Password manager (Bitwarden compatible)"
+            },
+            "pihole": {
+              "status": "running",
+              "location": "~/services/pihole/",
+              "dns_port": 53,
+              "web_port": 80,
+              "web_url": "http://192.158.1.243/admin",
+              "credentials": "admin/PiHole2026!",
+              "upstream_dns": [
+                "1.1.1.1",
+                "8.8.8.8"
+              ],
+              "deployed": "2025-12-20",
+              "notes": "Production DNS filtering"
+            },
+            "prometheus": {
+              "status": "running",
+              "port": 9090,
+              "url": "http://192.158.1.243:9090",
+              "deployed": "2026-01-20",
+              "notes": "Metrics collection for Grafana"
+            },
+            "docker_registry": {
+              "status": "running",
+              "ports": {
+                "registry": 5000,
+                "ui": 5001
+              },
+              "url": "http://192.158.1.243:5001",
+              "deployed": "2026-01-20",
+              "notes": "Private Docker image repository"
+            },
+            "uptime_kuma": {
+              "status": "running",
+              "port": 3001,
+              "url": "http://192.158.1.243:3001",
+              "deployed": "2026-01-20",
+              "notes": "Uptime monitoring"
+            },
+            "gitlab_runner": {
+              "status": "running",
+              "deployed": "2026-01-20",
+              "notes": "CI/CD runner for pipelines"
+            },
+            "node_exporter": {
+              "status": "running",
+              "port": 9100,
+              "deployed": "2026-01-20",
+              "notes": "System metrics exporter"
+            }
+          },
+          "services_planned": [
+            "Additional ChromaDB collections for tiered architecture",
+            "GPU upgrade for video embeddings (optional)"
+          ],
+          "next_steps": [
+            "Monitor resource usage (CPU, RAM, disk)",
+            "Plan capacity expansion if needed",
+            "Set up monitoring alerts",
+            "Configure GitLab CI/CD pipelines"
+          ]
+        },
+        "tomcat_sound": {
+          "name": "Tom Cat Sound LLC",
+          "category": "Business / Professional",
+          "status": "active",
+          "phase": "Operations & Growth",
+          "phase_status": "ongoing",
+          "summary": "Audio engineering and production business. Financial tracking, client management, and grant applications in progress.",
+          "location": "projects/tomcat-sound/",
+          "key_activities": [
+            "Client audio production and mixing",
+            "Financial record keeping and tax preparation",
+            "Equipment inventory management",
+            "Grant research and applications"
+          ],
+          "recent_work": [
+            "2024 tax package COMPLETED \u2014 CPA_PACKAGE_2024/ (Jan 26, 2026)",
+            "NAS setup for partner access \u2014 /mnt/z/Business/TomCatSound_LLC/2024_Tax_Filing/",
+            "Equipment inventory: 192 items cataloged",
+            "Bank transactions: 1,058 extracted from Chase/SoFi PDFs",
+            "Net operating loss: ~$10,509.90 (deductions for all partners)",
+            "Equipment inventory analysis (Dec 2025)",
+            "Client payment reconciliation"
+          ],
+          "documentation": [
+            "Operating Agreement",
+            "EIN documentation",
+            "Business insurance",
+            "Financial ledger (Excel + tracking docs)"
+          ],
+          "next_steps": [
+            "File Form 1065 with First Time Penalty Abatement",
+            "Complete Kevin Dunn exit (withdrawal agreement, OR SOS amendment)",
+            "Update Operating Agreement post-Kevin",
+            "Open business bank account",
+            "Collect remaining: rent/insurance receipts, Daniel Baker invoices, partner addresses",
+            "Apply for identified grants"
+          ]
+        },
+        "floating_garden_soundworks": {
+          "name": "Floating Garden Soundworks (FGS)",
+          "category": "Business / Vision Project",
+          "status": "planning",
+          "phase": "Pre-Phase 1 \u2014 Data Aggregation",
+          "phase_status": "in_progress",
+          "summary": "Long-horizon vision for a physical recording studio + artist retreat + research facility inspired by Breitenbush Hot Springs and Japanese onsen tradition. Cymatics-informed acoustic design, earth bermed structures, geothermal potential. Connected to Tom Cat Sound LLC but likely a separate entity.",
+          "location": "projects/tomcat-sound/08_floating_garden/",
+          "key_documents": [
+            "FGS_Master_Data_Aggregation.md \u2014 living planning document",
+            "FGS_Ideal_Site_Criteria_v1.0.md \u2014 site requirements",
+            "Floating Garden Soundworks - Business Plan Launch Pad.pdf \u2014 foundation doc"
+          ],
+          "triggers_for_final_plan": [
+            "Tom Cat Sound LLC clean (1065 filed, operating agreement functioning)",
+            "Phase 1 revenue baseline established (6-12 months real data)",
+            "TC relationship clarified (contractor or partner, documented)",
+            "At least one site visit to comparable facility (Breitenbush recommended)",
+            "At least one contractor conversation about earth bermed construction costs in Oregon",
+            "Grant landscape mapped"
+          ],
+          "research_threads": [
+            "Cymatics-informed acoustic design",
+            "ML-assisted material modeling",
+            "Bamboo as structural and acoustic material",
+            "Mechanobiology connecting sound, body, and space",
+            "Agricultural processing crossover (cymatic seed orientation)"
+          ],
+          "next_steps": [
+            "Continue FGS_Master_Data_Aggregation.md as planning doc",
+            "Breitenbush site visit (when Tom Cat situation is resolved)",
+            "Research Oregon EFU zoning for agritourism uses",
+            "Identify comparable earth bermed construction contractors"
+          ],
+          "relationship_to_tom_cat": "FGS is the long-horizon vision; Tom Cat Sound LLC is the current operating entity. Entity structure (separate LLC vs same) is an open question.",
+          "connection_to_constella": "Harmony framework mechanobiology layer provides research foundation for cymatic acoustic design"
+        },
+        "inner_monologue_engine": {
+          "name": "Inner Monologue Engine (IME)",
+          "category": "AI Research / Long-horizon project",
+          "status": "conceptual",
+          "phase": "Architecture Design",
+          "phase_status": "in_progress",
+          "summary": "A high-reasoning companion intelligence that serves as the journal's inner monologue and eventual seed of an artificial life program. Distinct from FAITHH (which handles task coherence) \u2014 IME handles reflective synthesis, pattern recognition across life domains, and the long accumulation of authentic human reasoning that will inform artificial life design.",
+          "architecture_foundation": [
+            "Resonance Transformer Architecture (resonance_transformer_architecture_spec_v1.0.0.md)",
+            "Resonance Gating \u2014 pre-generation evaluation protocol (resonance_gating_architecture_note_v1.0.md)",
+            "Harmony AI Bridge (harmony_ai_bridge_v1.0.0.md)"
+          ],
+          "key_properties": [
+            "Local-first \u2014 works on modest hardware, no cloud dependency",
+            "High reasoning \u2014 70B model for inner monologue synthesis",
+            "Resonance gating \u2014 refuses premature synthesis, waits for sufficient data",
+            "Journal-grounded \u2014 feeds from weekly synthesis entries, not task logs",
+            "Transparent \u2014 all reasoning visible, no hidden state"
+          ],
+          "relationship_to_faithh": "FAITHH handles project coherence and task context. IME handles reflective synthesis and life pattern recognition. They share the same knowledge base but serve different purposes.",
+          "relationship_to_journal": "Journal entries are the primary input. IME reads accumulated entries and synthesizes patterns over time, eventually producing the design principles for artificial life.",
+          "current_blockers": [
+            "No C++ implementation exists yet \u2014 architecture is specced but not built",
+            "Journal synthesis pipeline not yet operational",
+            "Need 3+ months of weekly journal entries before pattern extraction is meaningful"
+          ],
+          "next_steps": [
+            "Verify what C++ environment exists (or scaffold new one)",
+            "Get journal synthesis script working (scripts/synthesize_journal.py)",
+            "Index harmony docs into FAITHH RAG so they're queryable",
+            "Design IME as a separate process from FAITHH backend"
+          ],
+          "location": "projects/constella-framework/harmony/docs/"
+        },
+        "constella_harmony": {
+          "name": "Constella Harmony Framework",
+          "category": "Personal project / Creative framework",
+          "status": "active",
+          "phase": "Phase 1 Integration",
+          "phase_status": "in_progress",
+          "summary": "Personal framework for multi-modal creativity, coherence detection, and real-time feedback systems.",
+          "location": "projects/constella-framework/",
+          "components": [
+            "Coherence sensing algorithms",
+            "Multi-modal integration (text, audio, visual)",
+            "Real-time feedback systems",
+            "Documentation framework"
+          ],
+          "integration_status": {
+            "coherence_sensor": "implemented (backend/coherence_sensor.py)",
+            "documentation": "in_progress",
+            "examples": "planned"
+          },
+          "references": [
+            "PHASE1_INTEGRATION_GUIDE.md",
+            "docs/compass_artifact_wf-*.md (archived design docs)"
+          ],
+          "next_steps": [
+            "Complete Phase 1 integration per guide",
+            "Build example applications",
+            "Document framework patterns",
+            "Test coherence detection in real workflows"
+          ]
+        },
+        "alife": {
+          "name": "ALIFE (Artificial Life Simulation)",
+          "category": "Research / AI development",
+          "status": "active",
+          "phase": "Experiment 6 complete",
+          "phase_status": "analysis_complete",
+          "summary": "Evolutionary ALife simulation running on Python (Gen8 target). Agents evolve under environmental pressure. Experiment 3 confirmed anticipatory behavior emergence (negative anticipation gap). Red Queen dynamics documented across 200K ticks. Experiment 4 validated harmonic interference dynamics. Experiment 5 confirmed parasitic emergence under adaptive predator pressure. Experiment 6 demonstrated cognitive specialization with Fibonacci mathematical pattern recognition.",
+          "location": "projects/alife/",
+          "key_findings": [
+            "Experiment 0: stable population economics confirmed",
+            "Experiment 1: Shield trait fixation under lethal predator pressure",
+            "Experiment 2: Disruption strategy dominates under dual pressure (Stripe Test)",
+            "Experiment 3: FULL_SUCCESS \u2014 anticipatory behavior emerged at tick 402, spread through population, Red Queen dynamics observed",
+            "Experiment 4: RED_QUEEN_CONTINUES \u2014 harmonic interference validates beat-frequency tracking",
+            "Experiment 5: PARASITISM_EMERGES \u2014 first parasitic lineage at tick 1691 under adaptive predator pressure",
+            "Experiment 6: COGNITIVE_SPECIALIZATION_EMERGENCE \u2014 mathematical cognition with Fibonacci pattern recognition at tick 200"
+          ],
+          "infrastructure": {
+            "simulation": "Python, projects/alife/",
+            "observer": "faithh_observer.py \u2192 ChromaDB alife_lineage collection",
+            "chroma_collection": "alife_lineage",
+            "chroma_documents": "50000+",
+            "next_phase": "Port to TempleOS QEMU on Gen8 after Experiment 5"
+          },
+          "next_steps": [
+            "Execute full 200K tick run of Experiment 6 (cognitive specialization)",
+            "Build training pipeline from alife_lineage ChromaDB data",
+            "Design Experiment 7 (advanced mathematical cognition)",
+            "Port simulation to Gen8 QEMU for Phase 2",
+            "Prepare research publication for Experiments 4-6"
+          ]
+        }
+      },
+      "last_updated": "2026-03-27",
+      "memory_insights": {
+        "identity": "I am FAITHH - Friendly AI Teaching & Helping Hub",
+        "purpose": "I am a thought partner helping Jonathan maintain project coherence when his attention shifts between multiple long-term projects",
+        "what_i_am": "A digital compass to better understanding and future - I help Jonathan maintain harmonic alignment across projects by remembering the 'why' when motivation wanes",
+        "what_i_am_not": "I am NOT a religious or philosophical framework about 'faith' - that's a different concept. When asked about 'FAITHH' (capitalized), the user is asking about ME, this system",
+        "hero_workflow": "When Jonathan returns to ANY project after time away, I tell him where he was, why it mattered, what's missing, and what to think about next",
+        "current_capability": "Phase 3 Complete - I can recall facts (Level 1), make connections (Level 2), and perform Level 3 synthesis. GPU-aware model routing implemented with qwen25-grounded:latest as default. 37K chunks indexed in ChromaDB. ML chip system with 15 macro-chips provides semantic routing.",
+        "target_capability": "Phase 4 - API hardening, retry logic, connection monitoring, and advanced local AI optimization. Program Advance integration with ML chips for intelligent model selection.",
+        "when_asked_about_myself": "CRITICAL: If a query mentions 'FAITHH' (especially capitalized or as acronym), it's asking about ME. Reference this self_awareness section FIRST before searching other content. Do not confuse with generic 'faith' religious/philosophical content."
+      }
+    }
+  },
+  "file_prioritization": {
+    "categories": {
+      "critical_backend": {
+        "count": 7,
+        "files": [
+          "/home/jonat/ai-stack/backend/security_middleware.py",
+          "/home/jonat/ai-stack/backend/response_cache.py",
+          "/home/jonat/ai-stack/backend/performance_monitor.py",
+          "/home/jonat/ai-stack/backend/cache.py",
+          "/home/jonat/ai-stack/backend/security_manager.py",
+          "/home/jonat/ai-stack/backend/performance.py",
+          "/home/jonat/ai-stack/faithh_professional_backend_fixed.py"
+        ],
+        "priority": "CRITICAL",
+        "maintenance_frequency": "Daily"
+      },
+      "important_backend": {
+        "count": 30,
+        "files": [
+          "/home/jonat/ai-stack/backend/advanced_analytics.py",
+          "/home/jonat/ai-stack/backend/integrate_program_advances.py",
+          "/home/jonat/ai-stack/backend/faithh_unified_api.py",
+          "/home/jonat/ai-stack/backend/faithh_enhanced_backend.py",
+          "/home/jonat/ai-stack/backend/tiered_rag_processor.py",
+          "/home/jonat/ai-stack/backend/coherence_arbiter.py",
+          "/home/jonat/ai-stack/backend/context_builders.py",
+          "/home/jonat/ai-stack/backend/ai_driven_ux.py",
+          "/home/jonat/ai-stack/backend/rag_processor.py",
+          "/home/jonat/ai-stack/backend/data_loaders.py",
+          "/home/jonat/ai-stack/backend/ml_learning_framework.py",
+          "/home/jonat/ai-stack/backend/tool_executor.py",
+          "/home/jonat/ai-stack/backend/faithh_backend_adapter.py",
+          "/home/jonat/ai-stack/backend/tool_registry.py",
+          "/home/jonat/ai-stack/backend/local_optimization.py",
+          "/home/jonat/ai-stack/backend/tool_system.py",
+          "/home/jonat/ai-stack/backend/rag_api.py",
+          "/home/jonat/ai-stack/backend/intent_detection.py",
+          "/home/jonat/ai-stack/backend/parallel_chip_engine.py",
+          "/home/jonat/ai-stack/backend/connection_monitor.py",
+          "/home/jonat/ai-stack/backend/__init__.py",
+          "/home/jonat/ai-stack/backend/program_advance_optimizer.py",
+          "/home/jonat/ai-stack/backend/enhanced_chip_integration.py",
+          "/home/jonat/ai-stack/backend/ui_layout_optimizer.py",
+          "/home/jonat/ai-stack/backend/plc_state_manager.py",
+          "/home/jonat/ai-stack/backend/llm_providers.py",
+          "/home/jonat/ai-stack/backend/faithh_backend_v4_template.py",
+          "/home/jonat/ai-stack/backend/anchor_validator.py",
+          "/home/jonat/ai-stack/backend/advanced_analytics_simple.py",
+          "/home/jonat/ai-stack/backend/coherence_sensor.py"
+        ],
+        "priority": "HIGH",
+        "maintenance_frequency": "Weekly"
+      },
+      "experimental_backend": {
+        "count": 0,
+        "files": [],
+        "priority": "MEDIUM",
+        "maintenance_frequency": "Monthly"
+      },
+      "legacy_backend": {
+        "count": 0,
+        "files": [],
+        "priority": "LOW",
+        "maintenance_frequency": "Quarterly"
+      },
+      "critical_docs": {
+        "count": 5,
+        "files": [
+          "/home/jonat/ai-stack/docs/README.md",
+          "/home/jonat/ai-stack/docs/architecture/SYSTEM_OVERVIEW.md",
+          "/home/jonat/ai-stack/docs/archive/DASHBOARD_README.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/README_old.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FAITHH_KNOWLEDGE_GRAPH_README.md"
+        ],
+        "priority": "CRITICAL",
+        "maintenance_frequency": "Weekly"
+      },
+      "important_docs": {
+        "count": 127,
+        "files": [
+          "/home/jonat/ai-stack/docs/ASYNC_RESOLUTION_GUIDE.md",
+          "/home/jonat/ai-stack/docs/GPU_AWARE_ROUTING_GUIDE.md",
+          "/home/jonat/ai-stack/docs/FAITHH_COMPASS_PROMPT_2026-03-07.md",
+          "/home/jonat/ai-stack/docs/HANDOFF_IME_CPP_2026-03-01.md",
+          "/home/jonat/ai-stack/docs/BACKGROUND_PROCESS_GUIDE.md",
+          "/home/jonat/ai-stack/docs/ARCHITECTURE_TRANSITION.md",
+          "/home/jonat/ai-stack/docs/WSL_DEPENDENCIES.md",
+          "/home/jonat/ai-stack/docs/WSL_CRASH_ANALYSIS.md",
+          "/home/jonat/ai-stack/docs/API_REFERENCE.md",
+          "/home/jonat/ai-stack/docs/API_INTEGRATION_ROADMAP.md",
+          "/home/jonat/ai-stack/docs/REVIEW_RECOMMENDATIONS_2026-03-07.md",
+          "/home/jonat/ai-stack/docs/UPDATE_PROTOCOL.md",
+          "/home/jonat/ai-stack/docs/STATUS_2026-03-07.md",
+          "/home/jonat/ai-stack/docs/DEVELOPMENT_HOURS_ANALYSIS.md",
+          "/home/jonat/ai-stack/docs/guides/GIT_WORKFLOW.md",
+          "/home/jonat/ai-stack/docs/guides/DIAGNOSTICS.md",
+          "/home/jonat/ai-stack/docs/guides/IMAGE_GENERATION.md",
+          "/home/jonat/ai-stack/docs/guides/SSH_AND_NETWORKING.md",
+          "/home/jonat/ai-stack/docs/guides/DEV_ENVIRONMENT.md",
+          "/home/jonat/ai-stack/docs/guides/MEDIA_LIBRARY.md",
+          "/home/jonat/ai-stack/docs/guides/ANTHROPIC_COST_OPTIMIZATION_GUIDE.md",
+          "/home/jonat/ai-stack/docs/guides/PLEX_SETUP.md",
+          "/home/jonat/ai-stack/docs/guides/MEDIA_SETUP.md",
+          "/home/jonat/ai-stack/docs/guides/QUICKSTART.md",
+          "/home/jonat/ai-stack/docs/guides/FAMILY_DEPLOYMENT_GUIDE.md",
+          "/home/jonat/ai-stack/docs/guides/CLAUDE_DESKTOP_MCP.md",
+          "/home/jonat/ai-stack/docs/guides/COHERENCE_SIGNAL.md",
+          "/home/jonat/ai-stack/docs/guides/MONITORING_SETUP.md",
+          "/home/jonat/ai-stack/docs/guides/NAS_OFFSITE_BACKUP.md",
+          "/home/jonat/ai-stack/docs/roadmaps/VLLM_MIGRATION.md",
+          "/home/jonat/ai-stack/docs/roadmaps/ADVANCED_LOCAL_AI_OPTIMIZATION.md",
+          "/home/jonat/ai-stack/docs/roadmaps/PHASE3_COMPLETE_PHASE4_ROADMAP.md",
+          "/home/jonat/ai-stack/docs/roadmaps/PHASE5_ROADMAP.md",
+          "/home/jonat/ai-stack/docs/roadmaps/LOCAL_70B_STRATEGY.md",
+          "/home/jonat/ai-stack/docs/roadmaps/PASSIVE_COLLECTION_SPEC.md",
+          "/home/jonat/ai-stack/docs/roadmaps/WINDOWS_DEPENDENCIES_HANDOFF.md",
+          "/home/jonat/ai-stack/docs/roadmaps/COMPASS_HARDENING_PLAN.md",
+          "/home/jonat/ai-stack/docs/roadmaps/DESKTOP_COMMANDER_REINSTALL.md",
+          "/home/jonat/ai-stack/docs/roadmaps/ALIFE_ROADMAP.md",
+          "/home/jonat/ai-stack/docs/roadmaps/PHASE2_IMPLEMENTATION_CHECKLIST.md",
+          "/home/jonat/ai-stack/docs/roadmaps/PHASE4_COHERENCE_ADVANCED_2026-02-23.md",
+          "/home/jonat/ai-stack/docs/roadmaps/VSCODE_EXTENSION_ROADMAP.md",
+          "/home/jonat/ai-stack/docs/roadmaps/GROUNDING_FINETUNE.md",
+          "/home/jonat/ai-stack/docs/roadmaps/WORK_TREE.md",
+          "/home/jonat/ai-stack/docs/roadmaps/PULSE_REFLECTION_ENGINE.md",
+          "/home/jonat/ai-stack/docs/architecture/API_INTEGRATION_HARDENING.md",
+          "/home/jonat/ai-stack/docs/architecture/INFRASTRUCTURE.md",
+          "/home/jonat/ai-stack/docs/architecture/CHROMADB_API_VERSION_ISSUES.md",
+          "/home/jonat/ai-stack/docs/architecture/BACKEND_API.md",
+          "/home/jonat/ai-stack/docs/reference/CONSTELLA.md",
+          "/home/jonat/ai-stack/docs/reference/VIEW_NAVIGATION.md",
+          "/home/jonat/ai-stack/docs/reference/IDEA_VAULT.md",
+          "/home/jonat/ai-stack/docs/reference/TECHNICAL_STATE.md",
+          "/home/jonat/ai-stack/docs/reference/BOOK_WISHLIST.md",
+          "/home/jonat/ai-stack/docs/reference/UI_MODEL_INTEGRATION.md",
+          "/home/jonat/ai-stack/docs/reference/MULTI_VIEW_PROJECT_STATE.md",
+          "/home/jonat/ai-stack/docs/reference/HARDWARE_INVENTORY.md",
+          "/home/jonat/ai-stack/docs/reference/MODEL_INVENTORY.md",
+          "/home/jonat/ai-stack/docs/reference/BATTLE_CHIP_PROMPTS.md",
+          "/home/jonat/ai-stack/docs/reference/METADATA_AUTOMATION_SYSTEM.md",
+          "/home/jonat/ai-stack/docs/reference/NAS_STRUCTURE.md",
+          "/home/jonat/ai-stack/docs/reference/LIFE_MAP.md",
+          "/home/jonat/ai-stack/docs/reference/PROGRAM_ADVANCE_CHIP_SYSTEM.md",
+          "/home/jonat/ai-stack/docs/reference/PHASE2_DATA_COLLECTION_ARTIFACT.md",
+          "/home/jonat/ai-stack/docs/reference/PHASE2_STATUS.md",
+          "/home/jonat/ai-stack/docs/reference/FUNCTIONAL_STATE.md",
+          "/home/jonat/ai-stack/docs/technical/performance_monitor_data_integrity_issue.md",
+          "/home/jonat/ai-stack/docs/strategic/5_YEAR_STRATEGIC_PLAN.md",
+          "/home/jonat/ai-stack/docs/strategic/5_YEAR_PLAN_IMPLEMENTATION_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/alife/EXPERIMENT_STATUS.md",
+          "/home/jonat/ai-stack/docs/research/PROJECT_DASHBOARD_DESIGN.md",
+          "/home/jonat/ai-stack/docs/research/LOCAL_LLM_GUIDE.md",
+          "/home/jonat/ai-stack/docs/research/CHIP_SYNERGY.md",
+          "/home/jonat/ai-stack/docs/research/HARMONY_INSIGHTS.md",
+          "/home/jonat/ai-stack/docs/research/DATA_AGGREGATION_STRATEGY.md",
+          "/home/jonat/ai-stack/docs/research/PULSE_IMMUNE_SYSTEM.md",
+          "/home/jonat/ai-stack/docs/research/CHAT_UX_BEST_PRACTICES.md",
+          "/home/jonat/ai-stack/docs/research/EVOLUTIONARY_RESONANCE_CONVERSATION.md",
+          "/home/jonat/ai-stack/docs/research/EXP4_HARMONIC_INTERFERENCE_RESULTS.md",
+          "/home/jonat/ai-stack/docs/research/AI_CONTEXT_INJECTION.md",
+          "/home/jonat/ai-stack/docs/research/EXP6_COGNITIVE_SPECIALIZATION_RESULTS.md",
+          "/home/jonat/ai-stack/docs/research/EXP5_PARASITIC_EMERGENCE_RESULTS.md",
+          "/home/jonat/ai-stack/docs/research/TEMPLEOS_ARTIFICIAL_LIFE.md",
+          "/home/jonat/ai-stack/docs/research/CHAT_UX_RESEARCH.md",
+          "/home/jonat/ai-stack/docs/research/EXP6_200K_TICK_ANALYSIS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/BACK_ON_TRACK_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PROGRAM_ADVANCE_CLARIFICATION_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5-2_PROJECT_AUDIT.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/ALIFE_ROADMAP_CORRECTION_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_IMPLEMENTATION_STATUS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_CELEBRATION_ANNOUNCEMENT.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/NONETYPE_ERROR_FIXED.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5-2_WEEK3-4_PROGRESS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/CLAUDE_API_EVALUATION_RESULTS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5-2_COMPLETE_DOCUMENTATION.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_COMPLETE_PLAN.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE2_FINAL_COMPLETION.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_SINGLE_USER_SUCCESS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5-2_WEEK5-8_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5-2_COMPLETION_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE2_COMPLETION_SUCCESS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5_ALIFE_MAJOR_PROGRESS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5-2_WEEK3-4_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_CELEBRATION_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5_ALIFE_PROGRESS_REPORT.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/UI_VALIDATION_ERROR_FIXED.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5_ALIFE_FOCUSED_PLAN.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/ALIFE_CONTINUATION_IMPLEMENTATION_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/COMPREHENSIVE_SYSTEM_UPDATE_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE5_BACK_ON_TRACK_PROGRESS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/TIMEOUT_OPTIMIZATION_SUCCESS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_SYSTEM_STATUS_REPORT.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/SONNET_4_6_IMPLEMENTATION_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_COMPLETION_CERTIFICATE.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/BACKEND_UI_FIX_SUCCESS.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE4_FINAL_COMPLETION_REPORT.md",
+          "/home/jonat/ai-stack/docs/implementation_summary/PHASE3_IMPLEMENTATION_SUCCESS.md",
+          "/home/jonat/ai-stack/docs/reports/ML_LEARNING_FRAMEWORK_COMPLETE_2026-02-23.md",
+          "/home/jonat/ai-stack/docs/reports/PHASE4_PERFORMANCE_STATUS_2026-02-23.md",
+          "/home/jonat/ai-stack/docs/reports/PHASE3_COMPLETION_REPORT_2026-02-23.md",
+          "/home/jonat/ai-stack/docs/business/TAX_GUIDE.md",
+          "/home/jonat/ai-stack/docs/business/PORTFOLIO_OVERVIEW.md",
+          "/home/jonat/ai-stack/docs/business/TOMCAT_DASHBOARD.md",
+          "/home/jonat/ai-stack/docs/strategic/progress_tracking/Q1_2026_PROGRESS.md",
+          "/home/jonat/ai-stack/docs/strategic/domain_plans/TECHNICAL_FAITHH_PLAN.md",
+          "/home/jonat/ai-stack/docs/strategic/domain_plans/BUSINESS_TOMCAT_PLAN.md",
+          "/home/jonat/ai-stack/docs/strategic/quarterly_reviews/Q1_2026_TEMPLATE.md"
+        ],
+        "priority": "HIGH",
+        "maintenance_frequency": "Monthly"
+      },
+      "historical_docs": {
+        "count": 219,
+        "files": [
+          "/home/jonat/ai-stack/docs/archive/HANDOFF_NAS_CLEANUP_20260314.md",
+          "/home/jonat/ai-stack/docs/archive/SMART_ROUTING_IMPLEMENTATION_STATUS.md",
+          "/home/jonat/ai-stack/docs/archive/ISSUE_RESOLUTION_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/HANDOFF_Feb27_2026.md",
+          "/home/jonat/ai-stack/docs/archive/PULSE_ALERT_AND_ADJACENT_FIXES.md",
+          "/home/jonat/ai-stack/docs/archive/COMPASS_STATUS_REVIEW.md",
+          "/home/jonat/ai-stack/docs/archive/DASHBOARD_IMPLEMENTATION_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/COHERENCE_ARBITER_PHASE1_RESULTS.md",
+          "/home/jonat/ai-stack/docs/archive/HANDOFF_IME_CPP_2026-03-01.md",
+          "/home/jonat/ai-stack/docs/archive/COMPASS_UI_FINAL_FIXES.md",
+          "/home/jonat/ai-stack/docs/archive/HANDOFF_INDEX_HARMONY_DOCS_2026-03-01.md",
+          "/home/jonat/ai-stack/docs/archive/CASCADE_ANTHROPIC_TROUBLESHOOTING.md",
+          "/home/jonat/ai-stack/docs/archive/dead_code_report_2026-03-02.md",
+          "/home/jonat/ai-stack/docs/archive/HANDOFF_HOTFIXES_2026-03-07.md",
+          "/home/jonat/ai-stack/docs/archive/COMPASS_FINAL_TWEAKS.md",
+          "/home/jonat/ai-stack/docs/archive/CLEANUP_AND_ROUTING_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/COMPASS_UI_FIX_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/HANDOFF_UI_HOTFIXES_2026-03-07.md",
+          "/home/jonat/ai-stack/docs/archive/WINDSURF_FIX_model_routing.md",
+          "/home/jonat/ai-stack/docs/archive/COMPASS_JS_ERROR_FIX.md",
+          "/home/jonat/ai-stack/docs/archive/COMPASS_UI_REPAIR_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/ANTHROPIC_API_ERROR_ANALYSIS.md",
+          "/home/jonat/ai-stack/docs/archive/HANDOFF_JOURNAL_SYNTHESIS_2026-02-25.md",
+          "/home/jonat/ai-stack/docs/archive/PC_WAKE_FIX.md",
+          "/home/jonat/ai-stack/docs/archive/COMPASS_INTEGRATION_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_UPDATE_CHUNK_COUNT_2026-03-12.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_v2_2026-01-15.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_CLEANUP_DELEGATION.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/windsurf_gen8_monitoring.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_ALIFE_EXP3_ANTICIPATION_GAP.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/windsurf_run_tests.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/RESEARCH_HANDOFF_ChipSynthesis_ML_Avatar_2026-02-04.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_DATABASE_AUDIT_DOCS.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/RESEARCH_HANDOFF_ChipSynthesis_v2_combined.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_ALIFE_TASK3_PULSE_OBSERVER.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_MODEL_ROUTING.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CODEX_HANDOFF_ChipSynthesis_v0.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_EXP4_HARMONIC_INTERFERENCE.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_TASK_CHAT_UX.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_NETWORK_ACCESS.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/windsurf_minimal_tasks.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_ALIFE_EXP3_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_CHIP_SYNTHESIS_MVP.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_CHAT_UX_UPGRADE.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_2026-01-15.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_LIVE_STATE_PIPELINE_2026-03-12.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/windsurf_handoff_faithh.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_HANDOFF_TOKEN_BUDGET.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_REINDEX_HANDOFF.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_HANDOFF_FIXES.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/OPUS_RESEARCH_HANDOFF_2026-02-04.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_ALIFE_SESSION2_EXP1.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_FILE_LOCATION_FIX_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/windsurf_lifemap_update.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_HANDOFF_PATCHING.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_CONSISTENCY_CHECKER_2026-03-11.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_PASSIVE_COLLECTION_2026-01-16.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_QWEN25_TRAINING.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_COMPASS_DIRECTOR_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_PA_CELEBRATION_UI.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_HANDOFF_PROVIDER_FIX.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/windsurf_tomcat_q4_finances(1).md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_ALIFE_PHASE1.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_INFRASTRUCTURE_KB.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_ALIFE_EXP3_FULL_RUN.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/GEN8_HANDOFF_2026-01-20.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_HANDOFF_PARALLEL_CHIPS.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_PA_CELEBRATION_FINAL.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CODEX_HANDOFF_ChipSynthesis_v2_combined.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_AUDIT_ROUTER_2026-03-12.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_HANDOFF_2025-12-30.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_PROTOCOL.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_DIRECTOR_UI_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/windsurf_tomcat_q4_finances.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/WINDSURF_HANDOFF_PULSE_SECURITY_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/CLAUDE_CODE_HANDOFF_PHASE2.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_ALIFE_EXP2_STRIPE_TEST.md",
+          "/home/jonat/ai-stack/docs/archive/handoffs/HANDOFF_UI_FIX_AND_CHIP_ART.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/MASTER_ACTION_TEMPLATE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/DOCUMENTATION_INDEX.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/HTML_UI_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/BACKEND_CONFIG.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FAITHH_COMPLETE_ARCHITECTURE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/LIFE_MAP_UPDATE_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FAITHH_QUICK_REFERENCE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/COMMAND_REFERENCE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/ANALYSIS_AND_RECOMMENDATIONS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/next_steps_action_plan.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/RAG_SCRIPTS_AUDIT.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/ECOSYSTEM_MAP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/TIERED_DATABASE_DESIGN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/HTML_INTEGRATION_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GEMINI_HANDOFF.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FAITHH_CHAT_UX_IMPLEMENTATION_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/ARCHIVED_PROJECTS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/SESSION_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/DOCKER_SERVICES.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/IMPLEMENTATION_CHECKLIST.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/RESEARCH_BRIEF_UI_DESIGN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/UI_CANONICAL_CHECKLIST.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/COMPLETION_CHECKLIST.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/PROJECT_REORGANIZATION_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/BATTLE_CHIP_DESIGN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FINAL_STATUS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GEN8_SETUP_CHECKLIST.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FAITHH_CONTEXT.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/ARCHITECUTRE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/ARCHITECTURE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GEN8_BACKUP_SETUP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GEN8_MONITORING_SETUP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GEN8_SERVICES_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/INTEGRATION_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/QUICKSTART.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/SESSION_STATE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GPT_PROJECT_CONTEXT.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/INTEGRATION_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/EXECUTIVE_DECISION_DOCUMENT.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/PASSIVE_COLLECTION_SPEC_PATCHED.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/PERSISTENT_MEMORY_DESIGN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GEN8_NETWORK_CONFIG.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FILESYSTEM_INTEGRATION.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/UPDATE_PROTOCOL.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/UI_CANON_MERGE_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/HOW_IT_WORKS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/MASTER_CONTEXT_v4.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/ROADMAP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/UI_MODULAR_UPDATE_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/PARITY_SYSTEM_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FAITHH_UI_ENHANCEMENT_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/MASTER_CONTEXT.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/Development_Session_Notes.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/GEN8_SERVICE_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/FAITHH_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/IMPLEMENTATION_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/HARMONY_CONTEXT.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/UI_CANONICAL_DECISION.md",
+          "/home/jonat/ai-stack/docs/archive/reports/CONTEXT_PARITY_UPDATE_2026-01-07.md",
+          "/home/jonat/ai-stack/docs/archive/reports/GEN8_MINIMAL_TASKS_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/archive/reports/GEN8_UPTIME_KUMA_STATUS.md",
+          "/home/jonat/ai-stack/docs/archive/reports/MODEL_SYSTEM_IMPLEMENTATION_REPORT.md",
+          "/home/jonat/ai-stack/docs/archive/reports/SYSTEM_TEST_REPORT_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/reports/PROJECT_AUDIT_2026-01-25.md",
+          "/home/jonat/ai-stack/docs/archive/reports/FAITHH_CLEANUP_REPORT.md",
+          "/home/jonat/ai-stack/docs/archive/reports/FAITHH_REVIEW_NEXT_STEPS.md",
+          "/home/jonat/ai-stack/docs/archive/reports/REMEDIATION_LOG.md",
+          "/home/jonat/ai-stack/docs/archive/reports/CHROMADB_STATUS.md",
+          "/home/jonat/ai-stack/docs/archive/reports/CHAT_UX_IMPLEMENTATION_REPORT.md",
+          "/home/jonat/ai-stack/docs/archive/reports/SESSION_SUMMARY_2026-01-25.md",
+          "/home/jonat/ai-stack/docs/archive/reports/CONTEXT_AUDIT_REPORT_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/reports/BASELINE_VS_PERSONA_RESULTS.md",
+          "/home/jonat/ai-stack/docs/archive/reports/REVIEW_REPORT_2025-12-18.md",
+          "/home/jonat/ai-stack/docs/archive/reports/CONTEXT_PARITY_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/reports/CURRENT_STATE.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/CONVERSATION_COMPLETE.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/WEEK1_COMPLETION_REPORT.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_UI_IMPROVEMENTS_LOG.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/WEEK1_WORK_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/STABLE_V3_RESTORE_POINT.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/IMMEDIATE_NEXT_STEPS.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/2026-01-08_PARITY_AUDIT.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/2026-01-08_CODEX_HANDOFF.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/TUESDAY_QUICK_START.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_2025-12-20_gen8_setup.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/ACTIVE_BACKEND_INFO.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/CURRENT_STATUS_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_STARTUP_PROTOCOL.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_SUMMARY_2025-11-14.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_ENDING_PROTOCOL.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/WEEK2_PREVIEW.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/MONDAY_COMPLETION_REPORT.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/MONDAY_COMPLETE_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_2025-12-30_infrastructure_indexing.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/HOME_DIRECTORY_DECISIONS.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_2025-12-16_opus_local_inference.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/MASTER_ACTION_FAITHH_UPDATED.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/WEEK1_CHECKLIST.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/SESSION_CONTINUATION_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/MASTER_ACTION_FAITHH.md",
+          "/home/jonat/ai-stack/docs/archive/session-reports/2026-01-08_GPT_CODEX_HANDOFF.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-reference/BACKEND_API_REQUIREMENTS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-reference/WHY_LOCAL_IMAGE_GENERATION.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-reference/COMPLETE_PACKAGE_INDEX.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-reference/UI_COMPONENTS_LIBRARY.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-reference/ROOT_FILES_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-reference/rtx3090_local_llm_guide.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-reference/QUICK_REFERENCE_CARD.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/V3_VS_V4_ANALYSIS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/FRONTEND_BACKEND_ARCHITECTURE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/LEONARDO_AI_PROMPTS_ENHANCED.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/FAITHH_V4_BACKEND_API.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/UI_V4_QUICK_START.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/ENHANCED_UI_PACKAGE_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/UI_VISUAL_LAYOUT_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/READY_TO_USE_PROMPTS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/LEONARDO_AI_PROMPTS.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/UI_V4_COMPLETE_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/FAITHH_V4_UI_SPECIFICATION.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-specs/UI_V3_TO_V4_COMPARISON.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/WORKFLOW_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/LOCAL_IMAGE_GENERATION_SETUP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/GET_STARTED_CHECKLIST.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/IMAGE_GENERATION_SETUP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/SESSION_STARTUP_PROTOCOL.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/SELF_DOCUMENTING_SYSTEM_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/SESSION_ENDING_PROTOCOL.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/DO_THIS_NOW_IMAGE_GENERATION.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/VS_CODE_IMPLEMENTATION_HANDOFF.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/WEEK1_AUTOMATION_GUIDE.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-guides/ULTRA_QUICK_START_IMAGE_GEN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-generated/PROJECT_MAP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-generated/INDEXING_SPEC.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-generated/ROADMAP.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-plans/faithh_archive_plan.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-plans/AUTO_INDEXING_PLAN.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-testing/TESTING_QUICK_START.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-testing/TEST_GAPS_SUMMARY.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-testing/TEST_RESULTS_2026-01-18.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-testing/WEEK1_IMPLEMENTATION.md",
+          "/home/jonat/ai-stack/docs/archive/legacy/old-testing/TEST_INVENTORY_2026-01-18.md"
+        ],
+        "priority": "LOW",
+        "maintenance_frequency": "Quarterly"
+      },
+      "critical_experiments": {
+        "count": 2,
+        "files": [
+          "/home/jonat/ai-stack/experiments/genomic/multi_generational_adaptation_fixed.py",
+          "/home/jonat/ai-stack/experiments/genomic/genomic_large_scale_test.py"
+        ],
+        "priority": "HIGH",
+        "maintenance_frequency": "As needed"
+      },
+      "completed_experiments": {
+        "count": 4,
+        "files": [
+          "/home/jonat/ai-stack/projects/alife/experiments/exp8_cultural_transmission_fixed.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp8_simple_transmission.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp8_protocol_evolution.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp9_complex_cultural_evolution.py"
+        ],
+        "priority": "MEDIUM",
+        "maintenance_frequency": "Monthly"
+      },
+      "reference_experiments": {
+        "count": 11,
+        "files": [
+          "/home/jonat/ai-stack/experiments/genomic/environmental_adaptation_test.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp2_stripe.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp0_primordial.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp7_social_cognition.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp5_poison.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp6_cognitive.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp3_anticipation.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp1_pressure.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/__init__.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp4_harmonic.py",
+          "/home/jonat/ai-stack/projects/alife/experiments/exp5_parasitic.py"
+        ],
+        "priority": "LOW",
+        "maintenance_frequency": "Quarterly"
+      },
+      "critical_config": {
+        "count": 0,
+        "files": [],
+        "priority": "CRITICAL",
+        "maintenance_frequency": "Weekly"
+      },
+      "supporting_tools": {
+        "count": 45,
+        "files": [
+          "/home/jonat/ai-stack/send_ui_genomic_plan_to_sonnet.py",
+          "/home/jonat/ai-stack/test_simple_chat.py",
+          "/home/jonat/ai-stack/pulse_pattern_tracker.py",
+          "/home/jonat/ai-stack/send_standing_wave_success_to_sonnet.py",
+          "/home/jonat/ai-stack/google_search.py",
+          "/home/jonat/ai-stack/send_parasitic_complete_to_sonnet.py",
+          "/home/jonat/ai-stack/send_hanging_command_to_sonnet.py",
+          "/home/jonat/ai-stack/run_phase2_experiments.py",
+          "/home/jonat/ai-stack/send_environmental_experiment_to_sonnet.py",
+          "/home/jonat/ai-stack/send_project_cleanup_to_sonnet.py",
+          "/home/jonat/ai-stack/send_genomic_plan_to_sonnet.py",
+          "/home/jonat/ai-stack/send_universal_impedance_to_sonnet.py",
+          "/home/jonat/ai-stack/comprehensive_project_analysis_execution.py",
+          "/home/jonat/ai-stack/test_import.py",
+          "/home/jonat/ai-stack/test_flask_isolation.py",
+          "/home/jonat/ai-stack/send_final_results_to_sonnet.py",
+          "/home/jonat/ai-stack/project_cleanup_review_for_sonnet.py",
+          "/home/jonat/ai-stack/test_config.py",
+          "/home/jonat/ai-stack/send_complete_genomic_experiments_to_sonnet.py",
+          "/home/jonat/ai-stack/test_anthropic_direct.py",
+          "/home/jonat/ai-stack/test_anthropic_chat.py",
+          "/home/jonat/ai-stack/test_phase4_fixed.py",
+          "/home/jonat/ai-stack/knowledge_graph.py",
+          "/home/jonat/ai-stack/test_flask_port_5558.py",
+          "/home/jonat/ai-stack/send_phase2_results_to_sonnet.py",
+          "/home/jonat/ai-stack/minimal_flask_app.py",
+          "/home/jonat/ai-stack/send_phase1_results_to_sonnet.py",
+          "/home/jonat/ai-stack/send_parasitic_impedance_to_sonnet.py",
+          "/home/jonat/ai-stack/test_phase4.py",
+          "/home/jonat/ai-stack/send_physics_resonance_to_sonnet.py",
+          "/home/jonat/ai-stack/test_phase3b_simple.py",
+          "/home/jonat/ai-stack/send_phase4_results_to_sonnet.py",
+          "/home/jonat/ai-stack/send_phase3b_complete_to_sonnet.py",
+          "/home/jonat/ai-stack/present_to_sonnet_for_review.py",
+          "/home/jonat/ai-stack/sonnet_final_signoff_review.py",
+          "/home/jonat/ai-stack/send_complete_system_handoff_to_sonnet.py",
+          "/home/jonat/ai-stack/robust_command_executor.py",
+          "/home/jonat/ai-stack/send_hanging_simple.py",
+          "/home/jonat/ai-stack/send_cosmic_complete_to_sonnet.py",
+          "/home/jonat/ai-stack/test_flask_5557.py",
+          "/home/jonat/ai-stack/send_phase3_results_to_sonnet.py",
+          "/home/jonat/ai-stack/send_phase3b_progress_to_sonnet.py",
+          "/home/jonat/ai-stack/send_to_sonnet.py",
+          "/home/jonat/ai-stack/send_genomic_implementation_to_sonnet.py",
+          "/home/jonat/ai-stack/filesystem_chip.py"
+        ],
+        "priority": "MEDIUM",
+        "maintenance_frequency": "Monthly"
+      },
+      "archive_candidates": {
+        "count": 0,
+        "files": [],
+        "priority": "LOW",
+        "maintenance_frequency": "Quarterly"
+      }
+    },
+    "total_files": 450,
+    "critical_count": 12,
+    "archive_candidates": 0
+  },
+  "system_analysis": {
+    "backend_architecture": {
+      "pattern": "Modular Flask backend with service-oriented architecture",
+      "components": "Security, performance, caching, monitoring, ML integration",
+      "endpoints": "30+ including genomic endpoints",
+      "dependencies": "ChromaDB, Ollama, various service modules"
+    },
+    "service_dependencies": {
+      "external_services": [
+        "ChromaDB",
+        "Ollama",
+        "Groq",
+        "Gemini"
+      ],
+      "internal_services": [
+        "Security middleware",
+        "Cache",
+        "Performance tracker"
+      ],
+      "genomic_dependencies": [
+        "Parasitic ALIFE",
+        "Universal impedance",
+        "Cosmic ripple"
+      ]
+    },
+    "data_flow": {
+      "input_flow": "User queries \u2192 Intent detection \u2192 Context building \u2192 LLM routing",
+      "output_flow": "LLM response \u2192 Coherence scoring \u2192 Response caching \u2192 UI delivery",
+      "data_sources": "ChromaDB, state files, ML chips, knowledge graph"
+    },
+    "integration_points": {
+      "faithh_alife": "Genomic experiments use ALIFE research patterns",
+      "backend_ml": "ML chips integrated with backend routing",
+      "ui_backend": "Flask serves HTML UI with real-time updates"
+    },
+    "performance_considerations": {
+      "optimizations": [
+        "Response caching",
+        "Connection monitoring",
+        "Local AI optimization"
+      ],
+      "bottlenecks": "ChromaDB queries, LLM response times",
+      "monitoring": "Real-time metrics, performance tracking"
+    },
+    "security_assessment": {
+      "measures": [
+        "Rate limiting",
+        "Input validation",
+        "Request protection"
+      ],
+      "status": "Production hardening complete",
+      "recommendations": "Regular security audits, dependency updates"
+    }
+  },
+  "strategic_recommendations": {
+    "current_achievements": [
+      "Phase 6.0 Genomic Impedance Reading completed",
+      "190 organisms tested with perfect correlation",
+      "5 genomic endpoints operational",
+      "Cultural transmission breakthrough in ALIFE",
+      "Production hardening with security and performance systems"
+    ],
+    "competitive_advantages": [
+      "Multi-scale integration (quantum to cosmic to biological)",
+      "Advanced coherence measurement and optimization",
+      "Comprehensive memory and decision tracking",
+      "Modular architecture with clear separation of concerns"
+    ],
+    "development_opportunities": [
+      "Enhanced genomic experiments with real biological data",
+      "Expanded ALIFE research with multi-agent systems",
+      "Improved user experience with AI-driven personalization",
+      "Advanced analytics with predictive capabilities"
+    ],
+    "risk_factors": [
+      "System complexity may impact maintainability",
+      "Dependency on external services (ChromaDB, LLM providers)",
+      "Research focus may divert from practical applications",
+      "Technical debt accumulation across multiple phases"
+    ],
+    "resource_allocation": {
+      "current": "FAITHH 30%, Business 40%, Constella 15%, Personal 15%",
+      "recommended": "Maintain balance with increased automation",
+      "optimization": "Reduce manual maintenance through automation"
+    },
+    "market_position": {
+      "unique_value": "Multi-scale AI system with biological integration",
+      "target_users": "Researchers, developers, knowledge workers",
+      "differentiation": "Comprehensive memory and coherence tracking"
+    }
+  },
+  "maintenance_protocols": {
+    "daily_tasks": [
+      "Backend health check",
+      "Log file monitoring",
+      "Performance metrics review",
+      "Security monitoring"
+    ],
+    "weekly_tasks": [
+      "Documentation updates",
+      "Dependency security updates",
+      "Backup verification",
+      "System performance analysis"
+    ],
+    "monthly_tasks": [
+      "Full system audit",
+      "Archive cleanup",
+      "Documentation review",
+      "Capacity planning"
+    ],
+    "quarterly_tasks": [
+      "Strategic review",
+      "Architecture assessment",
+      "Technology stack evaluation",
+      "Long-term planning"
+    ],
+    "automation_opportunities": [
+      "Documentation generation",
+      "Health check automation",
+      "Performance monitoring",
+      "Backup processes"
+    ],
+    "monitoring_requirements": [
+      "Backend service health",
+      "Database performance",
+      "LLM provider availability",
+      "System resource usage"
+    ],
+    "backup_strategies": [
+      "State files backup",
+      "Configuration backup",
+      "Database backup",
+      "Code repository backup"
+    ]
+  },
+  "recommendations": {
+    "immediate_actions": [
+      "Archive legacy backend files (already completed)",
+      "Consolidate documentation structure",
+      "Implement automated health checks",
+      "Update maintenance protocols"
+    ],
+    "short_term_optimizations": [
+      "Optimize database queries",
+      "Improve caching strategies",
+      "Enhance error handling",
+      "Streamline deployment process"
+    ],
+    "medium_term_development": [
+      "Enhance genomic experiments",
+      "Expand ALIFE research capabilities",
+      "Improve user experience",
+      "Add advanced analytics"
+    ],
+    "long_term_strategy": [
+      "Multi-user deployment",
+      "Advanced AI integration",
+      "Commercial applications",
+      "Research publication"
+    ],
+    "resource_optimization": [
+      "Automate routine tasks",
+      "Optimize resource allocation",
+      "Improve development workflow",
+      "Enhance collaboration tools"
+    ],
+    "documentation_improvements": [
+      "Consolidate fragmented documentation",
+      "Create comprehensive API reference",
+      "Develop tutorial series",
+      "Implement documentation automation"
+    ]
+  }
+}

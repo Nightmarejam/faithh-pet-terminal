@@ -1,0 +1,217 @@
+{
+  "timestamp_utc": "2026-03-31T02:49:10.243018+00:00",
+  "input_root": "docs/data/governance_sources/windows_staging_import",
+  "dry_run": false,
+  "files_discovered": 45,
+  "accepted_files": 12,
+  "skipped_files": 33,
+  "documents_prepared": 734958,
+  "accepted": [
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_001.csv",
+      "source_class": "policy_reference",
+      "chunks": 165829,
+      "content_hash": "201f0339223ceb03954b5802654008b004fef40978939d4729bc68d69e02691e"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_002.csv",
+      "source_class": "policy_reference",
+      "chunks": 168774,
+      "content_hash": "6a8ad55d076b7d74008279feecb46c4503e19999abdf8d4734c7fb682e80b5f0"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_003.csv",
+      "source_class": "policy_reference",
+      "chunks": 167604,
+      "content_hash": "079aad1ad752e58abf634eff24cbf447c8bad2911e026ca7b80f1c12628bb4d0"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/V-Dem-CD-v16__chunk_004.csv",
+      "source_class": "policy_reference",
+      "chunks": 22185,
+      "content_hash": "a380707c7d4bd460da5cfc52b7fee277d0bceeb942c3e0b43bcbfb9ef2205ba3"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-CD-v16_csv/_vdem_chunk_schema.md",
+      "source_class": "policy_reference",
+      "chunks": 54,
+      "content_hash": "fa7b2fd1cb0bf37612a84b51e5973c367791c79eb8b3633915f253959410a5f6"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_001.csv",
+      "source_class": "policy_reference",
+      "chunks": 35749,
+      "content_hash": "e096dbd54f024a4572a7582c96afe2e3471401dbe76c744d7a7fb824395a0ddb"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_002.csv",
+      "source_class": "policy_reference",
+      "chunks": 31365,
+      "content_hash": "c3b19134b6458a96ab70b08df9ba0b689666b2a1cf4b3175792ac9b7c602779d"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_003.csv",
+      "source_class": "policy_reference",
+      "chunks": 32956,
+      "content_hash": "b84afe1992b562bf46743e4d98de950a1bbba1a67443836336213f12d1f3ec42"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_004.csv",
+      "source_class": "policy_reference",
+      "chunks": 39383,
+      "content_hash": "ac70f211cdc1d61fb8857a1fbfa45901f4016de652a98bcda4401714610413eb"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_005.csv",
+      "source_class": "policy_reference",
+      "chunks": 35064,
+      "content_hash": "96d8c7ecded1d36ecdd5d3f68afedbf2df78865f97cd9f7e72cdb753894c2381"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__chunk_006.csv",
+      "source_class": "policy_reference",
+      "chunks": 35980,
+      "content_hash": "9d5842b43642e11f22bb9eb22ba7fbc2dde27397a1460486a0b72935d81ac6c2"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/V-Dem-Coder-Level-v16_csv/_vdem_chunk_schema.md",
+      "source_class": "policy_reference",
+      "chunks": 15,
+      "content_hash": "d3a29417341f9669b4cf93e8f18447d216daa1dd8475bcf4ca5f4a6cf5100e8c"
+    }
+  ],
+  "skipped": [
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/United Nations Charter.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/Universal Declaration of Human Rights.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/_hello.txt",
+      "reason": "too_short"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/Federal_Register____API_Documentation.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/HDX_Python_API.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/Home___Worldwide_Governance_Indicators.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/The_Constitution_of_the_United_States__A_Transcription___National_Archives.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/UNSD_SDGs_API.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/UNdata___api_manual.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_ei_sept21_august2023.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_eureg_nov20.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_std_jan26.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/CC.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/GE.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/PV.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/RL.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/RQ.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/VA.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/_workbook_summary.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/_workbook_summary.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/cc.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/ge.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/pv.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/rl.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/rq.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/va.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip/V-Dem-CD-v16_csv/_zip_manifest.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip/V-Dem-Coder-Level-v16_csv/_zip_manifest.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip/xml_uscAll_119-73/_zip_manifest.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-CD-v16_csv/V-Dem-CD-v16__sample.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-CD-v16_csv/V-Dem-CD-v16__schema.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__sample.csv",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__schema.md",
+      "reason": "duplicate_hash"
+    }
+  ]
+}

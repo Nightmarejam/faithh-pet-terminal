@@ -603,7 +603,7 @@
 
     <div class="metric-row">
       <div class="metric-name">CHROMADB (Gen8)</div>
-      <div class="metric-value metric-ok" id="chroma-status"><span class="health-icon">✓</span> 100.79.85.32:8000</div>
+      <div class="metric-value metric-ok" id="chroma-status"><span class="health-icon">✓</span> 192.158.1.243:8000</div>
     </div>
     <div class="metric-row">
       <div class="metric-name">CHUNK COUNT</div>
@@ -612,6 +612,14 @@
     <div class="metric-row">
       <div class="metric-name">BACKEND VERSION</div>
       <div class="metric-value metric-info" id="backend-version">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">MISSION STATE</div>
+      <div class="metric-value metric-info" id="mission-state">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">NEXT ACTION</div>
+      <div class="metric-value metric-info" id="mission-next-action" style="font-size:11px;line-height:1.3">—</div>
     </div>
     <div class="metric-row">
       <div class="metric-name">DEFAULT MODEL</div>
@@ -686,6 +694,39 @@
 
   </div>
 
+</div>
+
+<!-- ── Diagnostic Panel (Canvas Phase 2 — floating /api routes) ── -->
+<div id="diagnostics-panel" style="margin:24px;padding:20px;background:var(--bg2);border:1px solid var(--border);
+            border-radius:12px;position:relative;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
+    <div style="font-size:10px;font-family:'Share Tech Mono',monospace;color:var(--cyan);
+                letter-spacing:2px;">◉ DIAGNOSTICS · FLOATING ROUTES</div>
+    <div style="font-size:10px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;">
+      Contract: <span style="color:var(--cyan-dim)">projects/status/component_map.json</span> → <code style="color:var(--amber)">cockpit_diagnostics_panel</code>
+    </div>
+  </div>
+  <div id="diagnostics-rows" style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);">
+    Loading probes…
+  </div>
+  <div style="margin-top:12px;font-size:10px;color:var(--text-dim);opacity:0.85;line-height:1.5;">
+    Provider key flags come from <code>GET /health</code> (boolean presence, not secret values). Genomic row is 503 when GENOMIC_ENABLED is off.
+  </div>
+</div>
+
+<!-- Session metrics (PTP-style trend; same refresh cadence as probes below) -->
+<div id="session-metrics-panel" style="margin:24px;padding:20px;background:var(--bg2);border:1px solid var(--border);
+            border-radius:12px;position:relative;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
+    <div style="font-size:10px;font-family:'Share Tech Mono',monospace;color:var(--green);
+                letter-spacing:2px;">◉ SESSION METRICS · WEEKLY TREND</div>
+    <div style="font-size:10px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;">
+      <code style="color:var(--amber)">GET /api/metrics/summary?days=7</code>
+    </div>
+  </div>
+  <div id="session-metrics-body" style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);">
+    Loading session metrics…
+  </div>
 </div>
 
 <div class="file-note">
@@ -809,6 +850,14 @@ function setEl(id, html) {
   if (el) el.innerHTML = html;
 }
 
+function cockpitSafeSnippet(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/"/g, '&quot;')
+    .slice(0, 96);
+}
+
 function statusBadge(status) {
   const map = {
     active: ['var(--green)', '● ACTIVE'],
@@ -847,26 +896,114 @@ async function loadLiveState() {
   } catch(e) { console.warn('live_state:', e); }
 }
 
-// ── 2. Backend status ────────────────────────────────────────
+// ── 2. Backend status (PLC + embedded faithh_status; no separate /api/status) ───
 async function loadStatus() {
   try {
-    const res = await fetch('/api/status');
-    if (!res.ok) return;
-    const s = await res.json();
+    let plc = null;
+    try {
+      const plcRes = await fetch('/api/plc/state');
+      if (plcRes.ok) plc = await plcRes.json();
+    } catch (e) {
+      console.warn('plc-state:', e);
+    }
 
-    setEl('backend-version', s.version || s.backend_version || '—');
-    setEl('default-model', s.model || s.default_model || s.ollama_model || '—');
-    setEl('chroma-status',
-      s.chromadb_connected
-        ? `<span style="color:var(--green)">✓ CONNECTED</span>` 
-        : `<span style="color:var(--red)">✗ OFFLINE</span>` 
-    );
-    setEl('ml-chips', s.ml_chips_loaded ?? s.chip_count ?? '—');
-    setEl('ollama-status',
-      s.ollama_available
-        ? `<span style="color:var(--green)">✓ UP</span>` 
-        : `<span style="color:var(--amber)">⚠ DOWN</span>` 
-    );
+    const fs = plc?.faithh_status || {};
+    const sv = fs.services || {};
+
+    const plcServices = Array.isArray(plc?.services) ? plc.services : [];
+    const plcService = (id) => plcServices.find((svc) => svc.id === id);
+
+    const chromaSvc = plcService('chromadb');
+    const ollamaSvc = plcService('ollama_primary');
+
+    // Phase 2a: cockpit mission readout from PLC contract.
+    const missionState = (plc?.current_state || 'unknown').replace('_', ' ');
+    setEl('mission-state', `<span style="text-transform:uppercase">${missionState}</span>`);
+
+    const nextAction = plc?.project_status?.summary?.next_action || 'No next action recorded';
+    setEl('mission-next-action', nextAction);
+
+    const healthy = (svc) => ['live', 'healthy', 'running'].includes((svc?.status || '').toLowerCase());
+    if (chromaSvc || ollamaSvc) {
+      const score = healthy(chromaSvc) && healthy(ollamaSvc) ? 90 : (healthy(chromaSvc) || healthy(ollamaSvc)) ? 65 : 35;
+      setEl('sync-score', score + '%');
+      const fill = $('score-fill');
+      if (fill) {
+        fill.style.width = score + '%';
+        fill.style.background = score > 75
+          ? 'linear-gradient(90deg, var(--green), var(--cyan))'
+          : score > 50
+            ? 'linear-gradient(90deg, var(--amber), var(--green))'
+            : 'linear-gradient(90deg, var(--red), var(--amber))';
+      }
+    }
+
+    if (plc?.registry_generated) {
+      setEl('last-updated', plc.registry_generated);
+    }
+
+    // Prefer PLC state contract for service health badges.
+    const chromaHostDisp = sv.chromadb && sv.chromadb.host
+      ? ` <span style="color:var(--text-dim);font-size:9px;font-family:'Share Tech Mono',monospace">${cockpitSafeSnippet(sv.chromadb.host)}</span>`
+      : '';
+
+    if (chromaSvc) {
+      const chromaUp = ['live', 'healthy', 'running'].includes((chromaSvc.status || '').toLowerCase());
+      setEl('chroma-status',
+        chromaUp
+          ? `<span style="color:var(--green)">✓ ${chromaSvc.status.toUpperCase()}</span>${chromaHostDisp}`
+          : `<span style="color:var(--amber)">⚠ ${(chromaSvc.status || 'unknown').toUpperCase()}</span>${chromaHostDisp}`
+      );
+    }
+
+    if (ollamaSvc) {
+      const ollamaUp = ['live', 'healthy', 'running'].includes((ollamaSvc.status || '').toLowerCase());
+      setEl('ollama-status',
+        ollamaUp
+          ? `<span style="color:var(--green)">✓ ${ollamaSvc.status.toUpperCase()}</span>`
+          : `<span style="color:var(--amber)">⚠ ${(ollamaSvc.status || 'unknown').toUpperCase()}</span>`
+      );
+    }
+
+    if (fs.success === false && fs.error) {
+      console.warn('faithh_status:', fs.error);
+    }
+
+    setEl('backend-version', fs.version || fs.backend_version || (plc?.registry_generated ? `registry ${plc.registry_generated}` : '—'));
+    const cm = sv.current_model;
+    const modelLabel = typeof cm === 'string'
+      ? (cm || '—')
+      : (cm && typeof cm === 'object' && cm.name && String(cm.name).toLowerCase() !== 'unknown'
+        ? (cm.provider && String(cm.provider).toLowerCase() !== 'unknown'
+          ? `${cm.name} (${cm.provider})`
+          : String(cm.name))
+        : (fs.default_model || fs.ollama_model || '—'));
+    setEl('default-model', modelLabel);
+    const chipN = sv.ml_chips?.loaded;
+    setEl('ml-chips', chipN != null ? String(chipN) : '—');
+
+    // Fallback if PLC registry service map is unavailable (live probes still in faithh_status).
+    if (!chromaSvc) {
+      const chroma = sv.chromadb || {};
+      const chromaUp = Boolean(chroma.connected) && String(chroma.status || '').toLowerCase() !== 'offline';
+      const hostHint = chroma.host
+        ? ` <span style="color:var(--text-dim);font-size:9px;font-family:'Share Tech Mono',monospace">${cockpitSafeSnippet(chroma.host)}</span>`
+        : '';
+      setEl('chroma-status',
+        chromaUp
+          ? `<span style="color:var(--green)">✓ CONNECTED</span>${hostHint}`
+          : `<span style="color:var(--red)">✗ OFFLINE</span>${hostHint}`
+      );
+    }
+    if (!ollamaSvc) {
+      const oll = sv.ollama || {};
+      const ollamaUp = Boolean(oll.reachable) && String(oll.status || '').toLowerCase() === 'online';
+      setEl('ollama-status',
+        ollamaUp
+          ? `<span style="color:var(--green)">✓ UP</span>`
+          : `<span style="color:var(--amber)">⚠ DOWN</span>`
+      );
+    }
   } catch(e) { console.warn('status:', e); }
 }
 
@@ -977,38 +1114,190 @@ async function loadCompass() {
       `).join('');
     }
 
-    // Sync score from services data
-    const services = data.services || {};
-    const chromaOk = services.chroma_heartbeat?.ok ?? false;
-    const backendOk = services.faithh_backend_url ? true : false;
-    const score = chromaOk && backendOk ? 85 : chromaOk ? 60 : 30;
-    setEl('sync-score', score + '%');
-    const fill = $('score-fill');
-    if (fill) {
-      fill.style.width = score + '%';
-      fill.style.background = score > 75
-        ? 'linear-gradient(90deg, var(--green), var(--cyan))'
-        : score > 50
-          ? 'linear-gradient(90deg, var(--amber), var(--green))'
-          : 'linear-gradient(90deg, var(--red), var(--amber))';
-    }
-    setEl('last-updated', data.last_updated || '—');
+    // Note: sync score + last updated are now sourced from /api/plc/state in loadStatus().
   } catch(e) { console.warn('compass:', e); }
 }
 
 // ── Bootstrap ────────────────────────────────────────────────
+function probeRow(label, ok, status, snippet) {
+  const st = ok ? 'metric-ok' : 'metric-error';
+  const ic = ok ? '✓' : '✗';
+  return `<div class="metric-row" style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="metric-name" style="max-width:42%;word-break:break-all;">${label}</div>
+    <div class="metric-value ${st}" style="flex:1;text-align:right;font-size:10px;word-break:break-all;">
+      <span class="health-icon">${ic}</span> HTTP ${status}${snippet ? ' · ' + snippet : ''}
+    </div>
+  </div>`;
+}
+
+async function loadDiagnostics() {
+  const host = document.getElementById('diagnostics-rows');
+  if (!host) return;
+  const rows = [];
+
+  async function get(path, label, summarize) {
+    try {
+      const res = await fetch(path);
+      let snip = '';
+      try {
+        const j = await res.json();
+        snip = summarize ? summarize(j, res) : '';
+      } catch (_) {
+        snip = '';
+      }
+      rows.push(probeRow(label, res.ok, res.status, snip));
+    } catch (e) {
+      rows.push(probeRow(label, false, '—', String(e.message || e)));
+    }
+  }
+
+  await get('/health', 'GET /health', (j) => {
+    const p = j.providers || {};
+    const bits = [
+      `groq:${p.groq ? 'on' : 'off'}`,
+      `anthropic:${p.anthropic ? 'on' : 'off'}`,
+      `gemini:${p.gemini ? 'on' : 'off'}`,
+    ];
+    return bits.join(' ');
+  });
+
+  await get('/api/health', 'GET /api/health', (j) => {
+    const o = j.overall_health || {};
+    return (o.status || '?') + (o.issues && o.issues.length ? `; ${o.issues.length} issue(s)` : '');
+  });
+
+  await get('/api/pulse/status', 'GET /api/pulse/status', () => 'pulse strip');
+
+  await get('/api/workspace/registry', 'RAG (Chroma)', (j) => {
+    const r = j.services && j.services.rag;
+    if (!r) return 'no rag service';
+    const host = r.chromadb_host ? cockpitSafeSnippet(r.chromadb_host) : '';
+    const bits = [
+      r.active ? 'active' : 'inactive',
+      r.chromadb_reachable ? 'heartbeat ok' : 'unreachable',
+      r.chromadb_connected ? 'client ok' : 'client down',
+      host || null,
+    ].filter(Boolean);
+    return bits.join(' · ');
+  });
+
+  await get('/api/genomic/analyze-sensors', 'GET /api/genomic/analyze-sensors', (j) =>
+    j.success === false ? (j.error || 'off') : 'ok'
+  );
+
+  await get('/api/analytics/stats', 'GET /api/analytics/stats', (j) =>
+    j.success ? 'analytics_stats' : (j.error || 'fail')
+  );
+
+  await get('/api/performance', 'GET /api/performance', (j) =>
+    j.success ? 'performance' : (j.error || 'fail')
+  );
+
+  await get('/api/ux/analytics', 'GET /api/ux/analytics', (j) =>
+    j.success ? 'ux_analytics' : (j.error || 'fail')
+  );
+
+  await get('/api/metrics/summary?days=7&limit=5', 'GET /api/metrics/summary', (j) =>
+    j.sessions_total != null ? `n=${j.sessions_total}` : 'no body'
+  );
+
+  host.innerHTML = rows.join('');
+}
+
+function _smSparkBars(buckets, key) {
+  if (!buckets || !buckets.length) return '<span style="opacity:0.6">no data</span>';
+  const vals = buckets.map(b => Number(b[key]) || 0);
+  const mx = Math.max(...vals, 1);
+  return buckets.map((b, i) => {
+    const v = Number(b[key]) || 0;
+    const h = Math.round((v / mx) * 100);
+    const title = `${b.date}: ${v}`;
+    return `<div title="${title}" style="flex:1;min-width:4px;height:36px;display:flex;align-items:flex-end;">
+      <div style="width:100%;height:${Math.max(4, h)}%;background:linear-gradient(180deg,var(--cyan-dim),var(--cyan));border-radius:2px;opacity:0.85;"></div>
+    </div>`;
+  }).join('');
+}
+
+async function loadSessionMetrics() {
+  const host = document.getElementById('session-metrics-body');
+  if (!host) return;
+  try {
+    const res = await fetch('/api/metrics/summary?days=7&limit=100');
+    const d = await res.json();
+    if (!res.ok) {
+      host.innerHTML = `<span style="color:var(--red)">HTTP ${res.status}</span>`;
+      return;
+    }
+    const n = d.sessions_total ?? 0;
+    const hs = Number(d.health_score ?? 0);
+    let hc = 'var(--red)';
+    if (hs >= 80) hc = 'var(--green)';
+    else if (hs >= 60) hc = 'var(--amber)';
+    const fbRate = n ? ((d.sessions_with_fallback || 0) / n) : 0;
+    const stRate = n ? ((d.sessions_with_stall || 0) / n) : 0;
+    const rlc = Number(d.rag_low_confidence_rate || 0);
+    const buckets = d.daily_buckets || [];
+    const prov = d.provider_distribution || {};
+    const provMax = Math.max(...Object.values(prov), 1);
+    const provBars = Object.entries(prov).map(([k, v]) => {
+      const w = Math.round((Number(v) / provMax) * 100);
+      return `<div style="display:flex;align-items:center;gap:8px;margin:4px 0;">
+        <span style="width:72px;color:var(--text-dim)">${k}</span>
+        <div style="flex:1;height:8px;background:var(--bg3);border-radius:4px;overflow:hidden;">
+          <div style="width:${w}%;height:100%;background:linear-gradient(90deg,var(--purple),var(--blue));"></div>
+        </div>
+        <span style="min-width:28px;text-align:right">${v}</span>
+      </div>`;
+    }).join('') || '<span style="opacity:0.6">no provider touches</span>';
+    const tags = (d.top_flags || []).map(f =>
+      `<span style="display:inline-block;margin:2px;padding:2px 8px;border-radius:4px;border:1px solid var(--border);font-size:10px;">${f}</span>`
+    ).join(' ') || '<span style="opacity:0.6">none</span>';
+    const tr = d.trend || {};
+    host.innerHTML = `
+      <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start;margin-bottom:14px;">
+        <div style="min-width:140px;">
+          <div style="font-size:9px;color:var(--text-dim);letter-spacing:1px;">SESSION HEALTH</div>
+          <div style="font-size:28px;font-weight:700;color:${hc};font-family:'Orbitron',monospace;">${hs.toFixed(0)}</div>
+          <div style="font-size:10px;opacity:0.85;">${n} sessions · fb ${(fbRate*100).toFixed(0)}% · stall ${(stRate*100).toFixed(0)}% · RAG-LC ${(rlc*100).toFixed(0)}%</div>
+        </div>
+        <div style="flex:1;min-width:220px;">
+          <div style="font-size:9px;color:var(--text-dim);margin-bottom:6px;">TREND (first vs second half)</div>
+          <div style="line-height:1.5;">latency: <span style="color:var(--cyan)">${tr.latency_direction || '—'}</span>
+            · fallback: <span style="color:var(--cyan)">${tr.fallback_direction || '—'}</span>
+            · RAG quality: <span style="color:var(--cyan)">${tr.rag_quality_direction || '—'}</span></div>
+        </div>
+      </div>
+      <div style="margin-bottom:10px;font-size:9px;color:var(--text-dim);">AVG LATENCY / DAY (7d)</div>
+      <div style="display:flex;gap:3px;align-items:flex-end;margin-bottom:14px;height:44px;">${_smSparkBars(buckets, 'avg_latency_ms')}</div>
+      <div style="margin-bottom:10px;font-size:9px;color:var(--text-dim);">RAG LOW-CONF RATE / DAY</div>
+      <div style="display:flex;gap:3px;align-items:flex-end;margin-bottom:14px;height:44px;">${_smSparkBars(buckets.map(b => ({...b, _v: (Number(b.rag_low_confidence_rate)||0)*100})), '_v')}</div>
+      <div style="margin-bottom:10px;font-size:9px;color:var(--text-dim);">FALLBACK SESSIONS / DAY</div>
+      <div style="display:flex;gap:3px;align-items:flex-end;margin-bottom:14px;height:44px;">${_smSparkBars(buckets, 'fallback_count')}</div>
+      <div style="margin-bottom:6px;font-size:9px;color:var(--text-dim);">TOP FLAGS</div>
+      <div style="margin-bottom:12px;">${tags}</div>
+      <div style="margin-bottom:6px;font-size:9px;color:var(--text-dim);">PROVIDER DISTRIBUTION</div>
+      <div>${provBars}</div>`;
+  } catch (e) {
+    host.innerHTML = `<span style="color:var(--red)">${String(e.message || e)}</span>`;
+  }
+}
+
 async function init() {
   await Promise.all([
     loadLiveState(),
     loadStatus(),
     loadPulse(),
     loadCompass(),
+    loadDiagnostics(),
+    loadSessionMetrics(),
   ]);
 }
 
 init();
 // Refresh all data every 60 seconds
 setInterval(init, 60_000);
+// Session metrics also on 45s cadence (leading-indicator strip)
+setInterval(loadSessionMetrics, 45_000);
 </script>
 </body>
 </html>

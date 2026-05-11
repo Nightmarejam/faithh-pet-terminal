@@ -1,0 +1,210 @@
+{
+  "experiment": 9,
+  "condition": "diversity_floor",
+  "collapsed": false,
+  "collapse_tick": null,
+  "final_population": 481,
+  "wave_count": 5,
+  "predator_kills": 9912,
+  "thermal_deaths": 94,
+  "first_parasite_tick": 21,
+  "first_toxin_tick": 918,
+  "total_reproduction_events": 0,
+  "strategy_escape_tick": null,
+  "floor_activations": 7,
+  "floor_events": [
+    {
+      "event": "ACTIVATE",
+      "tick": 310,
+      "naked_fraction": 0.15783274440518258,
+      "naked_count": 134,
+      "total_pop": 849
+    },
+    {
+      "event": "DEACTIVATE",
+      "tick": 317,
+      "naked_fraction": 0.16125150421179302,
+      "naked_count": 134,
+      "total_pop": 831
+    },
+    {
+      "event": "ACTIVATE",
+      "tick": 333,
+      "naked_fraction": 0.14228456913827656,
+      "naked_count": 142,
+      "total_pop": 998
+    },
+    {
+      "event": "DEACTIVATE",
+      "tick": 404,
+      "naked_fraction": 0.16027088036117382,
+      "naked_count": 142,
+      "total_pop": 886
+    },
+    {
+      "event": "ACTIVATE",
+      "tick": 536,
+      "naked_fraction": 0.1361344537815126,
+      "naked_count": 162,
+      "total_pop": 1190
+    },
+    {
+      "event": "DEACTIVATE",
+      "tick": 666,
+      "naked_fraction": 0.16100766703176342,
+      "naked_count": 147,
+      "total_pop": 913
+    },
+    {
+      "event": "ACTIVATE",
+      "tick": 985,
+      "naked_fraction": 0.1409090909090909,
+      "naked_count": 62,
+      "total_pop": 440
+    },
+    {
+      "event": "DEACTIVATE",
+      "tick": 1248,
+      "naked_fraction": 0.16404715127701375,
+      "naked_count": 167,
+      "total_pop": 1018
+    },
+    {
+      "event": "ACTIVATE",
+      "tick": 1519,
+      "naked_fraction": 0.15543328748280605,
+      "naked_count": 113,
+      "total_pop": 727
+    },
+    {
+      "event": "DEACTIVATE",
+      "tick": 1675,
+      "naked_fraction": 0.21089385474860337,
+      "naked_count": 151,
+      "total_pop": 716
+    },
+    {
+      "event": "ACTIVATE",
+      "tick": 1966,
+      "naked_fraction": 0.11802232854864433,
+      "naked_count": 74,
+      "total_pop": 627
+    },
+    {
+      "event": "DEACTIVATE",
+      "tick": 2030,
+      "naked_fraction": 0.18192488262910797,
+      "naked_count": 155,
+      "total_pop": 852
+    },
+    {
+      "event": "ACTIVATE",
+      "tick": 2477,
+      "naked_fraction": 0.15281501340482573,
+      "naked_count": 57,
+      "total_pop": 373
+    },
+    {
+      "event": "DEACTIVATE",
+      "tick": 2576,
+      "naked_fraction": 0.17086834733893558,
+      "naked_count": 122,
+      "total_pop": 714
+    }
+  ],
+  "max_adapt_reached": 0.4,
+  "population_timeline": [
+    {
+      "tick": 0,
+      "phase": "A",
+      "pop": 341,
+      "defenders": 172,
+      "naked": 169,
+      "gamers": 0,
+      "floor_active": false,
+      "naked_fraction": 0.5,
+      "adapt": 0.0,
+      "shield_eff_pct": 100,
+      "avg_energy": 120
+    },
+    {
+      "tick": 500,
+      "phase": "A",
+      "pop": 849,
+      "defenders": 707,
+      "naked": 142,
+      "gamers": 0,
+      "floor_active": false,
+      "naked_fraction": 0.16725559481743227,
+      "adapt": 0.0,
+      "shield_eff_pct": 100,
+      "avg_energy": 209
+    },
+    {
+      "tick": 1000,
+      "phase": "A",
+      "pop": 518,
+      "defenders": 514,
+      "naked": 4,
+      "gamers": 137,
+      "floor_active": true,
+      "naked_fraction": 0.007722007722007722,
+      "adapt": 0.2,
+      "shield_eff_pct": 80,
+      "avg_energy": 154
+    },
+    {
+      "tick": 1500,
+      "phase": "A",
+      "pop": 879,
+      "defenders": 445,
+      "naked": 434,
+      "gamers": 100,
+      "floor_active": false,
+      "naked_fraction": 0.4937428896473265,
+      "adapt": 0.2,
+      "shield_eff_pct": 80,
+      "avg_energy": 179
+    },
+    {
+      "tick": 2000,
+      "phase": "A",
+      "pop": 688,
+      "defenders": 606,
+      "naked": 81,
+      "gamers": 112,
+      "floor_active": true,
+      "naked_fraction": 0.11773255813953488,
+      "adapt": 0.4,
+      "shield_eff_pct": 60,
+      "avg_energy": 94
+    },
+    {
+      "tick": 2500,
+      "phase": "A",
+      "pop": 355,
+      "defenders": 343,
+      "naked": 12,
+      "gamers": 38,
+      "floor_active": true,
+      "naked_fraction": 0.03389830508474576,
+      "adapt": 0.4,
+      "shield_eff_pct": 60,
+      "avg_energy": 71
+    }
+  ],
+  "final_strategy": {
+    "DEFENDER": {
+      "count": 330,
+      "pct": 68.6
+    },
+    "NAKED": {
+      "count": 150,
+      "pct": 31.2
+    },
+    "TOXIN": {
+      "count": 1,
+      "pct": 0.2
+    }
+  }
+}

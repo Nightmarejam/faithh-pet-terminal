@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAITHH — System Dashboard</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a222c;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --border: #30363d;
+      --green: #3fb950;
+      --amber: #d29922;
+      --red: #f85149;
+      --blue: #58a6ff;
+      --purple: #a371f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    h1 { font-size: 1.15rem; margin: 0; font-weight: 600; }
+    .meta { color: var(--muted); font-size: 0.85rem; }
+    button {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.45rem 0.75rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    button:hover { border-color: var(--blue); }
+    .banner {
+      background: #21262d;
+      color: var(--amber);
+      padding: 0.5rem 1.25rem;
+      font-size: 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+    main { padding: 1rem 1.25rem 2rem; max-width: 1200px; margin: 0 auto; }
+    section { margin-bottom: 1.75rem; }
+    h2 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--blue);
+      margin: 0 0 0.65rem;
+    }
+    .health-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .pill {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.5rem 0.85rem;
+      min-width: 140px;
+      font-size: 0.88rem;
+    }
+    .pill .label { color: var(--muted); font-size: 0.75rem; }
+    .pill.ok { border-left: 3px solid var(--green); }
+    .pill.warn { border-left: 3px solid var(--amber); }
+    .pill.bad { border-left: 3px solid var(--red); }
+    .tracks {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.75rem;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem;
+    }
+    .card.active { border-color: var(--purple); }
+    .card.planned { opacity: 0.85; }
+    .card.paused { border-color: var(--amber); }
+    .card.completed { border-color: var(--green); }
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      background: #21262d;
+      text-transform: uppercase;
+    }
+    .progress {
+      height: 6px;
+      background: #21262d;
+      border-radius: 3px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+    .progress > i {
+      display: block;
+      height: 100%;
+      background: var(--purple);
+      width: 0%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      background: var(--panel);
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    th, td { padding: 0.45rem 0.55rem; text-align: left; border-bottom: 1px solid var(--border); }
+    th { background: #21262d; color: var(--muted); font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+    select {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.5rem;
+      border-radius: 6px;
+    }
+    .st-completed { color: var(--green); }
+    .st-progress { color: var(--blue); }
+    .st-pending { color: var(--muted); }
+    .st-blocked { color: var(--red); }
+    .st-in_progress { color: var(--blue); }
+    .changes li { margin-bottom: 0.5rem; color: var(--muted); font-size: 0.88rem; }
+    .changes strong { color: var(--text); }
+    .powerbi-note {
+      margin-top: 2rem;
+      padding: 1rem 1.25rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .powerbi-note h3 { color: var(--blue); margin: 0 0 0.5rem; font-size: 0.95rem; }
+    .powerbi-note code { color: var(--text); }
+    .powerbi-note ul { margin: 0.5rem 0 0 1.1rem; }
+  </style>
+</head>
+<body>
+  <div class="banner" id="serve-hint">
+    Use a local HTTP server (not <code>file://</code>) so <code>fetch</code> works.
+    <strong>Registry load order:</strong> (1) <code>process_registry.json</code> next to this page — run <code>bash scripts/refresh_dashboard_data.sh</code> to copy the canonical registry here;
+    (2) <code>../../docs/architecture/process_registry.json</code> relative to <code>projects/status/</code>;
+    (3) <code>/docs/architecture/process_registry.json</code> when the server document root is the repo (e.g. <code>python3 -m http.server</code> from <code>ai-stack</code>).
+  </div>
+  <header>
+    <h1>FAITHH system dashboard</h1>
+    <span class="meta" id="last-updated">Last updated: —</span>
+    <button type="button" id="btn-copy">Copy status for AI</button>
+    <button type="button" id="btn-refresh">Refresh now</button>
+  </header>
+  <main>
+    <section>
+      <h2>System health</h2>
+      <div class="health-row" id="health-row"></div>
+    </section>
+    <section>
+      <h2>Tracks</h2>
+      <div class="tracks" id="tracks"></div>
+    </section>
+    <section>
+      <h2>Gates</h2>
+      <p class="meta" style="margin-top:0">
+        <label>Filter track: <select id="gate-filter"><option value="">All</option></select></label>
+      </p>
+      <div style="overflow-x:auto">
+        <table>
+          <thead><tr><th>Gate</th><th>Title</th><th>Status</th><th>Blocker</th><th>Track</th></tr></thead>
+          <tbody id="gate-body"></tbody>
+        </table>
+      </div>
+    </section>
+    <section>
+      <h2>Recent component changes</h2>
+      <ul class="changes" id="changes"></ul>
+    </section>
+    <div class="powerbi-note">
+      <h3>Power BI data sources</h3>
+      <p>These CSV files update when you run <code>python3 scripts/export_status_csv.py</code>
+      or <code>scripts/refresh_dashboard_data.sh</code>:</p>
+      <ul>
+        <li><code>projects/status/tracks.csv</code> — one row per track, use for status overview</li>
+        <li><code>projects/status/gates.csv</code> — one row per gate, use for progress bars</li>
+        <li><code>projects/status/components.csv</code> — one row per component, use for change history</li>
+      </ul>
+      <p>In Power BI: Home → Get data → Text/CSV → navigate to each file → Load.
+      Build relationships: tracks[track_id] → gates[track_id].</p>
+    </div>
+  </main>
+  <script>
+    const URLS = {
+      componentMap: new URL('component_map.json', window.location.href).href,
+      projectStatus: new URL('project_status.json', window.location.href).href,
+    };
+
+    function statusClass(s) {
+      const v = (s || '').toLowerCase();
+      if (v === 'live' || v === 'healthy' || v === 'running') return 'ok';
+      if (v === 'unknown' || v === 'degraded' || v === 'stopped_or_absent') return 'warn';
+      if (v === 'error' || v === 'down' || v === 'unhealthy') return 'bad';
+      return 'warn';
+    }
+
+    function daysSince(iso) {
+      if (!iso) return null;
+      const t = Date.parse(iso);
+      if (Number.isNaN(t)) return null;
+      return Math.floor((Date.now() - t) / 86400000);
+    }
+
+    async function loadJson(url) {
+      const r = await fetch(url, { cache: 'no-store' });
+      if (!r.ok) throw new Error(r.status + ' ' + url);
+      return r.json();
+    }
+
+    async function loadProcessRegistry() {
+      // (1) Local snapshot — preferred; refresh_dashboard_data.sh copies from docs/architecture/
+      // (2) Relative to projects/status/ when this HTML is served from there
+      // (3) Absolute from origin when static root is repo root (not used for file://)
+      const candidates = [
+        new URL('process_registry.json', window.location.href).href,
+        new URL('../../docs/architecture/process_registry.json', window.location.href).href,
+      ];
+      if (window.location.protocol !== 'file:') {
+        candidates.push(
+          new URL('/docs/architecture/process_registry.json', window.location.origin).href
+        );
+      }
+      let lastErr = null;
+      for (const url of candidates) {
+        try {
+          return await loadJson(url);
+        } catch (e) {
+          lastErr = e;
+        }
+      }
+      return { error: true, services: [], load_error: String(lastErr || 'unknown') };
+    }
+
+    function renderHealth(reg) {
+      const el = document.getElementById('health-row');
+      el.innerHTML = '';
+      if (!reg || reg.error) {
+        el.innerHTML = '<div class="pill bad">process_registry <div class="label">unavailable</div></div>';
+        return;
+      }
+      const svcs = reg.services || [];
+      const pick = (id) => svcs.find((s) => s.id === id);
+      const rows = [
+        { id: 'faithh_backend', label: 'FAITHH backend' },
+        { id: 'ollama_primary', label: 'Ollama' },
+        { id: 'chromadb', label: 'ChromaDB' },
+      ];
+      for (const r of rows) {
+        const s = pick(r.id);
+        const st = s ? s.status : 'missing from registry';
+        const div = document.createElement('div');
+        div.className = 'pill ' + statusClass(st);
+        div.innerHTML = '<div class="label">' + r.label + '</div><strong>' + (s ? s.name || r.id : r.id) + '</strong><br/>' + st;
+        el.appendChild(div);
+      }
+    }
+
+    function renderTracks(ps) {
+      const el = document.getElementById('tracks');
+      const sel = document.getElementById('gate-filter');
+      el.innerHTML = '';
+      while (sel.options.length > 1) sel.remove(1);
+      if (!ps || !ps.tracks) {
+        el.textContent = 'project_status.json not available';
+        return;
+      }
+      for (const t of ps.tracks) {
+        const opt = document.createElement('option');
+        opt.value = t.id;
+        opt.textContent = t.id + ' — ' + (t.name || '');
+        sel.appendChild(opt);
+
+        const card = document.createElement('div');
+        const st = (t.status || 'planned').toLowerCase();
+        card.className = 'card ' + (st === 'active' ? 'active' : st === 'paused' ? 'paused' : st === 'completed' ? 'completed' : 'planned');
+        const sum = t.summary || {};
+        const total = sum.total_gates || 0;
+        const done = sum.completed_gates || 0;
+        const pct = total ? Math.round((done / total) * 100) : 0;
+        const d = daysSince(t.last_activity);
+        const ago = d === null ? '—' : d + 'd ago';
+        card.innerHTML =
+          '<div><strong>' + t.id + '</strong> <span class="badge">' + (t.status || '') + '</span></div>' +
+          '<div class="meta" style="margin:0.35rem 0">' + (t.name || '') + '</div>' +
+          '<div class="meta">Current gate: <strong>' + (t.current_gate || '—') + '</strong></div>' +
+          '<div class="meta">Last activity: ' + (t.last_activity || '—') + ' (' + ago + ')</div>' +
+          '<div class="progress"><i style="width:' + pct + '%"></i></div>' +
+          '<div class="meta" style="margin-top:0.35rem">' + done + ' / ' + total + ' gates completed</div>';
+        el.appendChild(card);
+      }
+    }
+
+    function gateStatusClass(st) {
+      const s = (st || '').toLowerCase();
+      if (s === 'completed') return 'st-completed';
+      if (s === 'in_progress') return 'st-in_progress';
+      if (s === 'blocked') return 'st-blocked';
+      return 'st-pending';
+    }
+
+    function renderGates(ps, filterTrack) {
+      const body = document.getElementById('gate-body');
+      body.innerHTML = '';
+      if (!ps || !ps.tracks) return;
+      const rows = [];
+      for (const t of ps.tracks) {
+        for (const g of t.gates || []) {
+          rows.push({ ...g, track: g.track || t.id });
+        }
+      }
+      for (const g of rows) {
+        if (filterTrack && g.track !== filterTrack) continue;
+        const tr = document.createElement('tr');
+        tr.innerHTML =
+          '<td>' + g.id + '</td>' +
+          '<td>' + (g.title || '') + '</td>' +
+          '<td class="' + gateStatusClass(g.status) + '">' + (g.status || '') + '</td>' +
+          '<td>' + (g.blocker || '—') + '</td>' +
+          '<td>' + g.track + '</td>';
+        body.appendChild(tr);
+      }
+    }
+
+    function renderChanges(cm) {
+      const ul = document.getElementById('changes');
+      ul.innerHTML = '';
+      if (!cm || !cm.components) {
+        ul.innerHTML = '<li>component_map.json not available</li>';
+        return;
+      }
+      const entries = [];
+      for (const c of cm.components) {
+        const logs = c.change_log || [];
+        for (const e of logs) {
+          entries.push({
+            date: e.date,
+            component: c.id,
+            what: e.what,
+            impact: e.impact,
+          });
+        }
+      }
+      entries.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+      const top = entries.slice(0, 5);
+      if (!top.length) {
+        ul.innerHTML = '<li class="meta">No change_log entries yet.</li>';
+        return;
+      }
+      for (const e of top) {
+        const li = document.createElement('li');
+        li.innerHTML = '<strong>' + e.date + '</strong> · <strong>' + e.component + '</strong> — ' + e.what + '<br/><span class="meta">Impact: ' + e.impact + '</span>';
+        ul.appendChild(li);
+      }
+    }
+
+    function buildAiSummary(ps, cm, reg) {
+      const lines = [];
+      const d = new Date().toISOString().slice(0, 10);
+      lines.push('=== FAITHH Project Status — ' + d + ' ===');
+      if (!ps || !ps.tracks) {
+        lines.push('Tracks: (project_status unavailable)');
+      } else {
+        const active = ps.tracks.filter((t) => (t.status || '').toLowerCase() === 'active');
+        const paused = ps.tracks.filter((t) => (t.status || '').toLowerCase() === 'paused');
+        const planned = ps.tracks.filter((t) => (t.status || '').toLowerCase() === 'planned');
+        const fmt = (t) => t.id + ' (gate ' + (t.current_gate || '—') + ', ' + (daysSince(t.last_activity) != null ? daysSince(t.last_activity) + 'd ago' : 'no date') + ')';
+        lines.push('Active tracks: ' + (active.length ? active.map(fmt).join('; ') : 'none'));
+        lines.push('Paused tracks: ' + (paused.length ? paused.map(fmt).join('; ') : 'none'));
+        lines.push('Planned tracks: ' + (planned.length ? planned.map((t) => t.id).join(', ') : 'none'));
+        const stale = ps.tracks.filter((t) => daysSince(t.last_activity) != null && daysSince(t.last_activity) > 7);
+        lines.push('Stale (>7d): ' + (stale.length ? stale.map((t) => t.id).join(', ') : 'none'));
+      }
+      if (cm && cm.components) {
+        const recent = [];
+        for (const c of cm.components) {
+          for (const e of c.change_log || []) {
+            recent.push(e.date + ': ' + c.id + ' — ' + e.what);
+          }
+        }
+        recent.sort().reverse();
+        lines.push('Recent changes: ' + (recent.slice(0, 5).join(' | ') || 'none logged'));
+      }
+      const na = ps && (ps.summary && ps.summary.next_action ? ps.summary.next_action : ps.next_action);
+      lines.push('Next action: ' + (na || '(set summary.next_action in project_status.json)'));
+      if (reg && reg.services) {
+        const fb = reg.services.find((s) => s.id === 'faithh_backend');
+        lines.push('Registry backend status: ' + (fb ? fb.status : 'unknown'));
+      }
+      return lines.join('\n');
+    }
+
+    let cache = { reg: null, ps: null, cm: null };
+
+    async function refresh() {
+      if (location.protocol.startsWith('http')) {
+        document.getElementById('serve-hint').style.display = 'none';
+      }
+      document.getElementById('last-updated').textContent = 'Last updated: loading…';
+      try {
+        const [reg, ps, cm] = await Promise.all([
+          loadProcessRegistry(),
+          loadJson(URLS.projectStatus).catch(() => null),
+          loadJson(URLS.componentMap).catch(() => null),
+        ]);
+        cache = { reg, ps, cm };
+        renderHealth(reg);
+        renderTracks(ps);
+        renderGates(ps, document.getElementById('gate-filter').value);
+        renderChanges(cm);
+        document.getElementById('last-updated').textContent = 'Last updated: ' + new Date().toLocaleString();
+        document.getElementById('serve-hint').style.display = reg.error ? 'block' : 'none';
+      } catch (e) {
+        document.getElementById('last-updated').textContent = 'Last updated: error — ' + e.message;
+        document.getElementById('health-row').innerHTML = '<div class="pill bad">Load failed<div class="label">' + e.message + '</div></div>';
+      }
+    }
+
+    document.getElementById('gate-filter').addEventListener('change', () => {
+      renderGates(cache.ps, document.getElementById('gate-filter').value);
+    });
+    document.getElementById('btn-refresh').addEventListener('click', refresh);
+    document.getElementById('btn-copy').addEventListener('click', async () => {
+      const text = buildAiSummary(cache.ps, cache.cm, cache.reg);
+      try {
+        await navigator.clipboard.writeText(text);
+        alert('Copied status summary to clipboard.');
+      } catch {
+        prompt('Copy this text:', text);
+      }
+    });
+
+    refresh();
+    setInterval(refresh, 60000);
+  </script>
+</body>
+</html>

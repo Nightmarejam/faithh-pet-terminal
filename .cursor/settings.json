@@ -1,0 +1,38 @@
+{
+  "plugins": {
+    "cursor-team-kit": {
+      "enabled": true
+    },
+    "agent-compatibility": {
+      "enabled": true
+    },
+    "cli-for-agent": {
+      "enabled": true
+    },
+    "continual-learning": {
+      "enabled": false
+    },
+    "superpowers": {
+      "enabled": false
+    },
+    "parallel": {
+      "enabled": false
+    },
+    "context7-plugin": {
+      "enabled": false
+    },
+    "compound-engineering": {
+      "enabled": false
+    },
+    "create-plugin": {
+      "enabled": false
+    },
+    "browse": {
+      "enabled": false
+    }
+  },
+  "remote.SSH.useLocalServer": true,
+  "remote.SSH.connectTimeout": 60,
+  "remote.SSH.maxReconnectionAttempts": 5,
+  "remote.SSH.enableAgentForwarding": false
+}

@@ -1,0 +1,881 @@
+{
+  "last_updated": "2026-04-09",
+  "version": "1.0",
+  "components": [
+    {
+      "id": "api_chat",
+      "name": "/api/chat",
+      "type": "endpoint",
+      "file": "faithh_professional_backend_fixed.py",
+      "connection_ids": [
+        "conn_faithh_client_http",
+        "conn_backend_groq",
+        "conn_backend_ollama"
+      ],
+      "depends_on": [
+        "llm_route",
+        "auto_model_selector",
+        "response_cache",
+        "chromadb",
+        "intent_detection"
+      ],
+      "consumed_by": [
+        "faithh_pet_v4.html:sendMessage (POST JSON; use_rag from rag toggle)",
+        "scripts/ecosystem_baseline_probe.py"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1"
+      ],
+      "last_changed": "2026-04-03",
+      "change_summary": "Auto mode uses get_optimal_model_for_query; shared route via run_llm_route_with_pin; optional ollama_num_ctx for context window tests.",
+      "change_log": [
+        {
+          "date": "2026-04-03",
+          "what": "Backend-authoritative model routing for auto mode",
+          "why": "Frontend was pinning llama3.1 for simple queries",
+          "impact": "Badge and provider match actual runner"
+        }
+      ]
+    },
+    {
+      "id": "api_health",
+      "name": "/api/health",
+      "type": "endpoint",
+      "file": "faithh_professional_backend_fixed.py",
+      "connection_ids": [
+        "conn_health_aggregate"
+      ],
+      "depends_on": [
+        "connection_monitor",
+        "response_cache",
+        "security_middleware",
+        "performance_tracker"
+      ],
+      "consumed_by": [
+        "restart_backend.sh",
+        "Prometheus/monitoring (optional)",
+        "scripts/ecosystem_baseline_probe.py",
+        "Note: faithh_pet_v4 service badges use /api/plc/state (faithh_status), not this endpoint"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-04",
+      "change_summary": "Rate limiter None-safe; cache hit-rate warning gated; connection_monitor optional services + Chroma v2 heartbeat.",
+      "change_log": [
+        {
+          "date": "2026-04-03",
+          "what": "Guarded security_middleware when rate_limiter is None",
+          "why": "P0 health JSON showed security_middleware error",
+          "impact": "Health returns structured JSON without that warning"
+        },
+        {
+          "date": "2026-04-04",
+          "what": "Cache warning only after 50+ cache requests",
+          "why": "Fresh start always 0% hit rate",
+          "impact": "overall_health can be healthy on cold start"
+        }
+      ]
+    },
+    {
+      "id": "api_plc_state",
+      "name": "/api/plc/state",
+      "type": "endpoint",
+      "file": "faithh_professional_backend_fixed.py",
+      "connection_ids": [
+        "conn_probe_plc"
+      ],
+      "depends_on": [
+        "process_registry_json",
+        "project_status_json",
+        "component_map_json"
+      ],
+      "consumed_by": [
+        "frontend:cockpitPLC",
+        "faithh_cockpit.html",
+        "faithh_pet_v4.html",
+        "scripts/maintenance/automated_health_check.py",
+        "scripts/maintenance/stress_test.py",
+        "scripts/ecosystem_baseline_probe.py",
+        "scripts/smoke_cockpit.sh",
+        "experiments/genomic/realtime_genomic_monitoring.py"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-08",
+      "change_summary": "Canonical ecosystem snapshot: registry + project_status + faithh_status; main UI, cockpit, and in-repo maintenance scripts consume this endpoint.",
+      "change_log": [
+        {
+          "date": "2026-04-08",
+          "what": "scripts/ecosystem_baseline_probe.py + smoke_cockpit.sh; connection_ids conn_probe_plc",
+          "why": "Documented repeatability for PLC + timing",
+          "impact": "Cross-link to docs/data/ecosystem_connections.json"
+        },
+        {
+          "date": "2026-04-03",
+          "what": "Endpoint created reading process_registry.json",
+          "why": "UI polled /api/plc/state and got 404",
+          "impact": "Cockpit has live process snapshot"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Added recent_component_changes (3-day window)",
+          "why": "Self-awareness for what changed recently",
+          "impact": "PLC JSON includes component drift summary"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Added faithh_status object (shared builder with /api/status)",
+          "why": "Cockpit phase 2b: single contract for version, model, ML chips, live service probes",
+          "impact": "faithh_cockpit.html no longer fetches /api/status; smoke script checks faithh_status fields"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "faithh_pet_v4 + automated_health_check + stress_test + genomic monitor use PLC",
+          "why": "Reduce drift from multiple status URLs",
+          "impact": "/api/status retained as legacy alias only"
+        }
+      ]
+    },
+    {
+      "id": "llm_route",
+      "name": "run_llm_route_with_pin",
+      "type": "function",
+      "file": "backend/llm_providers.py",
+      "depends_on": [
+        "ollama_health_check",
+        "ollama",
+        "groq",
+        "openai_compatible"
+      ],
+      "consumed_by": [
+        "api_chat"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1"
+      ],
+      "last_changed": "2026-04-03",
+      "change_summary": "Ollama health gate for simple-local; provider order from build_provider_order.",
+      "change_log": [
+        {
+          "date": "2026-04-03",
+          "what": "Groq gated when Ollama healthy for simple queries",
+          "why": "Unexpected Groq use for trivial prompts",
+          "impact": "Local-first when healthy"
+        }
+      ]
+    },
+    {
+      "id": "auto_model_selector",
+      "name": "get_optimal_model_for_query",
+      "type": "function",
+      "file": "backend/llm_providers.py",
+      "depends_on": [
+        "intent_detection",
+        "ollama",
+        "gemini"
+      ],
+      "consumed_by": [
+        "api_chat"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1"
+      ],
+      "last_changed": "2026-04-06",
+      "change_summary": "/api/chat auto mode (model=auto or omitted) picks provider+model here: doc-grounded → Ollama gen5-delta; complex → OLLAMA_COMPLEX_MODEL (default deepseek-r1:32b); creative → Gemini when key set else Ollama fallback.",
+      "change_log": [
+        {
+          "date": "2026-04-06",
+          "what": "Replaced local_ai_optimizer.select_optimal_model for auto with get_optimal_model_for_query",
+          "why": "Optimizer only profiled qwen25-grounded:latest; tests and docs pointed at llm_providers",
+          "impact": "Auto matches test_smart_routing expectations; routing_debug JSON in chat responses"
+        }
+      ]
+    },
+    {
+      "id": "connection_monitor",
+      "name": "ConnectionMonitor",
+      "type": "class",
+      "file": "backend/connection_monitor.py",
+      "depends_on": [
+        "chromadb",
+        "ollama",
+        "groq",
+        "gemini"
+      ],
+      "consumed_by": [
+        "api_health"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-04",
+      "change_summary": "No backend self-probe; optional chroma/groq/gemini; Chroma /api/v2/heartbeat; overall_status from required services only.",
+      "change_log": [
+        {
+          "date": "2026-04-04",
+          "what": "Removed localhost:5557/health self-check",
+          "why": "False Connection error / unhealthy on startup",
+          "impact": "Health aggregate matches real deps"
+        },
+        {
+          "date": "2026-04-04",
+          "what": "Chroma probe URL v1 to v2",
+          "why": "HTTP 410 on v1 heartbeat",
+          "impact": "Chroma shows healthy when NAS up"
+        }
+      ]
+    },
+    {
+      "id": "security_middleware",
+      "name": "SecurityMiddleware",
+      "type": "class",
+      "file": "backend/security_middleware.py",
+      "depends_on": [
+        "rate_limiter_optional"
+      ],
+      "consumed_by": [
+        "api_health",
+        "require_security routes"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-03",
+      "change_summary": "get_security_stats and validate_request tolerate rate_limiter=None when limiting disabled.",
+      "change_log": [
+        {
+          "date": "2026-04-03",
+          "what": "None-guards for rate_limiter",
+          "why": "Health/stats crashed with enable_rate_limiting=False",
+          "impact": "No max_requests AttributeError"
+        }
+      ]
+    },
+    {
+      "id": "response_cache",
+      "name": "ResponseCache",
+      "type": "class",
+      "file": "backend/cache.py",
+      "depends_on": [],
+      "consumed_by": [
+        "api_health",
+        "api_chat",
+        "cache_middleware"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-04",
+      "change_summary": "total_requests exposed in stats; health uses min-query gate for low hit-rate warning.",
+      "change_log": [
+        {
+          "date": "2026-04-04",
+          "what": "Health checks hit rate only after 50 requests",
+          "why": "Noise on every cold start",
+          "impact": "Cleaner overall_health.issues"
+        }
+      ]
+    },
+    {
+      "id": "api_rag_search",
+      "name": "/api/rag_search",
+      "type": "endpoint",
+      "file": "faithh_professional_backend_fixed.py",
+      "depends_on": [
+        "chromadb",
+        "embedding_function"
+      ],
+      "consumed_by": [
+        "HTTP clients and scripts only (no active call from faithh_pet_v4.html)",
+        "Chat RAG: POST /api/chat with use_rag uses build_integrated_context → smart_rag_query (same Chroma stack, not this route)"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1"
+      ],
+      "last_changed": "2026-04-07",
+      "change_summary": "Standalone POST endpoint; main UI toggles RAG via use_rag on /api/chat (retrieve_rag/smart_rag_query). This route is optional for tools/tests.",
+      "change_log": [
+        {
+          "date": "2026-04-07",
+          "what": "Corrected consumed_by: pet UI does not fetch /api/rag_search",
+          "why": "Avoid map implying a RAG panel wired to this URL",
+          "impact": "Component map matches faithh_pet_v4.html"
+        }
+      ]
+    },
+    {
+      "id": "api_status",
+      "name": "/api/status",
+      "type": "endpoint",
+      "file": "faithh_professional_backend_fixed.py",
+      "depends_on": [
+        "connection_monitor",
+        "model_config"
+      ],
+      "consumed_by": [
+        "external_tools",
+        "tests:test_api_status_legacy_alias"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-05",
+      "change_summary": "Legacy alias: same JSON as faithh_status inside GET /api/plc/state. In-repo clients use PLC.",
+      "change_log": [
+        {
+          "date": "2026-04-05",
+          "what": "UIs and maintenance scripts switched to /api/plc/state",
+          "why": "Single contract to reduce documentation and behavior drift",
+          "impact": "/api/status kept for backward compatibility only"
+        }
+      ]
+    },
+    {
+      "id": "intent_detection",
+      "name": "intent_detection / semantic intent",
+      "type": "module",
+      "file": "backend/ml/semantic_intent_detector.py",
+      "depends_on": [
+        "embedding_function"
+      ],
+      "consumed_by": [
+        "api_chat"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-03-28",
+      "change_summary": "Supports routing hints for RAG vs direct LLM.",
+      "change_log": []
+    },
+    {
+      "id": "frontend_main",
+      "name": "faithh_pet_v4.html (API client)",
+      "type": "frontend",
+      "file": "faithh_pet_v4.html",
+      "depends_on": [
+        "api_chat",
+        "api_usage",
+        "api_plc_state",
+        "api_pulse_state",
+        "api_ml_chips"
+      ],
+      "consumed_by": [],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-07",
+      "change_summary": "Main UI: PLC + faithh_status for services; chat POST /api/chat; RAG on/off = #ragToggle (sets use_rag), not /api/rag_search.",
+      "change_log": [
+        {
+          "date": "2026-04-07",
+          "what": "Documented RAG toggle (Knowledge Base) → use_rag on /api/chat",
+          "why": "Operators asked where RAG disable lives; map listed nonexistent streamChat consumer",
+          "impact": "Clearer contract vs chromadb and api_rag_search"
+        },
+        {
+          "date": "2026-04-03",
+          "what": "Auto-router sends model:auto for quick path",
+          "why": "Align UI with backend routing",
+          "impact": "Provider badge reflects server choice"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "faithh_cockpit loadStatus now reads /api/plc/state before /api/status",
+          "why": "Reduce status drift between cockpit surfaces",
+          "impact": "Chroma/Ollama badges follow PLC contract; model/version still sourced from /api/status"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "faithh_pet_v4: checkSystemStatus + updatePLCState use /api/plc/state; removed separate /api/status connection poll",
+          "why": "PLC as canonical ecosystem contract",
+          "impact": "One poll path for connection indicator and PLC readout; faithh_status drives service badges"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Added mission-state and mission-next-action UI bindings in faithh_cockpit loadStatus",
+          "why": "Expose PLC project contract directly in cockpit and reduce duplicate status semantics",
+          "impact": "Cockpit panel reflects project_status.summary.next_action and current_state without relying on /api/compass for sync metadata"
+        }
+      ]
+    },
+    {
+      "id": "api_models",
+      "name": "/api/models",
+      "type": "endpoint",
+      "file": "faithh_professional_backend_fixed.py",
+      "depends_on": [
+        "ollama",
+        "model_config"
+      ],
+      "consumed_by": [
+        "frontend:modelPicker"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-03-10",
+      "change_summary": "Lists available models for UI dropdown.",
+      "change_log": []
+    },
+    {
+      "id": "host_windows",
+      "name": "Windows Host (DESKTOP-JJ1SUHB)",
+      "type": "host",
+      "file": null,
+      "os": "Windows 11 24H2 (10.0.26200) · WSL2 kernel 6.6.87",
+      "cpu": "AMD Ryzen 9 3900X 12-Core Processor",
+      "ram_gb": 64,
+      "ram_wsl_visible_gi": 31,
+      "gpu_primary": "NVIDIA GeForce GTX 1080 Ti (11GB, sm_61 — display adapter)",
+      "gpu_secondary": "NVIDIA GeForce RTX 3090 (24GB, sm_86 — compute, CUDA_VISIBLE_DEVICES=0)",
+      "cuda_note": "PyTorch must use CUDA_VISIBLE_DEVICES=0 to target RTX 3090. 1080 Ti is sm_61, incompatible with PyTorch cu128.",
+      "wsl_version": "2.5.10",
+      "services_running": [
+        "wsl_faithh",
+        "wsl_ollama",
+        "wsl_node_exporter (:9100) — systemd, /home/jonat/bin/node_exporter",
+        "windows_exporter (:9182) — Windows Scheduled Task (SYSTEM); Prometheus job windows_host"
+      ],
+      "depends_on": [
+        "host_gen8"
+      ],
+      "consumed_by": [
+        "wsl_faithh",
+        "wsl_ollama"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1",
+        "T5"
+      ],
+      "last_changed": "2026-04-05",
+      "change_summary": "Specs captured from WSL2 probe (2026-04-05). CUDA_VISIBLE_DEVICES=0 in backend env targets RTX 3090.",
+      "change_log": [
+        {
+          "date": "2026-04-03",
+          "what": "Pinned CUDA_VISIBLE_DEVICES=0 in .env",
+          "why": "PyTorch was defaulting to 1080 Ti (sm_61, incompatible)",
+          "impact": "RTX 3090 now confirmed as PyTorch CUDA device on restart"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Added host_windows to component_map",
+          "why": "Infrastructure self-awareness for FAITHH dashboard",
+          "impact": "Impact analyzer and PLC can reference compute topology"
+        }
+      ]
+    },
+    {
+      "id": "host_gen8",
+      "name": "Gen8 (servicebox — Ubuntu 22.04)",
+      "type": "host",
+      "file": null,
+      "os": "Ubuntu 22.04.5 LTS (kernel 5.15.0-171-generic)",
+      "cpu": "Intel Xeon E3-1265L V2 @ 2.50GHz, 8 CPUs (HT)",
+      "ram_gb": 15,
+      "disk_root_gb": 916,
+      "gpu_primary": "none (nvidia-smi not available on host sample)",
+      "services_running": [
+        "chromadb",
+        "monitoring-prometheus",
+        "monitoring-grafana",
+        "monitoring-alertmanager",
+        "monitoring-node-exporter",
+        "monitoring-cadvisor",
+        "gitea",
+        "gitlab-runner",
+        "pihole",
+        "plex",
+        "docker-registry",
+        "registry-ui",
+        "uptime-kuma",
+        "vaultwarden",
+        "ChromaDB consumer target Gen8 LAN 192.158.1.243:8000 (override via CHROMA_HOST; Tailscale for mesh-only)"
+      ],
+      "depends_on": [
+        "nas_storage"
+      ],
+      "consumed_by": [
+        "faithh_backend",
+        "api_health",
+        "connection_monitor"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1",
+        "T2"
+      ],
+      "last_changed": "2026-04-05",
+      "change_summary": "Live docker names from Gen8 (2026-04-05). fail2ban textfile metrics per prior change_log.",
+      "change_log": [
+        {
+          "date": "2026-04-03",
+          "what": "Added fail2ban metrics via textfile collector",
+          "why": "G4 monitoring gate — fail2ban metrics needed in Prometheus",
+          "impact": "fail2ban_banned_current/total now scrapeable via node_exporter:9100"
+        },
+        {
+          "date": "2026-04-03",
+          "what": "node_exporter rebuilt with --collector.textfile.directory=/textfile_collector",
+          "why": "Textfile collector not enabled in original container",
+          "impact": "Custom metrics (fail2ban) now visible in Grafana"
+        }
+      ]
+    },
+    {
+      "id": "gen8_prometheus",
+      "name": "Prometheus (Gen8 — authoritative)",
+      "type": "service",
+      "file": "~/ops/monitoring/prometheus.yml (on Gen8 servicebox)",
+      "host": "host_gen8",
+      "port": 9090,
+      "health_endpoint": "http://100.79.85.32:9090/-/healthy",
+      "scrape_targets": [
+        "gen8_node (node-exporter:9100 on monitoring network)",
+        "wsl_node (100.115.225.100:9100)",
+        "faithh_backend (100.115.225.100:5557)",
+        "windows_host (100.115.225.100:9182)",
+        "grafana (grafana:3000)",
+        "prometheus (localhost:9090)",
+        "cadvisor (cadvisor:8080)",
+        "fail2ban (textfile via gen8 node_exporter — target may be down)",
+        "uptime_kuma (may be down)"
+      ],
+      "depends_on": [
+        "host_gen8"
+      ],
+      "consumed_by": [
+        "Grafana on Gen8",
+        "Grafana on WSL (provisioning/datasources/prometheus.yml → http://100.79.85.32:9090)"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T4"
+      ],
+      "last_changed": "2026-04-05",
+      "change_summary": "Single source of truth: WSL monitoring-prometheus container removed 2026-04-05; Gen8 scrapes WSL/FAITHH/Windows via Tailscale. Dedicated job nas pending real Synology metrics IP (100.79.85.32:9100 is Gen8, not NAS).",
+      "change_log": [
+        {
+          "date": "2026-04-05",
+          "what": "Designated Gen8 Prometheus authoritative; fixed gen8_node to scrape Docker service node-exporter; added windows_host job",
+          "why": "Dual Prometheus (WSL + Gen8) caused confusion and broken gen8_node DNS",
+          "impact": "WSL Grafana datasource uses Gen8 URL; WSL compose prometheus service commented out"
+        }
+      ]
+    },
+    {
+      "id": "nas_storage",
+      "name": "NAS (Synology at 100.79.85.32)",
+      "type": "host",
+      "file": null,
+      "os": "Synology DSM",
+      "ip": "100.79.85.32",
+      "services_running": [
+        "chromadb (:8000) — healthy",
+        "node_exporter (:9100) — deployed 2026-04-05"
+      ],
+      "depends_on": [],
+      "consumed_by": [
+        "faithh_backend",
+        "api_rag_search",
+        "connection_monitor"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T2"
+      ],
+      "last_changed": "2026-04-05",
+      "change_summary": "ChromaDB v2 heartbeat at :8000. Synology node_exporter IP for a dedicated Prometheus nas job still TBD; Tailscale :9100 on 100.79.85.32 is Gen8 (servicebox), not the NAS.",
+      "change_log": [
+        {
+          "date": "2026-04-04",
+          "what": "Updated ChromaDB probe from /api/v1/heartbeat to /api/v2/heartbeat",
+          "why": "v1 endpoint returning HTTP 410 (deprecated)",
+          "impact": "ChromaDB now shows healthy in connection_monitor"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Prometheus job renamed to nas with labels; node_exporter on :9100 verified",
+          "why": "NAS host metrics + single naming convention",
+          "impact": "Grafana/PromQL can use job=\"nas\", instance=\"nas\""
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Clarified Gen8 vs NAS for :9100 after Prometheus consolidation audit",
+          "why": "Avoid mis-scraping Gen8 node_exporter as nas",
+          "impact": "component_map matches Gen8 prometheus.yml (nas job not added until Synology address confirmed)"
+        }
+      ]
+    },
+    {
+      "id": "nas_node_exporter",
+      "name": "NAS node_exporter (:9100)",
+      "type": "service",
+      "file": null,
+      "host": "nas_storage",
+      "port": 9100,
+      "services_running": [
+        "node_exporter on Synology (Docker) :9100 — exporter deployed; Gen8 Prometheus nas scrape job pending correct NAS IP"
+      ],
+      "health_endpoint": "Synology LAN or Tailscale :9100/metrics (not 100.79.85.32:9100 — that is Gen8)",
+      "depends_on": [
+        "nas_storage"
+      ],
+      "consumed_by": [
+        "gen8_prometheus"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-05",
+      "change_summary": "Exporter on NAS; Gen8 authoritative Prometheus will add job nas once scrape address is confirmed. See docs/guides/NAS_NODE_EXPORTER.md.",
+      "change_log": [
+        {
+          "date": "2026-04-05",
+          "what": "Recorded node_exporter on NAS; Prometheus scrape job nas",
+          "why": "NAS visibility in Grafana / operations",
+          "impact": "NAS host metrics in Prometheus (job=nas, instance=nas)"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Marked deployment confirmed + services_running note",
+          "why": "Handoff audit — align component_map with live targets",
+          "impact": "Self-awareness CSVs reflect NAS exporter state"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Pointed consumed_by at gen8_prometheus; health_endpoint clarified vs Gen8 Tailscale",
+          "why": "WSL Prometheus retired; avoid wrong :9100 host",
+          "impact": "Map matches single Prometheus on Gen8"
+        }
+      ]
+    },
+    {
+      "id": "windows_exporter",
+      "name": "Windows Exporter (:9182)",
+      "type": "service",
+      "file": "/mnt/c/Users/jonat/Downloads/install_windows_exporter.ps1",
+      "host": "host_windows",
+      "port": 9182,
+      "health_endpoint": "http://172.24.192.1:9182/metrics",
+      "depends_on": [
+        "host_windows"
+      ],
+      "consumed_by": [
+        "gen8_prometheus"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-05",
+      "change_summary": "Runs as Windows Scheduled Task (SYSTEM, at startup), not only a Windows Service. WSL reaches via 172.24.192.1:9182; Gen8 Prometheus scrapes job windows_host at 100.115.225.100:9182.",
+      "change_log": [
+        {
+          "date": "2026-04-05",
+          "what": "Documented windows_exporter install + Prometheus wiring",
+          "why": "WSL node_exporter does not replace full Windows host metrics",
+          "impact": "Real Windows CPU/RAM/disk available to Prometheus after install"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Noted Scheduled Task deployment + concrete health_endpoint IP",
+          "why": "Match production topology (handoff 2026-04-05)",
+          "impact": "component_map matches Grafana/Prometheus labels"
+        }
+      ]
+    },
+    {
+      "id": "wsl_node_exporter",
+      "name": "WSL node_exporter (:9100)",
+      "type": "service",
+      "file": "/etc/systemd/system/node_exporter.service",
+      "host": "host_windows",
+      "port": 9100,
+      "health_endpoint": "http://localhost:9100/metrics",
+      "depends_on": [
+        "host_windows"
+      ],
+      "consumed_by": [
+        "gen8_prometheus"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-05",
+      "change_summary": "Native binary at /home/jonat/bin/node_exporter. Systemd service enabled; Gen8 Prometheus scrapes job=wsl_node at 100.115.225.100:9100 (WSL Tailscale).",
+      "change_log": [
+        {
+          "date": "2026-04-05",
+          "what": "Migrated from Docker monitoring-node-exporter to systemd on WSL",
+          "why": "Port conflict / duplicate tmpfs metrics from container",
+          "impact": "Persistent metrics across WSL restarts; Gen8 Prometheus labels instance 100.115.225.100:9100 (job=wsl_node)"
+        }
+      ]
+    },
+    {
+      "id": "wsl_faithh",
+      "name": "FAITHH Backend (WSL — port 5557)",
+      "type": "service",
+      "file": "faithh_professional_backend_fixed.py",
+      "host": "host_windows",
+      "port": 5557,
+      "start_command": "cd ~/ai-stack && source venv/bin/activate && ./restart_backend.sh",
+      "health_endpoint": "http://127.0.0.1:5557/api/health",
+      "depends_on": [
+        "host_windows",
+        "wsl_ollama",
+        "nas_storage"
+      ],
+      "consumed_by": [
+        "frontend_main"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1",
+        "T2",
+        "T5"
+      ],
+      "last_changed": "2026-04-05",
+      "change_summary": "Health clean. PLC state includes project_status and recent_component_changes. /metrics scraped by Gen8 Prometheus (faithh_backend job) over Tailscale, not WSL Prometheus.",
+      "change_log": [
+        {
+          "date": "2026-04-04",
+          "what": "Extended /api/plc/state with project_status and component_changes",
+          "why": "Self-awareness layer — system knows its own state",
+          "impact": "Dashboard and FAITHH can read full system status from one endpoint"
+        },
+        {
+          "date": "2026-04-05",
+          "what": "Metrics path documented for Gen8-only Prometheus",
+          "why": "WSL monitoring-prometheus removed; avoid implying local :9090 scrape",
+          "impact": "Grafana queries Gen8 Prometheus for faithh_backend series"
+        }
+      ]
+    },
+    {
+      "id": "wsl_ollama",
+      "name": "Ollama (WSL — port 11434)",
+      "type": "service",
+      "file": null,
+      "host": "host_windows",
+      "port": 11434,
+      "models_loaded": [
+        "qwen25-grounded-gen5-delta:latest (14.8B Q4_K_M — default)",
+        "deepseek-r1:32b (reasoning)",
+        "llama3.3:70b (heavy reasoning)"
+      ],
+      "health_endpoint": "http://localhost:11434/api/tags",
+      "depends_on": [
+        "host_windows"
+      ],
+      "consumed_by": [
+        "llm_route",
+        "wsl_faithh"
+      ],
+      "related_gates": [],
+      "related_tracks": [
+        "T1"
+      ],
+      "last_changed": "2026-04-07",
+      "change_summary": "qwen25-grounded-gen5-delta default. CUDA llama-server: scripts/build_llama_cpp_cuda.sh + KV benchmark doc. PolarQuant Experiment A (Python): data/kv_vectors/experiment_a_results.json.",
+      "change_log": [
+        {
+          "date": "2026-04-06",
+          "what": "Added WSL runbook scripts for cuda-toolkit-12-8 + ~/llama.cpp CUDA build (sm_86) + KV benchmark",
+          "why": "Prior llama-server was CPU-only; nvcc missing from partial CMake configure",
+          "impact": "Operator can install toolkit with sudo, then build; symlink ~/.local/bin/llama-server to CUDA binary"
+        },
+        {
+          "date": "2026-04-07",
+          "what": "PolarQuant Experiment A run (Qwen2-1.5B KV sample vs paper-aligned polar + block-q4 baseline)",
+          "why": "Validate 4x KV compression claims and quality vs q4_0 class for multi-state context snapshot idea",
+          "impact": "Results in data/kv_vectors/experiment_a_results.json; write-up in docs/experiments/KV_CACHE_QUANT_BENCHMARK_20260405.md (Experiment A section)"
+        },
+        {
+          "date": "2026-04-07",
+          "what": "llama-server f16 vs q4_0 chat ablation JSON committed; repro checklist + optional q8_0 third leg + environment metadata in ablation runner",
+          "why": "Version captured KV-quality deltas and standardize what operators record for comparable runs",
+          "impact": "data/kv_vectors/llama_kv_ablation_*.json on main; docs/experiments/KV_EXPERIMENT_REPRO_CHECKLIST.md; scripts/llama_kv_prompt_ablation.py compare-multi"
+        }
+      ]
+    },
+    {
+      "id": "cockpit_diagnostics_panel",
+      "name": "faithh_cockpit.html — diagnostic polls (floating routes)",
+      "type": "ui_surface",
+      "file": "faithh_cockpit.html",
+      "connection_ids": [],
+      "depends_on": [],
+      "consumed_by": [],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-07",
+      "change_summary": "Polls GET /health (provider key flags), /api/health, /api/pulse/status, /api/genomic/analyze-sensors, /api/analytics/stats, /api/performance, /api/ux/analytics.",
+      "change_log": [
+        {
+          "date": "2026-04-07",
+          "what": "Phase 2 Canvas wiring — surface routes previously absent from pet UI",
+          "why": "RELEVANCY_REPORT.md / structural migration handoff",
+          "impact": "Mission Control shows genomic + analytics + UX + API health strip"
+        },
+        {
+          "date": "2026-04-09",
+          "what": "Diagnostics strip probes GET /api/metrics/summary",
+          "why": "Session metrics layer handoff",
+          "impact": "Engine Room row for metrics summary HTTP liveness"
+        }
+      ]
+    },
+    {
+      "id": "session_metrics_layer",
+      "name": "Session metrics (Chroma faithh_session_metrics + /api/metrics/*)",
+      "type": "subsystem",
+      "file": "faithh_professional_backend_fixed.py",
+      "connection_ids": [],
+      "depends_on": [
+        "chromadb",
+        "api_chat",
+        "api_workspace_registry"
+      ],
+      "consumed_by": [
+        "faithh_cockpit.html:SESSION METRICS · WEEKLY TREND",
+        "scripts/analyze_session_metrics.py"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-09",
+      "change_summary": "Per-session open/close documents in Chroma; in-memory LRU accumulator on /api/chat; GET /api/metrics/summary + /api/metrics/sessions for Cockpit.",
+      "change_log": [
+        {
+          "date": "2026-04-09",
+          "what": "Added backend/session_metrics.py, metrics collection init, chat wiring, Cockpit trend panel",
+          "why": "PTP-style session instrumentation handoff",
+          "impact": "Leading-indicator health score and daily sparklines in Mission Control"
+        }
+      ]
+    },
+    {
+      "id": "api_workspace_registry",
+      "name": "GET /api/workspace/registry",
+      "type": "endpoint",
+      "file": "faithh_professional_backend_fixed.py",
+      "connection_ids": [],
+      "depends_on": [
+        "build_faithh_status_payload",
+        "chromadb",
+        "GENOMIC_ENABLED"
+      ],
+      "consumed_by": [
+        "faithh_pet_v4.html:WorkspaceManager",
+        "faithh_pet_v4.html:workspace_registry field on POST /api/chat"
+      ],
+      "related_gates": [],
+      "related_tracks": [],
+      "last_changed": "2026-04-07",
+      "change_summary": "Canvas Phase 3 — dynamic nav + Engine Room + LLM capability hint.",
+      "change_log": [
+        {
+          "date": "2026-04-07",
+          "what": "Added build_workspace_registry + GET /api/workspace/registry",
+          "why": "Service registry handoff",
+          "impact": "Pet UI boots from registry; chat sends workspace_registry snapshot"
+        }
+      ]
+    }
+  ]
+}

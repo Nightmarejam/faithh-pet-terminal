@@ -1,0 +1,32 @@
+{
+  "experiment": "exp7_social_cognition",
+  "date": "2026-03-26T18:20:41.330080",
+  "parameters": {
+    "max_ticks": 50000,
+    "population": 50,
+    "communication_range": 50,
+    "cooperation_bonus": 2.0
+  },
+  "results": {
+    "signals_sent": 2539,
+    "cooperations": 2500,
+    "specialization_groups": {
+      "social": 12,
+      "resource": 9,
+      "mathematical": 17,
+      "communication": 9,
+      "generalist": 3
+    },
+    "communication_protocols": {
+      "cooperation_request": 2500,
+      "math_insight": 39
+    },
+    "social_network_density": 2.0408163265306123
+  },
+  "success_criteria": {
+    "social_cognition": true,
+    "communication_protocols": false,
+    "cooperative_behavior": true,
+    "knowledge_sharing": true
+  }
+}

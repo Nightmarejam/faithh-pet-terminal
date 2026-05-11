@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FAITHH Idea Priority Card",
+  "type": "object",
+  "required": ["id", "title", "factors"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Stable identifier for this idea card."
+    },
+    "title": {
+      "type": "string",
+      "description": "Short human-readable title."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional context for why this idea exists."
+    },
+    "factors": {
+      "type": "object",
+      "required": [
+        "strategic_alignment",
+        "urgency",
+        "effort_inverse",
+        "evidence_strength",
+        "energy_match"
+      ],
+      "properties": {
+        "strategic_alignment": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "urgency": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "effort_inverse": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "evidence_strength": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "energy_match": { "type": "integer", "minimum": 0, "maximum": 5 }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

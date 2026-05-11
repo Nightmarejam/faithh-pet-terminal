@@ -1,0 +1,301 @@
+{
+  "timestamp_utc": "2026-03-31T00:34:50.676396+00:00",
+  "collection": "faithh_knowledge_base",
+  "top_k": 5,
+  "query_classes": {
+    "governance_principle": {
+      "queries": [
+        {
+          "query": "What is the Universal Civic Floor?",
+          "result_count": 5,
+          "top_distance": 0.573777,
+          "source_types_topk": [
+            "general",
+            "constella",
+            "decision",
+            "technical",
+            "alife_experiment"
+          ],
+          "domains_topk": [
+            "no_domain",
+            "no_domain",
+            "no_domain",
+            "no_domain",
+            "no_domain"
+          ]
+        },
+        {
+          "query": "How should constitutional governance handle minimum compliance participants?",
+          "result_count": 5,
+          "top_distance": 0.8268252,
+          "source_types_topk": [
+            "project_discussion",
+            "decision",
+            "nas_seeded_document",
+            "project_discussion",
+            "project_discussion"
+          ],
+          "domains_topk": [
+            "constella",
+            "constella",
+            "constella_constitutional",
+            "constella",
+            "constella"
+          ]
+        },
+        {
+          "query": "What governance mechanism maps to Penumbra in Constella?",
+          "result_count": 5,
+          "top_distance": 0.62618554,
+          "source_types_topk": [
+            "constella",
+            "constella",
+            "constella_synthesis",
+            "project_discussion",
+            "decision"
+          ],
+          "domains_topk": [
+            "no_domain",
+            "no_domain",
+            "constella_constitutional",
+            "constella",
+            "constella"
+          ]
+        }
+      ],
+      "aggregate_mix": {
+        "source_type_mix": {
+          "general": 1,
+          "constella": 3,
+          "decision": 3,
+          "technical": 1,
+          "alife_experiment": 1,
+          "project_discussion": 4,
+          "nas_seeded_document": 1,
+          "constella_synthesis": 1
+        },
+        "domain_mix": {
+          "no_domain": 7,
+          "constella": 6,
+          "constella_constitutional": 2
+        },
+        "document_type_mix": {
+          "document": 2,
+          "principles": 1,
+          "implementation": 1,
+          "design": 1,
+          "no_document_type": 6,
+          "seed_source": 1,
+          "framework": 2,
+          "synthesis_entry": 1
+        }
+      }
+    },
+    "alife_mechanism": {
+      "queries": [
+        {
+          "query": "What did Exp 9 show about diversity floor stability?",
+          "result_count": 5,
+          "top_distance": 0.74057245,
+          "source_types_topk": [
+            "constella_synthesis",
+            "synthesis_document",
+            "constella",
+            "alife_experiment",
+            "governance_seed_link"
+          ],
+          "domains_topk": [
+            "constella_constitutional",
+            "alife",
+            "no_domain",
+            "alife",
+            "alife"
+          ]
+        },
+        {
+          "query": "How does strategy escape work in ALife experiments?",
+          "result_count": 5,
+          "top_distance": 0.66082144,
+          "source_types_topk": [
+            "synthesis_document",
+            "constella_synthesis",
+            "alife_experiment",
+            "alife_experiment",
+            "alife_experiment"
+          ],
+          "domains_topk": [
+            "alife",
+            "constella_constitutional",
+            "alife",
+            "alife",
+            "no_domain"
+          ]
+        },
+        {
+          "query": "What founding diversity effects were observed in Exp 8b?",
+          "result_count": 5,
+          "top_distance": 0.8198665,
+          "source_types_topk": [
+            "no_source_type",
+            "constella_synthesis",
+            "no_source_type",
+            "governance_seed_link",
+            "constella_synthesis"
+          ],
+          "domains_topk": [
+            "constella_constitutional",
+            "constella_constitutional",
+            "constella_constitutional",
+            "alife",
+            "constella_constitutional"
+          ]
+        }
+      ],
+      "aggregate_mix": {
+        "source_type_mix": {
+          "constella_synthesis": 4,
+          "synthesis_document": 2,
+          "constella": 1,
+          "alife_experiment": 4,
+          "governance_seed_link": 2,
+          "no_source_type": 2
+        },
+        "domain_mix": {
+          "constella_constitutional": 6,
+          "alife": 7,
+          "no_domain": 2
+        },
+        "document_type_mix": {
+          "synthesis_entry": 4,
+          "finding": 2,
+          "principles": 1,
+          "experiment_result": 3,
+          "scenario_link": 2,
+          "design": 1,
+          "principle": 2
+        }
+      }
+    },
+    "constella_constitutional": {
+      "queries": [
+        {
+          "query": "Map ALife evidence to Constella constitutional principles.",
+          "result_count": 5,
+          "top_distance": 0.49742228,
+          "source_types_topk": [
+            "technical",
+            "synthesis_document",
+            "project_discussion",
+            "project_discussion",
+            "project_discussion"
+          ],
+          "domains_topk": [
+            "constella",
+            "alife",
+            "constella",
+            "constella",
+            "constella"
+          ]
+        },
+        {
+          "query": "Which principles are simulation-derived versus externally sourced?",
+          "result_count": 5,
+          "top_distance": 1.0406871,
+          "source_types_topk": [
+            "no_source_type",
+            "alife_experiment",
+            "alife_experiment",
+            "synthesis_document",
+            "business"
+          ],
+          "domains_topk": [
+            "constella_constitutional",
+            "no_domain",
+            "no_domain",
+            "alife",
+            "no_domain"
+          ]
+        },
+        {
+          "query": "How do governance concept links feed Constella mechanisms?",
+          "result_count": 5,
+          "top_distance": 0.80406636,
+          "source_types_topk": [
+            "constella_synthesis",
+            "project_discussion",
+            "constella_synthesis",
+            "constella",
+            "constella"
+          ],
+          "domains_topk": [
+            "constella_constitutional",
+            "constella",
+            "constella_constitutional",
+            "no_domain",
+            "no_domain"
+          ]
+        }
+      ],
+      "aggregate_mix": {
+        "source_type_mix": {
+          "technical": 1,
+          "synthesis_document": 2,
+          "project_discussion": 4,
+          "no_source_type": 1,
+          "alife_experiment": 2,
+          "business": 1,
+          "constella_synthesis": 2,
+          "constella": 2
+        },
+        "domain_mix": {
+          "constella": 5,
+          "alife": 2,
+          "constella_constitutional": 3,
+          "no_domain": 5
+        },
+        "document_type_mix": {
+          "documentation": 1,
+          "overview": 1,
+          "no_document_type": 4,
+          "mapping_section": 1,
+          "document": 2,
+          "finding": 1,
+          "project": 1,
+          "synthesis_entry": 2,
+          "framework": 2
+        }
+      }
+    }
+  },
+  "source_mix_drift_vs_baseline": {
+    "governance_principle": {
+      "alife_experiment": 0,
+      "constella": 0,
+      "constella_synthesis": 0,
+      "decision": 0,
+      "general": 0,
+      "nas_seeded_document": 1,
+      "project_discussion": 0,
+      "synthesis_document": -1,
+      "technical": 0
+    },
+    "alife_mechanism": {
+      "alife_experiment": 0,
+      "constella": 0,
+      "constella_synthesis": 0,
+      "governance_seed_link": 0,
+      "no_source_type": 0,
+      "synthesis_document": 0
+    },
+    "constella_constitutional": {
+      "alife_experiment": 0,
+      "business": 0,
+      "constella": 0,
+      "constella_synthesis": 0,
+      "no_source_type": 0,
+      "project_discussion": 0,
+      "synthesis_document": 0,
+      "technical": 0
+    }
+  }
+}

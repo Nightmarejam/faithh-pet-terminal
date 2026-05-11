@@ -17,6 +17,7 @@ SCAFFOLDING_FILE = BASE_DIR / "scaffolding_state.json"
 
 
 def load_json_file(filepath):
+    # Logic for Humans: Read a JSON file from disk; return None if missing or broken (with a console message).
     """Generic JSON file loader"""
     try:
         if filepath.exists():
@@ -29,6 +30,7 @@ def load_json_file(filepath):
 
 
 def load_memory():
+    # Logic for Humans: Load faithh_memory.json (user profile + FAITHH self-model); fall back to a tiny default dict if absent.
     """Load persistent memory from disk"""
     memory = load_json_file(MEMORY_FILE)
     if memory is None:
@@ -38,21 +40,25 @@ def load_memory():
 
 
 def load_decisions():
+    # Logic for Humans: Load decisions_log.json so the assistant can cite past architectural choices.
     """Load decisions log"""
     return load_json_file(DECISIONS_LOG)
 
 
 def load_project_states():
+    # Logic for Humans: Load project_states.json (phases, priorities, per-project snapshots).
     """Load project states"""
     return load_json_file(PROJECT_STATES)
 
 
 def load_scaffolding():
+    # Logic for Humans: Load scaffolding_state.json (orientation / structural awareness for the assistant).
     """Load scaffolding state for structural awareness"""
     return load_json_file(SCAFFOLDING_FILE)
 
 
 def save_scaffolding(scaffolding):
+    # Logic for Humans: Write scaffolding_state.json back to disk with an updated timestamp.
     """Persist scaffolding state to disk"""
     try:
         scaffolding['meta']['last_updated'] = datetime.now().isoformat()
@@ -64,6 +70,7 @@ def save_scaffolding(scaffolding):
 
 
 def save_memory(memory):
+    # Logic for Humans: Save faithh_memory.json after mutating the in-memory structure.
     """Persist memory to disk"""
     try:
         memory["last_updated"] = datetime.now().isoformat()

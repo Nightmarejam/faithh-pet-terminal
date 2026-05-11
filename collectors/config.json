@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "root_dir": "/home/jonat/ai-stack",
+  "collectors": {
+    "git": {
+      "enabled": true
+    },
+    "file_changes": {
+      "enabled": true
+    },
+    "health": {
+      "enabled": true
+    },
+    "terminal": {
+      "enabled": true
+    }
+  }
+}

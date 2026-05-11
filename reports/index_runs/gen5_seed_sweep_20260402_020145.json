@@ -1,0 +1,286 @@
+{
+  "timestamp_utc": "2026-04-02T02:01:45.721032+00:00",
+  "experiment": "generation_five_causal_seed_sweep",
+  "seed_start": 505001,
+  "seed_count": 8,
+  "parameters_ref": {
+    "agents": 50,
+    "ticks": 10,
+    "starting_resources": 3.0,
+    "acquisition": [
+      0.3,
+      1.2
+    ],
+    "loss": [
+      0.5,
+      1.5
+    ],
+    "noise_level": 0.4,
+    "informed_fraction": 0.2
+  },
+  "summary": {
+    "runs": 8,
+    "sign_lock": {
+      "pop_a_better_survival_rate": 0.75,
+      "pop_a_lower_depletion_rate": 1.0,
+      "uninformed_disadvantaged_rate": 0.125
+    },
+    "effect_means": {
+      "delta_mean_fitness_b_minus_a": -0.041453625,
+      "delta_band2_b_minus_a": -0.875,
+      "delta_dep_events_b_minus_a": 3.375
+    },
+    "causal_contrast_lock_pass": true,
+    "consistency_threshold": 0.7
+  },
+  "runs": [
+    {
+      "seed": 505001,
+      "pop_a": {
+        "fitness_mean": 6.305513652707967,
+        "fitness_stdev": 1.2999378453526587,
+        "band2_candidates": 26,
+        "agents_depleted": 24,
+        "total_depletion_events": 58,
+        "final_alive": 32,
+        "informed_mean_fitness": 6.305513652707967,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.240364884365827,
+        "fitness_stdev": 1.285278830987017,
+        "band2_candidates": 27,
+        "agents_depleted": 23,
+        "total_depletion_events": 58,
+        "final_alive": 34,
+        "informed_mean_fitness": 6.176567720980225,
+        "uninformed_mean_fitness": 6.2563141752122275
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": -0.065149,
+        "delta_band2_b_minus_a": 1,
+        "delta_dep_events_b_minus_a": 0,
+        "pop_a_better_survival": false,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": false
+      }
+    },
+    {
+      "seed": 505002,
+      "pop_a": {
+        "fitness_mean": 6.397163755185084,
+        "fitness_stdev": 1.2925259613429874,
+        "band2_candidates": 29,
+        "agents_depleted": 21,
+        "total_depletion_events": 47,
+        "final_alive": 33,
+        "informed_mean_fitness": 6.397163755185084,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.359814899828502,
+        "fitness_stdev": 1.2930316000066477,
+        "band2_candidates": 27,
+        "agents_depleted": 23,
+        "total_depletion_events": 52,
+        "final_alive": 32,
+        "informed_mean_fitness": 5.87580114259618,
+        "uninformed_mean_fitness": 6.480818339136581
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": -0.037349,
+        "delta_band2_b_minus_a": -2,
+        "delta_dep_events_b_minus_a": 5,
+        "pop_a_better_survival": true,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": false
+      }
+    },
+    {
+      "seed": 505003,
+      "pop_a": {
+        "fitness_mean": 6.228182647282776,
+        "fitness_stdev": 1.2068289725608732,
+        "band2_candidates": 28,
+        "agents_depleted": 22,
+        "total_depletion_events": 59,
+        "final_alive": 30,
+        "informed_mean_fitness": 6.228182647282776,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.2152484635456995,
+        "fitness_stdev": 1.220671300908032,
+        "band2_candidates": 27,
+        "agents_depleted": 23,
+        "total_depletion_events": 61,
+        "final_alive": 29,
+        "informed_mean_fitness": 5.813203701188736,
+        "uninformed_mean_fitness": 6.31575965413494
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": -0.012934,
+        "delta_band2_b_minus_a": -1,
+        "delta_dep_events_b_minus_a": 2,
+        "pop_a_better_survival": true,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": false
+      }
+    },
+    {
+      "seed": 505004,
+      "pop_a": {
+        "fitness_mean": 6.791268191352722,
+        "fitness_stdev": 1.2761903974892717,
+        "band2_candidates": 36,
+        "agents_depleted": 14,
+        "total_depletion_events": 27,
+        "final_alive": 40,
+        "informed_mean_fitness": 6.791268191352722,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.771044471236784,
+        "fitness_stdev": 1.2476819863600184,
+        "band2_candidates": 34,
+        "agents_depleted": 16,
+        "total_depletion_events": 31,
+        "final_alive": 38,
+        "informed_mean_fitness": 6.802564126687344,
+        "uninformed_mean_fitness": 6.763164557374144
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": -0.020224,
+        "delta_band2_b_minus_a": -2,
+        "delta_dep_events_b_minus_a": 4,
+        "pop_a_better_survival": true,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": true
+      }
+    },
+    {
+      "seed": 505005,
+      "pop_a": {
+        "fitness_mean": 6.668654054282138,
+        "fitness_stdev": 1.3928153538695065,
+        "band2_candidates": 31,
+        "agents_depleted": 19,
+        "total_depletion_events": 52,
+        "final_alive": 33,
+        "informed_mean_fitness": 6.668654054282138,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.584497288837739,
+        "fitness_stdev": 1.3676778151295848,
+        "band2_candidates": 30,
+        "agents_depleted": 20,
+        "total_depletion_events": 56,
+        "final_alive": 32,
+        "informed_mean_fitness": 6.367086107243438,
+        "uninformed_mean_fitness": 6.638850084236315
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": -0.084157,
+        "delta_band2_b_minus_a": -1,
+        "delta_dep_events_b_minus_a": 4,
+        "pop_a_better_survival": true,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": false
+      }
+    },
+    {
+      "seed": 505006,
+      "pop_a": {
+        "fitness_mean": 6.486406825920133,
+        "fitness_stdev": 1.2738595373614818,
+        "band2_candidates": 27,
+        "agents_depleted": 23,
+        "total_depletion_events": 54,
+        "final_alive": 32,
+        "informed_mean_fitness": 6.486406825920133,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.489784449709448,
+        "fitness_stdev": 1.3152584949621835,
+        "band2_candidates": 28,
+        "agents_depleted": 22,
+        "total_depletion_events": 58,
+        "final_alive": 32,
+        "informed_mean_fitness": 6.262220930921316,
+        "uninformed_mean_fitness": 6.546675329406481
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": 0.003378,
+        "delta_band2_b_minus_a": 1,
+        "delta_dep_events_b_minus_a": 4,
+        "pop_a_better_survival": false,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": false
+      }
+    },
+    {
+      "seed": 505007,
+      "pop_a": {
+        "fitness_mean": 6.357103479319037,
+        "fitness_stdev": 1.2726408110617218,
+        "band2_candidates": 30,
+        "agents_depleted": 20,
+        "total_depletion_events": 46,
+        "final_alive": 34,
+        "informed_mean_fitness": 6.357103479319037,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.325778498682163,
+        "fitness_stdev": 1.252803436176828,
+        "band2_candidates": 28,
+        "agents_depleted": 22,
+        "total_depletion_events": 49,
+        "final_alive": 32,
+        "informed_mean_fitness": 6.227332361353017,
+        "uninformed_mean_fitness": 6.350390033014449
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": -0.031325,
+        "delta_band2_b_minus_a": -2,
+        "delta_dep_events_b_minus_a": 3,
+        "pop_a_better_survival": true,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": false
+      }
+    },
+    {
+      "seed": 505008,
+      "pop_a": {
+        "fitness_mean": 6.580418149766392,
+        "fitness_stdev": 1.3542882207055031,
+        "band2_candidates": 32,
+        "agents_depleted": 18,
+        "total_depletion_events": 43,
+        "final_alive": 34,
+        "informed_mean_fitness": 6.580418149766392,
+        "uninformed_mean_fitness": null
+      },
+      "pop_b": {
+        "fitness_mean": 6.496549381214656,
+        "fitness_stdev": 1.3238928577388858,
+        "band2_candidates": 31,
+        "agents_depleted": 19,
+        "total_depletion_events": 48,
+        "final_alive": 33,
+        "informed_mean_fitness": 6.211456091976209,
+        "uninformed_mean_fitness": 6.567822703524269
+      },
+      "effects": {
+        "delta_mean_fitness_b_minus_a": -0.083869,
+        "delta_band2_b_minus_a": -1,
+        "delta_dep_events_b_minus_a": 5,
+        "pop_a_better_survival": true,
+        "pop_a_lower_depletion": true,
+        "uninformed_disadvantaged": false
+      }
+    }
+  ]
+}

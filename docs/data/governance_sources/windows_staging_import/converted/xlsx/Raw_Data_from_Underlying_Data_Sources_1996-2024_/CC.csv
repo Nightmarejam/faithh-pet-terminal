@@ -1,0 +1,1001 @@
+DataSourceCode,Organization,DataSource,indicator,econ_code,econ_name,region,income_class,production_year,wgi_dimension,value,minimum,maximum,orientation
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,cc,0.669,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,cc,0.7849999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,cc,0.696,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,cc,0.659,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,cc,0.885,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,cc,0.876,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,cc,0.8220000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,cc,0.768,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,cc,0.7110000000000001,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,cc,0.5680000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,cc,0.8300000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,cc,0.416,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,cc,0.6739999999999999,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,cc,0.681,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,cc,0.831,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,cc,0.527,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,cc,0.6559999999999999,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,cc,0.785,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,cc,0.7829999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,cc,0.613,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2002,cc,0.48,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2002,cc,0.37,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2002,cc,0.5489999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MLI,Mali,Sub-Saharan Africa,Low income,2002,cc,0.257,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,cc,0.681,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,cc,0.725,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,cc,0.712,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,cc,0.543,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2002,cc,0.4410000000000001,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2002,cc,0.549,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2002,cc,0.562,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MWI,Malawi,Sub-Saharan Africa,Low income,2002,cc,0.349,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,cc,0.68,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,cc,0.754,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,cc,0.761,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,cc,0.6890000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,cc,0.4319999999999999,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,cc,0.531,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,cc,0.45,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,cc,0.38,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,cc,0.638,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,cc,0.6020000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,cc,0.731,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,cc,0.4360000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,cc,0.706,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,cc,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,cc,0.765,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,cc,0.525,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2002,cc,0.483,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2002,cc,0.567,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2002,cc,0.6970000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2002,cc,0.411,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,cc,0.698,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,cc,0.812,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,cc,0.747,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,cc,0.624,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,cc,0.6839999999999999,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,cc,0.6759999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,cc,0.739,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,cc,0.54,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,cc,0.5660000000000001,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,cc,0.759,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,cc,0.634,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,cc,0.36,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,cc,0.288,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,cc,0.427,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,cc,0.155,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,cc,0.669,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,cc,0.829,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,cc,0.763,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,cc,0.745,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,cc,0.823,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,cc,0.852,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,cc,0.754,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,cc,0.806,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,cc,0.669,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,cc,0.567,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,cc,0.788,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,cc,0.5820000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,cc,0.608,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,cc,0.673,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,cc,0.5529999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,cc,0.55,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,cc,0.729,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,cc,0.848,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,cc,0.848,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,cc,0.752,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,cc,0.851,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,cc,0.6890000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,cc,0.815,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,cc,0.749,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2005,cc,0.581,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2005,cc,0.375,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2005,cc,0.619,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MLI,Mali,Sub-Saharan Africa,Low income,2005,cc,0.348,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,cc,0.754,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,cc,0.78,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,cc,0.855,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,cc,0.723,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2005,cc,0.643,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2005,cc,0.722,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2005,cc,0.687,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MWI,Malawi,Sub-Saharan Africa,Low income,2005,cc,0.666,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,cc,0.619,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,cc,0.625,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,cc,0.6950000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,cc,0.577,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,cc,0.393,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,cc,0.5780000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,cc,0.39,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,cc,0.4079999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,cc,0.675,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,cc,0.669,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,cc,0.6930000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,cc,0.575,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,cc,0.84,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,cc,0.657,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,cc,0.864,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,cc,0.69,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2005,cc,0.585,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2005,cc,0.593,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2005,cc,0.6930000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2005,cc,0.3380000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,cc,0.603,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,cc,0.738,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,cc,0.687,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,cc,0.696,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,cc,0.5840000000000001,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,cc,0.669,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,cc,0.581,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,cc,0.415,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,cc,0.49,0,1,0
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,cc,0.721,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,cc,0.582,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,cc,0.482,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,cc,0.615,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,cc,0.457,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,cc,0.638,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,cc,0.3240000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,cc,0.687,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,cc,0.6990000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,cc,0.707,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,cc,0.512,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,cc,0.7190000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,cc,0.896,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,cc,0.802,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,cc,0.813,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,cc,0.757,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,cc,0.806,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,cc,0.804,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,cc,0.774,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,cc,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,cc,0.664,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,cc,0.774,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,cc,0.64,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,cc,0.497,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,cc,0.616,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,cc,0.546,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,cc,0.4450000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LBR,Liberia,Sub-Saharan Africa,Low income,2008,cc,0.5780000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LBR,Liberia,Sub-Saharan Africa,Low income,2008,cc,0.611,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LBR,Liberia,Sub-Saharan Africa,Low income,2008,cc,0.57,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LBR,Liberia,Sub-Saharan Africa,Low income,2008,cc,0.512,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,cc,0.743,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,cc,0.8160000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,cc,0.802,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,cc,0.759,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,cc,0.85,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,cc,0.6579999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,cc,0.845,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,cc,0.72,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2008,cc,0.491,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2008,cc,0.416,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2008,cc,0.554,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MLI,Mali,Sub-Saharan Africa,Low income,2008,cc,0.394,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,cc,0.688,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,cc,0.802,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,cc,0.813,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,cc,0.728,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2008,cc,0.622,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2008,cc,0.6739999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2008,cc,0.6890000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MWI,Malawi,Sub-Saharan Africa,Low income,2008,cc,0.61,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,cc,0.488,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,cc,0.782,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,cc,0.775,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,cc,0.565,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,cc,0.408,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,cc,0.587,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,cc,0.448,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,cc,0.413,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,cc,0.5389999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,cc,0.632,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,cc,0.573,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,cc,0.5,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,cc,0.784,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,cc,0.719,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,cc,0.856,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,cc,0.6679999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2008,cc,0.428,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2008,cc,0.581,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2008,cc,0.6040000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2008,cc,0.375,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,cc,0.537,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,cc,0.6950000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,cc,0.6910000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,cc,0.649,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,cc,0.5569999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,cc,0.724,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,cc,0.6779999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,cc,0.544,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,cc,0.582,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,cc,0.7010000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,cc,0.611,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,cc,0.609,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BDI,Burundi,Sub-Saharan Africa,Low income,2011,cc,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BDI,Burundi,Sub-Saharan Africa,Low income,2011,cc,0.52,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BDI,Burundi,Sub-Saharan Africa,Low income,2011,cc,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BDI,Burundi,Sub-Saharan Africa,Low income,2011,cc,0.54,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,cc,0.5800000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,cc,0.55,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,cc,0.64,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,cc,0.47,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,cc,0.69,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,cc,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,cc,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,cc,0.6799999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,cc,0.72,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,cc,0.89,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,cc,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,cc,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,cc,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,cc,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,cc,0.8200000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,cc,0.69,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,cc,0.53,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,cc,0.53,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,cc,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,cc,0.4099999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,cc,0.88,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,cc,0.92,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,cc,0.9,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,cc,0.89,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,cc,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,cc,0.84,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,cc,0.96,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,cc,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,cc,0.58,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,cc,0.82,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,cc,0.63,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,cc,0.62,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,cc,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,cc,0.6599999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,cc,0.71,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,cc,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,cc,0.69,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,cc,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,cc,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,cc,0.64,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,cc,0.49,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,cc,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,cc,0.71,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,cc,0.61,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LBR,Liberia,Sub-Saharan Africa,Low income,2011,cc,0.54,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LBR,Liberia,Sub-Saharan Africa,Low income,2011,cc,0.57,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LBR,Liberia,Sub-Saharan Africa,Low income,2011,cc,0.6799999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LBR,Liberia,Sub-Saharan Africa,Low income,2011,cc,0.52,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,cc,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,cc,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,cc,0.85,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,cc,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,cc,0.64,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,cc,0.6599999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,cc,0.67,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,cc,0.8200000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,cc,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,cc,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,cc,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2011,cc,0.52,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2011,cc,0.5,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2011,cc,0.52,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MLI,Mali,Sub-Saharan Africa,Low income,2011,cc,0.55,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,cc,0.78,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,cc,0.85,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,cc,0.8200000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,cc,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,cc,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,cc,0.93,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,cc,0.9299999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,cc,0.91,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2011,cc,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2011,cc,0.82,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2011,cc,0.89,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MWI,Malawi,Sub-Saharan Africa,Low income,2011,cc,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,cc,0.56,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,cc,0.8,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,cc,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,cc,0.72,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NER,Niger,Sub-Saharan Africa,Low income,2011,cc,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NER,Niger,Sub-Saharan Africa,Low income,2011,cc,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NER,Niger,Sub-Saharan Africa,Low income,2011,cc,0.8,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NER,Niger,Sub-Saharan Africa,Low income,2011,cc,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,cc,0.41,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,cc,0.62,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,cc,0.5800000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,cc,0.42,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,cc,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,cc,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,cc,0.78,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,cc,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,cc,0.49,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,cc,0.5,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,cc,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,cc,0.4299999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,cc,0.54,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,cc,0.84,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,cc,0.62,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,cc,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TGO,Togo,Sub-Saharan Africa,Low income,2011,cc,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TGO,Togo,Sub-Saharan Africa,Low income,2011,cc,0.56,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TGO,Togo,Sub-Saharan Africa,Low income,2011,cc,0.6599999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TGO,Togo,Sub-Saharan Africa,Low income,2011,cc,0.52,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,cc,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,cc,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,cc,0.9,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,cc,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,cc,0.6799999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,cc,0.6799999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,cc,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,cc,0.62,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2011,cc,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2011,cc,0.71,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2011,cc,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2011,cc,0.55,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,cc,0.5,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,cc,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,cc,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,cc,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,cc,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,cc,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,cc,0.8300000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,cc,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,cc,0.51,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,cc,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,cc,0.6599999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,cc,0.54,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BDI,Burundi,Sub-Saharan Africa,Low income,2014,cc,0.791,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BDI,Burundi,Sub-Saharan Africa,Low income,2014,cc,0.599,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BDI,Burundi,Sub-Saharan Africa,Low income,2014,cc,0.844,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BDI,Burundi,Sub-Saharan Africa,Low income,2014,cc,0.659,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,cc,0.456,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,cc,0.522,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,cc,0.494,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,cc,0.48,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,cc,0.7170000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,cc,0.865,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,cc,0.8089999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,cc,0.833,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,cc,0.708,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,cc,0.652,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,cc,0.763,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,cc,0.625,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,cc,0.554,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,cc,0.504,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,cc,0.668,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,cc,0.458,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,cc,0.848,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,cc,0.906,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,cc,0.872,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,cc,0.846,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,cc,0.473,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,cc,0.512,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,cc,0.524,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,cc,0.478,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,cc,0.541,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,cc,0.673,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,cc,0.727,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,cc,0.669,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,cc,0.71,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,cc,0.843,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,cc,0.8240000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,cc,0.8089999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,cc,0.6439999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,cc,0.513,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,cc,0.714,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,cc,0.645,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2014,cc,0.5599999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2014,cc,0.4370000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2014,cc,0.653,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MLI,Mali,Sub-Saharan Africa,Low income,2014,cc,0.537,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,cc,0.8300000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,cc,0.913,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,cc,0.837,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,cc,0.873,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2014,cc,0.649,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2014,cc,0.767,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2014,cc,0.5720000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MWI,Malawi,Sub-Saharan Africa,Low income,2014,cc,0.728,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,cc,0.631,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,cc,0.723,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,cc,0.825,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,cc,0.647,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,cc,0.363,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,cc,0.5409999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,cc,0.4570000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,cc,0.4390000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,cc,0.758,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,cc,0.762,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,cc,0.784,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,cc,0.773,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,cc,0.5650000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,cc,0.724,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,cc,0.716,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,cc,0.745,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TGO,Togo,Sub-Saharan Africa,Low income,2014,cc,0.61,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TGO,Togo,Sub-Saharan Africa,Low income,2014,cc,0.52,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TGO,Togo,Sub-Saharan Africa,Low income,2014,cc,0.639,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TGO,Togo,Sub-Saharan Africa,Low income,2014,cc,0.507,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,cc,0.756,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,cc,0.651,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,cc,0.859,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,cc,0.646,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,cc,0.671,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,cc,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,cc,0.736,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,cc,0.685,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,cc,0.59,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,cc,0.713,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,cc,0.702,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,cc,0.545,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,cc,0.6759999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,cc,0.657,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,cc,0.739,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,cc,0.627,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,cc,0.604,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,cc,0.708,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,cc,0.679,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,cc,0.601,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,cc,0.72,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,cc,0.738,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,cc,0.683,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,cc,0.617,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,cc,0.6839999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,cc,0.573,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LBR,Liberia,Sub-Saharan Africa,Low income,2015,cc,0.2889999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LBR,Liberia,Sub-Saharan Africa,Low income,2015,cc,0.43,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LBR,Liberia,Sub-Saharan Africa,Low income,2015,cc,0.352,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LBR,Liberia,Sub-Saharan Africa,Low income,2015,cc,0.3100000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NER,Niger,Sub-Saharan Africa,Low income,2015,cc,0.763,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NER,Niger,Sub-Saharan Africa,Low income,2015,cc,0.773,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NER,Niger,Sub-Saharan Africa,Low income,2015,cc,0.778,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NER,Niger,Sub-Saharan Africa,Low income,2015,cc,0.729,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SDN,Sudan,Sub-Saharan Africa,Low income,2015,cc,0.5720000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SDN,Sudan,Sub-Saharan Africa,Low income,2015,cc,0.732,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SDN,Sudan,Sub-Saharan Africa,Low income,2015,cc,0.683,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SDN,Sudan,Sub-Saharan Africa,Low income,2015,cc,0.493,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,cc,0.4610000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,cc,0.541,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,cc,0.531,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,cc,0.501,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,cc,0.6950000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,cc,0.825,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,cc,0.817,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,cc,0.771,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2015,cc,0.5369999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2015,cc,0.5449999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2015,cc,0.72,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2015,cc,0.528,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,cc,0.5,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,cc,0.757,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,cc,0.515,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,cc,0.759,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,cc,0.541,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,cc,0.535,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,cc,0.568,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,cc,0.6940000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,cc,0.687,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,cc,0.764,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,cc,0.613,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,cc,0.802,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,cc,0.7070000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,cc,0.6679999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,cc,0.687,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,cc,0.723,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,cc,0.454,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,cc,0.452,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,cc,0.517,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,cc,0.8320000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,cc,0.889,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,cc,0.8370000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,cc,0.252,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,cc,0.324,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,cc,0.287,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,cc,0.6459999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,cc,0.624,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,cc,0.7269999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,cc,0.488,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,cc,0.3750000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,cc,0.5189999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,cc,0.7709999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,cc,0.752,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,cc,0.8029999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,cc,0.5310000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,cc,0.725,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,cc,0.645,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LBR,Liberia,Sub-Saharan Africa,Low income,2017,cc,0.5100000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LBR,Liberia,Sub-Saharan Africa,Low income,2017,cc,0.5579999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LBR,Liberia,Sub-Saharan Africa,Low income,2017,cc,0.601,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,cc,0.7170000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,cc,0.8480000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,cc,0.799,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,cc,0.629,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,cc,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,cc,0.608,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,cc,0.662,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,cc,0.613,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,cc,0.6729999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2017,cc,0.505,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2017,cc,0.406,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2017,cc,0.524,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,cc,0.632,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,cc,0.721,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,cc,0.765,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,cc,0.8540000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,cc,0.865,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,cc,0.774,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2017,cc,0.5569999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2017,cc,0.5880000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2017,cc,0.535,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,cc,0.58,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,cc,0.743,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,cc,0.728,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NER,Niger,Sub-Saharan Africa,Low income,2017,cc,0.6829999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NER,Niger,Sub-Saharan Africa,Low income,2017,cc,0.728,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NER,Niger,Sub-Saharan Africa,Low income,2017,cc,0.731,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,cc,0.459,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,cc,0.489,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,cc,0.573,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SDN,Sudan,Sub-Saharan Africa,Low income,2017,cc,0.5509999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SDN,Sudan,Sub-Saharan Africa,Low income,2017,cc,0.7759999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SDN,Sudan,Sub-Saharan Africa,Low income,2017,cc,0.5010000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,cc,0.737,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,cc,0.757,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,cc,0.774,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,cc,0.672,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,cc,0.6709999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,cc,0.7580000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,cc,0.84,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,cc,0.7789999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,cc,0.785,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,cc,0.6769999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,cc,0.845,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,cc,0.759,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TGO,Togo,Sub-Saharan Africa,Low income,2017,cc,0.456,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TGO,Togo,Sub-Saharan Africa,Low income,2017,cc,0.4490000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TGO,Togo,Sub-Saharan Africa,Low income,2017,cc,0.49,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,cc,0.688,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,cc,0.8340000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,cc,0.747,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,cc,0.883,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,cc,0.795,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,cc,0.9569999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2017,cc,0.502,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2017,cc,0.57,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2017,cc,0.6259999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,cc,0.561,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,cc,0.679,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,cc,0.615,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,cc,0.627,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,cc,0.718,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,cc,0.6829999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,cc,0.634,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,cc,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,cc,0.7119999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,cc,0.7218221426010132,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,cc,0.7648886442184448,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,cc,0.6935336589813232,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,cc,0.6351156234741211,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,cc,0.5166104435920715,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,cc,0.6107215285301208,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,cc,0.4859383702278137,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,cc,0.6952708959579468,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,cc,0.659784197807312,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,cc,0.734393298625946,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,cc,0.6384228467941284,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,cc,0.7888606190681458,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,cc,0.8414508104324341,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,cc,0.6541300415992737,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,cc,0.8238825798034668,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,cc,0.6602533459663391,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,cc,0.57271409034729,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,cc,0.6476156115531921,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,cc,0.6118158102035522,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,cc,0.609764814376831,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,cc,0.4046924114227295,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,cc,0.5656846761703491,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,cc,0.3601121604442596,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,cc,0.8451451659202576,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,cc,0.8864842057228088,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,cc,0.9126883745193481,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,cc,0.8705713748931885,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ETH,Ethiopia,Sub-Saharan Africa,,2019,cc,0.6415483355522156,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ETH,Ethiopia,Sub-Saharan Africa,,2019,cc,0.5246628522872925,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ETH,Ethiopia,Sub-Saharan Africa,,2019,cc,0.7826365828514099,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ETH,Ethiopia,Sub-Saharan Africa,,2019,cc,0.5796850919723511,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,cc,0.5185447335243225,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,cc,0.4180718064308167,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,cc,0.3657913208007813,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,cc,0.445889949798584,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,cc,0.7464267015457153,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,cc,0.6026313900947571,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,cc,0.6701038479804993,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,cc,0.6634383201599121,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,cc,0.6187880039215088,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,cc,0.436394602060318,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,cc,0.5304981470108032,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,cc,0.4998389482498169,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,cc,0.6606506705284119,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,cc,0.604386568069458,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,cc,0.5848615765571594,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,cc,0.556892454624176,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,cc,0.5416269302368164,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,cc,0.6498724222183228,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,cc,0.667351245880127,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,cc,0.6064542531967163,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LBR,Liberia,Sub-Saharan Africa,Low income,2019,cc,0.5636322498321533,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LBR,Liberia,Sub-Saharan Africa,Low income,2019,cc,0.5158786177635193,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LBR,Liberia,Sub-Saharan Africa,Low income,2019,cc,0.4874115884304047,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LBR,Liberia,Sub-Saharan Africa,Low income,2019,cc,0.5175628662109375,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,cc,0.7817875742912292,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,cc,0.7676244378089905,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,cc,0.4635698199272156,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,cc,0.7922418117523193,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,cc,0.69600909948349,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,cc,0.8344107866287231,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,cc,0.7725912928581238,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,cc,0.8429409861564636,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2019,cc,0.5544238090515137,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2019,cc,0.38111811876297,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2019,cc,0.4711267352104187,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MLI,Mali,Sub-Saharan Africa,Low income,2019,cc,0.4974609911441803,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,cc,0.7939944863319397,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,cc,0.8766647577285767,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,cc,0.6865839958190918,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,cc,0.8447674512863159,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2019,cc,0.7027006149291992,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2019,cc,0.7044469714164734,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2019,cc,0.5940351486206055,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MWI,Malawi,Sub-Saharan Africa,Low income,2019,cc,0.6568580865859985,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,cc,0.6893126368522644,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,cc,0.7234030961990356,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,cc,0.6170855164527893,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,cc,0.6823307275772095,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NER,Niger,Sub-Saharan Africa,Low income,2019,cc,0.7739466428756714,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NER,Niger,Sub-Saharan Africa,Low income,2019,cc,0.7587268948554993,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NER,Niger,Sub-Saharan Africa,Low income,2019,cc,0.7921215295791626,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NER,Niger,Sub-Saharan Africa,Low income,2019,cc,0.7585341930389404,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,cc,0.6028364896774292,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,cc,0.6095305681228638,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,cc,0.618202805519104,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,cc,0.6436770558357239,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SDN,Sudan,Sub-Saharan Africa,Low income,2019,cc,0.7227916121482849,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SDN,Sudan,Sub-Saharan Africa,Low income,2019,cc,0.7188143730163574,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SDN,Sudan,Sub-Saharan Africa,Low income,2019,cc,0.5374534130096436,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,cc,0.6574737429618835,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,cc,0.6648368239402771,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,cc,0.6557267308235168,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,cc,0.6325644254684448,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,cc,0.6396201848983765,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,cc,0.6408429741859436,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,cc,0.6191921234130859,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,cc,0.6471397280693054,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,cc,0.7783808708190918,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,cc,0.7488875389099121,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,cc,0.7315942049026489,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,cc,0.7194333672523499,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TGO,Togo,Sub-Saharan Africa,Low income,2019,cc,0.6345793008804321,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TGO,Togo,Sub-Saharan Africa,Low income,2019,cc,0.4563162326812744,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TGO,Togo,Sub-Saharan Africa,Low income,2019,cc,0.5438731908798218,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TGO,Togo,Sub-Saharan Africa,Low income,2019,cc,0.4892790615558624,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,cc,0.7270193696022034,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,cc,0.8620498180389404,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,cc,0.8522563576698303,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,cc,0.7253139019012451,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,cc,0.9363468885421753,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,cc,0.8912491798400879,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,cc,0.9759461879730225,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,cc,0.9079385995864868,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2019,cc,0.6694533824920654,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2019,cc,0.5550583600997925,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2019,cc,0.6944367289543152,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2019,cc,0.548916757106781,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,cc,0.5101661086082458,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,cc,0.643923819065094,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,cc,0.4874008595943451,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,cc,0.6793631315231323,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,cc,0.6568645238876343,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,cc,0.7090092301368713,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,cc,0.600082278251648,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,cc,0.7562617063522339,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,cc,0.7072531580924988,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,cc,0.6197991371154785,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,cc,0.72847580909729,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,cc,0.7130126953125,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,cc,0.6093553900718689,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,cc,0.7025812268257141,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,cc,0.5909913182258606,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,cc,0.5535692572593689,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,cc,0.5175653100013733,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,cc,0.5690656900405884,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,cc,0.4592143297195435,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,cc,0.6549692749977112,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,cc,0.7555193901062012,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,cc,0.4963051974773407,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,cc,0.7574219703674316,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,cc,0.6978654265403748,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,cc,0.6267602443695068,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,cc,0.63458251953125,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,cc,0.6057812571525574,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,cc,0.5558499097824097,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,cc,0.3842301070690155,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,cc,0.4825839102268219,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,cc,0.3418997526168823,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,cc,0.7961713075637817,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,cc,0.7854122519493103,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,cc,0.7935872077941895,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,cc,0.8220592737197876,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,cc,0.4995670318603516,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,cc,0.414835125207901,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,cc,0.3172292411327362,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,cc,0.3924695551395416,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,cc,0.658369779586792,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,cc,0.5456179976463318,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,cc,0.456045001745224,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,cc,0.5398197174072266,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,cc,0.7222775816917419,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,cc,0.560709536075592,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,cc,0.7182022929191589,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,cc,0.5821223258972168,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,cc,0.6610567569732666,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,cc,0.6398560404777527,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,cc,0.4955828487873077,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,cc,0.5055820941925049,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LBR,Liberia,Sub-Saharan Africa,Low income,2022,cc,0.5565170645713806,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LBR,Liberia,Sub-Saharan Africa,Low income,2022,cc,0.4925080835819244,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LBR,Liberia,Sub-Saharan Africa,Low income,2022,cc,0.3908582329750061,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LBR,Liberia,Sub-Saharan Africa,Low income,2022,cc,0.5250411629676819,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,cc,0.7123259902000427,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,cc,0.6977001428604126,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,cc,0.4569239318370819,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,cc,0.7327148914337158,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,cc,0.6359589695930481,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,cc,0.7784533500671387,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,cc,0.5601050853729248,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,cc,0.7004220485687256,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,cc,0.880527675151825,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,cc,0.6425281763076782,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,cc,0.7867562174797058,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,cc,0.7557857036590576,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MLI,Mali,Sub-Saharan Africa,Low income,2022,cc,0.5981784462928772,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MLI,Mali,Sub-Saharan Africa,Low income,2022,cc,0.517788827419281,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MLI,Mali,Sub-Saharan Africa,Low income,2022,cc,0.7351259589195251,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MLI,Mali,Sub-Saharan Africa,Low income,2022,cc,0.5612678527832031,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,cc,0.6551333665847778,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,cc,0.6559065580368042,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,cc,0.6613754034042358,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,cc,0.5851397514343262,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,cc,0.8167963624000549,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,cc,0.8468952775001526,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,cc,0.7125331163406372,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,cc,0.859138011932373,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MWI,Malawi,Sub-Saharan Africa,Low income,2022,cc,0.7045894265174866,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MWI,Malawi,Sub-Saharan Africa,Low income,2022,cc,0.6977270841598511,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MWI,Malawi,Sub-Saharan Africa,Low income,2022,cc,0.627435028553009,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MWI,Malawi,Sub-Saharan Africa,Low income,2022,cc,0.6135643720626831,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NER,Niger,Sub-Saharan Africa,Low income,2022,cc,0.8023532032966614,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NER,Niger,Sub-Saharan Africa,Low income,2022,cc,0.7558605074882507,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NER,Niger,Sub-Saharan Africa,Low income,2022,cc,0.7864528894424438,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NER,Niger,Sub-Saharan Africa,Low income,2022,cc,0.8021795153617859,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,cc,0.4696292281150818,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,cc,0.5295194983482361,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,cc,0.4214515388011932,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,cc,0.4992548227310181,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SDN,Sudan,Sub-Saharan Africa,Low income,2022,cc,0.6107772588729858,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SDN,Sudan,Sub-Saharan Africa,Low income,2022,cc,0.7085515856742859,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SDN,Sudan,Sub-Saharan Africa,Low income,2022,cc,0.5738071799278259,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SDN,Sudan,Sub-Saharan Africa,Low income,2022,cc,0.5045549869537354,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,cc,0.7513197064399719,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,cc,0.7654546499252319,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,cc,0.564213216304779,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,cc,0.6905325055122375,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,cc,0.6266822218894958,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,cc,0.6624160408973694,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,cc,0.6861281991004944,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,cc,0.5653658509254456,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,cc,0.8045569062232971,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,cc,0.7097563147544861,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,cc,0.7603026628494263,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,cc,0.7791034579277039,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,cc,0.6709781885147095,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,cc,0.615096390247345,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,cc,0.5822182297706604,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,cc,0.5790237188339233,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TGO,Togo,Sub-Saharan Africa,Low income,2022,cc,0.666451096534729,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TGO,Togo,Sub-Saharan Africa,Low income,2022,cc,0.4679940044879913,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TGO,Togo,Sub-Saharan Africa,Low income,2022,cc,0.6016043424606323,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TGO,Togo,Sub-Saharan Africa,Low income,2022,cc,0.442411869764328,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,cc,0.5063192248344421,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,cc,0.593690812587738,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,cc,0.788217306137085,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,cc,0.4820566177368164,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,cc,0.910054087638855,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,cc,0.8666531443595886,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,cc,0.9418215155601501,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,cc,0.875351071357727,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2022,cc,0.6189596652984619,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2022,cc,0.4562304317951202,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2022,cc,0.5696093440055847,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2022,cc,0.429373174905777,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,cc,0.3897871971130371,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,cc,0.6185159087181091,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,cc,0.3434683680534363,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,cc,0.6251335144042969,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,cc,0.7733096480369568,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,cc,0.7273315787315369,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,cc,0.8366577625274658,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,cc,0.7794313430786133,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,cc,0.6576857566833496,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,cc,0.700526237487793,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,cc,0.674647331237793,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,cc,0.6026219725608826,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,cc,0.6660998463630676,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,cc,0.5558183193206787,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,cc,0.6528983116149902,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,cc,0.6347467303276062,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,cc,0.5729291439056396,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,cc,0.6236340403556824,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,cc,0.5703436136245728,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,cc,0.7262614369392395,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,cc,0.797794759273529,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,cc,0.5935576558113098,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,cc,0.7802990078926086,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,cc,0.659928560256958,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,cc,0.6097345352172852,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,cc,0.6623345017433167,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,cc,0.5976854562759399,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,cc,0.4971698522567749,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,cc,0.3870281279087067,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,cc,0.4687438309192657,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,cc,0.2917525768280029,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,cc,0.4555704891681671,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,cc,0.3841580152511597,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,cc,0.4029107987880707,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,cc,0.2740695476531982,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,cc,0.8072537183761597,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,cc,0.7929651141166687,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,cc,0.7846775650978088,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,cc,0.7816396355628967,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,ETH,Ethiopia,Sub-Saharan Africa,,2023,cc,0.6556251049041748,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,ETH,Ethiopia,Sub-Saharan Africa,,2023,cc,0.6638927459716797,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,ETH,Ethiopia,Sub-Saharan Africa,,2023,cc,0.7383487820625305,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,ETH,Ethiopia,Sub-Saharan Africa,,2023,cc,0.6668552160263062,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,cc,0.553220272064209,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,cc,0.404730349779129,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,cc,0.5575613379478455,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,cc,0.3784050941467285,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,cc,0.6848828196525574,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,cc,0.5561403036117554,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,cc,0.455177515745163,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,cc,0.4675962924957275,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,cc,0.6087728142738342,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,cc,0.4464691877365112,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,cc,0.5591384768486023,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,cc,0.4559058547019958,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,cc,0.617050290107727,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,cc,0.5731982588768005,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,cc,0.504858672618866,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,cc,0.4314825832843781,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,cc,0.5992921590805054,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,cc,0.6680229902267456,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,cc,0.5668257474899292,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,cc,0.5332868695259094,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,cc,0.7514934539794922,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,cc,0.7259303331375122,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,cc,0.7002636194229126,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,cc,0.6978177428245544,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,cc,0.683116614818573,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,cc,0.8461594581604004,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,cc,0.7219153642654419,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,cc,0.8167998194694519,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,cc,0.6552513241767883,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,cc,0.6862345337867737,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,cc,0.6849968433380127,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,cc,0.666610836982727,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,cc,0.8139769434928894,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,cc,0.9031193852424622,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,cc,0.7292255759239197,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,cc,0.8834409117698669,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2023,cc,0.6888983249664307,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2023,cc,0.7301703691482544,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2023,cc,0.6534482836723328,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,SYC,Seychelles,Sub-Saharan Africa,High income,2023,cc,0.8493866920471191,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,SYC,Seychelles,Sub-Saharan Africa,High income,2023,cc,0.8552370071411133,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,SYC,Seychelles,Sub-Saharan Africa,High income,2023,cc,0.8643549084663391,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,TCD,Chad,Sub-Saharan Africa,Low income,2023,cc,0.4441587626934052,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TCD,Chad,Sub-Saharan Africa,Low income,2023,cc,0.4246462881565094,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TCD,Chad,Sub-Saharan Africa,Low income,2023,cc,0.5061701536178589,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TCD,Chad,Sub-Saharan Africa,Low income,2023,cc,0.3502348065376282,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,cc,0.6951807141304016,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,cc,0.869769275188446,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,TUN,Tunisia,Middle East & North Africa,Lower middle income,2023,cc,0.5706578493118286,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: government officials,UGA,Uganda,Sub-Saharan Africa,Low income,2023,cc,0.5668588876724243,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: judges and magistrates,UGA,Uganda,Sub-Saharan Africa,Low income,2023,cc,0.4549659788608551,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: office of the Presidency,UGA,Uganda,Sub-Saharan Africa,Low income,2023,cc,0.5877584218978882,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Corruption: tax officials,UGA,Uganda,Sub-Saharan Africa,Low income,2023,cc,0.4233527183532715,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2012,cc,0.4485799372196198,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2012,cc,0.9984656572341919,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",DZA,Algeria,Middle East & North Africa,Upper middle income,2013,cc,0.5560410618782043,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,DZA,Algeria,Middle East & North Africa,Upper middle income,2013,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2013,cc,0.2948570251464844,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2013,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",IRQ,Iraq,Middle East & North Africa,Upper middle income,2013,cc,0.4063533246517181,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2013,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",JOR,Jordan,Middle East & North Africa,Lower middle income,2013,cc,0.6052095890045166,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,JOR,Jordan,Middle East & North Africa,Lower middle income,2013,cc,0.9995002150535583,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBN,Lebanon,Middle East & North Africa,Lower middle income,2013,cc,0.0981852039694786,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2013,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",SDN,Sudan,Sub-Saharan Africa,Low income,2013,cc,0.2653232514858246,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,SDN,Sudan,Sub-Saharan Africa,Low income,2013,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",TUN,Tunisia,Middle East & North Africa,Lower middle income,2013,cc,0.5608806014060974,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2013,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2013,cc,0.373201847076416,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2013,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",KWT,Kuwait,Middle East & North Africa,High income,2014,cc,0.7826355695724487,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,KWT,Kuwait,Middle East & North Africa,High income,2014,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBY,Libya,Middle East & North Africa,Upper middle income,2014,cc,0.2393084615468979,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,LBY,Libya,Middle East & North Africa,Upper middle income,2014,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",MAR,Morocco,Middle East & North Africa,Lower middle income,2014,cc,0.4146879613399506,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,MAR,Morocco,Middle East & North Africa,Lower middle income,2014,cc,1.0,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",DZA,Algeria,Middle East & North Africa,Upper middle income,2016,cc,0.3668341040611267,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,DZA,Algeria,Middle East & North Africa,Upper middle income,2016,cc,0.1469081938266754,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2016,cc,0.5195811986923218,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2016,cc,0.122343935072422,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",JOR,Jordan,Middle East & North Africa,Lower middle income,2016,cc,0.6049997806549072,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,JOR,Jordan,Middle East & North Africa,Lower middle income,2016,cc,0.185134693980217,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBN,Lebanon,Middle East & North Africa,Lower middle income,2016,cc,0.1477788984775543,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2016,cc,0.0498018115758896,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",MAR,Morocco,Middle East & North Africa,Lower middle income,2016,cc,0.5331038236618042,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,MAR,Morocco,Middle East & North Africa,Lower middle income,2016,cc,0.188532680273056,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2016,cc,0.4447779059410095,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2016,cc,0.126214399933815,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",QAT,Qatar,Middle East & North Africa,High income,2016,cc,0.8841264247894287,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,QAT,Qatar,Middle East & North Africa,High income,2016,cc,0.6442995667457581,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",TUN,Tunisia,Middle East & North Africa,Lower middle income,2016,cc,0.4353572726249695,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2016,cc,0.0584539026021957,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2018,cc,0.5940715670585632,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2018,cc,0.1669442802667618,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",JOR,Jordan,Middle East & North Africa,Lower middle income,2018,cc,0.4503651559352875,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,JOR,Jordan,Middle East & North Africa,Lower middle income,2018,cc,0.0847110971808434,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBN,Lebanon,Middle East & North Africa,Lower middle income,2018,cc,0.2782971858978271,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2018,cc,0.0871198698878288,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",MAR,Morocco,Middle East & North Africa,Lower middle income,2018,cc,0.3876878619194031,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,MAR,Morocco,Middle East & North Africa,Lower middle income,2018,cc,0.2578153610229492,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2018,cc,0.4496261179447174,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,PSE,West Bank and Gaza,Middle East & North Africa,Lower middle income,2018,cc,0.148137554526329,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",QAT,Qatar,Middle East & North Africa,High income,2018,cc,0.8923653960227966,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,QAT,Qatar,Middle East & North Africa,High income,2018,cc,0.7304599285125732,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",SDN,Sudan,Sub-Saharan Africa,Low income,2018,cc,0.4311351776123047,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,SDN,Sudan,Sub-Saharan Africa,Low income,2018,cc,0.2019070833921432,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",TUN,Tunisia,Middle East & North Africa,Lower middle income,2018,cc,0.4616353511810303,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2018,cc,0.0620001517236233,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2018,cc,0.5987743735313416,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2018,cc,0.2709795832633972,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",IRQ,Iraq,Middle East & North Africa,Upper middle income,2019,cc,0.225574404001236,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2019,cc,0.0593613162636757,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",KWT,Kuwait,Middle East & North Africa,High income,2019,cc,0.4941285252571106,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,KWT,Kuwait,Middle East & North Africa,High income,2019,cc,0.158157005906105,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBY,Libya,Middle East & North Africa,Upper middle income,2019,cc,0.3140833377838135,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,LBY,Libya,Middle East & North Africa,Upper middle income,2019,cc,0.0701765269041061,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",DZA,Algeria,Middle East & North Africa,Upper middle income,2020,cc,0.7402186989784241,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",JOR,Jordan,Middle East & North Africa,Lower middle income,2020,cc,0.5539935231208801,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBN,Lebanon,Middle East & North Africa,Lower middle income,2020,cc,0.07606241106987,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBY,Libya,Middle East & North Africa,Upper middle income,2020,cc,0.5807692408561707,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",MAR,Morocco,Middle East & North Africa,Lower middle income,2020,cc,0.7232859134674072,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",TUN,Tunisia,Middle East & North Africa,Lower middle income,2020,cc,0.4361483454704285,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",DZA,Algeria,Middle East & North Africa,Upper middle income,2021,cc,0.5561002492904663,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,DZA,Algeria,Middle East & North Africa,Upper middle income,2021,cc,0.1306513100862503,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",IRQ,Iraq,Middle East & North Africa,Upper middle income,2021,cc,0.2781392931938171,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,IRQ,Iraq,Middle East & North Africa,Upper middle income,2021,cc,0.0807102471590042,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",JOR,Jordan,Middle East & North Africa,Lower middle income,2021,cc,0.41590616106987,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,JOR,Jordan,Middle East & North Africa,Lower middle income,2021,cc,0.1536081582307816,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBN,Lebanon,Middle East & North Africa,Lower middle income,2021,cc,0.1190796867012978,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,LBN,Lebanon,Middle East & North Africa,Lower middle income,2021,cc,0.1070773303508759,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",LBY,Libya,Middle East & North Africa,Upper middle income,2021,cc,0.5549542903900146,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,LBY,Libya,Middle East & North Africa,Upper middle income,2021,cc,0.116267204284668,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",MAR,Morocco,Middle East & North Africa,Lower middle income,2021,cc,0.7369299530982971,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,MAR,Morocco,Middle East & North Africa,Lower middle income,2021,cc,0.2948770821094513,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",TUN,Tunisia,Middle East & North Africa,Lower middle income,2021,cc,0.6880859732627869,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,To what extent do you think that there is corruption within the national state agencies and institutions in your country?,TUN,Tunisia,Middle East & North Africa,Lower middle income,2021,cc,0.0426113270223141,0,1,1
+ARB,Arab Barometer,Arab Barometer Surveys,"In your opinion, to what extent is the national government working to crackdown on corruption in your country?",IRQ,Iraq,Middle East & North Africa,Upper middle income,2022,cc,0.318018913269043,0,1,1

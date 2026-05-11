@@ -1,0 +1,1001 @@
+DataSourceCode,Organization,DataSource,indicator,econ_code,econ_name,region,income_class,production_year,wgi_dimension,value,minimum,maximum,orientation
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2004,ge,3.4,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2004,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2004,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2004,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2004,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2004,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2004,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2004,ge,2.3,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2004,ge,2.2,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2004,ge,2.3,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2004,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2004,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2004,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2004,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2004,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2004,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2004,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2004,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2005,ge,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2005,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2005,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2005,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2005,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2006,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2006,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2006,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2006,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2006,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2006,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2006,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2006,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2006,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2006,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2007,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2007,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2007,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2007,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2007,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2007,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2007,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2007,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2007,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2007,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2007,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2007,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2007,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2007,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2007,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2007,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2008,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2008,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2008,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2008,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2008,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2008,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2008,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2008,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2008,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2008,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,ge,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2009,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2009,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2009,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2009,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2009,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2009,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2009,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2009,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2009,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2009,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2009,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2009,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2009,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2009,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2009,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2009,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2010,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2010,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2010,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2010,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2010,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2010,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2010,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2010,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2010,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2010,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2010,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2010,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2010,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2010,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2010,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2011,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2011,ge,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2011,ge,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2011,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2011,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2011,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2011,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2011,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SSD,South Sudan,Sub-Saharan Africa,Low income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SSD,South Sudan,Sub-Saharan Africa,Low income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2011,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2012,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2012,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2012,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2012,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2012,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2012,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2012,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2012,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2012,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2012,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2012,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2012,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2012,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2012,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2012,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2012,ge,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2012,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2012,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2012,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2012,ge,1.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2012,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2012,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2012,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2012,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2012,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2012,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2012,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2012,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2012,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2012,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2012,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2012,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2012,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2012,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2012,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2012,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2012,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2012,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2012,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2012,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2012,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2012,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2012,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2012,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2012,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2012,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2012,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2012,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2012,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2012,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2012,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2012,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2012,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2012,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2012,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2012,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2012,ge,1.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SSD,South Sudan,Sub-Saharan Africa,Low income,2012,ge,2.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SSD,South Sudan,Sub-Saharan Africa,Low income,2012,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2012,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2012,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2012,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2012,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2012,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2012,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2012,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2012,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2012,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2012,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2012,ge,1.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2012,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2013,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2013,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2013,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2013,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2013,ge,1.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2013,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2013,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2013,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2013,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2013,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2013,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2013,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2013,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2013,ge,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2013,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2013,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2013,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2013,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2013,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2013,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2013,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2013,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2013,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2013,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2013,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2013,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2013,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2013,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2013,ge,4.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2013,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2013,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2013,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2013,ge,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2013,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2013,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2013,ge,5.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2013,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2013,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2013,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2013,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2013,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SSD,South Sudan,Sub-Saharan Africa,Low income,2013,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SSD,South Sudan,Sub-Saharan Africa,Low income,2013,ge,2.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2013,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2013,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2013,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2013,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2013,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2013,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2013,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2013,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2013,ge,1.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2014,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2014,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2014,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2014,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2014,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2014,ge,1.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2014,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2014,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2014,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2014,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2014,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2014,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,ge,4.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,ge,4.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2014,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2014,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2014,ge,1.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2014,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2014,ge,4.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2014,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2014,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2014,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2014,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2014,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2014,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2014,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2014,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2014,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2014,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2014,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2014,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2014,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2014,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2014,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2014,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2014,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2014,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2014,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2014,ge,5.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2014,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2014,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2014,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2014,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2014,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2014,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2014,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SSD,South Sudan,Sub-Saharan Africa,Low income,2014,ge,2.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SSD,South Sudan,Sub-Saharan Africa,Low income,2014,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2014,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2014,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2014,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2014,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2014,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2014,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2014,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2014,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,ge,1.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2015,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2015,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2015,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2015,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2015,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2015,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2015,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2015,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2015,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2015,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2015,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2015,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2015,ge,1.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2015,ge,1.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2015,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2015,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2015,ge,1.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2015,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2015,ge,4.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2015,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2015,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2015,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2015,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2015,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2015,ge,2.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2015,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2015,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2015,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2015,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2015,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2015,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2015,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2015,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2015,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2015,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2015,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2015,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2015,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2015,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2015,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2015,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2015,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2015,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2015,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2015,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2015,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2015,ge,5.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2015,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2015,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2015,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2015,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2015,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2015,ge,1.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2015,ge,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SSD,South Sudan,Sub-Saharan Africa,Low income,2015,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SSD,South Sudan,Sub-Saharan Africa,Low income,2015,ge,1.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2015,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2015,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TCD,Chad,Sub-Saharan Africa,Low income,2015,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TCD,Chad,Sub-Saharan Africa,Low income,2015,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TGO,Togo,Sub-Saharan Africa,Low income,2015,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TGO,Togo,Sub-Saharan Africa,Low income,2015,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2015,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2015,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,UGA,Uganda,Sub-Saharan Africa,Low income,2015,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,UGA,Uganda,Sub-Saharan Africa,Low income,2015,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2015,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2015,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2015,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2015,ge,2.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BDI,Burundi,Sub-Saharan Africa,Low income,2016,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BDI,Burundi,Sub-Saharan Africa,Low income,2016,ge,2.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2016,ge,4.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BEN,Benin,Sub-Saharan Africa,Lower middle income,2016,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2016,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2016,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2016,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CAF,Central African Republic,Sub-Saharan Africa,Low income,2016,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2016,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2016,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2016,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2016,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2016,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2016,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,COM,Comoros,Sub-Saharan Africa,Lower middle income,2016,ge,1.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,COM,Comoros,Sub-Saharan Africa,Lower middle income,2016,ge,1.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,DJI,Djibouti,Middle East & North Africa,Lower middle income,2016,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,DJI,Djibouti,Middle East & North Africa,Lower middle income,2016,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2016,ge,1.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ERI,Eritrea,Sub-Saharan Africa,Low income,2016,ge,2.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,ETH,Ethiopia,Sub-Saharan Africa,,2016,ge,4.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,ETH,Ethiopia,Sub-Saharan Africa,,2016,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2016,ge,4.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2016,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2016,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2016,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2016,ge,3.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2016,ge,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2016,ge,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2016,ge,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2016,ge,4.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2016,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LBR,Liberia,Sub-Saharan Africa,Low income,2016,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LBR,Liberia,Sub-Saharan Africa,Low income,2016,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2016,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2016,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2016,ge,2.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MDG,Madagascar,Sub-Saharan Africa,Low income,2016,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MLI,Mali,Sub-Saharan Africa,Low income,2016,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MLI,Mali,Sub-Saharan Africa,Low income,2016,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2016,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MOZ,Mozambique,Sub-Saharan Africa,Low income,2016,ge,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2016,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2016,ge,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,MWI,Malawi,Sub-Saharan Africa,Low income,2016,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,MWI,Malawi,Sub-Saharan Africa,Low income,2016,ge,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NER,Niger,Sub-Saharan Africa,Low income,2016,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NER,Niger,Sub-Saharan Africa,Low income,2016,ge,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2016,ge,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2016,ge,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2016,ge,5.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,RWA,Rwanda,Sub-Saharan Africa,Low income,2016,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SDN,Sudan,Sub-Saharan Africa,Low income,2016,ge,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SDN,Sudan,Sub-Saharan Africa,Low income,2016,ge,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2016,ge,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2016,ge,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Budgetary & Financial Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2016,ge,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Quality of Public Administration,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2016,ge,3.125,1,6,1

@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-03-31T00:34:35.371620+00:00",
+  "allowlist_path": "reports/inventory/nas_ingest_allowlist.csv",
+  "allowlist_rows": 34,
+  "accepted_rows": 34,
+  "by_scope": {
+    "governance": 14,
+    "alife": 10,
+    "constella": 10
+  },
+  "notes": "Approved non-personal rows only; staging limited to text-compatible extensions for first controlled ingest."
+}

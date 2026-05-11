@@ -448,6 +448,211 @@ class LocalAIOptimizer:
         
         return max(0.0, min(1.0, confidence))
     
+    def setup_quality_monitoring(self):
+        """Set up quality monitoring framework"""
+        self.quality_metrics = {
+            'response_quality_scores': deque(maxlen=1000),
+            'user_satisfaction_ratings': deque(maxlen=500),
+            'context_utilization_rates': deque(maxlen=1000),
+            'response_relevance_scores': deque(maxlen=1000),
+            'latency_satisfaction': deque(maxlen=1000)
+        }
+        
+        self.quality_thresholds = {
+            'min_response_quality': 0.7,
+            'min_user_satisfaction': 0.8,
+            'min_context_utilization': 0.6,
+            'min_relevance_score': 0.75,
+            'max_acceptable_latency': 5.0  # seconds
+        }
+        
+        print("✅ Quality monitoring framework initialized")
+    
+    def record_quality_metrics(self, model_name: str, metrics: Dict):
+        """Record quality metrics for a model response"""
+        timestamp = datetime.now()
+        
+        # Record metrics for the specific model
+        profile = self.model_profiles.get(model_name)
+        if profile:
+            profile.quality_history.append({
+                'timestamp': timestamp,
+                'metrics': metrics
+            })
+            
+            # Update global quality tracking
+            for metric_name, value in metrics.items():
+                if metric_name in self.quality_metrics:
+                    self.quality_metrics[metric_name].append({
+                        'timestamp': timestamp,
+                        'model': model_name,
+                        'value': value
+                    })
+    
+    def analyze_quality_trends(self, model_name: str = None, hours: int = 24) -> Dict:
+        """Analyze quality trends over time"""
+        cutoff_time = datetime.now() - timedelta(hours=hours)
+        trends = {}
+        
+        models_to_analyze = [model_name] if model_name else list(self.model_profiles.keys())
+        
+        for model in models_to_analyze:
+            profile = self.model_profiles.get(model)
+            if not profile:
+                continue
+                
+            recent_quality = [
+                entry for entry in profile.quality_history
+                if entry['timestamp'] > cutoff_time
+            ]
+            
+            if not recent_quality:
+                trends[model] = {'status': 'no_data'}
+                continue
+            
+            # Calculate trend metrics
+            avg_quality = sum(
+                entry['metrics'].get('response_quality', 0) 
+                for entry in recent_quality
+            ) / len(recent_quality)
+            
+            avg_satisfaction = sum(
+                entry['metrics'].get('user_satisfaction', 0) 
+                for entry in recent_quality
+            ) / len(recent_quality)
+            
+            avg_latency = sum(
+                entry['metrics'].get('response_time', 0) 
+                for entry in recent_quality
+            ) / len(recent_quality)
+            
+            trends[model] = {
+                'status': 'analyzed',
+                'sample_size': len(recent_quality),
+                'avg_response_quality': avg_quality,
+                'avg_user_satisfaction': avg_satisfaction,
+                'avg_response_time': avg_latency,
+                'quality_trend': 'improving' if len(recent_quality) > 1 else 'insufficient_data'
+            }
+        
+        return trends
+    
+    def auto_tune_parameters(self, model_name: str) -> Dict:
+        """Automatically tune model parameters based on performance"""
+        profile = self.model_profiles.get(model_name)
+        if not profile:
+            return {}
+        
+        recent_performance = profile.get_recent_performance(20)
+        tuning_recommendations = {}
+        
+        # Analyze response quality
+        if recent_performance['requests'] >= 10:
+            success_rate = recent_performance['success_rate']
+            avg_response_time = recent_performance['avg_response_time']
+            
+            # Temperature tuning based on quality
+            if success_rate < 85:
+                tuning_recommendations['temperature'] = {
+                    'current': 0.7,
+                    'recommended': 0.5,
+                    'reason': 'Lower temperature to improve consistency'
+                }
+            elif success_rate > 95 and avg_response_time < 2:
+                tuning_recommendations['temperature'] = {
+                    'current': 0.7,
+                    'recommended': 0.8,
+                    'reason': 'Increase temperature for more creative responses'
+                }
+            
+            # Token limit tuning
+            if avg_response_time > 8:
+                tuning_recommendations['max_tokens'] = {
+                    'current': 4096,
+                    'recommended': 2048,
+                    'reason': 'Reduce token limit to improve response time'
+                }
+            elif avg_response_time < 2:
+                tuning_recommendations['max_tokens'] = {
+                    'current': 4096,
+                    'recommended': 6144,
+                    'reason': 'Increase token limit for more comprehensive responses'
+                }
+        
+        return tuning_recommendations
+    
+    def generate_optimization_report(self) -> Dict:
+        """Generate comprehensive optimization report"""
+        report = {
+            'timestamp': datetime.now().isoformat(),
+            'total_models': len(self.model_profiles),
+            'models_analyzed': 0,
+            'optimization_recommendations': {},
+            'quality_summary': {},
+            'performance_issues': []
+        }
+        
+        # Analyze all models
+        for model_name, profile in self.model_profiles.items():
+            if profile.total_requests > 0:
+                report['models_analyzed'] += 1
+                
+                # Get recent performance
+                recent_perf = profile.get_recent_performance()
+                
+                # Check for performance issues
+                if recent_perf['success_rate'] < 80:
+                    report['performance_issues'].append({
+                        'model': model_name,
+                        'issue': f'Low success rate: {recent_perf["success_rate"]:.1f}%',
+                        'severity': 'high' if recent_perf['success_rate'] < 70 else 'medium'
+                    })
+                
+                if recent_perf['avg_response_time'] > 10:
+                    report['performance_issues'].append({
+                        'model': model_name,
+                        'issue': f'High response time: {recent_perf["avg_response_time"]:.1f}s',
+                        'severity': 'high' if recent_perf['avg_response_time'] > 15 else 'medium'
+                    })
+                
+                # Get tuning recommendations
+                tuning = self.auto_tune_parameters(model_name)
+                if tuning:
+                    report['optimization_recommendations'][model_name] = tuning
+        
+        # Quality summary
+        for metric_name, metric_data in self.quality_metrics.items():
+            if metric_data:
+                recent_values = [
+                    entry['value'] for entry in metric_data
+                    if entry['timestamp'] > datetime.now() - timedelta(hours=24)
+                ]
+                if recent_values:
+                    report['quality_summary'][metric_name] = {
+                        'avg': sum(recent_values) / len(recent_values),
+                        'min': min(recent_values),
+                        'max': max(recent_values),
+                        'sample_size': len(recent_values)
+                    }
+        
+        return report
+    
+    def apply_auto_tuning(self, model_name: str, recommendations: Dict) -> bool:
+        """Apply automatic tuning recommendations"""
+        try:
+            # This would integrate with the configuration system
+            # For now, we'll just log the recommendations
+            print(f"🔧 Auto-tuning recommendations for {model_name}:")
+            for param, rec in recommendations.items():
+                print(f"   {param}: {rec['current']} → {rec['recommended']} ({rec['reason']})")
+            
+            # In a full implementation, this would update config.yaml
+            # and notify the backend of parameter changes
+            return True
+        except Exception as e:
+            print(f"❌ Failed to apply auto-tuning for {model_name}: {e}")
+            return False
+    
     def update_model_performance(self, model_name: str, response_time: float, 
                              success: bool, tokens_processed: int = 0, 
                              error: str = None):

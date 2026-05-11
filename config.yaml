@@ -4,9 +4,8 @@
 security:
   # Allowed directories for file operations
   allowed_directories:
-    # Canonical tool/workspace tree (no separate /home/jonat/faithh on disk).
-    # /tmp/faithh: optional scratch; mkdir if listed (see docs/ops/MULTI_HOST_AUDIT.md).
     - /home/jonat/ai-stack
+    - /home/jonat/faithh
     - /tmp/faithh
   
   # Blocked shell commands for safety
@@ -51,16 +50,19 @@ logging:
   backup_count: 5
   format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 
-# AI Provider configuration (tool defaults; full FAITHH chat routing uses
-# configs/model_config.yaml on the host that runs the Flask backend — usually faithh).
-# Lean stack: docs/ops/LEAN_LLM_VLLM_FIRST.md
+# AI Provider configuration
 ai:
   primary_provider: ollama
   fallback_provider: anthropic
+  # Default Ollama tag when the client omits model or sends "auto" while auto_route is false.
+  default_model: qwen25-faithh-v3:latest
+  # When false, /api/chat does not run smart multi-provider auto-routing; uses default_model +
+  # OLLAMA_GROUNDED_MODEL instead of Groq/Gemini selection (good for local calibration).
+  auto_route: false
   
   # Local FAITHH models (primary)
   ollama:
-    model: qwen25-grounded:latest
+    model: qwen25-faithh-v3:latest
     base_url: http://localhost:11434
     # Offloading options to improve context handling
     # Number of GPU layers to keep on GPU (0 = all CPU, -1 = all GPU)
@@ -84,19 +86,19 @@ ai:
     default_model: claude-3-haiku-20240307
     backup_model: claude-3-haiku-20240307
     max_tokens: 4096
-    temperature: 0.1
+    temperature: 0.7
     # Cost optimization settings
     enable_prompt_caching: true
     enable_batch_processing: true
     monthly_budget: 20.0
     cache_ttl_minutes: 60
   
-    
-  # Heavy reasoning model (disabled until environment tuned)
-  # heavy_reasoning:
-  #   provider: ollama
-  #   model: deepseek-r1:32b
-  #   gpu_layers: -1
-  #   context_size: 8192
-  #   batch_size: 512
-  #   keep_alive: 30min  # Load on demand
+
+  # Heavy reasoning (Ollama); used by intent/routing helpers — load on demand
+  heavy_reasoning:
+    provider: ollama
+    model: deepseek-r1:32b
+    gpu_layers: -1
+    context_size: 8192
+    batch_size: 512
+    keep_alive: 30min

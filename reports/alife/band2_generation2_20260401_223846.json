@@ -1,0 +1,54 @@
+{
+  "experiment": "band2_cooperation",
+  "generation": 2,
+  "randomness_source": "oracle_urandom",
+  "population_A": {
+    "agent_count": 30,
+    "ticks": 15,
+    "mean_fitness": 0.923858995762293,
+    "max_fitness": 1.203745941758097,
+    "cooperation_events": 693,
+    "defection_events": 153,
+    "mean_signal_accuracy": 1.0,
+    "band3_candidates": [
+      "A_05",
+      "A_08",
+      "A_12",
+      "A_18",
+      "A_22",
+      "A_24",
+      "A_25",
+      "A_26",
+      "A_27"
+    ],
+    "stable_cooperative_networks": 43
+  },
+  "population_B": {
+    "agent_count": 30,
+    "ticks": 15,
+    "mean_fitness": 0.9076352865122439,
+    "max_fitness": 1.0392902707661835,
+    "cooperation_events": 816,
+    "defection_events": 64,
+    "mean_signal_accuracy": 0.9069460890244102,
+    "band3_candidates": [
+      "B_00",
+      "B_04",
+      "B_09",
+      "B_11",
+      "B_13",
+      "B_15",
+      "B_16"
+    ],
+    "stable_cooperative_networks": 55
+  },
+  "hypothesis_check": {
+    "A_higher_cooperation_rate": false,
+    "A_lower_defection_rate": false,
+    "A_more_band3_candidates": true,
+    "signal_accuracy_gap": 0.0930539109755898,
+    "hypothesis_supported": false
+  },
+  "alife_lineage_before": 55350,
+  "alife_lineage_after": 56250
+}

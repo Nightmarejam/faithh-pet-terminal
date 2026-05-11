@@ -28,6 +28,22 @@ class QueryPerformance:
     coherence_score: Optional[float]
     success: bool
     error_info: Optional[str]
+    program_advance_used: Optional[str] = None  # Program Advance name when merge path used it
+    integrations_used: Optional[List[str]] = None  # Context chips that contributed (labels)
+
+def _ensure_query_performance_extra_columns(cursor: sqlite3.Cursor) -> None:
+    """Add Phase 2 columns introduced after initial schema (existing DBs)."""
+    cursor.execute("PRAGMA table_info(query_performance)")
+    names = {row[1] for row in cursor.fetchall()}
+    if "program_advance_used" not in names:
+        cursor.execute(
+            "ALTER TABLE query_performance ADD COLUMN program_advance_used TEXT"
+        )
+    if "integrations_used" not in names:
+        cursor.execute(
+            "ALTER TABLE query_performance ADD COLUMN integrations_used TEXT"
+        )
+
 
 class PerformanceTracker:
     """Tracks and analyzes query performance for ML optimization"""
@@ -61,9 +77,12 @@ class PerformanceTracker:
                     coherence_score REAL,
                     success BOOLEAN NOT NULL,
                     error_info TEXT,
+                    program_advance_used TEXT,
+                    integrations_used TEXT,
                     created_at TEXT DEFAULT CURRENT_TIMESTAMP
                 )
             """)
+            _ensure_query_performance_extra_columns(cursor)
             
             # Create aggregated metrics table
             cursor.execute("""
@@ -108,8 +127,9 @@ class PerformanceTracker:
                     INSERT INTO query_performance 
                     (query_id, timestamp, intent, weights_used, chip_results, 
                      response_time, model_used, provider_used, accuracy_score, 
-                     user_feedback, context_tokens, coherence_score, success, error_info)
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                     user_feedback, context_tokens, coherence_score, success, error_info,
+                     program_advance_used, integrations_used)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """, (
                     query_performance.query_id,
                     query_performance.timestamp.isoformat(),
@@ -124,7 +144,11 @@ class PerformanceTracker:
                     query_performance.context_tokens,
                     query_performance.coherence_score,
                     query_performance.success,
-                    query_performance.error_info
+                    query_performance.error_info,
+                    query_performance.program_advance_used,
+                    json.dumps(query_performance.integrations_used)
+                    if query_performance.integrations_used is not None
+                    else None,
                 ))
                 
                 conn.commit()
@@ -145,7 +169,8 @@ class PerformanceTracker:
                 cursor.execute("""
                     SELECT query_id, timestamp, intent, weights_used, chip_results,
                            response_time, model_used, provider_used, accuracy_score,
-                           user_feedback, context_tokens, coherence_score, success, error_info
+                           user_feedback, context_tokens, coherence_score, success, error_info,
+                           program_advance_used, integrations_used
                     FROM query_performance
                     ORDER BY timestamp DESC
                     LIMIT ?
@@ -153,6 +178,10 @@ class PerformanceTracker:
                 
                 results = []
                 for row in cursor.fetchall():
+                    _ints_raw = row[15]
+                    _integrations = (
+                        json.loads(_ints_raw) if _ints_raw else None
+                    )
                     results.append(QueryPerformance(
                         query_id=row[0],
                         timestamp=datetime.fromisoformat(row[1]),
@@ -167,7 +196,9 @@ class PerformanceTracker:
                         context_tokens=row[10],
                         coherence_score=row[11],
                         success=row[12],
-                        error_info=row[13]
+                        error_info=row[13],
+                        program_advance_used=row[14],
+                        integrations_used=_integrations,
                     ))
                 
                 conn.close()

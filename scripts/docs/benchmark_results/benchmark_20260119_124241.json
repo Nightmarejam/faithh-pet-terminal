@@ -1,0 +1,766 @@
+{
+  "timestamp": "2026-01-19T12:42:41.026543",
+  "results": [
+    {
+      "model": "qwen2.5-coder:14b",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            8.428262948989868,
+            0.2886924743652344,
+            0.2913641929626465
+          ],
+          "tokens_per_second": [
+            1.186484102420951,
+            34.63893550390465,
+            34.32130729008976
+          ],
+          "passed": true,
+          "sample_response": "Hello! How can I assist you today?",
+          "avg_time": 3.0027732054392495,
+          "min_time": 0.2886924743652344,
+          "max_time": 8.428262948989868,
+          "avg_tps": 23.38224229880512
+        },
+        {
+          "name": "count",
+          "times": [
+            0.40573668479919434,
+            0.5411767959594727,
+            0.5594954490661621
+          ],
+          "tokens_per_second": [
+            36.969789920336495,
+            55.43474927969126,
+            53.6197390882663
+          ],
+          "passed": true,
+          "sample_response": "1, 2, 3, 4, 5.",
+          "avg_time": 0.5021363099416097,
+          "min_time": 0.40573668479919434,
+          "max_time": 0.5594954490661621,
+          "avg_tps": 48.674759429431354
+        }
+      ],
+      "total_time": 10.514728546142578,
+      "avg_time": 1.7524547576904297,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "test": "reasoning",
+      "test_name": "Reasoning Test",
+      "prompts": [
+        {
+          "name": "logic_puzzle",
+          "times": [
+            2.6732044219970703
+          ],
+          "tokens_per_second": [
+            58.35692875423912
+          ],
+          "passed": true,
+          "sample_response": "Certainly! Let's break down the problem step by step:\n\n1. **Initial number of sheep**: The farmer starts with 17 sheep.\n2. **Sheep that run away**: According to the problem, all but 9 sheep run away. This means that 9 sheep remain.\n\nTo find out how many sheep the farmer has left, we need to subtract the number of sheep that ran away from the initial total:\n\n- Initial total: 17 sheep\n- Sheep that stayed: 9 sheep\n\nSo, the calculation is:\n\\[ 17 - (17 - 9) \\]\n\nSimplifying inside the parentheses firs",
+          "avg_time": 2.6732044219970703,
+          "min_time": 2.6732044219970703,
+          "max_time": 2.6732044219970703,
+          "avg_tps": 58.35692875423912
+        },
+        {
+          "name": "sequence",
+          "times": [
+            3.388144016265869
+          ],
+          "tokens_per_second": [
+            59.029368007922926
+          ],
+          "passed": false,
+          "sample_response": "The given sequence is 2, 6, 12, 20, 30, and we need to find the next number.\n\nFirst, let's examine how each term in the sequence is generated:\n\n- From 2 to 6: \\(6 = 2 + 4\\)\n- From 6 to 12: \\(12 = 6 + 6\\)\n- From 12 to 20: \\(20 = 12 + 8\\)\n- From 20 to 30: \\(30 = 20 + 10\\)\n\nWe can see that the difference between each consecutive pair of terms increases by 2. The differences are:\n- \\(6 - 2 = 4\\)\n- \\(12 - 6 = 6\\)\n- \\(20 - 12 = 8\\)\n- \\(30 - 20 = 10\\)\n\nFollowing",
+          "avg_time": 3.388144016265869,
+          "min_time": 3.388144016265869,
+          "max_time": 3.388144016265869,
+          "avg_tps": 59.029368007922926
+        },
+        {
+          "name": "planning",
+          "times": [
+            2.0161359310150146
+          ],
+          "tokens_per_second": [
+            58.52779973054368
+          ],
+          "passed": true,
+          "sample_response": "The optimal order is:\n1. Deploy the Python app - This allows you to start testing and iterating on your application.\n2. Set up a database - Your application likely needs data storage, so this should follow deployment.\n3. Configure DNS - After deploying the app and setting up the database, configure DNS to point to your server or service.\n4. Get SSL cert - Finally, obtain an SSL certificate for secure communication, ensuring that all data exchanged between clients and your server is encrypted.\n\nT",
+          "avg_time": 2.0161359310150146,
+          "min_time": 2.0161359310150146,
+          "max_time": 2.0161359310150146,
+          "avg_tps": 58.52779973054368
+        }
+      ],
+      "total_time": 8.077484369277954,
+      "avg_time": 2.692494789759318,
+      "passed": 2,
+      "failed": 1
+    },
+    {
+      "model": "qwen2.5-coder:14b",
+      "test": "coding",
+      "test_name": "Coding Test",
+      "prompts": [
+        {
+          "name": "function_gen",
+          "times": [
+            2.7193491458892822
+          ],
+          "tokens_per_second": [
+            59.57307844963127
+          ],
+          "passed": true,
+          "sample_response": "```python\nfrom typing import List\n\ndef find_duplicates(input_list: List) -> List:\n    \"\"\"\n    Returns a list of duplicate elements from the given input list.\n\n    :param input_list: A list of elements that may contain duplicates.\n    :return: A list containing the duplicate elements found in the input list.\n    \"\"\"\n    seen = set()\n    duplicates = []\n    \n    for item in input_list:\n        if item in seen:\n            duplicates.append(item)\n        else:\n            seen.add(item)\n           ",
+          "avg_time": 2.7193491458892822,
+          "min_time": 2.7193491458892822,
+          "max_time": 2.7193491458892822,
+          "avg_tps": 59.57307844963127
+        },
+        {
+          "name": "bug_fix",
+          "times": [
+            0.5948126316070557
+          ],
+          "tokens_per_second": [
+            50.436050624793324
+          ],
+          "passed": true,
+          "sample_response": "```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)\n```",
+          "avg_time": 0.5948126316070557,
+          "min_time": 0.5948126316070557,
+          "max_time": 0.5948126316070557,
+          "avg_tps": 50.436050624793324
+        },
+        {
+          "name": "explain_code",
+          "times": [
+            1.9781591892242432
+          ],
+          "tokens_per_second": [
+            59.14589717417173
+          ],
+          "passed": true,
+          "sample_response": "This Python code snippet creates a list comprehension that generates a list of squares of even numbers from 0 to 9. It iterates over each number `x` in the range from 0 to 9, checks if `x` is even by using the condition `x % 2 == 0`, and if true, includes `x**2` (the square of `x`) in the resulting list. The final result is a list containing the squares of the even numbers [0, 4, 16, 36, 64].",
+          "avg_time": 1.9781591892242432,
+          "min_time": 1.9781591892242432,
+          "max_time": 1.9781591892242432,
+          "avg_tps": 59.14589717417173
+        }
+      ],
+      "total_time": 5.292320966720581,
+      "avg_time": 1.7641069889068604,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "model": "deepseek-r1:32b",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            27.399325132369995,
+            1.1697375774383545,
+            1.6384906768798828
+          ],
+          "tokens_per_second": [
+            1.8248624649856506,
+            30.776133634039137,
+            30.515889229966906
+          ],
+          "passed": true,
+          "sample_response": "<think>\nOkay, so I need to say \"hello\" in one sentence. Hmm, that seems straightforward, but maybe the user is looking for something more creative or varied than just a simple greeting. Let me think about how to make it engaging.\n\n",
+          "avg_time": 10.06918446222941,
+          "min_time": 1.1697375774383545,
+          "max_time": 27.399325132369995,
+          "avg_tps": 21.038961776330563
+        },
+        {
+          "name": "count",
+          "times": [
+            1.0024878978729248,
+            0.9811229705810547,
+            0.9772119522094727
+          ],
+          "tokens_per_second": [
+            29.92554829205808,
+            30.57720683293448,
+            30.699583577718332
+          ],
+          "passed": true,
+          "sample_response": "<think>\nOkay, so I need to figure out how to count from 1 to 5. Let me think about this step by step. First",
+          "avg_time": 0.9869409402211508,
+          "min_time": 0.9772119522094727,
+          "max_time": 1.0024878978729248,
+          "avg_tps": 30.400779567570297
+        }
+      ],
+      "total_time": 33.168376207351685,
+      "avg_time": 5.528062701225281,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "model": "deepseek-r1:32b",
+      "test": "reasoning",
+      "test_name": "Reasoning Test",
+      "prompts": [
+        {
+          "name": "logic_puzzle",
+          "times": [
+            6.319126129150391
+          ],
+          "tokens_per_second": [
+            31.64994588055328
+          ],
+          "passed": true,
+          "sample_response": "<think>\nFirst, there are a total of 17 sheep on the farm.\n\nThe problem states that \"all but 9\" ran away. This means that out of the total, only 9 sheep remained.\n\nTo find out how many sheep ran away, subtract the number that stayed from the total: 17 - 9 = 8 sheep ran away.\n\nTherefore, after the incident, there are 9 sheep left with the farmer.\n</think>\n\nLet's solve the problem step by step:\n\n**Problem Statement:**\nA farmer has **17 sheep**. All but **9** run away. How many sheep does the farmer",
+          "avg_time": 6.319126129150391,
+          "min_time": 6.319126129150391,
+          "max_time": 6.319126129150391,
+          "avg_tps": 31.64994588055328
+        },
+        {
+          "name": "sequence",
+          "times": [
+            6.198042392730713
+          ],
+          "tokens_per_second": [
+            32.268252994617654
+          ],
+          "passed": false,
+          "sample_response": "<think>\nFirst, I'll examine the differences between consecutive terms to identify a pattern.\n\nThe first differences are:\n6 - 2 = 4,\n12 - 6 = 6,\n20 - 12 = 8,\n30 - 20 = 10.\n\nNext, I'll look at the second differences by subtracting these results:\n6 - 4 = 2,\n8 - 6 = 2,\n10 - 8 = 2.\n\nSince the second differences are constant (each is 2), this suggests that the sequence follows a quadratic pattern. The general form of a quadratic sequence is \\( an^2 + bn + c \\).\n\nTo find the coefficients, I'll set up e",
+          "avg_time": 6.198042392730713,
+          "min_time": 6.198042392730713,
+          "max_time": 6.198042392730713,
+          "avg_tps": 32.268252994617654
+        },
+        {
+          "name": "planning",
+          "times": [
+            9.422292232513428
+          ],
+          "tokens_per_second": [
+            31.839386064124866
+          ],
+          "passed": true,
+          "sample_response": "<think>\nOkay, so I need to deploy a Python app, set up a database, configure DNS, and get an SSL certificate. Hmm, what should I do first? Let me think through each step.\n\n1. **Deploy the Python App**: Well, without deploying the app, none of the other steps really make sense because everything else supports the app's functionality. So maybe deploy the app first on a server or cloud platform like AWS, DigitalOcean, etc. But wait, does it need the database right away? Maybe not, but if the app re",
+          "avg_time": 9.422292232513428,
+          "min_time": 9.422292232513428,
+          "max_time": 9.422292232513428,
+          "avg_tps": 31.839386064124866
+        }
+      ],
+      "total_time": 21.93946075439453,
+      "avg_time": 7.313153584798177,
+      "passed": 2,
+      "failed": 1
+    },
+    {
+      "model": "deepseek-r1:32b",
+      "test": "coding",
+      "test_name": "Coding Test",
+      "prompts": [
+        {
+          "name": "function_gen",
+          "times": [
+            9.405941486358643
+          ],
+          "tokens_per_second": [
+            31.894733816395462
+          ],
+          "passed": false,
+          "sample_response": "<think>\nOkay, I need to write a Python function called find_duplicates that takes a list and returns a list of duplicate elements. The user mentioned including type hints and a docstring, and keeping it simple.\n\nFirst, let me think about how to find duplicates in a list. So, for each element in the list, I should check if it appears more than once. But wait, just checking that isn't enough because if an element is duplicated multiple times, like three or four times, I only want it to appear once",
+          "avg_time": 9.405941486358643,
+          "min_time": 9.405941486358643,
+          "max_time": 9.405941486358643,
+          "avg_tps": 31.894733816395462
+        },
+        {
+          "name": "bug_fix",
+          "times": [
+            6.2245988845825195
+          ],
+          "tokens_per_second": [
+            32.13058442936342
+          ],
+          "passed": true,
+          "sample_response": "<think>\nOkay, so I'm looking at this Python function that's supposed to calculate the factorial of a number. The user mentioned there are some issues with it and wants me to fix it. Let me go through it step by step.\n\nFirst, the function is defined as def factorial(n):, which looks correct. Then inside, there's an if statement: if n = 0:. Wait, that doesn't look right. In Python, assignment in conditions isn't done with a single equals sign. I remember that using = in an if condition will throw ",
+          "avg_time": 6.2245988845825195,
+          "min_time": 6.2245988845825195,
+          "max_time": 6.2245988845825195,
+          "avg_tps": 32.13058442936342
+        },
+        {
+          "name": "explain_code",
+          "times": [
+            4.6796557903289795
+          ],
+          "tokens_per_second": [
+            32.05363956682272
+          ],
+          "passed": false,
+          "sample_response": "<think>\nOkay, so I've got this Python code snippet here: result equals a list comprehension. Let me try to figure out what it's doing step by step. \n\nFirst, the structure is [expression for loop if condition]. So inside the brackets, it starts with x squared. That makes sense; each element in the resulting list will be the square of x.\n\nThen, there's a for loop: for x in range(10). Range 10 goes from 0 to 9, right? So x takes on values starting at 0 up to 9, incrementing by 1 each time. That mea",
+          "avg_time": 4.6796557903289795,
+          "min_time": 4.6796557903289795,
+          "max_time": 4.6796557903289795,
+          "avg_tps": 32.05363956682272
+        }
+      ],
+      "total_time": 20.31019616127014,
+      "avg_time": 6.770065387090047,
+      "passed": 1,
+      "failed": 2
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            null,
+            null,
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        },
+        {
+          "name": "count",
+          "times": [
+            null,
+            null,
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        }
+      ],
+      "total_time": 0,
+      "avg_time": 0,
+      "passed": 0,
+      "failed": 2
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test": "reasoning",
+      "test_name": "Reasoning Test",
+      "prompts": [
+        {
+          "name": "logic_puzzle",
+          "times": [
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        },
+        {
+          "name": "sequence",
+          "times": [
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        },
+        {
+          "name": "planning",
+          "times": [
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        }
+      ],
+      "total_time": 0,
+      "avg_time": 0,
+      "passed": 0,
+      "failed": 3
+    },
+    {
+      "model": "qwen2.5:7b",
+      "test": "coding",
+      "test_name": "Coding Test",
+      "prompts": [
+        {
+          "name": "function_gen",
+          "times": [
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        },
+        {
+          "name": "bug_fix",
+          "times": [
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        },
+        {
+          "name": "explain_code",
+          "times": [
+            null
+          ],
+          "tokens_per_second": [],
+          "passed": false,
+          "sample_response": "",
+          "error": "HTTP 500"
+        }
+      ],
+      "total_time": 0,
+      "avg_time": 0,
+      "passed": 0,
+      "failed": 3
+    },
+    {
+      "model": "qwen3-faithh:latest",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            21.51515030860901,
+            0.1802511215209961,
+            0.5331218242645264
+          ],
+          "tokens_per_second": [
+            2.323943792295662,
+            55.47815689366002,
+            93.78719407891059
+          ],
+          "passed": true,
+          "sample_response": " Hi there! How can I assist you today? \n\n(Note: This is a friendly greeting that also opens the conversation for assistance.) \n\nI've provided a concise and warm greeting that naturally leads into a helpful response. The sentence is one complete thought",
+          "avg_time": 7.409507751464844,
+          "min_time": 0.1802511215209961,
+          "max_time": 21.51515030860901,
+          "avg_tps": 50.52976492162209
+        },
+        {
+          "name": "count",
+          "times": [
+            0.41737842559814453,
+            0.3430311679840088,
+            0.34429335594177246
+          ],
+          "tokens_per_second": [
+            71.87721779583369,
+            87.45560986865928,
+            87.1349954399749
+          ],
+          "passed": true,
+          "sample_response": " Count from 5 to 1. What number comes after 4? What number comes before 2? What number is between 1 and",
+          "avg_time": 0.3682343165079753,
+          "min_time": 0.3430311679840088,
+          "max_time": 0.41737842559814453,
+          "avg_tps": 82.15594103482262
+        }
+      ],
+      "total_time": 23.333226203918457,
+      "avg_time": 3.8888710339864097,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "model": "qwen3-faithh:latest",
+      "test": "reasoning",
+      "test_name": "Reasoning Test",
+      "prompts": [
+        {
+          "name": "logic_puzzle",
+          "times": [
+            2.249598264694214
+          ],
+          "tokens_per_second": [
+            88.904762747577
+          ],
+          "passed": true,
+          "sample_response": " Let's solve this step by step:\n\n### Step 1: Understand the problem\n- The farmer starts with **17 sheep**.\n- The phrase is: \"**All but 9 run away.**\"\n\nWe need to interpret what \"all but 9\" means.\n\n### Step 2: Interpret \"All but 9\"\n- \"All but 9\" means: **All except 9**.\n- So, **9 sheep did NOT run away**.\n- The rest (17 - 9 = 8) **did run away**.\n\n### Step 3: How many sheep are left?\n- The sheep that are **left** are the ones that **did not run away**.\n- That\u2019s the **9 sheep**.\n\n### Step 4: Final",
+          "avg_time": 2.249598264694214,
+          "min_time": 2.249598264694214,
+          "max_time": 2.249598264694214,
+          "avg_tps": 88.904762747577
+        },
+        {
+          "name": "sequence",
+          "times": [
+            2.0387706756591797
+          ],
+          "tokens_per_second": [
+            98.098330718503
+          ],
+          "passed": false,
+          "sample_response": " Also, what comes next in this sequence: 1, 2, 4, 7, 11, ? Explain your reasoning. Finally, what comes next in this sequence: 1, 2, 6, 24, 120, ? Explain your reasoning.\n\nLet's analyze each sequence step by step.\n\nFor the first sequence: 2, 6, 12, 20, 30, ?\n\nWe observe that each term can be expressed as \\( n(n+1) \\), where \\( n \\) is the position of the term in the sequence:\n- \\( 1(1+1) = 2 \\)\n- \\( 2(2+1) = 6 \\)\n- \\( 3(3+1) = 12 \\)\n- \\( 4(4+1) = 20 \\)\n- \\( 5(5+1) = 30 \\",
+          "avg_time": 2.0387706756591797,
+          "min_time": 2.0387706756591797,
+          "max_time": 2.0387706756591797,
+          "avg_tps": 98.098330718503
+        },
+        {
+          "name": "planning",
+          "times": [
+            3.063051462173462
+          ],
+          "tokens_per_second": [
+            97.94154740943458
+          ],
+          "passed": true,
+          "sample_response": " Optimal order: 3 \u2192 4 \u2192 2 \u2192 1\n\nWhy:\n1. **DNS (3)**: Must be set up first so your domain resolves to your server\u2019s IP.\n2. **SSL (4)**: Can only be issued for a domain after DNS is configured (valid domain verification).\n3. **Database (2)**: Set up after DNS/SSL to ensure secure connections (e.g., via HTTPS or encrypted DB links).\n4. **Python App (1)**: Deploy last, as it depends on DNS (for access), SSL (for secure connections), and DB (for data). \n\nThis ensures dependencies are met in the right ",
+          "avg_time": 3.063051462173462,
+          "min_time": 3.063051462173462,
+          "max_time": 3.063051462173462,
+          "avg_tps": 97.94154740943458
+        }
+      ],
+      "total_time": 7.3514204025268555,
+      "avg_time": 2.4504734675089517,
+      "passed": 2,
+      "failed": 1
+    },
+    {
+      "model": "qwen3-faithh:latest",
+      "test": "coding",
+      "test_name": "Coding Test",
+      "prompts": [
+        {
+          "name": "function_gen",
+          "times": [
+            1.7437098026275635
+          ],
+          "tokens_per_second": [
+            97.49328686678838
+          ],
+          "passed": true,
+          "sample_response": "\n\n```python\nfrom typing import List, Any\n\ndef find_duplicates(lst: List[Any]) -> List[Any]:\n    \"\"\"\n    Find and return a list of duplicate elements from the input list.\n\n    Args:\n        lst: A list of elements (of any type).\n\n    Returns:\n        A list containing the elements that appear more than once in the input list,\n        in the order they first appear as duplicates.\n\n    Example:\n        >>> find_duplicates([1, 2, 3, 2, 4, 1])\n        [2, 1]\n    \"\"\"\n    seen = set()\n    duplicates = ",
+          "avg_time": 1.7437098026275635,
+          "min_time": 1.7437098026275635,
+          "max_time": 1.7437098026275635,
+          "avg_tps": 97.49328686678838
+        },
+        {
+          "name": "bug_fix",
+          "times": [
+            0.472550630569458
+          ],
+          "tokens_per_second": [
+            71.94996218506262
+          ],
+          "passed": true,
+          "sample_response": " Do not explain.\n\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)\n```",
+          "avg_time": 0.472550630569458,
+          "min_time": 0.472550630569458,
+          "max_time": 0.472550630569458,
+          "avg_tps": 71.94996218506262
+        },
+        {
+          "name": "explain_code",
+          "times": [
+            1.0173759460449219
+          ],
+          "tokens_per_second": [
+            88.46287387654247
+          ],
+          "passed": true,
+          "sample_response": " This code creates a list of squares of even numbers from 0 to 9. It uses a list comprehension to iterate through `range(10)`, checks if each number `x` is even (`x % 2 == 0`), and if so, adds `x**2` to the resulting list. The final result is `[0, 4, 16, 36, 64]`.",
+          "avg_time": 1.0173759460449219,
+          "min_time": 1.0173759460449219,
+          "max_time": 1.0173759460449219,
+          "avg_tps": 88.46287387654247
+        }
+      ],
+      "total_time": 3.2336363792419434,
+      "avg_time": 1.0778787930806477,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "model": "llama31-faithh:latest",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            21.833119869232178,
+            0.1984105110168457,
+            0.1292872428894043
+          ],
+          "tokens_per_second": [
+            0.45801974522625466,
+            40.32044451173645,
+            23.204145536356428
+          ],
+          "passed": true,
+          "sample_response": "Hello, how can I assist you today?",
+          "avg_time": 7.3869392077128095,
+          "min_time": 0.1292872428894043,
+          "max_time": 21.833119869232178,
+          "avg_tps": 21.327536597773044
+        },
+        {
+          "name": "count",
+          "times": [
+            0.34537220001220703,
+            0.35062551498413086,
+            0.3447294235229492
+          ],
+          "tokens_per_second": [
+            55.013113387031304,
+            54.18886871612846,
+            55.11568988173456
+          ],
+          "passed": true,
+          "sample_response": "Here it goes:\n\n1, 2, 3, 4, 5!",
+          "avg_time": 0.3469090461730957,
+          "min_time": 0.3447294235229492,
+          "max_time": 0.35062551498413086,
+          "avg_tps": 54.772557328298106
+        }
+      ],
+      "total_time": 23.201544761657715,
+      "avg_time": 3.8669241269429526,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "model": "llama31-faithh:latest",
+      "test": "reasoning",
+      "test_name": "Reasoning Test",
+      "prompts": [
+        {
+          "name": "logic_puzzle",
+          "times": [
+            1.4294345378875732
+          ],
+          "tokens_per_second": [
+            64.36111452571878
+          ],
+          "passed": true,
+          "sample_response": "Let's break it down step by step:\n\n1. The farmer starts with 17 sheep.\n2. \"All but 9\" means that all of them, except for 9, run away. This implies that only 9 sheep remain with the farmer.\n\nTherefore, to find out how many sheep the farmer has left, we simply look at the number mentioned in step 2:\n\nThe farmer has **9** sheep left.\n\nThat's it!",
+          "avg_time": 1.4294345378875732,
+          "min_time": 1.4294345378875732,
+          "max_time": 1.4294345378875732,
+          "avg_tps": 64.36111452571878
+        },
+        {
+          "name": "sequence",
+          "times": [
+            1.8054149150848389
+          ],
+          "tokens_per_second": [
+            72.55949804416241
+          ],
+          "passed": true,
+          "sample_response": "A nice sequence!\n\nAfter analyzing the given numbers, I notice that each term is increasing by a larger amount than the previous one:\n\n* 2 + 4 = 6 (increase of 4)\n* 6 + 6 = 12 (increase of 6)\n* 12 + 8 = 20 (increase of 8)\n* 20 + 10 = 30 (increase of 10)\n\nIf this pattern continues, the next difference should be 12. Therefore:\n\n* 30 + 12 = 42\n\nSo, I believe the next term in the sequence is: **42**\n\nAm I correct?",
+          "avg_time": 1.8054149150848389,
+          "min_time": 1.8054149150848389,
+          "max_time": 1.8054149150848389,
+          "avg_tps": 72.55949804416241
+        },
+        {
+          "name": "planning",
+          "times": [
+            1.536860704421997
+          ],
+          "tokens_per_second": [
+            70.27312214389532
+          ],
+          "passed": true,
+          "sample_response": "The optimal order is:\n\n1. **Get SSL cert**: You'll need it for HTTPS (step 2 and 3)\n2. **Deploy Python app**: Ensure your app can run with the new SSL cert\n3. **Configure DNS**: Update your DNS records to point to your server's IP address\n4. **Set up a database**: Connect your app to the newly set up database\n\nThis order makes sense because you want to ensure your app is working correctly with the new SSL cert before setting up DNS and databases.",
+          "avg_time": 1.536860704421997,
+          "min_time": 1.536860704421997,
+          "max_time": 1.536860704421997,
+          "avg_tps": 70.27312214389532
+        }
+      ],
+      "total_time": 4.771710157394409,
+      "avg_time": 1.590570052464803,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "model": "llama31-faithh:latest",
+      "test": "coding",
+      "test_name": "Coding Test",
+      "prompts": [
+        {
+          "name": "function_gen",
+          "times": [
+            3.6591033935546875
+          ],
+          "tokens_per_second": [
+            73.51527712330538
+          ],
+          "passed": true,
+          "sample_response": "Here is the code:\n```python\ndef find_duplicates(lst: list) -> list:\n    \"\"\"\n    Returns a list of elements that appear more than once in the input list.\n\n    Args:\n        lst (list): The input list to check for duplicates.\n\n    Returns:\n        list: A list of duplicate elements.\n    \"\"\"\n    return [item for item in set(lst) if lst.count(item) > 1]\n```\nHere's an explanation:\n\n* We use a list comprehension to create the output list.\n* `set(lst)` creates a set from the input list, which automatic",
+          "avg_time": 3.6591033935546875,
+          "min_time": 3.6591033935546875,
+          "max_time": 3.6591033935546875,
+          "avg_tps": 73.51527712330538
+        },
+        {
+          "name": "bug_fix",
+          "times": [
+            0.5100419521331787
+          ],
+          "tokens_per_second": [
+            58.818691040078605
+          ],
+          "passed": true,
+          "sample_response": "```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)\n```",
+          "avg_time": 0.5100419521331787,
+          "min_time": 0.5100419521331787,
+          "max_time": 0.5100419521331787,
+          "avg_tps": 58.818691040078605
+        },
+        {
+          "name": "explain_code",
+          "times": [
+            1.1447689533233643
+          ],
+          "tokens_per_second": [
+            68.13601973879462
+          ],
+          "passed": true,
+          "sample_response": "This code uses a Python feature called a list comprehension to create a new list containing the squares of even numbers from 0 to 9. The expression `x**2` calculates the square of each number, and the condition `if x % 2 == 0` filters out odd numbers by only including those for which `x` is divisible by 2 with no remainder.",
+          "avg_time": 1.1447689533233643,
+          "min_time": 1.1447689533233643,
+          "max_time": 1.1447689533233643,
+          "avg_tps": 68.13601973879462
+        }
+      ],
+      "total_time": 5.3139142990112305,
+      "avg_time": 1.771304766337077,
+      "passed": 3,
+      "failed": 0
+    }
+  ]
+}

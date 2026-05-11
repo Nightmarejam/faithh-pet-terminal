@@ -1,0 +1,9 @@
+# Optimized DeepSeek-R1 32B - For reasoning, RTX 3090
+# Official model already clean, this adds hardware optimizations
+
+FROM deepseek-r1:32b
+
+# Optimized for RTX 3090 - larger context for reasoning chains
+PARAMETER num_ctx 16384
+PARAMETER num_batch 128
+PARAMETER num_gpu 99

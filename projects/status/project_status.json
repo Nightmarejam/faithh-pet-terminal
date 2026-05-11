@@ -1,0 +1,74 @@
+{
+  "last_updated": "2026-04-05",
+  "summary": {
+    "next_action": "Order Gate C1 parts — Metglas ribbon + Nafion membrane, under $100. See Compressor bom v3.xlsx Phase 1.",
+    "last_updated": "2026-04-05",
+    "total_gates": 14
+  },
+  "tracks": [
+    {
+      "id": "T1",
+      "name": "Resonant compressor build",
+      "status": "active",
+      "current_gate": "C1",
+      "last_activity": "2026-04-05",
+      "notes": "BOM v3 complete. MS encoding and soft clipper added (C7/C8). Next physical action: order Gate C1 parts (Metglas + Nafion, <$100). C6 wiring documented but blocked on C1.",
+      "summary": { "completed_gates": 2, "total_gates": 7 },
+      "gates": [
+        { "id": "C1", "title": "Validate mechanoionic transduction", "status": "in_progress", "blocker": "Parts order", "track": "T1" },
+        { "id": "C2", "title": "Characterize resonant nodes", "status": "pending", "blocker": null, "track": "T1" },
+        { "id": "C3", "title": "Upgrade ionic interface", "status": "pending", "blocker": null, "track": "T1" },
+        { "id": "C4", "title": "Transformer core selection", "status": "completed", "blocker": null, "track": "T1" },
+        { "id": "C5", "title": "Tegeler Creme mod platform", "status": "completed", "blocker": null, "track": "T1" },
+        { "id": "C6", "title": "Ground-up compressor build — first pass", "status": "pending", "blocker": "Blocked until C1 parts on hand", "track": "T1" },
+        { "id": "C7", "title": "Voicing and refinement", "status": "pending", "blocker": null, "track": "T1" }
+      ]
+    },
+    {
+      "id": "T2",
+      "name": "ALife experiments",
+      "status": "paused",
+      "current_gate": "A1",
+      "last_activity": "2026-04-02",
+      "notes": "Gen10 ALife head-to-head needs 26 more runs (bias=-0.05 at 14/40). Paused for hardware work. Resume after T1 C1 complete.",
+      "summary": { "completed_gates": 0, "total_gates": 5 },
+      "gates": [
+        { "id": "A1", "title": "Define experiment spec", "status": "in_progress", "blocker": null, "track": "T2" },
+        { "id": "A2", "title": "Baseline simulation (Gray-Scott)", "status": "pending", "blocker": null, "track": "T2" },
+        { "id": "A3", "title": "Add third dampening species", "status": "pending", "blocker": null, "track": "T2" },
+        { "id": "A4", "title": "Mutable prior", "status": "pending", "blocker": null, "track": "T2" },
+        { "id": "A5", "title": "FAITHH integration / corpus seeding", "status": "pending", "blocker": null, "track": "T2" }
+      ]
+    },
+    {
+      "id": "T3",
+      "name": "Power BI / financial intake",
+      "status": "planned",
+      "current_gate": null,
+      "last_activity": "2026-04-04",
+      "summary": { "completed_gates": 0, "total_gates": 0 },
+      "gates": []
+    },
+    {
+      "id": "T4",
+      "name": "Gen8 / NAS ops",
+      "status": "planned",
+      "current_gate": null,
+      "last_activity": "2026-03-30",
+      "summary": { "completed_gates": 0, "total_gates": 0 },
+      "gates": []
+    },
+    {
+      "id": "T5",
+      "name": "Plugin development (JUCE)",
+      "status": "planned",
+      "current_gate": "PL1",
+      "last_activity": "2026-04-04",
+      "summary": { "completed_gates": 0, "total_gates": 2 },
+      "gates": [
+        { "id": "PL1", "title": "Create fgs-plugins GitHub + Projucer template", "status": "pending", "blocker": "Repo creation", "track": "T5" },
+        { "id": "PBI1", "title": "Power BI template automation via pbi-tools / REST API", "status": "planned", "blocker": "Microsoft 365 account / workspace", "track": "T5" }
+      ]
+    }
+  ]
+}

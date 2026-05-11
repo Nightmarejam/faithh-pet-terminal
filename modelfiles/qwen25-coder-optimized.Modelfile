@@ -1,0 +1,9 @@
+# Optimized Qwen2.5-Coder 14B - For coding, RTX 3090
+# Official model already clean, this adds hardware optimizations
+
+FROM qwen2.5-coder:14b
+
+# Optimized for RTX 3090 - balance speed and context
+PARAMETER num_ctx 8192
+PARAMETER num_batch 256
+PARAMETER num_gpu 99

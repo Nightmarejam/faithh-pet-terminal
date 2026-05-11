@@ -1,0 +1,292 @@
+{
+  "timestamp": "2026-03-26T04:06:50.459646",
+  "metrics": {
+    "total_documents": 200,
+    "auto_tagged_documents": 50,
+    "schema_compliant": 45,
+    "source_type_distribution": {
+      "general": 11,
+      "business": 9,
+      "conversation": 9,
+      "decision": 8,
+      "technical": 20,
+      "project_discussion": 79,
+      "technical_explanation": 34,
+      "json_data": 19,
+      "document_content": 9,
+      "unknown": 2
+    },
+    "document_type_distribution": {
+      "document": 21,
+      "project": 4,
+      "chat_log": 5,
+      "decision": 4,
+      "implementation": 4,
+      "configuration": 4,
+      "financial": 2,
+      "client": 1,
+      "documentation": 5,
+      "unknown": 150
+    },
+    "content_level_distribution": {
+      "high_level": 37,
+      "detailed": 13,
+      "unknown": 150
+    },
+    "recent_indexing": [
+      {
+        "doc_id": "live_conv_20260125_174211_800436",
+        "indexed_at": "2026-03-26T04:05:37.339443",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260125_232025_481428",
+        "indexed_at": "2026-03-26T04:05:37.502164",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260125_232028_311596",
+        "indexed_at": "2026-03-26T04:05:37.669119",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_011903_330442",
+        "indexed_at": "2026-03-26T04:05:37.832363",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_011912_133410",
+        "indexed_at": "2026-03-26T04:05:37.997810",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_034206_928271",
+        "indexed_at": "2026-03-26T04:05:42.071432",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_040056_504236",
+        "indexed_at": "2026-03-26T04:05:42.340840",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_040058_584204",
+        "indexed_at": "2026-03-26T04:05:42.536139",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042015_577598",
+        "indexed_at": "2026-03-26T04:05:43.703087",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042016_861795",
+        "indexed_at": "2026-03-26T04:05:43.870406",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042125_214563",
+        "indexed_at": "2026-03-26T04:05:44.035067",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260207_042126_825607",
+        "indexed_at": "2026-03-26T04:05:44.201070",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220607_554024",
+        "indexed_at": "2026-03-26T04:05:44.365604",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220609_299127",
+        "indexed_at": "2026-03-26T04:05:45.531436",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220612_194101",
+        "indexed_at": "2026-03-26T04:05:45.702325",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220613_854201",
+        "indexed_at": "2026-03-26T04:05:45.866638",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220617_152286",
+        "indexed_at": "2026-03-26T04:05:46.031756",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220618_176769",
+        "indexed_at": "2026-03-26T04:05:46.219233",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220620_166847",
+        "indexed_at": "2026-03-26T04:05:47.407921",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220936_905370",
+        "indexed_at": "2026-03-26T04:05:47.578788",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220946_501959",
+        "indexed_at": "2026-03-26T04:05:47.743038",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220955_290081",
+        "indexed_at": "2026-03-26T04:05:48.007634",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_220959_436054",
+        "indexed_at": "2026-03-26T04:05:49.189322",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221007_153855",
+        "indexed_at": "2026-03-26T04:05:49.463197",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221010_754572",
+        "indexed_at": "2026-03-26T04:05:49.655940",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221028_182733",
+        "indexed_at": "2026-03-26T04:05:49.851075",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221032_248045",
+        "indexed_at": "2026-03-26T04:05:51.018793",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260208_221041_237576",
+        "indexed_at": "2026-03-26T04:05:51.191855",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "live_conv_20260209_032237_520452",
+        "indexed_at": "2026-03-26T04:05:51.486932",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "dba431a9a24a6879",
+        "indexed_at": "2026-03-26T04:05:51.664562",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "5ac4b1ae06c2095c",
+        "indexed_at": "2026-03-26T04:05:52.836008",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "09a1995a6b556ed4",
+        "indexed_at": "2026-03-26T04:05:53.009112",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "6d810b3a26c4941c",
+        "indexed_at": "2026-03-26T04:05:53.176083",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "58afb9a63cd2ea84",
+        "indexed_at": "2026-03-26T04:05:53.345369",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "d0771a9f0585fa3d",
+        "indexed_at": "2026-03-26T04:05:53.512139",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "7862c1a568dee66e",
+        "indexed_at": "2026-03-26T04:05:54.684991",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "6a6236ce8901298b",
+        "indexed_at": "2026-03-26T04:05:54.854015",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "ab2f32fa4273104a",
+        "indexed_at": "2026-03-26T04:05:55.019746",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "f1b6964fd73a792b",
+        "indexed_at": "2026-03-26T04:05:55.187468",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "3638841968f0da7f",
+        "indexed_at": "2026-03-26T04:05:55.385186",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "4b47174bc3e3ce3b",
+        "indexed_at": "2026-03-26T04:05:56.553789",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "bc83a274ebcba3bd",
+        "indexed_at": "2026-03-26T04:05:56.748472",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "34c0281492ca92ea",
+        "indexed_at": "2026-03-26T04:05:56.909181",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "7594f6eb5b78b64f",
+        "indexed_at": "2026-03-26T04:05:57.076481",
+        "auto_tagged": true
+      },
+      {
+        "doc_id": "e81fa7becc8f702f",
+        "indexed_at": "2026-03-26T04:05:57.243613",
+        "auto_tagged": true
+      }
+    ],
+    "validation_errors": {
+      "Field 'source_type' has invalid value 'conversation'. Allowed": 9,
+      "Field 'document_type' has invalid value 'chat_log'. Allowed": 5,
+      "Field 'category' has invalid value 'conversation'. Allowed": 5,
+      "Missing required field": 450,
+      "Field 'source_type' has invalid value 'project_discussion'. Allowed": 79,
+      "Field 'category' has invalid value 'project_docs'. Allowed": 150,
+      "Field 'source_type' has invalid value 'technical_explanation'. Allowed": 34,
+      "Field 'source_type' has invalid value 'json_data'. Allowed": 19,
+      "Field 'source_type' has invalid value 'document_content'. Allowed": 9,
+      "Field 'source_type' has invalid value 'unknown'. Allowed": 2
+    },
+    "indexing_performance": []
+  },
+  "health_score": {
+    "overall": 48.8,
+    "components": {
+      "auto_tagging": 31.25,
+      "schema_compliance": 23.625,
+      "diversity": 100,
+      "activity": 100
+    },
+    "grades": {
+      "auto_tagging": "F",
+      "schema_compliance": "F",
+      "diversity": "A",
+      "activity": "A"
+    }
+  }
+}

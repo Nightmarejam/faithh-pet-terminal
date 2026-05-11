@@ -1,0 +1,327 @@
+{
+  "timestamp": "2026-01-19T13:33:24.807609",
+  "results": [
+    {
+      "model": "llama31-faithh:latest",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            11.880609512329102,
+            0.19307231903076172,
+            0.19964814186096191
+          ],
+          "tokens_per_second": [
+            0.8417076573068495,
+            41.43525099900717,
+            40.07049565014898
+          ],
+          "passed": true,
+          "sample_response": "Hello, how can I assist you today?",
+          "avg_time": 4.091109991073608,
+          "min_time": 0.19307231903076172,
+          "max_time": 11.880609512329102,
+          "avg_tps": 27.449151435487664
+        },
+        {
+          "name": "count",
+          "times": [
+            0.35102248191833496,
+            0.3538546562194824,
+            0.3748810291290283
+          ],
+          "tokens_per_second": [
+            54.12758720229302,
+            53.69436198181615,
+            50.68274605451025
+          ],
+          "passed": true,
+          "sample_response": "Here it goes:\n\n1, 2, 3, 4, 5!",
+          "avg_time": 0.35991938908894855,
+          "min_time": 0.35102248191833496,
+          "max_time": 0.3748810291290283,
+          "avg_tps": 52.83489841287314
+        }
+      ],
+      "total_time": 13.353088140487671,
+      "avg_time": 2.2255146900812783,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "model": "llama31-faithh:latest",
+      "test": "reasoning",
+      "test_name": "Reasoning Test",
+      "prompts": [
+        {
+          "name": "logic_puzzle",
+          "times": [
+            1.839507818222046
+          ],
+          "tokens_per_second": [
+            67.95295935236483
+          ],
+          "passed": true,
+          "sample_response": "Let's break it down step by step:\n\n1. The farmer starts with 17 sheep.\n2. \"All but 9\" means that only 9 sheep did not run away, so these are the ones left behind.\n3. To find out how many sheep the farmer has left, we need to subtract the number of sheep that ran away from the total number of sheep.\n\nSince all but 9 sheep ran away, it means that 17 - 9 = 8 sheep did not run away (i.e., they are still with the farmer).\n\nTherefore, the farmer has **8** sheep left.",
+          "avg_time": 1.839507818222046,
+          "min_time": 1.839507818222046,
+          "max_time": 1.839507818222046,
+          "avg_tps": 67.95295935236483
+        },
+        {
+          "name": "sequence",
+          "times": [
+            2.079120397567749
+          ],
+          "tokens_per_second": [
+            73.10783934293397
+          ],
+          "passed": false,
+          "sample_response": "A nice sequence!\n\nAfter analyzing the given numbers, I notice that each term is increasing by a certain amount:\n\n* From 2 to 6, the increase is +4.\n* From 6 to 12, the increase is +6.\n* From 12 to 20, the increase is +8.\n* From 20 to 30, the increase is +10.\n\nDo you see the pattern? The increases are consecutive even numbers (+4, +6, +8, +10).\n\nIf this pattern continues, the next increase should be +12. Therefore, I predict that the next term in the sequence will be:\n\n2 + 12 = 14\n\nSo, the answer",
+          "avg_time": 2.079120397567749,
+          "min_time": 2.079120397567749,
+          "max_time": 2.079120397567749,
+          "avg_tps": 73.10783934293397
+        },
+        {
+          "name": "planning",
+          "times": [
+            2.0611941814422607
+          ],
+          "tokens_per_second": [
+            72.28819164225546
+          ],
+          "passed": true,
+          "sample_response": "Here is the optimal order:\n\n1. **Get SSL cert**: You'll need it to secure your website and database connections later on.\n2. **Deploy Python app**: Your app will be serving over HTTPS, so you want to deploy it first with an unsecured connection (HTTP).\n3. **Set up a database**: Now that your app is deployed, create the database for it.\n4. **Configure DNS**: Point your domain name to the server hosting your app.\n\nThis order makes sense because:\n\n* You can't deploy your app securely without an SSL",
+          "avg_time": 2.0611941814422607,
+          "min_time": 2.0611941814422607,
+          "max_time": 2.0611941814422607,
+          "avg_tps": 72.28819164225546
+        }
+      ],
+      "total_time": 5.979822397232056,
+      "avg_time": 1.9932741324106853,
+      "passed": 2,
+      "failed": 1
+    },
+    {
+      "model": "llama31-faithh:latest",
+      "test": "coding",
+      "test_name": "Coding Test",
+      "prompts": [
+        {
+          "name": "function_gen",
+          "times": [
+            2.6315371990203857
+          ],
+          "tokens_per_second": [
+            71.82113939729106
+          ],
+          "passed": true,
+          "sample_response": "Here is the code:\n\n```python\ndef find_duplicates(input_list: list) -> list:\n    \"\"\"\n    This function finds and returns all duplicate elements in a given list.\n\n    Args:\n        input_list (list): The input list to search for duplicates.\n\n    Returns:\n        list: A list of duplicate elements found in the input list.\n    \"\"\"\n    seen = set()\n    duplicates = set()\n    for item in input_list:\n        if item in seen and item not in duplicates:\n            duplicates.add(item)\n        elif item ",
+          "avg_time": 2.6315371990203857,
+          "min_time": 2.6315371990203857,
+          "max_time": 2.6315371990203857,
+          "avg_tps": 71.82113939729106
+        },
+        {
+          "name": "bug_fix",
+          "times": [
+            0.5945544242858887
+          ],
+          "tokens_per_second": [
+            63.913408845020854
+          ],
+          "passed": true,
+          "sample_response": "```python\ndef factorial(n):\n    if n == 0:  # change '=' to '=='\n        return 1\n    return n * factorial(n-1)\n```",
+          "avg_time": 0.5945544242858887,
+          "min_time": 0.5945544242858887,
+          "max_time": 0.5945544242858887,
+          "avg_tps": 63.913408845020854
+        },
+        {
+          "name": "explain_code",
+          "times": [
+            1.0887973308563232
+          ],
+          "tokens_per_second": [
+            65.20956470765734
+          ],
+          "passed": true,
+          "sample_response": "This code uses a technique called list comprehension to create a new list `result` containing the squares of even numbers from 0 to 9. It iterates over the range of numbers 0 through 9, checks if each number is even (i.e., divisible by 2), and if so, includes its square in the resulting list.",
+          "avg_time": 1.0887973308563232,
+          "min_time": 1.0887973308563232,
+          "max_time": 1.0887973308563232,
+          "avg_tps": 65.20956470765734
+        }
+      ],
+      "total_time": 4.314888954162598,
+      "avg_time": 1.4382963180541992,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "model": "qwen3-faithh:latest",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            17.74275541305542,
+            0.5515377521514893,
+            0.5225656032562256
+          ],
+          "tokens_per_second": [
+            0.619971348526059,
+            90.65562566652127,
+            95.68176643934959
+          ],
+          "passed": true,
+          "sample_response": " Hi there! How can I help you today?",
+          "avg_time": 6.272286256154378,
+          "min_time": 0.5225656032562256,
+          "max_time": 17.74275541305542,
+          "avg_tps": 62.31912115146564
+        },
+        {
+          "name": "count",
+          "times": [
+            0.3901197910308838,
+            0.3433358669281006,
+            0.3482236862182617
+          ],
+          "tokens_per_second": [
+            76.89945675589951,
+            87.37799597932023,
+            86.15152037991011
+          ],
+          "passed": true,
+          "sample_response": " Then count backwards from 5 to 1. What do you notice about the numbers?\n\nWhen you count from 1 to 5, you",
+          "avg_time": 0.36055978139241535,
+          "min_time": 0.3433358669281006,
+          "max_time": 0.3901197910308838,
+          "avg_tps": 83.47632437170995
+        }
+      ],
+      "total_time": 19.89853811264038,
+      "avg_time": 3.3164230187733965,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "model": "qwen3-faithh:latest",
+      "test": "reasoning",
+      "test_name": "Reasoning Test",
+      "prompts": [
+        {
+          "name": "logic_puzzle",
+          "times": [
+            2.2970423698425293
+          ],
+          "tokens_per_second": [
+            87.06848538179587
+          ],
+          "passed": true,
+          "sample_response": " Let's solve the problem step by step:\n\n**Problem:**  \n*A farmer has 17 sheep. All but 9 run away. How many sheep does the farmer have left?*\n\n---\n\n### Step 1: Understand the statement \"All but 9 run away.\"\n\nThis phrase means:  \n- \"All\" of the sheep ran away, **except** 9.\n\nIn other words, **9 sheep did NOT run away**.  \nSo, the 9 sheep are still with the farmer.\n\n---\n\n### Step 2: Determine how many are left.\n\nIf 9 sheep did not run away, then the farmer still has **9 sheep**.\n\n---\n\n### Step 3: ",
+          "avg_time": 2.2970423698425293,
+          "min_time": 2.2970423698425293,
+          "max_time": 2.2970423698425293,
+          "avg_tps": 87.06848538179587
+        },
+        {
+          "name": "sequence",
+          "times": [
+            2.024742603302002
+          ],
+          "tokens_per_second": [
+            98.77798771746833
+          ],
+          "passed": true,
+          "sample_response": " Additionally, what comes next in this sequence: 1, 2, 3, 4, 5, ? Explain your reasoning.\n\nLet's analyze each sequence step by step.\n\nFor the first sequence: 2, 6, 12, 20, 30, ?\n\nWe observe the differences between consecutive terms:\n- 6 - 2 = 4\n- 12 - 6 = 6\n- 20 - 12 = 8\n- 30 - 20 = 10\n\nThe differences form an arithmetic sequence: 4, 6, 8, 10, with a common difference of 2. Therefore, the next difference should be 12.\n\nAdding 12 to the last term (30):\n30 + 12 = 42\n\nSo, the next term in the seque",
+          "avg_time": 2.024742603302002,
+          "min_time": 2.024742603302002,
+          "max_time": 2.024742603302002,
+          "avg_tps": 98.77798771746833
+        },
+        {
+          "name": "planning",
+          "times": [
+            2.9853105545043945
+          ],
+          "tokens_per_second": [
+            100.49205753396213
+          ],
+          "passed": true,
+          "sample_response": " Optimal order:  \n1) **Deploy a Python app** \u2013 Establish the baseline infrastructure.  \n2) **Set up a database** \u2013 Ensure app can connect to persistent data.  \n3) **Configure DNS** \u2013 Point domain to your server\u2019s IP.  \n4) **Get SSL cert** \u2013 Secure traffic; requires DNS to be resolved (for validation).  \n\n**Why?**  \nDNS must resolve before SSL can be issued (ACME challenges require domain validation). The app and DB should be ready before DNS points to them. SSL is the final step to secure the co",
+          "avg_time": 2.9853105545043945,
+          "min_time": 2.9853105545043945,
+          "max_time": 2.9853105545043945,
+          "avg_tps": 100.49205753396213
+        }
+      ],
+      "total_time": 7.307095527648926,
+      "avg_time": 2.4356985092163086,
+      "passed": 3,
+      "failed": 0
+    },
+    {
+      "model": "qwen3-faithh:latest",
+      "test": "coding",
+      "test_name": "Coding Test",
+      "prompts": [
+        {
+          "name": "function_gen",
+          "times": [
+            2.9974241256713867
+          ],
+          "tokens_per_second": [
+            100.08593626462643
+          ],
+          "passed": true,
+          "sample_response": "\n\n```python\nfrom typing import List, Any\n\ndef find_duplicates(lst: List[Any]) -> List[Any]:\n    \"\"\"\n    Returns a list of elements that appear more than once in the input list.\n    \n    Args:\n        lst: A list of elements (can be of any type).\n    \n    Returns:\n        A list containing the duplicate elements, in the order they first appear as duplicates.\n    \"\"\"\n    seen = set()\n    duplicates = set()\n    \n    for item in lst:\n        if item in seen:\n            duplicates.add(item)\n        ",
+          "avg_time": 2.9974241256713867,
+          "min_time": 2.9974241256713867,
+          "max_time": 2.9974241256713867,
+          "avg_tps": 100.08593626462643
+        },
+        {
+          "name": "bug_fix",
+          "times": [
+            0.4748992919921875
+          ],
+          "tokens_per_second": [
+            71.59412653021882
+          ],
+          "passed": true,
+          "sample_response": " Do not explain.\n\n```python\ndef factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n-1)\n```",
+          "avg_time": 0.4748992919921875,
+          "min_time": 0.4748992919921875,
+          "max_time": 0.4748992919921875,
+          "avg_tps": 71.59412653021882
+        },
+        {
+          "name": "explain_code",
+          "times": [
+            1.020458459854126
+          ],
+          "tokens_per_second": [
+            90.1555561734001
+          ],
+          "passed": true,
+          "sample_response": " This code creates a list of squares of even numbers from 0 to 9. It uses a list comprehension to iterate through `range(10)`, checks if each number `x` is even (`x % 2 == 0`), and includes `x**2` in the resulting list only if the condition is true. The result is `[0, 4, 16, 36, 64]`.",
+          "avg_time": 1.020458459854126,
+          "min_time": 1.020458459854126,
+          "max_time": 1.020458459854126,
+          "avg_tps": 90.1555561734001
+        }
+      ],
+      "total_time": 4.4927818775177,
+      "avg_time": 1.4975939591725667,
+      "passed": 3,
+      "failed": 0
+    }
+  ]
+}

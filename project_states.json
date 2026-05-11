@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-01",
+  "last_updated": "2026-04-12",
   "timezone": "America/Los_Angeles",
   "strategic_plan": {
     "vision": "Build systems that serve people well while maintaining harmonic alignment across life domains",
@@ -10,14 +10,15 @@
     "domains": {
       "technical": {
         "name": "FAITHH Development",
-        "year_1_goal": "Complete Phase 4 production hardening",
+        "year_1_goal": "\u2705 Phase 4 Complete - Prepare for Phase 5 & Family Deployment",
         "year_3_target": "100+ active users",
-        "current_status": "Phase 3 Complete, starting Phase 4",
+        "current_status": "Phase 4 Complete - Production Hardening & AI Optimization",
         "q1_2026_priorities": [
-          "RAG sources display fix",
-          "Chat persistence implementation",
-          "VS Code extension scaffolding",
-          "Strategic review system integration"
+          "\u2705 Phase 4 Security & Performance Systems",
+          "\u2705 Local AI Optimization Implementation",
+          "\u2705 Single-User Deployment Optimization",
+          "\ud83d\udd04 Family Deployment Preparation",
+          "\ud83d\udccb Phase 5 Advanced Features Planning"
         ]
       },
       "business": {
@@ -58,8 +59,18 @@
       }
     },
     "resource_allocation": {
-      "time_target": {"FAITHH": 30, "Business": 40, "Constella": 15, "Personal": 15},
-      "financial_target": {"Reinvestment": 50, "Infrastructure": 20, "Living": 20, "Civic": 10}
+      "time_target": {
+        "FAITHH": 30,
+        "Business": 40,
+        "Constella": 15,
+        "Personal": 15
+      },
+      "financial_target": {
+        "Reinvestment": 50,
+        "Infrastructure": 20,
+        "Living": 20,
+        "Civic": 10
+      }
     },
     "coherence_tracking": {
       "last_quarterly_review": "Pending Q1 2026 review",
@@ -88,9 +99,9 @@
       ],
       "infrastructure": {
         "backend": "faithh_professional_backend_fixed.py on localhost:5557 (WSL2)",
-        "database": "ChromaDB on Gen8 (100.79.85.32:8000)",
+        "database": "ChromaDB on Gen8 (192.158.1.243:8000)",
         "collection": "faithh_knowledge_base",
-        "chunks_indexed": 37000,
+        "chunks_indexed": 53976,
         "embedding": "all-MiniLM-L6-v2 (384-dim)",
         "chunking": "1500 chars with 200 char overlap",
         "breakdown": {
@@ -114,15 +125,15 @@
         "Consider adding recent life context (Mexico, permaculture, FGS updates)"
       ],
       "recent_completions": [
-        "Qwen 2.5 14B grounding fine-tune deployed (1914 examples, 16 categories) — Feb 18, 2026",
-        "Chat template conflict resolved - qwen25-grounded fully operational — Feb 18, 2026",
-        "UI integration complete - qwen25-grounded set as default model — Feb 18, 2026",
-        "Chip synthesis refresh with 37K chunks + auto-resync — Feb 17, 2026",
-        "Grounding fine-tune infrastructure complete (llama31-grounded) — Feb 16, 2026",
-        "Knowledge Distiller v2 implemented for conversation insights — Feb 15, 2026",
-        "Context injection system built (generate_context.py, CONTEXT.md) — Feb 4, 2026",
-        "First framing snapshot created — Feb 4, 2026",
-        "Systems map created (SYSTEMS_MAP.md) — Feb 7, 2026"
+        "Qwen 2.5 14B grounding fine-tune deployed (1914 examples, 16 categories) \u2014 Feb 18, 2026",
+        "Chat template conflict resolved - qwen25-grounded fully operational \u2014 Feb 18, 2026",
+        "UI integration complete - qwen25-grounded set as default model \u2014 Feb 18, 2026",
+        "Chip synthesis refresh with 37K chunks + auto-resync \u2014 Feb 17, 2026",
+        "Grounding fine-tune infrastructure complete (llama31-grounded) \u2014 Feb 16, 2026",
+        "Knowledge Distiller v2 implemented for conversation insights \u2014 Feb 15, 2026",
+        "Context injection system built (generate_context.py, CONTEXT.md) \u2014 Feb 4, 2026",
+        "First framing snapshot created \u2014 Feb 4, 2026",
+        "Systems map created (SYSTEMS_MAP.md) \u2014 Feb 7, 2026"
       ]
     },
     "gen8_services": {
@@ -165,7 +176,10 @@
         },
         "gitea": {
           "status": "running",
-          "ports": {"http": 3002, "ssh": 2222},
+          "ports": {
+            "http": 3002,
+            "ssh": 2222
+          },
           "url": "http://192.158.1.243:3002",
           "deployed": "2026-01-20",
           "notes": "Git repository hosting with GitHub OAuth"
@@ -185,7 +199,10 @@
           "web_port": 80,
           "web_url": "http://192.158.1.243/admin",
           "credentials": "admin/PiHole2026!",
-          "upstream_dns": ["1.1.1.1", "8.8.8.8"],
+          "upstream_dns": [
+            "1.1.1.1",
+            "8.8.8.8"
+          ],
           "deployed": "2025-12-20",
           "notes": "Production DNS filtering"
         },
@@ -198,7 +215,10 @@
         },
         "docker_registry": {
           "status": "running",
-          "ports": {"registry": 5000, "ui": 5001},
+          "ports": {
+            "registry": 5000,
+            "ui": 5001
+          },
           "url": "http://192.158.1.243:5001",
           "deployed": "2026-01-20",
           "notes": "Private Docker image repository"
@@ -248,8 +268,8 @@
         "Grant research and applications"
       ],
       "recent_work": [
-        "2024 tax package COMPLETED — CPA_PACKAGE_2024/ (Jan 26, 2026)",
-        "NAS setup for partner access — /mnt/z/Business/TomCatSound_LLC/2024_Tax_Filing/",
+        "2024 tax package COMPLETED \u2014 CPA_PACKAGE_2024/ (Jan 26, 2026)",
+        "NAS setup for partner access \u2014 /mnt/z/Business/TomCatSound_LLC/2024_Tax_Filing/",
         "Equipment inventory: 192 items cataloged",
         "Bank transactions: 1,058 extracted from Chase/SoFi PDFs",
         "Net operating loss: ~$10,509.90 (deductions for all partners)",
@@ -275,14 +295,14 @@
       "name": "Floating Garden Soundworks (FGS)",
       "category": "Business / Vision Project",
       "status": "planning",
-      "phase": "Pre-Phase 1 — Data Aggregation",
+      "phase": "Pre-Phase 1 \u2014 Data Aggregation",
       "phase_status": "in_progress",
       "summary": "Long-horizon vision for a physical recording studio + artist retreat + research facility inspired by Breitenbush Hot Springs and Japanese onsen tradition. Cymatics-informed acoustic design, earth bermed structures, geothermal potential. Connected to Tom Cat Sound LLC but likely a separate entity.",
       "location": "projects/tomcat-sound/08_floating_garden/",
       "key_documents": [
-        "FGS_Master_Data_Aggregation.md — living planning document",
-        "FGS_Ideal_Site_Criteria_v1.0.md — site requirements",
-        "Floating Garden Soundworks - Business Plan Launch Pad.pdf — foundation doc"
+        "FGS_Master_Data_Aggregation.md \u2014 living planning document",
+        "FGS_Ideal_Site_Criteria_v1.0.md \u2014 site requirements",
+        "Floating Garden Soundworks - Business Plan Launch Pad.pdf \u2014 foundation doc"
       ],
       "triggers_for_final_plan": [
         "Tom Cat Sound LLC clean (1065 filed, operating agreement functioning)",
@@ -314,23 +334,23 @@
       "status": "conceptual",
       "phase": "Architecture Design",
       "phase_status": "in_progress",
-      "summary": "A high-reasoning companion intelligence that serves as the journal's inner monologue and eventual seed of an artificial life program. Distinct from FAITHH (which handles task coherence) — IME handles reflective synthesis, pattern recognition across life domains, and the long accumulation of authentic human reasoning that will inform artificial life design.",
+      "summary": "A high-reasoning companion intelligence that serves as the journal's inner monologue and eventual seed of an artificial life program. Distinct from FAITHH (which handles task coherence) \u2014 IME handles reflective synthesis, pattern recognition across life domains, and the long accumulation of authentic human reasoning that will inform artificial life design.",
       "architecture_foundation": [
         "Resonance Transformer Architecture (resonance_transformer_architecture_spec_v1.0.0.md)",
-        "Resonance Gating — pre-generation evaluation protocol (resonance_gating_architecture_note_v1.0.md)",
+        "Resonance Gating \u2014 pre-generation evaluation protocol (resonance_gating_architecture_note_v1.0.md)",
         "Harmony AI Bridge (harmony_ai_bridge_v1.0.0.md)"
       ],
       "key_properties": [
-        "Local-first — works on modest hardware, no cloud dependency",
-        "High reasoning — 70B model for inner monologue synthesis",
-        "Resonance gating — refuses premature synthesis, waits for sufficient data",
-        "Journal-grounded — feeds from weekly synthesis entries, not task logs",
-        "Transparent — all reasoning visible, no hidden state"
+        "Local-first \u2014 works on modest hardware, no cloud dependency",
+        "High reasoning \u2014 70B model for inner monologue synthesis",
+        "Resonance gating \u2014 refuses premature synthesis, waits for sufficient data",
+        "Journal-grounded \u2014 feeds from weekly synthesis entries, not task logs",
+        "Transparent \u2014 all reasoning visible, no hidden state"
       ],
       "relationship_to_faithh": "FAITHH handles project coherence and task context. IME handles reflective synthesis and life pattern recognition. They share the same knowledge base but serve different purposes.",
       "relationship_to_journal": "Journal entries are the primary input. IME reads accumulated entries and synthesizes patterns over time, eventually producing the design principles for artificial life.",
       "current_blockers": [
-        "No C++ implementation exists yet — architecture is specced but not built",
+        "No C++ implementation exists yet \u2014 architecture is specced but not built",
         "Journal synthesis pipeline not yet operational",
         "Need 3+ months of weekly journal entries before pattern extraction is meaningful"
       ],
@@ -371,6 +391,37 @@
         "Document framework patterns",
         "Test coherence detection in real workflows"
       ]
+    },
+    "alife": {
+      "name": "ALIFE (Artificial Life Simulation)",
+      "category": "Research / AI development",
+      "status": "active",
+      "phase": "Experiments 0-9 complete (canonical series + Track B stress tests)",
+      "phase_status": "complete",
+      "summary": "Python ALife simulation in projects/alife/. Canonical series Exps 0-4 documented in ALIFE_FINDINGS.md. Track B: Exp 5 parasitic emergence (collapsed tick 10,039, drain=1.5). Exp 6 unconditional UCF worsened baseline (collapsed tick 7,410). Exp 7 gated UCF + Penumbra: full 50,000-tick survival via strategy escape (final population 1,330). Exp 8b founding-diversity isolation: Cond 3 survived 50K (Pattern 7: early diversity load-bearing, drift fragile). Exp 9 diversity-floor (drift-proof floor) completed full run: no collapse, final population 1,111, strategy_escape_tick 26,947, 64 floor activations (genomic_results/exp9_diversity_floor_results.json). Cross-experiment patterns and Constella links: docs/constella_stress_tests/ALIFE_FINDINGS.md (Patterns 1-8; Exp 9 narrative merged 2026-03-30).",
+      "location": "projects/alife/",
+      "key_findings": [
+        "Exps 0-4: baseline through harmonic interference (anticipation, spatial niches) per ALIFE_FINDINGS.md",
+        "Exp 5: parasitic/toxin emergence; collapse at tick 10,039 under adaptive predator (drain=1.5)",
+        "Exp 6: unconditional UCF caused overshoot; collapse at tick 7,410 (earlier than no-floor baseline)",
+        "Exp 7: gated UCF; 50K-tick survival, strategy escape, predator de-adaptation, final pop 1,330",
+        "Exp 8b: founding-window effect; oscillating equilibrium then defender drift (Pattern 7)",
+        "Exp 9: diversity-floor run complete - survived full 50K-tick run, final pop 1,111, floor_activations=64, strategy_escape_tick=26947"
+      ],
+      "infrastructure": {
+        "simulation": "Python, projects/alife/",
+        "observer": "faithh_observer.py \u2192 ChromaDB alife_lineage collection",
+        "chroma_collection": "alife_lineage",
+        "chroma_documents": "50000+",
+        "findings_document": "docs/constella_stress_tests/ALIFE_FINDINGS.md",
+        "next_phase": "UCF gate calibration queue; TempleOS/QEMU port; lineage training pipeline"
+      },
+      "next_steps": [
+        "Run Exp 8 gate calibration (2000-5000 ticks) per ALIFE_FINDINGS experiment queue",
+        "Build training pipeline from alife_lineage ChromaDB data",
+        "Port simulation to Gen8 QEMU / TempleOS when scoped",
+        "Refresh Constella evidence mapping from Track B earned findings"
+      ]
     }
   },
   "meta": {
@@ -389,12 +440,21 @@
     "ssh_access": {
       "gen8": "ssh -i ~/.ssh/servicebox_ed25519 jonat@100.79.85.32"
     },
-    "generated_at_utc": "2026-02-07T08:46:00+00:00",
-    "generator": "scripts/maintenance/update_project_states.py"
+    "generated_at_utc": "2026-03-25T19:57:00+00:00",
+    "generator": "scripts/maintenance/update_project_states.py",
+    "doc_update_queue": {
+      "queue_file": "project_states.json",
+      "queue_key": "doc_update_queue",
+      "scripts": {
+        "add": "scripts/queue_doc_update.py",
+        "from_staleness": "scripts/staleness_to_queue.py"
+      },
+      "session_hook": "At session start, run: python3 scripts/queue_doc_update.py list"
+    }
   },
   "services": {
     "faithh_backend_url": "http://127.0.0.1:5557",
-    "chroma_url": "http://100.79.85.32:8000",
+    "chroma_url": "http://192.158.1.243:8000",
     "chroma_heartbeat": {
       "ok": true,
       "endpoint": "/api/v2/heartbeat",
@@ -417,6 +477,544 @@
       "path": "projects/constella-framework/docs/celestial-equilibrium",
       "sha": "7144ebb608b4289e028260b290b11a9a986052b1",
       "extra": "(v1.0.0-3-g7144ebb)"
+    }
+  ],
+  "doc_update_queue": [
+    {
+      "path": "docs/architecture/API_INTEGRATION_HARDENING.md",
+      "tier": "critical",
+      "reason": "Getting stale (51d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/architecture/CHROMADB_API_VERSION_ISSUES.md",
+      "tier": "critical",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/architecture/INFRASTRUCTURE.md",
+      "tier": "critical",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/architecture/SYSTEM_OVERVIEW.md",
+      "tier": "critical",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/CLAUDE_DESKTOP_MCP.md",
+      "tier": "reference",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/COHERENCE_SIGNAL.md",
+      "tier": "reference",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/DEV_ENVIRONMENT.md",
+      "tier": "reference",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/DIAGNOSTICS.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/GIT_WORKFLOW.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/IMAGE_GENERATION.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/MONITORING_SETUP.md",
+      "tier": "reference",
+      "reason": "Getting stale (40d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/guides/SSH_AND_NETWORKING.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/reference/BATTLE_CHIP_PROMPTS.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/reference/CONSTELLA.md",
+      "tier": "reference",
+      "reason": "Getting stale (53d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/reference/HARDWARE_INVENTORY.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/reference/IDEA_VAULT.md",
+      "tier": "reference",
+      "reason": "Getting stale (53d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/reference/LIFE_MAP.md",
+      "tier": "reference",
+      "reason": "Getting stale (53d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/reference/MODEL_INVENTORY.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/reference/UI_MODEL_INTEGRATION.md",
+      "tier": "reference",
+      "reason": "Getting stale (52d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/business/PORTFOLIO_OVERVIEW.md",
+      "tier": "reference",
+      "reason": "Getting stale (53d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/business/TAX_GUIDE.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/business/TOMCAT_DASHBOARD.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/AI_CONTEXT_INJECTION.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/CHAT_UX_BEST_PRACTICES.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/CHAT_UX_RESEARCH.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/CHIP_SYNERGY.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/EVOLUTIONARY_RESONANCE_CONVERSATION.md",
+      "tier": "reference",
+      "reason": "Getting stale (54d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/HARMONY_INSIGHTS.md",
+      "tier": "reference",
+      "reason": "Getting stale (53d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/LOCAL_LLM_GUIDE.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/PROJECT_DASHBOARD_DESIGN.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/research/PULSE_IMMUNE_SYSTEM.md",
+      "tier": "reference",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/ADVANCED_LOCAL_AI_OPTIMIZATION.md",
+      "tier": "archive",
+      "reason": "Getting stale (51d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/COMPASS_HARDENING_PLAN.md",
+      "tier": "archive",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/DESKTOP_COMMANDER_REINSTALL.md",
+      "tier": "archive",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/GROUNDING_FINETUNE.md",
+      "tier": "archive",
+      "reason": "Getting stale (53d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/LOCAL_70B_STRATEGY.md",
+      "tier": "archive",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/PASSIVE_COLLECTION_SPEC.md",
+      "tier": "archive",
+      "reason": "Getting stale (53d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/PHASE2_IMPLEMENTATION_CHECKLIST.md",
+      "tier": "archive",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/PHASE3_COMPLETE_PHASE4_ROADMAP.md",
+      "tier": "archive",
+      "reason": "Getting stale (51d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/PHASE4_COHERENCE_ADVANCED_2026-02-23.md",
+      "tier": "archive",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/PULSE_REFLECTION_ENGINE.md",
+      "tier": "archive",
+      "reason": "Getting stale (54d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/VLLM_MIGRATION.md",
+      "tier": "archive",
+      "reason": "Getting stale (40d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/VSCODE_EXTENSION_ROADMAP.md",
+      "tier": "archive",
+      "reason": "Getting stale (55d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/WINDOWS_DEPENDENCIES_HANDOFF.md",
+      "tier": "archive",
+      "reason": "Getting stale (46d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/roadmaps/WORK_TREE.md",
+      "tier": "archive",
+      "reason": "Getting stale (40d)",
+      "triggered_by": "staleness_report",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "scaffolding_state.json",
+      "tier": "critical",
+      "reason": "Stale since Feb 2026 \u2014 chip synthesis rebuilt, 53974 docs, Phase 2 tracking live, browser UI working",
+      "triggered_by": "8354808",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "docs/architecture/FAITHH_UI_COMPONENT_MAP.md",
+      "tier": "critical",
+      "reason": "api_chat changed: SSE bytes fix, CORS PNA, Phase 2 7-tuple return",
+      "triggered_by": "8354808",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "MASTER_CONTEXT.md",
+      "tier": "critical",
+      "reason": "Still dated 2026-03-25, needs today's session reflected",
+      "triggered_by": "8354808",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null
+    },
+    {
+      "path": "runbook://recovering-stranded-database-and-consolidating-git-commits-f71cb983",
+      "tier": "reference",
+      "reason": "Conversation 'Recovering stranded database and consolidating git commits' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "done",
+      "completed": "2026-04-12",
+      "entry_type": "runbook_candidate",
+      "conversation_title": "Recovering stranded database and consolidating git commits",
+      "conversation_id": "f71cb983-ccda-4216-bc9b-09ddd7a84d7a",
+      "suggested_query": "Recovering stranded database and consolidating git commits documented procedure outcomes verification"
+    },
+    {
+      "path": "runbook://breitenbush-cooperative-job-application-fit-61405bf6",
+      "tier": "reference",
+      "reason": "Conversation 'Breitenbush cooperative job application fit' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null,
+      "entry_type": "runbook_candidate",
+      "conversation_title": "Breitenbush cooperative job application fit",
+      "conversation_id": "61405bf6-045d-498e-9912-611114568eb0",
+      "suggested_query": "Breitenbush cooperative job application fit documented procedure outcomes verification"
+    },
+    {
+      "path": "runbook://company-compliance-checklist-with-evidence-0ceb1607",
+      "tier": "reference",
+      "reason": "Conversation 'Company compliance checklist with evidence' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null,
+      "entry_type": "runbook_candidate",
+      "conversation_title": "Company compliance checklist with evidence",
+      "conversation_id": "0ceb1607-0a58-4248-baaa-8a386fd9c241",
+      "suggested_query": "Company compliance checklist with evidence documented procedure outcomes verification"
+    },
+    {
+      "path": "runbook://civic-governance-framework-design-8c474ccf",
+      "tier": "reference",
+      "reason": "Conversation 'Civic Governance Framework Design' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null,
+      "entry_type": "runbook_candidate",
+      "conversation_title": "Civic Governance Framework Design",
+      "conversation_id": "8c474ccf-599d-4479-ba43-550506ef86cf",
+      "suggested_query": "Civic Governance Framework Design documented procedure outcomes verification"
+    },
+    {
+      "path": "runbook://rag-fallback-parallel-chips-695619f7",
+      "tier": "reference",
+      "reason": "Conversation 'RAG Fallback & Parallel Chips' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "done",
+      "completed": "2026-04-12",
+      "entry_type": "runbook_candidate",
+      "conversation_title": "RAG Fallback & Parallel Chips",
+      "conversation_id": "695619f7-2e98-8330-8dad-f40aaf2552b8",
+      "suggested_query": "RAG Fallback & Parallel Chips documented procedure outcomes verification"
+    },
+    {
+      "path": "runbook://handoff-documentation-with-sonnet-and-faithh-ffd42526",
+      "tier": "reference",
+      "reason": "Conversation 'Handoff documentation with Sonnet and Faithh' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null,
+      "entry_type": "runbook_candidate",
+      "conversation_title": "Handoff documentation with Sonnet and Faithh",
+      "conversation_id": "ffd42526-2006-4c23-976c-10368d2c723a",
+      "suggested_query": "Handoff documentation with Sonnet and Faithh documented procedure outcomes verification"
+    },
+    {
+      "path": "runbook://digital-world-atlas-project-concept-de2aea49",
+      "tier": "reference",
+      "reason": "Conversation 'Digital world atlas project concept' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null,
+      "entry_type": "runbook_candidate",
+      "conversation_title": "Digital world atlas project concept",
+      "conversation_id": "de2aea49-e8f2-43a6-b259-f0c11e050f25",
+      "suggested_query": "Digital world atlas project concept documented procedure outcomes verification"
+    },
+    {
+      "path": "runbook://continuing-a-previous-conversation-4f3c69cb",
+      "tier": "reference",
+      "reason": "Conversation 'Continuing a previous conversation' looks like a completed run \u2014 candidate for runbook seeding",
+      "triggered_by": "discover_runbook_candidates",
+      "added": "2026-04-12",
+      "status": "pending",
+      "completed": null,
+      "entry_type": "runbook_candidate",
+      "conversation_title": "Continuing a previous conversation",
+      "conversation_id": "4f3c69cb-ef3e-4e6a-abc5-54c3faf675c2",
+      "suggested_query": "Continuing a previous conversation documented procedure outcomes verification"
     }
   ]
 }
