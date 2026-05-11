@@ -28,3 +28,4 @@ test_*.json
 send_*.py
 .DS_Store
 Thumbs.db
+knowledge_base/
