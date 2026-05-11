@@ -1,0 +1,70 @@
+# ============================================================
+# .cursorindexingignore — FAITHH ai-stack
+# Controls ONLY what gets indexed for search/context.
+# Files here can still be manually referenced or edited by agent.
+# Use this for large-but-sometimes-useful files.
+# ============================================================
+
+# ── Governance & Reference Corpus ────────────────────────────
+# Large markdown/text corpora — exclude from auto-index,
+# but you can still @-reference specific files manually
+docs/corpus/
+docs/raw/
+governance/raw/
+knowledge_base/
+archive/
+
+# ── Jupyter Notebooks ────────────────────────────────────────
+# Often large, output-heavy, and noisy for semantic search
+*.ipynb
+notebooks/
+
+# ── Test Fixtures & Snapshots ────────────────────────────────
+tests/fixtures/
+tests/snapshots/
+**/__snapshots__/
+
+# ── Generated / Auto-built Files ─────────────────────────────
+# Anything auto-generated shouldn't pollute semantic search
+generated/
+auto_generated/
+*_generated.py
+*_pb2.py
+**/coverage/
+coverage/
+.pytest_cache/
+
+# ── Migration Files ──────────────────────────────────────────
+migrations/
+alembic/versions/
+
+# ── Config Templates (keep the real configs accessible) ──────
+*.example
+*.sample
+*.template
+
+# ── Archives ─────────────────────────────────────────────────
+*.zip
+*.tar.gz
+*.tar.bz2
+*.7z
+*.gz
+
+# ── Media / Static Assets ────────────────────────────────────
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.mp4
+*.webm
+*.woff
+*.woff2
+*.ttf
+
+# ── High-volume data files (index noise) ─────────────────────
+*.jsonl
+*.parquet
+*.csv
+*.ndjson

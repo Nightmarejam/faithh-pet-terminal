@@ -18,15 +18,17 @@ CORS(app)  # Enable CORS for browser access
 
 # Configuration
 OLLAMA_HOST = "http://localhost:11434"
-CHROMA_HOST = "http://localhost:8000"
-CHROMA_COLLECTION = "documents"  # Your 91k documents collection
+CHROMA_HOST = os.environ.get("CHROMA_HOST") or os.environ.get("CHROMADB_HOST", "192.158.1.10")
+CHROMA_PORT = int(os.environ.get("CHROMA_PORT") or os.environ.get("CHROMADB_PORT", "8000"))
+CHROMA_COLLECTION = os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base")
 
 # Get the directory where this script is located
 BASE_DIR = Path(__file__).parent
 
 # Initialize ChromaDB client
 try:
-    chroma_client = chromadb.HttpClient(host="localhost", port=8000)
+    normalized_host = CHROMA_HOST.replace("http://", "").replace("https://", "").split(":")[0]
+    chroma_client = chromadb.HttpClient(host=normalized_host, port=CHROMA_PORT)
     collection = chroma_client.get_collection(name=CHROMA_COLLECTION)
     CHROMA_CONNECTED = True
     print(f"✅ ChromaDB connected: {collection.count()} documents available")
