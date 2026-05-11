@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAITHH — Mission Control</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap');
+
+  :root {
+    --bg:        #060a14;
+    --bg2:       #0b1220;
+    --bg3:       #0f1a2e;
+    --cyan:      #00f5ff;
+    --cyan-dim:  #00a8b5;
+    --green:     #00ff88;
+    --green-dim: #00994d;
+    --amber:     #ffaa00;
+    --amber-dim: #996600;
+    --red:       #ff3355;
+    --red-dim:   #991122;
+    --blue:      #4488ff;
+    --purple:    #aa44ff;
+    --text:      #c8deff;
+    --text-dim:  #5a7a9a;
+    --border:    #1a2f4a;
+    --glow-c:    0 0 20px rgba(0,245,255,0.3);
+    --glow-g:    0 0 20px rgba(0,255,136,0.3);
+    --glow-a:    0 0 20px rgba(255,170,0,0.3);
+    --glow-r:    0 0 20px rgba(255,51,85,0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Exo 2', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse at 20% 50%, rgba(0,100,255,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(0,245,255,0.04) 0%, transparent 50%),
+      linear-gradient(180deg, #060a14 0%, #080d1a 100%);
+  }
+
+  /* Scanline overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,0,0,0.08) 2px,
+      rgba(0,0,0,0.08) 4px
+    );
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  /* ── Header ── */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    background: rgba(0,245,255,0.02);
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .logo-icon {
+    width: 36px; height: 36px;
+    border: 2px solid var(--cyan);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Orbitron', monospace;
+    font-size: 14px; font-weight: 900;
+    color: var(--cyan);
+    box-shadow: var(--glow-c), inset 0 0 10px rgba(0,245,255,0.1);
+    animation: pulse-border 3s ease-in-out infinite;
+  }
+  @keyframes pulse-border {
+    0%, 100% { box-shadow: var(--glow-c), inset 0 0 10px rgba(0,245,255,0.1); }
+    50% { box-shadow: 0 0 30px rgba(0,245,255,0.5), inset 0 0 15px rgba(0,245,255,0.2); }
+  }
+  .logo-text {
+    font-family: 'Orbitron', monospace;
+    font-size: 18px; font-weight: 700;
+    color: var(--cyan);
+    letter-spacing: 3px;
+  }
+  .logo-sub {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .clock {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 13px;
+    color: var(--cyan-dim);
+    text-align: right;
+  }
+  .clock .time { font-size: 20px; color: var(--cyan); }
+
+  .status-pill {
+    display: flex; align-items: center; gap: 6px;
+    padding: 4px 12px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  .status-pill.online {
+    border-color: var(--green-dim);
+    color: var(--green);
+    background: rgba(0,255,136,0.05);
+  }
+  .status-pill .dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: blink 2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100% { opacity:1 } 50% { opacity:0.3 } }
+
+  /* ── Load bar ── */
+  .load-bar {
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--blue), var(--purple));
+    animation: load 1.2s ease-out forwards;
+    transform-origin: left;
+  }
+  @keyframes load { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+
+  /* ── Grid ── */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1px;
+    background: var(--border);
+    min-height: calc(100vh - 72px);
+  }
+
+  .panel {
+    background: var(--bg2);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: panel-in 0.4s ease-out both;
+  }
+  .panel:nth-child(1) { animation-delay: 0.1s; }
+  .panel:nth-child(2) { animation-delay: 0.2s; }
+  .panel:nth-child(3) { animation-delay: 0.3s; }
+  .panel:nth-child(4) { animation-delay: 0.4s; }
+  @keyframes panel-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Corner decorations */
+  .panel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 20px; height: 20px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+  .panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 20px; height: 20px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+
+  .panel-cyan::before, .panel-cyan::after { border-color: var(--cyan); }
+  .panel-green::before, .panel-green::after { border-color: var(--green); }
+  .panel-amber::before, .panel-amber::after { border-color: var(--amber); }
+  .panel-blue::before, .panel-blue::after { border-color: var(--blue); }
+
+  .panel-label {
+    font-family: 'Orbitron', monospace;
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .panel-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.2;
+  }
+
+  .panel-cyan .panel-label  { color: var(--cyan); }
+  .panel-green .panel-label { color: var(--green); }
+  .panel-amber .panel-label { color: var(--amber); }
+  .panel-blue .panel-label  { color: var(--blue); }
+
+  /* ── Panel 1: WHERE AM I ── */
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid var(--cyan-dim);
+    border-radius: 4px;
+    background: rgba(0,245,255,0.06);
+    font-family: 'Orbitron', monospace;
+    font-size: 13px;
+    color: var(--cyan);
+    margin-bottom: 16px;
+    box-shadow: var(--glow-c);
+  }
+
+  .last-session {
+    background: var(--bg3);
+    border-left: 2px solid var(--cyan-dim);
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    border-radius: 0 4px 4px 0;
+  }
+  .last-session .label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .last-session .value {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+  .loop-list { list-style: none; }
+  .loop-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    font-size: 12px;
+  }
+  .loop-item:last-child { border-bottom: none; }
+  .loop-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .loop-open .loop-dot   { background: var(--amber); }
+  .loop-parked .loop-dot { background: var(--text-dim); }
+  .loop-done .loop-dot   { background: var(--green); }
+  .loop-text { color: var(--text); line-height: 1.4; }
+  .loop-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .tag-open   { background: rgba(255,170,0,0.15); color: var(--amber); }
+  .tag-parked { background: rgba(90,120,150,0.2); color: var(--text-dim); }
+  .tag-done   { background: rgba(0,255,136,0.1); color: var(--green); }
+
+  /* ── Panel 2: SYSTEM HEALTH ── */
+  .metric-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-name {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+  }
+  .metric-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 12px;
+  }
+  .metric-ok    { color: var(--green); }
+  .metric-warn  { color: var(--amber); }
+  .metric-error { color: var(--red); }
+  .metric-info  { color: var(--cyan); }
+
+  .health-icon { font-size: 10px; }
+
+  .sync-score {
+    margin-top: 16px;
+    background: var(--bg3);
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+  }
+  .sync-score .score-num {
+    font-family: 'Orbitron', monospace;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1;
+  }
+  .sync-score .score-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    letter-spacing: 2px;
+    margin-top: 4px;
+  }
+  .score-bar {
+    height: 4px;
+    background: var(--bg);
+    border-radius: 2px;
+    margin-top: 10px;
+    overflow: hidden;
+  }
+  .score-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1s ease-out;
+  }
+
+  /* ── Panel 3: WHAT MATTERS NOW ── */
+  .priority-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .priority-item:last-child { border-bottom: none; }
+  .priority-num {
+    font-family: 'Orbitron', monospace;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--amber);
+    opacity: 0.4;
+    line-height: 1;
+    min-width: 24px;
+  }
+  .priority-content { flex: 1; }
+  .priority-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+  .priority-sub {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    line-height: 1.4;
+  }
+  .priority-badge {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px;
+    padding: 2px 7px;
+    border-radius: 3px;
+    border: 1px solid;
+    flex-shrink: 0;
+  }
+  .badge-infra { border-color: var(--blue); color: var(--blue); }
+  .badge-ml    { border-color: var(--purple); color: var(--purple); }
+  .badge-biz   { border-color: var(--amber); color: var(--amber); }
+  .badge-ui    { border-color: var(--cyan); color: var(--cyan); }
+
+  .compass {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: rgba(255,170,0,0.05);
+    border: 1px solid rgba(255,170,0,0.2);
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--amber);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .compass::before {
+    content: '◈ ';
+    font-style: normal;
+  }
+
+  /* ── Panel 4: RECENT ACTIVITY ── */
+  .activity-item {
+    display: flex;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    align-items: flex-start;
+  }
+  .activity-item:last-child { border-bottom: none; }
+  .activity-time {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    min-width: 60px;
+    padding-top: 2px;
+  }
+  .activity-line {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+  }
+  .activity-title {
+    font-size: 12px;
+    color: var(--text);
+    line-height: 1.3;
+  }
+  .activity-project {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--blue);
+  }
+
+  .timeline-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--blue);
+    background: var(--bg);
+    margin-top: 4px;
+    flex-shrink: 0;
+    position: relative;
+  }
+  .timeline-dot::after {
+    content: '';
+    position: absolute;
+    top: 100%; left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 24px;
+    background: linear-gradient(var(--border), transparent);
+  }
+  .activity-item:last-child .timeline-dot::after { display: none; }
+
+  /* ── Refresh button ── */
+  .refresh-btn {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: var(--bg2);
+    border: 1px solid var(--cyan-dim);
+    color: var(--cyan);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    z-index: 100;
+  }
+  .refresh-btn:hover {
+    background: rgba(0,245,255,0.1);
+    box-shadow: var(--glow-c);
+  }
+
+  /* ── File path note ── */
+  .file-note {
+    position: fixed;
+    bottom: 20px; left: 20px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    z-index: 100;
+  }
+  .file-note span { color: var(--cyan-dim); }
+
+  /* chunk counter animation */
+  @keyframes count-up {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .count-anim { animation: count-up 0.6s ease-out both; }
+</style>
+</head>
+<body>
+
+<div class="load-bar"></div>
+
+<header class="header">
+  <div class="logo">
+    <div class="logo-icon">F</div>
+    <div>
+      <div class="logo-text">FAITHH</div>
+      <div class="logo-sub">MISSION CONTROL // PHASE 4</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="clock">
+      <div class="time" id="clock">--:--:--</div>
+      <div id="date-display">loading...</div>
+    </div>
+    <div class="status-pill online">
+      <div class="dot"></div>
+      SYSTEM ONLINE
+    </div>
+  </div>
+</header>
+
+<div class="grid">
+
+  <!-- ── Panel 1: WHERE AM I ── -->
+  <div class="panel panel-cyan">
+    <div class="panel-label">📍 Where Am I</div>
+
+    <div class="phase-badge">
+      ◈ PHASE 4 — Production Hardening
+    </div>
+
+    <div class="last-session">
+      <div class="label">LAST SESSION</div>
+      <div class="value">Built consistency checker + dependency map. Windsurf wired DEPS.md into AGENTS.md. Live state collector pipeline drafted. Chunk count verified: 42,370.</div>
+    </div>
+
+    <div class="panel-label" style="margin-top:14px;">Open Loops</div>
+    <ul class="loop-list" id="loop-list">
+      <li class="loop-item loop-open">
+        <div class="loop-dot"></div>
+        <div class="loop-text">Live state collector + cron wiring (Windsurf handoff sent)</div>
+        <div class="loop-tag tag-open">ACTIVE</div>
+      </li>
+      <li class="loop-item loop-open">
+        <div class="loop-dot"></div>
+        <div class="loop-text">Chunk count sync across state files (42,370 ground truth)</div>
+        <div class="loop-tag tag-open">ACTIVE</div>
+      </li>
+      <li class="loop-item loop-open">
+        <div class="loop-dot"></div>
+        <div class="loop-text">Form 1065 filing — pending CPA</div>
+        <div class="loop-tag tag-open">PENDING</div>
+      </li>
+      <li class="loop-item loop-parked">
+        <div class="loop-dot"></div>
+        <div class="loop-text">ML classifier for consistency checker</div>
+        <div class="loop-tag tag-parked">PARKED</div>
+      </li>
+      <li class="loop-item loop-parked">
+        <div class="loop-dot"></div>
+        <div class="loop-text">PULSE cron scheduling + avatar personality</div>
+        <div class="loop-tag tag-parked">PARKED</div>
+      </li>
+      <li class="loop-item loop-done">
+        <div class="loop-dot"></div>
+        <div class="loop-text">Consistency checker — deployed ✓</div>
+        <div class="loop-tag tag-done">DONE</div>
+      </li>
+      <li class="loop-item loop-done">
+        <div class="loop-dot"></div>
+        <div class="loop-text">DEPS.md dependency map — deployed ✓</div>
+        <div class="loop-tag tag-done">DONE</div>
+      </li>
+    </ul>
+
+    <div class="panel-label" style="margin-top:14px;">Projects</div>
+    <div id="projects-list">
+      <div style="color:var(--text-dim);font-size:12px;padding:10px 0;">
+        Loading projects...
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Panel 2: SYSTEM HEALTH ── -->
+  <div class="panel panel-green">
+    <div class="panel-label">⚡ System Health</div>
+
+    <div class="metric-row">
+      <div class="metric-name">CHROMADB (Gen8)</div>
+      <div class="metric-value metric-ok" id="chroma-status"><span class="health-icon">✓</span> 100.79.85.32:8000</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">CHUNK COUNT</div>
+      <div class="metric-value metric-info count-anim" id="chunk-count">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">BACKEND VERSION</div>
+      <div class="metric-value metric-info" id="backend-version">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">DEFAULT MODEL</div>
+      <div class="metric-value metric-ok" id="default-model">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">ML CHIPS</div>
+      <div class="metric-value metric-info" id="ml-chips">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">OLLAMA</div>
+      <div class="metric-value metric-info" id="ollama-status">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">PULSE MOOD</div>
+      <div class="metric-value metric-info" id="pulse-mood">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">PULSE ENERGY</div>
+      <div class="metric-value metric-info" id="pulse-energy">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">PULSE ALERTS</div>
+      <div class="metric-value metric-info" id="pulse-alerts">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">IMPRINT STATUS</div>
+      <div class="metric-value metric-info" id="imprint-status">—</div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">LAST IMPRINT</div>
+      <div class="metric-value metric-info" id="last-imprint">—</div>
+    </div>
+
+    <div class="sync-score">
+      <div class="score-num" id="sync-score" style="color:var(--amber)">—</div>
+      <div class="score-label">FILE SYNC SCORE</div>
+      <div class="score-bar">
+        <div class="score-fill" id="score-fill"
+             style="width:0%; background: linear-gradient(90deg, var(--amber), var(--green));"></div>
+      </div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-top:8px;">
+        Last updated: <span id="last-updated">—</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Panel 3: WHAT MATTERS NOW ── -->
+  <div class="panel panel-amber">
+    <div class="panel-label">🎯 What Matters Now</div>
+
+    <div id="priorities-list">
+      <div style="color:var(--text-dim);font-size:12px;padding:20px 0;text-align:center;">
+        Loading priorities...
+      </div>
+    </div>
+
+    <div class="compass">
+      Stop building the compass and start using it. Layers 1 and 2 are nearly solid. ML classifier comes after the data stream is stable — not before.
+    </div>
+  </div>
+
+  <!-- ── Panel 4: RECENT ACTIVITY ── -->
+  <div class="panel panel-blue">
+    <div class="panel-label">📡 Recent Activity</div>
+
+    <div id="activity-list">
+      <div style="color:var(--text-dim);font-size:12px;padding:20px 0;text-align:center;">
+        Loading activity...
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="file-note">
+  LOAD FROM: <span>~/ai-stack/faithh_cockpit.html</span> · SERVE: <span>localhost:5557/cockpit</span>
+</div>
+
+<button class="refresh-btn" onclick="location.reload()">⟳ REFRESH</button>
+
+<!-- ── Model Compare Panel ── -->
+<div style="margin:24px;padding:20px;background:var(--bg2);border:1px solid var(--border);
+            border-radius:12px;position:relative;">
+  <div style="font-size:10px;font-family:'Share Tech Mono',monospace;color:var(--purple);
+              letter-spacing:2px;margin-bottom:16px;">⚔ MODEL COMPARE</div>
+
+  <div style="display:flex;gap:12px;margin-bottom:12px;">
+    <input id="cmp-query" type="text"
+      placeholder="Ask both models something..."
+      style="flex:1;background:var(--bg3);border:1px solid var(--border);border-radius:6px;
+             padding:10px 14px;color:var(--text);font-family:'Exo 2',sans-serif;font-size:13px;
+             outline:none;"
+      onkeydown="if(event.key==='Enter') runCompare()"
+    />
+    <button onclick="runCompare()"
+      style="padding:10px 20px;background:rgba(170,68,255,0.15);border:1px solid var(--purple);
+             border-radius:6px;color:var(--purple);cursor:pointer;font-family:'Share Tech Mono',monospace;
+             font-size:12px;white-space:nowrap;">
+      ⚔ COMPARE
+    </button>
+  </div>
+
+  <div id="cmp-chips" style="font-size:10px;color:var(--text-dim);
+    font-family:'Share Tech Mono',monospace;margin-bottom:12px;min-height:16px;"></div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div>
+      <div id="cmp-a-label" style="font-size:10px;color:var(--cyan);
+        font-family:'Share Tech Mono',monospace;margin-bottom:8px;">MODEL A</div>
+      <div id="cmp-a-response"
+        style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;
+               padding:14px;font-size:12px;color:var(--text);line-height:1.6;
+               min-height:80px;white-space:pre-wrap;"></div>
+      <div id="cmp-a-latency"
+        style="font-size:10px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;
+               margin-top:6px;text-align:right;"></div>
+    </div>
+    <div>
+      <div id="cmp-b-label" style="font-size:10px;color:var(--green);
+        font-family:'Share Tech Mono',monospace;margin-bottom:8px;">MODEL B</div>
+      <div id="cmp-b-response"
+        style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;
+               padding:14px;font-size:12px;color:var(--text);line-height:1.6;
+               min-height:80px;white-space:pre-wrap;"></div>
+      <div id="cmp-b-latency"
+        style="font-size:10px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;
+               margin-top:6px;text-align:right;"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+async function runCompare() {
+  const query = document.getElementById('cmp-query').value.trim();
+  if (!query) return;
+
+  const setEl = (id, html) => { const el = document.getElementById(id); if (el) el.innerHTML = html; };
+
+  setEl('cmp-a-response', '<span style="color:var(--text-dim)">Querying...</span>');
+  setEl('cmp-b-response', '<span style="color:var(--text-dim)">Querying...</span>');
+  setEl('cmp-a-latency', '');
+  setEl('cmp-b-latency', '');
+  setEl('cmp-chips', '');
+
+  try {
+    const res = await fetch('/api/compare', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ query, include_rag: true })
+    });
+    const data = await res.json();
+    if (!data.success) { setEl('cmp-a-response', 'Error: ' + data.error); return; }
+
+    const a = data.model_a;
+    const b = data.model_b;
+
+    setEl('cmp-a-label', a.model);
+    setEl('cmp-b-label', b.model);
+    setEl('cmp-a-response', a.error
+      ? `<span style="color:var(--red)">${a.response}</span>` : a.response);
+    setEl('cmp-b-response', b.error
+      ? `<span style="color:var(--red)">${b.response}</span>` : b.response);
+    setEl('cmp-a-latency', `${a.latency_ms}ms · RAG: ${data.rag_snippets_used} chunks`);
+    setEl('cmp-b-latency', `${b.latency_ms}ms`);
+
+    if (data.chips_fired?.length) {
+      setEl('cmp-chips', 'Chips: ' + data.chips_fired.map(c =>
+        `${c.label} (${c.score})`).join(' · '));
+    }
+  } catch(e) {
+    setEl('cmp-a-response', 'Network error: ' + e.message);
+  }
+}
+</script>
+
+<script>
+// ── Live clock ──────────────────────────────────────────────
+function updateClock() {
+  const now = new Date();
+  document.getElementById('clock').textContent = now.toTimeString().slice(0,8);
+  document.getElementById('date-display').textContent =
+    now.toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric', year:'numeric' });
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// ── Helpers ─────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const fmt = n => n != null ? Number(n).toLocaleString() : '—';
+
+function setEl(id, html) {
+  const el = $(id);
+  if (el) el.innerHTML = html;
+}
+
+function statusBadge(status) {
+  const map = {
+    active: ['var(--green)', '● ACTIVE'],
+    operational: ['var(--green)', '● LIVE'],
+    in_progress: ['var(--cyan)', '◐ IN PROGRESS'],
+    pending: ['var(--amber)', '⏸ PENDING'],
+    unknown: ['var(--text-dim)', '? UNKNOWN'],
+  };
+  const [color, label] = map[status] || ['var(--text-dim)', status?.toUpperCase() || '?'];
+  return `<span style="color:${color};font-size:11px;font-family:'Share Tech Mono',monospace">${label}</span>`;
+}
+
+// ── 1. Live state (chunk count + stability) ─────────────────
+async function loadLiveState() {
+  try {
+    const res = await fetch('/faithh_live_state.json');
+    if (!res.ok) return;
+    const s = await res.json();
+    const count = s?.chroma?.chunk_count;
+    if (count) setEl('chunk-count', fmt(count));
+
+    const stable = s?.stability?.chunk_count_stable_for_checks ?? 0;
+    const threshold = s?.stability?.stability_threshold ?? 6;
+    const imprintReady = s?.stability?.ready_to_imprint ?? false;
+    const lastImprint = s?.stability?.last_imprint ?? 'never';
+
+    setEl('imprint-status',
+      imprintReady
+        ? `<span style="color:var(--green)">✓ READY</span>` 
+        : `<span style="color:var(--amber)">⏳ ${stable}/${threshold} checks</span>` 
+    );
+    setEl('last-imprint', lastImprint === 'never'
+      ? `<span style="color:var(--amber)">never fired</span>` 
+      : `<span style="color:var(--green)">${lastImprint}</span>` 
+    );
+  } catch(e) { console.warn('live_state:', e); }
+}
+
+// ── 2. Backend status ────────────────────────────────────────
+async function loadStatus() {
+  try {
+    const res = await fetch('/api/status');
+    if (!res.ok) return;
+    const s = await res.json();
+
+    setEl('backend-version', s.version || s.backend_version || '—');
+    setEl('default-model', s.model || s.default_model || s.ollama_model || '—');
+    setEl('chroma-status',
+      s.chromadb_connected
+        ? `<span style="color:var(--green)">✓ CONNECTED</span>` 
+        : `<span style="color:var(--red)">✗ OFFLINE</span>` 
+    );
+    setEl('ml-chips', s.ml_chips_loaded ?? s.chip_count ?? '—');
+    setEl('ollama-status',
+      s.ollama_available
+        ? `<span style="color:var(--green)">✓ UP</span>` 
+        : `<span style="color:var(--amber)">⚠ DOWN</span>` 
+    );
+  } catch(e) { console.warn('status:', e); }
+}
+
+// ── 3. PULSE avatar state ────────────────────────────────────
+async function loadPulse() {
+  try {
+    const res = await fetch('/api/pulse/state');
+    if (!res.ok) return;
+    const s = await res.json();
+    const avatar = s.avatar || s;
+
+    const mood = avatar.mood || 'unknown';
+    const energy = avatar.energy ?? 0;
+    const alerts = avatar.alert_count ?? avatar.alerts ?? 0;
+
+    const moodColors = {
+      calm: 'var(--cyan)', curious: 'var(--blue)',
+      excited: 'var(--green)', concerned: 'var(--amber)', alert: 'var(--red)'
+    };
+    const color = moodColors[mood] || 'var(--text-dim)';
+
+    setEl('pulse-mood',
+      `<span style="color:${color};text-transform:uppercase;font-family:'Share Tech Mono',monospace">${mood}</span>` 
+    );
+    setEl('pulse-energy', `${Math.round(energy * 100)}%`);
+    setEl('pulse-alerts',
+      alerts > 0
+        ? `<span style="color:var(--amber)">${alerts} active</span>` 
+        : `<span style="color:var(--green)">none</span>` 
+    );
+  } catch(e) { console.warn('pulse:', e); }
+}
+
+// ── 4. Projects + priorities from /api/compass ───────────────
+async function loadCompass() {
+  try {
+    const res = await fetch('/api/compass');
+    if (!res.ok) return;
+    const data = await res.json();
+    if (!data.success) return;
+
+    // Project cards
+    const projects = data.projects || [];
+    const projEl = $('projects-list');
+    if (projEl && projects.length) {
+      projEl.innerHTML = projects.map(p => `
+        <div style="padding:10px 0;border-bottom:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+            <span style="font-weight:600;color:var(--text)">${p.name}</span>
+            ${statusBadge(p.status)}
+          </div>
+          <div style="font-size:11px;color:var(--cyan-dim);font-family:'Share Tech Mono',monospace;margin-bottom:6px;">
+            ${p.phase || ''}
+          </div>
+          ${p.next_steps.length ? `
+            <div style="font-size:11px;color:var(--text-dim);">
+              Next: ${p.next_steps[0]}
+            </div>` : ''}
+        </div>
+      `).join('');
+    }
+
+    // Dynamic priorities from project next steps
+    const priorityEl = $('priorities-list');
+    if (priorityEl) {
+      const allSteps = [];
+      projects.forEach(p => {
+        (p.next_steps || []).forEach((step, i) => {
+          allSteps.push({ step, project: p.name, rank: i });
+        });
+      });
+      // Sort by rank (step index within project)
+      allSteps.sort((a,b) => a.rank - b.rank);
+      const top5 = allSteps.slice(0, 5);
+
+      priorityEl.innerHTML = top5.map((item, idx) => `
+        <div style="display:flex;align-items:flex-start;gap:12px;padding:10px 0;
+                    border-bottom:1px solid var(--border);">
+          <div style="width:24px;height:24px;border-radius:50%;background:var(--bg3);
+                      border:1px solid var(--amber);display:flex;align-items:center;
+                      justify-content:center;font-size:11px;color:var(--amber);
+                      font-family:'Orbitron',monospace;flex-shrink:0;">${idx+1}</div>
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:13px;color:var(--text);margin-bottom:2px;">${item.step}</div>
+            <div style="font-size:10px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;">
+              ${item.project}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Recent decisions as activity
+    const decisions = data.recent_decisions || [];
+    const actEl = $('activity-list');
+    if (actEl && decisions.length) {
+      actEl.innerHTML = decisions.slice(0,6).reverse().map(d => `
+        <div style="display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);">
+          <div style="font-size:10px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;
+                      white-space:nowrap;padding-top:2px;min-width:60px;">${d.date || ''}</div>
+          <div style="flex:1;">
+            <div style="font-size:12px;color:var(--text)">${d.decision}</div>
+            <div style="font-size:10px;color:var(--cyan-dim);font-family:'Share Tech Mono',monospace;">
+              ${d.project || ''} // ${d.status || ''}
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Sync score from services data
+    const services = data.services || {};
+    const chromaOk = services.chroma_heartbeat?.ok ?? false;
+    const backendOk = services.faithh_backend_url ? true : false;
+    const score = chromaOk && backendOk ? 85 : chromaOk ? 60 : 30;
+    setEl('sync-score', score + '%');
+    const fill = $('score-fill');
+    if (fill) {
+      fill.style.width = score + '%';
+      fill.style.background = score > 75
+        ? 'linear-gradient(90deg, var(--green), var(--cyan))'
+        : score > 50
+          ? 'linear-gradient(90deg, var(--amber), var(--green))'
+          : 'linear-gradient(90deg, var(--red), var(--amber))';
+    }
+    setEl('last-updated', data.last_updated || '—');
+  } catch(e) { console.warn('compass:', e); }
+}
+
+// ── Bootstrap ────────────────────────────────────────────────
+async function init() {
+  await Promise.all([
+    loadLiveState(),
+    loadStatus(),
+    loadPulse(),
+    loadCompass(),
+  ]);
+}
+
+init();
+// Refresh all data every 60 seconds
+setInterval(init, 60_000);
+</script>
+</body>
+</html>

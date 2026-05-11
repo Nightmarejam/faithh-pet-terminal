@@ -1,0 +1,20 @@
+{
+  "collected_at": "2026-03-12T07:24:00.857051+00:00",
+  "chroma": {
+    "reachable": true,
+    "chunk_count": 42370,
+    "collection": "faithh_knowledge_base",
+    "error": null
+  },
+  "backend": {
+    "reachable": true,
+    "version": "healthy",
+    "error": null
+  },
+  "stability": {
+    "chunk_count_stable_for_checks": 1,
+    "stability_threshold": 6,
+    "ready_to_imprint": false,
+    "last_imprint": "never"
+  }
+}

@@ -5,7 +5,6 @@ Provides:
 - Groq (OpenAI-compatible chat endpoint)
 - Ollama (prompt-based generate)
 - Local text-generation-webui (OpenAI-compatible chat endpoint)
-- Anthropic (Claude API for SWE 1.5 and Opus)
 
 Design goals:
 - Simple, explicit routing + fallback
@@ -23,11 +22,6 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple, Union
 
 import requests
-
-try:
-    import anthropic
-except ImportError:
-    anthropic = None
 
 
 # ---------------------------
@@ -215,64 +209,6 @@ def call_ollama_chat(
     return text, usage, data
 
 
-def call_anthropic_chat(
-    messages: List[Message],
-    model: str,
-    max_tokens: int,
-    temperature: float,
-    timeout_s: int,
-    api_key: str,
-) -> Tuple[str, Optional[dict], dict]:
-    """Call Anthropic Claude API."""
-    if not anthropic:
-        raise ProviderError("anthropic package not installed")
-    
-    client = anthropic.Anthropic(api_key=api_key)
-    
-    # Convert messages format
-    system_msg = None
-    user_messages = []
-    
-    for msg in messages:
-        if msg.get("role") == "system":
-            system_msg = msg.get("content", "")
-        else:
-            user_messages.append({
-                "role": msg.get("role", "user"),
-                "content": msg.get("content", "")
-            })
-    
-    try:
-        # NEWER API FORMAT: Include system message in messages array
-        messages = user_messages
-        
-        # Add system message as first message if it exists
-        if system_msg and system_msg.strip():
-            messages = [{"role": "system", "content": system_msg}] + user_messages
-        
-        # DEBUG: Print parameters being sent
-        print(f"   🔧 DEBUG: Anthropic API messages: {messages}")
-        
-        response = client.messages.create(
-            model=model,
-            max_tokens=max_tokens,
-            temperature=temperature,
-            messages=messages,
-        )
-        
-        text = response.content[0].text if response.content else ""
-        usage = {
-            "input_tokens": response.usage.input_tokens,
-            "output_tokens": response.usage.output_tokens,
-            "total_tokens": response.usage.input_tokens + response.usage.output_tokens
-        }
-        
-        return text, usage, {"model": model, "response": response}
-        
-    except Exception as e:
-        raise ProviderError(f"Anthropic API error: {str(e)}")
-
-
 # ---------------------------
 # Dispatcher + Routing
 # ---------------------------
@@ -351,19 +287,6 @@ def call_provider(
             prompt=prompt,
             temperature=temperature,
             timeout_s=timeout_s,
-        )
-
-    if ptype == "anthropic":
-        api_key = provider_cfg.get("api_key") or os.getenv("ANTHROPIC_API_KEY")
-        if not api_key:
-            raise ProviderError("Anthropic provider missing API key")
-        return call_anthropic_chat(
-            messages=messages,
-            model=model,
-            max_tokens=max_tokens,
-            temperature=temperature,
-            timeout_s=timeout_s,
-            api_key=api_key,
         )
 
     raise ProviderError(f"Unknown provider type: {ptype}")

@@ -1,0 +1,462 @@
+{
+  "decisions": [
+    {
+      "id": "claude_desktop_mcp_configuration",
+      "decision": "Configure Claude Desktop with MCP filesystem server for direct FAITHH project access",
+      "date": "2026-02-23",
+      "project": "faithh",
+      "category": "integration",
+      "rationale": "Enable Claude Desktop to read FAITHH project files directly without manual context pasting. This bridges Claude Desktop (Windows) to the FAITHH project (WSL2) using MCP filesystem server, making the living workspace truly accessible from Jonathan's primary Claude interface.",
+      "alternatives_considered": [
+        "Continue manual context pasting - tedious, error-prone, snapshot-based",
+        "Windows UNC path approach - simpler but less reliable, path breaks if WSL2 distro changes",
+        "Install Node.js on Windows - additional complexity, diverges from WSL2-native workflow",
+        "Add memory MCP server - redundant with FAITHH's existing memory architecture"
+      ],
+      "chosen_approach": "WSL2 Approach B using `wsl -e npx` command for filesystem server access",
+      "implementation": {
+        "filesystem_server": {
+          "command": "wsl -e npx -y @modelcontextprotocol/server-filesystem /home/jonat/ai-stack",
+          "access_scope": "Limited to /home/jonat/ai-stack only",
+          "security": "Matches tool_policies.json restrictions, blocks ~/.ssh and .env files"
+        },
+        "sequential_thinking_server": {
+          "command": "npx -y @modelcontextprotocol/server-sequential-thinking",
+          "purpose": "Complex reasoning tasks for architectural discussions"
+        },
+        "config_location": "C:\\Users\\jonat\\AppData\\Roaming\\Claude\\claude_desktop_config.json"
+      },
+      "explicitly_omitted": {
+        "memory_mcp_server": "FAITHH already has comprehensive memory architecture (faithh_memory.json, decisions_log.json, project_states.json, scaffolding_state.json). Adding separate memory layer would create coherence drift and undermine the Coherence Arbiter's validation system.",
+        "cursor_mcp_servers": "Context7, IDE Browser are specific to Cursor/VS Code integration, not needed for Claude Desktop's primary use case of file access."
+      },
+      "expected_impact": "Claude Desktop sessions become truly stateful - Claude can read CONTEXT.md, project_states.json, decisions_log.json directly. Eliminates manual pasting, enables live file access, completes the bridge between Claude Desktop and living FAITHH workspace.",
+      "verification": "Test with questions: 'Read CONTEXT.md and tell me what project I'm working on' and 'What are my open loops in scaffolding_state.json?'"
+    },
+    {
+      "id": "coherence_arbiter_phase2",
+      "decision": "Implement Phase 2 anchor validation for ground truth claim verification",
+      "date": "2026-02-23",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Add ground truth validation of canonical state file claims against actual system behavior. This provides reality-check validation for the Coherence Arbiter's semantic convergence measurements, ensuring that documented claims reflect actual system capabilities.",
+      "alternatives_considered": [
+        "Statistical validation only (no ground truth)",
+        "Manual claim verification (no automation)",
+        "External monitoring service (over-engineering)",
+        "Database consistency checks (limited scope)"
+      ],
+      "implementation": "AnchorValidator class in backend/anchor_validator.py with dependency injection pattern. Validates FAITHH project phase status against ML chips, ChromaDB scale, and PULSE engine capabilities. Integrated into CoherenceArbiter with 0.7 validity threshold.",
+      "status": "implemented_phase2",
+      "validation_results": {
+        "ml_chips": {"status": "pass", "details": "15 chips loaded", "weight": 0.35},
+        "chromadb_scale": {"status": "partial", "details": "API unimplemented, operational", "weight": 0.175},
+        "pulse_engine": {"status": "pass", "details": "files present", "weight": 0.30},
+        "total_score": 0.825,
+        "is_valid": true
+      },
+      "key_insights": [
+        "Dependency injection eliminates circular imports between backend, arbiter, and validator",
+        "Partial scoring handles API limitations gracefully (ChromaDB count endpoint unimplemented)",
+        "Anchor validation only fires with rag_chip_alignment (document-based queries)",
+        "0.825 score accurately reflects current system state, not inflated",
+        "Known limitation: Conversation-based RAG queries don't trigger anchor validation"
+      ],
+      "infrastructure_issues": [
+        "ChromaDB v1/v2 API endpoint changes require documentation and future resolution",
+        "Count API returns 410/501, requiring heartbeat proxy workaround"
+      ]
+    },
+    {
+      "id": "coherence_arbiter_phase3",
+      "decision": "Phase 3 Coherence Arbiter: UI surfacing, anchor expansion, behavior hints, tests",
+      "date": "2026-02-23",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Surface coherence in the UI so users see when FAITHH is operating from strong vs weak ground; expand anchor validation with conservative checks; add advisory low-coherence hints without changing model output; protect behavior with tests.",
+      "alternatives_considered": [
+        "UI-only (no anchor expansion) - deferred deeper validation",
+        "Behavior changes on low coherence (e.g. block reply) - rejected; advisory only",
+        "No tests - rejected; regression risk"
+      ],
+      "implementation": "Backend: _enrich_phase3_metadata() adds tier, reasons, low_confidence, suggested_behavior to every coherence result. Anchor validator: two new evidence checks (default_provider_decision, pulse_documented) with weights 7.5% each; ML/Chroma/PULSE reweighted to 30/30/25. UI: coherence indicator (high/medium/low) and low-coherence hint in faithh_pet_v4.html. Tests: tests/test_coherence_arbiter_phase3.py. Docs: SYSTEM_OVERVIEW Coherence Arbiter section, docs/guides/COHERENCE_SIGNAL.md.",
+      "status": "implemented",
+      "thresholds": {
+        "COHERENCE_TIER_HIGH_THRESHOLD": 0.6,
+        "COHERENCE_TIER_MEDIUM_THRESHOLD": 0.3,
+        "ANCHOR_VALID_THRESHOLD": 0.7
+      },
+      "key_points": [
+        "Tier and behavior hints are advisory only; no change to LLM output",
+        "Anchor expansion fails gracefully when decisions_log or state missing",
+        "Indicator only shown for non-streaming responses when coherence metadata present"
+      ]
+    },
+    {
+      "id": "coherence_arbiter_phase1",
+      "decision": "Implement Coherence Arbiter for RAG-Chip convergence measurement",
+      "date": "2026-02-23",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Enable semantic convergence measurement between RAG retrieval and ML chip routing signals to provide quantitative coherence scoring. This addresses the need to measure how well the two modalities align, improving context routing quality and providing visibility into system behavior.",
+      "alternatives_considered": [
+        "Signal strength only scoring (simpler but less meaningful)",
+        "Separate RAG and chip quality scores (no convergence measurement)",
+        "Full embedding space alignment analysis (computationally expensive)",
+        "Statistical correlation analysis (requires more data collection)"
+      ],
+      "implementation": "CoherenceArbiter class in backend/coherence_arbiter.py with cosine similarity convergence matrix calculation (np.mean(np.max(convergence_matrix, axis=1))) and signal strength weighting. Integrated into build_integrated_context() with 100ms timeout and graceful fallback.",
+      "status": "implemented_phase1",
+      "next_phase": "Phase 2: Anchor validation and adaptive thresholding",
+      "validation_results": {
+        "tokyo_weather": {"score": 0.298, "signals": "signal_strength_only", "expected": true},
+        "focused_project": {"score": 0.25, "signals": "signal_strength_only", "expected": true}, 
+        "broad_open_ended": {"score": 0.211, "signals": "rag_chip_alignment", "raw_convergence": 0.421, "expected": true}
+      },
+      "key_insights": [
+        "Conversation-based RAG results (focused queries) appropriately fall back to signal strength as they lack document embeddings",
+        "Document-based RAG results (broad queries) achieve full convergence calculation with rag_chip_alignment signals",
+        "Score ordering shows meaningful differentiation between query types",
+        "Performance well under 100ms timeout target"
+      ]
+    },
+    {
+      "id": "constella_001",
+      "decision": "2% weekly Astris decay rate",
+      "date": "2025-08-09",
+      "project": "constella",
+      "category": "token_mechanics",
+      "rationale": "Balance between encouraging ongoing participation and not punishing temporary absence. 2% allows someone to take a month off without catastrophic decay, but still incentivizes regular engagement.",
+      "alternatives_considered": [
+        {
+          "option": "5% weekly decay",
+          "rejected_because": "Too harsh - people would lose significant Astris after short breaks"
+        },
+        {
+          "option": "1% weekly decay",
+          "rejected_because": "Too lenient - doesn't meaningfully encourage participation"
+        },
+        {
+          "option": "No decay",
+          "rejected_because": "Could lead to hoarding and disconnect between current contribution and voting power"
+        }
+      ],
+      "impact": "Affects token distribution fairness and participation incentives",
+      "status": "implemented",
+      "related_docs": ["docs/reference/CONSTELLA.md"]
+    },
+    {
+      "id": "constella_002",
+      "decision": "5% quarterly Auctor decay",
+      "date": "2025-08-09",
+      "project": "constella",
+      "category": "token_mechanics",
+      "rationale": "Auctor represents civic voice/equality, so decay should be gentler than merit-based Astris. Quarterly decay ensures people who move away or become inactive don't retain permanent voting power, but allows for life circumstances.",
+      "alternatives_considered": [
+        {
+          "option": "Monthly decay",
+          "rejected_because": "Too frequent for a civic voice token - people have other responsibilities"
+        },
+        {
+          "option": "No decay",
+          "rejected_because": "Could lead to ghost voters who no longer participate in community"
+        }
+      ],
+      "impact": "Maintains fairness in civic voice while respecting life circumstances",
+      "status": "implemented",
+      "related_docs": ["docs/reference/CONSTELLA.md"]
+    },
+    {
+      "id": "faithh_001",
+      "decision": "Use ChromaDB with 768-dim embeddings (all-mpnet-base-v2)",
+      "date": "2025-11-12",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Needed vector database for semantic search. ChromaDB offers good balance of features, performance, and ease of use. 768-dim model (all-mpnet-base-v2) provides good semantic understanding without excessive compute requirements.",
+      "alternatives_considered": [
+        {
+          "option": "Pinecone",
+          "rejected_because": "Cloud-only, monthly costs, vendor lock-in"
+        },
+        {
+          "option": "Weaviate",
+          "rejected_because": "More complex setup, heavier resource requirements"
+        },
+        {
+          "option": "384-dim embeddings",
+          "rejected_because": "Lower quality semantic search, harder to capture nuance"
+        }
+      ],
+      "impact": "Foundation for all RAG functionality, affects search quality",
+      "status": "superseded",
+      "superseded_by": "faithh_004",
+      "superseded_date": "2026-01-25",
+      "superseded_reason": "Switched to 384-dim all-MiniLM-L6-v2 for faster inference and proper chunking",
+      "related_docs": ["docs/architecture/SYSTEM_OVERVIEW.md"]
+    },
+    {
+      "id": "faithh_002",
+      "decision": "Three-tier memory system (hot/warm/cold)",
+      "date": "2025-11-19",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Mimics CPU cache hierarchy - different access patterns need different storage. Hot (current session) in RAM for speed, warm (user profile) in JSON for simplicity, cold (all history) in ChromaDB for semantic search.",
+      "alternatives_considered": [
+        {
+          "option": "Everything in ChromaDB",
+          "rejected_because": "Would be slow for frequently accessed data like user profile"
+        },
+        {
+          "option": "Everything in JSON",
+          "rejected_because": "Can't do semantic search, would grow too large"
+        },
+        {
+          "option": "SQL database",
+          "rejected_because": "Adds complexity, doesn't solve semantic search problem"
+        }
+      ],
+      "impact": "Defines how FAITHH stores and retrieves all information",
+      "status": "implemented",
+      "related_docs": ["docs/architecture/SYSTEM_OVERVIEW.md"]
+    },
+    {
+      "id": "faithh_003",
+      "decision": "FAITHH is a thought partner, not just a search tool",
+      "date": "2025-11-26",
+      "project": "faithh",
+      "category": "vision",
+      "rationale": "Jonathan's core problem is maintaining project coherence when attention shifts. He doesn't need another search engine - he needs a system that remembers WHY projects matter and helps him pick up where he left off. This fundamentally changes development priorities from accuracy-first to synthesis-first.",
+      "alternatives_considered": [
+        {
+          "option": "Build as advanced Q&A tool",
+          "rejected_because": "Would be impressive but wouldn't solve the actual problem of losing context when switching projects"
+        },
+        {
+          "option": "Build as task manager",
+          "rejected_because": "Jonathan doesn't need more task lists - he needs to understand the 'why' behind tasks"
+        }
+      ],
+      "impact": "Changes success metric from 'accurate answers' to 'maintains coherence across attention shifts'. Focus shifts to Level 3 synthesis, not just Level 1 recall.",
+      "status": "in_progress",
+      "related_docs": ["faithh_memory.json", "project_states.json"]
+    },
+    {
+      "id": "faithh_004",
+      "decision": "Reindex ChromaDB with all-MiniLM-L6-v2 (384-dim) and 1500-char chunking",
+      "date": "2026-01-25",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Previous index used all-mpnet-base-v2 (768-dim) with inconsistent chunking. Switched to all-MiniLM-L6-v2 for faster inference and proper 1500-char chunks with 200-char overlap for better semantic boundaries. Reduced from 93,533 docs to 32,499 well-structured chunks.",
+      "alternatives_considered": [
+        {
+          "option": "Keep 768-dim embeddings",
+          "rejected_because": "Slower inference, marginal quality improvement for this use case"
+        },
+        {
+          "option": "Smaller chunk size (500 chars)",
+          "rejected_because": "Would lose too much context per chunk, hurting semantic search quality"
+        }
+      ],
+      "impact": "Cleaner, faster RAG search. 306 conversations (208 ChatGPT + 98 Claude) properly indexed.",
+      "status": "implemented",
+      "related_docs": ["project_states.json"]
+    },
+    {
+      "id": "infra_001",
+      "decision": "Deploy 12 Docker services on Gen8 MicroServer",
+      "date": "2026-01-20",
+      "project": "infrastructure",
+      "category": "deployment",
+      "rationale": "Centralize infrastructure services on dedicated server. Gen8 has low power draw, ECC RAM, and 842GB free disk. Services include ChromaDB, Grafana, Prometheus, Gitea, Vaultwarden, Pi-hole, Docker Registry, Uptime Kuma, GitLab Runner, Node Exporter.",
+      "alternatives_considered": [
+        {
+          "option": "Run everything on Windows desktop",
+          "rejected_because": "Desktop isn't always on; services need 24/7 availability"
+        },
+        {
+          "option": "Cloud hosting",
+          "rejected_because": "Monthly costs, data sovereignty concerns, already have hardware"
+        }
+      ],
+      "impact": "Reliable 24/7 infrastructure backbone. All services accessible via Tailscale.",
+      "status": "implemented",
+      "related_docs": ["SYSTEMS_MAP.md", "docs/architecture/INFRASTRUCTURE.md"]
+    },
+    {
+      "id": "faithh_005",
+      "decision": "Build context injection system (generate_context.py → CONTEXT.md)",
+      "date": "2026-02-04",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Need a single document any AI can consume for instant orientation. Source files are scattered (project_states.json, faithh_memory.json, decisions_log.json, etc.). Generation script reads all sources and produces a unified, regenerable CONTEXT.md plus immutable framing snapshots.",
+      "alternatives_considered": [
+        {
+          "option": "Manually maintain a single context doc",
+          "rejected_because": "Would go stale immediately — Jonathan's ADHD means manual upkeep won't happen consistently"
+        },
+        {
+          "option": "Use RAG to answer context questions dynamically",
+          "rejected_because": "Too slow for session initialization; need instant orientation, not search"
+        }
+      ],
+      "impact": "Any AI session can be bootstrapped with CONTEXT.md. Framing snapshots capture understanding at key moments.",
+      "status": "implemented",
+      "related_docs": ["CONTEXT.md", "scripts/generate_context.py"]
+    },
+    {
+      "id": "faithh_006",
+      "decision": "Set Groq (llama-3.3-70b-versatile) as default LLM provider",
+      "date": "2026-02-07",
+      "project": "faithh",
+      "category": "operations",
+      "rationale": "Ollama local models were unavailable (systemd service was disabled). Groq provides fast, high-quality responses via API with free tier. Set as default so FAITHH works immediately; local Ollama available as fallback/override.",
+      "alternatives_considered": [
+        {
+          "option": "Keep Ollama as default",
+          "rejected_because": "Models need to be loaded; adds friction to startup"
+        },
+        {
+          "option": "Gemini as default",
+          "rejected_because": "API key may expire; Groq has been more reliable"
+        }
+      ],
+      "impact": "FAITHH starts working immediately without local model setup. ~2s response times via Groq.",
+      "status": "implemented",
+      "related_docs": [".env", "docs/guides/QUICKSTART.md"]
+    },
+    {
+      "id": "faithh_007",
+      "decision": "Broaden chip activation to fire on general project and business queries",
+      "date": "2026-02-07",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "Project_state chip only fired for 'what's next' queries (is_next_action_query). Natural questions like 'what projects am I working on?' fell through. Added is_project_query intent pattern and broadened project_state chip to fire on project OR business queries.",
+      "alternatives_considered": [
+        {
+          "option": "Always inject project state",
+          "rejected_because": "Would waste token budget on irrelevant queries"
+        },
+        {
+          "option": "Wait for ML semantic routing",
+          "rejected_because": "ML pipeline not yet built; need working system now"
+        }
+      ],
+      "impact": "Project queries now return structured data from project_states.json instead of only RAG fragments.",
+      "status": "implemented",
+      "related_docs": ["faithh_professional_backend_fixed.py"]
+    },
+    {
+      "id": "faithh_008",
+      "decision": "Build PULSE Reflection Engine — tiered ML self-reflection protocol",
+      "date": "2026-02-15",
+      "project": "faithh",
+      "category": "architecture",
+      "rationale": "FAITHH needs to evolve from reactive to proactive. ML-driven staleness detection, decision divergence tracking, and branch exploration give FAITHH autonomous self-awareness. Tier 1 runs on CPU in 11 seconds. Tiers 2-3 use RTX 3090 with local LLM. Dual-GPU setup allows ML to run while gaming on 1080 Ti.",
+      "alternatives_considered": [
+        {
+          "option": "Manual periodic reviews",
+          "rejected_because": "Won't happen consistently — ADHD means manual upkeep falls off"
+        },
+        {
+          "option": "Cloud-based ML analysis",
+          "rejected_because": "Already have RTX 3090 locally; no need for cloud costs or data sovereignty issues"
+        },
+        {
+          "option": "Start with Tier 2 (decision divergence) first",
+          "rejected_because": "Tier 1 builds the embedding infrastructure Tier 2 needs, and gives immediate tangible results"
+        }
+      ],
+      "impact": "Foundation for FAITHH autonomous personality — scheduled sweeps, proactive notifications, avatar reactions based on system health.",
+      "status": "in_progress",
+      "related_docs": ["docs/roadmaps/PULSE_REFLECTION_ENGINE.md", "scripts/staleness_detector.py"]
+    },
+    {
+      "id": "faithh_009",
+      "decision": "Set qwen25-grounded:latest as default model",
+      "date": "2026-02-18",
+      "project": "faithh",
+      "category": "model_configuration",
+      "rationale": "The 14B Qwen 2.5 grounded model provides better reasoning and grounding capabilities than the 8B Llama model. After fixing the chat template conflict, it's ready for production use.",
+      "alternatives_considered": [
+        {
+          "option": "Keep llama31-faithh as default",
+          "rejected_because": "8B model has less capability for complex reasoning"
+        },
+        {
+          "option": "Use Groq's llama-3.3-70b as default",
+          "rejected_because": "Cloud dependency, not grounded"
+        }
+      ],
+      "impact": "All FAITHH queries will now use the more capable 14B grounded model by default",
+      "status": "implemented",
+      "related_docs": ["docs/archive/handoffs/HANDOFF_QWEN25_TRAINING.md"]
+    },
+    {
+      "id": "faithh_008",
+      "decision": "Fix qwen25-grounded chat template conflict",
+      "date": "2026-02-18",
+      "project": "faithh",
+      "category": "model_deployment",
+      "rationale": "The model was producing nonsensical responses due to Qwen's default system prompt overriding FAITHH's prompt. Adding explicit TEMPLATE directive to Modelfile resolved this.",
+      "alternatives_considered": [
+        {
+          "option": "Retrain the model",
+          "rejected_because": "Training was successful, issue was deployment configuration"
+        },
+        {
+          "option": "Use different quantization",
+          "rejected_because": "q4_k_m quantization was fine, issue was template"
+        }
+      ],
+      "impact": "qwen25-grounded now works correctly and provides grounded responses",
+      "status": "implemented",
+      "related_docs": ["docs/archive/handoffs/HANDOFF_QWEN25_TRAINING.md"]
+    },
+    {
+      "id": "faithh_007",
+      "decision": "Proceed with Qwen 2.5 14B grounding fine-tune",
+      "date": "2026-02-16",
+      "project": "faithh",
+      "category": "model_training",
+      "rationale": "14B model should provide better reasoning than 8B llama31. Expanded training data to 1914 examples across 16 categories for comprehensive grounding.",
+      "alternatives_considered": [
+        {
+          "option": "Stick with 8B llama31-grounded",
+          "rejected_because": "Limited capacity for complex queries"
+        },
+        {
+          "option": "Fine-tune 70B model",
+          "rejected_because": "RTX 3090 can't handle 70B QLoRA efficiently"
+        }
+      ],
+      "impact": "More capable grounded model for FAITHH responses",
+      "status": "implemented",
+      "related_docs": ["docs/archive/handoffs/HANDOFF_QWEN25_TRAINING.md"]
+    }
+  ],
+  "_schema_version": "1.0",
+  "_last_updated": "2026-02-18",
+  "_instructions": {
+    "purpose": "Captures the 'why' behind important decisions",
+    "when_to_add": "Whenever you make a significant design choice or architectural decision",
+    "how_to_use": "FAITHH can search this when asked 'why did we choose X?' questions",
+    "fields_explained": {
+      "id": "Unique identifier (project_###)",
+      "decision": "Short description of what was decided",
+      "date": "When the decision was made",
+      "project": "Which project (constella, faithh, audio, etc)",
+      "category": "Type of decision (architecture, token_mechanics, workflow, etc)",
+      "rationale": "The 'why' - this is the most important field",
+      "alternatives_considered": "What else was evaluated and why it was rejected",
+      "impact": "Why this decision matters / what it affects",
+      "status": "implemented / planned / deprecated",
+      "related_docs": "Where to find more info about this decision"
+    },
+    "tips": [
+      "Write rationale in your own words - future you will appreciate it",
+      "Include alternatives even if they seem obvious - context fades over time",
+      "Add new decisions as they happen, don't wait",
+      "Review this file when making related decisions"
+    ]
+  }
+}

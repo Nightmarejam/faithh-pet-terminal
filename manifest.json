@@ -1,0 +1,16 @@
+{
+  "name": "FAITHH - Friendly AI Teaching & Helping Hub",
+  "short_name": "FAITHH",
+  "description": "Your personal AI thought partner for maintaining project coherence",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

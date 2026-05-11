@@ -21,7 +21,6 @@ def detect_query_intent(query_text):
         'is_constella_query': False,
         'is_business_query': False,
         'is_recent_changes_query': False,
-        'is_alife_query': False,
         'needs_orientation': False,
         'is_tangent': False,
         'is_reasoning': False,
@@ -204,30 +203,7 @@ def detect_query_intent(query_text):
             intent['patterns_matched'].append(f"coding: {pattern}")
             break
     
-    # Pattern 8: ALIFE queries (experiments, simulations, waves)
-    alife_patterns = [
-        r'\balife\b',
-        r'\bartificial life\b',
-        r'\bexperiment [0-9]+\b',
-        r'\bexp[0-9]+\b',
-        r'\bsimulation\b',
-        r'\bwave[s]?\b',
-        r'\bagent[s]?\b.*\bevolution\b',
-        r'\bgenome[s]?\b.*\bevolution\b',
-        r'\bharmonic\b.*\binterference\b',
-        r'\bstealth\b.*\bwaves?\b',
-        r'\bshield[s]?\b.*\bdefense\b',
-        r'\bpredator\b.*\bprey\b',
-        r'\btick[s]?\b.*\bsimulation\b',
-        r'\bpopulation\b.*\bdynamics\b',
-    ]
-    for pattern in alife_patterns:
-        if re.search(pattern, query_lower):
-            intent['is_alife_query'] = True
-            intent['patterns_matched'].append(f"alife: {pattern}")
-            break
-    
-    # Pattern 9: Complex queries (longer, multi-part)
+    # Pattern 8: Complex queries (longer, multi-part)
     if len(query_text) > 100 and (' and ' in query_lower or ' or ' in query_lower):
         intent['is_complex_query'] = True
         intent['patterns_matched'].append("complex: long multi-part query")
