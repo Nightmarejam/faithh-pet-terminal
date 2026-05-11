@@ -136,3 +136,4 @@ ml/signal_chunks_temp.json
 data/chromadb/
 unsloth_compiled_cache/
 wsl.localhost/
+git_info.json
