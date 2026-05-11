@@ -5,12 +5,15 @@ LLM: Groq (primary), vLLM @ 192.158.1.100:8000 (fallback)
 Vector DB: ChromaDB @ 192.158.1.10:8000
 Embeddings: BGE (sentence-transformers) — never use query_texts= directly
 Collection: faithh_knowledge_base
+Frontend: faithh_pet.html served at /
 """
 
 import os
 import logging
 import time
-from flask import Flask, request, jsonify
+from pathlib import Path
+from flask import Flask, request, jsonify, send_from_directory
+from flask_cors import CORS
 from dotenv import load_dotenv
 import chromadb
 from sentence_transformers import SentenceTransformer
@@ -28,16 +31,17 @@ log = logging.getLogger("faithh")
 # ── Config ────────────────────────────────────────────────────────────────────
 load_dotenv(os.path.expanduser("~/ai-stack/.env"))
 
-BACKEND_PORT     = int(os.getenv("BACKEND_PORT", 5557))
-CHROMA_HOST      = os.getenv("CHROMA_HOST", "192.158.1.10")
-CHROMA_PORT      = int(os.getenv("CHROMA_PORT", 8000))
+BASE_DIR          = Path(__file__).parent
+BACKEND_PORT      = int(os.getenv("BACKEND_PORT", 5557))
+CHROMA_HOST       = os.getenv("CHROMA_HOST", "192.158.1.10")
+CHROMA_PORT       = int(os.getenv("CHROMA_PORT", 8000))
 CHROMA_COLLECTION = os.getenv("CHROMA_COLLECTION", "faithh_knowledge_base")
-GROQ_API_KEY     = os.getenv("GROQ_API_KEY", "")
-GROQ_TIMEOUT_S   = int(os.getenv("GROQ_TIMEOUT_S", 120))
-VLLM_URL         = "http://192.158.1.100:8000/v1/chat/completions"
-VLLM_MODEL       = "default"          # adjust to whatever model vLLM is serving
-GROQ_MODEL       = "llama-3.3-70b-versatile"  # fast, large context; swap as needed
-N_RESULTS        = 5                  # ChromaDB top-k
+GROQ_API_KEY      = os.getenv("GROQ_API_KEY", "")
+GROQ_TIMEOUT_S    = int(os.getenv("GROQ_TIMEOUT_S", 120))
+VLLM_URL          = "http://192.158.1.100:8000/v1/chat/completions"
+VLLM_MODEL        = "default"
+GROQ_MODEL        = "llama-3.3-70b-versatile"
+N_RESULTS         = 5
 
 # ── Embeddings (BGE) ──────────────────────────────────────────────────────────
 log.info("Loading BGE embedding model…")
@@ -54,7 +58,8 @@ log.info("ChromaDB connected — collection '%s'", CHROMA_COLLECTION)
 groq_client = Groq(api_key=GROQ_API_KEY, timeout=GROQ_TIMEOUT_S)
 
 # ── Flask app ─────────────────────────────────────────────────────────────────
-app = Flask(__name__)
+app = Flask(__name__, static_folder=str(BASE_DIR), static_url_path="")
+CORS(app)
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -125,12 +130,57 @@ def build_prompt(context: str, message: str) -> tuple[str, str]:
 
 # ── Routes ────────────────────────────────────────────────────────────────────
 
+@app.get("/")
+def index():
+    """Serve the frontend UI."""
+    return send_from_directory(BASE_DIR, "faithh_pet.html")
+
+
 @app.get("/health")
 def health():
     return jsonify({"status": "ok", "service": "faithh-backend", "port": BACKEND_PORT}), 200
 
 
-@app.post("/chat")
+@app.get("/api/status")
+def api_status():
+    """Service status check — called by the frontend on load."""
+    try:
+        doc_count = collection.count()
+        chroma_status = f"online ({doc_count:,} docs)"
+    except Exception as e:
+        chroma_status = f"offline ({e})"
+
+    groq_status = "configured" if GROQ_API_KEY else "no api key"
+
+    try:
+        r = requests.get("http://192.158.1.100:8000/v1/models", timeout=2)
+        vllm_status = "online" if r.status_code == 200 else "offline"
+    except Exception:
+        vllm_status = "offline"
+
+    return jsonify({
+        "success": True,
+        "services": {
+            "chromadb": chroma_status,
+            "groq":     groq_status,
+            "vllm":     vllm_status,
+        },
+        "backend": "faithh-professional",
+        "port": BACKEND_PORT,
+    }), 200
+
+
+@app.get("/api/pulse/chips")
+def pulse_chips():
+    """Chip data for the UI — stub until PULSE engine is rebuilt."""
+    return jsonify({
+        "program_advances": [],
+        "active_chips": [],
+        "status": "pulse_not_loaded",
+    }), 200
+
+
+@app.post("/api/chat")
 def chat():
     data = request.get_json(silent=True) or {}
     message = (data.get("message") or "").strip()
@@ -140,14 +190,11 @@ def chat():
 
     t0 = time.monotonic()
 
-    # 1. Retrieve context
     context = retrieve_context(message)
     log.info("Retrieved context (%d chars) for: %s…", len(context), message[:60])
 
-    # 2. Build prompts
     system_prompt, user_message = build_prompt(context, message)
 
-    # 3. Try Groq → fallback to vLLM
     source = "groq"
     try:
         reply = call_groq(system_prompt, user_message)
@@ -164,6 +211,7 @@ def chat():
 
     elapsed = round(time.monotonic() - t0, 3)
     return jsonify({
+        "success": True,
         "response": reply,
         "source": source,
         "context_chars": len(context),
