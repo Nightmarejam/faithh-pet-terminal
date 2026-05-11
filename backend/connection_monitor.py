@@ -106,7 +106,7 @@ class ConnectionMonitor:
     def _initialize_services(self):
         """Initialize all services to monitor"""
         # "Unhealthy services: 1" historically came from optional deps marked UNHEALTHY —
-        # e.g. remote Chroma on NAS (192.158.1.243) timing out or connection refused while
+        # e.g. remote Chroma on NAS (192.158.1.10) timing out or connection refused while
         # the UI/backend still runs. Groq/Gemini URLs without API keys only return 401/403
         # (degraded) but timeouts on those would also have been UNHEALTHY before optional.
         services_config = [
@@ -116,7 +116,7 @@ class ConnectionMonitor:
             {
                 'name': 'chromadb',
                 # Chroma v1 /api/v1/heartbeat returns HTTP 410 on current server; v2 is canonical.
-                'url': 'http://192.158.1.243:8000/api/v2/heartbeat',
+                'url': 'http://192.158.1.10:8000/api/v2/heartbeat',
                 'timeout': 3,
                 'fallback_url': None,
                 'required_for_overall': False,
