@@ -57,7 +57,7 @@ class PulseSelfHealer:
         ),
         "chromadb": ServiceConfig(
             name="chromadb",
-            health_url="http://192.158.1.243:8000/api/v2/heartbeat",
+            health_url="http://192.158.1.10:8000/api/v2/heartbeat",
             restart_command=None,  # remote - no local restart
             max_restarts=0,
         ),
