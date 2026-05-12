@@ -57,8 +57,8 @@ CHIPS_FILE = OUTPUT_DIR / "chips.json"
 REPORT_FILE = OUTPUT_DIR / "synthesis_report.md"
 
 # Model config
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # Same model as ChromaDB index
-DEVICE = "cuda"  # Use GPU
+EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"  # Match ChromaDB collection (768-dim)
+DEVICE = "cpu"  # CPU-only (Proxmox VM, no GPU passthrough)
 
 
 def pull_chunks(host, port, collection_name, batch_size=5000):
