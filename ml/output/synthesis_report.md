@@ -1,46 +1,46 @@
 # Chip Synthesis Report
-**Generated:** 2026-04-11 12:00:29  
-**Pipeline Duration:** 213.9s  
-**Documents Processed:** 53,975  
-**Clustered:** 38,481 (71.3%)  
-**Outliers:** 15,494 (28.7%)  
-**Topics Discovered:** 646  
+**Generated:** 2026-05-12 04:06:55  
+**Pipeline Duration:** 12252.8s  
+**Documents Processed:** 56,066  
+**Clustered:** 38,717 (69.1%)  
+**Outliers:** 17,349 (30.9%)  
+**Topics Discovered:** 660  
 
 ## Discovered Chips
 
 | Rank | Chip Name | Docs | Top Keywords |
 |------|-----------|------|-------------|
-| 1 | Yeah / Lets / Sounds | 861 | yeah, lets, sounds, okay, let |
-| 2 | Earth / Resonance / Universe | 617 | earth, resonance, universe, resonant, energy |
-| 3 | Ws / Bullets / Global Ws | 583 | ws, bullets, global ws, idtofile, global |
-| 4 | 2024 / Llc / Kevin | 382 | 2024, llc, kevin, reverb, cpa |
-| 5 | Ilo / Usb / Boot | 363 | ilo, usb, boot, iso, spp |
-| 6 | Llama / Llama Cpp Binaries / Llama Cpp | 358 | llama, llama_cpp_binaries, llama cpp, cpp, loader |
-| 7 | Fgsjson / Jonat Floating Gardens Soundworks / Floating Gardens Soundworks | 350 | fgsjson, jonat floating_gardens_soundworks, floating_gardens_soundworks, field, mdpath |
-| 8 | Jonat Ai / Ubuntu Bash / Wsl | 337 | jonat ai, ubuntu bash, wsl, home jonat, planner response |
-| 9 | 5557 / Backend / Faithh Professional Backend | 301 | 5557, backend, faithh_professional_backend, faithh_professional_backend_fixed, faithh_professional_backend_fixed py |
-| 10 | Robocopy / Mt / Mir | 292 | robocopy, mt, mir, log, old files |
-| 11 | Dryrun / Backup Parallel V14 / Backup Parallel V14 Ps1 | 279 | dryrun, backup_parallel_v14, backup_parallel_v14 ps1, old files, parallel |
-| 12 | Synology / Pi Hole / Pi | 260 | synology, pi hole, pi, hole, macvlan |
-| 13 | Test Wav / Wav / Inbox Test | 225 | test wav, wav, inbox test, faithh api, publish |
-| 14 | Cuda / Torch Cuda / Torch | 224 | cuda, torch cuda, torch, pytorch, device_count |
-| 15 | Traefik / Traefik Http / 8080 | 215 | traefik, traefik http, 8080, app_net, routers |
-| 16 | Conversations / Indexing / Exports | 214 | conversations, indexing, exports, indexed, chatgpt |
-| 17 | Volume1 Ai / Ssh Nas / Movies | 213 | volume1 ai, ssh nas, movies, ubuntu ssh, accepted command |
-| 18 | Chunks / Collection Name / Logger | 210 | chunks, collection_name, logger, aiplatform, vertex |
-| 19 | Ti / 1080 / 1080 Ti | 202 | ti, 1080, 1080 ti, 3090, vram |
-| 20 | Credit / Bankruptcy / Debt | 189 | credit, bankruptcy, debt, debts, loan |
-| 21 | Git / Faithh Git / Origin | 187 | git, faithh git, origin, push, github com |
-| 22 | Royalty / Publishing / Label | 185 | royalty, publishing, label, royalties, registration |
-| 23 | Md Score / Session 20250827 042608  Faithh Setup And Check / Session 20250827 042608  Faithh Setup And Check Md | 179 | md score, session_20250827_042608__faithh_setup_and_check, session_20250827_042608__faithh_setup_and_check md, score, setup install |
-| 24 | Pr / Merge / Gh | 173 | pr, merge, gh, branch, protection |
-| 25 | Faithh Cli / Faithh Src / Faithh Core | 171 | faithh cli, faithh src, faithh core, faithh faithh, src faithh |
-| 26 | Dhcp / Pi Hole / Pi | 169 | dhcp, pi hole, pi, hole, dns |
-| 27 | Thunderbolt / Dock / Cable | 167 | thunderbolt, dock, cable, usb, adapter |
-| 28 | Stars / Rating / Awareness | 165 | stars, rating, awareness, self awareness, conversation |
-| 29 | Tts / Xtts V2 / Xtts | 164 | tts, xtts_v2, xtts, tts_models, multilingual multi |
-| 30 | Pihole / Docker Pihole / Volume1 Docker | 164 | pihole, docker pihole, volume1 docker, pihole pihole, dnsmasq |
-| ... | *616 more topics* | | |
+| 1 | Pi Hole / Pi / Hole | 976 | pi hole, pi, hole, pihole, dns |
+| 2 | Messages En / Messages En Json / Messages Messages En | 691 | messages_en, messages_en json, messages messages_en, json handling, 22 get_message_dict |
+| 3 | Land / 197 / Ors | 494 | land, 197, ors, 215, land use |
+| 4 | 2024 / Llc / Kevin | 460 | 2024, llc, kevin, cpa, reverb |
+| 5 | 7860 / Taskname / Scheduledtask | 445 | 7860, taskname, scheduledtask, venv ps, port |
+| 6 | Stars / Scaffolding / Rating | 303 | stars, scaffolding, rating, awareness, journal |
+| 7 | Partnership / Partner / Schedule | 301 | partnership, partner, schedule, income, form |
+| 8 | Mastering / Xmax / Intercity | 300 | mastering, xmax, intercity, tegeler, eq |
+| 9 | Lets / Let / Yeah | 279 | lets, let, yeah, sounds, sounds good |
+| 10 | Blank Lines / Blanks / Headings | 277 | blank lines, blanks, headings, expected actual, blank |
+| 11 | Inference / Compose / Gpus | 276 | inference, compose, gpus, container, docker compose |
+| 12 | Llama / Llama Cpp Binaries / Llama Cpp | 266 | llama, llama_cpp_binaries, llama cpp, cpp, llama_cpp |
+| 13 | Unifi To Pihole / Docker Scripts / Unifi To Pihole Py | 261 | unifi_to_pihole, docker scripts, unifi_to_pihole py, scripts unifi_to_pihole, volume1 docker |
+| 14 | Pulse / Avatar / Chip | 256 | pulse, avatar, chip, chips, prioritizer |
+| 15 | Ai Toolkit / Jonathan Ai / Toolkit | 230 | ai toolkit, jonathan ai, toolkit, webui, generation webui |
+| 16 | Limited Liability / Liability Company / Liability | 228 | limited liability, liability company, liability, company, cooperative |
+| 17 | Windsurf / Handoff / Current Device | 212 | windsurf, handoff, current device, block supported, supported current |
+| 18 | Staticresource / Grid / Border | 206 | staticresource, grid, border, stackpanel, setter |
+| 19 | Isaidgoodday / Pihole / Isaidgoodday Volume1 | 206 | isaidgoodday, pihole, isaidgoodday volume1, nightmarejam isaidgoodday, docker pihole |
+| 20 | Royalty / Label / Artist | 199 | royalty, label, artist, publishing, distribution |
+| 21 | Chip / Chip Retrieval / Budget | 196 | chip, chip retrieval, budget, token, chips |
+| 22 | Llamacpp / Modelpath / Llama | 193 | llamacpp, modelpath, llama, llamacpp ps1, start fast |
+| 23 | Astris / Constellum / Civic | 186 | astris, constellum, civic, minting, decay |
+| 24 | Thunderbolt / Dock / Cable | 185 | thunderbolt, dock, cable, usb, owc |
+| 25 | Bankruptcy / Credit / Debt | 180 | bankruptcy, credit, debt, debts, loan |
+| 26 | Edc / Pbo / Ppt | 179 | edc, pbo, ppt, cpu, boost |
+| 27 | Mhz / Voltage / Dram | 175 | mhz, voltage, dram, 3466, fclk |
+| 28 | Merit / Bounty / Fund | 167 | merit, bounty, fund, bounties, contributors |
+| 29 | Use Production / 5557 / Venv Jonat | 159 | use production, 5557, venv jonat, jj1suhb ai, running http |
+| 30 | Pr / Gh / Merge | 153 | pr, gh, merge, gh pr, branch |
+| ... | *630 more topics* | | |
 
 ## Integration Notes
 

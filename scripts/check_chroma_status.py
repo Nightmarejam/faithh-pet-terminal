@@ -2,7 +2,7 @@
 """Check ChromaDB collection status."""
 import chromadb
 
-c = chromadb.HttpClient(host="192.158.1.243", port=8000)
+c = chromadb.HttpClient(host="192.158.1.10", port=8000)
 col = c.get_collection("faithh_knowledge_base")
 print(f"Total docs: {col.count()}")
 

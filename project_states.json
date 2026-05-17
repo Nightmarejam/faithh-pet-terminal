@@ -99,7 +99,7 @@
       ],
       "infrastructure": {
         "backend": "faithh_professional_backend_fixed.py on localhost:5557 (WSL2)",
-        "database": "ChromaDB on Gen8 (192.158.1.243:8000)",
+        "database": "ChromaDB on Gen8 (192.158.1.10:8000)",
         "collection": "faithh_knowledge_base",
         "chunks_indexed": 53976,
         "embedding": "all-MiniLM-L6-v2 (384-dim)",
@@ -150,7 +150,7 @@
         "cpu": "Intel Xeon E3-1265L v2",
         "ram": "15GB DDR3-1600 ECC",
         "ips": {
-          "lan": "192.158.1.243",
+          "lan": "192.158.1.10",
           "tailscale": "100.79.85.32"
         }
       },
@@ -158,7 +158,7 @@
         "chromadb": {
           "status": "running",
           "port": 8000,
-          "api_url": "http://192.158.1.243:8000",
+          "api_url": "http://192.158.1.10:8000",
           "collection": "faithh_knowledge_base",
           "documents": 32499,
           "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -169,7 +169,7 @@
         "grafana": {
           "status": "running",
           "port": 3000,
-          "url": "http://192.158.1.243:3000",
+          "url": "http://192.158.1.10:3000",
           "credentials": "admin/Grafana2026!",
           "deployed": "2026-01-20",
           "notes": "Monitoring dashboards for system and Docker"
@@ -180,15 +180,15 @@
             "http": 3002,
             "ssh": 2222
           },
-          "url": "http://192.158.1.243:3002",
+          "url": "http://192.158.1.10:3002",
           "deployed": "2026-01-20",
           "notes": "Git repository hosting with GitHub OAuth"
         },
         "vaultwarden": {
           "status": "running",
           "port": 8080,
-          "url": "http://192.158.1.243:8080",
-          "admin_url": "http://192.158.1.243:8080/admin",
+          "url": "http://192.158.1.10:8080",
+          "admin_url": "http://192.158.1.10:8080/admin",
           "deployed": "2026-01-20",
           "notes": "Password manager (Bitwarden compatible)"
         },
@@ -197,7 +197,7 @@
           "location": "~/services/pihole/",
           "dns_port": 53,
           "web_port": 80,
-          "web_url": "http://192.158.1.243/admin",
+          "web_url": "http://192.158.1.10/admin",
           "credentials": "admin/PiHole2026!",
           "upstream_dns": [
             "1.1.1.1",
@@ -209,7 +209,7 @@
         "prometheus": {
           "status": "running",
           "port": 9090,
-          "url": "http://192.158.1.243:9090",
+          "url": "http://192.158.1.10:9090",
           "deployed": "2026-01-20",
           "notes": "Metrics collection for Grafana"
         },
@@ -219,14 +219,14 @@
             "registry": 5000,
             "ui": 5001
           },
-          "url": "http://192.158.1.243:5001",
+          "url": "http://192.158.1.10:5001",
           "deployed": "2026-01-20",
           "notes": "Private Docker image repository"
         },
         "uptime_kuma": {
           "status": "running",
           "port": 3001,
-          "url": "http://192.158.1.243:3001",
+          "url": "http://192.158.1.10:3001",
           "deployed": "2026-01-20",
           "notes": "Uptime monitoring"
         },
@@ -454,7 +454,7 @@
   },
   "services": {
     "faithh_backend_url": "http://127.0.0.1:5557",
-    "chroma_url": "http://192.158.1.243:8000",
+    "chroma_url": "http://192.158.1.10:8000",
     "chroma_heartbeat": {
       "ok": true,
       "endpoint": "/api/v2/heartbeat",

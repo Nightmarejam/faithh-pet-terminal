@@ -31,7 +31,7 @@ from typing import Optional
 
 BASE_DIR  = Path(__file__).parent.parent
 RULES_FILE = BASE_DIR / "faithh_collection_rules.yaml"
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "192.158.1.10"
 CHROMA_PORT = 8000
 
 

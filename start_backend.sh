@@ -3,7 +3,7 @@
 # Uses tmux for stable background execution with fixed async issues
 
 SESSION_NAME="faithh-backend"
-BACKEND_SCRIPT="faithh_backend_v2_test.py"
+BACKEND_SCRIPT="faithh_professional_backend_fixed.py"
 
 echo "🚀 Starting FAITHH Backend v2.0 (Fixed)..."
 

@@ -55,7 +55,7 @@ def migrate_batch(kb, uncertainty, source, failure_reason, batch_size=100):
     return total_migrated
 
 if __name__ == "__main__":
-    c = chromadb.HttpClient(host="192.158.1.243", port=8000)
+    c = chromadb.HttpClient(host="192.158.1.10", port=8000)
     kb = c.get_collection("faithh_knowledge_base")
     uncertainty = c.get_collection("faithh_uncertainty_surface")
 

@@ -8,7 +8,7 @@ import requests
 import time
 
 # Configuration
-GRAFANA_URL = "http://192.158.1.243:3000"
+GRAFANA_URL = "http://192.158.1.10:3000"
 GRAFANA_USER = "admin"
 GRAFANA_PASS = "admin123"
 

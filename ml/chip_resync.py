@@ -39,7 +39,7 @@ CHIPS_FILE = OUTPUT_DIR / "chips.json"
 CONSOLIDATED_FILE = OUTPUT_DIR / "consolidated_chips.json"
 RESYNC_LOG = OUTPUT_DIR / "resync_history.json"
 
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.243")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base")
 

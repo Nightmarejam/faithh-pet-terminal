@@ -44,7 +44,7 @@ DECISIONS_LOG = BASE_DIR / "decisions_log.json"
 SCAFFOLDING = BASE_DIR / "scaffolding_state.json"
 MEMORY_FILE = BASE_DIR / "faithh_memory.json"
 
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.243")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base")
 

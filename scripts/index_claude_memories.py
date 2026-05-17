@@ -17,7 +17,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = ""
 import chromadb
 
 MEMORIES_PATH = Path("/tmp/claude_export_2/memories.json")
-CHROMA_HOST = os.getenv("CHROMA_HOST", "192.158.1.243")
+CHROMA_HOST = os.getenv("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.getenv("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base"
 

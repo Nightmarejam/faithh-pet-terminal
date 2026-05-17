@@ -40,7 +40,7 @@ OLLAMA_HOST = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 OLLAMA_MODEL = os.environ.get("OLLAMA_MODEL", "llama31-faithh:latest")
 
 # ChromaDB config
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.243")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base"
 

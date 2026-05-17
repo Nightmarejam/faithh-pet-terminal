@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "project_states.json"
 
 # Use Gen8 Chroma by default (Tailscale IP)
-DEFAULT_CHROMA = os.getenv("CHROMA_HOST", "http://192.158.1.243:8000").rstrip("/")
+DEFAULT_CHROMA = os.getenv("CHROMA_HOST", "http://192.158.1.10:8000").rstrip("/")
 DEFAULT_BACKEND = os.getenv("FAITHH_BACKEND_URL", "http://127.0.0.1:5557").rstrip("/")
 
 

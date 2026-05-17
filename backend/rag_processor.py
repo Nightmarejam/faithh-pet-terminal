@@ -23,7 +23,7 @@ except ImportError:
 # Configuration
 CHROMA_HOST = os.environ.get("CHROMA_HOST", "localhost")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
-EMBED_MODEL = os.environ.get("FAITHH_EMBED_MODEL", "all-MiniLM-L6-v2")
+EMBED_MODEL = os.environ.get("FAITHH_EMBED_MODEL", "BAAI/bge-base-en-v1.5")
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 

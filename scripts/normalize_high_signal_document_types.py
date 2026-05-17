@@ -45,7 +45,7 @@ def infer_document_type(source_type: str, doc_id: str) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Normalize high-signal document_type metadata")
-    parser.add_argument("--host", default="192.158.1.243")
+    parser.add_argument("--host", default="192.158.1.10")
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--collection", default="faithh_knowledge_base")
     args = parser.parse_args()

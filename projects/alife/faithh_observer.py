@@ -57,7 +57,7 @@ class PulseWatcher:
         self.seen_genomes: set = set()  # Track unique genomes for novelty detection
         
         # ChromaDB connection from environment (same pattern as FAITHH backend)
-        chroma_host = os.environ.get("CHROMA_HOST", "192.158.1.243")
+        chroma_host = os.environ.get("CHROMA_HOST", "192.158.1.10")
         chroma_port = int(os.environ.get("CHROMA_PORT", 8000))
         collection_name = "alife_lineage"
         

@@ -120,7 +120,7 @@ class Phase4Monitor:
     def check_services_status(self) -> dict:
         """Check status of external services"""
         services = {
-            'chromadb': 'http://192.158.1.243:8000',
+            'chromadb': 'http://192.158.1.10:8000',
             'ollama': 'http://localhost:11434',
         }
         

@@ -41,7 +41,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--query", default="", help="Explicit query override")
     parser.add_argument("--max-chunks", type=int, default=8)
     parser.add_argument("--collections", default="faithh_knowledge_base,alife_lineage")
-    parser.add_argument("--host", default="192.158.1.243")
+    parser.add_argument("--host", default="192.158.1.10")
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--output-dir", default=str(DEFAULT_OUTPUT_DIR))
     parser.add_argument("--output-prefix", default="runbook_seed_post")

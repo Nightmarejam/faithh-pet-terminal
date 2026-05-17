@@ -46,7 +46,7 @@ class SemanticIntentDetector:
                     break
         except Exception:
             return "cpu"
-        return device
+        return "cpu"
     
     def _load_model(self):
         """Load sentence transformer model"""

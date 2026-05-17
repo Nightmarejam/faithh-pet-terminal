@@ -25,8 +25,10 @@ from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
-os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+# GPU DISABLED for Proxmox VM environment
+# os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+# os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = ""  # Force CPU-only
 
 import numpy as np
 import chromadb
@@ -36,7 +38,7 @@ from sentence_transformers import SentenceTransformer
 # Configuration
 # ============================================================
 
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.243")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base"
 
@@ -45,7 +47,7 @@ CHIPS_FILE = BASE_DIR / "ml" / "output" / "chips.json"
 OUTPUT_FILE = BASE_DIR / "ml" / "output" / "consolidated_chips.json"
 REPORT_FILE = BASE_DIR / "ml" / "output" / "consolidation_report.md"
 
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+EMBEDDING_MODEL = os.environ.get("FAITHH_EMBEDDER_MODEL", "BAAI/bge-base-en-v1.5")
 
 # ============================================================
 # Macro-chip definitions (keyword-based grouping rules)

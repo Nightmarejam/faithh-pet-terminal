@@ -199,7 +199,7 @@
       "status": "running",
       "ports": [8000],
       "endpoints": [
-        { "method": "GET", "path": "/api/v2/heartbeat", "url": "http://192.158.1.243:8000/api/v2/heartbeat", "purpose": "health" }
+        { "method": "GET", "path": "/api/v2/heartbeat", "url": "http://192.158.1.10:8000/api/v2/heartbeat", "purpose": "health" }
       ],
       "notes": "Primary knowledge base"
     },

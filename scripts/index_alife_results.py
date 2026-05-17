@@ -130,7 +130,7 @@ PROC_BEAT failed to dominate in Experiment 4 because:
     
     try:
         # Connect to ChromaDB using same settings as backend
-        chroma_client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+        chroma_client = chromadb.HttpClient(host="192.158.1.10", port=8000)
         collection_name = "faithh_knowledge_base"
         
         # Get or create collection

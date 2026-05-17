@@ -7,7 +7,7 @@ import chromadb
 import json
 from collections import Counter
 
-client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+client = chromadb.HttpClient(host="192.158.1.10", port=8000)
 collection = client.get_collection("faithh_knowledge_base")
 
 print(f"Total documents: {collection.count()}\n")

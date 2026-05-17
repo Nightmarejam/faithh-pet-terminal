@@ -542,8 +542,8 @@ def is_ping_like_prompt(text: str) -> bool:
 
 # Configuration
 BACKEND_VERSION = os.environ.get("FAITHH_BACKEND_VERSION", "v4.0-pulse")
-EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2 (384-dim)"
-EMBEDDING_MODEL_ID = os.environ.get("FAITHH_EMBEDDER_MODEL", "all-MiniLM-L6-v2")
+EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5 (768-dim)"
+EMBEDDING_MODEL_ID = os.environ.get("FAITHH_EMBEDDER_MODEL", "BAAI/bge-base-en-v1.5")
 EMBEDDER_ALLOW_DOWNLOAD = os.environ.get("FAITHH_EMBEDDER_ALLOW_DOWNLOAD", "0") == "1"
 EMBEDDER_LOCAL_ONLY = os.environ.get("FAITHH_EMBEDDER_LOCAL_ONLY", "1") == "1"
 DEFAULT_MODEL = os.environ.get("DEFAULT_MODEL", "qwen25-grounded-gen5-delta:latest")
@@ -731,13 +731,13 @@ def get_query_embedder():
             if EMBEDDER_LOCAL_ONLY and not EMBEDDER_ALLOW_DOWNLOAD:
                 kwargs["local_files_only"] = True
             query_embedder = _SentenceTransformer(EMBEDDING_MODEL_ID, **kwargs)
-            print("✅ Query embedder loaded (all-MiniLM-L6-v2, 384-dim)")
+            print("✅ Query embedder loaded (BAAI/bge-base-en-v1.5, 384-dim)")
         except TypeError as e:
             _embedder_load_error = e
             if EMBEDDER_ALLOW_DOWNLOAD:
                 try:
                     query_embedder = _SentenceTransformer(EMBEDDING_MODEL_ID, device='cpu')
-                    print("✅ Query embedder loaded (all-MiniLM-L6-v2, 384-dim, CPU-only)")
+                    print("✅ Query embedder loaded (BAAI/bge-base-en-v1.5, 384-dim, CPU-only)")
                 except Exception as inner:
                     _embedder_load_error = inner
                     query_embedder = None
@@ -3526,7 +3526,7 @@ def rag_search():
             'distances': distances,
             'mode_used': 'governance_strict' if strict_governance else 'general',
             'total_documents': collection.count() if collection else 0,
-            'embedding_model': 'all-MiniLM-L6-v2 (384-dim)'
+            'embedding_model': 'BAAI/bge-base-en-v1.5 (768-dim)'
         })
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500

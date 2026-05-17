@@ -15,7 +15,7 @@ from sentence_transformers import SentenceTransformer
 import chromadb
 
 # Configuration
-GEN8_CHROMA_HOST = "192.158.1.243"
+GEN8_CHROMA_HOST = "192.158.1.10"
 GEN8_CHROMA_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"

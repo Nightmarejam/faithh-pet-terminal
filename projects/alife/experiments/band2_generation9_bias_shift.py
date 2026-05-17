@@ -22,7 +22,7 @@ from chromadb.config import Settings
 REPO_ROOT = Path(__file__).resolve().parents[3]
 REPORT_DIR = REPO_ROOT / "reports" / "alife"
 
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "192.158.1.10"
 CHROMA_PORT = 8000
 COLLECTION = "alife_lineage"
 

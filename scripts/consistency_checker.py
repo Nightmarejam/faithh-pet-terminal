@@ -257,7 +257,7 @@ def run_checks(extracted: dict) -> list:
 
 FIX_HINTS = {
     "ChromaDB chunk count": (
-        "Run: curl http://192.158.1.243:8000/api/v2/collections/faithh_knowledge_base\n"
+        "Run: curl http://192.158.1.10:8000/api/v2/collections/faithh_knowledge_base\n"
         "Then update faithh_memory.json → chromadb.documents and project_states.json → FAITHH.infrastructure.chunks_indexed\n"
         "Then re-run: python scripts/generate_context.py"
     ),

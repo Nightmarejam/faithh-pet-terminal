@@ -19,7 +19,7 @@ class AutomatedHealthCheck:
     def __init__(self):
         self.project_root = Path("/home/jonat/ai-stack")
         self.backend_url = "http://localhost:5557"
-        self.chromadb_url = "http://192.158.1.243:8000"
+        self.chromadb_url = "http://192.158.1.10:8000"
         self.log_file = self.project_root / "logs" / "health_check.log"
         self.log_file.parent.mkdir(exist_ok=True)
         

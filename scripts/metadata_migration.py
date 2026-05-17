@@ -24,7 +24,7 @@ from datetime import datetime, timezone, timedelta
 from collections import Counter
 
 BASE_DIR = Path(__file__).parent.parent
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "192.158.1.10"
 CHROMA_PORT = 8000
 CHROMA_COLLECTION = "faithh_knowledge_base"
 BATCH_SIZE = 200

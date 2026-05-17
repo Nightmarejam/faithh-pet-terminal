@@ -18,7 +18,7 @@ Metadata schema uses biological/complexity science vocabulary:
 """
 import chromadb
 
-CHROMADB_HOST = "192.158.1.243"
+CHROMADB_HOST = "192.158.1.10"
 CHROMADB_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 

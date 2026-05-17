@@ -15,7 +15,7 @@ class MetadataTagger:
     """Automated metadata classification and tagging system"""
     
     def __init__(self):
-        self.client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+        self.client = chromadb.HttpClient(host="192.158.1.10", port=8000)
         self.collection = self.client.get_collection(name="faithh_knowledge_base")
         
         # Load sentence transformer for semantic classification

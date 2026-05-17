@@ -7,7 +7,7 @@ import yaml
 import requests
 
 # Configuration
-PROMETHEUS_URL = "http://192.158.1.243:9090"
+PROMETHEUS_URL = "http://192.158.1.10:9090"
 
 def create_alert_rules():
     """Create alert rules for Gen8 monitoring"""
@@ -116,7 +116,7 @@ def main():
     # Copy to Gen8
     import subprocess
     result = subprocess.run(
-        ["scp", "/tmp/gen8_alerts.yml", "jonat@192.158.1.243:/home/jonat/services/monitoring/"],
+        ["scp", "/tmp/gen8_alerts.yml", "jonat@192.158.1.10:/home/jonat/services/monitoring/"],
         capture_output=True,
         text=True
     )

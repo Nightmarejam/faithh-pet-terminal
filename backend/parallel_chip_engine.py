@@ -151,7 +151,7 @@ class ChipRetriever:
         """Initialize ChromaDB connection."""
         try:
             import chromadb
-            self.chroma_client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+            self.chroma_client = chromadb.HttpClient(host="192.158.1.10", port=8000)
             self.collection = self.chroma_client.get_collection("faithh_knowledge_base")
         except Exception as e:
             print(f"ChromaDB connection failed: {e}")

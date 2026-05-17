@@ -11,7 +11,7 @@ from datetime import datetime
 
 import chromadb
 
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "192.158.1.10"
 CHROMA_PORT = 8000
 COLLECTION = "governance_corpus"
 ZIP_PATH = "/mnt/x/staging/V-Dem-CD-v16_csv.zip"

@@ -46,7 +46,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 # Configuration
 # ============================================================
 
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.243")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base")
 

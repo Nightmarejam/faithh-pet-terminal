@@ -3,7 +3,7 @@
 Index governance prose documents from staging into faithh_knowledge_base.
 
 Source: /mnt/x/staging/ (X: drive — mount with: sudo mount -t drvfs X: /mnt/x)
-Target: Gen8 ChromaDB faithh_knowledge_base at 192.158.1.243:8000
+Target: Gen8 ChromaDB faithh_knowledge_base at 192.158.1.10:8000
 
 Documents:
 - United Nations Charter
@@ -19,7 +19,7 @@ from datetime import datetime
 
 import chromadb
 
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "192.158.1.10"
 CHROMA_PORT = 8000
 COLLECTION = "faithh_knowledge_base"
 

@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 
 BASE_DIR = Path(__file__).parent.parent
 
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "192.158.1.10"
 CHROMA_PORT = 8000
 CHROMA_COLLECTION = "faithh_knowledge_base"
 BACKEND_HOST = "127.0.0.1"

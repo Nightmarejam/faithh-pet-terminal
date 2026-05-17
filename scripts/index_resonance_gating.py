@@ -9,7 +9,7 @@ import chromadb
 print("Indexing resonance gating doc...")
 sys.stdout.flush()
 
-client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+client = chromadb.HttpClient(host="192.158.1.10", port=8000)
 collection = client.get_collection(name="faithh_knowledge_base")
 before = collection.count()
 

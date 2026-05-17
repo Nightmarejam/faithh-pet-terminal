@@ -17,7 +17,7 @@
       "from_component": "faithh_backend",
       "to_component": "chromadb",
       "transport": "http",
-      "base_url": "http://192.158.1.243:8000",
+      "base_url": "http://192.158.1.10:8000",
       "health_probe": "GET /api/v2/heartbeat",
       "contract_ref": "backend/connection_monitor.py ServiceHealth chromadb; Chroma v2 API"
     },

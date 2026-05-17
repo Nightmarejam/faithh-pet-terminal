@@ -23,7 +23,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 class ALIFETrainingDataBuilder:
     """Builds training datasets from ALIFE ChromaDB data for Phase 2 ML."""
     
-    def __init__(self, chroma_host: str = "192.158.1.243", chroma_port: int = 8000):
+    def __init__(self, chroma_host: str = "192.158.1.10", chroma_port: int = 8000):
         self.chroma_host = chroma_host
         self.chroma_port = chroma_port
         self.client = None
@@ -378,7 +378,7 @@ class ALIFETrainingDataBuilder:
 def main():
     parser = argparse.ArgumentParser(description="Build ALIFE training pipeline")
     parser.add_argument("--output-dir", default="ml/training_data", help="Output directory for training data")
-    parser.add_argument("--chroma-host", default="192.158.1.243", help="ChromaDB host")
+    parser.add_argument("--chroma-host", default="192.158.1.10", help="ChromaDB host")
     parser.add_argument("--chroma-port", type=int, default=8000, help="ChromaDB port")
     
     args = parser.parse_args()

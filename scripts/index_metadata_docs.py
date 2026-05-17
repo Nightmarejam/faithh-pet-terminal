@@ -15,7 +15,7 @@ def index_metadata_documentation():
     """Index the metadata automation system documentation"""
     
     # Connect to ChromaDB
-    client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+    client = chromadb.HttpClient(host="192.158.1.10", port=8000)
     collection = client.get_collection(name="faithh_knowledge_base")
     
     # Read the documentation
@@ -131,7 +131,7 @@ Impact:
     
     try:
         # Connect to ChromaDB
-        client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+        client = chromadb.HttpClient(host="192.158.1.10", port=8000)
         collection = client.get_collection(name="faithh_knowledge_base")
         
         # Generate metadata

@@ -37,7 +37,7 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 BASE_DIR = Path(__file__).parent.parent
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.243")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base"
 

@@ -909,7 +909,7 @@ tail -f backend.log
 #### ChromaDB Connection Issues
 ```bash
 # Check ChromaDB health
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://192.158.1.10:8000/api/v2/heartbeat
 
 # Restart services
 docker-compose restart chromadb
@@ -1220,10 +1220,10 @@ curl http://localhost:5557/api/metrics
 ### Database Health
 ```bash
 # ChromaDB health
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://192.158.1.10:8000/api/v2/heartbeat
 
 # Database stats
-curl http://192.158.1.243:8000/api/v2/collections
+curl http://192.158.1.10:8000/api/v2/collections
 ```
 
 ### Service Health

@@ -72,7 +72,7 @@ def load_text(path: Path) -> str:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Index governance source corpus")
     parser.add_argument("--input-root", default=str(DEFAULT_INPUT_ROOT))
-    parser.add_argument("--host", default=os.getenv("CHROMA_HOST", "192.158.1.243"))
+    parser.add_argument("--host", default=os.getenv("CHROMA_HOST", "192.158.1.10"))
     parser.add_argument("--port", type=int, default=int(os.getenv("CHROMA_PORT", "8000")))
     parser.add_argument("--report-dir", default=str(DEFAULT_REPORT_DIR))
     parser.add_argument("--dry-run", action="store_true")

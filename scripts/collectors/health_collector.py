@@ -16,7 +16,7 @@ class HealthCollector(BaseCollector):
             "type": "http",
         },
         "chromadb_gen8": {
-            "url": "http://192.158.1.243:8000/api/v2/heartbeat",
+            "url": "http://192.158.1.10:8000/api/v2/heartbeat",
             "type": "chromadb",
             "expected_docs": 29013,
             "collection": "faithh_knowledge_base",

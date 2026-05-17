@@ -2,7 +2,7 @@
 """Index Exp 8b strategy escape isolation results into ChromaDB."""
 import chromadb
 
-client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+client = chromadb.HttpClient(host="192.158.1.10", port=8000)
 col = client.get_collection("faithh_knowledge_base")
 
 doc = """ALife Experiment 8b: Strategy Escape Isolation — Founding Population Effect

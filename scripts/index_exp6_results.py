@@ -2,7 +2,7 @@
 """Index Experiment 6 UCF Floor results into ChromaDB."""
 import json, chromadb
 
-CHROMADB_HOST = "192.158.1.243"
+CHROMADB_HOST = "192.158.1.10"
 CHROMADB_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 

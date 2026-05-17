@@ -15,9 +15,9 @@ def audit_collection():
     
     # Connect to ChromaDB
     try:
-        client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+        client = chromadb.HttpClient(host='192.158.1.10', port=8000)
         collection = client.get_collection('faithh_knowledge_base')
-        print(f"[AUDIT] Connected to ChromaDB at 192.158.1.243:8000")
+        print(f"[AUDIT] Connected to ChromaDB at 192.158.1.10:8000")
         print(f"[AUDIT] Collection: faithh_knowledge_base")
     except Exception as e:
         print(f"[ERROR] Failed to connect: {e}")

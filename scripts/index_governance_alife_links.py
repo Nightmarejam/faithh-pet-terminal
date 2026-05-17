@@ -20,7 +20,7 @@ def main() -> None:
         "--input",
         default="/home/jonat/ai-stack/reports/inventory/governance_alife_links.jsonl",
     )
-    parser.add_argument("--host", default=os.getenv("CHROMA_HOST", "192.158.1.243"))
+    parser.add_argument("--host", default=os.getenv("CHROMA_HOST", "192.158.1.10"))
     parser.add_argument("--port", type=int, default=int(os.getenv("CHROMA_PORT", "8000")))
     args = parser.parse_args()
 

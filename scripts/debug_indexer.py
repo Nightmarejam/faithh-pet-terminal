@@ -12,7 +12,7 @@ from datetime import datetime
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 BASE_DIR = Path(__file__).parent.parent
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "192.158.1.10"
 CHROMA_PORT = 8000
 CHUNK_SIZE = 1500
 CHUNK_OVERLAP = 200

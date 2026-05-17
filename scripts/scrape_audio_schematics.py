@@ -36,7 +36,7 @@ USER_AGENT = "FAITHH Audio Schematic Collector / research use"
 REQUEST_DELAY = 1.5  # seconds between requests
 MAX_CONCURRENT = 3   # concurrent downloads
 
-CHROMADB_HOST = "192.158.1.243"
+CHROMADB_HOST = "192.158.1.10"
 CHROMADB_PORT = 8000
 
 # ─────────────────────────────────────────────────────────────────────────────

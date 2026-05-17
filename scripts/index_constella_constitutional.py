@@ -30,7 +30,7 @@ CONSTELLA_FRAMEWORK_PATH = os.getenv('CONSTELLA_FRAMEWORK_PATH',
 PRINCIPLES_JSON_PATH = os.path.join(CONSTELLA_FRAMEWORK_PATH, 'config', 'constitutional_principles.json')
 MAPPING_MD_PATH = os.path.join(CONSTELLA_FRAMEWORK_PATH, 'docs', 'governance', 'alife_evidence_mapping.md')
 
-CHROMA_HOST = os.getenv('CHROMA_HOST', '192.158.1.243')
+CHROMA_HOST = os.getenv('CHROMA_HOST', '192.158.1.10')
 CHROMA_PORT = os.getenv('CHROMA_PORT', '8000')
 COLLECTION_NAME = 'faithh_knowledge_base'
 DOMAIN = 'constella_constitutional'
