@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-05-17T08:08:12.066659",
+  "generated_at": "2026-05-17T09:07:48.426885",
   "generator": "scripts/generate_fingerprint.py",
   "version": "1.0",
   "health": {
     "backend": {
       "status": "healthy",
       "port": 5557,
-      "chromadb_docs": 33852,
+      "chromadb_docs": 33853,
       "features": 12,
       "providers": {
         "anthropic": true,

@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0",
-    "generated_at": "2026-05-17T08:08:12.018173",
+    "generated_at": "2026-05-17T09:07:48.378784",
     "elapsed_seconds": 0.0,
     "dry_run": false
   },
@@ -20,7 +20,7 @@
     "staleness": {
       "available": true,
       "generated_at": "2026-05-11T21:20:56.198686",
-      "age_hours": 130.8,
+      "age_hours": 131.8,
       "stale_itself": true,
       "critical": 0,
       "warning": 45,
@@ -31,7 +31,7 @@
     "divergence": {
       "available": true,
       "generated_at": "2026-05-11T21:20:56.196685",
-      "age_hours": 130.8,
+      "age_hours": 131.8,
       "stale_itself": true,
       "total_decisions": 0,
       "concerning": [],
@@ -40,7 +40,7 @@
     "branches": {
       "available": true,
       "generated_at": "2026-05-11T21:20:56.191685",
-      "age_hours": 130.8,
+      "age_hours": 131.8,
       "stale_itself": true,
       "total_ideas": 2,
       "high_value": [],
@@ -49,7 +49,7 @@
   },
   "context_md": {
     "needs_regen": false,
-    "age_days": 5.4,
+    "age_days": 5.5,
     "last_modified": "2026-05-11T21:20:55.924651"
   },
   "healing_actions": []

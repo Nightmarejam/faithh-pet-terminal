@@ -4830,6 +4830,113 @@ def get_api_usage():
     })
 
 
+
+@app.route('/api/rainmeter', methods=['GET'])
+def rainmeter_state():
+    """Flat JSON for Rainmeter WebParser - all panels in one poll."""
+    import time as _time
+    try:
+        import chromadb as _chromadb
+        _cc = _chromadb.HttpClient(host='192.158.1.10', port=8000)
+        _col = _cc.get_collection('faithh_knowledge_base_v2')
+        chroma = {'connected': True, 'documents': _col.count()}
+    except Exception as _e:
+        chroma = {'connected': False, 'documents': 0}
+    try:
+        ollama_svc = {'reachable': False}
+        import requests as _req
+        _r = _req.get('http://127.0.0.1:11434/api/tags', timeout=2)
+        if _r.status_code == 200:
+            ollama_svc = {'reachable': True}
+    except Exception:
+        pass
+    try:
+        ml = {'loaded': len(ML_CHIPS), 'centroids': ML_CHIP_CENTROIDS.shape[0] if ML_CHIP_CENTROIDS is not None else 0}
+    except Exception:
+        ml = {'loaded': 0, 'centroids': 0}
+    try:
+        _snap = get_faithh_status_snapshot()
+        model_info = _snap.get('services', {}).get('current_model', {})
+    except Exception:
+        model_info = {}
+    try:
+        _pstate = json.load(open(BASE_DIR / 'ml' / 'output' / 'pulse_state.json'))
+        _raw_reports = _pstate.get('reports', {})
+        pulse_reports = {}
+        for k, v in _raw_reports.items():
+            pulse_reports[k] = dict(v)
+            if 'age_hours' in v and 'age_minutes' not in v:
+                pulse_reports[k]['age_minutes'] = round(v['age_hours'] * 60)
+    except Exception:
+        pulse_reports = {}
+    try:
+        pulse_state = json.load(open(BASE_DIR / 'ml' / 'output' / 'pulse_state.json'))
+        mood = pulse_state.get('avatar', {}).get('mood', 'unknown')
+        energy = pulse_state.get('avatar', {}).get('energy', 0)
+        alert_count = pulse_state.get('avatar', {}).get('alert_count', 0)
+    except Exception:
+        mood = 'unknown'; energy = 0; alert_count = 0
+    try:
+        chip_ids = ML_CHIP_IDS[:5] if ML_CHIP_IDS else []
+        chips_str = ', '.join(chip_ids)
+    except Exception:
+        chips_str = ''
+    try:
+        ps_data = json.load(open(BASE_DIR / 'project_states.json'))
+        raw = ps_data.get('projects', ps_data) if isinstance(ps_data, dict) else ps_data
+        projects = list(raw.values()) if isinstance(raw, dict) else raw
+        compass_lines = []
+        for p in projects[:4]:
+            if not isinstance(p, dict): continue
+            name = (p.get('name', p.get('id', '?')))[:22]
+            phase = p.get('phase', '')[:18]
+            steps = p.get('next_steps', [])
+            next_step = steps[0][:48] if steps else 'no steps'
+            compass_lines.append(f"{name} | {phase} | {next_step}")
+        compass_str = ' ;; '.join(compass_lines)
+        proj_count = len(projects)
+    except Exception as _ce:
+        compass_str = f'compass error: {_ce}'
+        proj_count = 0
+    def tier_age(key):
+        try: return round(pulse_reports.get(key, {}).get('age_minutes', -1))
+        except: return -1
+    def tier_status(age_min, warn_hours=8):
+        if age_min < 0: return 'UNKNOWN'
+        if age_min > warn_hours * 60: return 'STALE'
+        return 'OK'
+    s_age = tier_age('staleness'); d_age = tier_age('divergence'); b_age = tier_age('branches')
+    return jsonify({
+        "polled_at": _time.strftime('%Y-%m-%d %H:%M:%S'),
+        "backend_version": "v4.0-pulse",
+        "mood": mood.upper(),
+        "energy": round(energy * 100),
+        "alert_count": alert_count,
+        "model_name": model_info.get('name', 'unknown'),
+        "model_provider": model_info.get('provider', 'unknown'),
+        "model_latency_ms": round(model_info.get('last_response_time', 0) * 1000),
+        "chips_loaded": ml.get('loaded', 0),
+        "chips_centroids": ml.get('centroids', 0),
+        "active_chip_ids": chips_str,
+        "chroma_status": "ONLINE" if chroma.get('connected') else "OFFLINE",
+        "chroma_docs": chroma.get('documents', 0),
+        "chroma_model": "BGE-768",
+        "backend_status": "ONLINE",
+        "ollama_status": "ONLINE" if ollama_svc.get('reachable') else "OFFLINE",
+        "groq_status": "ONLINE",
+        "gemini_status": "ONLINE",
+        "vllm_status": "ONLINE",
+        "pulse_staleness": tier_status(s_age),
+        "pulse_staleness_age": s_age,
+        "pulse_divergence": tier_status(d_age, warn_hours=26),
+        "pulse_divergence_age": d_age,
+        "pulse_branches": tier_status(b_age, warn_hours=50),
+        "pulse_branches_age": b_age,
+        "pulse_alerts": alert_count,
+        "compass": compass_str,
+        "compass_project_count": proj_count,
+    })
+
 @app.route('/api/plc/state', methods=['GET'])
 def get_plc_state():
     """
