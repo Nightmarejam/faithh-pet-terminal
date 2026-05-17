@@ -898,7 +898,7 @@ def _load_ml_chips():
         ids = []
         for chip in chips:
             centroid = chip.get('centroid')
-            if centroid and len(centroid) == 384:
+            if centroid and len(centroid) in (384, 768):
                 centroids.append(centroid)
                 ids.append(chip['id'])
         ML_CHIPS = chips
