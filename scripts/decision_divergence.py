@@ -34,11 +34,11 @@ import requests
 import chromadb
 
 BASE_DIR = Path(__file__).parent.parent
-OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
+VLLM_URL = os.environ.get("VLLM_URL", "http://localhost:8000")
 CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base"
-DEFAULT_MODEL = "llama31-faithh"
+DEFAULT_MODEL = "qwen2.5-14b-awq"
 
 
 def load_decisions() -> list[dict]:
@@ -186,30 +186,24 @@ Respond ONLY with the JSON object, no other text."""
 
 
 def query_ollama(prompt: str, model: str, timeout: int = 120) -> str:
-    """Send prompt to Ollama and get response."""
+    """Query vLLM (OpenAI-compatible) instead of Ollama."""
     try:
         resp = requests.post(
-            f"{OLLAMA_URL}/api/generate",
+            f"{VLLM_URL}/v1/chat/completions",
             json={
                 "model": model,
-                "prompt": prompt,
-                "stream": False,
-                "options": {
-                    "temperature": 0.3,
-                    "num_predict": 500,
-                }
+                "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0.3,
+                "max_tokens": 500,
             },
-            timeout=timeout
+            timeout=timeout,
         )
         resp.raise_for_status()
-        return resp.json().get("response", "")
+        return resp.json()["choices"][0]["message"]["content"]
     except requests.exceptions.ConnectionError:
-        return '{"error": "Ollama not running — start with: sudo systemctl start ollama"}'
+        return '{"error": "vLLM not running — check: ps aux | grep vllm"}'
     except requests.exceptions.Timeout:
-        return '{"error": "Ollama timeout — model may need to load first"}'
-    except Exception as e:
-        return f'{{"error": "{str(e)}"}}'
-
+        return '{"error": "vLLM timeout"}'
 
 def parse_llm_response(raw: str) -> dict:
     """Parse the LLM's JSON response, handling common formatting issues."""
@@ -343,9 +337,9 @@ def main():
         print(f"  Filtering to: {args.decision}")
 
     # 2. Check Ollama connectivity
-    print(f"\n[2/4] Checking Ollama ({args.model})...")
+    print(f"\n[2/4] Checking vLLM ({args.model})...")
     try:
-        resp = requests.get(f"{OLLAMA_URL}/api/tags", timeout=5)
+        resp = requests.get(f"{VLLM_URL}/v1/models", timeout=5)
         models = [m["name"] for m in resp.json().get("models", [])]
         if not any(args.model in m for m in models):
             print(f"  Warning: Model '{args.model}' not found. Available: {models}")
@@ -354,7 +348,7 @@ def main():
             print(f"  Model '{args.model}' available")
     except Exception as e:
         print(f"  Error: Cannot reach Ollama at {OLLAMA_URL}: {e}")
-        print("  Start Ollama with: sudo systemctl start ollama")
+        print("  vLLM not running — check tmux session")
         sys.exit(1)
 
     # 3. Connect to ChromaDB

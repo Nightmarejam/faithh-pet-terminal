@@ -48,7 +48,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
-COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base")
+COLLECTION_NAME = os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base_v2")
 
 # Output paths
 BASE_DIR = Path(__file__).parent.parent  # ~/ai-stack
@@ -58,7 +58,7 @@ REPORT_FILE = OUTPUT_DIR / "synthesis_report.md"
 
 # Model config
 EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"  # Match ChromaDB collection (768-dim)
-DEVICE = "cpu"  # CPU-only (Proxmox VM, no GPU passthrough)
+DEVICE = "cuda"
 
 
 def pull_chunks(host, port, collection_name, batch_size=5000):

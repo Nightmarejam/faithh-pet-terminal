@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-12T17:30:01.454733",
+  "generated_at": "2026-05-17T08:08:12.066659",
   "generator": "scripts/generate_fingerprint.py",
   "version": "1.0",
   "health": {
     "backend": {
       "status": "healthy",
       "port": 5557,
-      "chromadb_docs": 53807,
+      "chromadb_docs": 33852,
       "features": 12,
       "providers": {
         "anthropic": true,
@@ -17,21 +17,13 @@
     },
     "chromadb": {
       "status": "healthy",
-      "host": "192.158.1.243",
+      "host": "192.158.1.10",
       "port": 8000
     },
     "ollama": {
-      "status": "healthy",
+      "status": "unreachable",
       "port": 11434,
-      "models": [
-        "qwen25-faithh-v3:latest",
-        "qwen25-faithh-v2:latest",
-        "qwen25-grounded:latest",
-        "qwen25-grounded-32k:latest",
-        "qwen25-grounded-gen5-delta:latest",
-        "deepseek-r1:32b",
-        "llama3.3:70b"
-      ]
+      "error": "HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     }
   },
   "active_model": {
@@ -39,7 +31,7 @@
     "reasoning": "deepseek-r1:32b",
     "provider": "ollama",
     "groq_available": false,
-    "gemini_available": true
+    "gemini_available": false
   },
   "open_loops": [
     {
@@ -157,23 +149,23 @@
     }
   },
   "ml_chips": {
-    "total_chips": 646,
+    "total_chips": 660,
     "chip_names": [
-      "Yeah / Lets / Sounds",
-      "Earth / Resonance / Universe",
-      "Ws / Bullets / Global Ws",
+      "Pi Hole / Pi / Hole",
+      "Messages En / Messages En Json",
+      "Land / 197 / Ors",
       "2024 / Llc / Kevin",
-      "Ilo / Usb / Boot",
+      "7860 / Taskname / Scheduledtas",
+      "Stars / Scaffolding / Rating",
+      "Partnership / Partner / Schedu",
+      "Mastering / Xmax / Intercity",
+      "Lets / Let / Yeah",
+      "Blank Lines / Blanks / Heading",
+      "Inference / Compose / Gpus",
       "Llama / Llama Cpp Binaries / L",
-      "Fgsjson / Jonat Floating Garde",
-      "Jonat Ai / Ubuntu Bash / Wsl",
-      "5557 / Backend / Faithh Profes",
-      "Robocopy / Mt / Mir",
-      "Dryrun / Backup Parallel V14 /",
-      "Synology / Pi Hole / Pi",
-      "Test Wav / Wav / Inbox Test",
-      "Cuda / Torch Cuda / Torch",
-      "Traefik / Traefik Http / 8080"
+      "Unifi To Pihole / Docker Scrip",
+      "Pulse / Avatar / Chip",
+      "Ai Toolkit / Jonathan Ai / Too"
     ]
   },
   "session_context": {
@@ -181,5 +173,5 @@
     "conversation_id": null,
     "chips_activated": []
   },
-  "overall_status": "healthy"
+  "overall_status": "degraded"
 }

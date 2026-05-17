@@ -40,7 +40,7 @@ from sentence_transformers import SentenceTransformer
 
 CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
-COLLECTION_NAME = "faithh_knowledge_base"
+COLLECTION_NAME = "faithh_knowledge_base_v2"
 
 BASE_DIR = Path(__file__).parent.parent
 CHIPS_FILE = BASE_DIR / "ml" / "output" / "chips.json"
@@ -76,6 +76,8 @@ MACRO_CHIPS = {
         "match_categories": ["constella"],
     },
     "infrastructure_docker": {
+        "label": "Infrastructure & Docker",
+        "description": "Docker, containers, networking, proxmox, VM infrastructure",
         "match_keywords": ["docker", "pihole", "traefik", "container", "volume1", "compose", "synology", "macvlan", "pi hole", "8080"],
         "match_categories": ["infrastructure"],
     },
@@ -89,10 +91,14 @@ MACRO_CHIPS = {
         ],
     },
     "audio_business": {
+        "label": "Audio & Music Business",
+        "description": "Tom Cat Sound, audio gear, reverb, music business, LLC",
         "match_keywords": ["operational_pillars", "tax", "cpa", "inventory", "fgs", "floating_gardens", "soundworks", "wav", "reverb"],
         "match_categories": ["audio"],
     },
     "llm_ai_tools": {
+        "label": "LLM & AI Tools",
+        "description": "LLM models, AI tools, Groq, Anthropic, Ollama, vLLM, fine-tuning",
         "match_keywords": ["llama", "ollama", "groq", "gemini", "provider", "model", "cuda", "torch", "pytorch", "llama_cpp", "cpp"],
     },
     "chromadb_indexing": {
@@ -131,6 +137,8 @@ MACRO_CHIPS = {
         ],
     },
     "file_management": {
+        "label": "File Management & Backup",
+        "description": "File operations, backup, rsync, robocopy, storage management",
         "match_keywords": ["archive", "canonical", "cleanup", "migrate", "tar", "robocopy", "mir", "mt", "backup_parallel"],
     },
     "personal_health": {
@@ -142,6 +150,8 @@ MACRO_CHIPS = {
         ],
     },
     "philosophy_universe": {
+        "label": "Philosophy & Universe",
+        "description": "Philosophy, universe, consciousness, identity, meaning",
         "match_keywords": ["universe", "earth", "energy", "sun", "consciousness", "resonance", "resonant"],
     },
     "git_version_control": {
@@ -338,7 +348,7 @@ def generate_report(consolidated, unassigned, micro_chips, elapsed):
         "",
         "## Integration",
         "",
-        "Each macro-chip has a centroid embedding (384-dim) for semantic routing:",
+        "Each macro-chip has a centroid embedding (768-dim) for semantic routing:",
         "1. When a query arrives, embed it with all-MiniLM-L6-v2",
         "2. Compute cosine similarity against each chip centroid",
         "3. Activate chips above threshold (e.g., > 0.35)",
@@ -375,9 +385,9 @@ def main():
 
     # Step 3: Compute centroids
     print("\n🧠 Step 3: Compute centroid embeddings")
-    model = SentenceTransformer(EMBEDDING_MODEL, device="cuda")
+    model = SentenceTransformer(EMBEDDING_MODEL, device="cpu")
     centroids = compute_centroids(assignments, model)
-    print(f"   Computed {len(centroids)} centroids (384-dim each)")
+    print(f"   Computed {len(centroids)} centroids (768-dim each)")
 
     # Step 4: Build output
     print("\n💾 Step 4: Build consolidated output")
@@ -387,7 +397,7 @@ def main():
         "version": "1.0",
         "generated": datetime.now().isoformat(),
         "embedding_model": EMBEDDING_MODEL,
-        "embedding_dim": 384,
+        "embedding_dim": 768,
         "macro_chip_count": len(consolidated),
         "total_docs_covered": sum(c["doc_count"] for c in consolidated),
         "unassigned_micro_topics": len(unassigned),

@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "1.0",
-    "generated_at": "2026-04-12T16:45:29.044358",
+    "generated_at": "2026-05-17T08:08:12.018173",
     "elapsed_seconds": 0.0,
     "dry_run": false
   },
@@ -9,17 +9,19 @@
     "mood": "concerned",
     "energy": 0.6,
     "alerts": [
-      "45 files have staleness warnings"
+      "Staleness report is outdated \u2014 PULSE sweep needed",
+      "45 files have staleness warnings",
+      "Divergence report is outdated"
     ],
     "suggestions": [],
-    "alert_count": 1
+    "alert_count": 3
   },
   "reports": {
     "staleness": {
       "available": true,
-      "generated_at": "2026-04-11T02:30:30.629438",
-      "age_hours": 38.2,
-      "stale_itself": false,
+      "generated_at": "2026-05-11T21:20:56.198686",
+      "age_hours": 130.8,
+      "stale_itself": true,
       "critical": 0,
       "warning": 45,
       "ok": 67,
@@ -28,18 +30,18 @@
     },
     "divergence": {
       "available": true,
-      "generated_at": "2026-04-11T02:45:12.056575",
-      "age_hours": 38.0,
-      "stale_itself": false,
+      "generated_at": "2026-05-11T21:20:56.196685",
+      "age_hours": 130.8,
+      "stale_itself": true,
       "total_decisions": 0,
       "concerning": [],
       "healthy": 0
     },
     "branches": {
       "available": true,
-      "generated_at": "2026-04-11T03:00:32.323171",
-      "age_hours": 37.7,
-      "stale_itself": false,
+      "generated_at": "2026-05-11T21:20:56.191685",
+      "age_hours": 130.8,
+      "stale_itself": true,
       "total_ideas": 2,
       "high_value": [],
       "categories": {}
@@ -47,8 +49,8 @@
   },
   "context_md": {
     "needs_regen": false,
-    "age_days": 0.1,
-    "last_modified": "2026-04-12T15:25:55.051259"
+    "age_days": 5.4,
+    "last_modified": "2026-05-11T21:20:55.924651"
   },
   "healing_actions": []
 }
