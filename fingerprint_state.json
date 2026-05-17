@@ -1,19 +1,12 @@
 {
-  "generated_at": "2026-05-17T09:07:48.426885",
+  "generated_at": "2026-05-17T20:43:08.543945",
   "generator": "scripts/generate_fingerprint.py",
   "version": "1.0",
   "health": {
     "backend": {
-      "status": "healthy",
+      "status": "unreachable",
       "port": 5557,
-      "chromadb_docs": 33853,
-      "features": 12,
-      "providers": {
-        "anthropic": true,
-        "gemini": true,
-        "groq": true,
-        "ollama": "http://127.0.0.1:11434"
-      }
+      "error": "HTTPConnectionPool(host='localhost', port=5557): Max retries exceeded with url: /health (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5557): Failed to establish a new connection: [Errno 111] Connection refused\"))"
     },
     "chromadb": {
       "status": "healthy",

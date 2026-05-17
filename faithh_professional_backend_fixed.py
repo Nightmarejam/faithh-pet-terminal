@@ -6573,6 +6573,12 @@ if FOCUS_ENABLED and focus_service:
 else:
     print("⚠️ Focus management endpoints not available")
 
+
+@app.route('/images/chips/<path:filename>')
+def serve_chip_image(filename):
+    """Serve chip images for Rainmeter skin."""
+    return send_from_directory(BASE_DIR / 'images' / 'chips', filename)
+
 if __name__ == '__main__':
     print("=" * 60)
     print(f"FAITHH PROFESSIONAL BACKEND {BACKEND_VERSION}")
