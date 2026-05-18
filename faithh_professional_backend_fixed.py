@@ -4837,7 +4837,7 @@ def rainmeter_state():
     import time as _time
     try:
         import chromadb as _chromadb
-        _cc = _chromadb.HttpClient(host='192.158.1.10', port=8000)
+        _cc = _chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
         _col = _cc.get_collection('faithh_knowledge_base_v2')
         chroma = {'connected': True, 'documents': _col.count()}
     except Exception as _e:
@@ -4845,7 +4845,7 @@ def rainmeter_state():
     try:
         ollama_svc = {'reachable': False}
         import requests as _req
-        _r = _req.get('http://127.0.0.1:11434/api/tags', timeout=2)
+        _r = _req.get(f'{OLLAMA_HOST}/api/tags', timeout=2)
         if _r.status_code == 200:
             ollama_svc = {'reachable': True}
     except Exception:
@@ -4860,29 +4860,30 @@ def rainmeter_state():
     except Exception:
         model_info = {}
     try:
-        _pstate = json.load(open(BASE_DIR / 'ml' / 'output' / 'pulse_state.json'))
-        _raw_reports = _pstate.get('reports', {})
+        with open(BASE_DIR / 'ml' / 'output' / 'pulse_state.json') as _pf:
+            pulse_state = json.load(_pf)
+        _raw_reports = pulse_state.get('reports', {})
         pulse_reports = {}
         for k, v in _raw_reports.items():
             pulse_reports[k] = dict(v)
             if 'age_hours' in v and 'age_minutes' not in v:
                 pulse_reports[k]['age_minutes'] = round(v['age_hours'] * 60)
-    except Exception:
-        pulse_reports = {}
-    try:
-        pulse_state = json.load(open(BASE_DIR / 'ml' / 'output' / 'pulse_state.json'))
         mood = pulse_state.get('avatar', {}).get('mood', 'unknown')
         energy = pulse_state.get('avatar', {}).get('energy', 0)
         alert_count = pulse_state.get('avatar', {}).get('alert_count', 0)
     except Exception:
-        mood = 'unknown'; energy = 0; alert_count = 0
+        pulse_reports = {}
+        pulse_state = {}
+        mood = 'unknown'
+        energy = 0
+        alert_count = 0
     try:
         chip_ids = ML_CHIP_IDS[:5] if ML_CHIP_IDS else []
         chips_str = ', '.join(chip_ids)
     except Exception:
         chips_str = ''
     try:
-        ps_data = json.load(open(BASE_DIR / 'project_states.json'))
+        with open(BASE_DIR / 'project_states.json') as _psf: ps_data = json.load(_psf)
         raw = ps_data.get('projects', ps_data) if isinstance(ps_data, dict) else ps_data
         projects = list(raw.values()) if isinstance(raw, dict) else raw
         compass_lines = []
@@ -4906,6 +4907,29 @@ def rainmeter_state():
         if age_min > warn_hours * 60: return 'STALE'
         return 'OK'
     s_age = tier_age('staleness'); d_age = tier_age('divergence'); b_age = tier_age('branches')
+    # --- journal last entry ---
+    try:
+        import glob as _glob
+        _jfiles = sorted(_glob.glob(str(BASE_DIR / 'ml' / 'output' / 'journal' / '*.md')))
+        journal_last = _jfiles[-1].split('/')[-1].replace('.md','') if _jfiles else 'none'
+        journal_count = len(_jfiles)
+    except Exception:
+        journal_last = 'unknown'; journal_count = 0
+
+    # --- avatar info ---
+    try:
+        _av = pulse_state.get('avatar', {})
+        avatar_name = _av.get('name', 'FAITHH')
+        avatar_subtitle = _av.get('subtitle', _av.get('role', _av.get('description', '')))
+    except Exception:
+        avatar_name = 'FAITHH'; avatar_subtitle = ''
+
+    # --- workspace/navigation count ---
+    try:
+        workspace_count = len(build_workspace_registry().get('navigation', []))
+    except Exception:
+        workspace_count = 0
+
     return jsonify({
         "polled_at": _time.strftime('%Y-%m-%d %H:%M:%S'),
         "backend_version": "v4.0-pulse",
@@ -4935,6 +4959,11 @@ def rainmeter_state():
         "pulse_alerts": alert_count,
         "compass": compass_str,
         "compass_project_count": proj_count,
+        "journal_last": journal_last,
+        "journal_count": journal_count,
+        "avatar_name": avatar_name,
+        "avatar_subtitle": avatar_subtitle,
+        "workspace_count": workspace_count,
     })
 
 @app.route('/api/plc/state', methods=['GET'])

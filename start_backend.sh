@@ -1,4 +1,5 @@
 #!/bin/bash
+ulimit -n 1048576
 # FAITHH Backend v2.0 - Start Script (Fixed Version)
 # Uses tmux for stable background execution with fixed async issues
 

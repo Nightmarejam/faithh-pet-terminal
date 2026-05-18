@@ -43,6 +43,7 @@ tests/root/
 keyring.json
 
 # --- Large data (DO NOT COMMIT) ---
+projects/crypto/data/
 AI_Chat_Exports/
 chroma_data/
 chroma_db/*.sqlite3
