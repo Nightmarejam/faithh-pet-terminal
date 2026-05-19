@@ -11,7 +11,7 @@
 type: systems_map
 version: "2.0"
 created: "2026-02-07"
-last_verified: "2026-03-01"
+last_verified: "2026-05-19"
 owner: "Jonathan Morales"
 ---
 
@@ -45,17 +45,19 @@ phase_history:
   phase_4: "IME scaffold, journal synthesis, harmony docs indexed, production hardening — IN PROGRESS"
 
 architecture:
-  backend: faithh_professional_backend_fixed.py (Flask, port 5557, WSL2, threaded=True)
+  backend: faithh_professional_backend_fixed.py (Flask, port 5557, faithhvm Ubuntu, threaded=True)
   frontend: faithh_pet_v4.html (MegaMan Battle Network UI)
-  database: ChromaDB on Gen8 (192.158.1.243:8000)
+  database: ChromaDB on Gen8 (192.158.1.10:8000)
   collection: faithh_knowledge_base
   chunks: 38294 (as of 2026-03-01, includes harmony/IME docs)
   conversations_indexed: 306 (208 ChatGPT + 98 Claude)
   embedding: all-MiniLM-L6-v2 (384-dim)
   ime: ime/ directory — C++ scaffold, reads journal entries, resonance gating (4 tests passing)
   llm_providers:
-    - "Groq (llama-3.3-70b-versatile) — cloud"
-    - "Ollama (local, RTX 3090) — llama31-faithh, qwen3-faithh"
+    - "vLLM (faithh RTX 3090) — qwen3-coder-30b-a3b-awq, :8000, 49K context, tool calling"
+    - "cc_proxy — Claude Code → vLLM, :5558"
+    - "Groq — cloud fallback (model_config.yaml)"
+    - "Ollama — :11434 local"
     - "Gemini 2.0 Flash — cloud"
 
 subsystems:
@@ -181,6 +183,28 @@ use_case: "Custom UI elements and artwork for FAITHH and other projects"
 
 ---
 
+
+### Claude Code local stack (faithhvm)
+```yaml
+host: faithhvm
+local_ip: 192.158.1.100
+gpu: NVIDIA RTX 3090 24GB (passthrough)
+model: qwen3-coder-30b-a3b-awq
+model_path: ~/models/qwen3-coder-30b-a3b-awq/
+vllm:
+  port: 8000
+  max_model_len: 49152  # tune via start_vllm.sh; fp8 KV cache
+  aliases: [qwen3-coder-30b, claude-sonnet-4-6, claude-opus-4-7]
+cc_proxy:
+  port: 5558
+  role: caps max_tokens, 413 on input overflow
+claude_code_env:
+  ANTHROPIC_BASE_URL: http://localhost:5558
+  ANTHROPIC_API_KEY: faithh-local
+workflow: "/compact every 2-3 tool-heavy turns; see ~/ai-stack/CLAUDE.md"
+samba_mount: //192.158.1.10/shared on /mnt/shared
+```
+
 ## Infrastructure
 
 ### Hardware
@@ -209,7 +233,7 @@ gen8_server:
   ram: "15GB DDR3 ECC"
   storage: "915GB available"
   docker: v28.2.2
-  local_ip: 192.158.1.243
+  local_ip: 192.158.1.10  # gen8 servicebox
   tailscale_ip: "mesh-specific (see tailscale status); Chroma/SSH in docs use local_ip"
   role: "Infrastructure server — 12 Docker services"
 
@@ -556,3 +580,20 @@ scripts/monitoring_daemon.py:      "Background monitoring"
 ---
 
 **End of Systems Map**
+
+## Claude Code Setup (Updated 2026-05-19)
+
+### Proxy Config
+- cc_proxy.py routes to local vLLM (localhost:8000), NOT Groq
+- Groq free tier TPM limit (6000) is too low for Claude Code system prompts (~40k tokens)
+- Proxy translates OpenAI format -> Anthropic format for Claude Code compatibility
+- ANTHROPIC_BASE_URL=http://localhost:5558 in environment
+
+### Startup Sequence
+1. bash start_faithh.sh        # builds tmux, starts vLLM + orchestrator
+2. bash start_faithh.sh --kill # full clean restart
+
+### Claude Code Usage
+- cd ~/ai-stack/app/services && claude --dangerously-skip-permissions
+- Launch from subdirectory to minimize context
+- Simple Q&A works well; file operations work but are slow (~150 tok/s)
