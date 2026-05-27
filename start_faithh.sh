@@ -12,7 +12,7 @@ if [ "$1" = "--kill" ]; then
     fuser -k 8000/tcp 2>/dev/null || true
     fuser -k 5558/tcp 2>/dev/null || true
     fuser -k 5557/tcp 2>/dev/null || true
-    sleep 3
+    sleep 15
 fi
 
 tmux kill-session -t "$SESSION" 2>/dev/null || true

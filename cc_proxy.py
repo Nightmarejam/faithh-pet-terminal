@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
-TARGET_MODEL = "qwen3-coder-30b"
+TARGET_MODEL = "openai/gpt-oss-120b"
 
 @app.route("/", methods=["GET", "HEAD"])
 def health():

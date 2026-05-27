@@ -1,6 +1,6 @@
 # FAITHH model/provider configuration
 # Phase 2: multi-provider routing enabled
-# Updated: 2026-04-03
+# Updated: 2026-05-18
 
 providers:
   groq:
@@ -29,16 +29,24 @@ providers:
     max_tokens: 900
     timeout_s: 300
 
+  vllm:
+    type: "openai_compatible"
+    base_url: "http://localhost:8000/v1"
+    model: "qwen3-coder-30b"
+    temperature: 0.2
+    max_tokens: 2048
+    timeout_s: 300
+
 routes:
   # Local-first; Groq gate in llm_providers strips Groq for simple queries when Ollama is healthy
-  auto: ["local_webui", "ollama", "groq"]
+  auto: ["vllm", "local_webui", "ollama", "groq"]
 
-  code: ["local_webui", "groq", "ollama"]
+  code: ["vllm", "local_webui", "groq", "ollama"]
 
-  fast: ["groq", "local_webui", "ollama"]
+  fast: ["groq", "vllm", "local_webui", "ollama"]
 
-  local: ["local_webui", "ollama"]
+  local: ["vllm", "local_webui", "ollama"]
 
   cloud: ["groq"]
 
-  reasoning: ["local_webui", "ollama", "groq"]
+  reasoning: ["vllm", "local_webui", "ollama", "groq"]

@@ -188,6 +188,7 @@ from backend.llm_providers import (
     ollama_streaming_allowed_for_route,
 )
 from backend.performance_monitor import record_provider_performance, get_optimal_provider, get_provider_health
+from backend.anthropic_shim import bp as anthropic_shim_bp
 from backend.response_cache import get_cached_response, cache_response, get_cache_stats
 from backend.ml_learning_framework import get_ml_framework
 from backend.ui_layout_optimizer import record_ui_interaction, get_optimal_ui_layout, analyze_ui_usage_patterns
@@ -418,6 +419,7 @@ app = Flask(__name__)
 # Access-Control-Request-Private-Network, we must respond with Allow-Private-Network: true
 # or the fetch fails with NetworkError (simple GETs may still appear to work).
 CORS(app, allow_private_network=True)
+app.register_blueprint(anthropic_shim_bp)
 
 # Initialize Phase 4 Security & Performance Systems
 # Disable rate limiting for single-user deployment

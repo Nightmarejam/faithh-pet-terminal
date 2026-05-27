@@ -1,14 +1,14 @@
 # Jonathan's Project Context
 <!-- 
   AUTO-GENERATED FILE - Do not edit directly
-  Generated: 2026-04-12T12:00:01.605975
+  Generated: 2026-05-26T00:04:26.036392
   Generator: scripts/generate_context.py
   Sources: project_states.json, faithh_memory.json, decisions_log.json, 
            LIFE_MAP.md, faithh_knowledge_graph.yaml, scaffolding_state.json
 -->
 
 ---
-generated: "2026-04-12T12:00:01.605975"
+generated: "2026-05-26T00:04:26.036392"
 version: "1.0"
 generator: "generate_context.py"
 token_estimate: 0
@@ -37,7 +37,7 @@ token_estimate: 0
 ### FAITHH
 - **Phase:** Phase 4 Active
 - **Status:** operational
-- **Infrastructure:** Backend on WSL2 (localhost:5557), ChromaDB on Gen8 (ChromaDB on Gen8 (192.158.1.243:8000))
+- **Infrastructure:** Backend on WSL2 (localhost:5557), ChromaDB on Gen8 (ChromaDB on Gen8 (192.158.1.10:8000))
 - **Knowledge Base:** 53976 chunks indexed (306 conversations)
 - **Recent:** Complete Phase 3: Test RAG performance with 37K chunks, Complete Phase 3: Run end-to-end integration tests with qwen25-grounded
 
@@ -73,7 +73,7 @@ All projects answer the same question: *"How do we build systems that actually s
 ## Active Focus
 
 ### Current Position
-FAITHH backend v4.0-pulse with Coherence Arbiter Phase 1 & 2. PULSE Reflection Engine fully operational (3 tiers). 15 ML macro-chips with cosine routing. 32,854 ChromaDB chunks. Chat persistence with localStorage. Coherence measurement: RAG ↔ ML chip semantic convergence with 0.825 validation score. Environment fully documented with 3 MCP servers.
+FAITHH backend v4.0-pulse; canonical Flask on :5557 (faithh_professional_backend_fixed.py). Coherence Arbiter Phase 1–3 UI path. PULSE operational. ChromaDB on Gen8: faithh_knowledge_base ~54k chunks (see fingerprint_state.json); faithh_uncertainty_surface for migrated noise; session metrics in faithh_session_metrics (not RAG). Default chat model: qwen25-faithh-v3:latest (config.yaml). Ollama stop/num_predict caps in backend/llm_providers.py; KB index quality gate in _finalize_response.
 
 ### Open Loops
 - **coherence-arbiter-phase3-expansion**: Expand Coherence Arbiter Phase 3: Additional claim types and adaptive thresholding (ready_for_implementation)
