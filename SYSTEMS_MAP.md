@@ -51,7 +51,7 @@ architecture:
   collection: faithh_knowledge_base
   chunks: 38294 (as of 2026-03-01, includes harmony/IME docs)
   conversations_indexed: 306 (208 ChatGPT + 98 Claude)
-  embedding: all-MiniLM-L6-v2 (384-dim)
+  embedding: BAAI/bge-base-en-v1.5 (768-dim)  # migrated 2026-05-17, commit c8f7938
   ime: ime/ directory — C++ scaffold, reads journal entries, resonance gating (4 tests passing)
   llm_providers:
     - "vLLM (faithh RTX 3090) — qwen3-coder-30b-a3b-awq, :8000, 49K context, tool calling"
@@ -478,7 +478,7 @@ docs/RESEARCH_BRIEF_UI_DESIGN.md:                 "UI design research"
 | LIFE_MAP.md | Jan 18 | ✅ OK | Philosophy stable, no update needed |
 
 ### Current System State (Mar 1, 2026)
-- Embedding model: **all-MiniLM-L6-v2 (384-dim)** — confirmed current in backend and ChromaDB
+- Embedding model: **BAAI/bge-base-en-v1.5 (768-dim)** — migrated 2026-05-17 (commit c8f7938, "Migrate to BGE-768: reindex KB v2")
 - Collection: **faithh_knowledge_base** — 38,294 documents including harmony/IME architecture docs
 - Phase: **Phase 4** — IME scaffold built, journal synthesis pending, production hardening in progress
 
