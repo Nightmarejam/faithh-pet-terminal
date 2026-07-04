@@ -1,158 +1,74 @@
 # FAITHH — Friendly AI Teaching & Helping Hub
 
-Personal AI companion and knowledge management system, inspired by MegaMan Battle Network NetNavi.
+A personal AI companion I run on my own homelab — a NetNavi in the Mega Man Battle
+Network sense: a small intelligence that lives with you, learns your world, and helps.
+Not a product, not hosted; a research build I use and grow.
 
-## Quick Start
+> One node in a personal AI ecosystem — see the [ecosystem map](https://github.com/Nightmarejam).
+> Everything here is **human-directed, AI-assisted, with receipts** (see [PROVENANCE.md](PROVENANCE.md)).
 
-```bash
-./restart_backend.sh        # Start Flask backend on :5557
-# Open http://localhost:5557
-```
+---
 
-## What FAITHH Does
+## The idea (one concept)
 
-- **Chat** with multi-provider LLM routing (Groq, Ollama, Gemini)
-- **RAG** search across 32,499 indexed chunks (ChromaDB + BGE embeddings)
-- **ML Chips** — 15 semantic routing chips that activate based on query intent
-- **Decision memory** — tracks and cites past decisions with rationale
-- **Project awareness** — knows current state of FAITHH, Constella, Tom Cat Sound
-- **VS Code extension** — FAITHH chat sidebar in your editor
+Most assistants answer and forget. FAITHH is built to **perceive, reason, remember, and
+(soon) act** — and to be **honest about how sure it is** at every step. That last part is
+the whole point: it tags what it knows as `confirmed` (with a receipt), `asserted`, or
+`speculative`, and never pretends to certainty it doesn't have.
 
-## Current State (2026-03-28) - Phase 4.5 Complete ✅
+## How it works — four building blocks
 
-| Component | Status | Location |
-|-----------|--------|----------|
-| Backend | ✅ Enhanced with retry logic & monitoring (port 5557) | `faithh_professional_backend_fixed.py` |
-| Frontend | ✅ PET Terminal v4 | `faithh_pet_v4.html` |
-| RAG | ✅ 38K+ chunks with project summaries | ChromaDB on Gen8 (192.158.1.243:8000) |
-| **Anthropic Optimization** | ✅ 150% response quality improvement | `backend/context_builders.py` |
-| **Retry Logic** | ✅ Exponential backoff for API reliability | `backend/llm_providers.py` |
-| **Service Monitoring** | ✅ Real-time health checks via `/api/monitoring/services` | `backend/llm_providers.py` |
-| **Project Summaries** | ✅ 5 comprehensive project summaries | `docs/project_summaries/` |
-| **Quality Monitoring** | ✅ Framework for response quality tracking | `backend/local_optimization.py` |
-| **Genomic Experiments** | ✅ 3 phases completed (190 organisms tested) | `experiments/genomic/` |
-| Genomic Endpoints | ✅ 5 endpoints operational | `/api/genomic/*` |
-| LLM (Cloud) | ✅ Groq, Anthropic, Gemini with monitoring | via API keys in `.env` |
-| LLM (Local) | ✅ Ollama (qwen25-grounded optimized) | systemd service, port 11434 |
-| ML Chips | ✅ 491 chips including 14 Anthropic optimization | Loaded at startup |
-| **Advanced Analytics** | ✅ Predictive analytics & insights | `backend/advanced_analytics_simple.py` |
-| **AI-Driven UX** | ✅ Personalized user experience | `backend/ai_driven_ux.py` |
-| **Program Advance** | ✅ Optimized with caching & auto-tuning | `backend/program_advance_optimizer.py` |
-| **ALIFE Research** | ✅ Cultural evolution breakthrough | `projects/alife/experiments/` |
-| **Security** | ✅ Rate limiting, input validation | `backend/security_middleware.py` |
-| **Monitoring** | ✅ Health checks (4 providers) + connection monitor | `backend/connection_monitor.py` |
-| **Caching** | ✅ 100MB intelligent cache | `backend/cache.py` |
-| **Performance** | ✅ Real-time metrics | `backend/performance.py` |
-| **AI Optimization** | ✅ Intelligent model selection + auto-tuning | `backend/local_optimization.py` |
+Take them one at a time; each is a layer on the one before.
 
-### Phase 6.0 Achievements 🧬
-- **Genomic Impedance Reading**: First successful integration of environmental impedance detection with biological systems
-- **Genomic Biasing Engine**: DNA copying bias based on impedance patterns with cognitive enhancement
-- **Multi-Phase Experiments**: Large-scale testing, environmental adaptation, and multi-generational evolution
-- **190 Organisms Tested**: Across 3 experimental phases with perfect correlation results
-- **5 Genomic Endpoints**: Complete API for genomic sensor creation, biasing analysis, and pattern analysis
-- **Statistical Validation**: Perfect correlation (1.000) between biasing potential and cognitive enhancement
+1. **Perceive** — retrieval (RAG) over a knowledge base of my docs and past sessions.
+   It reads before it speaks.
+2. **Reason** — "battle chips" and the PULSE engine route a query to the right approach;
+   a coherence step checks whether independent signals agree before it trusts a fact.
+3. **Remember** — tiered memory (hot session → warm profile → cold vector store), so it
+   carries context across days instead of starting cold.
+4. **Act** *(in progress)* — an "agency" layer (tools it can run) gated by the honesty
+   rule: act on `confirmed`, confirm on `asserted`, **stop and flag** on `speculative`.
+   That gate is what keeps an autonomous agent from going rogue.
 
-### Phase 4.5 Achievements 🎉
-- **Anthropic API Optimization**: 150% response quality improvement with Claude-optimized prompts
-- **Retry Logic Implementation**: Exponential backoff for API reliability and error handling
-- **Service Monitoring**: Real-time health checks for all providers via `/api/monitoring/services`
-- **Project State Synthesis**: 5 comprehensive project summaries automatically generated
-- **Quality Monitoring Framework**: Response quality tracking and auto-tuning capabilities
-- **Enhanced ML Chips**: 491 total chips including 14 new Anthropic optimization chips
-- **Connection Monitoring**: Automatic service health detection and recovery
-- **Documentation Refresh**: Complete API reference and implementation guides
+Underneath all four: **attestation** — the discipline of attaching checkable provenance
+to every claim. It's the thing that makes FAITHH a companion you can trust rather than a
+confident guesser.
 
-### Phase 5.2 Achievements 🎉
-- **Advanced Analytics**: Predictive analytics with AI-powered insights and anomaly detection
-- **AI-Driven UX**: Intelligent user experience with personalization and behavior analysis
-- **Cultural Evolution Breakthrough**: First successful ALIFE cultural transmission (17,205 transmissions)
-- **Complex Cultural Systems**: Maximum protocol complexity achieved with multi-generational persistence
-- **Performance Optimization**: Program Advance system with intelligent caching and auto-tuning
-- **8 New API Endpoints**: Comprehensive analytics and UX capabilities
-- **Scientific Leadership**: 19,889 protocols created across 5 generations with 109 cultural tags
-| Image Gen | ✅ ComfyUI + SD 1.5 (RTX 3090) | `scripts/start_comfyui.sh` |
-| VS Code | ✅ Extension installed | `faithh-vscode/` |
+## Read the concepts (deep-dives, newest thinking)
 
-## Project Structure
+If you want to understand the design one document at a time, in order:
 
-```
-ai-stack/
-├── faithh_professional_backend_fixed.py  # Main backend (1,944 lines)
-├── faithh_pet_v4.html                    # Frontend UI (5,034 lines)
-├── config.yaml                           # Runtime config
-├── docker-compose.yml                    # Ollama, ChromaDB, Langflow, Postgres
-├── restart_backend.sh / stop_backend.sh  # Backend lifecycle
-│
-├── backend/                # Extracted backend modules
-│   ├── data_loaders.py     #   JSON file I/O
-│   ├── intent_detection.py #   Query intent analysis
-│   ├── context_builders.py #   Context assembly + personality
-│   └── llm_providers.py    #   Multi-provider LLM dispatch
-│
-├── scripts/                # One-off and utility scripts
-├── docs/                   # Living documentation
-├── tests/                  # Python + shell tests
-├── ml/                     # ML pipeline (chip synthesis, LoRA training)
-├── images/                 # Generated chip art + assets
-├── faithh-vscode/          # VS Code extension source
-├── knowledge_base/         # RAG indexing scripts
-├── collectors/             # Passive data collectors
-├── projects/               # Subprojects (Constella, Tom Cat Sound)
-├── archive/                # Stale docs + old attempts
-│
-├── faithh_memory.json      # Persistent memory state
-├── decisions_log.json      # Decision history
-├── project_states.json     # Project phase tracking
-├── scaffolding_state.json  # Structural awareness
-├── AGENTS.md               # AI agent behavior rules
-├── CONTEXT.md              # Session context for AI
-└── SYSTEMS_MAP.md          # Full system architecture
-```
+- [docs/ATTESTATION_CONCEPT](docs/ATTESTATION_CONCEPT_2026-07-02.md) — the honesty layer, the core idea
+- [docs/CONNECTIVE_ARCHITECTURE](docs/CONNECTIVE_ARCHITECTURE_2026-07-02.md) — how the four blocks connect (the "nervous system")
+- [docs/AUTONOMY_DESIGN](docs/AUTONOMY_DESIGN.md) — how it learns to act safely
+- [docs/BACKEND_AUDIT](docs/BACKEND_AUDIT_2026-07-02.md) + [docs/CAPABILITY_MAP](docs/CAPABILITY_MAP_2026-07-02.md) + [docs/TARGET_ARCHITECTURE](docs/TARGET_ARCHITECTURE_2026-07-02.md) — the honest state of the code and where it's headed
+- [SYSTEMS_MAP.md](SYSTEMS_MAP.md) — the full system map
 
-## Key Commands
+## Run it
 
 ```bash
-./restart_backend.sh                    # Start/restart backend
-./stop_backend.sh                       # Stop backend
-curl http://localhost:5557/health       # Health check
-curl -s http://localhost:5557/api/plc/state | head -c 2000   # PLC + faithh_status (canonical)
-python -m pytest tests/ -v             # Run tests
-scripts/start_comfyui.sh               # Start ComfyUI on RTX 3090
+./restart_backend.sh                 # Flask backend on :5557
+curl http://localhost:5557/health    # health check
 ```
 
-## Hardware
+There's also a lightweight offline build — **FAITHH Lite** (`faithh-lite/`) — that runs
+on a laptop with just local Ollama, no homelab required. It's the reference for the
+smaller devices this is meant to run on eventually.
 
-- **WSL2**: Ryzen 9 3900X, 47GB RAM, RTX 3090 (24GB) + GTX 1080 Ti (11GB)
-- **Gen8**: Xeon E3-1265L V2, 15GB RAM, ChromaDB + Docker services
-- **Networking**: Gen8 services documented at LAN **192.158.1.243** (ChromaDB, SSH, metrics); workstation Tailscale IP varies by host.
+## Status & scope (honest)
 
-## Documentation
+- **Active research build.** The backend is a large Flask app mid-refactor toward the
+  modular target in `docs/TARGET_ARCHITECTURE`; the audit docs describe exactly what's
+  live, what's orphaned, and what's planned. No inflated claims — the tiers tell you
+  what's real.
+- **Gen8/NAS knowledge nodes are temporarily offline** (homelab re-auth pending physical
+  access). Facts tagged `[VERIFY]` wait on that; nothing gets promoted to `confirmed`
+  without the live box answering.
+- Not a hosted product; scoped to my setup. Useful as a reference, not turnkey.
+- License: MIT.
 
-| Doc | Purpose |
-|-----|---------|
-| `AGENTS.md` | Rules for AI agents working in this repo |
-| `CONTEXT.md` | Current context snapshot for AI sessions |
-| `SYSTEMS_MAP.md` | Full system architecture diagram |
-| `docs/README.md` | Documentation master index |
-| `docs/architecture/SYSTEM_OVERVIEW.md` | Technical architecture details |
-| `docs/reference/LIFE_MAP.md` | Personal roadmap / true north |
+## Stack
 
-## Status (2026-07-02)
-Active. Gen8/NAS nodes are temporarily offline (Tailscale re-auth pending physical
-access ~mid-July 2026); docs tagged `[VERIFY]` await that. Recent: docs corrected
-against git receipts, business records relocated out of this repo, passthrough
-runbook added (docs/PROXMOX_WIN11_PASSTHROUGH_RUNBOOK.md). License: MIT.
-
-## The ecosystem (how this repo fits)
-
-| Repo | Role |
-|---|---|
-| [constella-framework](https://github.com/Nightmarejam/constella-framework) | Civic governance framework — also the **logic basis** for everything here (confirmability tiers, concept lineage, Harmony bridge) |
-| [faithh-pet-terminal](https://github.com/Nightmarejam/faithh-pet-terminal) | FAITHH — personal AI companion: Flask + ChromaDB RAG + vLLM on a Proxmox homelab |
-| [SensorBridge](https://github.com/Nightmarejam/SensorBridge) | Host→VM hardware telemetry (gRPC/WMI); pivoted to node-health monitoring feeding FAITHH |
-| [celestial-equilibrium](https://github.com/Nightmarejam/celestial-equilibrium) | Doctrine text (CC BY 4.0), consumed by constella as a submodule |
-| [runbook-to-rule-them-all](https://github.com/Nightmarejam/runbook-to-rule-them-all) | Ops runbooks for the homelab systems |
-| homelab / research-notes / tomcat-sound | Private: hardware+pipeline knowledge, theory notes, business records |
-
-Work is human-directed and AI-assisted — see [PROVENANCE.md](PROVENANCE.md).
+Flask backend · ChromaDB RAG (BGE embeddings) · multi-provider LLM (vLLM local, Groq,
+Anthropic, Ollama) · Proxmox homelab with an HP Gen8 knowledge node · a Mega Man Battle
+Network-styled web UI.
