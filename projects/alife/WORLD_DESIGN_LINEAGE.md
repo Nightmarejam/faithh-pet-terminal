@@ -63,3 +63,13 @@ Recommendation: **port as-is, confirm the results, then decide** whether the
 universe-aspiration is worth a separate track. The minimalism is a feature, not a
 compromise — resist the urge to make the World "more like the universe" until a seeded
 run tells you the current one's results are even real.
+
+## Future track (captured 2026-07): emergence of cultural universals
+Jonathan's parsimony worldview points at a real future experiment, not a tangent: *do
+agents facing the SAME environmental pressure independently converge on the same
+"legend" / strategy / nomenclature?* That's the mundane-shared-origin hypothesis (why
+every tribe has a dragon) made testable in the sandbox. exp8 (cultural transmission)
+already gestures at it. Tier: speculative/future — after the port confirms the base
+results. The method (shared stimulus → convergent culture) is sound; any specific
+real-world claim (e.g., plasma-dragon) stays speculative until evidenced. This is the
+nomenclature pipeline pointed at *convergence across independent populations*.
