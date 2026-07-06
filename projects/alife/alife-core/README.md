@@ -15,9 +15,9 @@ Python's exact RNG rather than using Rust's.
   must match Python (verified 2026-07):**
   1. seed set FIRST, then World() built → init is deterministic (good).
   2. Grid row-major (y outer, x inner). Each Cell consumes IN ORDER:
-     `energy = 50 + randbelow(101)`, then `light = 100 + randbelow(101)`. → 160×120×2
-     = 38,400 randbelow calls.
-  3. Then energy sources: 20× ( randbelow(160), randbelow(120) ) = 40 calls.
+     `energy = 50 + randbelow(101)`, then `light = 100 + randbelow(101)`. → 480×360×2
+     = 345,600 randbelow calls.
+  3. Then energy sources: 20× ( randbelow(480), randbelow(360) ) = 40 calls.
   4. `initialize_light_gradient` is NOT called by the base sim — random cell values stand.
   Validate: hash the energy grid after init; Rust hash must equal Python's.
 - ⬜ **Agent** — genome (bytes), energy (int), step logic.
