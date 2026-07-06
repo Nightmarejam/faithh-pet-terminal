@@ -12,9 +12,15 @@ import json
 import os
 from pathlib import Path
 from datetime import datetime
+from node_attestation import NodeAttestor, derive_key
 
 app = Flask(__name__)
 CORS(app)
+
+# Node attestation — this local FAITHH node self-attests (liveness + real work),
+# offline, no Gen8 needed. The module is shared across all FAITHH nodes.
+ATTESTOR = NodeAttestor("faithh-lite-mac", derive_key("faithh-lite-mac"))
+QUERIES_SERVED = 0   # real work this node did = queries actually answered
 
 # Configuration
 OLLAMA_URL = "http://localhost:11434"
@@ -137,11 +143,16 @@ def chat():
     
     # Query Ollama
     result = query_ollama(message, context)
-    
+
     # Add metadata
     result['timestamp'] = datetime.now().isoformat()
     result['context_used'] = bool(context)
-    
+
+    # Real work happened — count it (feeds the node's proof-of-life)
+    global QUERIES_SERVED
+    if result.get('success'):
+        QUERIES_SERVED += 1
+
     return jsonify(result)
 
 @app.route('/api/status', methods=['GET'])
@@ -179,6 +190,19 @@ def reload_context():
 def health():
     """Simple health check"""
     return jsonify({"status": "ok"})
+
+@app.route('/api/attest', methods=['GET', 'POST'])
+def attest():
+    """Proof-of-life: emit a signed heartbeat (this node is really here + did real work),
+    then return the node's attestation status. GET = status only; POST = emit a beat."""
+    if request.method == 'POST':
+        beat = ATTESTOR.beat({
+            "queries_served": QUERIES_SERVED,
+            "context_files": len(CONTEXT_FILES),
+            "model": MODEL,
+        })
+        return jsonify({"emitted": beat, "status": ATTESTOR.status()})
+    return jsonify(ATTESTOR.status())
 
 if __name__ == '__main__':
     print("=" * 50)
