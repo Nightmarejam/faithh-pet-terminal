@@ -20,7 +20,9 @@ Python's exact RNG rather than using Rust's.
   3. Then energy sources: 20× ( randbelow(480), randbelow(360) ) = 40 calls.
   4. `initialize_light_gradient` is NOT called by the base sim — random cell values stand.
   Validate: hash the energy grid after init; Rust hash must equal Python's.
-- ⬜ **Agent** — genome (bytes), energy (int), step logic.
+- ✅ **Agent + population** — genome, energy, spawn. **VALIDATED**: seed 42 →
+  `2c9aa438ca75cf3f` both langs (full chain seed→World→50 agents matches bit-for-bit).
+  Remaining: the per-tick genome *execution* logic (sense/act/reproduce/mutate).
 - ⬜ **Simulation** — the tick loop (the hot path Rust is here for).
 - ⬜ **Fossil output** — write the same JSONL the Python fossil tools already read.
 

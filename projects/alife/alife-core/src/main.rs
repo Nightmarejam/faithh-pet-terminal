@@ -1,10 +1,21 @@
 // Validation harness for the RNG port — prove Rust matches Python bit-for-bit.
 mod rng;
 mod world;
+mod agent;
 use rng::PyRandom;
 use world::World;
 
 fn main() {
+    if std::env::args().any(|a| a == "pop") {
+        let mut r = PyRandom::seed(42);
+        let mut w = World::new(&mut r);
+        let agents = agent::initialize_population(&mut w, &mut r, 50, true);
+        println!("seed 42 population: {} agents", agents.len());
+        let a0 = &agents[0];
+        println!("agent0: pos=({},{}) genome={:?} energy={}", a0.x, a0.y, a0.genome, a0.energy);
+        println!("population_hash: {:016x}", agent::population_hash(&agents));
+        return;
+    }
     if std::env::args().any(|a| a == "world") {
         let mut r = PyRandom::seed(42);
         let w = World::new(&mut r);
