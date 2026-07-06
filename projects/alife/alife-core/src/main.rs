@@ -16,6 +16,15 @@ fn main() {
         println!("population_hash: {:016x}", agent::population_hash(&agents));
         return;
     }
+    if std::env::args().any(|a| a == "shuffle") {
+        let mut r = PyRandom::seed(42);
+        let mut x: Vec<i32> = (0..10).collect();
+        r.shuffle(&mut x);
+        println!("shuffled: {:?}", x); // Python: [7, 3, 2, 8, 5, 6, 9, 4, 0, 1]
+        assert_eq!(x, vec![7, 3, 2, 8, 5, 6, 9, 4, 0, 1], "SHUFFLE MISMATCH");
+        println!("✅ shuffle matches Python");
+        return;
+    }
     if std::env::args().any(|a| a == "world") {
         let mut r = PyRandom::seed(42);
         let w = World::new(&mut r);

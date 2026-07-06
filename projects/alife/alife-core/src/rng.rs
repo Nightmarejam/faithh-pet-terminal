@@ -113,4 +113,15 @@ impl PyRandom {
     pub fn randrange(&mut self, n: u32) -> u32 {
         self.randbelow(n)
     }
+
+    /// Python 3.11+ `random.shuffle` — Fisher-Yates using randbelow(i+1), in place.
+    /// The tick loop shuffles agent execution order every tick; this must match exactly.
+    pub fn shuffle<T>(&mut self, x: &mut [T]) {
+        let n = x.len();
+        if n < 2 { return; }
+        for i in (1..n).rev() {
+            let j = self.randbelow((i + 1) as u32) as usize;
+            x.swap(i, j);
+        }
+    }
 }

@@ -23,7 +23,15 @@ Python's exact RNG rather than using Rust's.
 - ✅ **Agent + population** — genome, energy, spawn. **VALIDATED**: seed 42 →
   `2c9aa438ca75cf3f` both langs (full chain seed→World→50 agents matches bit-for-bit).
   Remaining: the per-tick genome *execution* logic (sense/act/reproduce/mutate).
-- ⬜ **Simulation** — the tick loop (the hot path Rust is here for).
+- 🔨 **Simulation (tick loop)** — the hot path. Scoped 2026-07:
+  - ✅ RNG primitives all validated: `random()`, `randrange()`, **`shuffle()`** (per-tick
+    execution order — Python 3.11+ Fisher-Yates, matches for seed 42).
+  - ✅ good news: **ops.py has ZERO RNG** — its 46 sense/act/regulate functions are pure
+    deterministic logic. All tick RNG is localized in simulation.py: shuffle (done),
+    mutation (`random()<rate` + `randint(0,7)`), byte-swap, reproduction position.
+  - ⬜ remaining (mechanical, multi-step): port ops.py (46 fns) + tick orchestration
+    (agent loop, death, `_process_reproductions`, `_mutate_genome`). No new determinism
+    traps — validate with a 100-tick state hash vs Python.
 - ⬜ **Fossil output** — write the same JSONL the Python fossil tools already read.
 
 ## Validate the RNG yourself
