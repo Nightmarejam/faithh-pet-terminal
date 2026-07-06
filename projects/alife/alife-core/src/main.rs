@@ -1,8 +1,18 @@
 // Validation harness for the RNG port — prove Rust matches Python bit-for-bit.
 mod rng;
+mod world;
 use rng::PyRandom;
+use world::World;
 
 fn main() {
+    if std::env::args().any(|a| a == "world") {
+        let mut r = PyRandom::seed(42);
+        let w = World::new(&mut r);
+        println!("seed 42 World: {}x{}, {} sources", w.width, w.height, w.energy_sources.len());
+        println!("first sources: {:?}", &w.energy_sources[..3.min(w.energy_sources.len())]);
+        println!("state_hash: {:016x}", w.state_hash());
+        return;
+    }
     println!("seed 42 random():");
     let mut r = PyRandom::seed(42);
     let vals: Vec<f64> = (0..6).map(|_| r.random()).collect();

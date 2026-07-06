@@ -9,7 +9,9 @@ Python's exact RNG rather than using Rust's.
 - ✅ **RNG** (`src/rng.rs`) — CPython's Mersenne Twister, bit-exact. `random()` and
   `randrange()` match Python for seeds 42 & 123 including rejection sampling. This is the
   determinism linchpin: without it, nothing downstream can hash-match. **Done & validated.**
-- 🔨 **World** — the grid + energy field (next). **Port spec — the exact RNG order that
+- ✅ **World** — grid + energy field + sources + regen. **VALIDATED** bit-for-bit:
+  Rust & Python both hash `76aae69c71538657` for seed 42 (345,600 init draws + 20 sources
+  match exactly). Port spec — the exact RNG order that
   must match Python (verified 2026-07):**
   1. seed set FIRST, then World() built → init is deterministic (good).
   2. Grid row-major (y outer, x inner). Each Cell consumes IN ORDER:
