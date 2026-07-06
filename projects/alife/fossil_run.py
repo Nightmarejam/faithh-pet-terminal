@@ -22,6 +22,10 @@ sys.path.insert(0, str(HERE))
 
 RUNNERS = {  # experiment number -> (module, function)
     5: ("exp5_parasitic", "run_experiment_5"),
+    6: ("exp6_ucf_floor", "run_experiment_6"),
+    7: ("exp7_ucf_gated", "run_experiment_7"),
+    8: ("exp8b_strategy_escape", "run_experiment_8b"),
+    9: ("exp9_diversity_floor", "run_exp9"),
 }
 
 def fingerprint(obj) -> str:
@@ -43,6 +47,7 @@ def run(exp, seed, ticks, log_interval):
 
     mod = __import__(mod_name)
     fn = getattr(mod, fn_name)
+    Path("genomic_results").mkdir(exist_ok=True)   # some exps self-save to this relative path
     t0 = time.time()
     results = fn(ticks=ticks, log_interval=log_interval)
     dt = round(time.time() - t0, 1)
