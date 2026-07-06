@@ -1,0 +1,17 @@
+=== exp5 nomenclature extraction: 5 seeds @ 2500 ticks (seeds [11, 22, 33, 44, 55]) ===
+
+phenomenon             tier        evidence
+----------------------------------------------------------------------
+adaptation_at_parasite ABSENT      never occurred in 5 seeds (at this scale)
+first_parasite_agent   SPECULATIVE occurred in 4/5 seeds only — stochastic
+first_parasite_tick    SPECULATIVE occurred in 4/5 seeds only — stochastic
+first_toxin_tick       SPECULATIVE occurred in 4/5 seeds only — stochastic
+parasitic_kills        SPECULATIVE occurred in 2/5 seeds only — stochastic
+predator_kills         CONFIRMED   always occurs; value varies 5668–7259 (mean 6222, CV 0.09)
+redirect_events        ABSENT      never occurred in 5 seeds (at this scale)
+thermal_deaths         CONFIRMED   always occurs; value varies 50–64 (mean 56, CV 0.08)
+wave_count             CONFIRMED   identical every seed: 4
+
+Reading: CONFIRMED = a reproducible emergent fact (earns a name in the vocabulary).
+CONFIRMED* = reliably happens but magnitude is stochastic (that's the *emergent
+variation* — the interesting part). ABSENT/SPECULATIVE = not established at this scale.
