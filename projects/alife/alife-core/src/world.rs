@@ -90,6 +90,23 @@ impl World {
         pos
     }
 
+    /// SHOCK: relocate all energy sources to new random cells + famine the grid.
+    /// This shifts the spatial fitness landscape — old-optimal genomes must adapt,
+    /// so a diverse population (with movement/gradient variants) recovers and a
+    /// monoculture may not. The core of the diversity-reserve test.
+    pub fn apply_shock(&mut self, rng: &mut PyRandom) {
+        self.energy_sources.clear();
+        for _ in 0..NUM_ENERGY_SOURCES {
+            let x = rng.randbelow(GRID_WIDTH as u32) as i32;
+            let y = rng.randbelow(GRID_HEIGHT as u32) as i32;
+            self.energy_sources.push((x, y));
+        }
+        // famine: drop every cell to a low value; agents must migrate to the new sources
+        for row in self.grid.iter_mut() {
+            for c in row.iter_mut() { c.energy = 20; }
+        }
+    }
+
     fn regen_rate(&self, x: i32, y: i32) -> i32 {
         for &(sx, sy) in &self.energy_sources {
             if (x - sx).abs() + (y - sy).abs() <= ENERGY_SOURCE_RADIUS {

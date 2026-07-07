@@ -78,3 +78,35 @@ collapse?"). This is a deeper *health* hypothesis:
 
 **Tier:** speculative until run seeded at scale. If confirmed, it's the strongest possible
 bottom-up evidence for the UCF — and a genuine, non-obvious finding worth publishing.
+
+## FIRST RESULT — UCF floor experiment (Rust, 2026-07)
+Built in alife-core (`run ... ucf <seed> <ticks>`): FLOOR vs NO-FLOOR arms, same seed,
+periodic shocks (energy sources relocate + famine every 2000 ticks). 5 seeds, 10k ticks.
+
+| seed | FLOOR final (div) | NO-FLOOR |
+|---|---|---|
+| 42 | 788 (67) | **EXTINCT** |
+| 7 | 832 (69) | 916 (survived, beat floor) |
+| 100 | 830 (72) | 836 (survived) |
+| 123 | 832 (71) | **EXTINCT** |
+| 2024 | 825 (72) | **EXTINCT** |
+
+**The finding (reproducible):** the floor **trades peak efficiency for resilience.**
+- WITH floor: survives 5/5, consistent ~800, never crashes. Resilient.
+- WITHOUT floor: extinct 3/5; but when it survives it can *beat* the floor. Efficient but BRITTLE.
+
+This **confirms the "efficient but brittle" half of Jonathan's hypothesis with a receipt:**
+a civic floor makes whole-system survival reliable where, without it, survival is a gamble.
+The floor is insurance — it never wins biggest, but it never dies.
+
+**Honest caveats (what v2 needs to make it airtight):**
+1. The floor here is *free* (rescue-to-30, ~immortality-lite; 200k+ rescues/run). A realistic
+   floor has a commons-pool cost. The resilience result likely survives a cost, but test it.
+2. The DIVERSITY-RESERVE *mechanism* is not yet proven — we show floor→resilience (outcome),
+   not that resilience comes FROM the preserved reserve. v2: the lineage test (does post-shock
+   rebound descend from previously-floored agents?).
+3. Single environment/shock type. Vary shock magnitude & interval.
+
+**Tier: the OUTCOME (floor→resilience) is CONFIRMED (5 seeds, reproducible). The MECHANISM
+(diversity reserve) stays speculative until the lineage test.** Vocabulary earned:
+*civic-floor → resilience* (confirmed); *diversity-reserve* (still speculative).

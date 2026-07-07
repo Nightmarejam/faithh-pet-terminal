@@ -43,6 +43,37 @@ fn main() {
         println!("population_hash: {:016x}", agent::population_hash(&agents));
         return;
     }
+    if let Some(pos) = args.iter().position(|a| a == "ucf") {
+        let seed: u32 = args.get(pos + 1).and_then(|s| s.parse().ok()).unwrap_or(42);
+        let ticks: usize = args.get(pos + 2).and_then(|s| s.parse().ok()).unwrap_or(10000);
+        let shock = 2000u64;
+        let run_arm = |floor: Option<i32>| -> (usize, usize, usize, bool, u64) {
+            let mut s = Simulation::new(seed);
+            s.floor_energy = floor;
+            s.shock_interval = Some(shock);
+            s.initialize_population(50, true);
+            let mut min_pop = 50usize;
+            let mut extinct = false;
+            for _ in 0..ticks {
+                s.tick();
+                let p = s.agents.len();
+                if p < min_pop { min_pop = p; }
+                if p == 0 { extinct = true; break; }
+            }
+            (s.agents.len(), s.genome_diversity(), min_pop, extinct, s.floor_rescues)
+        };
+        println!("=== UCF floor experiment (seed {}, {} ticks, shock every {}) ===", seed, ticks, shock);
+        let (fp, fd, fmin, fext, fr) = run_arm(Some(30));
+        let (np, nd, nmin, next, _) = run_arm(None);
+        println!("{:<10} {:>8} {:>10} {:>12} {:>9} {:>10}", "arm", "finalPop", "diversity", "minPop(resil)", "extinct", "rescues");
+        println!("{:<10} {:>8} {:>10} {:>12} {:>9} {:>10}", "FLOOR", fp, fd, fmin, fext, fr);
+        println!("{:<10} {:>8} {:>10} {:>12} {:>9} {:>10}", "NO-FLOOR", np, nd, nmin, next, "-");
+        println!("\nHealth read (higher finalPop/diversity/minPop = healthier system):");
+        println!("  floor helped survival: {}", if fp > np || (next && !fext) { "YES" } else { "no/unclear" });
+        println!("  floor preserved diversity: {}", if fd > nd { "YES" } else { "no/unclear" });
+        println!("  floor improved resilience (min pop trough): {}", if fmin > nmin { "YES" } else { "no/unclear" });
+        return;
+    }
     if std::env::args().any(|a| a == "shuffle") {
         let mut r = PyRandom::seed(42);
         let mut x: Vec<i32> = (0..10).collect();

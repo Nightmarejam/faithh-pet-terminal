@@ -16,6 +16,10 @@ pub struct Simulation {
     pub total_ticks: u64,
     pub total_reproductions: u64,
     pub total_deaths: u64,
+    // UCF experiment knobs (None = base sim, keeps the validated tick unchanged)
+    pub floor_energy: Option<i32>,   // guaranteed minimum energy (UCF); rescues from death
+    pub shock_interval: Option<u64>, // relocate energy sources every N ticks (fitness shift)
+    pub floor_rescues: u64,          // how many times the floor prevented a death
 }
 
 impl Simulation {
@@ -23,7 +27,14 @@ impl Simulation {
         let mut rng = PyRandom::seed(seed);
         let world = World::new(&mut rng);
         Simulation { world, agents: Vec::new(), rng, next_id: 0,
-                     total_ticks: 0, total_reproductions: 0, total_deaths: 0 }
+                     total_ticks: 0, total_reproductions: 0, total_deaths: 0,
+                     floor_energy: None, shock_interval: None, floor_rescues: 0 }
+    }
+
+    /// Distinct-genome count — the diversity metric (the "reserve" the floor preserves).
+    pub fn genome_diversity(&self) -> usize {
+        use std::collections::HashSet;
+        self.agents.iter().map(|a| a.genome).collect::<HashSet<_>>().len()
     }
 
     pub fn initialize_population(&mut self, count: usize, seed_reproduce: bool) {
@@ -50,14 +61,19 @@ impl Simulation {
         self.world.tick += 1;
         self.total_ticks += 1;
         self.world.regenerate_energy();
-        // apply_predator_wave: no-op in exp0
+        // SHOCK: relocate energy sources + famine every shock_interval (fitness landscape shift)
+        if let Some(iv) = self.shock_interval {
+            if self.world.tick % iv == 0 { self.world.apply_shock(&mut self.rng); }
+        }
 
-        // snapshot execution order over current agents, shuffled
+        let floor = self.floor_energy;
         let n = self.agents.len();
         let mut order: Vec<usize> = (0..n).collect();
         self.rng.shuffle(&mut order);
 
         let mut repro_requests: Vec<usize> = Vec::new();
+        let mut deaths = 0u64;
+        let mut rescues = 0u64;
         {
             let world = &mut self.world;
             let agents = &mut self.agents;
@@ -66,16 +82,25 @@ impl Simulation {
                 if agents[idx].reproduction_cooldown > 0 { agents[idx].reproduction_cooldown -= 1; }
                 agents[idx].reset_tick_state();
                 agents[idx].apply_energy_cost(BASELINE_DRAIN);
-                if !agents[idx].alive { self.total_deaths += 1; continue; }
+                // FLOOR: rescue from death to guaranteed minimum (UCF)
+                if !agents[idx].alive {
+                    if let Some(f) = floor { agents[idx].alive = true; agents[idx].energy = f; rescues += 1; }
+                    else { deaths += 1; continue; }
+                }
                 let passive = world.energy_at(agents[idx].x, agents[idx].y).min(5);
                 agents[idx].add_energy(passive);
                 world.reduce_energy(agents[idx].x, agents[idx].y, passive);
                 let requested = execute_genome(&mut agents[idx], world);
-                if !agents[idx].alive { self.total_deaths += 1; continue; }
+                if !agents[idx].alive {
+                    if let Some(f) = floor { agents[idx].alive = true; agents[idx].energy = f; rescues += 1; }
+                    else { deaths += 1; continue; }
+                }
                 if requested { repro_requests.push(idx); }
                 agents[idx].tick_age();
             }
         }
+        self.total_deaths += deaths;
+        self.floor_rescues += rescues;
 
         self.process_reproductions(&repro_requests);
         self.cleanup_dead();
