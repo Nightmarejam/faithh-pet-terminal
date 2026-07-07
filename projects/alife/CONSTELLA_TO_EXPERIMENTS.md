@@ -3,6 +3,11 @@
 set for FAITHH." They're one pipeline: each Constella concept becomes a testable
 experiment; each *confirmed* result becomes a word FAITHH is allowed to use.
 
+> **This file holds the RECEIPTS. The CLAIMS live in the constitution repo:**
+> `constella-framework/docs/governance/alife_evidence_mapping.md` (the bridge doc that maps
+> these findings to constitutional mechanisms). The two are the two halves of the testable
+> whitepaper — keep them in sync. See also `constella-framework/docs/governance/INDEX.md`.
+
 ## The pipe (one direction, three stages)
 ```
 Constella concept  →  ALife experiment (hypothesis + mechanic)  →  confirmed result  →  FAITHH vocabulary term
