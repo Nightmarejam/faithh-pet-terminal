@@ -180,3 +180,35 @@ the floor must keep the weak alive without making the strong un-removable.
 NEW, CONFIRMED (frozen composition, receipt). *diversity-reserve enables adaptation* → still
 NOT demonstrated; now known to need (a) a calibrated (non-freezing) floor, (b) standing
 diversity, (c) directional selection — v4. Do not claim the reserve mechanism yet.
+
+## FRAMEWORK NOTE (design, 2026-07) — the floor revealed an AXIS, not a knob
+The three floor states (none / middle / unconditional) with opposite failures
+(brittle / — / frozen) are the first instance of a general pattern worth naming:
+
+**Resonant-boundary pattern:** a civic mechanism is a control parameter with two failure
+extremes and a healthy middle; the interesting behavior lives at the boundary, not the
+extremes. Expect other Constella concepts to share this shape.
+
+**"Must every concept roll into the three floor states?" → No.** That's a combinatorial
+explosion; most cells are uninformative. Rule: cross a concept with the floor states ONLY
+where it plausibly interacts with survival/selection. On-axis concepts (diversity,
+accountability, contribution) are tested WITH the floor; orthogonal ones (some cultural-
+transmission) standalone.
+
+**The floor's axis = survival ↔ removability.**
+- Floor = LOWER bound (nobody dies). No floor → brittle (death from below).
+- The stasis failure = missing UPPER bound (incumbents un-removable). Total floor → frozen.
+- The upper bound already has a Constella name: ACCOUNTABILITY (Penumbra / Astris-Auctor) —
+  the mechanism that demotes/removes entrenched incumbents.
+
+**Reframed v4 (replaces "calibrate the floor's strength"):** the "middle floor" is likely
+NOT a weaker floor — it's a FULL floor PLUS accountability. You don't buy turnover by letting
+the weak die; you buy it by keeping the strong removable. Floor + Accountability = the middle
+regime where survival AND adaptation coexist and the diversity reserve can finally rise. This
+fuses UCF + Penumbra into ONE two-boundary system and is the real v4.
+
+**Proposed next experiment:** add an accountability mechanic (incumbent demotion — e.g. the
+dominant lineage pays a rising entrenchment cost, or top-share agents face elevated drain) ON
+TOP of the full floor + directional shock. Prediction: composition un-freezes (turnover
+returns), survival holds (floor on), the favored reserve rises after each flip → the reserve
+mechanism finally fires. Tier: design/speculative until run seeded.
