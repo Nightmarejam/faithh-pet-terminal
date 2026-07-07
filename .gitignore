@@ -139,3 +139,6 @@ unsloth_compiled_cache/
 wsl.localhost/
 git_info.json
 projects/constella-framework/
+
+# Harden: ignore the entire stray tomcat-sound dir (private business/tax; keep out of public repo)
+projects/tomcat-sound/
