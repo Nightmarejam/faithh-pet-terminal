@@ -74,6 +74,56 @@ fn main() {
         println!("  floor improved resilience (min pop trough): {}", if fmin > nmin { "YES" } else { "no/unclear" });
         return;
     }
+    if let Some(pos) = args.iter().position(|a| a == "mech") {
+        // Mechanism test: is the post-shock winner a PRE-shock minority variant?
+        // If a preserved rare genome rises to dominance when the environment shifts,
+        // the diversity reserve was load-bearing (not just decorative).
+        let seed: u32 = args.get(pos + 1).and_then(|s| s.parse().ok()).unwrap_or(42);
+        let ticks: usize = args.get(pos + 2).and_then(|s| s.parse().ok()).unwrap_or(20000);
+        let shock = 2000u64;
+        let recovery = 1000u64; // measure 1000 ticks after each shock
+        let mut s = Simulation::new(seed);
+        s.floor_energy = Some(30);
+        s.shock_interval = Some(shock);
+        s.initialize_population(50, true);
+        let mut pre: Vec<([u8; 8], usize)> = Vec::new();
+        let mut pre_dom: Option<[u8; 8]> = None;
+        let mut reserve_hits = 0u32;
+        let mut events = 0u32;
+        println!("=== UCF MECHANISM test (floor arm, seed {}, {} ticks) ===", seed, ticks);
+        println!("Q: after each shock, was the new dominant genome a PRE-shock minority?\n");
+        for _ in 0..ticks {
+            s.tick();
+            let wt = s.world.tick;
+            if (wt + 1) % shock == 0 {
+                pre = s.genome_freq();
+                pre_dom = pre.first().map(|x| x.0);
+            }
+            if wt >= shock && wt % shock == recovery && !pre.is_empty() {
+                let after = s.genome_freq();
+                if let Some(d_after) = after.first().map(|x| x.0) {
+                    let rank = pre.iter().position(|x| x.0 == d_after);
+                    let pre_count = rank.map(|r| pre[r].1).unwrap_or(0);
+                    let total_pre: usize = pre.iter().map(|x| x.1).sum();
+                    let shifted = pre_dom != Some(d_after);
+                    // "reserve was load-bearing" = new winner was NOT the old dominant
+                    // and was rare (or absent) before the shock
+                    let from_reserve = shifted && rank.map_or(true, |r| r > 0);
+                    if from_reserve { reserve_hits += 1; }
+                    events += 1;
+                    let rank_str = match rank { Some(r) => format!("#{}", r + 1), None => "ABSENT(new mutation)".into() };
+                    println!("shock@{:>5} recover@{:>5}: pop={:>4} div={:>3} | new winner was pre-shock {} (was {}/{}) | shifted:{} | reserve-driven:{}",
+                        wt - recovery, wt, s.agents.len(), s.genome_diversity(),
+                        rank_str, pre_count, total_pre, shifted, from_reserve);
+                }
+            }
+        }
+        println!("\nReserve-driven recoveries: {}/{} shocks", reserve_hits, events);
+        println!("Read: high ratio → the floor's preserved minorities BECAME the new winners");
+        println!("      (the diversity reserve is load-bearing, not decorative — MECHANISM supported).");
+        println!("      low ratio → same dominant persists → floor helps via headcount, not variant-supply.");
+        return;
+    }
     if std::env::args().any(|a| a == "shuffle") {
         let mut r = PyRandom::seed(42);
         let mut x: Vec<i32> = (0..10).collect();

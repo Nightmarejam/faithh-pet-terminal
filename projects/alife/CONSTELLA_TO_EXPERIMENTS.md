@@ -110,3 +110,35 @@ The floor is insurance — it never wins biggest, but it never dies.
 **Tier: the OUTCOME (floor→resilience) is CONFIRMED (5 seeds, reproducible). The MECHANISM
 (diversity reserve) stays speculative until the lineage test.** Vocabulary earned:
 *civic-floor → resilience* (confirmed); *diversity-reserve* (still speculative).
+
+## SECOND RESULT — the MECHANISM test (honest NEGATIVE + diagnosis)
+Built `alife-core mech <seed>`: floor arm, snapshot genome-freq before each shock, then
+1000 ticks post-shock ask "was the new dominant a PRE-shock minority?" (= reserve load-bearing).
+
+seed 42, 20k ticks, 9 shocks: **0/9 reserve-driven.** The SAME dominant genome (~65% of pop,
+515/788) wins before AND after every shock. The winner never shifts; preserved minorities
+never rise.
+
+**Finding: the diversity-reserve MECHANISM is NOT operating as hypothesized.**
+- Outcome (floor→resilience) still holds — but it runs on HEADCOUNT (buffering), not
+  variant-supply. This is exp6's null partially winning on the *mechanism*.
+- So "the weak are load-bearing because they hold variants that become winners" is NOT
+  demonstrated. Honest counter-evidence, with a receipt.
+
+**Diagnosis (why the reserve wasn't tested, not just false):** the v1 shock is a UNIFORM
+stress (relocate sources + famine, everyone hit equally) → a GENERALIST wins every time →
+no *directional* selection → no previously-suboptimal variant ever becomes optimal → the
+reserve has no moment to matter. The diversity-reserve hypothesis specifically predicts
+benefit under DIRECTIONAL shifts. v1 never creates one, so it can't confirm OR refute the
+mechanism — it only shows the floor buffers uniform stress by headcount.
+
+**What v3 needs (the real mechanism test):** a DIRECTIONAL shock that alternates which TRAIT
+is optimal (e.g. HOT regime → shield-users win; SCARCE regime → mover/conserver-users win),
+so different genomes win in different regimes. Then: does the floor-preserved off-regime
+variant rise when its regime returns? That requires enabling hazard/threat regimes (not in
+base exp0) — a genuine next experiment, not an edit. Also: the seeded near-monoculture
+(genome[5]=4,genome[6]=2 fixed for all founders) thins the act-slot reserve from the start.
+
+**Tier update:** *civic-floor → resilience* CONFIRMED (headcount-buffering, receipt).
+*diversity-reserve as the mechanism* → **NOT SUPPORTED under uniform shock**; UNTESTED under
+directional shock (v3). Do not claim the reserve mechanism until a directional shock confirms it.

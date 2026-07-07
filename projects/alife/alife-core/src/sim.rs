@@ -37,6 +37,16 @@ impl Simulation {
         self.agents.iter().map(|a| a.genome).collect::<HashSet<_>>().len()
     }
 
+    /// Genome frequency table, most common first.
+    pub fn genome_freq(&self) -> Vec<([u8; 8], usize)> {
+        use std::collections::HashMap;
+        let mut m: HashMap<[u8; 8], usize> = HashMap::new();
+        for a in &self.agents { *m.entry(a.genome).or_insert(0) += 1; }
+        let mut v: Vec<_> = m.into_iter().collect();
+        v.sort_by(|a, b| b.1.cmp(&a.1));
+        v
+    }
+
     pub fn initialize_population(&mut self, count: usize, seed_reproduce: bool) {
         let (mut spawned, mut attempts) = (0usize, 0usize);
         let max_attempts = count * 10;
