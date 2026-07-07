@@ -131,11 +131,13 @@ fn main() {
         // flips, the diversity reserve is load-bearing — the mechanism is real.
         let seed: u32 = args.get(pos + 1).and_then(|s| s.parse().ok()).unwrap_or(42);
         let ticks: usize = args.get(pos + 2).and_then(|s| s.parse().ok()).unwrap_or(20000);
-        let floor_on = !args.iter().any(|a| a == "nofloor");
+        let pulse_on = args.iter().any(|a| a == "pulse");
+        let floor_on = pulse_on || !args.iter().any(|a| a == "nofloor");
         let shock = 2000u64;
         let recovery = 1500u64; // give the newly-favored group time to take over
         let mut s = Simulation::new(seed);
         s.floor_energy = if floor_on { Some(30) } else { None };
+        s.pulse_threshold = if pulse_on { Some(0.30) } else { None };
         s.shock_interval = Some(shock);
         s.directional = true;
         s.initialize_population(50, true);
@@ -146,7 +148,7 @@ fn main() {
         let mut events = 0u32;
         let mut extinct_at: Option<u64> = None;
         println!("=== DIRECTIONAL mechanism test — {} arm (seed {}, {} ticks) ===",
-                 if floor_on { "FLOOR" } else { "NO-FLOOR" }, seed, ticks);
+                 if pulse_on { "PULSE(targeted)" } else if floor_on { "FLOOR" } else { "NO-FLOOR" }, seed, ticks);
         println!("Q: when the regime flips, does the new winner come from the just-favored reserve?\n");
         for _ in 0..ticks {
             s.tick();

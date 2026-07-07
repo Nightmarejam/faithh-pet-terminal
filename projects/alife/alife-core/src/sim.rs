@@ -10,7 +10,7 @@ const SLOT_MUTATION_RATES: [f64; 8] = [0.001, 0.001, 0.010, 0.010, 0.005, 0.001,
 // Directional shock: the disfavored trait-group loses this much energy/tick. Keyed on the
 // regulate op (genome[7]&7): group = op>=4. Regime flips each shock, so the favored group
 // alternates — a previously-disfavored variant can become the winner (the reserve's moment).
-const DIRECTIONAL_PENALTY: i32 = 8;
+const DIRECTIONAL_PENALTY: i32 = 3;
 
 pub struct Simulation {
     pub world: World,
@@ -25,6 +25,7 @@ pub struct Simulation {
     pub shock_interval: Option<u64>, // relocate energy sources every N ticks (fitness shift)
     pub floor_rescues: u64,          // how many times the floor prevented a death
     pub directional: bool,           // shock flips which trait-group is favored (mechanism test)
+    pub pulse_threshold: Option<f64>,// targeted floor (Exp 9): rescue only under-represented group
 }
 
 impl Simulation {
@@ -34,7 +35,7 @@ impl Simulation {
         Simulation { world, agents: Vec::new(), rng, next_id: 0,
                      total_ticks: 0, total_reproductions: 0, total_deaths: 0,
                      floor_energy: None, shock_interval: None, floor_rescues: 0,
-                     directional: false }
+                     directional: false, pulse_threshold: None }
     }
 
     /// Distinct-genome count — the diversity metric (the "reserve" the floor preserves).
@@ -88,6 +89,18 @@ impl Simulation {
         let floor = self.floor_energy;
         let directional = self.directional;
         let regime = self.world.regime;
+        // Targeted pulse (Exp 9): a group is "protected" only while its share is below the
+        // threshold. None => unconditional (every group protected). This preserves the
+        // under-represented reserve WITHOUT shielding the dominant incumbent from selection.
+        let (prot_g0, prot_g1) = match self.pulse_threshold {
+            None => (true, true),
+            Some(thr) => {
+                let total = self.agents.len().max(1) as f64;
+                let g1 = self.agents.iter().filter(|a| (a.genome[7] & 7) >= 4).count();
+                let g0 = self.agents.len() - g1;
+                ((g0 as f64 / total) < thr, (g1 as f64 / total) < thr)
+            }
+        };
         let n = self.agents.len();
         let mut order: Vec<usize> = (0..n).collect();
         self.rng.shuffle(&mut order);
@@ -109,16 +122,22 @@ impl Simulation {
                 }
                 // FLOOR: rescue from death to guaranteed minimum (UCF)
                 if !agents[idx].alive {
-                    if let Some(f) = floor { agents[idx].alive = true; agents[idx].energy = f; rescues += 1; }
-                    else { deaths += 1; continue; }
+                    let protect = if (agents[idx].genome[7] & 7) >= 4 { prot_g1 } else { prot_g0 };
+                    if let Some(f) = floor {
+                        if protect { agents[idx].alive = true; agents[idx].energy = f; rescues += 1; }
+                        else { deaths += 1; continue; }
+                    } else { deaths += 1; continue; }
                 }
                 let passive = world.energy_at(agents[idx].x, agents[idx].y).min(5);
                 agents[idx].add_energy(passive);
                 world.reduce_energy(agents[idx].x, agents[idx].y, passive);
                 let requested = execute_genome(&mut agents[idx], world);
                 if !agents[idx].alive {
-                    if let Some(f) = floor { agents[idx].alive = true; agents[idx].energy = f; rescues += 1; }
-                    else { deaths += 1; continue; }
+                    let protect = if (agents[idx].genome[7] & 7) >= 4 { prot_g1 } else { prot_g0 };
+                    if let Some(f) = floor {
+                        if protect { agents[idx].alive = true; agents[idx].energy = f; rescues += 1; }
+                        else { deaths += 1; continue; }
+                    } else { deaths += 1; continue; }
                 }
                 if requested { repro_requests.push(idx); }
                 agents[idx].tick_age();

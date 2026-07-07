@@ -217,3 +217,32 @@ dominant lineage pays a rising entrenchment cost, or top-share agents face eleva
 TOP of the full floor + directional shock. Prediction: composition un-freezes (turnover
 returns), survival holds (floor on), the favored reserve rises after each flip → the reserve
 mechanism finally fires. Tier: design/speculative until run seeded.
+
+## FOURTH RESULT — the targeted pulse floor (v4): the mechanism fires, then overshoots
+Built `alife-core dmech <seed> <ticks> pulse`: a threshold-activated floor (Exp 9 style) that
+rescues ONLY the under-represented group (share < 30%), leaving the dominant incumbent exposed to
+selection. Directional penalty softened 8→3 so the base population self-sustains (at 8 the pop was
+100% floor-dependent — an Exp-6 "inflated past carrying capacity" artifact; note v3 above used 8).
+
+Three arms, seed 42, 20k ticks:
+- **NO-FLOOR:** collapses to pop=1 (lone monoculture survivor). Brittle.
+- **UNCONDITIONAL FLOOR:** 830 agents, composition FROZEN (774/56 across all 9 flips). Survives,
+  never adapts. Stasis (confirms v3).
+- **TARGETED PULSE:** at the first flip **the reserve ROSE** — winner shifted to the newly-favored
+  group (grp1 5→916), **reserve-driven: TRUE**. The mechanism the unconditional floor never fired
+  (0/9) fired here. BUT the turnover overshot into the opposite monoculture (99%), leaving no
+  reserve for the next flip → EXTINCT at tick 4102.
+
+**Finding:** the targeted floor CAN do what the unconditional floor cannot — let a preserved
+minority become the winner when its regime comes (first positive evidence for the diversity-reserve
+mechanism). But a bare threshold pulse OVERSHOOTS: protecting the weak (floor) without limiting the
+strong's runaway growth (accountability) produces violent monoculture swings that collapse across
+repeated shocks. This empirically reproduces the evidence-mapping "gate must be calibrated"
+principle (Exp 7's too-tight gate) AND confirms this session's floor+accountability thesis: the
+floor alone is a *half*-mechanism. The stable middle regime needs BOTH — targeted floor to preserve
+the reserve AND accountability to cap incumbent runaway.
+
+**Tier:** *targeted-floor enables turnover* — SUPPORTED (one clean reserve-driven flip vs 0/9 for
+unconditional). *stable adaptive floor* — NOT YET (overshoot→collapse; needs floor + accountability).
+Honest: the mechanism is real but only half-built. **v5: add the majority cap (the Astris/Auctor
+accountability analog) and re-test.**
