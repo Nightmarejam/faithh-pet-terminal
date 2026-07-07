@@ -26,6 +26,7 @@ pub struct World {
     pub tick: u64,
     pub grid: Vec<Vec<Cell>>, // grid[y][x]
     pub energy_sources: Vec<(i32, i32)>,
+    pub regime: u8, // directional shock: which trait-group the environment currently favors (0/1)
 }
 
 impl World {
@@ -51,7 +52,7 @@ impl World {
             let y = rng.randbelow(GRID_HEIGHT as u32) as i32;
             energy_sources.push((x, y));
         }
-        World { width: GRID_WIDTH, height: GRID_HEIGHT, tick: 0, grid, energy_sources }
+        World { width: GRID_WIDTH, height: GRID_HEIGHT, tick: 0, grid, energy_sources, regime: 0 }
     }
 
     pub fn in_bounds(&self, x: i32, y: i32) -> bool {
@@ -104,6 +105,21 @@ impl World {
         // famine: drop every cell to a low value; agents must migrate to the new sources
         for row in self.grid.iter_mut() {
             for c in row.iter_mut() { c.energy = 20; }
+        }
+    }
+
+    /// DIRECTIONAL shock: flip which trait-group the environment favors + relocate sources.
+    /// Unlike apply_shock (uniform famine → a generalist wins every time), this changes WHICH
+    /// trait is optimal, so a previously-disfavored variant can become the winner. This is the
+    /// only shock that can actually invoke the diversity reserve. No blanket famine — the point
+    /// is the *directional* selection flip, not mass death.
+    pub fn apply_directional_shock(&mut self, rng: &mut PyRandom) {
+        self.regime ^= 1;
+        self.energy_sources.clear();
+        for _ in 0..NUM_ENERGY_SOURCES {
+            let x = rng.randbelow(GRID_WIDTH as u32) as i32;
+            let y = rng.randbelow(GRID_HEIGHT as u32) as i32;
+            self.energy_sources.push((x, y));
         }
     }
 

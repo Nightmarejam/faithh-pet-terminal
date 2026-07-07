@@ -142,3 +142,41 @@ base exp0) — a genuine next experiment, not an edit. Also: the seeded near-mon
 **Tier update:** *civic-floor → resilience* CONFIRMED (headcount-buffering, receipt).
 *diversity-reserve as the mechanism* → **NOT SUPPORTED under uniform shock**; UNTESTED under
 directional shock (v3). Do not claim the reserve mechanism until a directional shock confirms it.
+
+## THIRD RESULT — DIRECTIONAL shock: the floor has a CALIBRATION regime
+Built `alife-core dmech <seed> [nofloor]`: shock now FLIPS which trait-group (regulate op
+genome[7]&7: <4 vs >=4) the environment favors, keyed to standing variation. This is the
+first shock that creates DIRECTIONAL selection (a different trait becomes optimal), so the
+reserve *could* be invoked. seed 42, 20k ticks, 9 flips.
+
+**FLOOR arm — STASIS.** Composition frozen at grp0=787 / grp1=43 across ALL 9 flips, div=74
+frozen. The unconditional floor (rescue-to-30) keeps the disfavored alive — but ALSO shields
+the 787-strong incumbent from the selection meant to demote it. The reserve is *preserved but
+inert*: it never dies and never rises. The system survives forever, adapts never.
+
+**NO-FLOOR arm — EXTINCT at tick 2035** (35 ticks after the first flip). Turnover was allowed,
+but the disfavored group died during regime 0, so when the regime flipped there was no reserve
+to take over → collapse. Brittle, exactly as predicted — just fatal rather than adaptive.
+
+**The real finding (a design law, not a yes/no):** the UCF has a **calibration regime.**
+- Floor too strong (unconditional immortality) → **stasis**: survives, but the incumbent is
+  over-protected and the reserve can't rise. No adaptation.
+- Floor absent → **brittleness**: reserve is lost, first directional shock is fatal.
+- The diversity-reserve mechanism (reserve RISES when its regime returns) requires a *middle*
+  floor — one that preserves the weak WITHOUT freezing selective turnover. That floor was not
+  built here; both extremes miss it.
+
+**Also a precondition, revealed:** the founders are seeded as a near-monoculture (genome[5]=4,
+genome[6]=2 fixed; one genome ≈62%), so the reserve group started tiny (43) — too small to take
+over in one regime window even if selection favored it. **Standing diversity is a prerequisite
+for the reserve to matter at all.**
+
+**This refines "headcount buffering is a good-enough ethos":** headcount buffering is real and
+sufficient for SURVIVAL (floor beats no-floor every time). But taken to the unconditional
+extreme it ossifies the system. A civic OS needs floor-for-survival AND preserved turnover —
+the floor must keep the weak alive without making the strong un-removable.
+
+**Tier update:** *civic-floor → resilience* CONFIRMED. *civic-floor → stasis when unconditional*
+NEW, CONFIRMED (frozen composition, receipt). *diversity-reserve enables adaptation* → still
+NOT demonstrated; now known to need (a) a calibrated (non-freezing) floor, (b) standing
+diversity, (c) directional selection — v4. Do not claim the reserve mechanism yet.

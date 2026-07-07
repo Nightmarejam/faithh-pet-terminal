@@ -7,6 +7,10 @@ use crate::ops;
 
 const BYTE_SWAP_RATE: f64 = 0.001;
 const SLOT_MUTATION_RATES: [f64; 8] = [0.001, 0.001, 0.010, 0.010, 0.005, 0.001, 0.001, 0.005];
+// Directional shock: the disfavored trait-group loses this much energy/tick. Keyed on the
+// regulate op (genome[7]&7): group = op>=4. Regime flips each shock, so the favored group
+// alternates — a previously-disfavored variant can become the winner (the reserve's moment).
+const DIRECTIONAL_PENALTY: i32 = 8;
 
 pub struct Simulation {
     pub world: World,
@@ -20,6 +24,7 @@ pub struct Simulation {
     pub floor_energy: Option<i32>,   // guaranteed minimum energy (UCF); rescues from death
     pub shock_interval: Option<u64>, // relocate energy sources every N ticks (fitness shift)
     pub floor_rescues: u64,          // how many times the floor prevented a death
+    pub directional: bool,           // shock flips which trait-group is favored (mechanism test)
 }
 
 impl Simulation {
@@ -28,7 +33,8 @@ impl Simulation {
         let world = World::new(&mut rng);
         Simulation { world, agents: Vec::new(), rng, next_id: 0,
                      total_ticks: 0, total_reproductions: 0, total_deaths: 0,
-                     floor_energy: None, shock_interval: None, floor_rescues: 0 }
+                     floor_energy: None, shock_interval: None, floor_rescues: 0,
+                     directional: false }
     }
 
     /// Distinct-genome count — the diversity metric (the "reserve" the floor preserves).
@@ -73,10 +79,15 @@ impl Simulation {
         self.world.regenerate_energy();
         // SHOCK: relocate energy sources + famine every shock_interval (fitness landscape shift)
         if let Some(iv) = self.shock_interval {
-            if self.world.tick % iv == 0 { self.world.apply_shock(&mut self.rng); }
+            if self.world.tick % iv == 0 {
+                if self.directional { self.world.apply_directional_shock(&mut self.rng); }
+                else { self.world.apply_shock(&mut self.rng); }
+            }
         }
 
         let floor = self.floor_energy;
+        let directional = self.directional;
+        let regime = self.world.regime;
         let n = self.agents.len();
         let mut order: Vec<usize> = (0..n).collect();
         self.rng.shuffle(&mut order);
@@ -92,6 +103,10 @@ impl Simulation {
                 if agents[idx].reproduction_cooldown > 0 { agents[idx].reproduction_cooldown -= 1; }
                 agents[idx].reset_tick_state();
                 agents[idx].apply_energy_cost(BASELINE_DRAIN);
+                // DIRECTIONAL selection: the disfavored trait-group bleeds energy this tick.
+                if directional && ((agents[idx].regulate_op() & 7 >= 4) as u8) != regime {
+                    agents[idx].apply_energy_cost(DIRECTIONAL_PENALTY);
+                }
                 // FLOOR: rescue from death to guaranteed minimum (UCF)
                 if !agents[idx].alive {
                     if let Some(f) = floor { agents[idx].alive = true; agents[idx].energy = f; rescues += 1; }

@@ -124,6 +124,72 @@ fn main() {
         println!("      low ratio → same dominant persists → floor helps via headcount, not variant-supply.");
         return;
     }
+    if let Some(pos) = args.iter().position(|a| a == "dmech") {
+        // DIRECTIONAL mechanism test: the shock flips which trait-group (regulate op >=4 vs <4)
+        // the environment favors. Q: when the regime flips, does the new dominant come from the
+        // group that was DISFAVORED before (the reserve the floor kept alive)? If yes across
+        // flips, the diversity reserve is load-bearing — the mechanism is real.
+        let seed: u32 = args.get(pos + 1).and_then(|s| s.parse().ok()).unwrap_or(42);
+        let ticks: usize = args.get(pos + 2).and_then(|s| s.parse().ok()).unwrap_or(20000);
+        let floor_on = !args.iter().any(|a| a == "nofloor");
+        let shock = 2000u64;
+        let recovery = 1500u64; // give the newly-favored group time to take over
+        let mut s = Simulation::new(seed);
+        s.floor_energy = if floor_on { Some(30) } else { None };
+        s.shock_interval = Some(shock);
+        s.directional = true;
+        s.initialize_population(50, true);
+        let group = |g: [u8; 8]| -> u8 { ((g[7] & 7) >= 4) as u8 };
+        let mut pre: Vec<([u8; 8], usize)> = Vec::new();
+        let mut pre_dom: Option<[u8; 8]> = None;
+        let mut reserve_hits = 0u32;
+        let mut events = 0u32;
+        let mut extinct_at: Option<u64> = None;
+        println!("=== DIRECTIONAL mechanism test — {} arm (seed {}, {} ticks) ===",
+                 if floor_on { "FLOOR" } else { "NO-FLOOR" }, seed, ticks);
+        println!("Q: when the regime flips, does the new winner come from the just-favored reserve?\n");
+        for _ in 0..ticks {
+            s.tick();
+            if s.agents.is_empty() { extinct_at = Some(s.world.tick); break; }
+            let wt = s.world.tick;
+            if (wt + 1) % shock == 0 {
+                pre = s.genome_freq();
+                pre_dom = pre.first().map(|x| x.0);
+            }
+            if wt >= shock && wt % shock == recovery && !pre.is_empty() {
+                let after = s.genome_freq();
+                if let Some(d_after) = after.first().map(|x| x.0) {
+                    let favored = s.world.regime;
+                    let dom_grp = group(d_after);
+                    let dom_favored = dom_grp == favored;
+                    let shifted = pre_dom != Some(d_after);
+                    let pre_grp_favored = pre_dom.map_or(false, |d| group(d) == favored);
+                    // reserve load-bearing = new winner is from the now-favored group,
+                    // AND the pre-shock dominant was from the OTHER (previously-favored) group
+                    let from_reserve = dom_favored && shifted && !pre_grp_favored;
+                    if from_reserve { reserve_hits += 1; }
+                    events += 1;
+                    let g1 = s.agents.iter().filter(|a| (a.genome[7] & 7) >= 4).count();
+                    let g0 = s.agents.len() - g1;
+                    let fav_share = if favored == 1 { g1 } else { g0 } as f64 / s.agents.len() as f64;
+                    println!("flip@{:>5} recover@{:>5}: pop={:>4} div={:>3} favored-grp={} | grp0={:>4} grp1={:>4} favored-share={:.0}% | winner-grp={} reserve-driven:{}",
+                        wt - recovery, wt, s.agents.len(), s.genome_diversity(), favored,
+                        g0, g1, fav_share * 100.0, dom_grp, from_reserve);
+                }
+            }
+        }
+        match extinct_at {
+            Some(t) => println!("\nEXTINCT at tick {} — the arm could not survive directional shocks.", t),
+            None => {
+                println!("\nReserve-driven recoveries: {}/{} flips", reserve_hits, events);
+                println!("Read: high ratio → floor-preserved off-regime variants BECOME the winners when");
+                println!("      their regime returns → the weak are load-bearing → MECHANISM SUPPORTED.");
+                println!("      Compare vs `dmech {} {} nofloor` — if no-floor goes extinct or can't shift,", seed, ticks);
+                println!("      the reserve (and the floor that preserves it) is what enables adaptation.");
+            }
+        }
+        return;
+    }
     if std::env::args().any(|a| a == "shuffle") {
         let mut r = PyRandom::seed(42);
         let mut x: Vec<i32> = (0..10).collect();
