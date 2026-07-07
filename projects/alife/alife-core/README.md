@@ -29,7 +29,8 @@ Python's exact RNG rather than using Rust's.
   Rust 0.28s vs Python 19.7s). Root-cause bug found & fixed via staged hashing:
   MEMORY_ENABLED=false forces MEM_NONE (memory clears each tick).
 
-- 🔨 **Fossil output** — next: write the same JSONL/results the Python fossil tools read.
+- ✅ **Fossil output** — DONE. `run <seed> <ticks> fossil` writes fossils/*.json; Rust
+  fossil hash == Python (a2bb005395f79766 @ seed42/100t). **PORT COMPLETE — bit-exact, ~70× faster.**
 
 ## Validate the RNG yourself
 ```bash
