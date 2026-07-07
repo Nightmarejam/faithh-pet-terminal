@@ -1,4 +1,0 @@
-[submodule "projects/constella-framework"]
-	path = projects/constella-framework
-	url = git@github.com:Nightmarejam/constella-framework.git
-	branch = main
