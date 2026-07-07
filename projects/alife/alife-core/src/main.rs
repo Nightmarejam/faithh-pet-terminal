@@ -18,7 +18,19 @@ fn main() {
         for _ in 0..ticks { s.tick(); }
         println!("seed {} after {} ticks: pop={} births={} deaths={}",
                  seed, ticks, s.agents.len(), s.total_reproductions, s.total_deaths);
-        println!("state_hash: {:016x}", s.state_hash());
+        let hash = s.state_hash();
+        println!("state_hash: {:016x}", hash);
+        // fossil output — same shape the Python fossil tools read (dependency-free JSON)
+        if args.iter().any(|a| a == "fossil") {
+            std::fs::create_dir_all("fossils").ok();
+            let json = format!(
+                "{{\n  \"experiment\": 0,\n  \"seed\": {},\n  \"ticks\": {},\n  \"location\": \"{}\",\n  \"engine\": \"rust\",\n  \"results\": {{\n    \"population\": {},\n    \"total_reproductions\": {},\n    \"total_deaths\": {},\n    \"total_ticks\": {}\n  }},\n  \"state_hash\": \"{:016x}\"\n}}\n",
+                seed, ticks, std::env::var("HOSTNAME").unwrap_or_else(|_| "mac".into()),
+                s.agents.len(), s.total_reproductions, s.total_deaths, s.total_ticks, hash);
+            let path = format!("fossils/exp0_rust_seed{}_t{}.json", seed, ticks);
+            std::fs::write(&path, json).ok();
+            println!("wrote {}", path);
+        }
         return;
     }
     if std::env::args().any(|a| a == "pop") {

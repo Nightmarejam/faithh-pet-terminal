@@ -1,0 +1,14 @@
+{
+  "experiment": 0,
+  "seed": 42,
+  "ticks": 100,
+  "location": "mac",
+  "engine": "rust",
+  "results": {
+    "population": 177,
+    "total_reproductions": 173,
+    "total_deaths": 46,
+    "total_ticks": 100
+  },
+  "state_hash": "a2bb005395f79766"
+}
