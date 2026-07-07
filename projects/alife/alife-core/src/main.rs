@@ -2,10 +2,25 @@
 mod rng;
 mod world;
 mod agent;
+mod ops;
+mod sim;
 use rng::PyRandom;
 use world::World;
+use sim::Simulation;
 
 fn main() {
+    let args: Vec<String> = std::env::args().collect();
+    if let Some(pos) = args.iter().position(|a| a == "run") {
+        let seed: u32 = args.get(pos + 1).and_then(|s| s.parse().ok()).unwrap_or(42);
+        let ticks: usize = args.get(pos + 2).and_then(|s| s.parse().ok()).unwrap_or(1);
+        let mut s = Simulation::new(seed);
+        s.initialize_population(50, true);
+        for _ in 0..ticks { s.tick(); }
+        println!("seed {} after {} ticks: pop={} births={} deaths={}",
+                 seed, ticks, s.agents.len(), s.total_reproductions, s.total_deaths);
+        println!("state_hash: {:016x}", s.state_hash());
+        return;
+    }
     if std::env::args().any(|a| a == "pop") {
         let mut r = PyRandom::seed(42);
         let mut w = World::new(&mut r);

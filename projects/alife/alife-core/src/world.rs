@@ -54,6 +54,42 @@ impl World {
         World { width: GRID_WIDTH, height: GRID_HEIGHT, tick: 0, grid, energy_sources }
     }
 
+    pub fn in_bounds(&self, x: i32, y: i32) -> bool {
+        x >= 0 && x < self.width && y >= 0 && y < self.height
+    }
+    pub fn energy_at(&self, x: i32, y: i32) -> i32 { self.grid[y as usize][x as usize].energy }
+    pub fn light_at(&self, x: i32, y: i32) -> i32 { self.grid[y as usize][x as usize].light }
+    pub fn threat_at(&self, x: i32, y: i32) -> i32 { self.grid[y as usize][x as usize].threat }
+    pub fn occupied(&self, x: i32, y: i32) -> bool { self.grid[y as usize][x as usize].occupant.is_some() }
+    pub fn reduce_energy(&mut self, x: i32, y: i32, amt: i32) {
+        let c = &mut self.grid[y as usize][x as usize];
+        c.energy = (c.energy - amt).max(0);
+    }
+    /// Move an agent's occupant marker (agent.x/y updated by caller). Returns true if moved.
+    pub fn move_occupant(&mut self, id: u64, ox: i32, oy: i32, nx: i32, ny: i32) -> bool {
+        if !self.in_bounds(nx, ny) || self.grid[ny as usize][nx as usize].occupant.is_some() {
+            return false;
+        }
+        self.grid[oy as usize][ox as usize].occupant = None;
+        self.grid[ny as usize][nx as usize].occupant = Some(id);
+        true
+    }
+    /// get_threat_direction: cell with max threat in 5x5, returns (tx,ty) or None.
+    pub fn threat_direction(&self, x: i32, y: i32) -> Option<(i32, i32)> {
+        let mut max_threat = 0;
+        let mut pos = None;
+        for dx in -2..=2 {
+            for dy in -2..=2 {
+                let (nx, ny) = (x + dx, y + dy);
+                if self.in_bounds(nx, ny) {
+                    let t = self.threat_at(nx, ny);
+                    if t > max_threat { max_threat = t; pos = Some((nx, ny)); }
+                }
+            }
+        }
+        pos
+    }
+
     fn regen_rate(&self, x: i32, y: i32) -> i32 {
         for &(sx, sy) in &self.energy_sources {
             if (x - sx).abs() + (y - sy).abs() <= ENERGY_SOURCE_RADIUS {

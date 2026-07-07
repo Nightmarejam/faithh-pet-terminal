@@ -23,16 +23,13 @@ Python's exact RNG rather than using Rust's.
 - ✅ **Agent + population** — genome, energy, spawn. **VALIDATED**: seed 42 →
   `2c9aa438ca75cf3f` both langs (full chain seed→World→50 agents matches bit-for-bit).
   Remaining: the per-tick genome *execution* logic (sense/act/reproduce/mutate).
-- 🔨 **Simulation (tick loop)** — the hot path. Scoped 2026-07:
-  - ✅ RNG primitives all validated: `random()`, `randrange()`, **`shuffle()`** (per-tick
-    execution order — Python 3.11+ Fisher-Yates, matches for seed 42).
-  - ✅ good news: **ops.py has ZERO RNG** — its 46 sense/act/regulate functions are pure
-    deterministic logic. All tick RNG is localized in simulation.py: shuffle (done),
-    mutation (`random()<rate` + `randint(0,7)`), byte-swap, reproduction position.
-  - ⬜ remaining (mechanical, multi-step): port ops.py (46 fns) + tick orchestration
-    (agent loop, death, `_process_reproductions`, `_mutate_genome`). No new determinism
-    traps — validate with a 100-tick state hash vs Python.
-- ⬜ **Fossil output** — write the same JSONL the Python fossil tools already read.
+- ✅ **Simulation (tick loop)** — **DONE & VALIDATED bit-for-bit.** Full port: all 40
+  ops, _execute_genome orchestration, reproduction, mutation, death. Rust==Python at
+  ticks 1/10/50/100 (pop grows 61→64→117→177 identically). **~70× faster** (500 ticks:
+  Rust 0.28s vs Python 19.7s). Root-cause bug found & fixed via staged hashing:
+  MEMORY_ENABLED=false forces MEM_NONE (memory clears each tick).
+
+- 🔨 **Fossil output** — next: write the same JSONL/results the Python fossil tools read.
 
 ## Validate the RNG yourself
 ```bash
