@@ -49,3 +49,32 @@ Words the sandbox can already produce, with their current tier:
 4. If confirmed → it enters FAITHH's vocabulary as a word with a receipt, and it's the
    first bottom-up *evidence* for a Constella claim. If not → honest counter-evidence.
 5. Repeat per concept. The vocabulary grows only by confirmation.
+
+## Jonathan's core speculation — sharpened (the floor + its users → system health)
+Captured 2026-07. Distinct from exp6 (which tests survival: "does the floor prevent
+collapse?"). This is a deeper *health* hypothesis:
+
+> A civic floor improves whole-system health not through charity, but because the
+> floor-supported members are a **diversity reserve** that buffers the system against
+> shocks. The "weak" hold variants that become valuable when conditions shift. Remove
+> the floor → lose the reserve → the system becomes **efficient but brittle.**
+
+**Why it's the sharper form:**
+- Reframes the floor-users as load-bearing (the reserve), not a cost. The weak are the
+  system's *memory of alternatives*.
+- Unifies exp6 (floor) + exp9 (diversity): the floor promotes health BY preserving the
+  diversity reserve. One mechanism, two sides.
+
+**Testable design (a real experiment, not yet built):**
+- Two populations under periodic environmental shocks: FLOOR (weak supported) vs
+  NO-FLOOR (weak die).
+- Measure "system health": post-shock recovery speed, genome diversity retained,
+  population stability (low boom-bust variance).
+- Prediction: FLOOR population is MORE resilient (better health).
+- The load-bearing test: does the post-shock rebound come from descendants of
+  *previously floor-supported* (low-energy) agents? If yes → the weak were provably
+  load-bearing → the speculation confirmed with a receipt.
+- Null: floor → free-riding/bloat/no recovery advantage (exp6's null).
+
+**Tier:** speculative until run seeded at scale. If confirmed, it's the strongest possible
+bottom-up evidence for the UCF — and a genuine, non-obvious finding worth publishing.
