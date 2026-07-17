@@ -1884,6 +1884,31 @@ def augment_context_for_tool_intents(message: str) -> tuple:
     return "\n\n".join(parts), labels
 
 
+def _tier_tag(meta: dict) -> str:
+    # Logic for Humans: Carry each retrieved fact's *attestation tier* (how well-backed it is)
+    # and its receipt into the text the model reads — so a `confirmed` sandbox word and a
+    # `speculative` note don't arrive looking identical. This is the evidence bridge's honesty
+    # discipline, applied at the retrieval boundary. Absence of a tier is itself reported
+    # ("unlabeled" = no receipt) rather than hidden.
+    meta = meta or {}
+    raw = (meta.get('tier') or meta.get('claim_label') or meta.get('attestation_tier')
+           or meta.get('confidence') or '')
+    tier = str(raw).strip().lower()
+    # If the field holds a numeric confidence (0..1) rather than a tier word, bucket it.
+    try:
+        c = float(tier)
+        tier = 'confirmed' if c >= 0.8 else 'asserted' if c >= 0.5 else 'speculative'
+    except (ValueError, TypeError):
+        pass
+    known = {'confirmed', 'stable', 'asserted', 'contested', 'speculative', 'refuted'}
+    if tier not in known:
+        tier = 'unlabeled'
+    # Receipt: what actually backs the claim (sandbox experiments, or the source doc).
+    receipt = str(meta.get('experiment_ids') or meta.get('source')
+                  or meta.get('source_type') or '').strip()[:60]
+    return f"[tier: {tier}{(' | receipt: ' + receipt) if receipt else ''}]"
+
+
 def retrieve_rag(query_text, intent, use_rag):
     # Logic for Humans: “Chip” — run smart_rag_query when allowed, attach a low-confidence warning if matches are weak, and return both a text block and structured hits for the UI/arbitration.
     """Chip: RAG Search (slowest - benefits most from parallelization)"""
@@ -1915,12 +1940,21 @@ def retrieve_rag(query_text, intent, use_rag):
                     "do not invent API endpoints, paths, or system facts not present in the snippets.\n"
                 )
             rag_context = warn + "\n[CTX:KNOWLEDGE BASE]\n"
+            rag_context += (
+                "Each item is tagged with its attestation tier — how well-backed the claim is. "
+                "Weight higher tiers more heavily and prefer them when items conflict; cite the "
+                "receipt when you rely on a confirmed/stable claim; never present a speculative or "
+                "unlabeled item as settled fact.\n"
+                "Tiers: confirmed/stable > asserted/contested > speculative > unlabeled (no receipt).\n\n"
+            )
             rag_full_results = []  # Full results for coherence arbiter
-            
+            metas0 = (results.get('metadatas') and results['metadatas'][0]) or []
+
             for i, doc in enumerate(results['documents'][0][:3]):
                 doc_text = doc if isinstance(doc, str) else (str(doc) if doc is not None else "")
                 preview = (doc_text[:1000] + "...") if len(doc_text) > 1000 else doc_text
-                rag_context += f"{i+1}. {preview}\n\n"
+                meta_i = metas0[i] if i < len(metas0) and metas0[i] else {}
+                rag_context += f"{i+1}. {_tier_tag(meta_i)} {preview}\n\n"
                 # Build full result object for coherence arbiter
                 try:
                     embedding = None
