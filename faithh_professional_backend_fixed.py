@@ -6376,29 +6376,37 @@ if CONSTITUTION_ENABLED and constitution_service:
             return jsonify({"success": False, "error": f"Failed to get constitution summary: {str(e)}"}), 500
     
     @app.route('/api/constitution/evaluate', methods=['POST'])
-    def evaluate_constitutional_compliance():
-        """Evaluate action against constitution"""
+    def observe_constitutional_action():
+        """Observe an action against the constitution (Civic Tome shape).
+
+        The framework OBSERVES and records which principles an action engages; it does not rule
+        compliance and returns no verdict. Consequence decisions are delegated to an
+        external/human process. (Route path kept for back-compat.)
+        """
         try:
             data = request.get_json()
             action = data.get("action", {})
             domain = data.get("domain", "general")
-            
-            compliance_report = constitution_service.evaluate_compliance(action, domain)
-            
+
+            observation = constitution_service.observe_action(action, domain)
+
             return jsonify({
                 "success": True,
-                "compliance_report": {
-                    "action_id": compliance_report.action_id,
-                    "compliance_level": compliance_report.compliance_level.value,
-                    "violated_principles": compliance_report.violated_principles,
-                    "partial_compliance": compliance_report.partial_compliance,
-                    "compliance_score": compliance_report.compliance_score,
-                    "recommendations": compliance_report.recommendations,
-                    "evaluation_timestamp": compliance_report.evaluation_timestamp.isoformat()
+                "observation": {
+                    "action_id": observation.action_id,
+                    "condition": observation.condition,
+                    "measures": observation.measures,
+                    "context": observation.context,
+                    "scope": observation.scope,
+                    "provenance": observation.provenance,
+                    "resolution": observation.resolution,
+                    "engaged_principles": observation.engaged_principles,
+                    "claim_label": observation.claim_label.value,
+                    "observation_timestamp": observation.observation_timestamp.isoformat()
                 }
             })
         except Exception as e:
-            return jsonify({"success": False, "error": f"Failed to evaluate compliance: {str(e)}"}), 500
+            return jsonify({"success": False, "error": f"Failed to record observation: {str(e)}"}), 500
     
     @app.route('/api/constitution/principles', methods=['GET'])
     def get_constitution_principles():
