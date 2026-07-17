@@ -24,7 +24,8 @@ class PrincipleType(Enum):
     DOMAIN = "domain"        # Domain-specific adaptations
 
 class ComplianceLevel(Enum):
-    """Levels of constitutional compliance"""
+    """DEPRECATED verdict tiers — retained only for back-compat with legacy callers.
+    The framework no longer rules compliance; it observes (see ClaimLabel + Observation)."""
     FULL = "full"           # Fully compliant
     PARTIAL = "partial"     # Partially compliant with issues
     VIOLATION = "violation" # Clear violation of principles
@@ -58,6 +59,29 @@ class ComplianceReport:
     compliance_score: float = 0.0
     recommendations: List[str] = field(default_factory=list)
     evaluation_timestamp: datetime = field(default_factory=datetime.now)
+
+class ClaimLabel(Enum):
+    """Confidence in an OBSERVATION (Civic Tome), never a verdict on the observed party.
+    stable = well-corroborated · contested = under active debate · speculative = not for policy."""
+    STABLE = "stable"
+    CONTESTED = "contested"
+    SPECULATIVE = "speculative"
+
+@dataclass
+class Observation:
+    """A Civic Tome observation: the framework OBSERVES and RECORDS; it does not rule.
+    There is deliberately NO fault/verdict field — consequence decisions are delegated to an
+    external/human process (harm_and_repair.md, observability_layer.md, civic_tome.md)."""
+    action_id: str
+    condition: str                                           # what happened, in words — not a judgment
+    measures: Dict[str, Any] = field(default_factory=dict)   # counts/quantities serving the condition
+    context: Dict[str, Any] = field(default_factory=dict)    # circumstances / the "why"
+    scope: str = "individual"                                # individual (consented) / community / population
+    provenance: Dict[str, Any] = field(default_factory=dict) # who / when / source — the receipt
+    resolution: str = ""                                     # how it was delegated/routed — never a verdict
+    engaged_principles: List[str] = field(default_factory=list)  # which principles the action touches
+    claim_label: ClaimLabel = ClaimLabel.CONTESTED
+    observation_timestamp: datetime = field(default_factory=datetime.now)
 
 @dataclass
 class HumanRightsSource:
@@ -614,155 +638,64 @@ class ConstellaConstitution:
         
         return filtered_principles
     
-    def evaluate_compliance(self, action: Dict[str, Any], domain: str) -> ComplianceReport:
-        """Evaluate action compliance with constitution"""
-        applicable_principles = self.get_applicable_principles(domain, action.get("context", {}))
-        
-        violated_principles = []
-        partial_compliance = []
-        total_weight = 0.0
-        compliance_score = 0.0
-        
-        action_text = action.get("description", "")
-        action_context = action.get("context", {})
-        
-        for principle in applicable_principles:
-            total_weight += principle.weight
-            
-            # Simple keyword-based compliance check (can be enhanced with NLP)
-            compliance_result = self.check_principle_compliance(action_text, principle, action_context)
-            
-            if compliance_result["level"] == ComplianceLevel.VIOLATION:
-                violated_principles.append(principle.id)
-            elif compliance_result["level"] == ComplianceLevel.PARTIAL:
-                partial_compliance.append(principle.id)
-                compliance_score += principle.weight * compliance_result["score"]
-            else:  # FULL compliance
-                compliance_score += principle.weight
-        
-        # Calculate overall compliance score
-        if total_weight > 0:
-            compliance_score = compliance_score / total_weight
-        else:
-            compliance_score = 0.0
-        
-        # Determine overall compliance level
-        if len(violated_principles) > 0:
-            compliance_level = ComplianceLevel.VIOLATION
-        elif len(partial_compliance) > 0:
-            compliance_level = ComplianceLevel.PARTIAL
-        else:
-            compliance_level = ComplianceLevel.FULL
-        
-        # Generate recommendations
-        recommendations = self.generate_recommendations(violated_principles, partial_compliance, domain)
-        
-        return ComplianceReport(
+    def observe_action(self, action: Dict[str, Any], domain: str) -> Observation:
+        """Observe an action against the constitution in the Civic Tome shape.
+
+        The framework records WHICH principles an action *engages* — it does not rule whether
+        the action is compliant, and there is no fault/verdict. Any consequence is delegated to
+        an external/human process. This replaces the old keyword-policing verdict path.
+        """
+        applicable = self.get_applicable_principles(domain, action.get("context", {}))
+        action_text = action.get("description", "") or ""
+        text_l = action_text.lower()
+
+        # Neutral relevance only: which principles does this action *touch*? (No good/bad valence.)
+        engaged = []
+        for p in applicable:
+            terms = [str(t).lower() for t in (p.keywords or []) if t]
+            if any(t in text_l for t in terms):
+                engaged.append(p.id)
+
+        scope = action.get("scope") or (action.get("context", {}) or {}).get("scope") or "individual"
+        return Observation(
             action_id=action.get("id", "unknown"),
-            action_description=action_text,
-            domain=domain,
-            compliance_level=compliance_level,
-            violated_principles=violated_principles,
-            partial_compliance=partial_compliance,
-            compliance_score=compliance_score,
-            recommendations=recommendations,
-            evaluation_timestamp=datetime.now()
+            condition=action_text or "(no description provided)",
+            measures={
+                "principles_considered": len(applicable),
+                "principles_engaged": len(engaged),
+            },
+            context={"domain": domain, **(action.get("context", {}) or {})},
+            scope=scope,
+            provenance={
+                "recorded_by": "constella_constitution.observe_action",
+                "recorded_at": datetime.now().isoformat(),
+                "source": action.get("source", "faithh_backend"),
+            },
+            resolution=("recorded for external/human review via the Civic Tome process; "
+                        "the framework observes and does not rule — no automated verdict issued"),
+            engaged_principles=engaged,
+            claim_label=ClaimLabel.CONTESTED,
         )
-    
-    def check_principle_compliance(self, action_text: str, principle: ConstitutionalPrinciple, context: Dict[str, Any]) -> Dict[str, Any]:
-        """Check compliance with a specific principle"""
-        # Simple keyword-based check (can be enhanced with sophisticated NLP)
-        action_lower = action_text.lower()
-        
-        # Check for potential violations
-        violation_keywords = self.get_violation_keywords(principle)
-        compliance_keywords = self.get_compliance_keywords(principle)
-        
-        violation_score = 0.0
-        compliance_score = 0.0
-        
-        # Count violation keywords
-        for keyword in violation_keywords:
-            if keyword in action_lower:
-                violation_score += 1.0
-        
-        # Count compliance keywords
-        for keyword in compliance_keywords:
-            if keyword in action_lower:
-                compliance_score += 1.0
-        
-        # Determine compliance level
-        if violation_score > compliance_score:
-            level = ComplianceLevel.VIOLATION
-            score = 0.0
-        elif violation_score > 0:
-            level = ComplianceLevel.PARTIAL
-            score = compliance_score / (compliance_score + violation_score)
-        else:
-            level = ComplianceLevel.FULL
-            score = 1.0
-        
-        return {
-            "level": level,
-            "score": score,
-            "violation_keywords_found": violation_score,
-            "compliance_keywords_found": compliance_score
-        }
-    
-    def get_violation_keywords(self, principle: ConstitutionalPrinciple) -> List[str]:
-        """Get keywords that indicate potential violations"""
-        violation_patterns = {
-            "udhr_article_1": ["discriminate", "unequal", "inferior", "superior"],
-            "udhr_article_2": ["discriminate", "exclude", "bias", "prejudice"],
-            "udhr_article_3": ["kill", "harm", "imprison", "restrict"],
-            "udhr_article_12": ["spy", "surveil", "invade privacy", "expose"],
-            "udhr_article_19": ["censor", "suppress", "silence", "restrict speech"],
-            "udhr_article_27": ["hoard", "withhold", "exclude from science"],
-            "constella_transparency": ["hide", "obscure", "mislead", "deceive"],
-            "constella_ethical_innovation": ["exploit", "harm", "endanger", "unethical"]
-        }
-        
-        return violation_patterns.get(principle.id, [])
-    
-    def get_compliance_keywords(self, principle: ConstitutionalPrinciple) -> List[str]:
-        """Get keywords that indicate compliance"""
-        compliance_patterns = {
-            "udhr_article_1": ["equal", "fair", "respect", "dignity"],
-            "udhr_article_2": ["inclusive", "diverse", "non-discriminatory"],
-            "udhr_article_3": ["protect", "safeguard", "secure", "liberty"],
-            "udhr_article_12": ["privacy", "confidential", "secure data"],
-            "udhr_article_19": ["express", "communicate", "share", "inform"],
-            "udhr_article_27": ["share knowledge", "collaborate", "advance science"],
-            "constella_transparency": ["explain", "clarify", "disclose", "open"],
-            "constella_ethical_innovation": ["ethical", "responsible", "beneficial", "safe"]
-        }
-        
-        return compliance_patterns.get(principle.id, principle.keywords)
-    
-    def generate_recommendations(self, violations: List[str], partial: List[str], domain: str) -> List[str]:
-        """Generate recommendations based on compliance issues"""
-        recommendations = []
-        
-        for principle_id in violations:
-            principle = self.get_principle_by_id(principle_id)
-            if principle:
-                recommendations.append(f"Address violation of: {principle.title}. Review action to ensure compliance with {principle.description[:100]}...")
-        
-        for principle_id in partial:
-            principle = self.get_principle_by_id(principle_id)
-            if principle:
-                recommendations.append(f"Improve compliance with: {principle.title}. Consider ways to better align with {principle.description[:100]}...")
-        
-        # Add domain-specific recommendations
-        if domain == "genomic_research":
-            recommendations.append("Ensure all genomic research follows ethical guidelines and protects participant privacy.")
-        elif domain == "civic_engagement":
-            recommendations.append("Promote democratic participation and community building in all civic interactions.")
-        elif domain == "personal_assistance":
-            recommendations.append("Maintain transparency and user privacy in all personal assistance interactions.")
-        
-        return recommendations
-    
+
+    def evaluate_compliance(self, action: Dict[str, Any], domain: str) -> ComplianceReport:
+        """DEPRECATED — retained only for back-compat with callers that expect a ComplianceReport
+        (e.g. focus_management.check_constitutional_compliance). The framework no longer polices:
+        this delegates to observe_action and ALWAYS reports compliance_level=UNKNOWN with no
+        violations. Prefer observe_action(), which returns the Civic Tome Observation shape.
+        """
+        obs = self.observe_action(action, domain)
+        return ComplianceReport(
+            action_id=obs.action_id,
+            action_description=obs.condition,
+            domain=domain,
+            compliance_level=ComplianceLevel.UNKNOWN,   # the framework does not rule
+            violated_principles=[],
+            partial_compliance=[],
+            compliance_score=0.0,
+            recommendations=[obs.resolution],
+            evaluation_timestamp=obs.observation_timestamp,
+        )
+
     def get_principle_by_id(self, principle_id: str) -> Optional[ConstitutionalPrinciple]:
         """Get principle by ID"""
         all_principles = self.universal_principles + self.modern_rights + self.civic_principles
