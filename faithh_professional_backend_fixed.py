@@ -467,6 +467,32 @@ if CONSTITUTION_ENABLED:
         print(f"⚠️ Constitution service initialization failed: {e}")
         CONSTITUTION_ENABLED = False
 
+# Node attestation (proof-of-life) — the SAME node-agnostic module the Lite node uses.
+# The power unit now self-attests: signed heartbeats carrying liveness + real work +
+# continuity (an append-only chain), offline, no central DB. Human proof-of-presence
+# (binding a unique person to the node) is a LATER layer — added when the phone-sized
+# model ships; see node_attestation.derive_key's PUF note for the seam.
+ATTESTOR = None
+ATTEST_ENABLED = False
+QUERIES_SERVED = 0  # real work this node did = chat queries actually answered
+
+def _note_query_served():
+    """Increment the power unit's real-work counter (fed into proof-of-life heartbeats)."""
+    global QUERIES_SERVED
+    QUERIES_SERVED += 1
+
+try:
+    import sys as _sys
+    _NA_DIR = str(Path(__file__).resolve().parent / "faithh-lite")
+    if _NA_DIR not in _sys.path:
+        _sys.path.insert(0, _NA_DIR)
+    from node_attestation import NodeAttestor, derive_key
+    ATTESTOR = NodeAttestor("faithh-power-unit", derive_key("faithh-power-unit"))
+    ATTEST_ENABLED = True
+    print("🫀 Node attestation initialized (power unit self-attests)")
+except Exception as e:
+    print(f"⚠️ Node attestation unavailable: {e}")
+
 # Initialize Focus Management (Phase 7)
 focus_service = None
 if FOCUS_ENABLED:
@@ -873,6 +899,9 @@ def _faithh_prometheus_after_request(response):
     faithh_http_request_duration_seconds.labels(request.method, handler).observe(elapsed)
     FAITHH_REQUEST_COUNT.labels(handler).inc()
     FAITHH_REQUEST_LATENCY.labels(handler).observe(elapsed)
+    # Proof-of-life: a successfully answered chat is this node's real work.
+    if handler == "chat" and getattr(response, "status_code", 500) == 200:
+        _note_query_served()
     return response
 
 
@@ -4773,6 +4802,26 @@ def enhanced_health():
         status_code = 503
 
     return jsonify(health_data), status_code
+
+@app.route('/api/attest', methods=['GET', 'POST'])
+def attest():
+    """Proof-of-life for the power unit. GET returns the node's attestation status; POST emits
+    + persists one signed heartbeat (liveness + real work + continuity chain). The same
+    node-agnostic layer the Lite node uses — one attestation discipline, many nodes."""
+    if not ATTEST_ENABLED or ATTESTOR is None:
+        return jsonify({"success": False, "error": "node attestation unavailable"}), 503
+    try:
+        if request.method == 'POST':
+            beat = ATTESTOR.beat({
+                "queries_served": QUERIES_SERVED,
+                "chroma_connected": bool(CHROMA_CONNECTED),
+                "ml_chips": len(ML_CHIPS),
+            })
+            return jsonify({"success": True, "emitted": beat, "status": ATTESTOR.status()})
+        return jsonify({"success": True, "status": ATTESTOR.status()})
+    except Exception as e:
+        return jsonify({"success": False, "error": f"attestation failed: {str(e)}"}), 500
+
 
 @app.route('/health')
 def health():
