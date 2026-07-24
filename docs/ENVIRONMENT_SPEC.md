@@ -10,7 +10,7 @@ _Last refreshed: 2026-04-08. Counts are live samples from the configured Chroma 
 | `alife_lineage` | ALIFE experiment / lineage payloads | 339,900 |
 | `governance_corpus` | Governance / civic corpus slice | 18,768 |
 
-Connection: `CHROMA_HOST` / `CHROMA_PORT` (see `.env.example`). Default in many setups: `192.158.1.243:8000`.
+Connection: `CHROMA_HOST` / `CHROMA_PORT` (see `.env.example`). Default in many setups: `servicebox.taileb8c60.ts.net:8000`.
 
 ## Model routing (`auto` / `get_optimal_model_for_query`)
 
@@ -44,7 +44,7 @@ Connection: `CHROMA_HOST` / `CHROMA_PORT` (see `.env.example`). Default in many 
 
 ## Gen8 (LAN)
 
-- **LAN IP:** `192.158.1.243` (see `CONTEXT.md`, `docs/guides/QUICKSTART.md`).
+- **LAN IP:** `servicebox.taileb8c60.ts.net` (see `CONTEXT.md`, `docs/guides/QUICKSTART.md`).
 - **Services (from `docs/data/gen8-docker-compose.yml`):** ChromaDB `:8000`, Pi-hole DNS `:53`, Uptime Kuma `:3001`. Host may run additional stacks (SSH, Gitea, etc.) documented in `docs/guides/SSH_AND_NETWORKING.md` and `SYSTEMS_MAP.md`.
 
 ## Request performance log

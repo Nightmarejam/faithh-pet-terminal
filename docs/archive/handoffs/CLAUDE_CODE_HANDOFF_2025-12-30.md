@@ -11,7 +11,7 @@
 | Service | Status | Location |
 |---------|--------|----------|
 | FAITHH Backend | ✅ **RUNNING** | localhost:5557 (Mac) |
-| ChromaDB | ✅ **RUNNING** | 192.158.1.243:8000 (Gen 8) |
+| ChromaDB | ✅ **RUNNING** | servicebox.taileb8c60.ts.net:8000 (Gen 8) |
 | FAITHH UI | ❌ **NOT RUNNING** | Needs to be started |
 | Windows Desktop | ❌ **OFFLINE** | 8+ days, contains 93k ChromaDB |
 
@@ -21,10 +21,10 @@
 curl -s http://localhost:5557/health | jq .
 
 # ChromaDB heartbeat  
-curl -s http://192.158.1.243:8000/api/v2/heartbeat
+curl -s http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 
 # Check ChromaDB document count
-curl -s "http://192.158.1.243:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/count"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/count"
 # Expected: 27547
 ```
 
@@ -132,7 +132,7 @@ python scripts/index_docs_to_gen8.py
 - **Name**: faithh_knowledge_base
 - **UUID**: 71e13a01-cbb6-48ba-a126-2a16320d40c0
 - **Embedding**: BGE-base-en-v1.5 (768 dimensions)
-- **Host**: 192.158.1.243:8000
+- **Host**: servicebox.taileb8c60.ts.net:8000
 
 ### What's NOT Indexed (Waiting for Windows)
 - Pre-October 2025 conversations (~18 months of history)
@@ -153,10 +153,10 @@ python faithh_professional_backend_fixed.py
 ### If ChromaDB Unreachable
 ```bash
 # Check Gen 8 is online
-ping -c 1 192.158.1.243
+ping -c 1 servicebox.taileb8c60.ts.net
 
 # SSH to Gen 8 and check Docker
-ssh user@192.158.1.243
+ssh user@servicebox.taileb8c60.ts.net
 docker ps | grep chroma
 ```
 
@@ -183,7 +183,7 @@ ollama list  # Should show llama3.2:3b or llama3.1:8b
 ### Network
 ```
 Mac:        100.122.56.106 (Tailscale)
-Gen 8:      192.158.1.243 (ChromaDB, Pi-hole)
+Gen 8:      servicebox.taileb8c60.ts.net (ChromaDB, Pi-hole)
 NAS:        100.120.68.7 (Storage)
 Windows:    100.115.225.100 (OFFLINE)
 ```

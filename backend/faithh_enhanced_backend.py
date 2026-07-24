@@ -18,7 +18,7 @@ CORS(app)  # Enable CORS for browser access
 
 # Configuration
 OLLAMA_HOST = "http://localhost:11434"
-CHROMA_HOST = os.environ.get("CHROMA_HOST") or os.environ.get("CHROMADB_HOST", "192.158.1.10")
+CHROMA_HOST = os.environ.get("CHROMA_HOST") or os.environ.get("CHROMADB_HOST", "servicebox.taileb8c60.ts.net")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT") or os.environ.get("CHROMADB_PORT", "8000"))
 CHROMA_COLLECTION = os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base")
 

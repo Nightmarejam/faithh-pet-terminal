@@ -1,8 +1,8 @@
 # Plex Media Server Setup
 
-**Server:** Gen8 (192.158.1.243)  
+**Server:** Gen8 (servicebox.taileb8c60.ts.net)  
 **Port:** 32400  
-**Web UI:** http://192.158.1.243:32400 (Gen8 LAN; use Plex remote access or VPN when off-LAN)  
+**Web UI:** http://servicebox.taileb8c60.ts.net:32400 (Gen8 LAN; use Plex remote access or VPN when off-LAN)  
 **Plex Account:** Required — Jonathan has lifetime Plex Pass  
 **Started:** 2026-03-15
 
@@ -16,7 +16,7 @@
 
 ## First-Time Library Setup
 
-After Plex starts, open http://192.158.1.243:32400 in browser:
+After Plex starts, open http://servicebox.taileb8c60.ts.net:32400 in browser:
 1. Sign in with Plex account
 2. Add Library → Movies → /media/movies
 3. Add Library → TV Shows → /media/tv
@@ -27,13 +27,13 @@ After Plex starts, open http://192.158.1.243:32400 in browser:
 The NAS must be mounted on Gen8 for Plex to see media files:
 
 ```bash
-ssh jonat@192.158.1.243
+ssh jonat@servicebox.taileb8c60.ts.net
 sudo apt-get install -y cifs-utils
 sudo mkdir -p /mnt/nas/media
-sudo mount -t cifs //192.158.1.65/AI/media /mnt/nas/media -o guest,uid=1000,gid=1000,file_mode=0644,dir_mode=0755
+sudo mount -t cifs //nas.taileb8c60.ts.net/AI/media /mnt/nas/media -o guest,uid=1000,gid=1000,file_mode=0644,dir_mode=0755
 
 # Make persistent across reboots
-echo "//192.158.1.65/AI/media /mnt/nas/media cifs guest,uid=1000,gid=1000,file_mode=0644,dir_mode=0755,iocharset=utf8,_netdev 0 0" | sudo tee -a /etc/fstab
+echo "//nas.taileb8c60.ts.net/AI/media /mnt/nas/media cifs guest,uid=1000,gid=1000,file_mode=0644,dir_mode=0755,iocharset=utf8,_netdev 0 0" | sudo tee -a /etc/fstab
 ```
 
 ## Client Apps (all free with Plex Pass)
@@ -65,7 +65,7 @@ Separate app for music library:
 
 ```bash
 # SSH into Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 
 # Check status
 docker ps | grep plex
@@ -80,11 +80,11 @@ cd ~/services/plex && docker-compose pull && docker-compose up -d
 
 ## Remote access
 
-Plex remote access works via Plex’s own relay / account features. The LAN URL above only works from networks that can reach `192.158.1.243` (same LAN, VPN, or a routed path from WSL — see `docs/security/UDM_SSH_routing_20260402.md` if pings fail from WSL).
+Plex remote access works via Plex’s own relay / account features. The LAN URL above only works from networks that can reach `servicebox.taileb8c60.ts.net` (same LAN, VPN, or a routed path from WSL — see `docs/security/UDM_SSH_routing_20260402.md` if pings fail from WSL).
 
 ## Uptime Kuma Monitoring
 
-Add monitor at http://192.158.1.243:3001:
+Add monitor at http://servicebox.taileb8c60.ts.net:3001:
 - Type: HTTP(s)
 - URL: http://localhost:32400/identity
 - Name: Plex

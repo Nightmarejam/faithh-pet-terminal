@@ -10,7 +10,7 @@
     },
     "chromadb": {
       "status": "healthy",
-      "host": "192.158.1.10",
+      "host": "servicebox.taileb8c60.ts.net",
       "port": 8000
     },
     "ollama": {

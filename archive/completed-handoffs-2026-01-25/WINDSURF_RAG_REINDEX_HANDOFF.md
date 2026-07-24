@@ -16,10 +16,10 @@ Re-index all AI conversations from fresh exports to the Gen8 ChromaDB server. Th
 
 ```bash
 # Test from WSL
-curl -s "http://192.158.1.243:8000/api/v2/heartbeat"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat"
 
 # If "Host not allowed" error, check ChromaDB config on Gen8:
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 cat ~/services/chromadb/docker-compose.yml
 docker logs chromadb | tail -20
 ```
@@ -52,7 +52,7 @@ python index_chromadb_direct.py
 ```
 
 **Expected:**
-- Connect to `http://192.158.1.243:8000`
+- Connect to `http://servicebox.taileb8c60.ts.net:8000`
 - Collection: `faithh_knowledge_base`
 - Should index 300+ documents
 
@@ -62,12 +62,12 @@ python index_chromadb_direct.py
 
 ```bash
 # Check document count
-curl -s "http://192.158.1.243:8000/api/v1/collections/faithh_knowledge_base" | jq '.count'
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base" | jq '.count'
 
 # Or via Python
 python -c "
 import chromadb
-client = chromadb.HttpClient(host='http://192.158.1.243:8000')
+client = chromadb.HttpClient(host='http://servicebox.taileb8c60.ts.net:8000')
 col = client.get_collection('faithh_knowledge_base')
 print(f'Documents: {col.count()}')
 "
@@ -92,8 +92,8 @@ print(f'Documents: {col.count()}')
 | Property | Value |
 |----------|-------|
 | Hostname | servicebox |
-| LAN IP | 192.158.1.243 |
-| Tailscale IP | 192.158.1.243 |
+| LAN IP | servicebox.taileb8c60.ts.net |
+| Tailscale IP | servicebox.taileb8c60.ts.net |
 | ChromaDB Port | 8000 |
 | SSH User | jonat |
 | SSH Key | `~/.ssh/servicebox_ed25519` |
@@ -105,7 +105,7 @@ print(f'Documents: {col.count()}')
 ### Issue: "Host not allowed"
 ```bash
 # SSH to Gen8 and check ChromaDB config
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 cd ~/services/chromadb
 
 # Add CORS settings to docker-compose.yml:
@@ -136,7 +136,7 @@ The indexing script clears existing documents before adding new ones. If you wan
 
 ## Success Criteria
 
-1. ✅ Gen8 ChromaDB accessible at `192.158.1.243:8000`
+1. ✅ Gen8 ChromaDB accessible at `servicebox.taileb8c60.ts.net:8000`
 2. ✅ Extraction script runs without errors
 3. ✅ 300+ documents indexed (209 ChatGPT + 93 Claude)
 4. ✅ Test query returns relevant results
@@ -148,9 +148,9 @@ The indexing script clears existing documents before adding new ones. If you wan
 
 Update FAITHH backend `.env` if needed:
 ```bash
-CHROMADB_HOST=192.158.1.243
+CHROMADB_HOST=servicebox.taileb8c60.ts.net
 # or
-CHROMA_URL=http://192.158.1.243:8000
+CHROMA_URL=http://servicebox.taileb8c60.ts.net:8000
 ```
 
 Then restart backend:

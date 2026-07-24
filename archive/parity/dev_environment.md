@@ -10,7 +10,7 @@
 ```yaml
 Role: Primary workstation, FAITHH Full, AI inference
 Tailscale IP: 100.115.225.100
-Local IP: 192.158.1.232
+Local IP: 192.168.1.232
 
 CPU: AMD Ryzen 9 3900X (12C/24T, 3.8GHz base, 4.65GHz boost)
 RAM: 64GB DDR4-3200 (G.Skill TridentZ Neo 2x32GB)
@@ -34,7 +34,7 @@ Services Running:
 ```yaml
 Role: Mobile mastering, FAITHH Lite, Constella development
 Tailscale IP: 100.122.56.106
-Local IP: 192.158.1.132
+Local IP: 192.168.1.132
 
 Chip: Apple M1 Pro (8-core CPU, 14-core GPU)
 RAM: 16GB unified
@@ -63,7 +63,7 @@ Access: Can query Windows FAITHH API at 100.115.225.100:5557
 ```yaml
 Role: File storage (NOT compute)
 Tailscale IP: 100.120.68.7
-Local IP: 192.158.1.65
+Local IP: nas.taileb8c60.ts.net
 
 CPU: Realtek RTD1296 quad-core (ARM, weak)
 RAM: 512MB (too limited for Docker/compute)
@@ -155,7 +155,7 @@ Collaboration: JackTrip/SonoBus for audio over network
 │  └──────────────┘         └──────────────┘             │
 └─────────────────────────────────────────────────────────┘
 
-Local Network: 192.158.1.x (intentional obfuscation)
+Local Network: 192.168.1.x (intentional obfuscation)
 ```
 
 ---

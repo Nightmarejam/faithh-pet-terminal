@@ -10,7 +10,7 @@ echo "🚀 Gen8 Server Full Stack Setup"
 echo "================================"
 
 # Configuration
-GEN8_IP="192.158.1.243"
+GEN8_IP="servicebox.taileb8c60.ts.net"
 SERVICES_DIR="/home/jonat/services"
 DOCKER_REGISTRY_DIR="/home/jonat/services/docker-registry"
 MONITORING_DIR="/home/jonat/services/monitoring"

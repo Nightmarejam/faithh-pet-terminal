@@ -5,7 +5,7 @@
 
 set -e
 
-GEN8_IP="192.158.1.243"
+GEN8_IP="servicebox.taileb8c60.ts.net"
 VAULTWARDEN_DIR="/home/jonat/services/vaultwarden"
 
 echo "🔐 Setting up Vaultwarden on Gen8"
@@ -29,7 +29,7 @@ services:
       - WEBSOCKET_ENABLED=true
       - SIGNUPS_ALLOWED=false
       - ADMIN_TOKEN=vaultwarden_admin_token_change_me
-      - DOMAIN=http://192.158.1.243:8080
+      - DOMAIN=http://servicebox.taileb8c60.ts.net:8080
     volumes:
       - ./data:/data
     networks:

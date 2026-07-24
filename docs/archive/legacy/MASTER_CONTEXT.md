@@ -29,8 +29,8 @@ This is Jonathan's unified AI development and personal project management system
 ### Gen8 Server (servicebox)
 - **Hostname:** servicebox
 - **IP Addresses:**
-  - LAN: 192.158.1.243
-  - Tailscale: 192.158.1.243
+  - LAN: servicebox.taileb8c60.ts.net
+  - Tailscale: servicebox.taileb8c60.ts.net
 - **OS:** Ubuntu 22.04 LTS
 - **Docker:** v28.2.2
 - **User:** jonat
@@ -41,7 +41,7 @@ This is Jonathan's unified AI development and personal project management system
 **ChromaDB** (Production - deployed 2025-12-29, reindexed 2026-01-25)
 - Location: `~/services/chromadb/`
 - Port: 8000
-- API: http://192.158.1.243:8000
+- API: http://servicebox.taileb8c60.ts.net:8000
 - Collection: `faithh_knowledge_base`
 - Documents: 32,499 chunks
 - Embedding: all-MiniLM-L6-v2 (384 dimensions)
@@ -49,41 +49,41 @@ This is Jonathan's unified AI development and personal project management system
 
 **Grafana** (Production - deployed 2026-01-20)
 - Port: 3000
-- URL: http://192.158.1.243:3000
+- URL: http://servicebox.taileb8c60.ts.net:3000
 - Credentials: admin/Grafana2026!
 - Status: ✅ Running
 
 **Gitea** (Production - deployed 2026-01-20)
 - HTTP Port: 3002, SSH Port: 2222
-- URL: http://192.158.1.243:3002
+- URL: http://servicebox.taileb8c60.ts.net:3002
 - Status: ✅ Running
 
 **Vaultwarden** (Production - deployed 2026-01-20)
 - Port: 8080
-- URL: http://192.158.1.243:8080
+- URL: http://servicebox.taileb8c60.ts.net:8080
 - Status: ✅ Running
 
 **Pi-hole** (Production - deployed 2025-12-20)
 - Location: `~/services/pihole/`
 - DNS: Port 53 (UDP/TCP)
-- Web UI: http://192.158.1.243/admin
+- Web UI: http://servicebox.taileb8c60.ts.net/admin
 - Credentials: admin/PiHole2026!
 - Upstream DNS: Cloudflare (1.1.1.1, 8.8.8.8)
 - Status: ✅ Running
 
 **Prometheus** (Production - deployed 2026-01-20)
 - Port: 9090
-- URL: http://192.158.1.243:9090
+- URL: http://servicebox.taileb8c60.ts.net:9090
 - Status: ✅ Running
 
 **Docker Registry** (Production - deployed 2026-01-20)
 - Registry Port: 5000, UI Port: 5001
-- URL: http://192.158.1.243:5001
+- URL: http://servicebox.taileb8c60.ts.net:5001
 - Status: ✅ Running
 
 **Uptime Kuma** (Production - deployed 2026-01-20)
 - Port: 3001
-- URL: http://192.158.1.243:3001
+- URL: http://servicebox.taileb8c60.ts.net:3001
 - Status: ✅ Running
 
 **GitLab Runner** (Production - deployed 2026-01-20)
@@ -105,7 +105,7 @@ This is Jonathan's unified AI development and personal project management system
 - **ChatGPT Chunks:** 28,255
 - **Claude Chunks:** 4,244
 - **Embedding Model:** all-MiniLM-L6-v2 (384 dimensions)
-- **Database:** Gen8 ChromaDB (http://192.158.1.243:8000)
+- **Database:** Gen8 ChromaDB (http://servicebox.taileb8c60.ts.net:8000)
 - **Status:** ✅ Properly chunked for semantic search, fully indexed
 
 ### Recent Changes
@@ -120,7 +120,7 @@ This is Jonathan's unified AI development and personal project management system
 ### Maintenance Commands
 ```bash
 # Check ChromaDB health
-curl -s "http://192.158.1.243:8000/api/v2/heartbeat"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat"
 
 # Update project_states.json automatically
 python3 scripts/maintenance/update_project_states.py --write
@@ -194,7 +194,7 @@ python faithh_professional_backend_fixed.py
 
 ### SSH to Gen8
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 ### Check System Status
@@ -203,7 +203,7 @@ ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
 curl -s http://localhost:5557/health | jq
 
 # ChromaDB health  
-curl -s "http://192.158.1.243:8000/api/v2/heartbeat"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat"
 
 # Update project states
 python3 scripts/maintenance/update_project_states.py --diff
@@ -243,7 +243,7 @@ All session logs in `docs/session-reports/` - check latest for current state.
 GROQ_API_KEY=<key>
 GROQ_MODEL=llama-3.3-70b-versatile
 GROQ_BASE_URL=https://api.groq.com/openai/v1
-CHROMA_URL=http://192.158.1.243:8000
+CHROMA_URL=http://servicebox.taileb8c60.ts.net:8000
 OLLAMA_READ_TIMEOUT=180
 ```
 

@@ -19,7 +19,7 @@ Two experiments complete and committed:
 - Natural carrying capacity: ~55 agents (1000 tick run) to ~324 (10,000 tick run)
 - Stable avg energy: ~180-210
 - FAITHH observer logging 37 events per 1000 ticks to `alife_lineage` collection
-- ChromaDB at 192.158.1.243:8000 confirmed live with natural language docs
+- ChromaDB at servicebox.taileb8c60.ts.net:8000 confirmed live with natural language docs
 - All 50 initial agents seeded with ACT_REPRODUCE (A0) and ACT_CONSUME (A1)
 
 ### One Thing To Watch
@@ -173,7 +173,7 @@ Gen  20:  Shield in 71% of population  ← selection working
 ## Architecture Reminder
 
 ```
-Gen8 (servicebox, 192.158.1.243)
+Gen8 (servicebox, servicebox.taileb8c60.ts.net)
   └── Python simulation — exp1_pressure.py
   └── ChromaDB — alife_lineage collection
 

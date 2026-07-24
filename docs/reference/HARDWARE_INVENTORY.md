@@ -8,7 +8,7 @@
 ## 📍 V1: Current State (Ground Truth)
 
 ### Windows Desktop - Primary Workstation
-**Location:** Home office, 192.158.1.232 (local), 100.115.225.100 (Tailscale)  
+**Location:** Home office, 192.168.1.232 (local), 100.115.225.100 (Tailscale)  
 **Primary Use:** Audio production, AI development, FAITHH backend, streaming
 
 #### CPU
@@ -116,7 +116,7 @@ External Storage (D:):
   Status: ✅ Backup ready
 
 Network Storage:
-  - Synology DS220J NAS (192.158.1.65)
+  - Synology DS220J NAS (nas.taileb8c60.ts.net)
   - Multiple 12.6TB volumes mapped
   - Used for: Project backups, audio archives
 ```
@@ -169,7 +169,7 @@ Status: ✅ Excellent - Plenty of headroom
 Monitor: ASUS ROG PG278QR (27", 2560x1440, 165Hz, 2018)
 Audio Interfaces: [Document from audio workflow]
 iLok: Connected (for audio software licensing)
-Network: Tailscale VPN + local 192.158.1.x
+Network: Tailscale VPN + local 192.168.1.x
 Bluetooth: Micro USB dongle
 USB Hubs: Multiple (ASMedia, Generic)
 Storage Devices: WD external drives connected
@@ -178,7 +178,7 @@ Storage Devices: WD external drives connected
 ---
 
 ### MacBook Pro M1 - Mobile Workstation
-**Location:** Mobile, 192.158.1.132 (local), 100.122.56.106 (Tailscale)  
+**Location:** Mobile, 192.168.1.132 (local), 100.122.56.106 (Tailscale)  
 **Primary Use:** Mastering sessions, Constella development, FAITHH Lite
 
 ```yaml
@@ -261,7 +261,7 @@ ROI: ⭐⭐⭐⭐ Very good - essential for Docker/ChromaDB
 ---
 
 ### Synology DS220J NAS
-**Location:** 192.158.1.65 (local), Tailscale-accessible  
+**Location:** nas.taileb8c60.ts.net (local), Tailscale-accessible  
 **Primary Use:** File storage, backups, project archives
 
 ```yaml
@@ -314,7 +314,7 @@ Status: Available for collaboration
 │                                                          │
 │  ┌──────────────────┐         ┌──────────────────┐     │
 │  │  Windows Desktop │◄───────►│  MacBook Pro M1  │     │
-│  │  192.158.1.232   │Tailscale│  192.158.1.132   │     │
+│  │  192.168.1.232   │Tailscale│  192.168.1.132   │     │
 │  │  100.115.225.100 │         │  100.122.56.106  │     │
 │  │                  │         │                  │     │
 │  │  FAITHH Full     │         │  FAITHH Lite     │     │
@@ -326,7 +326,7 @@ Status: Available for collaboration
 │  ┌──────────────────┐         ┌──────────────────┐     │
 │  │  Synology NAS    │         │  ProLiant Gen8   │     │
 │  │  DS220J          │         │  (Offline)       │     │
-│  │  192.158.1.65    │         │                  │     │
+│  │  nas.taileb8c60.ts.net    │         │                  │     │
 │  │                  │         │  Xeon E3-1220L   │     │
 │  │  File storage    │         │  4GB RAM         │     │
 │  │  Reachable ✅    │         │  Future server   │     │
@@ -343,13 +343,13 @@ Status: Available for collaboration
 │                                                          │
 └─────────────────────────────────────────────────────────┘
 
-Local Network: 192.158.1.x
+Local Network: 192.168.1.x
 (Intentionally non-standard for security obfuscation)
 ```
 
 ### Network Features
 - **Tailscale VPN:** All devices connected, accessible anywhere
-- **Security:** Non-standard local subnet (192.158.1.x)
+- **Security:** Non-standard local subnet (192.168.1.x)
 - **Phone Access:** Via Tailscale to Windows host (API endpoints)
 - **Remote Collaboration:** Partner Mac Mini accessible via Tailscale
 

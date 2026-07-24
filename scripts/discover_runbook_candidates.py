@@ -26,7 +26,7 @@ REPO_ROOT = SCRIPT_DIR.parent
 PROJECT_STATES_PATH = REPO_ROOT / "project_states.json"
 
 # Default Chroma target matches faithh_professional_backend_fixed.py (Gen8 LAN / canonical fallback).
-_DEFAULT_CHROMA_HOST = "192.158.1.10"
+_DEFAULT_CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 _DEFAULT_CHROMA_PORT = 8000
 DEFAULT_COLLECTION = "faithh_knowledge_base"
 

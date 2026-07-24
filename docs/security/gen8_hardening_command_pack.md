@@ -104,9 +104,9 @@ sudo ufw status verbose
 From a trusted client:
 
 ```bash
-nc -vz 192.158.1.243 22
-nc -vz 192.158.1.243 8000
-nc -vz 192.158.1.243 9090
+nc -vz servicebox.taileb8c60.ts.net 22
+nc -vz servicebox.taileb8c60.ts.net 8000
+nc -vz servicebox.taileb8c60.ts.net 9090
 ```
 
 Expected: only explicitly allowed paths respond.

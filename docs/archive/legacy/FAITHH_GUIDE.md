@@ -107,7 +107,7 @@ curl http://localhost:5557/api/status | jq
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────┐
-│              GEN8 SERVER (192.158.1.243)                │
+│              GEN8 SERVER (servicebox.taileb8c60.ts.net)                │
 │                                                          │
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
 │  │  ChromaDB    │  │   Grafana    │  │   Gitea      │  │
@@ -209,7 +209,7 @@ python extract_conversations.py
 python scripts/reindex_with_metadata.py
 
 # Verify
-curl -s http://192.158.1.243:8000/api/v1/collections/faithh_knowledge_base | jq '.count'
+curl -s http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base | jq '.count'
 ```
 
 ### Task 2: Update Project State
@@ -232,7 +232,7 @@ python3 scripts/maintenance/update_project_states.py --write # Apply
 curl http://localhost:5557/api/status | jq
 
 # ChromaDB heartbeat
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 ```
 
 ### Task 4: Add New LLM Provider
@@ -247,7 +247,7 @@ curl http://192.158.1.243:8000/api/v2/heartbeat
 
 ```bash
 # SSH to Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 
 # Navigate to service directory
 cd ~/services/<service-name>
@@ -363,10 +363,10 @@ tail -f backend.log
 **Solutions:**
 ```bash
 # Check ChromaDB connection
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 
 # Check collection exists
-curl http://192.158.1.243:8000/api/v1/collections/faithh_knowledge_base
+curl http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base
 
 # Verify document count
 curl -s http://localhost:5557/api/status | jq '.services.chromadb.documents'
@@ -382,7 +382,7 @@ python scripts/reindex_with_metadata.py
 **Solutions:**
 ```bash
 # SSH to Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 
 # Check Docker
 docker ps -a
@@ -470,7 +470,7 @@ OLLAMA_MODELS = {
 ```python
 import chromadb
 
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 collection = client.get_collection('faithh_knowledge_base')
 
 queries = ["topic 1", "topic 2", "topic 3"]
@@ -484,7 +484,7 @@ for i, query in enumerate(queries):
 
 ### Monitoring with Grafana
 
-1. Visit: http://192.158.1.243:3000
+1. Visit: http://servicebox.taileb8c60.ts.net:3000
 2. Login: admin / Grafana2026!
 3. Dashboards:
    - Gen8 System Overview
@@ -495,7 +495,7 @@ for i, query in enumerate(queries):
 
 ```bash
 # SSH to Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 
 # Backup
 cd ~/services/chromadb
@@ -503,7 +503,7 @@ tar -czf chromadb-backup-$(date +%Y%m%d).tar.gz data/
 
 # Copy to local
 scp -i ~/.ssh/servicebox_ed25519 \
-  jonat@192.158.1.243:~/services/chromadb/chromadb-backup-*.tar.gz \
+  jonat@servicebox.taileb8c60.ts.net:~/services/chromadb/chromadb-backup-*.tar.gz \
   ~/backups/
 ```
 
@@ -530,7 +530,7 @@ python scripts/reindex_with_metadata.py
 python3 scripts/maintenance/update_project_states.py --write
 
 # SSH to Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 ### Essential URLs
@@ -539,11 +539,11 @@ ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
 |---------|-----|
 | FAITHH UI | http://localhost:5557 |
 | Backend Status | http://localhost:5557/api/status |
-| ChromaDB | http://192.158.1.243:8000 |
-| Grafana | http://192.158.1.243:3000 |
-| Gitea | http://192.158.1.243:3002 |
-| Vaultwarden | http://192.158.1.243:8080 |
-| Pi-hole | http://192.158.1.243/admin |
+| ChromaDB | http://servicebox.taileb8c60.ts.net:8000 |
+| Grafana | http://servicebox.taileb8c60.ts.net:3000 |
+| Gitea | http://servicebox.taileb8c60.ts.net:3002 |
+| Vaultwarden | http://servicebox.taileb8c60.ts.net:8080 |
+| Pi-hole | http://servicebox.taileb8c60.ts.net/admin |
 
 ### Key Metrics
 

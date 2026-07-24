@@ -5,7 +5,7 @@
 
 set -e
 
-GEN8_IP="192.158.1.243"
+GEN8_IP="servicebox.taileb8c60.ts.net"
 PIHOLE_DIR="/home/jonat/services/pihole"
 
 echo "🌐 Setting up Pi-hole on Gen8"

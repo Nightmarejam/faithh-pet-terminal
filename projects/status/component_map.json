@@ -488,7 +488,7 @@
         "registry-ui",
         "uptime-kuma",
         "vaultwarden",
-        "ChromaDB consumer target Gen8 LAN 192.158.1.243:8000 (override via CHROMA_HOST; Tailscale for mesh-only)"
+        "ChromaDB consumer target Gen8 LAN servicebox.taileb8c60.ts.net:8000 (override via CHROMA_HOST; Tailscale for mesh-only)"
       ],
       "depends_on": [
         "nas_storage"

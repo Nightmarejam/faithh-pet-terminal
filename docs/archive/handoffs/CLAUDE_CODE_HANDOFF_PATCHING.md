@@ -83,7 +83,7 @@ pip install semantic-router
 | Component | Status | Details |
 |-----------|--------|---------|
 | Backend | ✅ Running | localhost:5557, v3.4 |
-| ChromaDB | ✅ Connected | 192.158.1.243:8000, 27,568 docs |
+| ChromaDB | ✅ Connected | servicebox.taileb8c60.ts.net:8000, 27,568 docs |
 | RAG | ✅ Working | Unfiltered search, business keywords added |
 | Fallback | ✅ Implemented | Lines 813-830, tested and working |
 

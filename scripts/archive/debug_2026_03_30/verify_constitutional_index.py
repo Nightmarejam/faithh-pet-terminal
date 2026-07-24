@@ -3,7 +3,7 @@
 
 import chromadb
 
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 collection = client.get_collection('faithh_knowledge_base')
 
 # Get constitutional documents

@@ -12,7 +12,7 @@ The previous `ARCHITECTURE.md` and `MULTI_DEVICE_DEPLOYMENT_STRATEGY.md` assumed
 
 **Actual Current State**:
 - ✅ **Native Ollama** on WSL2 (not Docker)
-- ✅ **ChromaDB on Gen8** (192.158.1.243:8000) - not local
+- ✅ **ChromaDB on Gen8** (servicebox.taileb8c60.ts.net:8000) - not local
 - ❌ **No Docker services** on WSL2 (all removed)
 - ✅ **Gen8 as data layer** (already deployed)
 
@@ -23,7 +23,7 @@ The previous `ARCHITECTURE.md` and `MULTI_DEVICE_DEPLOYMENT_STRATEGY.md` assumed
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │                    Gen8 HP ProLiant                          │
-│                  (192.158.1.243 via Tailscale)                │
+│                  (servicebox.taileb8c60.ts.net via Tailscale)                │
 ├──────────────────────────────────────────────────────────────┤
 │ Docker Services:                                             │
 │ ├── ChromaDB :8000                                           │
@@ -55,8 +55,8 @@ The previous `ARCHITECTURE.md` and `MULTI_DEVICE_DEPLOYMENT_STRATEGY.md` assumed
 ### Environment Variables (.env)
 ```bash
 OLLAMA_HOST=http://127.0.0.1:11434      # Native Ollama on WSL2
-CHROMADB_HOST=192.158.1.243               # Gen8 server
-CHROMA_HOST=http://192.158.1.243:8000    # Gen8 ChromaDB
+CHROMADB_HOST=servicebox.taileb8c60.ts.net               # Gen8 server
+CHROMA_HOST=http://servicebox.taileb8c60.ts.net:8000    # Gen8 ChromaDB
 ```
 
 ### Hardware Specifications
@@ -72,7 +72,7 @@ CHROMA_HOST=http://192.158.1.243:8000    # Gen8 ChromaDB
 - **Current GPU Usage**: GTX 1080 Ti (needs optimization)
 
 #### Gen8 HP ProLiant
-- **IP**: 192.158.1.243 (Tailscale)
+- **IP**: servicebox.taileb8c60.ts.net (Tailscale)
 - **Services**: ChromaDB, Pi-hole, Uptime Kuma
 - **ChromaDB**: 29,013 documents indexed
 - **Status**: ✅ All services running and accessible
@@ -95,7 +95,7 @@ User Query
          ▼                  ▼
 ┌──────────────────┐  ┌──────────────────────┐
 │ Native Ollama    │  │ Gen8 ChromaDB        │
-│ WSL2 :11434      │  │ 192.158.1.243:8000    │
+│ WSL2 :11434      │  │ servicebox.taileb8c60.ts.net:8000    │
 │ (GPU inference)  │  │ (RAG search)         │
 └──────────────────┘  └──────────────────────┘
 ```
@@ -225,15 +225,15 @@ curl http://localhost:11434/api/tags
 ### Check Gen8 Services
 ```bash
 # Via SSH
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "docker ps"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "docker ps"
 
 # Test ChromaDB
-curl -s http://192.158.1.243:8000/api/v2/heartbeat
+curl -s http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 
 # Test from Python
 python3 << 'EOF'
 import chromadb
-client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
 collection = client.get_collection(name="faithh_knowledge_base")
 print(f"Documents: {collection.count()}")
 EOF
@@ -301,7 +301,7 @@ docker ps -a
 curl -s http://localhost:11434/api/tags | jq -r '.models[].name'
 
 # 3. Check Gen8 ChromaDB
-python3 -c "import chromadb; client = chromadb.HttpClient(host='192.158.1.243', port=8000); collection = client.get_collection(name='faithh_knowledge_base'); print(f'✅ {collection.count()} documents')"
+python3 -c "import chromadb; client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000); collection = client.get_collection(name='faithh_knowledge_base'); print(f'✅ {collection.count()} documents')"
 
 # 4. Check GPUs
 nvidia-smi --query-gpu=index,name,memory.used,memory.total --format=csv
@@ -310,7 +310,7 @@ nvidia-smi --query-gpu=index,name,memory.used,memory.total --format=csv
 curl -s http://localhost:5557/health
 
 # 6. Check Gen8 services
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "docker ps --format 'table {{.Names}}\t{{.Status}}'"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 ```
 
 ---

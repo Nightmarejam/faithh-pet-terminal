@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.10', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 coll = client.get_collection('faithh_knowledge_base')
 
 # Get collection metadata

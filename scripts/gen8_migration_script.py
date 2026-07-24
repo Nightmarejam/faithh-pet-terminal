@@ -47,14 +47,14 @@ class ChromaDBMigrator:
         # Target: Gen8 Production ChromaDB
         try:
             self.target_client = chromadb.HttpClient(
-                host="192.158.1.10",
+                host="servicebox.taileb8c60.ts.net",
                 port=8000,
                 settings=Settings(anonymized_telemetry=False)
             )
             print("✅ Connected to Gen8 ChromaDB (target)")
         except Exception as e:
             print(f"❌ Failed to connect to Gen8 ChromaDB: {e}")
-            print("   Ensure Gen8 is reachable: curl http://192.158.1.10:8000/api/v2/heartbeat")
+            print("   Ensure Gen8 is reachable: curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat")
             sys.exit(1)
     
     def assess_source_data(self):
@@ -373,7 +373,7 @@ def main():
         print("   python gen8_migration_script.py")
     else:
         print("\n✅ Next steps:")
-        print("   1. Update .env: CHROMADB_HOST=192.158.1.10")
+        print("   1. Update .env: CHROMADB_HOST=servicebox.taileb8c60.ts.net")
         print("   2. Restart backend: ./restart_backend.sh")
         print("   3. Test RAG queries")
         print("   4. Monitor for 1-2 weeks before decommissioning WSL2 ChromaDB")

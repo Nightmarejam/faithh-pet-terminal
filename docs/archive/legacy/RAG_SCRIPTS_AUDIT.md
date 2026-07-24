@@ -13,7 +13,7 @@
 | Script | Chunking | Target | Collection | Embedding | Status |
 |--------|----------|--------|------------|-----------|--------|
 | `extract_conversations.py` | ❌ None | JSON file | N/A | N/A | ACTIVE |
-| `index_chromadb_direct.py` | ❌ None | Gen8 (192.158.1.243) | faithh_knowledge_base | ChromaDB built-in | ACTIVE |
+| `index_chromadb_direct.py` | ❌ None | Gen8 (servicebox.taileb8c60.ts.net) | faithh_knowledge_base | ChromaDB built-in | ACTIVE |
 | `index_to_chromadb.py` | ❌ None | Gen8 (REST API) | faithh_knowledge_base | ChromaDB built-in | DUPLICATE |
 
 ### Backend (backend/)
@@ -35,7 +35,7 @@
 
 | Script | Chunking | Target | Collection | Embedding | Status |
 |--------|----------|--------|------------|-----------|--------|
-| `index_docs_to_gen8.py` | ✅ 1500 chars, 200 overlap | Gen8 (192.158.1.243 Tailscale) | faithh_knowledge_base | BGE-base-en-v1.5 | BEST DOCS |
+| `index_docs_to_gen8.py` | ✅ 1500 chars, 200 overlap | Gen8 (servicebox.taileb8c60.ts.net Tailscale) | faithh_knowledge_base | BGE-base-en-v1.5 | BEST DOCS |
 | `reindex_with_metadata.py` | ✅ 1500 chars, 200 overlap | localhost:8000 | documents_768_v2 | all-mpnet-base-v2 | BEST CONVOS |
 
 ---
@@ -63,8 +63,8 @@
 
 ### ChromaDB Hosts Used:
 - `localhost:8000` - Old local ChromaDB
-- `192.158.1.243:8000` - Gen8 via Tailscale
-- `192.158.1.243:8000` - Gen8 via LAN ← CURRENT
+- `servicebox.taileb8c60.ts.net:8000` - Gen8 via Tailscale
+- `servicebox.taileb8c60.ts.net:8000` - Gen8 via LAN ← CURRENT
 
 ### Collection Names Used:
 - `documents` - Original
@@ -82,7 +82,7 @@
 ## Recommended Canonical Configuration
 
 ### Target:
-- **Host:** 192.158.1.243:8000 (Gen8 LAN)
+- **Host:** servicebox.taileb8c60.ts.net:8000 (Gen8 LAN)
 - **Collection:** faithh_knowledge_base
 - **Embedding:** BAAI/bge-base-en-v1.5 (768 dim) - ChromaDB default
 
@@ -101,7 +101,7 @@
 
 ### KEEP (Canonical):
 1. **`scripts/reindex_with_metadata.py`** - Best conversation indexer
-   - UPDATE: Change host to 192.158.1.243
+   - UPDATE: Change host to servicebox.taileb8c60.ts.net
    - UPDATE: Change collection to faithh_knowledge_base
    - UPDATE: Change embedding to BGE (or use ChromaDB default)
 
@@ -137,7 +137,7 @@ python scripts/reindex_with_metadata.py --dry-run
 ### Step 2: Update Configuration
 Edit `scripts/reindex_with_metadata.py`:
 ```python
-CHROMA_HOST = "192.158.1.243"  # Gen8 LAN
+CHROMA_HOST = "servicebox.taileb8c60.ts.net"  # Gen8 LAN
 CHROMA_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 # Keep embedding as all-mpnet-base-v2 or switch to BGE
@@ -148,7 +148,7 @@ COLLECTION_NAME = "faithh_knowledge_base"
 # Clear existing (208 docs)
 python -c "
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 col = client.get_collection('faithh_knowledge_base')
 col.delete(col.get()['ids'])
 print('Cleared')
@@ -162,7 +162,7 @@ python scripts/reindex_with_metadata.py
 ```bash
 python -c "
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 col = client.get_collection('faithh_knowledge_base')
 print(f'Documents: {col.count()}')
 "
@@ -183,7 +183,7 @@ SOURCES = {
 }
 
 CONFIG = {
-    "chroma_host": "192.158.1.243",
+    "chroma_host": "servicebox.taileb8c60.ts.net",
     "chroma_port": 8000,
     "collection": "faithh_knowledge_base",
     "chunk_size": 1500,

@@ -13,15 +13,15 @@ The ChromaDB collection count API endpoint has changed between versions, causing
 ### Working Endpoints
 ```bash
 # ✅ Working - Heartbeat check
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 # Returns: {"nanosecond heartbeat": 1771901150685085006}
 
 # ❌ Failing - v1 count (410 Gone)
-curl http://192.158.1.243:8000/api/v1/collections/faithh_knowledge_base/count
+curl http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base/count
 # Returns: {"error":"Unimplemented","message":"The v1 API is unimplemented"}
 
 # ❌ Failing - v2 count (no response)
-curl http://192.158.1.243:8000/api/v2/collections/faithh_knowledge_base/count
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/collections/faithh_knowledge_base/count
 # Returns: No response (likely incorrect endpoint format)
 ```
 

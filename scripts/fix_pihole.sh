@@ -3,7 +3,7 @@
 # Fix Pi-hole Configuration
 # Created: 2026-01-20
 
-GEN8_IP="192.158.1.243"
+GEN8_IP="servicebox.taileb8c60.ts.net"
 PIHOLE_DIR="/home/jonat/services/pihole"
 
 echo "🔧 Fixing Pi-hole Configuration"
@@ -73,7 +73,7 @@ services:
       WEBPASSWORD: 'admin123'
       DNS1: '1.1.1.1'
       DNS2: '8.8.8.8'
-      ServerIP: '192.158.1.243'
+      ServerIP: 'servicebox.taileb8c60.ts.net'
     volumes:
       - './etc-pihole:/etc/pihole'
       - './etc-dnsmasq.d:/etc/dnsmasq.d'

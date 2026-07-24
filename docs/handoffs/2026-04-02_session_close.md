@@ -14,7 +14,7 @@ After `git pull` on `main`, confirm with `git rev-parse HEAD` (tip moves if doc-
 
 ## Stack state — all confirmed working
 
-- Gen8 ChromaDB: 192.158.1.243:8000
+- Gen8 ChromaDB: servicebox.taileb8c60.ts.net:8000
   - faithh_knowledge_base: 806,265 (4.3x duplicated, ~188k unique)
   - governance_corpus: 18,768 (UN Charter, UDHR, V-Dem v16 1990+)
   - alife_lineage: 53,450+ (generations 0–5 logged; confirm live count if needed)

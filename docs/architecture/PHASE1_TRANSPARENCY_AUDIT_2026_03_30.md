@@ -38,7 +38,7 @@ Mode: read-only checks only (no re-index execution).
   - unhealthy service observed: `chromadb`
   - response currently includes `unhealthy_services` (legacy key), indicating running backend process may not yet reflect the newest monitoring payload shape from latest committed code.
 
-## Gen8 (`jonat@192.158.1.243`)
+## Gen8 (`jonat@servicebox.taileb8c60.ts.net`)
 
 - Hostname: `servicebox`
 - OS: Ubuntu 22.04 (`5.15.0-171-generic`)
@@ -47,7 +47,7 @@ Mode: read-only checks only (no re-index execution).
 - Storage:
   - root `/dev/sda2`: ~916G total, ~839G available
 - Chroma heartbeat:
-  - `http://192.158.1.243:8000/api/v2/heartbeat` responds
+  - `http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat` responds
 - Chroma collection counts:
   - `faithh_knowledge_base: 26331`
   - `alife_lineage: 50450`

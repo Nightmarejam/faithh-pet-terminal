@@ -32,7 +32,7 @@ services:
     environment:
       - WEBSOCKET_ENABLED=true
       - SIGNUPS_ALLOWED=true
-      - DOMAIN=https://192.158.1.243:8443
+      - DOMAIN=https://servicebox.taileb8c60.ts.net:8443
     volumes:
       - ./data:/data
     networks:
@@ -94,7 +94,7 @@ docker ps | grep -E "vaultwarden|caddy"
 
 echo ""
 echo "✅ Vaultwarden is now available at:"
-echo "   https://192.158.1.243:8443"
+echo "   https://servicebox.taileb8c60.ts.net:8443"
 echo ""
 echo "⚠️  Your browser will show a certificate warning (self-signed cert)"
 echo "   Click 'Advanced' → 'Proceed' to continue"

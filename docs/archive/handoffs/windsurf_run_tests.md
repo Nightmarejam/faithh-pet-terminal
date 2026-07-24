@@ -17,7 +17,7 @@ Before starting tests, verify:
 
 2. **ChromaDB Availability**
    ```bash
-   curl -s http://192.158.1.243:8000/api/v2/heartbeat
+   curl -s http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
    ```
 
 3. **Test Files Exist**

@@ -63,7 +63,7 @@ def summarize_mix(results: list[dict]) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate data aggregation retrieval pipeline")
-    parser.add_argument("--host", default="192.158.1.10")
+    parser.add_argument("--host", default="servicebox.taileb8c60.ts.net")
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--collection", default="faithh_knowledge_base")
     parser.add_argument("--top-k", type=int, default=5)

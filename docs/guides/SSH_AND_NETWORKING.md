@@ -257,10 +257,10 @@ ssh -v gen8
 ### "Connection refused"
 ```bash
 # Check if device is reachable
-ping 192.158.1.243
+ping servicebox.taileb8c60.ts.net
 
 # Check if SSH port is open
-nc -zv 192.158.1.243 22
+nc -zv servicebox.taileb8c60.ts.net 22
 ```
 
 ### "tmux: command not found"
@@ -323,8 +323,8 @@ Ctrl+b d              # Detach from session
 tmux kill-session -t gen8  # Kill session
 
 # Check connectivity
-ping 192.158.1.243     # Gen8 (LAN)
-ping 192.158.1.65     # NAS
+ping servicebox.taileb8c60.ts.net     # Gen8 (LAN)
+ping nas.taileb8c60.ts.net     # NAS
 
 # SSH debugging
 ssh -v gen8           # Verbose output
@@ -342,7 +342,7 @@ ssh -vvv gen8         # Very verbose
 
 To add your SSH key to Gitea:
 
-1. Go to: http://192.158.1.243:3002
+1. Go to: http://servicebox.taileb8c60.ts.net:3002
 2. Sign in with your GitHub account
 3. Click on your avatar → Settings
 4. Go to "SSH / GPG Keys" tab
@@ -358,5 +358,5 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILumrtmlOlN/Jp0cqJFbH+i8RcA3/VbtHDkD4ptK0DNr
 
 Test SSH connection:
 ```bash
-ssh -T git@192.158.1.243 -p 2222
+ssh -T git@servicebox.taileb8c60.ts.net -p 2222
 ```

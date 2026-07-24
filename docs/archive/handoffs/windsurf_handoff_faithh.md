@@ -231,10 +231,10 @@ ollama pull llama3.1:8b
 **Issue:** ChromaDB connection errors
 ```bash
 # Check ChromaDB health
-curl -s "http://192.158.1.243:8000/api/v2/heartbeat"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat"
 
 # SSH to Gen8 if needed
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 **Issue:** UI changes not reflecting

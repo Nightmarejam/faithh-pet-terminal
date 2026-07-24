@@ -10,7 +10,7 @@
 - **Access URLs:**
   - http://localhost:5557
   - http://127.0.0.1:5557
-  - http://192.158.1.232:5557
+  - http://192.168.1.232:5557
 
 ### Running Status
 - **PIDs:** 16440 (parent), 16481 (worker with debugger)

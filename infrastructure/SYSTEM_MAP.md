@@ -8,14 +8,14 @@ Source of truth: `infrastructure/SYSTEM_MAP.json` (schema in `infrastructure/SYS
 - Role: primary-dev
 - Hostname: DESKTOP-JJ1SUHB
 - OS: Ubuntu (WSL2), kernel 6.6.87.2-microsoft-standard-WSL2
-- Addresses: LAN 192.158.1.232, Tailscale 100.115.225.100
+- Addresses: LAN 192.168.1.232, Tailscale 100.115.225.100
 - GPUs: GTX 1080 Ti (11GB), RTX 3090 (24GB)
 - Services: FAITHH backend, Ollama (native)
 - Notes: Ollama runs native; ChromaDB is on Gen8
 
 ### Gen8 MicroServer (servicebox)
 - Role: data-services
-- Address: Tailscale 192.158.1.243
+- Address: Tailscale servicebox.taileb8c60.ts.net
 - CPU/RAM: Xeon E3-1220L V2, 3.8GB RAM
 - Services: ChromaDB, Pi-hole, Uptime Kuma
 - Notes: No GPU available

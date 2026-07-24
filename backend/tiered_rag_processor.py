@@ -63,7 +63,7 @@ class TieredRAGProcessor:
             
         # Tier 2: Gen8 warm storage
         try:
-            self.tiers[2]['client'] = chromadb.HttpClient(host='192.158.1.10', port=8000)
+            self.tiers[2]['client'] = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
             # Use existing collection for now, create separate later
             self.tiers[2]['collection'] = self.tiers[2]['client'].get_collection('faithh_knowledge_base')
             print(f"✅ Tier 2 (warm storage) initialized: {self.tiers[2]['collection'].count()} docs")

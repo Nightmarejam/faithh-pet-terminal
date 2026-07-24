@@ -263,7 +263,7 @@ class GitCollector(BaseCollector):
         "models": ["llama31-faithh:latest", "qwen3-faithh:latest"]
       },
       "chromadb_gen8": {
-        "url": "http://192.158.1.243:8000",
+        "url": "http://servicebox.taileb8c60.ts.net:8000",
         "status": "degraded",
         "response_time_ms": 89,
         "reachable": true,
@@ -273,7 +273,7 @@ class GitCollector(BaseCollector):
         "issue": "Collection not connecting despite server reachable"
       },
       "gen8_ssh": {
-        "host": "192.158.1.243",
+        "host": "servicebox.taileb8c60.ts.net",
         "status": "healthy",
         "response_time_ms": 23
       }
@@ -308,7 +308,7 @@ class HealthCollector(BaseCollector):
         services["faithh_backend"] = self._check_faithh()
         services["ollama"] = self._check_ollama()
         services["chromadb_gen8"] = self._check_chromadb()
-        services["gen8_ssh"] = self._check_ssh("192.158.1.243")
+        services["gen8_ssh"] = self._check_ssh("servicebox.taileb8c60.ts.net")
         
         # Detect issues
         for name, svc in services.items():

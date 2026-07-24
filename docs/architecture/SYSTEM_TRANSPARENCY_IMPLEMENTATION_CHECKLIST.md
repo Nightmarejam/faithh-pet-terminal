@@ -247,6 +247,6 @@ Avoid by default:
 
 Canonical write-up: `reports/index_runs/2026-03-31_week1_device_baseline.md` (captured 2026-03-31).
 
-- **Identity:** Re-verify quarterly with `hostname` / `uname -a` on WSL, `ssh nas "hostname && uname -a"`, and Chroma `GET http://192.158.1.243:8000/api/v2/heartbeat` from WSL.
+- **Identity:** Re-verify quarterly with `hostname` / `uname -a` on WSL, `ssh nas "hostname && uname -a"`, and Chroma `GET http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat` from WSL.
 - **Plex / Plexamp (SSoT):** Single table with `UNVERIFIED:<TOKEN>` placeholders and verification commands is §2 of that report—do not duplicate paths here.
 - **Gates:** Before indexing or NAS staging runs, apply health, WSL access, **Gate B-win (native Windows / PowerShell via interop)**, and ingest readiness in that report.

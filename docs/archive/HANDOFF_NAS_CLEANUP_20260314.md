@@ -11,7 +11,7 @@
 ### 1. Infrastructure Access Verified
 - **X: NAS** - Full read/write access via WSL (`/mnt/x/`)
 - **Z: NAS** - Read-only (local mount, not Windows network drive)
-- **Gen8 Server** - SSH access via Tailscale (192.158.1.243)
+- **Gen8 Server** - SSH access via Tailscale (servicebox.taileb8c60.ts.net)
 - **ChromaDB** - API accessible, 10 Docker containers running
 - **All services healthy**
 
@@ -113,8 +113,8 @@ Moved to `X:/infrastructure/backups/`:
 
 ### Network IPs
 - Windows Desktop: 100.115.225.100 (Tailscale)
-- Gen8 Server: 192.158.1.243 (Tailscale)
-- Synology NAS: 192.158.1.65 (local)
+- Gen8 Server: servicebox.taileb8c60.ts.net (Tailscale)
+- Synology NAS: nas.taileb8c60.ts.net (local)
 
 ### Learning Portal Contents (177GB)
 | Content | Size | Target Location |

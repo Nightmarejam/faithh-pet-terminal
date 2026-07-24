@@ -183,7 +183,7 @@ Response with Metadata
 | Service | Host | Port | Purpose |
 |---------|------|------|---------|
 | FAITHH Backend | localhost (WSL) | 5557 | Main API |
-| ChromaDB | Gen8 (192.158.1.243) | 8000 | Vector database |
+| ChromaDB | Gen8 (servicebox.taileb8c60.ts.net) | 8000 | Vector database |
 | Ollama | localhost (WSL) | 11434 | Local LLM inference |
 | Postgres | Docker | 5432 | Langflow data |
 
@@ -206,7 +206,7 @@ Response with Metadata
 curl http://localhost:5557/health
 
 # ChromaDB health
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 
 # Ollama models
 ollama list

@@ -72,7 +72,7 @@ Total RAM: 15GB
 ```
 
 ## Network Optimization
-- Use LAN IP (192.158.1.243) for speed
+- Use LAN IP (servicebox.taileb8c60.ts.net) for speed
 - Keep Tailscale for remote access
 - Consider dedicated network card if needed
 

@@ -18,7 +18,7 @@
 
 **Dependencies:**
 - Python: Flask, requests, chromadb, sentence-transformers, pydantic
-- Services: Ollama at `http://127.0.0.1:11434`, ChromaDB at `http://192.158.1.243:8000`
+- Services: Ollama at `http://127.0.0.1:11434`, ChromaDB at `http://servicebox.taileb8c60.ts.net:8000`
 - Internal: `faithh_pet_v4.html`, `decisions_log.json`, `faithh_memory.json`, `project_states.json`
 
 **Entry Points:**
@@ -62,7 +62,7 @@
 
 **Environment Variables Required:**
 - `OLLAMA_HOST` (default `http://127.0.0.1:11434`)
-- `CHROMA_HOST` (default `http://192.158.1.243:8000`)
+- `CHROMA_HOST` (default `http://servicebox.taileb8c60.ts.net:8000`)
 - `CHROMA_COLLECTION` (default `faithh_knowledge_base`)
 - `EMBEDDING_MODEL_ID` (default `BAAI/bge-base-en-v1.5`)
 - `DEFAULT_MODEL` (e.g., `qwen3-faithh:latest`)

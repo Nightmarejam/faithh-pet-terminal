@@ -263,7 +263,7 @@ After 30 days of journaling, you should see:
 - Audio Scripts: Merged duplicate folders
 
 **Key Technical Details**:
-- Service box IP: 192.158.1.243 (Tailscale)
+- Service box IP: servicebox.taileb8c60.ts.net (Tailscale)
 - Backend port: 5557
 - ChromaDB port: 8000
 - Groq API: Fast (~1.5s response times)

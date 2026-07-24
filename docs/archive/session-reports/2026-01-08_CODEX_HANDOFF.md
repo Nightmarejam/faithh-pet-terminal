@@ -51,7 +51,7 @@ git push
 ### 3. Verify ChromaDB connections (optional)
 ```bash
 # Gen8 (should work)
-curl -s "http://192.158.1.243:8000/api/v2/heartbeat" | jq
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat" | jq
 
 # WSL (only if Docker is running)
 docker ps | grep chroma
@@ -64,7 +64,7 @@ curl -s "http://localhost:8000/api/v2/heartbeat" | jq
 
 | Component | Status | URL/Path |
 |-----------|--------|----------|
-| Gen8 ChromaDB | ✅ Production | http://192.158.1.243:8000 |
+| Gen8 ChromaDB | ✅ Production | http://servicebox.taileb8c60.ts.net:8000 |
 | WSL ChromaDB | ⚠️ Dev (needs Docker) | http://localhost:8000 |
 | Backend | `faithh_professional_backend_fixed.py` | localhost:5557 |
 | Canonical UI | `faithh_pet.html` | - |

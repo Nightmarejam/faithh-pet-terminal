@@ -4,9 +4,9 @@
 
 ### Control plane access
 
-- Gen8 SSH: reachable at LAN `192.158.1.243` (`gen8` in hosts) from contexts that route to that subnet
+- Gen8 SSH: reachable at LAN `servicebox.taileb8c60.ts.net` (`gen8` in hosts) from contexts that route to that subnet
 - NAS SSH from this node: timeout
-- UDM SSH from this node: **timeout** to `192.168.1.1` (wrong segment from WSL). See `docs/security/UDM_SSH_discovery_20260402.md`: **`192.158.1.1` responds on port 22**; auth requires UniFi SSH setup (not open `root` key by default).
+- UDM SSH from this node: **timeout** to `192.168.1.1` (wrong segment from WSL). See `docs/security/UDM_SSH_discovery_20260402.md`: **`192.168.1.1` responds on port 22**; auth requires UniFi SSH setup (not open `root` key by default).
 
 ### Local dev node (WSL) security controls
 

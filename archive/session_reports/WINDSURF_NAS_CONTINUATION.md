@@ -120,6 +120,6 @@ After completing above tasks, update ~/ai-stack/SYSTEMS_MAP.md:
 ## NOTES
 - X: drive mounted at /mnt/x/ with full read/write from WSL
 - Z: drive at /mnt/z/ is READ ONLY — do not attempt writes there
-- Gen8 ChromaDB at 192.158.1.243:8000 — collection: faithh_knowledge_base
+- Gen8 ChromaDB at servicebox.taileb8c60.ts.net:8000 — collection: faithh_knowledge_base
 - DO NOT load SentenceTransformer in WSL (crashes WSL — see decisions_log.json infra_002)
 - For large file operations on NAS, expect slow speeds (~50-100MB/s over SMB)

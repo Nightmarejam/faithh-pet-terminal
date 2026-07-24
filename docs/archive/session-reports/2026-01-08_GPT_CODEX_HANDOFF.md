@@ -66,7 +66,7 @@
 - **Status:** Ready to commit
 
 ### 2. Chroma URL Configuration
-- Script now defaults to Gen8 Chroma: `http://192.158.1.243:8000`
+- Script now defaults to Gen8 Chroma: `http://servicebox.taileb8c60.ts.net:8000`
 - Can override with `CHROMA_HOST` environment variable
 
 ---
@@ -115,7 +115,7 @@ From Codex inspection of `faithh_professional_backend_fixed.py`:
 |-----------|--------|-------|
 | Git Branch | `main` | Head: 8ec016d |
 | Submodules | ✅ Synced | constella-framework + celestial-equilibrium |
-| ChromaDB | Gen8 | 192.158.1.243:8000, 28,876 chunks |
+| ChromaDB | Gen8 | servicebox.taileb8c60.ts.net:8000, 28,876 chunks |
 | Backend | localhost:5557 | `faithh_professional_backend_fixed.py` |
 | Canonical UI | `faithh_pet.html` | v4-based |
 

@@ -1,6 +1,6 @@
 # ChromaDB census — `faithh_knowledge_base`
 
-_Generated: 2026-04-10 06:00:41 (UTC) · Host `192.158.1.243:8000` · Script `scripts/generate_db_map.py`_
+_Generated: 2026-04-10 06:00:41 (UTC) · Host `servicebox.taileb8c60.ts.net:8000` · Script `scripts/generate_db_map.py`_
 
 ## Executive summary
 

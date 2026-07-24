@@ -99,8 +99,8 @@ class AnchorValidator:
             import requests
             # Try multiple API endpoints as ChromaDB API may have changed
             count_endpoints = [
-                'http://192.158.1.10:8000/api/v1/collections/faithh_knowledge_base/count',
-                'http://192.158.1.10:8000/api/v2/collections/faithh_knowledge_base/count'
+                'http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base/count',
+                'http://servicebox.taileb8c60.ts.net:8000/api/v2/collections/faithh_knowledge_base/count'
             ]
             
             doc_count = None
@@ -134,7 +134,7 @@ class AnchorValidator:
                     })
             else:
                 # API is unimplemented - use heartbeat as proxy for ChromaDB being operational
-                heartbeat_response = requests.get('http://192.158.1.10:8000/api/v2/heartbeat', timeout=3)
+                heartbeat_response = requests.get('http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat', timeout=3)
                 if heartbeat_response.status_code == 200:
                     validation_result['evidence'].append({
                         'type': 'chromadb_scale',

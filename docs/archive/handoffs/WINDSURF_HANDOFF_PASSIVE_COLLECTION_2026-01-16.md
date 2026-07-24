@@ -21,7 +21,7 @@ Build a passive data collection layer that automatically captures git activity, 
 
 ### ✅ What's Working
 - **Backend:** `faithh_professional_backend_fixed.py` at localhost:5557
-- **ChromaDB:** 29,013 docs in `faithh_knowledge_base` collection (192.158.1.243:8000)
+- **ChromaDB:** 29,013 docs in `faithh_knowledge_base` collection (servicebox.taileb8c60.ts.net:8000)
 - **Models:** `llama31-faithh:latest` + `qwen3-faithh:latest` via Ollama
 - **Git:** Clean working tree, pushed to origin (commit b8e7a89)
 
@@ -121,7 +121,7 @@ SERVICES = {
         "type": "http"
     },
     "chromadb_gen8": {
-        "url": "http://192.158.1.243:8000/api/v2/heartbeat",
+        "url": "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat",
         "type": "chromadb",
         "expected_docs": 29013,
         "collection": "faithh_knowledge_base"

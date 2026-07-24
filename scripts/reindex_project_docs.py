@@ -23,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import chromadb
 
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "servicebox.taileb8c60.ts.net")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base"
 BASE_DIR = Path(__file__).parent.parent

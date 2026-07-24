@@ -132,7 +132,7 @@ If still 401: generate a fresh key at [console.anthropic.com/settings/keys](http
 
 **Gap = pre-LLM work:**
 
-- RAG retrieval (Chroma @ `192.158.1.243:8000` over Tailscale)
+- RAG retrieval (Chroma @ `servicebox.taileb8c60.ts.net:8000` over Tailscale)
 - Chip embedding (806K+ docs indexed)
 - Context assembly
 
@@ -244,7 +244,7 @@ ollama run qwen25-grounded-gen5-delta:latest "ping"
 
 ### Performance
 
-**Chroma latency:** Is Tailscale to NAS (`192.158.1.243:8000`) the bottleneck for 68–120s server time?
+**Chroma latency:** Is Tailscale to NAS (`servicebox.taileb8c60.ts.net:8000`) the bottleneck for 68–120s server time?
 
 - **Test:** Run probe with `--with-rag` on localhost Chroma vs NAS
 - **Alternative:** Cache embeddings, batch queries, or move Chroma to same host
@@ -274,7 +274,7 @@ ollama run qwen25-grounded-gen5-delta:latest "ping"
 | **Backend** | `faithh_professional_backend_fixed.py` (example PID 1455, port 5557) |
 | **Status** | Healthy (`GET /api/health` → 200, plc → idle) |
 | **Ollama** | systemd (example PID 219), port 11434 |
-| **Chroma** | NAS @ `192.158.1.243:8000`, 806K+ docs |
+| **Chroma** | NAS @ `servicebox.taileb8c60.ts.net:8000`, 806K+ docs |
 | **GPU** | RTX 3090, CUDA 0, ~10.7 GiB with q8_0 @ 32K (measured) |
 | **Groq** | 401 if no/invalid key (example: 389 consecutive failures) |
 | **Gemini** | 403 if no/invalid key |

@@ -43,7 +43,7 @@ import os
 
 load_dotenv()
 
-CHROMA_URL = os.getenv("CHROMA_URL", "http://192.158.1.243:8000")
+CHROMA_URL = os.getenv("CHROMA_URL", "http://servicebox.taileb8c60.ts.net:8000")
 COLLECTION_NAME = "faithh_knowledge_base"
 SAMPLE_SIZE = 200
 

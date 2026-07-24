@@ -16,7 +16,7 @@
   - Successfully tested connection
 - Server details confirmed:
   - Hostname: servicebox
-  - IPs: 192.158.1.243 (LAN), 192.158.1.243 (Tailscale)
+  - IPs: servicebox.taileb8c60.ts.net (LAN), servicebox.taileb8c60.ts.net (Tailscale)
   - OS: Ubuntu 22.04 LTS
   - Docker: v28.2.2
 
@@ -35,7 +35,7 @@
 - Verification:
   - Container running and healthy
   - DNS resolution tested (google.com → 142.251.33.78)
-  - Web UI accessible at http://192.158.1.243/admin
+  - Web UI accessible at http://servicebox.taileb8c60.ts.net/admin
   - Ports 53 and 80 confirmed listening
 
 ### Documentation Created
@@ -139,7 +139,7 @@
 ### Assumptions
 - User has sudo access on servicebox (confirmed during session)
 - Gen8 server is intended for 24/7 operation (Pi-hole use case)
-- LAN network is 192.158.1.x/24
+- LAN network is 192.168.1.x/24
 - Tailscale is primary remote access method
 
 ### Things Tried That Didn't Work
@@ -158,8 +158,8 @@
 - **Pi-hole (servicebox):**
   - Container: `pihole` (docker-compose)
   - Status: Running, healthy
-  - DNS: 192.158.1.243:53 / 192.158.1.243:53
-  - Web: http://192.158.1.243/admin
+  - DNS: servicebox.taileb8c60.ts.net:53 / servicebox.taileb8c60.ts.net:53
+  - Web: http://servicebox.taileb8c60.ts.net/admin
   - Uptime: Since 12:24 UTC (2025-12-20)
 
 ### RAG Status
@@ -204,9 +204,9 @@ networks:
 ### SSH Connection
 ```bash
 # From DESKTOP-JJ1SUHB to servicebox
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 # or
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 ### Pi-hole Management Commands

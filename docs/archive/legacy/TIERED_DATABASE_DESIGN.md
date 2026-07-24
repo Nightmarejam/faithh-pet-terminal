@@ -284,7 +284,7 @@ def query_tiered_rag(query: str, n_results: int = 5):
 1. **Deploy ChromaDB on Gen8**
    ```bash
    # SSH into servicebox
-   ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+   ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 
    # Create service directory
    mkdir -p ~/services/chromadb
@@ -313,7 +313,7 @@ def query_tiered_rag(query: str, n_results: int = 5):
 2. **Test remote connection**
    ```python
    import chromadb
-   client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+   client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
    print(client.heartbeat())  # Should return timestamp
    ```
 
@@ -408,7 +408,7 @@ class TieredRAGProcessor:
         self.tier1 = self.tier1_client.get_or_create_collection("tier1_hot_768")
 
         # Tier 2: Gen8 remote
-        self.tier2_client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+        self.tier2_client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
         self.tier2 = self.tier2_client.get_or_create_collection("tier2_corpus_768")
 
         self.tier1_max_docs = 5000

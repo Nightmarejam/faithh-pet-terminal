@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 LOG_PATH = Path.home() / "ai-stack/projects/crypto/host_telemetry.csv"
-BRIDGE_URL = "http://192.158.1.25:9998"
+BRIDGE_URL = "http://pve.taileb8c60.ts.net:9998"
 FIELDS = ["timestamp","cpu_tctl","gpu0_smbus","gpu1_smbus","nvme_comp","fan2_rpm","fan5_rpm","fan6_rpm"]
 
 def poll():

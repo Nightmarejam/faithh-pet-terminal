@@ -117,7 +117,7 @@ If a menu is missing, use search in settings for these terms:
 
 ## 6) API status notes (current environment)
 
-- Local endpoint `https://192.158.1.1/unifi-api/network` is reachable from trusted LAN.
+- Local endpoint `https://192.168.1.1/unifi-api/network` is reachable from trusted LAN.
 - Reachability does not mean API automation is fully configured.
 - To operationalize API usage, define:
   - auth method (session/cookie/token),

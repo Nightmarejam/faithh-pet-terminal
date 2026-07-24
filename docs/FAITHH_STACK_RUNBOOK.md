@@ -15,7 +15,7 @@ Browser / tools  ──► Backend Flask (5557) ──► configs/model_config.y
                       anthropic_shim.py
                       (speaks /v1/messages)
 
-ChromaDB         ──► 192.158.1.10:8000
+ChromaDB         ──► servicebox.taileb8c60.ts.net:8000
                      faithh_knowledge_base_v2  (canonical, 33k docs)
                      governance_corpus          (18k docs)
                      alife_lineage              (339k docs)

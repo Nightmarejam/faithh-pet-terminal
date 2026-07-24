@@ -17,7 +17,7 @@
      - faithh_009: Set qwen25-grounded:latest as default model
 
 2. **✅ RAG Performance Tested**
-   - ChromaDB connection fixed (Gen8 LAN `192.158.1.243`; older docs used a Tailscale address that is no longer the canonical reference)
+   - ChromaDB connection fixed (Gen8 LAN `servicebox.taileb8c60.ts.net`; older docs used a Tailscale address that is no longer the canonical reference)
    - Backend restarted with correct configuration
    - Queries responding in ~4s with qwen25-grounded
    - Note: RAG sources not displayed but context is being injected

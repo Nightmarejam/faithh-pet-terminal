@@ -11,7 +11,7 @@
 
 | Field | Value |
 |-------|-------|
-| ChromaDB URL | http://192.158.1.243:8000 |
+| ChromaDB URL | http://servicebox.taileb8c60.ts.net:8000 |
 | ChromaDB Status | ✅ Heartbeat OK |
 | Collection | faithh_knowledge_base |
 | Total Chunks | 28,876 |
@@ -58,7 +58,7 @@
 ### 3. `docs/GPT_PROJECT_CONTEXT.md`
 **Status:** ✅ **CURRENT** - Updated 2026-01-07
 
-- ✅ ChromaDB URL correct (192.158.1.243:8000)
+- ✅ ChromaDB URL correct (servicebox.taileb8c60.ts.net:8000)
 - ✅ Chunk count correct (28,876)
 - ✅ Provider routing documented (Groq primary)
 - ✅ Architecture diagram accurate

@@ -39,7 +39,7 @@
 
 ---
 
-### Gen8 HP ProLiant (192.158.1.243)
+### Gen8 HP ProLiant (servicebox.taileb8c60.ts.net)
 
 #### Hardware Specifications
 - **CPU**: Intel Xeon E3-1220L V2 @ 2.30GHz (4 cores)
@@ -61,7 +61,7 @@
   - Status: Running
 
 #### Network
-- **Tailscale IP**: 192.158.1.243
+- **Tailscale IP**: servicebox.taileb8c60.ts.net
 - **Connectivity**: ✅ Reachable from WSL2
 - **SSH Access**: ✅ Working with key authentication
 
@@ -73,7 +73,7 @@
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │                    Gen8 HP ProLiant                          │
-│                  (192.158.1.243 via Tailscale)                │
+│                  (servicebox.taileb8c60.ts.net via Tailscale)                │
 │                                                              │
 │ Hardware:                                                    │
 │ • CPU: Intel Xeon E3-1220L V2 @ 2.30GHz                    │
@@ -173,7 +173,7 @@ ps aux | grep ollama
 
 ### Q8: Tailscale Configuration
 **Answer**: ✅ Partially configured
-- Gen8: ✅ Working (192.158.1.243 accessible)
+- Gen8: ✅ Working (servicebox.taileb8c60.ts.net accessible)
 - WSL2: ⚠️ Command not found (may need installation)
 - MacBook: ⚠️ Unknown
 
@@ -253,7 +253,7 @@ curl http://localhost:5557/health
 curl http://localhost:11434/api/tags
 
 # Test Gen8 ChromaDB
-python3 -c "import chromadb; client = chromadb.HttpClient(host='192.158.1.243', port=8000); collection = client.get_collection(name='faithh_knowledge_base'); print(f'✅ {collection.count()} documents')"
+python3 -c "import chromadb; client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000); collection = client.get_collection(name='faithh_knowledge_base'); print(f'✅ {collection.count()} documents')"
 
 # Test FAITHH RAG search
 curl -X POST http://localhost:5557/api/rag_search \

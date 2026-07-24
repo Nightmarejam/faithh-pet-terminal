@@ -45,9 +45,9 @@
         "chat_export": 976
       },
       "representative_excerpts": [
-        "on the Synology IP (192.158.1.65).  \n> - Ensure no other service is using port 53 on the Synology host.\n\n---\n\n### 3\ufe0f\u20e3 Configure Pi-hole Web Settings\n\n1. Go to `http://192.158.1.65:8081/admin` (or whichever port you mapped).  \n2. **Settings \u2192 DNS \u2192 Interface Settings**:  \n   - Select **\u201cRespond on al",
-        "Ah, that clears it up! So your **Pi-hole container is running on 192.158.1.65**, which is the IP on your Synology host that\u2019s acting as the Docker server.  \n\nA few important points with this setup:  \n\n---\n\n### 1\ufe0f\u20e3 Use Pi-hole\u2019s IP, not UDM, for DNS queries\nWhen testing or setting your network DNS, y",
-        "espond on all interfaces** \u2705  \n- **Allow all origins** \u274c (unless you have external clients)  \n\n**Web UI \u2192 Settings \u2192 DNS \u2192 Conditional Forwarding**:\n\n- **Enable Conditional Forwarding** \u2705  \n- Local network CIDR: `192.158.1.0/24`  \n- Router IP (UDM): `192.158.1.1`  \n- Local domain: `home.lan`  \n\nSave"
+        "on the Synology IP (nas.taileb8c60.ts.net).  \n> - Ensure no other service is using port 53 on the Synology host.\n\n---\n\n### 3\ufe0f\u20e3 Configure Pi-hole Web Settings\n\n1. Go to `http://nas.taileb8c60.ts.net:8081/admin` (or whichever port you mapped).  \n2. **Settings \u2192 DNS \u2192 Interface Settings**:  \n   - Select **\u201cRespond on al",
+        "Ah, that clears it up! So your **Pi-hole container is running on nas.taileb8c60.ts.net**, which is the IP on your Synology host that\u2019s acting as the Docker server.  \n\nA few important points with this setup:  \n\n---\n\n### 1\ufe0f\u20e3 Use Pi-hole\u2019s IP, not UDM, for DNS queries\nWhen testing or setting your network DNS, y",
+        "espond on all interfaces** \u2705  \n- **Allow all origins** \u274c (unless you have external clients)  \n\n**Web UI \u2192 Settings \u2192 DNS \u2192 Conditional Forwarding**:\n\n- **Enable Conditional Forwarding** \u2705  \n- Local network CIDR: `192.168.1.0/24`  \n- Router IP (UDM): `192.168.1.1`  \n- Local domain: `home.lan`  \n\nSave"
       ],
       "activation_keywords": [
         "pi hole",
@@ -1367,8 +1367,8 @@
         "chat_export": 159
       },
       "representative_excerpts": [
-        "ckend_fixed'  * Debug mode: on WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.  * Running on all addresses (0.0.0.0)  * Running on http://127.0.0.1:5557  * Running on http://192.158.1.232:5557 Press CTRL+C to quit  * Restarting w",
-        "ckend_fixed'  * Debug mode: on WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.  * Running on all addresses (0.0.0.0)  * Running on http://127.0.0.1:5557  * Running on http://192.158.1.232:5557 Press CTRL+C to quit  * Restarting w",
+        "ckend_fixed'  * Debug mode: on WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.  * Running on all addresses (0.0.0.0)  * Running on http://127.0.0.1:5557  * Running on http://192.168.1.232:5557 Press CTRL+C to quit  * Restarting w",
+        "ckend_fixed'  * Debug mode: on WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.  * Running on all addresses (0.0.0.0)  * Running on http://127.0.0.1:5557  * Running on http://192.168.1.232:5557 Press CTRL+C to quit  * Restarting w",
         "(venv) jonat@DESKTOP-JJ1SUHB:~/ai-stack$ tail -20 ~/ai-stack/faithh_backend.log ============================================================ FAITHH PROFESSIONAL BACKEND v3.1 ============================================================ \u2705 Fixed embedding dimensions (768-dim all-mpnet-base-v2) \u2705 Model "
       ],
       "activation_keywords": [
@@ -4755,9 +4755,9 @@
         "chat_export": 82
       },
       "representative_excerpts": [
-        "x_ed25519 jonat@192.158.1.243 \"cd ~/services/plex && docker-compose restart plex && sleep 10 && docker exec plex ls /media/\"`*\n\n### Planner Response\n\n**Plex can now see all media folders!** \u2705\n\n*Updated todo list*\n\n### Planner Response\n\n## \u2705 Plex Setup Complete!\n\n**Plex is fully operational:**\n- **We",
-        "32400 |\n\n---\n\n### \ud83d\udd34 One Manual Step Required: Mount NAS on Gen8\n\nPlex is running but can't see media until you mount the NAS. SSH into Gen8 and run:\n\n```bash\nssh jonat@100.79.85.32\nsudo apt-get install -y cifs-utils\nsudo mkdir -p /mnt/nas/media\nsudo mount -t cifs //192.158.1.65/AI/media /mnt/nas/med",
-        "32400 |\n\n---\n\n### \ud83d\udd34 One Manual Step Required: Mount NAS on Gen8\n\nPlex is running but can't see media until you mount the NAS. SSH into Gen8 and run:\n\n```bash\nssh jonat@192.158.1.243\nsudo apt-get install -y cifs-utils\nsudo mkdir -p /mnt/nas/media\nsudo mount -t cifs //192.158.1.65/AI/media /mnt/nas/me"
+        "x_ed25519 jonat@servicebox.taileb8c60.ts.net \"cd ~/services/plex && docker-compose restart plex && sleep 10 && docker exec plex ls /media/\"`*\n\n### Planner Response\n\n**Plex can now see all media folders!** \u2705\n\n*Updated todo list*\n\n### Planner Response\n\n## \u2705 Plex Setup Complete!\n\n**Plex is fully operational:**\n- **We",
+        "32400 |\n\n---\n\n### \ud83d\udd34 One Manual Step Required: Mount NAS on Gen8\n\nPlex is running but can't see media until you mount the NAS. SSH into Gen8 and run:\n\n```bash\nssh jonat@100.79.85.32\nsudo apt-get install -y cifs-utils\nsudo mkdir -p /mnt/nas/media\nsudo mount -t cifs //nas.taileb8c60.ts.net/AI/media /mnt/nas/med",
+        "32400 |\n\n---\n\n### \ud83d\udd34 One Manual Step Required: Mount NAS on Gen8\n\nPlex is running but can't see media until you mount the NAS. SSH into Gen8 and run:\n\n```bash\nssh jonat@servicebox.taileb8c60.ts.net\nsudo apt-get install -y cifs-utils\nsudo mkdir -p /mnt/nas/media\nsudo mount -t cifs //nas.taileb8c60.ts.net/AI/media /mnt/nas/me"
       ],
       "activation_keywords": [
         "plex",
@@ -5368,7 +5368,7 @@
       "representative_excerpts": [
         "Perfect \u2014 if you have the **ISO on your main PC**, you \u201cpoint iLO to it\u201d by mounting it as **Virtual Media (CD/DVD image)**.\n\n### Mount the ISO in iLO (HTML5 console)\n1) Open **iLO web UI** in your browser.\n2) Go to **Remote Console & Media** (wording varies slightly) \u2192 **Virtual Media** (or **Virtu",
         "1) iLO \u2192 **Power Management** / **Server Power** \u2192 **Set Boot Options**\n2) Enable **Boot from Virtual Media** (or \u201cVirtual CD/DVD first\u201d)\n3) Reboot\n\n### If you don\u2019t see the Virtual Media menu\nBecause you\u2019re on **iLO Advanced Evaluation**, you should. But if the menu is missing:\n- Make sure you\u2019re l",
-        "Good: the GETs are coming from **192.158.1.229 (iLO)**, so iLO *is* reaching your PC and starting the ISO fetch.\n\nBad: the repeated **WinError 10053 / 10054** spam usually means iLO is **aborting the transfer** (often because it\u2019s doing **range/partial reads** and doesn\u2019t like the way the simple Pyt"
+        "Good: the GETs are coming from **192.168.1.229 (iLO)**, so iLO *is* reaching your PC and starting the ISO fetch.\n\nBad: the repeated **WinError 10053 / 10054** spam usually means iLO is **aborting the transfer** (often because it\u2019s doing **range/partial reads** and doesn\u2019t like the way the simple Pyt"
       ],
       "activation_keywords": [
         "ilo",
@@ -6026,7 +6026,7 @@
         "chat_export": 71
       },
       "representative_excerpts": [
-        "ervicebox LAN IP: `192.158.1.243`, Tailscale IP: `100.79.85.32`\n\n**Backend runs in WSL** (Windows desktop). It must point to ChromaDB on servicebox.\n\n**.env (WSL) currently includes:**\n- `CHROMA_HOST=http://100.79.85.32:8000`\n- `OLLAMA_HOST=http://127.0.0.1:11434`\n- `BACKEND_PORT=5557`, `BACKEND_HOS",
+        "ervicebox LAN IP: `servicebox.taileb8c60.ts.net`, Tailscale IP: `100.79.85.32`\n\n**Backend runs in WSL** (Windows desktop). It must point to ChromaDB on servicebox.\n\n**.env (WSL) currently includes:**\n- `CHROMA_HOST=http://100.79.85.32:8000`\n- `OLLAMA_HOST=http://127.0.0.1:11434`\n- `BACKEND_PORT=5557`, `BACKEND_HOS",
         ").  \n**Infra:** ChromaDB running on servicebox `http://100.79.85.32:8000` (API v2 OK). Pi-hole + Uptime Kuma running. Backend currently runs in WSL.\n\n**Tasks (in order):**\n1) Read `MASTER_CONTEXT.md`, `project_states.json`, `faithh_professional_backend_fixed.py`, and `backend/*.py` (esp. `llm_provid",
         "Goal: Review and harden FAITHH backend with minimal risk.\r\nRepo: ~/ai-stack (GitHub: Nightmarejam/faithh-pet-terminal).\r\nInfra: ChromaDB running on servicebox http://100.79.85.32:8000 (API v2 OK). Pi-hole + Uptime Kuma running. Backend currently runs in WSL.\r\n\r\nTasks (in order):\r\n\r\nRead MASTER_CONTE"
       ],
@@ -6357,7 +6357,7 @@
       "representative_excerpts": [
         "sh/servicebox_ed25519 jonat@100.79.85.32 \"curl -s --connect-timeout 5 http://100.115.225.100:5557/api/metrics | head -5\"`*\n\n### User Input\n\nContinue\n\n*User accepted the command `wsl -d Ubuntu -- ssh -i ~/.ssh/servicebox_ed25519 jonat@100.79.85.32 \"curl -s --connect-timeout 10 http://100.115.225.100:",
         "that refreshes the port proxy with the current WSL IP.\n\n### User Input\n\nWindows PowerShell\nCopyright (C) Microsoft Corporation. All rights reserved.\n\nInstall the latest PowerShell for new features and improvements! https://aka.ms/PSWindows\n\nPS C:\\WINDOWS\\system32> netsh interface portproxy add v4tov",
-        "h/servicebox_ed25519 jonat@192.158.1.243 \"curl -s --connect-timeout 5 http://100.115.225.100:5557/api/metrics | head -5\"`*\n\n### User Input\n\nContinue\n\n*User accepted the command `wsl -d Ubuntu -- ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 \"curl -s --connect-timeout 10 http://100.115.225.100"
+        "h/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net \"curl -s --connect-timeout 5 http://100.115.225.100:5557/api/metrics | head -5\"`*\n\n### User Input\n\nContinue\n\n*User accepted the command `wsl -d Ubuntu -- ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net \"curl -s --connect-timeout 10 http://100.115.225.100"
       ],
       "activation_keywords": [
         "prometheus",
@@ -6591,8 +6591,8 @@
         "chat_export": 67
       },
       "representative_excerpts": [
-        "\\Users\\jonat\\Documents\\FAITHH\\workspace\\langflow\\processed\"\n\n# 2) (if it's a mapped drive) check UNC path availability\nTest-Path \"\\\\192.158.1.65\\AI\"\n\n# 3) Try running Qdrant with a local folder to see if that fixes it\nmkdir \"C:\\tmp\\qdrant_storage\" -Force\ndocker rm -f qdrant 2>$null\ndocker run -d --n",
-        "un with your preferred storage (local test or NAS)\ndocker run -d --name qdrant -p 6333:6333 -v \"C:\\tmp\\qdrant_storage:/qdrant/storage\" qdrant/qdrant\n\n# or (if you want to try NAS, after confirming UNC accessible)\n# docker run -d --name qdrant -p 6333:6333 -v \"\\\\192.158.1.65\\AI\\qdrant_storage:/qdrant",
+        "\\Users\\jonat\\Documents\\FAITHH\\workspace\\langflow\\processed\"\n\n# 2) (if it's a mapped drive) check UNC path availability\nTest-Path \"\\\\nas.taileb8c60.ts.net\\AI\"\n\n# 3) Try running Qdrant with a local folder to see if that fixes it\nmkdir \"C:\\tmp\\qdrant_storage\" -Force\ndocker rm -f qdrant 2>$null\ndocker run -d --n",
+        "un with your preferred storage (local test or NAS)\ndocker run -d --name qdrant -p 6333:6333 -v \"C:\\tmp\\qdrant_storage:/qdrant/storage\" qdrant/qdrant\n\n# or (if you want to try NAS, after confirming UNC accessible)\n# docker run -d --name qdrant -p 6333:6333 -v \"\\\\nas.taileb8c60.ts.net\\AI\\qdrant_storage:/qdrant",
         "ner\ndocker rm -f qdrant\n\n# quick test run without mounting your volume (isolates issues)\ndocker run -d --name qdrant_test -p 6333:6333 qdrant/qdrant\n\n# show status and logs\ndocker ps --filter \"name=qdrant_test\" --format \"table {{.Names}}\\t{{.Status}}\\t{{.Ports}}\"\ndocker logs qdrant_test --tail 200\n\n"
       ],
       "activation_keywords": [
@@ -8237,9 +8237,9 @@
         "chat_export": 61
       },
       "representative_excerpts": [
-        "jonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH/scripts$ sudo mount -t cifs -o username=Nightmarejam,password=1HappyCamper\\!,uid=$(id -u),gid=$(id -g) //192.158.1.65/pihole /mnt/nas/pihole\r\nmount: /mnt/nas/pihole: special device //192.158.1.65/pihole does not exist.\r\n       dmesg(1) may ha",
-        "jonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH/scripts$ sudo mount -t cifs -o username=Nightmarejam,password='1HappyCamper!',uid=$(id -u),gid=$(id -g) //192.158.1.65/pihole /mnt/nas/pihole\r\nmount: /mnt/nas/pihole: special device //192.158.1.65/pihole does not exist.\r\n       dmesg(1) may h",
-        "jonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH$ sudo mkdir -p /mnt/nas/pihole\r\njonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH$ sudo mount -t cifs -o username=Nightmarejam,password='1HappyCamper!',uid=$(id -u),gid=$(id -g) //192.158.1.65/docker/pihole /mnt/nas/pihole\r\nmount: /mn"
+        "jonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH/scripts$ sudo mount -t cifs -o username=Nightmarejam,password=1HappyCamper\\!,uid=$(id -u),gid=$(id -g) //nas.taileb8c60.ts.net/pihole /mnt/nas/pihole\r\nmount: /mnt/nas/pihole: special device //nas.taileb8c60.ts.net/pihole does not exist.\r\n       dmesg(1) may ha",
+        "jonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH/scripts$ sudo mount -t cifs -o username=Nightmarejam,password='1HappyCamper!',uid=$(id -u),gid=$(id -g) //nas.taileb8c60.ts.net/pihole /mnt/nas/pihole\r\nmount: /mnt/nas/pihole: special device //nas.taileb8c60.ts.net/pihole does not exist.\r\n       dmesg(1) may h",
+        "jonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH$ sudo mkdir -p /mnt/nas/pihole\r\njonat@DESKTOP-JJ1SUHB:/mnt/c/Users/jonat/Documents/FAITHH$ sudo mount -t cifs -o username=Nightmarejam,password='1HappyCamper!',uid=$(id -u),gid=$(id -g) //nas.taileb8c60.ts.net/docker/pihole /mnt/nas/pihole\r\nmount: /mn"
       ],
       "activation_keywords": [
         "mnt",
@@ -8708,7 +8708,7 @@
         "chat_export": 58
       },
       "representative_excerpts": [
-        "Ah \u2014 that `404` is important. It means the URL your Python script is trying to hit no longer exists. The login endpoint for your **UniFi Dream Machine** has changed since the version the script was written for.  \n\nRight now your script is trying:\n\n```\nPOST https://192.158.1.1:8443/api/auth/login\n```",
+        "Ah \u2014 that `404` is important. It means the URL your Python script is trying to hit no longer exists. The login endpoint for your **UniFi Dream Machine** has changed since the version the script was written for.  \n\nRight now your script is trying:\n\n```\nPOST https://192.168.1.1:8443/api/auth/login\n```",
         "Ah \u2014 that 404 means the script is reaching the server (`PootyTang:8443`) but the **API endpoint path** is incorrect for your UniFi OS 4.x setup.  \n\nFor UniFi OS 4.x (UDM/UDM Pro), the endpoints changed slightly compared to earlier UniFi controllers:\n\n- Login endpoint should be:  \n```\nhttps://<HOST>:",
         "Ah \u2014 that `HTTP/1.1 404` confirms it: the endpoint `/proxy/network/api/login` **doesn\u2019t exist** on your UDM OS version. That explains why the Python script fails.  \n\nFor **UniFi OS 4.x / UDM**, the login process has changed. You have a couple of options:\n\n---\n\n### 1\ufe0f\u20e3 Use the new API endpoint\n\nFor U"
       ],
@@ -13833,8 +13833,8 @@
         "chat_export": 44
       },
       "representative_excerpts": [
-        "Response\n\nGen8 has Tailscale with IP `100.79.85.32`. Let me update Vaultwarden to use the Tailscale IP, which provides automatic HTTPS via MagicDNS:\n\n*User accepted the command `wsl -d Ubuntu -- bash -c 'ssh -o ConnectTimeout=5 jonat@192.158.1.243 \"tailscale status --json 2>/dev/null | python3 -c \\\"",
-        "esponse\n\nGen8 has Tailscale with IP `192.158.1.243`. Let me update Vaultwarden to use the Tailscale IP, which provides automatic HTTPS via MagicDNS:\n\n*User accepted the command `wsl -d Ubuntu -- bash -c 'ssh -o ConnectTimeout=5 jonat@192.158.1.243 \"tailscale status --json 2>/dev/null | python3 -c \\\"",
+        "Response\n\nGen8 has Tailscale with IP `100.79.85.32`. Let me update Vaultwarden to use the Tailscale IP, which provides automatic HTTPS via MagicDNS:\n\n*User accepted the command `wsl -d Ubuntu -- bash -c 'ssh -o ConnectTimeout=5 jonat@servicebox.taileb8c60.ts.net \"tailscale status --json 2>/dev/null | python3 -c \\\"",
+        "esponse\n\nGen8 has Tailscale with IP `servicebox.taileb8c60.ts.net`. Let me update Vaultwarden to use the Tailscale IP, which provides automatic HTTPS via MagicDNS:\n\n*User accepted the command `wsl -d Ubuntu -- bash -c 'ssh -o ConnectTimeout=5 jonat@servicebox.taileb8c60.ts.net \"tailscale status --json 2>/dev/null | python3 -c \\\"",
         "dmin_2026`\n\nLet me know once you've created your account and I'll disable signups to secure the instance.\n\n*Updated todo list*\n\n### Planner Response\n\nWaiting for you to create your Vaultwarden account at https://servicebox.taileb8c60.ts.net\n\nLet me know when you're done and I'll:\n1. Disable signups "
       ],
       "activation_keywords": [
@@ -14304,9 +14304,9 @@
         "chat_export": 43
       },
       "representative_excerpts": [
-        "stem    \\\\192.158.1.65\\AI\r\n\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> New-PSDrive -Name W -PSProvider FileSystem -Root \"\\\\192.158.1.65\\docker\" -Persist\r\n\r\nName           Used (GB)     Free (GB) Provider      Root                                                                 CurrentLocation\r\n----       ",
+        "stem    \\\\nas.taileb8c60.ts.net\\AI\r\n\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> New-PSDrive -Name W -PSProvider FileSystem -Root \"\\\\nas.taileb8c60.ts.net\\docker\" -Persist\r\n\r\nName           Used (GB)     Free (GB) Provider      Root                                                                 CurrentLocation\r\n----       ",
         "(.venv) PS C:\\Users\\jonat\\Documents\\FAITHH>\r\n(.venv) PS C:\\Users\\jonat\\Documents\\FAITHH> # Make sure no tasks/scripts still reference 7865\r\n(.venv) PS C:\\Users\\jonat\\Documents\\FAITHH> Get-ScheduledTask | % { $_.Actions } | Select Execute,Arguments | findstr /i 7865\r\n(.venv) PS C:\\Users\\jonat\\Documen",
-        "True\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> Test-Path \"\\\\192.158.1.65\\docker\\\"\r\nTrue\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> Test-Path \"Z:\\Backups\"\r\nTrue\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> # Map \\\\ISaidGoodDay\\DaHomies to Z: (destination backup location)\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> New-PSDrive"
+        "True\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> Test-Path \"\\\\nas.taileb8c60.ts.net\\docker\\\"\r\nTrue\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> Test-Path \"Z:\\Backups\"\r\nTrue\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> # Map \\\\ISaidGoodDay\\DaHomies to Z: (destination backup location)\r\nPS C:\\Users\\jonat\\Documents\\FAITHH> New-PSDrive"
       ],
       "activation_keywords": [
         "ps users",
@@ -14351,9 +14351,9 @@
         "chat_export": 43
       },
       "representative_excerpts": [
-        ".158.2.0/24\u201d (Trusted Devices VLAN)  \n   - **Destination**: Network \u201c192.158.1.0/24\u201d (Management VLAN)  \n   - **Destination Ports**: 443, 8443, 22  \n\n2. **Deny Any \u2192 Management**  \n   - **Action**: Drop  \n   - **Protocol**: All  \n   - **Source**: Network \u201c192.158.20.0/24\u201d, \u201c192.168.10.0/24\u201d, \u201c10.0.1",
+        ".158.2.0/24\u201d (Trusted Devices VLAN)  \n   - **Destination**: Network \u201c192.168.1.0/24\u201d (Management VLAN)  \n   - **Destination Ports**: 443, 8443, 22  \n\n2. **Deny Any \u2192 Management**  \n   - **Action**: Drop  \n   - **Protocol**: All  \n   - **Source**: Network \u201c192.168.20.0/24\u201d, \u201c192.168.10.0/24\u201d, \u201c10.0.1",
         ": LAN IN**.\n\n---\n\n## 3. Add the 10 Rules in Order  \n\nFor each rule, click **+ Add Rule** (or **Clone** an existing rule to save time), then fill in:\n\n| #  | Description                         | Source Network(s)              | Destination Network(s)                  | Protocol | Ports       | Actio",
-        "Deny IoT \u2192 Other VLANs              | IoT (192.158.20.0/24)             | Management, Playground, Trusted, Guest  | All      | Any         | Deny   |\n| 5  | Allow Guest \u2192 Internet              | Guest (192.168.10.0/24)           | WAN (0.0.0.0/0)                          | TCP      | 80,443      | A"
+        "Deny IoT \u2192 Other VLANs              | IoT (192.168.20.0/24)             | Management, Playground, Trusted, Guest  | All      | Any         | Deny   |\n| 5  | Allow Guest \u2192 Internet              | Guest (192.168.10.0/24)           | WAN (0.0.0.0/0)                          | TCP      | 80,443      | A"
       ],
       "activation_keywords": [
         "rule",
@@ -20277,7 +20277,7 @@
         "chat_export": 32
       },
       "representative_excerpts": [
-        "ning in browser:  \n   ```\n   http://192.168.100.1\n   http://192.158.1.1\n   ```\n   (Some models only expose the diagnostic page in bridge mode.)\n\n---\n\n### 2. **Behind the UDM**\nSometimes, even in bridge mode, the modem\u2019s diagnostics are available through your LAN:\n- From a terminal on any PC behind t",
+        "ning in browser:  \n   ```\n   http://192.168.100.1\n   http://192.168.1.1\n   ```\n   (Some models only expose the diagnostic page in bridge mode.)\n\n---\n\n### 2. **Behind the UDM**\nSometimes, even in bridge mode, the modem\u2019s diagnostics are available through your LAN:\n- From a terminal on any PC behind t",
         "Netgear themselves state:  \n> \u201cCable modem firmware is controlled by your ISP. You cannot update it manually.\u201d  \n\n---\n\n## \ud83d\udee0\ufe0f Next Steps You Can Take\n\n1. **Serial Number Access**  \n   - The serial number is printed on the **label of your modem** (usually bottom or back).  \n   - Enter it when prompted",
         "Good question \ud83d\udc4d \u2014 access depends a lot on whether the **Netgear modem is in bridge mode** and whether **Comcast locks the firmware/UI**. Here\u2019s a breakdown:\n\n---\n\n## \ud83d\udd0d Why You Can\u2019t Reach It Easily\n- When in **bridge mode**, many Netgear modems disable the web UI (`192.168.100.1` is the common defau"
       ],
@@ -20371,9 +20371,9 @@
         "chat_export": 32
       },
       "representative_excerpts": [
-        "dp -m set --match-set UBIOS_KEY_ADDRv4_eth4 dst -m udp --dport 43 -m comment --comment 00000000008589934602 -j DNAT --to-destination 192.158.1.15:43\n\n## NAS listening ports\ntcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN      -\ntcp        0      0 0.0.0.0:80              0",
-        "R_HOOK -d 192.158.1.15/32 -p udp -m set --match-set UBIOS_ALL_NETv4_br0 src -m udp --dport 43 -m comment --comment 00000000008589934603 -j MASQUERADE\n-A UBIOS_PREROUTING_USER_HOOK -p tcp -m set --match-set UBIOS_KEY_ADDRv4_eth4 dst -m tcp --dport 80 -m comment --comment 00000000004294967298 -j DNAT ",
-        "R_HOOK -d 192.158.1.15/32 -p udp -m set --match-set UBIOS_ALL_NETv4_br0 src -m udp --dport 43 -m comment --comment 00000000008589934603 -j MASQUERADE\n-A UBIOS_PREROUTING_USER_HOOK -p tcp -m set --match-set UBIOS_KEY_ADDRv4_eth4 dst -m tcp --dport 80 -m comment --comment 00000000004294967298 -j DNAT "
+        "dp -m set --match-set UBIOS_KEY_ADDRv4_eth4 dst -m udp --dport 43 -m comment --comment 00000000008589934602 -j DNAT --to-destination 192.168.1.15:43\n\n## NAS listening ports\ntcp        0      0 0.0.0.0:139             0.0.0.0:*               LISTEN      -\ntcp        0      0 0.0.0.0:80              0",
+        "R_HOOK -d 192.168.1.15/32 -p udp -m set --match-set UBIOS_ALL_NETv4_br0 src -m udp --dport 43 -m comment --comment 00000000008589934603 -j MASQUERADE\n-A UBIOS_PREROUTING_USER_HOOK -p tcp -m set --match-set UBIOS_KEY_ADDRv4_eth4 dst -m tcp --dport 80 -m comment --comment 00000000004294967298 -j DNAT ",
+        "R_HOOK -d 192.168.1.15/32 -p udp -m set --match-set UBIOS_ALL_NETv4_br0 src -m udp --dport 43 -m comment --comment 00000000008589934603 -j MASQUERADE\n-A UBIOS_PREROUTING_USER_HOOK -p tcp -m set --match-set UBIOS_KEY_ADDRv4_eth4 dst -m tcp --dport 80 -m comment --comment 00000000004294967298 -j DNAT "
       ],
       "activation_keywords": [
         "listen",
@@ -22252,9 +22252,9 @@
         "chat_export": 29
       },
       "representative_excerpts": [
-        "e-RestMethod `\n     -Uri \"https://192.158.1.1:8443/api/s/default/rest/networkconf\" `\n     -Credential $creds\n   $networks | ConvertTo-Json -Depth 10\n\n   # Devices & Ports\n   $devices = Invoke-RestMethod `\n     -Uri \"https://192.158.1.1:8443/api/s/default/stat/device\" `\n     -Credential $creds\n   $de",
+        "e-RestMethod `\n     -Uri \"https://192.168.1.1:8443/api/s/default/rest/networkconf\" `\n     -Credential $creds\n   $networks | ConvertTo-Json -Depth 10\n\n   # Devices & Ports\n   $devices = Invoke-RestMethod `\n     -Uri \"https://192.168.1.1:8443/api/s/default/stat/device\" `\n     -Credential $creds\n   $de",
         "# match the \u201cv9.2.87\u201d you saw by dropping the \u201cv\u201d and leading \u201c9.\u201d\n   )\n\n   # Fetch networks (VLANs + SSIDs)\n   networks = c.get_networks(site=SITE)\n\n   # Fetch device topology (UDM, switches, APs, port-to-VLAN mappings)\n   devices  = c.get_devices(site=SITE)\n\n   print(\"=== NETWORKS ===\")\n   print(j",
-        "ial $creds `\n     | ConvertTo-Json -Depth 10 `\n     | Out-File C:\\temp\\networks.json\n\n   # Then view it:\n   Get-Content C:\\temp\\networks.json\n   ```\n\n3. **Repeat** for the devices endpoint:\n   ```powershell\n   Invoke-RestMethod `\n     -Uri \"https://192.158.1.1:8443/api/s/default/stat/device\" `\n     "
+        "ial $creds `\n     | ConvertTo-Json -Depth 10 `\n     | Out-File C:\\temp\\networks.json\n\n   # Then view it:\n   Get-Content C:\\temp\\networks.json\n   ```\n\n3. **Repeat** for the devices endpoint:\n   ```powershell\n   Invoke-RestMethod `\n     -Uri \"https://192.168.1.1:8443/api/s/default/stat/device\" `\n     "
       ],
       "activation_keywords": [
         "unf",
@@ -23664,7 +23664,7 @@
       "representative_excerpts": [
         "\u2705 Saved to `/home/jonat/ai-stack/docs/hardware_inventory.md`\n- \u2705 Will be indexed by ChromaDB on next rebuild\n\n---\n\n## \ud83d\udcca **What's in the document:**\n\n1. **Complete verified specs** (CPU, GPUs, RAM, storage, motherboard)\n2. **All ecosystem devices** (Windows, Mac, ProLiant, NAS, partner's Mac Mini)\n3.",
         "pdated hardware_inventory.md](computer:///mnt/user-data/outputs/hardware_inventory.md)** (791 lines)\n\n---\n\n## \ud83d\udcca **Summary of What We Accomplished:**\n\n### \u2705 **Verified & Documented:**\n1. Complete Windows specs (CPU, GPUs, RAM, storage, mobo, PSU)\n2. GPU configuration optimal (RTX 3090 for AI, 1080 Ti",
-        "e connected** (both devices show private addresses)\n5. **NAS reachable from Mac** (ping 192.158.1.65 successful)\n\n---\n\n## \u274c Not Yet Tested/Completed\n\n1. **Mac \u2192 Windows FAITHH via Tailscale** - Need to test with actual Tailscale IPs\n2. **Hardware inventory document** - Jonathan wants to create upgra"
+        "e connected** (both devices show private addresses)\n5. **NAS reachable from Mac** (ping nas.taileb8c60.ts.net successful)\n\n---\n\n## \u274c Not Yet Tested/Completed\n\n1. **Mac \u2192 Windows FAITHH via Tailscale** - Need to test with actual Tailscale IPs\n2. **Hardware inventory document** - Jonathan wants to create upgra"
       ],
       "activation_keywords": [
         "tailscale",
@@ -27472,9 +27472,9 @@
         "chat_export": 23
       },
       "representative_excerpts": [
-        "s.\n\nGive Cursor this:\n\nCursor instruction \u2014 delete stack_trace and git_log documents:\n\nRun this command and report the full output. Stop after.\nbash\n\ncd /home/jonat/ai-stack && source venv/bin/activate && python3 -c \"\nimport chromadb\nclient = chromadb.HttpClient(host='192.158.1.243', port=8000)\ncol ",
+        "s.\n\nGive Cursor this:\n\nCursor instruction \u2014 delete stack_trace and git_log documents:\n\nRun this command and report the full output. Stop after.\nbash\n\ncd /home/jonat/ai-stack && source venv/bin/activate && python3 -c \"\nimport chromadb\nclient = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)\ncol ",
         "the domain distribution will show you what you actually have as a clean baseline. Then we plan the ALife and Constella re-indexing to fill the gaps.\n\nCursor instruction \u2014 delete json_data documents, then verify:\nRun these two commands in order and report the full output of each. Stop after both.\nCom",
-        "Run these two commands in order and report the full output of each. Stop after both.\n\nCommand 1 \u2014 delete all json_data source_type documents:\nbash\n\ncd /home/jonat/ai-stack && source venv/bin/activate && python3 -c \"\nimport chromadb\nclient = chromadb.HttpClient(host='192.158.1.243', port=8000)\ncol = "
+        "Run these two commands in order and report the full output of each. Stop after both.\n\nCommand 1 \u2014 delete all json_data source_type documents:\nbash\n\ncd /home/jonat/ai-stack && source venv/bin/activate && python3 -c \"\nimport chromadb\nclient = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)\ncol = "
       ],
       "activation_keywords": [
         "col",
@@ -30625,7 +30625,7 @@
       },
       "representative_excerpts": [
         "romadb; c=chromadb.HttpClient(host=\\\"100.79.85.32\\\",port=8000); print(c.get_collection(\\\"faithh_knowledge_base\\\").count())'\"`*\n\n### Planner Response\n\nThe shell escaping is causing too many issues. Let me take a different approach - use the write_to_file tool with the WSL path format that works:\n\n*Ed",
-        "omadb; c=chromadb.HttpClient(host=\\\"192.158.1.243\\\",port=8000); print(c.get_collection(\\\"faithh_knowledge_base\\\").count())'\"`*\n\n### Planner Response\n\nThe shell escaping is causing too many issues. Let me take a different approach - use the write_to_file tool with the WSL path format that works:\n\n*Ed",
+        "omadb; c=chromadb.HttpClient(host=\\\"servicebox.taileb8c60.ts.net\\\",port=8000); print(c.get_collection(\\\"faithh_knowledge_base\\\").count())'\"`*\n\n### Planner Response\n\nThe shell escaping is causing too many issues. Let me take a different approach - use the write_to_file tool with the WSL path format that works:\n\n*Ed",
         "py 2>&1'`*\n\n*User accepted the command `wsl -d Ubuntu -- bash -c 'grep -i \"phase\" /home/jonat/ai-stack/CONTEXT.md | head -5'`*\n\n### Planner Response\n\nCONTEXT.md now shows \"Phase 4 Active\". Now let me create and run the reindex script:\n\n*Updated todo list*\n\n*Edited relevant file*\n\n*User accepted the "
       ],
       "activation_keywords": [

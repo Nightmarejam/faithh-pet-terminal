@@ -69,7 +69,7 @@ The core of the system. Installed and running as a Windows Service (`SensorBridg
   "SensorBridge": {
     "LegacyTcp": {
       "Enabled": false,
-      "Host": "192.158.1.25",
+      "Host": "pve.taileb8c60.ts.net",
       "Port": 9999
     },
     "SensorMapping": {}

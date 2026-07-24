@@ -24,7 +24,7 @@
 | RAM | 15GB DDR3 ECC |
 | Storage | ~840GB free |
 | OS | Ubuntu 22.04 LTS |
-| LAN IP | 192.158.1.243 (canonical in repo docs for Chroma / SSH / metrics) |
+| LAN IP | servicebox.taileb8c60.ts.net (canonical in repo docs for Chroma / SSH / metrics) |
 
 ---
 
@@ -87,17 +87,17 @@ Installed set varies by host; examples recently present: `qwen25-grounded:latest
 ### SSH
 ```bash
 # Gen8 (LAN)
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 ### Service URLs
 ```
 FAITHH UI:    http://localhost:5557
 FAITHH API:   http://localhost:5557/api/chat
-ChromaDB:     http://192.158.1.243:8000
+ChromaDB:     http://servicebox.taileb8c60.ts.net:8000
 Ollama:       http://localhost:11434
 ComfyUI:      http://localhost:8188
-Grafana:      http://192.158.1.243:3000
+Grafana:      http://servicebox.taileb8c60.ts.net:3000
 ```
 
 ---

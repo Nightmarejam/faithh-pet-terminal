@@ -1,20 +1,20 @@
 # Gen8 Network Configuration Guide
 
 **Date:** 2026-01-20  
-**Server IP:** 192.158.1.243 (LAN) / 192.158.1.243 (Tailscale)
+**Server IP:** servicebox.taileb8c60.ts.net (LAN) / servicebox.taileb8c60.ts.net (Tailscale)
 
 ## 🌐 Service Port Map
 
 | Service | Port | URL | Purpose |
 |---------|------|-----|---------|
-| ChromaDB | 8000 | http://192.158.1.243:8000 | Vector Database |
-| Docker Registry | 5000 | http://192.158.1.243:5000 | Private Docker Registry |
-| Registry UI | 5001 | http://192.158.1.243:5001 | Registry Web Interface |
-| Prometheus | 9090 | http://192.158.1.243:9090 | Metrics Collection |
-| Grafana | 3000 | http://192.158.1.243:3000 | Monitoring Dashboard |
-| Gitea | 3002 | http://192.158.1.243:3002 | Git Repository Hosting |
-| Uptime Kuma | 3001 | http://192.158.1.243:3001 | Uptime Monitoring |
-| Node Exporter | 9100 | http://192.158.1.243:9100 | System Metrics |
+| ChromaDB | 8000 | http://servicebox.taileb8c60.ts.net:8000 | Vector Database |
+| Docker Registry | 5000 | http://servicebox.taileb8c60.ts.net:5000 | Private Docker Registry |
+| Registry UI | 5001 | http://servicebox.taileb8c60.ts.net:5001 | Registry Web Interface |
+| Prometheus | 9090 | http://servicebox.taileb8c60.ts.net:9090 | Metrics Collection |
+| Grafana | 3000 | http://servicebox.taileb8c60.ts.net:3000 | Monitoring Dashboard |
+| Gitea | 3002 | http://servicebox.taileb8c60.ts.net:3002 | Git Repository Hosting |
+| Uptime Kuma | 3001 | http://servicebox.taileb8c60.ts.net:3001 | Uptime Monitoring |
+| Node Exporter | 9100 | http://servicebox.taileb8c60.ts.net:9100 | System Metrics |
 | GitLab Runner | - | - | CI/CD Runner |
 
 ## 🔧 Pi-hole Configuration
@@ -27,18 +27,18 @@
 
 1. **Access Pi-hole Admin:**
    ```
-   http://192.158.1.243:???? (check port)
+   http://servicebox.taileb8c60.ts.net:???? (check port)
    ```
 
 2. **Set as DNS Server on Windows:**
    - Open Network Settings
-   - Change DNS to: 192.158.1.243
+   - Change DNS to: servicebox.taileb8c60.ts.net
    - Alternative: 8.8.8.8 (fallback)
 
 3. **Set as DNS Server on Router:**
    - Access router admin
    - DHCP Settings → DNS
-   - Primary: 192.158.1.243
+   - Primary: servicebox.taileb8c60.ts.net
    - Secondary: 8.8.8.8
 
 4. **Configure Pi-hole:**
@@ -52,19 +52,19 @@ Add these to Pi-hole Local DNS:
 
 | Name | IP | Purpose |
 |------|----|---------|
-| gen8.local | 192.158.1.243 | Gen8 Server |
-| faithh.local | 192.158.1.243 | FAITHH Backend |
-| registry.local | 192.158.1.243 | Docker Registry |
-| monitoring.local | 192.158.1.243 | Grafana |
-| git.local | 192.158.1.243 | Gitea |
+| gen8.local | servicebox.taileb8c60.ts.net | Gen8 Server |
+| faithh.local | servicebox.taileb8c60.ts.net | FAITHH Backend |
+| registry.local | servicebox.taileb8c60.ts.net | Docker Registry |
+| monitoring.local | servicebox.taileb8c60.ts.net | Grafana |
+| git.local | servicebox.taileb8c60.ts.net | Gitea |
 
 ## 📱 External Access (Tailscale)
 
 All services accessible via Tailscale:
-- ChromaDB: http://192.158.1.243:8000
-- Grafana: http://192.158.1.243:3000
-- Registry: http://192.158.1.243:5000
-- Gitea: http://192.158.1.243:3002
+- ChromaDB: http://servicebox.taileb8c60.ts.net:8000
+- Grafana: http://servicebox.taileb8c60.ts.net:3000
+- Registry: http://servicebox.taileb8c60.ts.net:5000
+- Gitea: http://servicebox.taileb8c60.ts.net:3002
 
 ## 🔒 Security Recommendations
 
@@ -141,8 +141,8 @@ All services accessible via Tailscale:
 3. Check disk usage: `df -h`
 
 ### Network Issues:
-1. Ping test: `ping 192.158.1.243`
-2. Port test: `telnet 192.158.1.243 <port>`
+1. Ping test: `ping servicebox.taileb8c60.ts.net`
+2. Port test: `telnet servicebox.taileb8c60.ts.net <port>`
 3. DNS test: `nslookup gen8.local`
 
 ## 📋 Next Steps

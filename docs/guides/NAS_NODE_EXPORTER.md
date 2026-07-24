@@ -1,11 +1,11 @@
 # NAS Node Exporter Setup (Synology DSM)
 
-Gen8 LAN IP used in this stack: **192.158.1.243**. Metrics port: **9100**.
+Gen8 LAN IP used in this stack: **servicebox.taileb8c60.ts.net**. Metrics port: **9100**.
 
 ## Verify from WSL or Gen8
 
 ```bash
-curl -s --connect-timeout 5 "http://192.158.1.243:9100/metrics" | grep "^node_cpu_seconds_total" | head -3
+curl -s --connect-timeout 5 "http://servicebox.taileb8c60.ts.net:9100/metrics" | grep "^node_cpu_seconds_total" | head -3
 ```
 
 You should see `node_cpu_seconds_total{cpu=...}` lines. Custom metrics (for example `fail2ban_*`) may appear if a textfile collector is configured.
@@ -13,7 +13,7 @@ You should see `node_cpu_seconds_total{cpu=...}` lines. Custom metrics (for exam
 ## If SSH is available
 
 ```bash
-ssh admin@192.158.1.243
+ssh admin@servicebox.taileb8c60.ts.net
 docker run -d --name node-exporter --restart unless-stopped \
   --net=host --pid=host \
   -v /:/host:ro,rslave \

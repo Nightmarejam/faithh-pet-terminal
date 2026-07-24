@@ -10,7 +10,7 @@ Chroma connection (in order):
 Also: CHROMA_COLLECTION, CHROMA_MAINT_REQUEST_TIMEOUT_S, RAW_DATA_STAGING (staging path only;
   not read by this script — for operators / other tooling).
 
-Network: PULSE_DSM_HOST (default 192.158.1.65) for ICMP average RTT; /mnt/nas-staging is
+Network: PULSE_DSM_HOST (default nas.taileb8c60.ts.net) for ICMP average RTT; /mnt/nas-staging is
   checked for native NFS (nfs/nfs4) to confirm DrvFs bypass.
 
 Examples:
@@ -51,7 +51,7 @@ except ImportError:
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_DSM_HOST = "192.158.1.65"
+DEFAULT_DSM_HOST = "nas.taileb8c60.ts.net"
 NFS_STAGING_MOUNT = "/mnt/nas-staging"
 WSLCONFIG_CANDIDATES = (
     Path("/mnt/c/Users/jonat/.wslconfig"),

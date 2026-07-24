@@ -1,7 +1,7 @@
 # Gen8 ChromaDB Backup Setup
 
 **Date:** 2026-01-18  
-**Server:** Gen8 (192.158.1.243)  
+**Server:** Gen8 (servicebox.taileb8c60.ts.net)  
 **Service:** ChromaDB  
 **Purpose:** Automated daily backups with 7-day retention  
 
@@ -77,26 +77,26 @@ Automated backup system for ChromaDB data running on Gen8 server. The system cre
 
 ### Manual Backup
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 cd ~/services/chromadb
 ./backup.sh
 ```
 
 ### View Backups
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ls -la ~/services/chromadb/backups/
 ```
 
 ### View Logs
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 tail -f ~/services/chromadb/backup.log
 ```
 
 ### Restore from Backup
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 cd ~/services/chromadb
 docker-compose stop chromadb
 rm -rf data/*
@@ -126,19 +126,19 @@ docker-compose start chromadb
 
 ### Check Last Backup
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ls -lt ~/services/chromadb/backups/ | head -2
 ```
 
 ### Check Backup Size
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 du -sh ~/services/chromadb/backups/
 ```
 
 ### Verify Cron Job
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 crontab -l
 ```
 

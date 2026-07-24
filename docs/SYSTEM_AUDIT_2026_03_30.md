@@ -119,7 +119,7 @@ Command executed:
 ```bash
 cd /home/jonat/ai-stack && source venv/bin/activate && python3 -c "
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 for col_name in ['faithh_knowledge_base', 'alife_lineage']:
     col = client.get_collection(col_name)
     sample = col.get(limit=5)
@@ -158,7 +158,7 @@ Command executed:
 ```bash
 cd /home/jonat/ai-stack && source venv/bin/activate && python3 -c "
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 col = client.get_collection('faithh_knowledge_base')
 result = col.get(limit=500, include=['metadatas'])
 domains = {}
@@ -296,13 +296,13 @@ For each: what collection it targets, what domain tag it uses, and what data sou
   - **domain**: no explicit `domain` key found by string scan
   - **source**: `./constella-framework/docs/reference/*`
 - **`scripts/index_docs_to_gen8.py`**
-  - **collection**: Gen8 ChromaDB at `http://192.158.1.243:8000` (per header)
+  - **collection**: Gen8 ChromaDB at `http://servicebox.taileb8c60.ts.net:8000` (per header)
   - **domain**: not stated in first 20 lines
   - **source**: Markdown docs in repo + Constella docs (per header)
 - **`scripts/index_to_chromadb.py`**
   - **collection**: `faithh_knowledge_base`
   - **domain**: not shown in first 20 lines
-  - **source**: extracted conversation JSON (per header) via HTTP to Chroma URL `http://192.158.1.243:8000`
+  - **source**: extracted conversation JSON (per header) via HTTP to Chroma URL `http://servicebox.taileb8c60.ts.net:8000`
 - **`scripts/index_chromadb_direct.py`**
   - **collection**: `faithh_knowledge_base`
   - **domain**: not shown in first 20 lines
@@ -310,7 +310,7 @@ For each: what collection it targets, what domain tag it uses, and what data sou
 - **`scripts/index_one_doc.py`**
   - **collection**: (connects to Chroma; typically `faithh_knowledge_base`)
   - **domain**: not shown in first 20 lines
-  - **source**: single local doc (script title implies harmony doc test; host `192.158.1.243`)
+  - **source**: single local doc (script title implies harmony doc test; host `servicebox.taileb8c60.ts.net`)
 - **`scripts/index_via_backend.py`**
   - **collection**: likely `faithh_knowledge_base` via backend embedder (per header)
   - **domain**: not shown in first 20 lines
@@ -324,7 +324,7 @@ For each: what collection it targets, what domain tag it uses, and what data sou
   - **domain**: no explicit `domain` key found by string scan
   - **source**: specific harmony docs under `projects/constella-framework/harmony/docs/`
 - **`scripts/index_harmony_simple.py`**
-  - **collection**: (connects to Chroma host `192.158.1.243`)
+  - **collection**: (connects to Chroma host `servicebox.taileb8c60.ts.net`)
   - **domain**: no explicit `domain` key found by string scan
   - **source**: harmony docs list under `projects/constella-framework/harmony/docs/*`
 - **`scripts/index_metadata_docs.py`**
@@ -396,11 +396,11 @@ These index into a different collection in the first 20 lines:
 ### `reindex_*.py`
 
 - **`scripts/reindex_core_docs.py`**
-  - **collection**: (connects to Chroma host `192.158.1.243`)
+  - **collection**: (connects to Chroma host `servicebox.taileb8c60.ts.net`)
   - **domain**: not shown in first 20 lines
   - **source**: `SYSTEMS_MAP.md`, `CONTEXT.md`, `scaffolding_state.json`, `project_states.json` (explicit list)
 - **`scripts/reindex_core_docs_v2.py`**
-  - **collection**: (connects to Chroma host `192.158.1.243`)
+  - **collection**: (connects to Chroma host `servicebox.taileb8c60.ts.net`)
   - **domain**: not shown in first 20 lines
   - **source**: `SYSTEMS_MAP.md`, `CONTEXT.md`, ... (explicit list)
 - **`scripts/reindex_project_docs.py`**
@@ -509,7 +509,7 @@ Linux ISaidGoodDay 4.4.302+ #86009 SMP Wed Nov 26 18:28:01 CST 2025 aarch64 GNU/
 ```
 
 ```bash
-curl -sS --max-time 6 http://192.158.1.243:8000/api/v2/heartbeat
+curl -sS --max-time 6 http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 ```
 
 Output:
@@ -533,7 +533,7 @@ C:\             931G  815G  117G 88% /mnt/c
 
 - **WSL / Windows:** Hostname `DESKTOP-JJ1SUHB` matches the Windows machine documented in `docs/reference/HARDWARE_INVENTORY.md` (primary workstation). WSL2 kernel line confirms Microsoft-standard WSL2 build.
 - **NAS:** SSH host alias `nas` resolves to Synology **DS220j** (`synology_rtd1296_ds220j`), hostname **ISaidGoodDay**.
-- **Gen8 (Chroma):** **Not verified:** Gen8 host-level identity (OS hostname, `uname`, hardware label on the metal/VM). **Verified here:** Chroma HTTP v2 heartbeat at `192.158.1.243:8000` succeeded from WSL at capture time (service reachability only). **Gen8** is treated as the host exposing that endpoint (consistent with Section 2 and indexing script headers).
+- **Gen8 (Chroma):** **Not verified:** Gen8 host-level identity (OS hostname, `uname`, hardware label on the metal/VM). **Verified here:** Chroma HTTP v2 heartbeat at `servicebox.taileb8c60.ts.net:8000` succeeded from WSL at capture time (service reachability only). **Gen8** is treated as the host exposing that endpoint (consistent with Section 2 and indexing script headers).
 - **Disk pressure note:** Windows volume via `/mnt/c` showed **~88%** used in `df`; gate doc flags this for health review.
 - **Windows-native check:** Plex library paths and drive letters must be validated in Win32 (see Gate B-win in the baseline report); WSL `df`/`/mnt/*` alone is insufficient for PMS `UNVERIFIED:PMS_LIBRARY_ROOT`.
 

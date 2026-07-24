@@ -620,7 +620,7 @@ else:
     print("🔑 Anthropic API key not set (Claude via /api/chat requires ANTHROPIC_API_KEY in .env)")
 
 CHROMA_URL = os.environ.get("CHROMA_URL")
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")  # Updated for Proxmox (Gen8 NAS)
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "servicebox.taileb8c60.ts.net")  # Updated for Proxmox (Gen8 NAS)
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", 8000))
 FILESYSTEM_TOKEN = os.environ.get("FAITHH_FILESYSTEM_TOKEN")
 UPLOAD_FOLDER = Path.home() / 'ai-stack' / 'uploads'

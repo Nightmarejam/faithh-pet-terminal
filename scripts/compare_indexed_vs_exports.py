@@ -28,7 +28,7 @@ print("-" * 70)
 
 try:
     import chromadb
-    client = chromadb.HttpClient(host="192.158.1.10", port=8000)
+    client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
     col = client.get_collection("faithh_knowledge_base")
     
     total_docs = col.count()

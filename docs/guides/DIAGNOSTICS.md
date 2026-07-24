@@ -420,7 +420,7 @@ echo "State snapshot template created at ./snapshots/"
 
 - Adjusted paths to ~/ai-stack for Jonathan's directory structure
 - Some commands assume macOS (based on stat -f flag)
-- ChromaDB is accessed via HTTP client at http://192.158.1.243:8000
+- ChromaDB is accessed via HTTP client at http://servicebox.taileb8c60.ts.net:8000
 - GPU commands assume NVIDIA - should work with RTX 3090 + 1080 Ti setup
 - Tailscale should show ~6 devices if network is healthy
 - PULSE pattern tracker added as of Jan 2026 - check Task 4.4

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Gen8 Health Check Script (Simplified)
-GEN8_IP="192.158.1.243"
+GEN8_IP="servicebox.taileb8c60.ts.net"
 FAILED=0
 
 echo "🏥 Gen8 Server Health Check"

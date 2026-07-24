@@ -32,7 +32,7 @@ except ImportError as e:
     print("Run: source venv/bin/activate first")
     sys.exit(1)
 
-CHROMA_HOST = "192.158.1.10"
+CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 CHROMA_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

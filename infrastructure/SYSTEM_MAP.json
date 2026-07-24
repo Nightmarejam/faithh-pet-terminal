@@ -19,7 +19,7 @@
       },
       "hostnames": ["DESKTOP-JJ1SUHB"],
       "addresses": {
-        "lan": ["192.158.1.232"],
+        "lan": ["192.168.1.232"],
         "tailscale": ["100.115.225.100"],
         "local": ["127.0.0.1"]
       },
@@ -81,7 +81,7 @@
       "hostnames": ["servicebox"],
       "addresses": {
         "tailscale": ["100.79.85.32"],
-        "lan": ["192.158.1.10"]
+        "lan": ["servicebox.taileb8c60.ts.net"]
       },
       "hardware": {
         "cpu": "Intel Xeon E3-1220L V2",
@@ -93,7 +93,7 @@
         "ssh": "ssh -i ~/.ssh/servicebox_ed25519 jonat@100.79.85.32",
         "notes": "Primary data services. ChromaDB on port 8000. No GPU available."
       },
-      "notes": "ChromaDB accessible from FAITHH VM at 192.158.1.10:8000"
+      "notes": "ChromaDB accessible from FAITHH VM at servicebox.taileb8c60.ts.net:8000"
     },
     {
       "id": "synology-nas",
@@ -199,7 +199,7 @@
       "status": "running",
       "ports": [8000],
       "endpoints": [
-        { "method": "GET", "path": "/api/v2/heartbeat", "url": "http://192.158.1.10:8000/api/v2/heartbeat", "purpose": "health" }
+        { "method": "GET", "path": "/api/v2/heartbeat", "url": "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat", "purpose": "health" }
       ],
       "notes": "Primary knowledge base"
     },
@@ -272,7 +272,7 @@
       "to_unit": "gen8-servicebox",
       "type": "lan",
       "ports": [8000],
-      "description": "FAITHH VM uses Gen8 ChromaDB over LAN (192.158.1.10:8000)"
+      "description": "FAITHH VM uses Gen8 ChromaDB over LAN (servicebox.taileb8c60.ts.net:8000)"
     },
     {
       "from_unit": "faithh-vm",

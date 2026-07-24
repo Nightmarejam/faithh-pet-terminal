@@ -100,7 +100,7 @@ Create script to identify ChromaDB entries pointing to files that no longer exis
                     │         Gen 8 (servicebox)          │
                     │  ChromaDB: 27,494 docs (primary)    │
                     │  Pi-hole, Uptime Kuma               │
-                    │  IP: 192.158.1.243                   │
+                    │  IP: servicebox.taileb8c60.ts.net                   │
                     └──────────────┬──────────────────────┘
                                    │ Tailscale
         ┌──────────────────────────┼──────────────────────┐
@@ -121,10 +121,10 @@ Create script to identify ChromaDB entries pointing to files that no longer exis
 ### ChromaDB Commands
 ```bash
 # Count documents
-curl -s "http://192.158.1.243:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/count"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/count"
 
 # Sample documents
-curl -s -X POST "http://192.158.1.243:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/get" \
+curl -s -X POST "http://servicebox.taileb8c60.ts.net:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/get" \
   -H "Content-Type: application/json" \
   -d '{"limit": 5, "include": ["metadatas"]}'
 ```

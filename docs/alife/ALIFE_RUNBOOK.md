@@ -107,7 +107,7 @@ randomness (`os.urandom` only), connects to ChromaDB on gen8 at port 8000.
 
 **Note**: ChromaDB is on gen8:8000 but so is vLLM during normal operation on faithhvm.
 If running Band 2 experiments that write to gen8's ChromaDB, ensure there's no port
-conflict. Band 2 connects to gen8 directly (192.158.1.10:8000) while vLLM runs on
+conflict. Band 2 connects to gen8 directly (servicebox.taileb8c60.ts.net:8000) while vLLM runs on
 faithhvm:8000 — no actual conflict, just worth tracking.
 
 Status: Band 2 is not documented in the roadmap. Needs architectural review to determine

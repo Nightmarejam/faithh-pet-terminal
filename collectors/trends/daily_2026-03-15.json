@@ -191,7 +191,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -199,7 +199,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -210,7 +210,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -221,15 +221,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -238,7 +238,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -250,7 +250,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -260,14 +260,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -672,7 +672,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -680,7 +680,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -691,7 +691,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -702,15 +702,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -719,7 +719,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -731,7 +731,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -741,14 +741,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -1153,7 +1153,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -1161,7 +1161,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -1172,7 +1172,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -1183,15 +1183,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -1200,7 +1200,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -1212,7 +1212,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -1222,14 +1222,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -1634,7 +1634,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -1642,7 +1642,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -1653,7 +1653,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -1664,15 +1664,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -1681,7 +1681,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -1693,7 +1693,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -1703,14 +1703,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -2115,7 +2115,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -2123,7 +2123,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -2134,7 +2134,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -2145,15 +2145,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -2162,7 +2162,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -2174,7 +2174,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -2184,14 +2184,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -2596,7 +2596,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -2604,7 +2604,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -2615,7 +2615,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -2626,15 +2626,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -2643,7 +2643,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -2655,7 +2655,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -2665,14 +2665,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -3077,7 +3077,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -3085,7 +3085,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -3096,7 +3096,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -3107,15 +3107,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -3124,7 +3124,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -3136,7 +3136,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -3146,14 +3146,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -3558,7 +3558,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -3566,7 +3566,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -3577,7 +3577,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -3588,15 +3588,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -3605,7 +3605,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -3617,7 +3617,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -3627,14 +3627,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -4039,7 +4039,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -4047,7 +4047,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -4058,7 +4058,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -4069,15 +4069,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -4086,7 +4086,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -4098,7 +4098,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -4108,14 +4108,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -4520,7 +4520,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -4528,7 +4528,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -4539,7 +4539,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -4550,15 +4550,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -4567,7 +4567,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -4579,7 +4579,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -4589,14 +4589,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -5001,7 +5001,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -5009,7 +5009,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -5020,7 +5020,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -5031,15 +5031,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -5048,7 +5048,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -5060,7 +5060,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -5070,14 +5070,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -5482,7 +5482,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -5490,7 +5490,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -5501,7 +5501,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -5512,15 +5512,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -5529,7 +5529,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -5541,7 +5541,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -5551,14 +5551,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -5963,7 +5963,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -5971,7 +5971,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -5982,7 +5982,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -5993,15 +5993,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -6010,7 +6010,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -6022,7 +6022,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -6032,14 +6032,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -6444,7 +6444,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -6452,7 +6452,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -6463,7 +6463,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -6474,15 +6474,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -6491,7 +6491,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -6503,7 +6503,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -6513,14 +6513,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -6931,7 +6931,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -6939,7 +6939,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -6950,7 +6950,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -6961,15 +6961,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -6978,7 +6978,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -6990,7 +6990,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -7000,14 +7000,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -7418,7 +7418,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -7426,7 +7426,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -7437,7 +7437,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -7448,15 +7448,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -7465,7 +7465,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -7477,7 +7477,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -7487,14 +7487,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -7899,7 +7899,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -7907,7 +7907,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -7918,7 +7918,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -7929,15 +7929,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -7946,7 +7946,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -7958,7 +7958,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -7968,14 +7968,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -8380,7 +8380,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -8388,7 +8388,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -8399,7 +8399,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -8410,15 +8410,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -8427,7 +8427,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -8439,7 +8439,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -8449,14 +8449,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -8861,7 +8861,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -8869,7 +8869,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -8880,7 +8880,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -8891,15 +8891,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -8908,7 +8908,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -8920,7 +8920,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -8930,14 +8930,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -9342,7 +9342,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -9350,7 +9350,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -9361,7 +9361,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -9372,15 +9372,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -9389,7 +9389,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -9401,7 +9401,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -9411,14 +9411,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -9823,7 +9823,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -9831,7 +9831,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -9842,7 +9842,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -9853,15 +9853,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -9870,7 +9870,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -9882,7 +9882,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -9892,14 +9892,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },
@@ -10304,7 +10304,7 @@
               "cpu": "Intel Xeon E3-1265L v2",
               "ram": "15GB DDR3-1600 ECC",
               "ips": {
-                "lan": "192.158.1.243",
+                "lan": "servicebox.taileb8c60.ts.net",
                 "tailscale": "100.79.85.32"
               }
             },
@@ -10312,7 +10312,7 @@
               "chromadb": {
                 "status": "running",
                 "port": 8000,
-                "api_url": "http://192.158.1.243:8000",
+                "api_url": "http://servicebox.taileb8c60.ts.net:8000",
                 "collection": "faithh_knowledge_base",
                 "documents": 32499,
                 "embedding_model": "all-MiniLM-L6-v2 (384-dim)",
@@ -10323,7 +10323,7 @@
               "grafana": {
                 "status": "running",
                 "port": 3000,
-                "url": "http://192.158.1.243:3000",
+                "url": "http://servicebox.taileb8c60.ts.net:3000",
                 "credentials": "admin/Grafana2026!",
                 "deployed": "2026-01-20",
                 "notes": "Monitoring dashboards for system and Docker"
@@ -10334,15 +10334,15 @@
                   "http": 3002,
                   "ssh": 2222
                 },
-                "url": "http://192.158.1.243:3002",
+                "url": "http://servicebox.taileb8c60.ts.net:3002",
                 "deployed": "2026-01-20",
                 "notes": "Git repository hosting with GitHub OAuth"
               },
               "vaultwarden": {
                 "status": "running",
                 "port": 8080,
-                "url": "http://192.158.1.243:8080",
-                "admin_url": "http://192.158.1.243:8080/admin",
+                "url": "http://servicebox.taileb8c60.ts.net:8080",
+                "admin_url": "http://servicebox.taileb8c60.ts.net:8080/admin",
                 "deployed": "2026-01-20",
                 "notes": "Password manager (Bitwarden compatible)"
               },
@@ -10351,7 +10351,7 @@
                 "location": "~/services/pihole/",
                 "dns_port": 53,
                 "web_port": 80,
-                "web_url": "http://192.158.1.243/admin",
+                "web_url": "http://servicebox.taileb8c60.ts.net/admin",
                 "credentials": "admin/PiHole2026!",
                 "upstream_dns": [
                   "1.1.1.1",
@@ -10363,7 +10363,7 @@
               "prometheus": {
                 "status": "running",
                 "port": 9090,
-                "url": "http://192.158.1.243:9090",
+                "url": "http://servicebox.taileb8c60.ts.net:9090",
                 "deployed": "2026-01-20",
                 "notes": "Metrics collection for Grafana"
               },
@@ -10373,14 +10373,14 @@
                   "registry": 5000,
                   "ui": 5001
                 },
-                "url": "http://192.158.1.243:5001",
+                "url": "http://servicebox.taileb8c60.ts.net:5001",
                 "deployed": "2026-01-20",
                 "notes": "Private Docker image repository"
               },
               "uptime_kuma": {
                 "status": "running",
                 "port": 3001,
-                "url": "http://192.158.1.243:3001",
+                "url": "http://servicebox.taileb8c60.ts.net:3001",
                 "deployed": "2026-01-20",
                 "notes": "Uptime monitoring"
               },

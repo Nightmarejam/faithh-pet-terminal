@@ -54,7 +54,7 @@
 ```python
 Health Checks Implemented:
 ✅ Backend Service (localhost:5557)
-✅ ChromaDB (192.158.1.243:8000) 
+✅ ChromaDB (servicebox.taileb8c60.ts.net:8000) 
 ✅ Ollama (localhost:11434)
 ✅ Groq API (via backend health)
 ✅ Gemini API (via backend health)

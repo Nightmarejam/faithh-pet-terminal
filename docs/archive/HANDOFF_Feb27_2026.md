@@ -77,7 +77,7 @@ Success = no 502 errors, model_used shows available model.
 
 ## TASK 2 — Diagnose RAG Retrieval
 
-The retrieval pipeline exists (ChromaDB connected at 192.158.1.243:8000)
+The retrieval pipeline exists (ChromaDB connected at servicebox.taileb8c60.ts.net:8000)
 but is not surfacing project documents in responses.
 
 **Step 1 — Check what's indexed:**
@@ -86,7 +86,7 @@ cd /home/jonat/ai-stack
 source venv/bin/activate
 python3 -c "
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 cols = client.list_collections()
 for c in cols:
     col = client.get_collection(c.name)

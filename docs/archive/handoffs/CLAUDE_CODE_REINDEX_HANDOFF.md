@@ -5,7 +5,7 @@
 Clear old conversation entries from Gen8 ChromaDB and reindex all 285 conversations from fresh exports.
 
 ## Current State
-- **Gen8 ChromaDB**: 27,616 chunks at http://192.158.1.243:8000
+- **Gen8 ChromaDB**: 27,616 chunks at http://servicebox.taileb8c60.ts.net:8000
   - 18,401 ChatGPT chunks (Oct-Dec 2025 only)
   - 2,264 Claude chunks (Oct-Dec 2025 only)
   - 6,951 Documentation chunks (KEEP THESE)
@@ -35,7 +35,7 @@ python knowledge_base/clear_and_reindex.py
 python knowledge_base/index_conversations.py
 
 # 4. Verify
-curl -s "http://192.158.1.243:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/count"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/tenants/default_tenant/databases/default_database/collections/71e13a01-cbb6-48ba-a126-2a16320d40c0/count"
 ```
 
 ## Expected Results
@@ -57,7 +57,7 @@ python -c "
 import chromadb
 from sentence_transformers import SentenceTransformer
 
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 coll = client.get_collection('faithh_knowledge_base')
 print(f'Total docs: {coll.count()}')
 
@@ -71,6 +71,6 @@ for i, (doc, meta) in enumerate(zip(results['documents'][0], results['metadatas'
 ```
 
 ## Notes
-- Gen8 IP: 192.158.1.243 (Tailscale)
+- Gen8 IP: servicebox.taileb8c60.ts.net (Tailscale)
 - Collection: faithh_knowledge_base
 - This will give complete conversation history from Feb 2024

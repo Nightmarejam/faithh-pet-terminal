@@ -24,7 +24,7 @@ This document extracts what's **DONE**, what **NEEDS WORK**, and what's **BLOCKE
 - [x] ChromaDB on Gen8 (38,295 docs indexed)
 - [x] Ollama with 3 models (deepseek-r1:32b, qwen25-grounded, llama3.3:70b)
 - [x] Gen8 MicroServer with 12 Docker services
-- [x] Gen8 LAN networking for services (192.158.1.243)
+- [x] Gen8 LAN networking for services (servicebox.taileb8c60.ts.net)
 
 ### FAITHH Core Features
 - [x] Multi-provider LLM (Ollama, Groq, Gemini)

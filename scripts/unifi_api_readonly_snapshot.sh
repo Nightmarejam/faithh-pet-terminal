@@ -5,7 +5,7 @@ set -euo pipefail
 # This script logs into UniFi OS, pulls selected Network app endpoints,
 # writes JSON responses to disk, and logs out.
 
-UDM_BASE_URL="${UDM_BASE_URL:-https://192.158.1.1}"
+UDM_BASE_URL="${UDM_BASE_URL:-https://192.168.1.1}"
 UDM_USER="${UDM_USER:-}"
 UDM_PASS="${UDM_PASS:-}"
 UDM_MFA_TOKEN="${UDM_MFA_TOKEN:-}"

@@ -1,6 +1,6 @@
 # Media Library Guide
 
-**Server:** Plex on Gen8 (http://192.158.1.243:32400)  
+**Server:** Plex on Gen8 (http://servicebox.taileb8c60.ts.net:32400)  
 **Media root:** /mnt/x/media/ (NAS X: drive)  
 **Quality target:** 4K UHD Remux → 4K → 1080p Remux → 1080p
 
@@ -151,7 +151,7 @@ Bad signs: CAM, TS, TC, HDCAM (pre-release cinema recordings)
 
 1. Install Plexamp on iPhone/Mac
 2. Sign in with Plex account
-3. It finds your server at 192.158.1.243 automatically
+3. It finds your server at servicebox.taileb8c60.ts.net automatically
 4. Add music to /mnt/x/media/music/ → Plexamp sees it within minutes
 5. Sonic Sage: tap radio icon → describe what you want to hear
 

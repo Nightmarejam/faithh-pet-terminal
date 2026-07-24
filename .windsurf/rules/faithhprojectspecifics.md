@@ -10,7 +10,7 @@ FAITHH CANONICAL FILES:
 TESTING:
 - UI: http://localhost:5557/
 - Backend health: curl http://localhost:5557/health
-- ChromaDB: curl http://192.158.1.243:8000/api/v2/heartbeat
+- ChromaDB: curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 
 BEFORE FRONTEND CHANGES:
 - Verify: grep -A2 "@app.route('/')" faithh_professional_backend_fixed.py

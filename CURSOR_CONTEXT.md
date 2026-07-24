@@ -5,11 +5,11 @@ Last verified: 2026-05-11
 
 | Component | Status | Address |
 |---|---|---|
-| FAITHH backend | ✅ Running | http://192.158.1.100:5557 |
-| ChromaDB | ✅ Running | 192.158.1.10:8000 |
-| vLLM | ✅ Running | http://192.158.1.100:8000 |
+| FAITHH backend | ✅ Running | http://faithh.taileb8c60.ts.net:5557 |
+| ChromaDB | ✅ Running | servicebox.taileb8c60.ts.net:8000 |
+| vLLM | ✅ Running | http://faithh.taileb8c60.ts.net:8000 |
 | Groq | ✅ Configured | llama-3.3-70b-versatile |
-| SSH | ✅ Working | ssh faithh (jonat@192.158.1.100) |
+| SSH | ✅ Working | ssh faithh (jonat@faithh.taileb8c60.ts.net) |
 
 ## Backend entrypoint
 
@@ -47,7 +47,7 @@ These are the next things to rebuild. The monolith exists in git at `097e5f3` fo
 `~/ai-stack/images/pulse.png` — recovered (74KB)
 `~/ai-stack/favicon.ico` — recovered
 
-Access: http://192.158.1.100:5557 (main UI), http://192.158.1.100:5557/faithh_cockpit.html (cockpit)
+Access: http://faithh.taileb8c60.ts.net:5557 (main UI), http://faithh.taileb8c60.ts.net:5557/faithh_cockpit.html (cockpit)
 
 ## Git state
 
@@ -72,9 +72,9 @@ Recovery branch: recovery/march14 (keep, useful reference)
 
 | Host | Role | IP |
 |---|---|---|
-| faithh VM (Proxmox) | FAITHH backend, vLLM, inference | 192.158.1.100 |
-| Gen8 NAS | ChromaDB, Plex, file storage | 192.158.1.10 |
-| Windows (bare metal) | Dev workstation, Windsurf, browser | 192.158.1.101 |
+| faithh VM (Proxmox) | FAITHH backend, vLLM, inference | faithh.taileb8c60.ts.net |
+| Gen8 NAS | ChromaDB, Plex, file storage | servicebox.taileb8c60.ts.net |
+| Windows (bare metal) | Dev workstation, Windsurf, browser | desktop-iifeikl.taileb8c60.ts.net |
 
 ## .env location
 `~/ai-stack/.env` — contains GROQ_API_KEY, CHROMA_*, BACKEND_PORT=5557
@@ -91,7 +91,7 @@ Recovery branch: recovery/march14 (keep, useful reference)
 
 ## Parked projects (valid but not now)
 - Proxmox/Windows bare metal separation
-- MOTU AVB audio (828ES at 192.158.1.5)
+- MOTU AVB audio (828ES at 192.168.1.5)
 - Tom Cat Sound LLC — Kevin Dunn 33% withdrawal not executed
 - Crypto trading bot — RTX 3090 mining ETC ~107 MH/s, net -$0.70/day
 - vLLM inference quality eval for coding (Continue.dev integration)

@@ -93,7 +93,7 @@ let errorMessage = isTimeout
 ### **Backend Services Status**
 ```bash
 ✅ Backend (localhost:5557): Healthy - 0.014s response time
-✅ ChromaDB (192.158.1.243:8000): Healthy - 0.003s response time  
+✅ ChromaDB (servicebox.taileb8c60.ts.net:8000): Healthy - 0.003s response time  
 ✅ Ollama (localhost:11434): Healthy - 0.001s response time
 ✅ Groq API: Available - 0.011s response time
 ✅ Gemini API: Available - 0.013s response time

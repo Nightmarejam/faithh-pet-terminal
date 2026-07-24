@@ -4,7 +4,7 @@
 Create a lightweight resource monitoring script on Gen8 that tracks CPU, RAM, and disk usage.
 
 ## Requirements
-- SSH to Gen8: `ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243`
+- SSH to Gen8: `ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net`
 - Create script at: `~/services/monitoring/check_resources.sh`
 - Log to: `~/services/monitoring/resource_usage.log`
 - Track: CPU %, RAM %, Disk % for / and /home

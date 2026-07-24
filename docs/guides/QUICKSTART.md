@@ -38,7 +38,7 @@ Use this when the UI or RAG “works sometimes” but fails after upgrades or ne
 | Symptom | What to check |
 |--------|-----------------|
 | **Wrong GPU / Ollama sees 1080 Ti instead of 3090** | Repo `.env`: `CUDA_VISIBLE_DEVICES`, `FAITHH_CUDA_PHYSICAL_DEVICE`, `FAITHH_STRICT_LLM_GPU`. Windows `.wslconfig` with `gpus=all`, then `wsl --shutdown`. Full notes: [WSL2_MULTI_GPU.md](WSL2_MULTI_GPU.md). |
-| **Chroma / RAG timeouts from WSL** | Gen8 Chroma defaults to **LAN** `192.158.1.243:8000` in code and `.env.example`. Set `CHROMA_HOST` in **repo-root `.env`** to the address your WSL box can reach (LAN vs Tailscale). Stale **100.x** examples in old docs are not the canonical default. **Ops vs data:** Prometheus `node_exporter` on Gen8 may stay on **100.x** (`:9100`); the **hot RAG path** is Chroma **:8000** on LAN unless you explicitly override. |
+| **Chroma / RAG timeouts from WSL** | Gen8 Chroma defaults to **LAN** `servicebox.taileb8c60.ts.net:8000` in code and `.env.example`. Set `CHROMA_HOST` in **repo-root `.env`** to the address your WSL box can reach (LAN vs Tailscale). Stale **100.x** examples in old docs are not the canonical default. **Ops vs data:** Prometheus `node_exporter` on Gen8 may stay on **100.x** (`:9100`); the **hot RAG path** is Chroma **:8000** on LAN unless you explicitly override. |
 | **Windows Defender / WSL2 “bridge”** | If `localhost:5557` works from WSL `curl` but not from Edge/Chrome on Windows, check **Windows Defender Firewall** rules for WSL/Hyper-V adapters and for **allowing local Node/Python listeners**. Prefer **loopback** access via `http://localhost:5557/` or `http://127.0.0.1:5557/` (same origin as typical dev). After changing firewall or WSL networking mode, run `wsl --shutdown` and reopen the distro. |
 | **Browser chat fails with private-network / CORS (file vs localhost)** | The backend enables private-network access for local development (`allow_private_network=True` on CORS). Prefer the served UI at `http://localhost:5557/` rather than opening `faithh_pet_v4.html` as a `file://` URL. |
 | **Streaming errors after Werkzeug 3** | `/api/chat` SSE paths yield **bytes** (not `str`) for compatibility with Werkzeug 3. If you patch streaming, keep generator chunks as UTF-8-encoded bytes. |
@@ -332,10 +332,10 @@ nvidia-smi
 ### ChromaDB unreachable
 ```bash
 # Check Gen8 is up
-ping -c 2 192.158.1.243
+ping -c 2 servicebox.taileb8c60.ts.net
 
 # Check ChromaDB heartbeat
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 ```
 
 ### RAG returns irrelevant results
@@ -366,7 +366,7 @@ python3 scripts/generate_context.py --dry-run
 |---------|----------|-----------|
 | FAITHH Backend | localhost:5557 (WSL2) | ✅ Yes |
 | Ollama | localhost:11434 (WSL2, systemd) | For local models only |
-| ChromaDB | 192.158.1.243:8000 (Gen8) | For RAG search |
+| ChromaDB | servicebox.taileb8c60.ts.net:8000 (Gen8) | For RAG search |
 | Groq API | api.groq.com | For Groq provider |
 | Gemini API | Google Cloud | For Gemini provider |
 

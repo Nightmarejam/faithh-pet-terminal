@@ -496,7 +496,7 @@ class FileCollector(BaseCollector):
         "models": ["llama31-faithh:latest", "qwen3-faithh:latest"]
       },
       "chromadb_gen8": {
-        "url": "http://192.158.1.243:8000",
+        "url": "http://servicebox.taileb8c60.ts.net:8000",
         "status": "degraded",
         "response_time_ms": 89,
         "reachable": true,
@@ -539,7 +539,7 @@ class HealthCollector(BaseCollector):
             "type": "http"
         },
         "chromadb_gen8": {
-            "url": "http://192.158.1.243:8000/api/v2/heartbeat",
+            "url": "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat",
             "type": "chromadb",
             "expected_docs": 28876
         }
@@ -592,7 +592,7 @@ class HealthCollector(BaseCollector):
                     # Check if we can get collections
                     try:
                         coll_resp = requests.get(
-                            "http://192.158.1.243:8000/api/v2/collections",
+                            "http://servicebox.taileb8c60.ts.net:8000/api/v2/collections",
                             timeout=5
                         )
                         if coll_resp.status_code == 200:

@@ -251,19 +251,19 @@ Should run without errors. Observer errors print as warnings but do not crash.
 
 **Step 2 — Verify ChromaDB collection exists:**
 ```bash
-curl http://192.158.1.243:8000/api/v1/collections
+curl http://servicebox.taileb8c60.ts.net:8000/api/v1/collections
 ```
 Should show `alife_lineage` collection.
 
 **Step 3 — Verify events were written:**
 ```bash
-curl http://192.158.1.243:8000/api/v1/collections/alife_lineage/count
+curl http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/alife_lineage/count
 ```
 Should return a count > 0.
 
 **Step 4 — Verify document field is natural language:**
 ```bash
-curl -X POST http://192.158.1.243:8000/api/v1/collections/alife_lineage/query \
+curl -X POST http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/alife_lineage/query \
   -H "Content-Type: application/json" \
   -d '{"query_texts": ["agent reproduced"], "n_results": 1}'
 ```

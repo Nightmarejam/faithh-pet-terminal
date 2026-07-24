@@ -1146,7 +1146,7 @@
     },
     {
       "id": "624d9e28b1e5e3de",
-      "text": " (or Container Manager setup) with the clean rate-limit/cache/env/logging values already wired in.\n\n---\n\nDo you want me to:\n- A) Parse your current container config and give you a corrected **docker-compose.yml** (you can import into Synology)?  \n- B) Just give you the **exact environment variables** to add in Synology UI \u2192 Container \u2192 Edit \u2192 Environment?  \n\nWhich approach would be easiest for how you manage the container right now?\n\n**USER**: login as: Nightmarejam\r\nNightmarejam@192.158.1.65's ",
+      "text": " (or Container Manager setup) with the clean rate-limit/cache/env/logging values already wired in.\n\n---\n\nDo you want me to:\n- A) Parse your current container config and give you a corrected **docker-compose.yml** (you can import into Synology)?  \n- B) Just give you the **exact environment variables** to add in Synology UI \u2192 Container \u2192 Edit \u2192 Environment?  \n\nWhich approach would be easiest for how you manage the container right now?\n\n**USER**: login as: Nightmarejam\r\nNightmarejam@nas.taileb8c60.ts.net's ",
       "label": "log_entry",
       "is_signal": false,
       "quality": 0.4,
@@ -1353,7 +1353,7 @@
     },
     {
       "id": "7ac0af7ca5301201",
-      "text": "rverIP=\"192.158.1.65\" \\\n  -e DNSMASQ_USER=\"root\" \\\n  -e PIHOLE_DNS_=\"1.1.1.1;8.8.8.8\" \\\n  -e FTLCONF_CACHE_SIZE=\"10000\" \\\n  -e FTLCONF_RATE_LIMIT=\"1000/60\" \\\n  -e FTLCONF_MAXDBDAYS=\"30\" \\\n  -p 53:53/tcp -p 53:53/udp -p 8081:80 -p 8443:443 \\\n  -v /volume1/docker/pihole/etc-pihole:/etc/pihole \\\n  -v /volume1/docker/pihole/etc-dnsmasq.d:/etc/dnsmasq.d \\\n  --restart unless-stopped \\\n  --log-opt max-size=50m --log-opt max-file=3 \\\n  pihole/pihole:latest\n```\n\nNotes:\n- I preserved `ServerIP=192.158.1.6",
+      "text": "rverIP=\"nas.taileb8c60.ts.net\" \\\n  -e DNSMASQ_USER=\"root\" \\\n  -e PIHOLE_DNS_=\"1.1.1.1;8.8.8.8\" \\\n  -e FTLCONF_CACHE_SIZE=\"10000\" \\\n  -e FTLCONF_RATE_LIMIT=\"1000/60\" \\\n  -e FTLCONF_MAXDBDAYS=\"30\" \\\n  -p 53:53/tcp -p 53:53/udp -p 8081:80 -p 8443:443 \\\n  -v /volume1/docker/pihole/etc-pihole:/etc/pihole \\\n  -v /volume1/docker/pihole/etc-dnsmasq.d:/etc/dnsmasq.d \\\n  --restart unless-stopped \\\n  --log-opt max-size=50m --log-opt max-file=3 \\\n  pihole/pihole:latest\n```\n\nNotes:\n- I preserved `ServerIP=192.168.1.6",
       "label": "technical_explanation",
       "is_signal": true,
       "quality": 0.8,

@@ -394,7 +394,7 @@ metadata = {
 - [ ] Implement all 6 experiment observation schemas from Section 7.2
 - [ ] All ChromaDB writes must be wrapped in try/except — observer failure must NEVER crash the simulation
 
-**Verification:** Run Exp 0 with observer attached. Confirm events appear in ChromaDB collection `alife_lineage`. Check with: `curl http://192.158.1.243:8000/api/v1/collections`
+**Verification:** Run Exp 0 with observer attached. Confirm events appear in ChromaDB collection `alife_lineage`. Check with: `curl http://servicebox.taileb8c60.ts.net:8000/api/v1/collections`
 
 ---
 

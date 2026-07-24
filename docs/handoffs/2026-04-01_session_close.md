@@ -6,7 +6,7 @@
 - runbook-to-rule-them-all: 1fce05b
 
 ## Stack state — confirmed working
-- Gen8 ChromaDB: 192.158.1.243:8000
+- Gen8 ChromaDB: servicebox.taileb8c60.ts.net:8000
   - faithh_knowledge_base: 806,265
     CLARIFIED: these are live conversation logs (live_conv_<date>_<time>_<suffix>)
     NOT governance documents. Rich metadata: provider, session_id, model,
@@ -16,7 +16,7 @@
   - governance_corpus collection: NOT confirmed — UN Charter and UDHR
     prose are in /mnt/x/staging/ but NOT indexed into ChromaDB yet.
 - FAITHH backend: port 5557, /metrics active
-- Gen8 Grafana: 192.158.1.243:3000, all 5 targets UP
+- Gen8 Grafana: servicebox.taileb8c60.ts.net:3000, all 5 targets UP
 - X: drive: /mnt/x via sudo mount -t drvfs X: /mnt/x
   (passwordless sudo for mount: /etc/sudoers line 59)
 - NAS: /mnt/nas accessible, SSH confirmed

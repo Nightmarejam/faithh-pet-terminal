@@ -78,7 +78,7 @@ def doc_id(filepath, chunk_idx):
     return f"core_{filepath.stem[:25]}_{h}"
 
 import chromadb
-client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
 col = client.get_collection("faithh_knowledge_base")
 
 print(f"Before: {col.count()} docs")

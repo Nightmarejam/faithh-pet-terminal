@@ -1,7 +1,7 @@
 # Gen8 Resource Monitoring Setup
 
 **Date:** 2026-01-18  
-**Server:** Gen8 (servicebox - 192.158.1.243)  
+**Server:** Gen8 (servicebox - servicebox.taileb8c60.ts.net)  
 **Purpose:** Lightweight resource monitoring with hourly logging  
 
 ---
@@ -145,25 +145,25 @@ ls -la ~/services/monitoring/*.gz
 
 ### Current Status Check
 ```bash
-ssh jonat@192.158.1.243 "~/services/monitoring/check_resources.sh"
+ssh jonat@servicebox.taileb8c60.ts.net "~/services/monitoring/check_resources.sh"
 # Output: [2026-01-19 08:01:13] CPU: 1.6% | RAM: 38.3% | DISK(/): 3% | DISK(/home): 3%
 ```
 
 ### Historical Analysis
 ```bash
 # Peak CPU usage in last 24 hours
-ssh jonat@192.158.1.243 "tail -24 ~/services/monitoring/resource_usage.log" | \
+ssh jonat@servicebox.taileb8c60.ts.net "tail -24 ~/services/monitoring/resource_usage.log" | \
   awk -F'CPU: |%' '{print $2}' | sort -n | tail -1
 
 # Memory trend analysis
-ssh jonat@192.158.1.243 "tail -24 ~/services/monitoring/resource_usage.log" | \
+ssh jonat@servicebox.taileb8c60.ts.net "tail -24 ~/services/monitoring/resource_usage.log" | \
   awk -F'RAM: |%' '{print $2}' | sort -n
 ```
 
 ### Alert Thresholds (Manual)
 ```bash
 # Check for concerning values
-ssh jonat@192.158.1.243 "tail -1 ~/services/monitoring/resource_usage.log" | \
+ssh jonat@servicebox.taileb8c60.ts.net "tail -1 ~/services/monitoring/resource_usage.log" | \
   grep -E "CPU: [9][0-9]%|RAM: [9][0-9]%|DISK.+: [9][0-9]%"
 ```
 
@@ -211,15 +211,15 @@ ssh jonat@192.158.1.243 "tail -1 ~/services/monitoring/resource_usage.log" | \
 ### Debug Commands
 ```bash
 # Test individual components
-ssh jonat@192.158.1.243 "top -bn1 | grep 'Cpu(s)'"
-ssh jonat@192.158.1.243 "free | grep Mem"
-ssh jonat@192.158.1.243 "df / | tail -1"
+ssh jonat@servicebox.taileb8c60.ts.net "top -bn1 | grep 'Cpu(s)'"
+ssh jonat@servicebox.taileb8c60.ts.net "free | grep Mem"
+ssh jonat@servicebox.taileb8c60.ts.net "df / | tail -1"
 
 # Verify cron execution
-ssh jonat@192.158.1.243 "ps aux | grep check_resources"
+ssh jonat@servicebox.taileb8c60.ts.net "ps aux | grep check_resources"
 
 # Check system logs for cron errors
-ssh jonat@192.158.1.243 "sudo grep CRON /var/log/syslog | tail -5"
+ssh jonat@servicebox.taileb8c60.ts.net "sudo grep CRON /var/log/syslog | tail -5"
 ```
 
 ---

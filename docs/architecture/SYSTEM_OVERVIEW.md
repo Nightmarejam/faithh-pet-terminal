@@ -86,7 +86,7 @@ FAITHH (Friendly AI Teaching & Helping Hub) is a personal AI thought partner and
 | `scaffolding_state.json` | Open loops, milestones, blockers | Per session |
 
 ### Warm Memory (ChromaDB vector database)
-- **Host:** Gen8 server at 192.158.1.243:8000 (`CHROMA_HOST` / `CHROMA_PORT` in `.env`)
+- **Host:** Gen8 server at servicebox.taileb8c60.ts.net:8000 (`CHROMA_HOST` / `CHROMA_PORT` in `.env`)
 - **Primary collection:** `faithh_knowledge_base` — on the order of **~54k** chunks (see `fingerprint_state.json` `health.backend.chromadb_docs` after `scripts/generate_fingerprint.py`)
 - **Maintenance collection:** `faithh_uncertainty_surface` — gated / noisy rows migrated out of the main KB (not used as RAG knowledge)
 - **Session metrics:** `faithh_session_metrics` (or `CHROMA_METRICS_COLLECTION`) — telemetry only; **not** RAG (per `AGENTS.md`)

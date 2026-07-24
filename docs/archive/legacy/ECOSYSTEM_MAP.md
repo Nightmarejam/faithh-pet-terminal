@@ -13,8 +13,8 @@ ISP Router (DHCP Server)
 ├── Network Switch
 │   │
 │   ├── Gen8 Server (servicebox)
-│   │   IP: 192.158.1.243 (needs static)
-│   │   Tailscale: 192.158.1.243
+│   │   IP: servicebox.taileb8c60.ts.net (needs static)
+│   │   Tailscale: servicebox.taileb8c60.ts.net
 │   │
 │   └── [Other wired devices]
 │
@@ -62,8 +62,8 @@ OWC Thunderbolt 3 Dock
 | Docker | v28.2.2 |
 
 **Network:**
-- LAN IP: 192.158.1.243 (DHCP - needs static)
-- Tailscale: 192.158.1.243
+- LAN IP: servicebox.taileb8c60.ts.net (DHCP - needs static)
+- Tailscale: servicebox.taileb8c60.ts.net
 
 **Services (12 total):**
 | Service | Port | Purpose |
@@ -103,9 +103,9 @@ OWC Thunderbolt 3 Dock
 
 | Device | Current IP | Proposed Static | MAC Address |
 |--------|------------|-----------------|-------------|
-| Gen8 | 192.158.1.243 | 192.158.1.10 | [get from Gen8] |
-| Windows Desktop | DHCP | 192.158.1.20 | [get from ipconfig] |
-| OWC Dock (if ethernet) | DHCP | 192.158.1.30 | [TBD] |
+| Gen8 | servicebox.taileb8c60.ts.net | servicebox.taileb8c60.ts.net | [get from Gen8] |
+| Windows Desktop | DHCP | 192.168.1.20 | [get from ipconfig] |
+| OWC Dock (if ethernet) | DHCP | 192.168.1.30 | [TBD] |
 
 **How to set static IPs:**
 1. **Option A - Router DHCP Reservation (Recommended)**
@@ -120,7 +120,7 @@ OWC Thunderbolt 3 Dock
 ### Priority 2: DNS Configuration
 
 **Current:**
-- Pi-hole running on Gen8 (192.158.1.243:53)
+- Pi-hole running on Gen8 (servicebox.taileb8c60.ts.net:53)
 - Not yet network-wide
 
 **To enable network-wide:**
@@ -173,7 +173,7 @@ Home Network (Your Setup)
 
 ## Service Access Quick Reference
 
-### Gen8 Services (192.158.1.243)
+### Gen8 Services (servicebox.taileb8c60.ts.net)
 | Service | URL | Credentials |
 |---------|-----|-------------|
 | ChromaDB | :8000/api/v2/heartbeat | None |
@@ -194,10 +194,10 @@ Home Network (Your Setup)
 ### SSH Access
 ```bash
 # Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 
 # Gitea SSH
-ssh -T git@192.158.1.243 -p 2222
+ssh -T git@servicebox.taileb8c60.ts.net -p 2222
 ```
 
 ---
@@ -209,10 +209,10 @@ ssh -T git@192.158.1.243 -p 2222
 ~/ai-stack/gen8_health_check.sh
 
 # Check all containers
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "docker ps --format 'table {{.Names}}\t{{.Status}}'"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 
 # ChromaDB document count
-curl -s "http://192.158.1.243:8000/api/v1/collections/faithh_knowledge_base" | jq '.id'
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base" | jq '.id'
 
 # Restart FAITHH backend
 cd ~/ai-stack && ./restart_backend.sh

@@ -49,7 +49,7 @@ Status: ⚠️ STRANDED - Persisted in volume, not actively managed
 
 #### Gen8 Production ChromaDB
 ```
-Location: http://192.158.1.243:8000
+Location: http://servicebox.taileb8c60.ts.net:8000
 Collection: faithh_knowledge_base
 Records: 28,876 chunks (reindexed 2026-01-07)
 Breakdown:
@@ -184,7 +184,7 @@ source_client = chromadb.HttpClient(host="127.0.0.1", port=8000)
 source_collection = source_client.get_collection("documents_768")
 
 # Target: Gen8 Production ChromaDB
-target_client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+target_client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
 target_collection = target_client.get_collection("faithh_knowledge_base")
 
 # Migrate live_chat records
@@ -213,7 +213,7 @@ Change ChromaDB connection from local Docker to Gen8:
 chroma_client = chromadb.HttpClient(host="localhost", port=8000)
 
 # NEW (Gen8 production)
-chroma_client = chromadb.HttpClient(host="192.158.1.243", port=8000)
+chroma_client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
 ```
 
 Update environment variable in `.env`:
@@ -223,7 +223,7 @@ CHROMADB_HOST=localhost
 CHROMADB_PORT=8000
 
 # NEW
-CHROMADB_HOST=192.158.1.243
+CHROMADB_HOST=servicebox.taileb8c60.ts.net
 CHROMADB_PORT=8000
 CHROMADB_COLLECTION=faithh_knowledge_base
 ```
@@ -387,7 +387,7 @@ if __name__ == "__main__":
 #### 1. MASTER_CONTEXT.md
 **Changes Needed**:
 ```diff
-- Database: ChromaDB on Gen8 (192.158.1.243:8000)
+- Database: ChromaDB on Gen8 (servicebox.taileb8c60.ts.net:8000)
 - Collection: faithh_knowledge_base
 - Documents: 28,876 chunks (reindexed 2026-01-07)
 + Migration Status: ✅ Complete (Jan 2026)
@@ -404,7 +404,7 @@ if __name__ == "__main__":
       "migration_history": {
         "2026-01-07": {
           "from": "WSL2 Docker volume ai-stack_chromadb_data",
-          "to": "Gen8 ChromaDB 192.158.1.243:8000",
+          "to": "Gen8 ChromaDB servicebox.taileb8c60.ts.net:8000",
           "records_migrated": 137,
           "type": "live_chat episodic memory",
           "status": "complete"
@@ -419,7 +419,7 @@ if __name__ == "__main__":
 **Add Gen8 migration notes**:
 ```markdown
 ## ChromaDB Location (Source of Truth)
-- **Production**: Gen8 at 192.158.1.243:8000
+- **Production**: Gen8 at servicebox.taileb8c60.ts.net:8000
 - **Collection**: faithh_knowledge_base
 - **DO NOT** point backend at localhost:8000 (deprecated)
 - **Backup Strategy**: Gen8 automated backups (planned)
@@ -432,7 +432,7 @@ if __name__ == "__main__":
 **Update FAITHH snapshot**:
 ```markdown
 ## FAITHH Snapshot (2026-01-07)
-- **Database**: Gen8 Production (192.158.1.243:8000)
+- **Database**: Gen8 Production (servicebox.taileb8c60.ts.net:8000)
 - **Migration**: Complete from WSL2 local
 - **Mixed Memory**: 91k file chunks + 137 live chat records
 ```
@@ -531,14 +531,14 @@ ls -lh ~/backups/chromadb_wsl2_snapshot_20260107.tar.gz
 #### Gen8 ChromaDB Backup (Pre-Migration)
 ```bash
 # On Gen8 server (via SSH):
-ssh jonat@192.158.1.243 "
+ssh jonat@servicebox.taileb8c60.ts.net "
   cd ~/services/chromadb/
   docker compose exec chromadb /bin/sh -c 'tar czf - /chroma/chroma' > \
     ~/backups/chromadb_gen8_pre_migration_20260107.tar.gz
 "
 
 # Download to WSL2 for safekeeping
-scp jonat@192.158.1.243:~/backups/chromadb_gen8_pre_migration_20260107.tar.gz \
+scp jonat@servicebox.taileb8c60.ts.net:~/backups/chromadb_gen8_pre_migration_20260107.tar.gz \
     ~/backups/
 ```
 
@@ -568,7 +568,7 @@ find "${BACKUP_DIR}" -name "chromadb_*.tar.gz" -mtime +7 -delete
 - [ ] Read this entire document
 - [ ] Backup WSL2 Docker volume (see Backup Strategy)
 - [ ] Backup Gen8 ChromaDB (see Backup Strategy)
-- [ ] Verify Gen8 is accessible from WSL2: `curl http://192.158.1.243:8000/api/v2/heartbeat`
+- [ ] Verify Gen8 is accessible from WSL2: `curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat`
 - [ ] Test query on Gen8: verify faithh_knowledge_base works
 
 ### Phase 1: Data Assessment (1-2 hours)
@@ -583,7 +583,7 @@ find "${BACKUP_DIR}" -name "chromadb_*.tar.gz" -mtime +7 -delete
 - [ ] Test sample queries for migrated data
 
 ### Phase 3: Backend Switchover (30 minutes)
-- [ ] Update `.env`: CHROMADB_HOST=192.158.1.243
+- [ ] Update `.env`: CHROMADB_HOST=servicebox.taileb8c60.ts.net
 - [ ] Update `faithh_professional_backend_fixed.py` if hardcoded
 - [ ] Restart backend: `./restart_backend.sh`
 - [ ] Test RAG queries work
@@ -622,9 +622,9 @@ find "${BACKUP_DIR}" -name "chromadb_*.tar.gz" -mtime +7 -delete
 
 ### Risk 1: Network Latency (Gen8 is remote)
 **Mitigation**:
-- Gen8 is on LAN (192.158.1.243) and Tailscale (192.158.1.243)
+- Gen8 is on LAN (servicebox.taileb8c60.ts.net) and Tailscale (servicebox.taileb8c60.ts.net)
 - Latency should be <5ms on LAN
-- Test before full migration: `ping -c 20 192.158.1.243`
+- Test before full migration: `ping -c 20 servicebox.taileb8c60.ts.net`
 
 **Fallback**: Keep WSL2 Docker volume for 30 days as rollback option
 
@@ -702,8 +702,8 @@ find "${BACKUP_DIR}" -name "chromadb_*.tar.gz" -mtime +7 -delete
 ## 📞 Support & Recovery
 
 ### Emergency Contacts
-- **Gen8 Access**: `ssh jonat@192.158.1.243` (Tailscale) or `ssh jonat@192.158.1.243` (LAN)
-- **ChromaDB Admin**: Web UI at `http://192.158.1.243:8000`
+- **Gen8 Access**: `ssh jonat@servicebox.taileb8c60.ts.net` (Tailscale) or `ssh jonat@servicebox.taileb8c60.ts.net` (LAN)
+- **ChromaDB Admin**: Web UI at `http://servicebox.taileb8c60.ts.net:8000`
 - **Backup Location**: `~/backups/chromadb_*.tar.gz`
 
 ### Quick Recovery Commands
@@ -717,7 +717,7 @@ docker run --rm \
   tar xzf /backup/chromadb_wsl2_snapshot_20260107.tar.gz -C /target
 
 # Restore Gen8 ChromaDB from backup (on Gen8 server)
-ssh jonat@192.158.1.243
+ssh jonat@servicebox.taileb8c60.ts.net
 cd ~/services/chromadb/
 docker compose down
 tar xzf ~/backups/chromadb_gen8_YYYYMMDD.tar.gz -C /data/chromadb/

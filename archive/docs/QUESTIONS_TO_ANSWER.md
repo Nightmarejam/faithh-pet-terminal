@@ -57,7 +57,7 @@ nvidia-smi
 
 **To verify**:
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "nvidia-smi" 2>/dev/null || echo "No GPU"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "nvidia-smi" 2>/dev/null || echo "No GPU"
 ```
 
 **Expected answer**:
@@ -79,7 +79,7 @@ ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "nvidia-smi" 2>/dev/null ||
 
 **To verify**:
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "free -h"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "free -h"
 ```
 
 **Expected answer**:
@@ -103,7 +103,7 @@ ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "free -h"
 **If yes**:
 - MacBook specs (RAM, storage): _______________
 - Preferred access method: 
-  - [ ] Browser only (http://192.158.1.243:5557 or WSL IP)
+  - [ ] Browser only (http://servicebox.taileb8c60.ts.net:5557 or WSL IP)
   - [ ] Local FAITHH copy for offline work
   - [ ] Both
 
@@ -156,7 +156,7 @@ which docker
 df -h | grep -i nas
 
 # On Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "df -h | grep -i nas"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "df -h | grep -i nas"
 ```
 
 **Expected answer**:
@@ -180,7 +180,7 @@ ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "df -h | grep -i nas"
 
 **Devices**:
 - [ ] WSL2 (DESKTOP-JJ1SUHB): Installed? ___ Configured? ___
-- [ ] Gen8 (192.158.1.243): Installed? ___ Configured? ___
+- [ ] Gen8 (servicebox.taileb8c60.ts.net): Installed? ___ Configured? ___
 - [ ] MacBook Pro: Installed? ___ Configured? ___
 - [ ] Windows host: Installed? ___ Configured? ___
 
@@ -190,7 +190,7 @@ ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "df -h | grep -i nas"
 tailscale status
 
 # On Gen8
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "tailscale status"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "tailscale status"
 ```
 
 ---
@@ -232,7 +232,7 @@ Based on your conversation, here's what we know:
 4. WSL2 has 47GB RAM, 771GB free storage
 5. All Docker containers removed from WSL2
 6. Native Ollama has 2 models: qwen3-faithh:latest, llama31-faithh:latest
-7. .env configured for Gen8 ChromaDB (192.158.1.243:8000)
+7. .env configured for Gen8 ChromaDB (servicebox.taileb8c60.ts.net:8000)
 
 ### ❓ Unknown/Unclear
 1. Is Ollama currently running?

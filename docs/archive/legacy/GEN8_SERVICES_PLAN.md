@@ -14,7 +14,7 @@ The HP ProLiant MicroServer Gen8 is now operational as a dedicated home services
 - **What it is:** Production services box for Pi-hole, ChromaDB, and monitoring
 - **What it's NOT:** Router, NAS, or compute-heavy workloads
 - **Why separate:** Keeps critical home services isolated from AI/media infrastructure
-- **Network:** Accessible via Tailscale at 192.158.1.243
+- **Network:** Accessible via Tailscale at servicebox.taileb8c60.ts.net
 
 ---
 
@@ -44,18 +44,18 @@ The HP ProLiant MicroServer Gen8 is now operational as a dedicated home services
 ### Pi-hole (Primary Service)
 **Purpose:** Network-wide DNS-level ad blocking
 **Status:** ✅ RUNNING
-**Access:** http://192.158.1.243/admin (via Tailscale)
+**Access:** http://servicebox.taileb8c60.ts.net/admin (via Tailscale)
 
 **Current Configuration:**
 - Running in Docker container
-- Tailscale IP: 192.158.1.243
+- Tailscale IP: servicebox.taileb8c60.ts.net
 - DNS port: 53 (TCP/UDP)
 - Web interface: Port 80
 
 ### ChromaDB (Vector Database)
 **Purpose:** FAITHH knowledge base storage
 **Status:** ✅ RUNNING
-**Access:** http://192.158.1.243:8000
+**Access:** http://servicebox.taileb8c60.ts.net:8000
 
 **Current Stats:**
 - Collection: faithh_knowledge_base

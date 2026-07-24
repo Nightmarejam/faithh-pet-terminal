@@ -20,10 +20,10 @@ Backup protects against NAS failure. Offsite backup also protects against theft/
 mkdir D:\NAS_Backup
 
 # Sync priority folders (run periodically or schedule)
-robocopy \\192.158.1.65\Personal\documents D:\NAS_Backup\documents /MIR /R:3 /W:5
-robocopy \\192.158.1.65\Personal\photos D:\NAS_Backup\photos /MIR /R:3 /W:5
-robocopy \\192.158.1.65\Audio\tomcat D:\NAS_Backup\audio-tomcat /MIR /R:3 /W:5
-robocopy \\192.158.1.65\AI\projects D:\NAS_Backup\ai-projects /MIR /R:3 /W:5
+robocopy \\nas.taileb8c60.ts.net\Personal\documents D:\NAS_Backup\documents /MIR /R:3 /W:5
+robocopy \\nas.taileb8c60.ts.net\Personal\photos D:\NAS_Backup\photos /MIR /R:3 /W:5
+robocopy \\nas.taileb8c60.ts.net\Audio\tomcat D:\NAS_Backup\audio-tomcat /MIR /R:3 /W:5
+robocopy \\nas.taileb8c60.ts.net\AI\projects D:\NAS_Backup\ai-projects /MIR /R:3 /W:5
 ```
 
 ### Setup via rsync (WSL)
@@ -42,7 +42,7 @@ rsync -avh --progress /mnt/x/Audio/tomcat/ /mnt/d/NAS_Backup/audio-tomcat/
 3. Trigger: Weekly (Sunday 3 AM)
 4. Action: Start a program
 5. Program: `robocopy`
-6. Arguments: `\\192.158.1.65\Personal\documents D:\NAS_Backup\documents /MIR /R:3 /W:5`
+6. Arguments: `\\nas.taileb8c60.ts.net\Personal\documents D:\NAS_Backup\documents /MIR /R:3 /W:5`
 
 **D: Drive Space:** 930GB free ✓
 

@@ -1,6 +1,6 @@
 # ChromaDB Ground Truth — 2026-04-01
 
-## Live counts (Gen8 — 192.158.1.243:8000)
+## Live counts (Gen8 — servicebox.taileb8c60.ts.net:8000)
 
   faithh_knowledge_base: 806,109
   alife_lineage:          50,450
@@ -16,7 +16,7 @@ files from January 2026 initial setup deleted:
 
 ## Architecture confirmed
 
-FAITHH backend `.env` points to `http://192.158.1.243:8000` (Gen8 LAN).
+FAITHH backend `.env` points to `http://servicebox.taileb8c60.ts.net:8000` (Gen8 LAN).
 Local Docker Chroma container removed. No competing local instances remain.
 
 ## Status

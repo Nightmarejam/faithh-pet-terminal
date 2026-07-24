@@ -46,7 +46,7 @@ def _float(*names: str, default: float) -> float:
 class ChromaConfig:
     # NOTE: reads both CHROMA_* and CHROMADB_* aliases — resolves the drift.
     host: str = field(default_factory=lambda: _env("CHROMA_HOST", "CHROMADB_HOST",
-                                                    default="192.158.1.10"))  # [VERIFY] vs live Gen8
+                                                    default="servicebox.taileb8c60.ts.net"))  # [VERIFY] vs live Gen8
     port: int = field(default_factory=lambda: _int("CHROMA_PORT", "CHROMADB_PORT", default=8000))
     collection: str = field(default_factory=lambda: _env("CHROMA_COLLECTION",
                                                           default="faithh_knowledge_base"))

@@ -23,7 +23,7 @@ All services are now running and optimized. The ecosystem review revealed your a
   - Features: chat, RAG, upload, filesystem operations, intent detection
   - UI: http://localhost:5557
   
-- ✅ **Gen8 ChromaDB**: Accessible at 192.158.1.243:8000
+- ✅ **Gen8 ChromaDB**: Accessible at servicebox.taileb8c60.ts.net:8000
   - Collection: faithh_knowledge_base
   - Documents: 29,013
   
@@ -45,7 +45,7 @@ GPU 1: RTX 3090     - 10 MiB used (0% util)    - Ready for next load
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │                    Gen8 HP ProLiant                          │
-│                  (192.158.1.243 via Tailscale)                │
+│                  (servicebox.taileb8c60.ts.net via Tailscale)                │
 ├──────────────────────────────────────────────────────────────┤
 │ Hardware: Intel Xeon E3-1220L V2, 3.8GB RAM, No GPU         │
 │                                                              │
@@ -158,8 +158,8 @@ Environment="CUDA_VISIBLE_DEVICES=1,0"
 ### Environment Variables (.env)
 ```bash
 OLLAMA_HOST=http://127.0.0.1:11434      # Native Ollama on WSL2
-CHROMADB_HOST=192.158.1.243               # Gen8 server
-CHROMA_HOST=http://192.158.1.243:8000    # Gen8 ChromaDB
+CHROMADB_HOST=servicebox.taileb8c60.ts.net               # Gen8 server
+CHROMA_HOST=http://servicebox.taileb8c60.ts.net:8000    # Gen8 ChromaDB
 ```
 
 ### Service Management
@@ -290,7 +290,7 @@ cd ~/ai-stack && ./scripts/verify_ecosystem.sh
 nvidia-smi
 
 # Test Gen8 ChromaDB
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "docker ps"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "docker ps"
 ```
 
 ### Monitoring

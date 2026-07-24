@@ -6,8 +6,8 @@ Purpose: safely enable repeatable API visibility from your workstation without e
 
 ## 1) What is already confirmed
 
-- `https://192.158.1.1/api/auth/login` is reachable and returns `401 Unauthorized` when unauthenticated (expected).
-- `https://192.158.1.1/unifi-api/network` is the UniFi OS frontend path (not a direct data API endpoint).
+- `https://192.168.1.1/api/auth/login` is reachable and returns `401 Unauthorized` when unauthenticated (expected).
+- `https://192.168.1.1/unifi-api/network` is the UniFi OS frontend path (not a direct data API endpoint).
 
 This means API surface is present; authenticated session setup is the remaining step.
 

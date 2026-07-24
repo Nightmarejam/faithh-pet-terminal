@@ -9,7 +9,7 @@ Related: `docs/architecture/SYSTEM_TRANSPARENCY_IMPLEMENTATION_CHECKLIST.md` §8
 |--------|------|------------------------|
 | WSL2 workspace | Indexing scripts, SSH client, `curl` to Chroma | `hostname` → `DESKTOP-JJ1SUHB`; `uname -a` → `6.6.87.2-microsoft-standard-WSL2`, x86_64 |
 | NAS (`ssh nas`) | Synology storage, SMB source for inventories | `hostname` → `ISaidGoodDay`; `uname -a` → `synology_rtd1296_ds220j` (DS220j, aarch64) |
-| Gen8 | ChromaDB host for `faithh_knowledge_base` / ALife collections (repo convention) | `GET http://192.158.1.243:8000/api/v2/heartbeat` → JSON heartbeat (OK at capture time). **Not verified:** Gen8 OS-level hostname / `uname` (host identity). |
+| Gen8 | ChromaDB host for `faithh_knowledge_base` / ALife collections (repo convention) | `GET http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat` → JSON heartbeat (OK at capture time). **Not verified:** Gen8 OS-level hostname / `uname` (host identity). |
 
 ## 1b) Canonical NAS mount (WSL) — single source of truth
 
@@ -59,7 +59,7 @@ cd /tmp && /mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -NoProf
 | WSL root filesystem | `df -h /` shows mount rw and **under 90%** used (or documented exception) | Root volume full or read-only errors |
 | Windows volume (WSL `/mnt/c`) | **Under 95%** used or cleanup plan recorded | **95% or higher** used without mitigation (baseline was **88%**—watch trend) |
 | NAS | DSM/storage manager: no volume crash/degraded RAID; SMART warnings addressed | Critical disk/volume errors unresolved |
-| Chroma (Gen8) | `curl -sS --max-time 10 http://192.158.1.243:8000/api/v2/heartbeat` returns JSON with heartbeat | Timeout, connection refused, or repeated 5xx |
+| Chroma (Gen8) | `curl -sS --max-time 10 http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat` returns JSON with heartbeat | Timeout, connection refused, or repeated 5xx |
 
 ### Gate B — Access (WSL + Windows + NAS path)
 

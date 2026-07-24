@@ -140,7 +140,7 @@ Every package and service in WSL2 exists to support FAITHH. If it's not listed h
 | 5432 | Postgres | Internal WSL |
 
 ### Tailscale
-- **Gen8 IP**: 192.158.1.243
+- **Gen8 IP**: servicebox.taileb8c60.ts.net
 - **Purpose**: Remote access to ChromaDB
 - **Status**: Active, stable connection
 
@@ -193,7 +193,7 @@ systemctl status ollama
 ollama list
 
 # Check ChromaDB
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 
 # Docker services
 cd /home/jonat/ai-stack && docker-compose ps

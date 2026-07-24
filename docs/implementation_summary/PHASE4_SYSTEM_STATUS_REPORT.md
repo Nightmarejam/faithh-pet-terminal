@@ -24,7 +24,7 @@ FAITHH Phase 4 system is fully operational with all critical systems healthy and
 - **Error Handling**: ✅ Graceful error recovery active
 
 #### **External Services Status**
-- **ChromaDB**: ✅ UP (192.158.1.243:8000)
+- **ChromaDB**: ✅ UP (servicebox.taileb8c60.ts.net:8000)
 - **Ollama**: ✅ UP (localhost:11434)
 - **Groq API**: ✅ Available (cloud service)
 - **Gemini API**: ✅ Available (cloud service)

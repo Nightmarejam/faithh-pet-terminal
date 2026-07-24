@@ -33,7 +33,7 @@ From `ollama show … --modelfile` (same arch, params, quant):
 | Ollama primary | 11434 | Main inference; `OLLAMA_HOST` |
 | Ollama embed | 11435 | Second daemon (`OLLAMA_EMBED_URL` in `.env.example`) |
 | Ollama qwen | 11436 | Third compose service |
-| ChromaDB | 8000 | RAG; `CHROMA_HOST` in `.env` should target Gen8 LAN (e.g. `192.158.1.243`) per current docs |
+| ChromaDB | 8000 | RAG; `CHROMA_HOST` in `.env` should target Gen8 LAN (e.g. `servicebox.taileb8c60.ts.net`) per current docs |
 | Langflow | 7860 | **Idle** for core FAITHH chat unless you use Langflow flows explicitly |
 | Postgres | 5432 | Langflow DB |
 | Grafana | 3000 | Monitoring UI (scrape target in `ops/monitoring/prometheus.yml`) |

@@ -5,7 +5,7 @@ Guide for integrating FAITHH with Prometheus/Grafana on Gen8 server.
 ## Prerequisites
 
 - FAITHH backend running on WSL2 (port 5557)
-- Gen8 server with Prometheus/Grafana (192.158.1.243)
+- Gen8 server with Prometheus/Grafana (servicebox.taileb8c60.ts.net)
 - Tailscale VPN connecting both machines
 
 ## 1. FAITHH Metrics Endpoint
@@ -71,12 +71,12 @@ docker restart prometheus
 
 Check Prometheus targets:
 ```bash
-curl -s 'http://192.158.1.243:9090/api/v1/targets' | jq '.data.activeTargets[] | {job: .labels.job, health: .health}'
+curl -s 'http://servicebox.taileb8c60.ts.net:9090/api/v1/targets' | jq '.data.activeTargets[] | {job: .labels.job, health: .health}'
 ```
 
 ## 5. Grafana Dashboard
 
-Access Grafana at: http://192.158.1.243:3000
+Access Grafana at: http://servicebox.taileb8c60.ts.net:3000
 - Username: admin
 - Password: Grafana2026!
 

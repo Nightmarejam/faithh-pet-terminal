@@ -7,9 +7,9 @@ WSL2 uses a **virtual Ethernet** to Windows, not your LAN NIC.
 | Context | Default gateway | Meaning |
 |---------|-----------------|--------|
 | **WSL** | `172.24.192.1` via `eth0` | Windows vEthernet (WSL). Not your UniFi LAN. |
-| **Gen8** (`servicebox`) | `192.158.1.1` via `eno2` | **Actual LAN default gateway = UDM** |
+| **Gen8** (`servicebox`) | `192.168.1.1` via `eno2` | **Actual LAN default gateway = UDM** |
 
-So from WSL, targets like `192.168.1.1` or `192.158.1.243` often **do not route** (or behave oddly) because WSL is not on `192.158.0.0/16`. **Workarounds:** SSH port-forwarding or a jump host on Windows, **Tailscale** to the Gen8 node, or run clients from a host that shares the LAN. Service docs in this repo standardize on Gen8 LAN **`192.158.1.243`** for ChromaDB, SSH, and metrics. On Gen8 itself, the UDM is reachable at `192.158.1.1`.
+So from WSL, targets like `192.168.1.1` or `servicebox.taileb8c60.ts.net` often **do not route** (or behave oddly) because WSL is not on `192.168.0.0/16`. **Workarounds:** SSH port-forwarding or a jump host on Windows, **Tailscale** to the Gen8 node, or run clients from a host that shares the LAN. Service docs in this repo standardize on Gen8 LAN **`servicebox.taileb8c60.ts.net`** for ChromaDB, SSH, and metrics. On Gen8 itself, the UDM is reachable at `192.168.1.1`.
 
 ## Discovery results (this session)
 
@@ -26,23 +26,23 @@ inet 172.24.202.171/20 dev eth0
 ### Gen8
 
 ```text
-default via 192.158.1.1 dev eno2 proto dhcp src 192.158.1.243
+default via 192.168.1.1 dev eno2 proto dhcp src servicebox.taileb8c60.ts.net
 ```
 
 | Target | Ping from Gen8 |
 |--------|----------------|
 | `10.1.89.1` | 100% loss |
 | `192.168.1.1` | 100% loss |
-| **`192.158.1.1`** | **OK** |
+| **`192.168.1.1`** | **OK** |
 
 | Target | SSH from Gen8 as `root` |
 |--------|-------------------------|
-| `192.158.1.1` | TCP/SSH reaches host; **auth** depends on keys on UDM |
+| `192.168.1.1` | TCP/SSH reaches host; **auth** depends on keys on UDM |
 
 ### WSL → UDM via jump
 
 ```bash
-ssh -J gen8 root@192.158.1.1
+ssh -J gen8 root@192.168.1.1
 ```
 
 - **Routing:** succeeds quickly (no hang).
@@ -52,7 +52,7 @@ ssh -J gen8 root@192.158.1.1
 
 `~/.ssh/config` — `Host unifi udm dream-machine`:
 
-- `HostName 192.158.1.1` (was `192.168.1.1`)
+- `HostName 192.168.1.1` (was `192.168.1.1`)
 - `ProxyJump gen8`
 - `IdentityFile ~/.ssh/id_ed25519` + `IdentitiesOnly yes` (adjust if your UDM key differs)
 

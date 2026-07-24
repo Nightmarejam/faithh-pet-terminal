@@ -20,7 +20,7 @@
 ---
 
 ## AI Share (X: Drive - 339GB)
-**Mount:** `\\192.158.1.65\AI` → `/mnt/x/`
+**Mount:** `\\nas.taileb8c60.ts.net\AI` → `/mnt/x/`
 
 ### Folder Structure
 
@@ -171,10 +171,10 @@ rclone: `/volume1/@appstore/rclone/bin/rclone` (v1.73.0)
 ### From Windows
 ```powershell
 # X: drive is mapped
-net use X: \\192.158.1.65\AI /persistent:yes
+net use X: \\nas.taileb8c60.ts.net\AI /persistent:yes
 
 # Z: drive needs to be mapped if using Windows
-net use Z: \\192.158.1.65\<share_name> /persistent:yes
+net use Z: \\nas.taileb8c60.ts.net\<share_name> /persistent:yes
 ```
 
 ### From WSL
@@ -214,7 +214,7 @@ SSH enabled on DS220j. Passwordless via key:
 
 ```bash
 ssh nas                          # via ~/.ssh/synology_ed25519
-ssh Nightmarejam@192.158.1.65    # direct
+ssh Nightmarejam@nas.taileb8c60.ts.net    # direct
 ```
 
 NAS volume path: `/volume1/AI/` = X: drive = `/mnt/x/` in WSL

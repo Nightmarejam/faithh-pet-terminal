@@ -1,7 +1,7 @@
 # Gen8 Server Handoff Document
 **Date:** 2026-01-20  
 **Status:** Fully Operational  
-**Server IP:** 192.158.1.243 (LAN) / 192.158.1.243 (Tailscale)
+**Server IP:** servicebox.taileb8c60.ts.net (LAN) / servicebox.taileb8c60.ts.net (Tailscale)
 
 ---
 
@@ -15,13 +15,13 @@ The Gen8 microserver has been transformed into a complete development and infras
 
 | Service | Port | URL | Status | Purpose |
 |---------|------|-----|--------|---------|
-| **ChromaDB** | 8000 | http://192.158.1.243:8000 | ✅ Online | Vector Database (208 docs) |
-| **Grafana** | 3000 | http://192.158.1.243:3000 | ✅ Ready | Monitoring Dashboards |
-| **Docker Registry** | 5000/5001 | http://192.158.1.243:5001 | ✅ Running | Private Image Repository |
-| **Gitea** | 3002 | http://192.158.1.243:3002 | ✅ Configured | Git Repository Hosting |
-| **Pi-hole** | 53/80 | http://192.158.1.243/admin | ✅ Fixed | DNS Server |
-| **Uptime Kuma** | 3001 | http://192.158.1.243:3001 | ✅ Running | Service Monitoring |
-| **Prometheus** | 9090 | http://192.158.1.243:9090 | ✅ Running | Metrics Collection |
+| **ChromaDB** | 8000 | http://servicebox.taileb8c60.ts.net:8000 | ✅ Online | Vector Database (208 docs) |
+| **Grafana** | 3000 | http://servicebox.taileb8c60.ts.net:3000 | ✅ Ready | Monitoring Dashboards |
+| **Docker Registry** | 5000/5001 | http://servicebox.taileb8c60.ts.net:5001 | ✅ Running | Private Image Repository |
+| **Gitea** | 3002 | http://servicebox.taileb8c60.ts.net:3002 | ✅ Configured | Git Repository Hosting |
+| **Pi-hole** | 53/80 | http://servicebox.taileb8c60.ts.net/admin | ✅ Fixed | DNS Server |
+| **Uptime Kuma** | 3001 | http://servicebox.taileb8c60.ts.net:3001 | ✅ Running | Service Monitoring |
+| **Prometheus** | 9090 | http://servicebox.taileb8c60.ts.net:9090 | ✅ Running | Metrics Collection |
 | **Node Exporter** | 9100 | - | ✅ Running | System Metrics |
 
 ---
@@ -43,13 +43,13 @@ The Gen8 microserver has been transformed into a complete development and infras
    ```bash
    # Set DNS to Gen8
    # Network Settings → IPv4 → DNS Server
-   # Preferred: 192.158.1.243
+   # Preferred: servicebox.taileb8c60.ts.net
    # Alternate: 8.8.8.8
    ```
 
 2. **Add SSH Key to Gitea**
    - Key: `ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILumrtmlOlN/Jp0cqJFbH+i8RcA3/VbtHDkD4ptK0DNr jonathan.mo1@hotmail.com`
-   - URL: http://192.158.1.243:3002/settings/keys
+   - URL: http://servicebox.taileb8c60.ts.net:3002/settings/keys
 
 3. **Test DNS Resolution**
    ```bash
@@ -70,8 +70,8 @@ The Gen8 microserver has been transformed into a complete development and infras
 3. **Docker Registry Usage**
    ```bash
    # Tag and push an image
-   docker tag myapp:latest 192.158.1.243:5000/myapp:latest
-   docker push 192.158.1.243:5000/myapp:latest
+   docker tag myapp:latest servicebox.taileb8c60.ts.net:5000/myapp:latest
+   docker push servicebox.taileb8c60.ts.net:5000/myapp:latest
    ```
 
 ### Phase 3: Next Week
@@ -124,10 +124,10 @@ The Gen8 microserver has been transformed into a complete development and infras
 
 ## 📈 Monitoring Dashboard URLs
 
-1. **System Overview**: http://192.158.1.243:3000/d/1
-2. **Docker Services**: http://192.158.1.243:3000/d/2
-3. **Pi-hole Admin**: http://192.158.1.243/admin
-4. **Uptime Kuma**: http://192.158.1.243:3001
+1. **System Overview**: http://servicebox.taileb8c60.ts.net:3000/d/1
+2. **Docker Services**: http://servicebox.taileb8c60.ts.net:3000/d/2
+3. **Pi-hole Admin**: http://servicebox.taileb8c60.ts.net/admin
+4. **Uptime Kuma**: http://servicebox.taileb8c60.ts.net:3001
 
 ---
 
@@ -162,12 +162,12 @@ docker-compose up -d
 
 2. **ChromaDB Connection Failed**
    - Check backend: `curl http://localhost:5557/api/status`
-   - Verify collection: `curl http://192.158.1.243:8000/api/v2/collections`
+   - Verify collection: `curl http://servicebox.taileb8c60.ts.net:8000/api/v2/collections`
    - Fix: Restart backend with `./restart_backend.sh`
 
 3. **Service Not Accessible**
-   - Check container: `ssh jonat@192.158.1.243 "docker ps"`
-   - Check logs: `ssh jonat@192.158.1.243 "docker logs <service>"`
+   - Check container: `ssh jonat@servicebox.taileb8c60.ts.net "docker ps"`
+   - Check logs: `ssh jonat@servicebox.taileb8c60.ts.net "docker logs <service>"`
    - Fix: Restart specific service
 
 ---
@@ -176,7 +176,7 @@ docker-compose up -d
 
 1. **Use Tailscale for Remote Access**
    - More reliable than port forwarding
-   - All services accessible via `192.158.1.243`
+   - All services accessible via `servicebox.taileb8c60.ts.net`
 
 2. **Monitor Resource Usage**
    - Grafana shows real-time metrics
@@ -210,10 +210,10 @@ docker-compose up -d
 
 ```bash
 # Check all services
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "docker ps --format 'table {{.Names}}\t{{.Status}}'"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "docker ps --format 'table {{.Names}}\t{{.Status}}'"
 
 # Check system resources
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243 "htop"
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net "htop"
 
 # Check FAITHH status
 curl -s http://localhost:5557/api/status | jq .

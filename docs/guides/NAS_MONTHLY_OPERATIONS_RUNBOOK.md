@@ -15,8 +15,8 @@ Practical cadence for NAS → local staging → Chroma indexing → validation �
 
 - SSH alias `nas` works from the workstation used for staging.
 - ChromaDB reachable where your scripts expect it:
-  - **`index_governance_corpus.py` / `index_staged_nas_sources.py`:** `--host` / `--port` default from `CHROMA_HOST` / `CHROMA_PORT`, else host `192.158.1.243` and port `8000`.
-  - **`validate_data_aggregation_pipeline.py`:** defaults are **hardcoded** in the script — host `192.158.1.243`, port `8000` — unless you pass `--host` and `--port` (this script does **not** read `CHROMA_HOST` / `CHROMA_PORT`).
+  - **`index_governance_corpus.py` / `index_staged_nas_sources.py`:** `--host` / `--port` default from `CHROMA_HOST` / `CHROMA_PORT`, else host `servicebox.taileb8c60.ts.net` and port `8000`.
+  - **`validate_data_aggregation_pipeline.py`:** defaults are **hardcoded** in the script — host `servicebox.taileb8c60.ts.net`, port `8000` — unless you pass `--host` and `--port` (this script does **not** read `CHROMA_HOST` / `CHROMA_PORT`).
 - Repo Python venv: `./venv/bin/python` (has `chromadb`, `sentence-transformers`).
 
 ## Weekly 20-minute checkpoint
@@ -35,7 +35,7 @@ Target: **~20 minutes**, no full re-ingest unless something is wrong.
 
    ```bash
    ./venv/bin/python scripts/validate_data_aggregation_pipeline.py \
-     --host 192.158.1.243 --port 8000 \
+     --host servicebox.taileb8c60.ts.net --port 8000 \
      --output reports/index_runs/validation_$(date +%Y%m%d_%H%M%S).json
    ```
 
@@ -122,7 +122,7 @@ Use the **program baseline** (e.g. `reports/index_runs/validation_20260331_00042
 
 ```bash
 ./venv/bin/python scripts/validate_data_aggregation_pipeline.py \
-  --host 192.158.1.243 --port 8000 \
+  --host servicebox.taileb8c60.ts.net --port 8000 \
   --baseline reports/index_runs/validation_20260331_000426.json \
   --output reports/index_runs/validation_$(date +%Y%m%d_%H%M%S).json
 ```
@@ -166,7 +166,7 @@ Target: **end of quarter** (or when disk/noise justifies it). Operate only on **
 
    ```bash
    ./venv/bin/python scripts/validate_data_aggregation_pipeline.py \
-     --host 192.158.1.243 --port 8000 \
+     --host servicebox.taileb8c60.ts.net --port 8000 \
      --baseline reports/index_runs/validation_<previous_quarter_pick>.json \
      --output reports/index_runs/validation_$(date +%Y%m%d_%H%M%S).json
    ```

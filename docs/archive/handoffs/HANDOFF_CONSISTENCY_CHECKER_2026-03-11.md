@@ -126,7 +126,7 @@ git push
 
 **Repo root:** `~/ai-stack/`  
 **Backend:** `faithh_professional_backend_fixed.py` on port 5557  
-**ChromaDB:** `http://192.158.1.243:8000` (Gen8 server, may not be reachable from this session)  
+**ChromaDB:** `http://servicebox.taileb8c60.ts.net:8000` (Gen8 server, may not be reachable from this session)  
 **Canonical frontend:** `faithh_pet_v4.html` at ROOT level (not active/frontend/)  
 **Key state files:** `project_states.json`, `faithh_memory.json`, `scaffolding_state.json`, `decisions_log.json`
 

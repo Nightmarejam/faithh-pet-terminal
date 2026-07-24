@@ -244,7 +244,7 @@ to make anticipation advantageous at the population level.
 ## Hardware Notes
 
 - Simulation runs on Windows desktop CPU via WSL2
-- ChromaDB writes go to Gen8 (192.158.1.243:8000)
+- ChromaDB writes go to Gen8 (servicebox.taileb8c60.ts.net:8000)
 - Estimated runtime: ~60-90 minutes for 200,000 ticks
 - Do not shut down Windows during the run
 - Gen8 does not need to be monitored — ChromaDB will handle load

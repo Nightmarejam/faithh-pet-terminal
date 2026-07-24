@@ -124,7 +124,7 @@
       "faithh-3090": {
         "gpu": "3090",
         "host": "faithh VM",
-        "ip": "192.158.1.100"
+        "ip": "faithh.taileb8c60.ts.net"
       },
       "faithh-1080ti": {
         "gpu": "1080ti",

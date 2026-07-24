@@ -21,7 +21,7 @@
 
 ```bash
 # SSH to Gen8
-ssh jonat@192.158.1.243
+ssh jonat@servicebox.taileb8c60.ts.net
 
 # Install jq
 sudo apt update
@@ -40,7 +40,7 @@ curl -s http://localhost:8000/api/v2/heartbeat | jq
 
 ```bash
 # SSH to Gen8
-ssh jonat@192.158.1.243
+ssh jonat@servicebox.taileb8c60.ts.net
 
 # Create directory
 mkdir -p ~/services/vaultwarden
@@ -57,7 +57,7 @@ services:
     environment:
       WEBSOCKET_ENABLED: "true"
       SIGNUPS_ALLOWED: "true"
-      DOMAIN: "http://192.158.1.243:8080"
+      DOMAIN: "http://servicebox.taileb8c60.ts.net:8080"
     volumes:
       - ./data:/data
     ports:
@@ -75,7 +75,7 @@ curl -I http://localhost:8080
 ```
 
 **Post-deployment:**
-1. Access http://192.158.1.243:8080
+1. Access http://servicebox.taileb8c60.ts.net:8080
 2. Create master account
 3. Disable signups:
    ```bash
@@ -102,7 +102,7 @@ curl -I http://localhost:8080
    ```
 
 3. Add to Gitea:
-   - Visit: http://192.158.1.243:3002/user/settings/keys
+   - Visit: http://servicebox.taileb8c60.ts.net:3002/user/settings/keys
    - Click "Add Key"
    - Paste key
    - Title: "Windows WSL Desktop"
@@ -110,7 +110,7 @@ curl -I http://localhost:8080
 
 4. Test from Windows:
    ```bash
-   ssh -T git@192.158.1.243 -p 2222
+   ssh -T git@servicebox.taileb8c60.ts.net -p 2222
    # Should say: "Hi there, jonat!"
    ```
 
@@ -120,7 +120,7 @@ curl -I http://localhost:8080
 
 ### Grafana
 ```bash
-# Access: http://192.158.1.243:3000
+# Access: http://servicebox.taileb8c60.ts.net:3000
 # Login: admin / admin123
 # Go to: Settings → Change Password
 # New password → Save in Vaultwarden
@@ -129,7 +129,7 @@ curl -I http://localhost:8080
 ### Pi-hole
 ```bash
 # SSH to Gen8
-ssh jonat@192.158.1.243
+ssh jonat@servicebox.taileb8c60.ts.net
 
 # Set new password
 docker exec pihole pihole -a -p
@@ -144,7 +144,7 @@ docker exec pihole pihole -a -p
 
 ```bash
 # SSH to Gen8
-ssh jonat@192.158.1.243
+ssh jonat@servicebox.taileb8c60.ts.net
 
 # Create health check script
 cat > ~/check_services.sh << 'EOF'
@@ -205,7 +205,7 @@ chmod +x ~/check_services.sh
 ### Create service inventory
 ```bash
 # SSH to Gen8
-ssh jonat@192.158.1.243
+ssh jonat@servicebox.taileb8c60.ts.net
 
 cat > ~/GEN8_SERVICE_INVENTORY.md << 'EOF'
 # Gen8 Service Inventory
@@ -219,14 +219,14 @@ cat > ~/GEN8_SERVICE_INVENTORY.md << 'EOF'
 
 | Service | URL | Purpose | Status |
 |---------|-----|---------|--------|
-| ChromaDB | http://192.158.1.243:8000 | Vector database (208 docs) | ✅ Running |
-| Grafana | http://192.158.1.243:3000 | Monitoring dashboards | ✅ Running |
-| Prometheus | http://192.158.1.243:9090 | Metrics collection | ✅ Running |
-| Pi-hole | http://192.158.1.243/admin | DNS filtering | ✅ Running |
-| Vaultwarden | http://192.158.1.243:8080 | Password manager | ✅ Running |
-| Gitea | http://192.158.1.243:3002 | Git repository hosting | ✅ Running |
-| Docker Registry | http://192.158.1.243:5001 | Private image registry | ✅ Running |
-| Uptime Kuma | http://192.158.1.243:3001 | Service monitoring | ✅ Running |
+| ChromaDB | http://servicebox.taileb8c60.ts.net:8000 | Vector database (208 docs) | ✅ Running |
+| Grafana | http://servicebox.taileb8c60.ts.net:3000 | Monitoring dashboards | ✅ Running |
+| Prometheus | http://servicebox.taileb8c60.ts.net:9090 | Metrics collection | ✅ Running |
+| Pi-hole | http://servicebox.taileb8c60.ts.net/admin | DNS filtering | ✅ Running |
+| Vaultwarden | http://servicebox.taileb8c60.ts.net:8080 | Password manager | ✅ Running |
+| Gitea | http://servicebox.taileb8c60.ts.net:3002 | Git repository hosting | ✅ Running |
+| Docker Registry | http://servicebox.taileb8c60.ts.net:5001 | Private image registry | ✅ Running |
+| Uptime Kuma | http://servicebox.taileb8c60.ts.net:3001 | Service monitoring | ✅ Running |
 
 ---
 
@@ -239,7 +239,7 @@ cat > ~/GEN8_SERVICE_INVENTORY.md << 'EOF'
 
 **SSH Access:**
 - Windows key added to Gitea
-- Test: `ssh -T git@192.158.1.243 -p 2222`
+- Test: `ssh -T git@servicebox.taileb8c60.ts.net -p 2222`
 
 ---
 
@@ -276,8 +276,8 @@ docker-compose up -d
 
 ## 🌐 Network Configuration
 
-- **LAN IP:** 192.158.1.243
-- **Tailscale IP:** 192.158.1.243
+- **LAN IP:** servicebox.taileb8c60.ts.net
+- **Tailscale IP:** servicebox.taileb8c60.ts.net
 - **DNS Server:** Pi-hole (port 53)
 - **SSH:** Port 22 (standard)
 - **Gitea SSH:** Port 2222
@@ -334,7 +334,7 @@ cd ~/ai-stack
   "vaultwarden": {
     "status": "running",
     "port": 8080,
-    "web_url": "http://192.158.1.243:8080",
+    "web_url": "http://servicebox.taileb8c60.ts.net:8080",
     "deployed": "2026-01-21",
     "notes": "Password manager, signups disabled after master account creation"
   }
@@ -412,7 +412,7 @@ None. All services operational.
 
 ## 📋 Next Steps
 
-1. Set Windows DNS to 192.158.1.243 (optional)
+1. Set Windows DNS to servicebox.taileb8c60.ts.net (optional)
 2. Install Bitwarden browser extension (connects to Vaultwarden)
 3. Create first Git repository in Gitea
 4. Configure Uptime Kuma monitors

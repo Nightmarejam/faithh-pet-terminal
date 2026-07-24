@@ -21,7 +21,7 @@ services:
     environment:
       - WEBSOCKET_ENABLED=true
       - SIGNUPS_ALLOWED=true
-      - DOMAIN=http://192.158.1.243:8080
+      - DOMAIN=http://servicebox.taileb8c60.ts.net:8080
     volumes:
       - ./data:/data
     ports:
@@ -32,5 +32,5 @@ ENDOFFILE
 
 docker-compose up -d
 sleep 5
-echo "Vaultwarden running at: http://192.158.1.243:8080"
+echo "Vaultwarden running at: http://servicebox.taileb8c60.ts.net:8080"
 docker ps | grep vaultwarden

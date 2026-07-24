@@ -53,7 +53,7 @@
 
 - **Faithh Backend**: http://localhost:5557
 - **Project Hub**: http://localhost:5001
-- **Chromadb**: http://192.158.1.243:8000
+- **Chromadb**: http://servicebox.taileb8c60.ts.net:8000
 - **Ollama**: http://localhost:11434
 
 

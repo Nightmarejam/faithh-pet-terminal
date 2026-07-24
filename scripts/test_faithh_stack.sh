@@ -15,15 +15,15 @@ echo "  \"tests\": {"
 
 # Test 1: ChromaDB on Gen8
 echo "    \"chromadb\": {"
-if curl -s http://192.158.1.243:8000/api/v1/heartbeat > /dev/null 2>&1; then
+if curl -s http://servicebox.taileb8c60.ts.net:8000/api/v1/heartbeat > /dev/null 2>&1; then
   echo "      \"status\": \"online\","
   
   # Get collection info
-  COLLECTIONS=$(curl -s http://192.158.1.243:8000/api/v1/collections | jq -r '.[].name' 2>/dev/null || echo "")
+  COLLECTIONS=$(curl -s http://servicebox.taileb8c60.ts.net:8000/api/v1/collections | jq -r '.[].name' 2>/dev/null || echo "")
   echo "      \"collections\": [$(echo $COLLECTIONS | tr '\n' ',' | sed 's/,$//' | sed 's/\(.*\)/"\1"/' | sed 's/ /","/g')],"
   
   # Get document count
-  DOC_COUNT=$(curl -s http://192.158.1.243:8000/api/v1/collections/faithh_knowledge_base | jq -r '.metadata.documents' 2>/dev/null || echo "unknown")
+  DOC_COUNT=$(curl -s http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base | jq -r '.metadata.documents' 2>/dev/null || echo "unknown")
   echo "      \"documents\": $DOC_COUNT"
 else
   echo "      \"status\": \"offline\""

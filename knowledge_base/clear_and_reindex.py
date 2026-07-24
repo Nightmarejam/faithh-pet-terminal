@@ -18,7 +18,7 @@ from pathlib import Path
 import chromadb
 
 # === CONFIGURATION ===
-CHROMADB_HOST = "192.158.1.10"
+CHROMADB_HOST = "servicebox.taileb8c60.ts.net"
 CHROMADB_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 

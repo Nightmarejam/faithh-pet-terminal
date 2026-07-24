@@ -19,7 +19,7 @@ FAITHH backend is running and functional but has two bugs introduced during Code
 ### Problem
 The `/api/status` endpoint shows malformed ChromaDB URL:
 ```json
-"host": "http://http://192.158.1.243:8000:8000"
+"host": "http://http://servicebox.taileb8c60.ts.net:8000:8000"
 ```
 
 ### Root Cause
@@ -28,7 +28,7 @@ Around line ~1262, Codex added:
 chroma_url = f"http://{CHROMA_HOST}:{CHROMA_PORT}"
 ```
 
-But `CHROMA_HOST` already contains `http://192.158.1.243` from env parsing earlier in the file (likely around lines 100-200).
+But `CHROMA_HOST` already contains `http://servicebox.taileb8c60.ts.net` from env parsing earlier in the file (likely around lines 100-200).
 
 ### Fix
 Search for where `chroma_url` is constructed in the `/api/status` endpoint and replace with:
@@ -42,8 +42,8 @@ else:
 ### Test
 ```bash
 curl -s http://localhost:5557/api/status | jq '.services.chromadb.host'
-# Should return: "http://192.158.1.243:8000"
-# NOT: "http://http://192.158.1.243:8000:8000"
+# Should return: "http://servicebox.taileb8c60.ts.net:8000"
+# NOT: "http://http://servicebox.taileb8c60.ts.net:8000:8000"
 ```
 
 ---
@@ -115,7 +115,7 @@ tail -20 /Users/macjohn/ai-stack/faithh.log
 |-----------|--------|---------|
 | Backend | ✅ Running | localhost:5557, v3.4 |
 | Ollama | ✅ Connected | llama3.1:8b, llama3.2:3b |
-| ChromaDB | ✅ Connected | 192.158.1.243:8000 |
+| ChromaDB | ✅ Connected | servicebox.taileb8c60.ts.net:8000 |
 | Collection | ✅ Working | faithh_knowledge_base, 27,568 docs |
 | Query Embedder | ✅ Correct | BGE-base-en-v1.5 (768-dim) |
 | RAG Queries | ✅ Working | Using 768-dim embeddings |

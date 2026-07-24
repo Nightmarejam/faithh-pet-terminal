@@ -224,8 +224,8 @@ Jonathan wants to capture work he does but forgets to log. Available sources:
 - Docker: v28.2.2
 
 **Network:**
-- LAN: 192.158.1.243
-- Tailscale: 192.158.1.243
+- LAN: servicebox.taileb8c60.ts.net
+- Tailscale: servicebox.taileb8c60.ts.net
 
 **Services:**
 - ChromaDB (port 8000) - **PRIMARY** knowledge base
@@ -236,7 +236,7 @@ Jonathan wants to capture work he does but forgets to log. Available sources:
 
 **SSH Access:**
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 ### MacBook Pro

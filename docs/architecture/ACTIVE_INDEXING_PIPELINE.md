@@ -4,7 +4,7 @@ Last updated: 2026-03-30
 
 ## Canonical collection
 
-- `faithh_knowledge_base` on ChromaDB (`192.158.1.243:8000`)
+- `faithh_knowledge_base` on ChromaDB (`servicebox.taileb8c60.ts.net:8000`)
 
 ## Primary active indexers
 

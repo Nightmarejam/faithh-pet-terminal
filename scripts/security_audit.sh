@@ -34,7 +34,7 @@ import json
 import sys
 import urllib.request
 try:
-    with urllib.request.urlopen("http://192.158.1.243:9090/api/v1/alerts", timeout=15) as r:
+    with urllib.request.urlopen("http://servicebox.taileb8c60.ts.net:9090/api/v1/alerts", timeout=15) as r:
         d = json.load(r)
     alerts = [a for a in d.get("data", {}).get("alerts", []) if a.get("state") == "firing"]
     print(f"{len(alerts)} alerts firing")
@@ -47,7 +47,7 @@ PY
   echo "## ChromaDB"
   chroma_ok=0
   for path in /api/v2/heartbeat /api/v1/heartbeat; do
-    if out=$(curl -fsS --connect-timeout 10 "http://192.158.1.243:8000${path}" 2>&1); then
+    if out=$(curl -fsS --connect-timeout 10 "http://servicebox.taileb8c60.ts.net:8000${path}" 2>&1); then
       echo "${path}: ${out}"
       chroma_ok=1
       break

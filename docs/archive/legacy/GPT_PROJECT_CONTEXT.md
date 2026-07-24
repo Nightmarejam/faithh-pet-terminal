@@ -50,7 +50,7 @@ When creating/updating files:
 ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ ChromaDB (Gen8 servicebox) │
-│ http://192.158.1.243:8000 │
+│ http://servicebox.taileb8c60.ts.net:8000 │
 │ Collection: faithh_knowledge_base │
 │ Total chunks: 29,041 (reindexed 2026-01-07) │
 └─────────────────────────────────────────────────────────────┘
@@ -159,7 +159,7 @@ Common cause: older docs referenced hardcoded model IDs and/or older routing cod
 ## ✅ Quick Verification Checklist (operator-friendly)
 
 - ChromaDB count:
-  - `curl -s "http://192.158.1.243:8000/api/v2/tenants/default_tenant/databases/default_database/collections/<COLLECTION_ID>/count"`
+  - `curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/tenants/default_tenant/databases/default_database/collections/<COLLECTION_ID>/count"`
 - Sanity query returns mixed sources (docs + chat history)
 - Backend returns provider badge / provider metadata (if enabled)
 - `project_states.json` values match:

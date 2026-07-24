@@ -29,7 +29,7 @@ CHROMA_PORT = 8000
 COLLECTION_NAME = "documents_768_v2"
 
 # NEW:
-CHROMA_HOST = "192.158.1.243"
+CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 CHROMA_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 ```
@@ -67,7 +67,7 @@ python scripts/reindex_with_metadata.py --dry-run
 ```bash
 python -c "
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 col = client.get_collection('faithh_knowledge_base')
 existing = col.get()
 if existing['ids']:
@@ -102,7 +102,7 @@ python scripts/reindex_with_metadata.py
 ```bash
 python -c "
 import chromadb
-client = chromadb.HttpClient(host='192.158.1.243', port=8000)
+client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
 col = client.get_collection('faithh_knowledge_base')
 count = col.count()
 print(f'Total chunks: {count}')
@@ -135,9 +135,9 @@ grep -E "CHROMA|chromadb" ~/ai-stack/.env
 
 Should show:
 ```
-CHROMADB_HOST=192.158.1.243
+CHROMADB_HOST=servicebox.taileb8c60.ts.net
 # or
-CHROMA_URL=http://192.158.1.243:8000
+CHROMA_URL=http://servicebox.taileb8c60.ts.net:8000
 ```
 
 Then restart backend:
@@ -166,7 +166,7 @@ pip install sentence-transformers
 ### Connection refused
 ```bash
 # Check Gen8 is reachable
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 ```
 
 ### Out of memory

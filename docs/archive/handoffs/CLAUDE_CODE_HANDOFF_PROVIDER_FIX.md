@@ -102,7 +102,7 @@ try {
 
 **Problem:** `/api/status` shows wrong ChromaDB URL:
 ```json
-"host": "http://http://192.158.1.243:8000:8000"
+"host": "http://http://servicebox.taileb8c60.ts.net:8000:8000"
 ```
 
 **Cause:** Double http:// because CHROMA_HOST already includes scheme.
@@ -138,7 +138,7 @@ grep -n "index_conversation\|def index" ~/ai-stack/faithh_professional_backend_f
 |-----------|--------|-------|
 | Backend | ✅ Running | localhost:5557, v3.4 |
 | Ollama | ✅ Working | llama3.1:8b, 2.3s direct response |
-| ChromaDB | ✅ Connected | 192.158.1.243:8000, 27,568 docs |
+| ChromaDB | ✅ Connected | servicebox.taileb8c60.ts.net:8000, 27,568 docs |
 | RAG | ✅ Working | BGE-768 embedder |
 | UI Chat | ❌ Broken | 502 timeout before Ollama responds |
 | Auto-index | ❌ Broken | 384/768 dimension mismatch |

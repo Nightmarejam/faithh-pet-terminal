@@ -88,7 +88,7 @@ security_middleware = SecurityMiddleware(
 # Achievement: Comprehensive service monitoring
 services_monitored = [
     'backend (localhost:5557)',
-    'chromadb (192.158.1.243:8000)', 
+    'chromadb (servicebox.taileb8c60.ts.net:8000)', 
     'ollama (localhost:11434)',
     'groq (cloud API)',
     'gemini (cloud API)'

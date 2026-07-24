@@ -9,7 +9,7 @@ from pathlib import Path
 from datetime import datetime
 
 BASE_DIR = Path(__file__).parent.parent
-CHROMA_HOST = "192.158.1.10"
+CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 CHROMA_PORT = 8000
 CHUNK_SIZE = 1500
 CHUNK_OVERLAP = 200

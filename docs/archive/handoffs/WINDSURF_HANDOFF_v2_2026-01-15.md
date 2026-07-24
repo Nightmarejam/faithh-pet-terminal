@@ -25,7 +25,7 @@ Jonathan needs a **major cleanup and consolidation** of his FAITHH (Faithful AI 
 - **Models:** `llama31-faithh:latest` and `qwen3-faithh:latest` available in Ollama
 
 ### What's Broken/Degraded ⚠️
-- **ChromaDB:** Showing `connected:false`, `documents:0` despite being reachable at 192.158.1.243:8000
+- **ChromaDB:** Showing `connected:false`, `documents:0` despite being reachable at servicebox.taileb8c60.ts.net:8000
   - Gen8 server has 28,876 chunks indexed
   - Likely a collection name or API version mismatch
 - **UI File Confusion:** Backend serves `faithh_pet_v4.html` but Compass was built in `faithh_pet.html`
@@ -119,8 +119,8 @@ Changes since `070c843` baseline:
 **Debug Steps:**
 ```bash
 # Check Gen8 ChromaDB directly
-curl -s "http://192.158.1.243:8000/api/v2/heartbeat"
-curl -s "http://192.158.1.243:8000/api/v2/collections"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat"
+curl -s "http://servicebox.taileb8c60.ts.net:8000/api/v2/collections"
 
 # Check collection name matches
 # Backend expects: faithh_knowledge_base
@@ -192,7 +192,7 @@ Windows Desktop (DESKTOP-JJ1SUHB)
 │       └── Ollama (localhost:11434)
 │
 Gen8 MicroServer (servicebox)
-├── Tailscale: 192.158.1.243
+├── Tailscale: servicebox.taileb8c60.ts.net
 ├── ChromaDB (port 8000) - PRODUCTION
 │   └── Collection: faithh_knowledge_base
 │   └── Documents: 28,876 chunks
@@ -224,7 +224,7 @@ Gen8 MicroServer (servicebox)
 ```bash
 GROQ_API_KEY=<key>
 GROQ_MODEL=llama-3.3-70b-versatile
-CHROMA_URL=http://192.158.1.243:8000
+CHROMA_URL=http://servicebox.taileb8c60.ts.net:8000
 OLLAMA_HOST=http://127.0.0.1:11434
 ```
 
@@ -340,9 +340,9 @@ See the full spec for complete Python implementations.
 
 ## Contact Points
 
-- **Gen8 SSH:** `ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243`
+- **Gen8 SSH:** `ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net`
 - **Backend health:** `curl http://localhost:5557/health`
-- **ChromaDB health:** `curl http://192.158.1.243:8000/api/v2/heartbeat`
+- **ChromaDB health:** `curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat`
 - **Git remote:** `github.com:Nightmarejam/faithh-pet-terminal.git`
 
 ---
