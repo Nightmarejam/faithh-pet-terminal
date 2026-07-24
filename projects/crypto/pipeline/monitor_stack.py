@@ -27,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Collect health metrics for FAITHH mining/inference stack."
     )
-    parser.add_argument("--faithh-host", default="192.158.1.100")
+    parser.add_argument("--faithh-host", default="faithh.taileb8c60.ts.net")
     parser.add_argument("--faithh-user", default="jonat")
     parser.add_argument("--chroma-host", default="servicebox.taileb8c60.ts.net")
     parser.add_argument("--chroma-port", type=int, default=8000)

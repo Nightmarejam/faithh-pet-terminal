@@ -14,7 +14,7 @@ LOG="$NAS_BACKUP/backup.log"
 
 # --- Hosts ---
 PVE_HOST="root@pve"
-FAITHH_HOST="jonat@192.158.1.100"
+FAITHH_HOST="jonat@faithh.taileb8c60.ts.net"
 
 # --- Logging ---
 log() {
