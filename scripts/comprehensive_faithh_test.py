@@ -12,7 +12,7 @@ from typing import Dict, List, Tuple
 
 # Configuration
 BACKEND_URL = "http://localhost:5557"
-CHROMADB_URL = "http://192.158.1.10:8000"
+CHROMADB_URL = "http://servicebox.taileb8c60.ts.net:8000"
 
 # Test queries designed to check for hallucinations and accuracy
 TEST_QUERIES = [
@@ -37,7 +37,7 @@ TEST_QUERIES = [
     {
         "query": "Tell me about the Gen8 server infrastructure",
         "category": "infrastructure_knowledge",
-        "expected_keywords": ["Gen8", "ChromaDB", "services", "192.158.1.10"],
+        "expected_keywords": ["Gen8", "ChromaDB", "services", "servicebox.taileb8c60.ts.net"],
         "should_not_contain": ["localhost", "unknown"]
     },
     {
@@ -133,7 +133,7 @@ class FAITHHSystemTest:
             
             # Use Python client to check collection
             import chromadb
-            client = chromadb.HttpClient(host='192.158.1.10', port=8000)
+            client = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
             collection = client.get_collection('faithh_knowledge_base')
             count = collection.count()
             

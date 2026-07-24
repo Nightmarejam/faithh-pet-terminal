@@ -49,12 +49,12 @@ def check_chromadb_health() -> dict:
     """Check ChromaDB health on Gen8."""
     try:
         import requests
-        r = requests.get("http://192.158.1.10:8000/api/v2/heartbeat", timeout=5)
+        r = requests.get("http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat", timeout=5)
         if r.ok:
-            return {"status": "healthy", "host": "192.158.1.10", "port": 8000}
-        return {"status": "unhealthy", "host": "192.158.1.10", "port": 8000, "error": f"HTTP {r.status_code}"}
+            return {"status": "healthy", "host": "servicebox.taileb8c60.ts.net", "port": 8000}
+        return {"status": "unhealthy", "host": "servicebox.taileb8c60.ts.net", "port": 8000, "error": f"HTTP {r.status_code}"}
     except Exception as e:
-        return {"status": "unreachable", "host": "192.158.1.10", "port": 8000, "error": str(e)}
+        return {"status": "unreachable", "host": "servicebox.taileb8c60.ts.net", "port": 8000, "error": str(e)}
 
 
 def check_ollama_health() -> dict:

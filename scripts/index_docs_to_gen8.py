@@ -8,7 +8,7 @@ Usage:
     python scripts/index_docs_to_gen8.py
 
 This will index markdown files and push them to the Gen 8 ChromaDB
-at http://192.158.1.10:8000
+at http://servicebox.taileb8c60.ts.net:8000
 """
 
 import os
@@ -31,7 +31,7 @@ except ImportError as e:
     exit(1)
 
 # Configuration
-GEN8_CHROMA_HOST = "192.158.1.10"
+GEN8_CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 GEN8_CHROMA_PORT = 8000
 COLLECTION_ID = "71e13a01-cbb6-48ba-a126-2a16320d40c0"
 COLLECTION_NAME = "faithh_knowledge_base"

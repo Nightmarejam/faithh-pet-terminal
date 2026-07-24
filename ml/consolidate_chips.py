@@ -38,7 +38,7 @@ from sentence_transformers import SentenceTransformer
 # Configuration
 # ============================================================
 
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "servicebox.taileb8c60.ts.net")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base_v2"
 

@@ -25,7 +25,7 @@ from sentence_transformers import SentenceTransformer
 
 # Configuration
 EXPORT_BASE = Path.home() / "ai-stack" / "AI_Chat_Exports"
-CHROMA_HOST = "192.158.1.10"  # Gen8 server via Tailscale
+CHROMA_HOST = "servicebox.taileb8c60.ts.net"  # Gen8 server via Tailscale
 CHROMA_PORT = 8000
 COLLECTION_NAME = "faithh_knowledge_base"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"

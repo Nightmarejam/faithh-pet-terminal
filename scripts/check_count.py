@@ -2,7 +2,7 @@
 """Simple script to check ChromaDB count and query for harmony docs."""
 import chromadb
 
-client = chromadb.HttpClient(host="192.158.1.10", port=8000)
+client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
 collection = client.get_collection(name="faithh_knowledge_base")
 count = collection.count()
 print(f"ChromaDB document count: {count:,}")

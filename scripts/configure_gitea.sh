@@ -3,7 +3,7 @@
 # Gitea Configuration for Gen8
 # Created: 2026-01-20
 
-GEN8_IP="192.158.1.243"
+GEN8_IP="servicebox.taileb8c60.ts.net"
 GITEA_DIR="/home/jonat/services/cicd/gitea"
 
 echo "🔧 Configuring Gitea on Gen8"
@@ -27,10 +27,10 @@ LFS_STARTUP_SERVER = true
 LFS_CONTENT_PATH = /data/lfs
 
 [server]
-SSH_DOMAIN       = 192.158.1.243
-DOMAIN           = 192.158.1.243
+SSH_DOMAIN       = servicebox.taileb8c60.ts.net
+DOMAIN           = servicebox.taileb8c60.ts.net
 HTTP_PORT        = 3000
-ROOT_URL         = http://192.158.1.243:3002/
+ROOT_URL         = http://servicebox.taileb8c60.ts.net:3002/
 DISABLE_SSH      = false
 SSH_PORT         = 2222
 LFS_JWT_SECRET   = gitea_lfs_jwt_secret_change_me

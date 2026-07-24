@@ -5,9 +5,9 @@
 set -euo pipefail
 
 declare -a TARGETS=(
-  "gen8:192.158.1.243:22"
-  "dsm:192.158.1.65:22"
-  "unifi:192.158.1.1:22"
+  "gen8:servicebox.taileb8c60.ts.net:22"
+  "dsm:nas.taileb8c60.ts.net:22"
+  "unifi:192.168.1.1:22"
 )
 
 ok=0

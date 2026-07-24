@@ -186,7 +186,7 @@ def generate_technical_view():
         'api_endpoints': {
             'faithh_backend': 'http://localhost:5557',
             'project_hub': 'http://localhost:5001', 
-            'chromadb': 'http://192.158.1.10:8000',
+            'chromadb': 'http://servicebox.taileb8c60.ts.net:8000',
             'ollama': 'http://localhost:11434'
         },
         'performance_metrics': {

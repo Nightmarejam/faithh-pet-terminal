@@ -37,7 +37,7 @@ token_estimate: 0
 ### FAITHH
 - **Phase:** Phase 4 Active
 - **Status:** operational
-- **Infrastructure:** Backend on WSL2 (localhost:5557), ChromaDB on Gen8 (ChromaDB on Gen8 (192.158.1.10:8000))
+- **Infrastructure:** Backend on WSL2 (localhost:5557), ChromaDB on Gen8 (ChromaDB on Gen8 (servicebox.taileb8c60.ts.net:8000))
 - **Knowledge Base:** 53976 chunks indexed (306 conversations)
 - **Recent:** Complete Phase 3: Test RAG performance with 37K chunks, Complete Phase 3: Run end-to-end integration tests with qwen25-grounded
 
@@ -161,9 +161,9 @@ Stop building the compass and start using it. FAITHH at current state is functio
 
 ### Key URLs
 - FAITHH Backend: http://localhost:5557
-- ChromaDB: http://192.158.1.243:8000
-- Grafana: http://192.158.1.243:3000
-- Gitea: http://192.158.1.243:3002
+- ChromaDB: http://servicebox.taileb8c60.ts.net:8000
+- Grafana: http://servicebox.taileb8c60.ts.net:3000
+- Gitea: http://servicebox.taileb8c60.ts.net:3002
 
 ### Key Files
 - `project_states.json` — machine-readable state (source of truth)
@@ -174,7 +174,7 @@ Stop building the compass and start using it. FAITHH at current state is functio
 
 ### SSH Access
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 ---

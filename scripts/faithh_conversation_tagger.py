@@ -31,7 +31,7 @@ from datetime import datetime
 from pathlib import Path
 
 # ── config ────────────────────────────────────────────────────────────────────
-CHROMA_HOST = "192.158.1.10"
+CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 CHROMA_PORT = 8000
 COLLECTION  = "faithh_knowledge_base_v2"
 EXPORT_FILE = Path.home() / "ai-stack/knowledge_base/imports/claude/conversations.json"

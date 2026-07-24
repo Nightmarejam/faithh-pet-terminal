@@ -47,7 +47,7 @@ phase_history:
 architecture:
   backend: faithh_professional_backend_fixed.py (Flask, port 5557, faithhvm Ubuntu, threaded=True)
   frontend: faithh_pet_v4.html (MegaMan Battle Network UI)
-  database: ChromaDB on Gen8 (192.158.1.10:8000)
+  database: ChromaDB on Gen8 (servicebox.taileb8c60.ts.net:8000)
   collection: faithh_knowledge_base
   chunks: 38294 (as of 2026-03-01, includes harmony/IME docs)
   conversations_indexed: 306 (208 ChatGPT + 98 Claude)
@@ -187,7 +187,7 @@ use_case: "Custom UI elements and artwork for FAITHH and other projects"
 ### Claude Code local stack (faithhvm)
 ```yaml
 host: faithhvm
-local_ip: 192.158.1.100
+local_ip: 192.168.1.100
 gpu: NVIDIA RTX 3090 24GB (passthrough)
 model: qwen3-coder-30b-a3b-awq
 model_path: ~/models/qwen3-coder-30b-a3b-awq/
@@ -202,7 +202,7 @@ claude_code_env:
   ANTHROPIC_BASE_URL: http://localhost:5558
   ANTHROPIC_API_KEY: faithh-local
 workflow: "/compact every 2-3 tool-heavy turns; see ~/ai-stack/CLAUDE.md"
-samba_mount: //192.158.1.10/shared on /mnt/shared
+samba_mount: //servicebox.taileb8c60.ts.net/shared on /mnt/shared
 ```
 
 ## Infrastructure
@@ -222,7 +222,7 @@ windows_desktop:
     d_drive: "WD My Passport 931GB (backup)"
   psu: "FSP PT-1000FM 1000W Platinum"
   role: "Primary workstation — development, AI inference, audio production"
-  local_ip: 192.158.1.232
+  local_ip: 192.168.1.232
   tailscale_ip: 100.115.225.100
 
 gen8_server:
@@ -233,7 +233,7 @@ gen8_server:
   ram: "15GB DDR3 ECC"
   storage: "915GB available"
   docker: v28.2.2
-  local_ip: 192.158.1.10  # gen8 servicebox
+  local_ip: servicebox.taileb8c60.ts.net  # gen8 servicebox
   tailscale_ip: "mesh-specific (see tailscale status); Chroma/SSH in docs use local_ip"
   role: "Infrastructure server — 12 Docker services"
 
@@ -241,7 +241,7 @@ macbook:
   model: "MacBook Pro M1"
   ram: "Unknown (verify)"
   storage: "500GB"
-  local_ip: 192.158.1.132
+  local_ip: 192.168.1.132
   tailscale_ip: 100.122.56.106
   role: "Mobile workstation — mastering, FAITHH Lite, Constella dev"
   software: [FAITHH Lite, Ollama, WaveLab, Luna DAW]
@@ -251,7 +251,7 @@ synology_nas:
   cpu: "Realtek RTD1296 (ARM quad-core)"
   ram: "512MB"
   drives: "1x Seagate IronWolf Pro 16TB"
-  local_ip: 192.158.1.65
+  local_ip: nas.taileb8c60.ts.net
   role: "File storage, backups, project archives, partner access"
   mounts:
     z_drive: "/mnt/z/ — mapped in WSL"
@@ -290,8 +290,8 @@ registry_ui: { port: 5001, purpose: "Registry web UI", status: "running" }
 topology: "ISP → Nighthawk C7000v2 (router mode) → UDM (router mode) → Switch → Devices"
 known_issue: "Double-NAT causing random disconnections"
 vpn: Tailscale (all devices connected)
-local_subnet: 192.158.1.x  # intentionally non-standard
-ssh_config: ~/.ssh/config  # configured for: gen8, nas, mac, unifi
+local_subnet: 192.168.1.x  # DHCP — LAN IPs drift; MagicDNS names are canonical (homelab/infra/hosts.yaml)
+ssh_config: ~/.ssh/config  # MagicDNS-first; configured for: gen8/servicebox, gen8-ilo, pve, nas, faithh
 ssh_hub: ~/ai-stack/scripts/ssh_hub.sh  # menu-based SSH access (created Jan 26)
 ```
 

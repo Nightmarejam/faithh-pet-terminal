@@ -31,7 +31,7 @@ CHUNK_SIZE = 1800
 CHUNK_OVERLAP = 200
 BATCH_SIZE = 32
 DEFAULT_COLLECTION = "faithh_knowledge_base_v2"
-DEFAULT_CHROMA_HOST = "192.158.1.10"
+DEFAULT_CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 DEFAULT_CHROMA_PORT = 8000
 
 # Embedding dimension -> model used by this stack

@@ -33,7 +33,7 @@ This is Jonathan's unified AI development and personal project management system
 ### Gen8 Server (servicebox)
 - **Hostname:** servicebox
 - **IP Addresses:**
-  - LAN: 192.158.1.243 (canonical for Chroma / SSH / metrics in repo docs)
+  - LAN: servicebox.taileb8c60.ts.net (canonical for Chroma / SSH / metrics in repo docs)
   - Tailscale: use `tailscale status` on a connected host if needed; do not substitute the LAN address as a Tailscale IP
 - **OS:** Ubuntu 22.04 LTS
 - **Docker:** v28.2.2
@@ -45,7 +45,7 @@ This is Jonathan's unified AI development and personal project management system
 **ChromaDB** (Production - Gen8, ongoing reindex/migrations)
 - Location: `~/services/chromadb/` (on servicebox)
 - Port: 8000
-- API: http://192.158.1.243:8000
+- API: http://servicebox.taileb8c60.ts.net:8000
 - **Primary collection:** `faithh_knowledge_base` (~54k chunks — use `fingerprint_state.json` or `GET http://127.0.0.1:5557/health` for current count)
 - **Other:** `faithh_uncertainty_surface` (noise / gated content), `faithh_session_metrics` (telemetry, not RAG), `alife_lineage` (ALIFE)
 - Embedding: all-MiniLM-L6-v2 (384 dimensions) for typical KB paths
@@ -229,7 +229,7 @@ curl -s http://localhost:5557/health | python3 -m json.tool | head -20
 curl http://localhost:5557/api/status
 
 # ChromaDB heartbeat
-curl http://192.158.1.243:8000/api/v2/heartbeat
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 
 # System resources
 htop

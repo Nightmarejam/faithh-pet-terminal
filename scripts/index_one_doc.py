@@ -8,7 +8,7 @@ print("Starting...")
 sys.stdout.flush()
 
 BASE_DIR = Path("/home/jonat/ai-stack")
-CHROMA_HOST = "192.158.1.10"
+CHROMA_HOST = "servicebox.taileb8c60.ts.net"
 CHROMA_PORT = 8000
 
 print("Importing chromadb...")

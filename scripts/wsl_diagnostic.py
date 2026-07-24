@@ -37,7 +37,7 @@ print("\n5. Network Connectivity:")
 import socket
 tests = [
     ("localhost:5557", "FAITHH Backend"),
-    ("192.158.1.10:8000", "ChromaDB Gen8"),
+    ("servicebox.taileb8c60.ts.net:8000", "ChromaDB Gen8"),
     ("127.0.0.1:11434", "Ollama"),
 ]
 for addr, name in tests:

@@ -60,11 +60,11 @@ fi
 echo -e "${GREEN}✓${NC} Backend file found"
 
 # Check ChromaDB
-if python3 -c "import chromadb; c=chromadb.HttpClient(host='192.158.1.243',port=8000); c.heartbeat()" 2>/dev/null; then
-    DOCS=$(python3 -c "import chromadb; c=chromadb.HttpClient(host='192.158.1.243',port=8000); col=c.get_collection('faithh_knowledge_base'); print(col.count())" 2>/dev/null)
+if python3 -c "import chromadb; c=chromadb.HttpClient(host='servicebox.taileb8c60.ts.net',port=8000); c.heartbeat()" 2>/dev/null; then
+    DOCS=$(python3 -c "import chromadb; c=chromadb.HttpClient(host='servicebox.taileb8c60.ts.net',port=8000); col=c.get_collection('faithh_knowledge_base'); print(col.count())" 2>/dev/null)
     echo -e "${GREEN}✓${NC} ChromaDB online (Gen8: $DOCS documents)"
 else
-    echo -e "${RED}❌ ChromaDB not available on Gen8 (192.158.1.243:8000)${NC}"
+    echo -e "${RED}❌ ChromaDB not available on Gen8 (servicebox.taileb8c60.ts.net:8000)${NC}"
     exit 1
 fi
 

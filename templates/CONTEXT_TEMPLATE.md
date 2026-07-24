@@ -131,9 +131,9 @@ All projects answer the same question: *"How do we build systems that actually s
 
 ### Key URLs
 - FAITHH Backend: http://localhost:5557
-- ChromaDB: http://192.158.1.243:8000
-- Grafana: http://192.158.1.243:3000
-- Gitea: http://192.158.1.243:3002
+- ChromaDB: http://servicebox.taileb8c60.ts.net:8000
+- Grafana: http://servicebox.taileb8c60.ts.net:3000
+- Gitea: http://servicebox.taileb8c60.ts.net:3002
 
 ### Key Files
 - `project_states.json` — machine-readable state (source of truth)
@@ -144,7 +144,7 @@ All projects answer the same question: *"How do we build systems that actually s
 
 ### SSH Access
 ```bash
-ssh -i ~/.ssh/servicebox_ed25519 jonat@192.158.1.243
+ssh -i ~/.ssh/servicebox_ed25519 jonat@servicebox.taileb8c60.ts.net
 ```
 
 ---

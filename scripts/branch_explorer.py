@@ -36,7 +36,7 @@ import chromadb
 
 BASE_DIR = Path(__file__).parent.parent
 OLLAMA_URL = os.environ.get("OLLAMA_URL", "http://localhost:11434")
-CHROMA_HOST = os.environ.get("CHROMA_HOST", "192.158.1.10")
+CHROMA_HOST = os.environ.get("CHROMA_HOST", "servicebox.taileb8c60.ts.net")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
 COLLECTION_NAME = "faithh_knowledge_base"
 DEFAULT_MODEL = "llama31-faithh"

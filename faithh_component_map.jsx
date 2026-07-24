@@ -23,11 +23,11 @@ const COMPONENTS = {
     { id: "ef", label: "SentenceTransformerEmbeddingFunction", sub: "model: all-MiniLM-L6-v2\ndevice: cpu (recommended)\n384-dim vectors", mem: "~761MB init", color: "#7ec4a0", impedance: "⚠ CUDA init = +45GB RES (avoid)" },
   ],
   transport: [
-    { id: "chroma_client", label: "chromadb.HttpClient", sub: "host: 192.158.1.243:8000\nLAN path (not Tailscale)\nbatch_size=25", mem: "~50MB", color: "#d4a07e", impedance: "⚠ batch_size vs throughput tradeoff" },
+    { id: "chroma_client", label: "chromadb.HttpClient", sub: "host: servicebox.taileb8c60.ts.net:8000\nLAN path (not Tailscale)\nbatch_size=25", mem: "~50MB", color: "#d4a07e", impedance: "⚠ batch_size vs throughput tradeoff" },
     { id: "flush_batch", label: "flush_batch()", sub: "upserts ids + documents + metadatas\nclears batch after each flush", mem: "O(batch_size)", color: "#d4a07e" },
   ],
   storage: [
-    { id: "chroma_db", label: "ChromaDB (Gen8)", sub: "faithh_knowledge_base\n~25K docs target\n192.158.1.243:8000", mem: "On Gen8 (separate host)", color: "#c47e7e" },
+    { id: "chroma_db", label: "ChromaDB (Gen8)", sub: "faithh_knowledge_base\n~25K docs target\nservicebox.taileb8c60.ts.net:8000", mem: "On Gen8 (separate host)", color: "#c47e7e" },
     { id: "other_cols", label: "Other Collections", sub: "governance_corpus: 18,768\nalife_lineage: 339,900\nfaithh_session_metrics: 7", mem: "Do NOT delete", color: "#c47e7e" },
   ],
 };
@@ -80,7 +80,7 @@ const IMPEDANCE_BLOCKS = [
     location: "Transport Layer",
     symptom: "Unnecessary VPN overhead for local ChromaDB",
     cause: ".env hardcoded Tailscale IP (100.79.85.32) instead of LAN IP",
-    fix: "Updated .env to 192.158.1.243. Added gen8 to /etc/hosts.",
+    fix: "Updated .env to servicebox.taileb8c60.ts.net. Added gen8 to /etc/hosts.",
     status: "fixed",
   },
   {
@@ -222,7 +222,7 @@ export default function FAITHHMap() {
             <span style={{ color: "#484f58" }}> → </span>
             <code style={{ color: "#d4a07e" }}>flush_batch() × N</code>
             <span style={{ color: "#484f58" }}> → </span>
-            <code style={{ color: "#c47e7e" }}>ChromaDB LAN 192.158.1.243:8000</code>
+            <code style={{ color: "#c47e7e" }}>ChromaDB LAN servicebox.taileb8c60.ts.net:8000</code>
           </div>
         </div>
       )}

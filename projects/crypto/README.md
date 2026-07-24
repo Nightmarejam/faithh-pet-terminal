@@ -35,7 +35,7 @@ python pipeline/fetch_prices.py
 python pipeline/ingest_whitepaper.py \
   --source "https://bitcoin.org/bitcoin.pdf" \
   --symbol BTC \
-  --chroma-host 192.158.1.10 \
+  --chroma-host servicebox.taileb8c60.ts.net \
   --chroma-port 8000 \
   --collection faithh_knowledge_base
 ```
