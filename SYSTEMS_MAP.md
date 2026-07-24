@@ -187,7 +187,7 @@ use_case: "Custom UI elements and artwork for FAITHH and other projects"
 ### Claude Code local stack (faithhvm)
 ```yaml
 host: faithhvm
-local_ip: faithh.taileb8c60.ts.net
+local_ip: 192.168.1.100  # historical — VM down with pve; use faithh.taileb8c60.ts.net when back
 gpu: NVIDIA RTX 3090 24GB (passthrough)
 model: qwen3-coder-30b-a3b-awq
 model_path: ~/models/qwen3-coder-30b-a3b-awq/
@@ -290,8 +290,8 @@ registry_ui: { port: 5001, purpose: "Registry web UI", status: "running" }
 topology: "ISP → Nighthawk C7000v2 (router mode) → UDM (router mode) → Switch → Devices"
 known_issue: "Double-NAT causing random disconnections"
 vpn: Tailscale (all devices connected)
-local_subnet: 192.168.1.x  # intentionally non-standard
-ssh_config: ~/.ssh/config  # configured for: gen8, nas, mac, unifi
+local_subnet: 192.168.1.x  # DHCP — LAN IPs drift; MagicDNS names are canonical (homelab/infra/hosts.yaml)
+ssh_config: ~/.ssh/config  # MagicDNS-first; configured for: gen8/servicebox, gen8-ilo, pve, nas, faithh
 ssh_hub: ~/ai-stack/scripts/ssh_hub.sh  # menu-based SSH access (created Jan 26)
 ```
 

@@ -106,7 +106,7 @@ class ConnectionMonitor:
     def _initialize_services(self):
         """Initialize all services to monitor"""
         # "Unhealthy services: 1" historically came from optional deps marked UNHEALTHY —
-        # e.g. remote Chroma on NAS (servicebox.taileb8c60.ts.net) timing out or connection refused while
+        # e.g. remote Chroma on servicebox timing out or connection refused while
         # the UI/backend still runs. Groq/Gemini URLs without API keys only return 401/403
         # (degraded) but timeouts on those would also have been UNHEALTHY before optional.
         services_config = [
