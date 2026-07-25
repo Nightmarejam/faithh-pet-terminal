@@ -166,17 +166,28 @@ FAITHH metrics: http://192.158.1.10:5557/metrics
 Gen8 node_exporter: :9100
 =======
 # FAITHH Ecosystem — Cursor/Windsurf Session Context
-Last verified: 2026-05-11
+Last verified: 2026-07-25 (live check from desktop-iifeikl)
 
-## Stack state (all confirmed working this session)
+## Stack state
+
+⚠️ **The FAITHH VM (VM 100) is DOWN** pending the Proxmox rebuild — anything hosted on
+`faithh.*` is unreachable and that name does not resolve yet. The knowledge layer is
+unaffected and serving.
 
 | Component | Status | Address |
 |---|---|---|
-| FAITHH backend | ✅ Running | http://faithh.taileb8c60.ts.net:5557 |
-| ChromaDB | ✅ Running | servicebox.taileb8c60.ts.net:8000 |
-| vLLM | ✅ Running | http://faithh.taileb8c60.ts.net:8000 |
-| Groq | ✅ Configured | llama-3.3-70b-versatile |
-| SSH | ✅ Working | ssh faithh (jonat@faithh.taileb8c60.ts.net) |
+| ChromaDB | ✅ Running (verified 2026-07-25) | servicebox.taileb8c60.ts.net:8000 |
+| Groq / Anthropic / Gemini | ✅ Keys configured | cloud inference available today |
+| SSH to gen8 | ✅ Working | `ssh jonat@servicebox.taileb8c60.ts.net` |
+| SSH to NAS | ✅ Working | `ssh nas` (recovered 2026-07-24) |
+| FAITHH backend | ❌ DOWN — VM 100 not restored | was http://faithh…:5557 |
+| vLLM | ❌ DOWN — VM 100 not restored | was http://faithh…:8000 |
+| SSH to faithh | ❌ Name does not resolve until the VM is re-enrolled | — |
+
+**Running the backend before the rebuild is possible**: it can run on the Gen8 against
+local ChromaDB with cloud inference instead of vLLM (`FAITHH_FORCE_LOCAL=0`). Note the
+model path `/mnt/nas/models/...` in older configs is dead — models now live under the
+NAS `homelab` share at `homelab/ai/models/`.
 
 ## Backend entrypoint
 

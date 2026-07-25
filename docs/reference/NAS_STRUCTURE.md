@@ -1,9 +1,39 @@
 # NAS Structure Documentation
 
-**Last Updated:** 2026-03-15  
-**Purpose:** Document the complete NAS folder structure across all shares
+**Last Updated:** 2026-07-25
+**Purpose:** Document the NAS folder structure across all shares
+
+> ⚠️ **Reorganized 2026-07-24.** Everything below the "Historical layout" heading describes
+> the *old* eleven-share arrangement and is kept for reference only — those shares were
+> migrated and deleted. Current layout is the table immediately below.
+
+## Current layout (2026-07-25)
+
+| Share | Size | Purpose |
+|-------|------|---------|
+| **media** | 1.2 TB | The only share Plex mounts. `Movies` · `Tv Shows` · `Anime` · `Anime Movies` · `Music` · `Master Lessons` · `comics` · `downloads/` |
+| **homelab** | 844 GB | Everything private/technical: `ai/` (models, knowledge, archives) · `audio/` (Tomcat Sound) · `backups/` · `personal/` (incl. `private/`) · `projects/` · `archive/` · `triage/` |
+| **pve** | 489 GB | Hypervisor: `dump/` (vzdumps + VM configs) · `template/iso/` |
+| **homes** | 2.5 GB | DSM-managed user homes (required for Synology Drive) |
+
+Key path changes for code and docs:
+
+| Old | New |
+|---|---|
+| `/volume1/AI/models` | `/volume1/homelab/ai/models` |
+| `/volume1/AI/knowledge` | `/volume1/homelab/ai/knowledge` |
+| `/volume1/raw_ingest/gov_api` | `/volume1/homelab/projects/civic-data` |
+| `/volume1/projects/<name>` | `/volume1/homelab/projects/<name>` |
+| `/volume1/Personal/*` | `/volume1/homelab/personal/*` |
+| `/volume1/Personal/videos/library/*` | `/volume1/media/*` |
+| `/volume1/pve-iso` | `/volume1/pve/template/iso` |
+
+Privacy invariant: the Plex container mounts **only** `//nas/media`, so
+`homelab/personal/private` is unreachable from the media server by construction.
 
 ---
+
+## Historical layout (pre-2026-07-24) — reference only
 
 ## Full NAS Overview (Synology DS220j - 13TB)
 
