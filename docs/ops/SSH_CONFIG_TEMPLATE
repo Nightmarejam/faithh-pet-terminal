@@ -1,0 +1,31 @@
+Host faithh
+  HostName 192.158.1.204
+  User jonat
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  ServerAliveInterval 30
+  ServerAliveCountMax 4
+
+Host gen8 servicebox
+  HostName 192.158.1.10
+  User jonat
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  ServerAliveInterval 30
+  ServerAliveCountMax 4
+
+Host nas
+  HostName 192.158.1.12
+  User jonat
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  ServerAliveInterval 30
+  ServerAliveCountMax 4
+
+Host pve
+  HostName 192.158.1.25
+  User root
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
+  ServerAliveInterval 30
+  ServerAliveCountMax 4

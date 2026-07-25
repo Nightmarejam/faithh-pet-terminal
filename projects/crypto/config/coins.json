@@ -117,6 +117,7 @@
   },
   "wallet_addresses": {
     "ETC": "0xF99275b70cB816c76F4E19328dF229483d6Ce8D2",
+    "ZEC": "t1QoLverDaVq8BmJoaMKMQBeWFd6RHEkivf",
     "pool": "2miners",
     "pool_dashboard": "https://etc.2miners.com/account/0xF99275b70cB816c76F4E19328dF229483d6Ce8D2",
     "pool_api": "https://etc.2miners.com/api/accounts/0xF99275b70cB816c76F4E19328dF229483d6Ce8D2",

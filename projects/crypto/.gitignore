@@ -16,3 +16,5 @@ data/pool/*.json
 data/pool/*.jsonl
 data/whitepapers/*.pdf
 data/whitepapers/*.json
+data/ops/*.json
+data/ops/*.log

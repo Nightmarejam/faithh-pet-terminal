@@ -136,3 +136,43 @@ Outputs:
 
 - `data/signals/profit_candidates_YYYYMMDD.json`
 - `data/signals/latest_candidates.json`
+
+### API readiness check
+
+Validate env format and endpoint access:
+
+```bash
+python pipeline/api_readiness_check.py
+```
+
+Outputs:
+
+- `data/ops/api_readiness_YYYYMMDDTHHMMSSZ.json`
+- `data/ops/api_readiness_latest.json`
+
+### Coinbase account snapshot (read-only)
+
+Capture accounts + tradable USD/USDC products:
+
+```bash
+python pipeline/coinbase_account_snapshot.py --quote-currency USD
+```
+
+Outputs:
+
+- `data/ops/coinbase_snapshot_YYYYMMDDTHHMMSSZ.json`
+- `data/ops/coinbase_snapshot_latest.json`
+
+### Datadog Knowledge Center snapshot
+
+Collect Datadog observability reference pages into machine-readable local files:
+
+```bash
+python pipeline/datadog_knowledge_snapshot.py --max-pages 25
+```
+
+Outputs:
+
+- `data/ops/datadog_kc_snapshot_YYYYMMDDTHHMMSSZ.json`
+- `data/ops/datadog_kc_snapshot_latest.json`
+- `data/ops/datadog_kc_pages_YYYYMMDDTHHMMSSZ.jsonl`
