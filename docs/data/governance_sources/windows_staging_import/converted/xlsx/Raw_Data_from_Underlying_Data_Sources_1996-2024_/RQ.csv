@@ -1,0 +1,1001 @@
+DataSourceCode,Organization,DataSource,indicator,econ_code,econ_name,region,income_class,production_year,wgi_dimension,value,minimum,maximum,orientation
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2004,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2004,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2004,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2004,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2004,rq,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2004,rq,3.6,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2004,rq,3.3,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2004,rq,3.7,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2004,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2004,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2004,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2004,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2004,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2004,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2004,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2004,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2005,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2005,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2005,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2005,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2005,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2005,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2005,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2005,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2005,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2006,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2006,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2006,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2006,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2006,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2006,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2006,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2006,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2006,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2006,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2006,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2006,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2007,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2007,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2007,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2007,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2007,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2007,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2007,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2007,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2007,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2007,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2007,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2007,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2007,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2007,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2007,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2007,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2007,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2007,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2007,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2007,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2007,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2007,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2007,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2008,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2008,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2008,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2008,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2008,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2008,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2008,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2008,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2008,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2008,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2008,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2008,rq,2.33,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2008,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2008,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2008,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2008,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2008,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2009,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2009,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2009,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2009,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2009,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2009,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2009,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2009,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2009,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2009,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2009,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2009,rq,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2009,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2009,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2009,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2009,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2009,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2009,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2009,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2009,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2009,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2010,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2010,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2010,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2010,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2010,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2010,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2010,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2010,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2010,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2010,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2010,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2010,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2010,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2010,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2010,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2010,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2010,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2010,rq,1.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2010,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2010,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2010,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2010,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2010,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2010,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2010,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2010,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2011,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2011,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2011,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2011,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2011,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2011,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2011,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SSD,South Sudan,Sub-Saharan Africa,Low income,2011,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SSD,South Sudan,Sub-Saharan Africa,Low income,2011,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2011,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2011,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2011,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2012,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2012,rq,2.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2012,rq,4.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2012,rq,4.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2012,rq,2.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2012,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2012,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2012,rq,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2012,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2012,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2012,rq,2.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2012,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2012,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2012,rq,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2012,rq,2.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2012,rq,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2012,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2012,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2012,rq,4.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2012,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2012,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2012,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2012,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2012,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2012,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2012,rq,2.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2012,rq,2.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2012,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2012,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2012,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2012,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2012,rq,3.8125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2012,rq,4.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2012,rq,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2012,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2012,rq,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2012,rq,2.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2012,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2012,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2012,rq,3.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2012,rq,4.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2012,rq,2.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2012,rq,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2012,rq,3.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2012,rq,4.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2012,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2012,rq,3.6875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2012,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2012,rq,2.1875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SSD,South Sudan,Sub-Saharan Africa,Low income,2012,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SSD,South Sudan,Sub-Saharan Africa,Low income,2012,rq,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2012,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2012,rq,2.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2012,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2012,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2012,rq,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2012,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2012,rq,4.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2012,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2012,rq,4.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2012,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2012,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2012,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2012,rq,2.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2013,rq,3.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2013,rq,2.833329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2013,rq,3.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2013,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2013,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2013,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2013,rq,1.6666699648,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2013,rq,3.166670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2013,rq,3.166670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2013,rq,3.166670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2013,rq,3.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2013,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2013,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2013,rq,3.833329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2013,rq,3.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2013,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2013,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2013,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2013,rq,4.166669845600001,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2013,rq,3.166670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2013,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2013,rq,3.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2013,rq,5.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2013,rq,3.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2013,rq,3.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2013,rq,3.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2013,rq,3.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2013,rq,3.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2013,rq,3.833329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2013,rq,3.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2013,rq,3.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2013,rq,3.833329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2013,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2013,rq,2.666670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2013,rq,4.166669845600001,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2013,rq,4.3333301544,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2013,rq,4.6666698456,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2013,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2013,rq,2.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2013,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2013,rq,3.833329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2013,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2013,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2013,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SSD,South Sudan,Sub-Saharan Africa,Low income,2013,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SSD,South Sudan,Sub-Saharan Africa,Low income,2013,rq,1.6666699648,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2013,rq,3.166670084,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2013,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2013,rq,2.833329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2013,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2013,rq,3.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2013,rq,4.166669845600001,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2013,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2013,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2013,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2013,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2013,rq,2.333329916,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2013,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2014,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2014,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,rq,2.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,rq,3.8125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2014,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2014,rq,4.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2014,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2014,rq,2.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,rq,3.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,rq,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2014,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2014,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2014,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2014,rq,3.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2014,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2014,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,rq,3.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2014,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2014,rq,4.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2014,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2014,rq,2.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2014,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2014,rq,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2014,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2014,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2014,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2014,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2014,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2014,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2014,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2014,rq,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2014,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2014,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2014,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2014,rq,3.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2014,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2014,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2014,rq,2.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2014,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2014,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2014,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,rq,3.6875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2014,rq,4.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2014,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2014,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2014,rq,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,rq,4.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,rq,4.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2014,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2014,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2014,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2014,rq,1.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SSD,South Sudan,Sub-Saharan Africa,Low income,2014,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SSD,South Sudan,Sub-Saharan Africa,Low income,2014,rq,2.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2014,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2014,rq,3.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2014,rq,2.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2014,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2014,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2014,rq,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,rq,4.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2014,rq,3.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2014,rq,4.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,rq,4.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,rq,3.4375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,rq,2.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,rq,1.75,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2015,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2015,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2015,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2015,rq,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,rq,4.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,rq,4.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2015,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2015,rq,2.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2015,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2015,rq,3.8125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2015,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2015,rq,4.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2015,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2015,rq,3.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2015,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2015,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2015,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2015,rq,4.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2015,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2015,rq,2.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2015,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2015,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2015,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2015,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2015,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2015,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2015,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2015,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2015,rq,3.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2015,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2015,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2015,rq,3.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2015,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2015,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2015,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2015,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2015,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2015,rq,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2015,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2015,rq,3.1875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2015,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2015,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2015,rq,2.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2015,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2015,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2015,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2015,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2015,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2015,rq,4.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2015,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2015,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2015,rq,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2015,rq,4.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2015,rq,4.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2015,rq,1.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2015,rq,1.625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SSD,South Sudan,Sub-Saharan Africa,Low income,2015,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SSD,South Sudan,Sub-Saharan Africa,Low income,2015,rq,2.375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2015,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2015,rq,3.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TCD,Chad,Sub-Saharan Africa,Low income,2015,rq,2.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TCD,Chad,Sub-Saharan Africa,Low income,2015,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TGO,Togo,Sub-Saharan Africa,Low income,2015,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TGO,Togo,Sub-Saharan Africa,Low income,2015,rq,3.125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2015,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2015,rq,4.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,UGA,Uganda,Sub-Saharan Africa,Low income,2015,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,UGA,Uganda,Sub-Saharan Africa,Low income,2015,rq,4.8125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2015,rq,4.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2015,rq,3.4375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2015,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2015,rq,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BDI,Burundi,Sub-Saharan Africa,Low income,2016,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BDI,Burundi,Sub-Saharan Africa,Low income,2016,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BEN,Benin,Sub-Saharan Africa,Lower middle income,2016,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BEN,Benin,Sub-Saharan Africa,Lower middle income,2016,rq,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2016,rq,4.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2016,rq,4.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CAF,Central African Republic,Sub-Saharan Africa,Low income,2016,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CAF,Central African Republic,Sub-Saharan Africa,Low income,2016,rq,2.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2016,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2016,rq,3.875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2016,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2016,rq,4.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2016,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2016,rq,3.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,COM,Comoros,Sub-Saharan Africa,Lower middle income,2016,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,COM,Comoros,Sub-Saharan Africa,Lower middle income,2016,rq,2.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,DJI,Djibouti,Middle East & North Africa,Lower middle income,2016,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,DJI,Djibouti,Middle East & North Africa,Lower middle income,2016,rq,4.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ERI,Eritrea,Sub-Saharan Africa,Low income,2016,rq,2.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ERI,Eritrea,Sub-Saharan Africa,Low income,2016,rq,2.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,ETH,Ethiopia,Sub-Saharan Africa,,2016,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,ETH,Ethiopia,Sub-Saharan Africa,,2016,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2016,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2016,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2016,rq,3.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2016,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2016,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2016,rq,4.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2016,rq,2.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,GNB,Guinea-Bissau,Sub-Saharan Africa,Low income,2016,rq,3.0,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2016,rq,3.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2016,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LBR,Liberia,Sub-Saharan Africa,Low income,2016,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LBR,Liberia,Sub-Saharan Africa,Low income,2016,rq,3.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2016,rq,3.66667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2016,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MDG,Madagascar,Sub-Saharan Africa,Low income,2016,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MDG,Madagascar,Sub-Saharan Africa,Low income,2016,rq,3.5625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MLI,Mali,Sub-Saharan Africa,Low income,2016,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MLI,Mali,Sub-Saharan Africa,Low income,2016,rq,3.9375,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MOZ,Mozambique,Sub-Saharan Africa,Low income,2016,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MOZ,Mozambique,Sub-Saharan Africa,Low income,2016,rq,3.1875,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2016,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2016,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,MWI,Malawi,Sub-Saharan Africa,Low income,2016,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,MWI,Malawi,Sub-Saharan Africa,Low income,2016,rq,3.0625,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NER,Niger,Sub-Saharan Africa,Low income,2016,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NER,Niger,Sub-Saharan Africa,Low income,2016,rq,3.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2016,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2016,rq,3.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,RWA,Rwanda,Sub-Saharan Africa,Low income,2016,rq,4.83333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,RWA,Rwanda,Sub-Saharan Africa,Low income,2016,rq,4.5,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SDN,Sudan,Sub-Saharan Africa,Low income,2016,rq,2.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SDN,Sudan,Sub-Saharan Africa,Low income,2016,rq,2.25,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2016,rq,4.33333,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2016,rq,4.3125,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Business Regulatory Environment,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2016,rq,3.16667,1,6,1
+ADB,African Development Bank,Country Policy and Institutional Assessment,Trade Policy,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2016,rq,3.5,1,6,1

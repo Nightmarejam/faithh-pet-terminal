@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-03-31T02:15:18.259695+00:00",
+  "input_root": "docs/data/governance_sources/windows_staging_import",
+  "dry_run": false,
+  "files_discovered": 3,
+  "accepted_files": 2,
+  "skipped_files": 1,
+  "documents_prepared": 45,
+  "accepted": [
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/United Nations Charter.md",
+      "source_class": "charter",
+      "chunks": 37,
+      "content_hash": "70b403558c661f48a070f10257f7f2a49805daf758e529728e175e0df2ee7a0a"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/Universal Declaration of Human Rights.md",
+      "source_class": "treaty",
+      "chunks": 8,
+      "content_hash": "29c9ac4fcaf8f32ee02544481be9fbac30d3f764622e4d1c2bf451239ef35296"
+    }
+  ],
+  "skipped": [
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/_hello.txt",
+      "reason": "too_short"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-01-18",
+  "activity_level": "\ud83d\udcdd Light",
+  "git": {
+    "commits": [
+      "d5628de feat(director): Add Compass Director module + Pulse UI integration"
+    ],
+    "commit_count": 1,
+    "files_changed": [
+      "faithh_pet_v4.html",
+      "scripts/collectors/director.py",
+      "scripts/test_rag_stability.sh",
+      "pulse_patterns.json",
+      "docs/IDEA_VAULT.md",
+      "parity/backend/PARITY_faithh_professional_backend_fixed.md.save",
+      "docs/WINDSURF_HANDOFF_COMPASS_DIRECTOR_2026-01-18.md",
+      "config.yaml",
+      "faithh_professional_backend_fixed.py",
+      "parity/backend/PARITY_faithh_professional_backend_fixed.md",
+      "scripts/collectors/__init__.py",
+      "docs/WINDSURF_HANDOFF_DIRECTOR_UI_2026-01-18.md"
+    ],
+    "files_changed_count": 12,
+    "stats": [
+      "12 files changed, 2561 insertions(+), 27 deletions(-)"
+    ]
+  },
+  "conversations": {
+    "count": 1,
+    "conversations": [
+      {
+        "title": "Instrumental Tuner Recommendations",
+        "source": "chatgpt",
+        "preview": ""
+      }
+    ],
+    "note": "Shows conversations indexed on this date, not original conversation dates"
+  },
+  "pulse_reports": {},
+  "collector_activity": {
+    "entries": 1,
+    "sample": [
+      "  [OK] Snapshot saved to: /home/jonat/ai-stack/collectors/daily/2026-01-18.json"
+    ]
+  },
+  "work_log": [],
+  "decisions": [],
+  "generated_at": "2026-03-03T04:54:10.446954",
+  "summary": null
+}

@@ -1,0 +1,28 @@
+{
+  "admin_001": {
+    "username": "admin",
+    "email": "admin@faithh.local",
+    "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "created_at": "2026-03-27T18:39:28.841552",
+    "last_login": "2026-03-27T18:39:54.486064",
+    "is_active": true,
+    "role": "admin",
+    "profile": {
+      "name": "System Administrator",
+      "department": "System"
+    }
+  },
+  "user_1774661975454": {
+    "username": "testuser",
+    "email": "test@example.com",
+    "password_hash": "ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae",
+    "created_at": "2026-03-27T18:39:35.454780",
+    "last_login": "2026-03-27T18:39:46.011464",
+    "is_active": true,
+    "role": "user",
+    "profile": {
+      "name": "Test User",
+      "department": "Research"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-03-31T01:33:45+00:00",
+  "validation_report": "reports/index_runs/validation_20260330_183334.json",
+  "baseline_report": "reports/index_runs/validation_20260331_000426.json",
+  "governance_ingest_report": "reports/index_runs/governance_ingest_report_20260331_013217.json",
+  "staged_nas_index": {
+    "script": "scripts/index_staged_nas_sources.py",
+    "records_indexed": 780,
+    "note": "Chunk IDs now include a path fingerprint to avoid DuplicateIDError when stems repeat under different directories."
+  },
+  "decision": "tighten_filters_recommended",
+  "rationale": "Compared to validation_20260331_000426.json, governance_principle aggregate mix gained +3 nas_seeded_document and lost -1 synthesis_document and -2 project_discussion (see source_mix_drift_vs_baseline). That is expected after NAS seed upsert but increases reliance on seeded Constella paths for governance-shaped queries. constella_constitutional top-k still includes business (1) and technical (1), which is ongoing corpus noise risk rather than proven personal-data bleed from this cycle.",
+  "personal_business_bleed": {
+    "observed": false,
+    "evidence": "No new personal-domain labels in validation metadata mixes; business source_type count unchanged vs baseline in constella_constitutional aggregate (drift 0).",
+    "action": "If business or unrelated technical hits rise in constitutional queries, treat as escalation (see runbook)."
+  },
+  "tighten_filter_recommendations": [
+    "Governance lane: exclude or separately tag low-signal JSON API schema dumps under docs/data/governance_sources/nas_import if they pollute principle queries; prefer .md/.txt policy artifacts for nas_import governance.",
+    "Allowlist: keep domain_group != personal, review_status=approved, sensitivity != private; raise min-score threshold for borderline rows if nas_seeded_document dominates governance_principle above 40% of top-k aggregate.",
+    "Retrieval: consider filter profiles that cap nas_seeded_document share for governance_principle-style queries (see docs/architecture/RETRIEVAL_FILTER_PROFILE.md)."
+  ],
+  "next_cycle_thresholds": {
+    "max_nas_seeded_share_governance_principle_top15": 6,
+    "escalation_if_business_or_unknown_domain_increases_vs_baseline": true,
+    "pre_ingest_manual_review": "score < 3.0 rows on nas_classification_queue.csv"
+  },
+  "next_guardrails": [
+    "Re-run validate_data_aggregation_pipeline.py with the latest validation JSON as baseline for the next monthly cycle.",
+    "After staging, run index_governance_corpus.py on nas_import; expect skipped=duplicates when hashes already exist.",
+    "Keep index_staged_nas_sources.py path-fingerprint IDs; do not revert to stem-only IDs."
+  ]
+}

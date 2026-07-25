@@ -170,6 +170,7 @@ class InputValidator:
         return sanitized
 
 class SecurityMiddleware:
+    # Logic for Humans: Optional rate limiting + JSON body validation/sanitization; wraps Flask handlers when the decorator is enabled.
     """Main security middleware class"""
     
     def __init__(self, max_requests: int = 100, window_seconds: int = 3600, enable_rate_limiting: bool = True):
@@ -262,14 +263,12 @@ class SecurityMiddleware:
             
             # Sanitize input
             sanitized_data = self.input_validator.sanitize_input(data)
-            
-            # Get rate limit info for headers
-            rate_info = self.rate_limiter.get_client_info(client_id)
-            
-            return True, None, {
-                'sanitized_data': sanitized_data,
-                'rate_info': rate_info
-            }
+
+            info: Dict = {'sanitized_data': sanitized_data}
+            if self.rate_limiter is not None:
+                info['rate_info'] = self.rate_limiter.get_client_info(client_id)
+
+            return True, None, info
             
         except Exception as e:
             return False, f"Security validation error: {str(e)}", None
@@ -292,19 +291,29 @@ class SecurityMiddleware:
             if now - req['timestamp'] < timedelta(hours=24)
         ]
         
+        rate_limiter = self.rate_limiter
+        if rate_limiter is not None:
+            total_clients = len(rate_limiter.requests)
+            rate_limit_config: Dict = {
+                'enabled': True,
+                'max_requests': rate_limiter.max_requests,
+                'window_seconds': rate_limiter.window_seconds,
+            }
+        else:
+            total_clients = 0
+            rate_limit_config = {'enabled': False}
+
         return {
             'active_blocked_ips': len(self.blocked_ips),
             'suspicious_requests_24h': len(recent_suspicious),
-            'total_clients_tracked': len(self.rate_limiter.requests),
-            'rate_limit_config': {
-                'max_requests': self.rate_limiter.max_requests,
-                'window_seconds': self.rate_limiter.window_seconds
-            },
+            'total_clients_tracked': total_clients,
+            'rate_limit_config': rate_limit_config,
             'recent_suspicious_activity': recent_suspicious[-10:]  # Last 10
         }
 
 # Decorator for Flask routes
 def require_security(middleware_instance):
+    # Logic for Humans: Flask decorator — reject bad JSON / oversize messages / rate limits before the route runs; attach security headers on success.
     """Decorator to apply security middleware to Flask routes"""
     def decorator(f):
         @wraps(f)
@@ -327,7 +336,7 @@ def require_security(middleware_instance):
             response = f(*args, **kwargs)
             
             # Add rate limit headers if info available
-            if info and 'rate_info' in info:
+            if info and info.get('rate_info') is not None:
                 rate_info = info['rate_info']
                 response.headers['X-RateLimit-Limit'] = str(rate_info['max_requests'])
                 response.headers['X-RateLimit-Remaining'] = str(

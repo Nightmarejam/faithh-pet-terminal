@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Copy to run_vllm.sh (same dir), chmod +x, edit paths/models, then either:
+#   tmux new -s vllm "$PWD/scripts/ops/run_vllm.sh"
+# or set VLLM_AUTOSTART=1 and VLLM_START_CMD=./scripts/ops/run_vllm.sh in .env (from repo root).
+set -euo pipefail
+cd "$(dirname "$0")/../.."
+# shellcheck disable=SC1091
+source venv/bin/activate
+exec vllm serve REPLACE_WITH_MODEL_ID_OR_PATH --host 0.0.0.0 --port 8000

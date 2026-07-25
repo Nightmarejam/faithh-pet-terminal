@@ -1,0 +1,38 @@
+============================================================
+  FAITHH Consistency Checker
+  Run at: 2026-03-12 06:57 UTC
+============================================================
+
+  3 PASS  |  1 WARN  |  1 MISMATCH
+
+── MISMATCHES (fix these) ──────────────────────────────
+
+  MISMATCH  ChromaDB chunk count
+    project_states       → 37000
+    faithh_memory        → 32499
+    readme               → None
+    systems_map          → 32499
+    context_md           → 37000
+
+    HOW TO FIX:
+      Run: curl http://100.79.85.32:8000/api/v2/collections/faithh_knowledge_base
+      Then update faithh_memory.json → chromadb.documents and project_states.json → FAITHH.infrastructure.chunks_indexed
+      Then re-run: python scripts/generate_context.py
+
+── WARNINGS (missing from some sources) ───────────────
+
+  WARN  Backend URL/port
+    readme               → (not tracked)
+
+── PASSING ─────────────────────────────────────────────
+  PASS  ChromaDB collection name            faithh_knowledge_base
+  PASS  Embedding model                     all-MiniLM-L6-v2 (384-dim)
+  PASS  FAITHH phase                        Phase 4 Active
+
+============================================================
+
+Notes:
+- ChromaDB chunk count mismatch: faithh_memory.json and systems_map show 32499 (from Jan 25 reindex)
+  while project_states.json and context_md show 37000 (likely from a later update)
+- Actual current count after Mar 11 reindex: 42368 documents (73505 conversation chunks indexed)
+- README.md does not mention chunk count or backend port explicitly

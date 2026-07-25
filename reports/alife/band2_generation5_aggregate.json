@@ -1,0 +1,136 @@
+{
+  "experiment": "band2_cooperation",
+  "generation": 5,
+  "run_count": 10,
+  "source_reports": [
+    "reports/alife/band2_generation5_20260402_082030.json",
+    "reports/alife/band2_generation5_20260402_082101.json",
+    "reports/alife/band2_generation5_20260402_082131.json",
+    "reports/alife/band2_generation5_20260402_082202.json",
+    "reports/alife/band2_generation5_20260402_082233.json",
+    "reports/alife/band2_generation5_20260402_082303.json",
+    "reports/alife/band2_generation5_20260402_082334.json",
+    "reports/alife/band2_generation5_20260402_082404.json",
+    "reports/alife/band2_generation5_20260402_082435.json",
+    "reports/alife/band2_generation5_20260402_082506.json"
+  ],
+  "hypothesis_support_rate": 0.0,
+  "trust_stability_gap": -0.009930396321297441,
+  "trust_stability_A_higher_runs": 4,
+  "trust_stability_equal_runs": 0,
+  "trust_stability_A_higher_fraction": 0.4,
+  "band3_candidates_A_mean": 1.0,
+  "band3_candidates_B_mean": 1.2,
+  "population_A": {
+    "mutual_benefit_rate": {
+      "mean": 0.5299917026924889,
+      "stdev": 0.023714819139256257,
+      "min": 0.49693251533742333,
+      "max": 0.5783582089552238
+    },
+    "false_cooperation_rate": {
+      "mean": 0.47000829730751115,
+      "stdev": 0.023714819139256268,
+      "min": 0.4216417910447761,
+      "max": 0.5030674846625767
+    },
+    "mean_net_resource_from_cooperation": {
+      "mean": 0.9240300720908439,
+      "stdev": 0.0974603841970086,
+      "min": 0.755888106903501,
+      "max": 1.0564850418765916
+    },
+    "trust_network_stability": {
+      "mean": 0.8761281001747296,
+      "stdev": 0.0381307992073295,
+      "min": 0.8162714646801038,
+      "max": 0.926679091030776
+    },
+    "band3_candidate_count": {
+      "mean": 1.0,
+      "stdev": 0.9428090415820634,
+      "min": 0.0,
+      "max": 3.0
+    },
+    "band3_candidates": {
+      "mean": 1.0,
+      "stdev": 0.9428090415820634,
+      "min": 0.0,
+      "max": 3.0
+    },
+    "mean_band3_score": {
+      "mean": 1.7421433333333334,
+      "stdev": 0.1024544476316483,
+      "min": 1.6313666666666669,
+      "max": 1.9884666666666666
+    }
+  },
+  "population_B": {
+    "mutual_benefit_rate": {
+      "mean": 0.5400444751313874,
+      "stdev": 0.016795197556717118,
+      "min": 0.5103626943005182,
+      "max": 0.575136612021858
+    },
+    "false_cooperation_rate": {
+      "mean": 0.4599555248686126,
+      "stdev": 0.01679519755671711,
+      "min": 0.4248633879781421,
+      "max": 0.4896373056994819
+    },
+    "mean_net_resource_from_cooperation": {
+      "mean": 0.996511460059752,
+      "stdev": 0.10366820461298806,
+      "min": 0.8504256643681846,
+      "max": 1.1751144459614953
+    },
+    "trust_network_stability": {
+      "mean": 0.8860584964960271,
+      "stdev": 0.02531248628702534,
+      "min": 0.8489209566160124,
+      "max": 0.9248845981665447
+    },
+    "band3_candidate_count": {
+      "mean": 1.2,
+      "stdev": 1.2292725943057183,
+      "min": 0.0,
+      "max": 3.0
+    },
+    "band3_candidates": {
+      "mean": 1.2,
+      "stdev": 1.2292725943057183,
+      "min": 0.0,
+      "max": 3.0
+    },
+    "mean_band3_score": {
+      "mean": 1.7395800000000001,
+      "stdev": 0.06640094116542568,
+      "min": 1.621,
+      "max": 1.8669666666666667
+    }
+  },
+  "deltas_A_minus_B": {
+    "mutual_benefit_rate_mean_gap": -0.010052772438898572,
+    "false_cooperation_rate_mean_gap": 0.010052772438898572,
+    "mean_net_resource_mean_gap": -0.07248138796890813,
+    "trust_stability_mean_gap": -0.009930396321297441,
+    "band3_candidate_count_mean_gap": -0.19999999999999996,
+    "mean_band3_score_mean_gap": 0.002563333333333251,
+    "band3_score_gap_reported": {
+      "mean": 0.0025633333333333176,
+      "stdev": 0.0970037105692227,
+      "min": -0.11430000000000007,
+      "max": 0.2024999999999999
+    }
+  },
+  "hypothesis_support": {
+    "supported_runs": 0,
+    "support_rate": 0.0
+  },
+  "alife_lineage_window": {
+    "before_first_run": 66150,
+    "after_last_run": 75150,
+    "delta": 9000
+  },
+  "generated_at": "2026-04-02T08:25:09.967719"
+}

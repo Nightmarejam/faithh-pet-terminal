@@ -1,0 +1,1001 @@
+DataSourceCode,Organization,DataSource,indicator,econ_code,econ_name,region,income_class,production_year,wgi_dimension,value,minimum,maximum,orientation
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,rl,0.908,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,rl,0.952,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,rl,0.944,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,rl,0.565,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2002,rl,0.5730000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,rl,0.902,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,rl,0.977,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,rl,0.885,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,rl,0.361,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2002,rl,0.428,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,rl,0.911,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,rl,0.958,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,rl,0.959,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,rl,0.506,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2002,rl,0.446,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,rl,0.849,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,rl,0.938,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,rl,0.7889999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,rl,0.275,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2002,rl,0.374,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,rl,0.896,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,rl,0.959,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,rl,0.7010000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,rl,0.513,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2002,rl,0.577,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MLI,Mali,Sub-Saharan Africa,Low income,2002,rl,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MLI,Mali,Sub-Saharan Africa,Low income,2002,rl,0.951,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2002,rl,0.927,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2002,rl,0.626,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2002,rl,0.497,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,rl,0.861,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,rl,0.964,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,rl,0.909,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,rl,0.496,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MOZ,Mozambique,Sub-Saharan Africa,Low income,2002,rl,0.589,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MWI,Malawi,Sub-Saharan Africa,Low income,2002,rl,0.913,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MWI,Malawi,Sub-Saharan Africa,Low income,2002,rl,0.968,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2002,rl,0.979,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2002,rl,0.641,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2002,rl,0.613,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,rl,0.882,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,rl,0.958,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,rl,0.961,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,rl,0.48,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2002,rl,0.424,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,rl,0.867,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,rl,0.94,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,rl,0.961,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,rl,0.107,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2002,rl,0.22,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,rl,0.847,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,rl,0.9390000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,rl,0.91,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,rl,0.704,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2002,rl,0.6799999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,rl,0.889,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,rl,0.963,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,rl,0.838,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,rl,0.506,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2002,rl,0.5349999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,UGA,Uganda,Sub-Saharan Africa,Low income,2002,rl,0.923,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,UGA,Uganda,Sub-Saharan Africa,Low income,2002,rl,0.968,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2002,rl,0.871,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2002,rl,0.43,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2002,rl,0.506,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,rl,0.906,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,rl,0.956,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,rl,0.804,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,rl,0.352,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2002,rl,0.395,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,rl,0.887,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,rl,0.974,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,rl,0.85,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,rl,0.423,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2002,rl,0.49,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,rl,0.772,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,rl,0.9380000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,rl,0.624,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,rl,0.521,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2002,rl,0.553,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,rl,0.869,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,rl,0.976,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,rl,0.767,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,rl,0.4639639639639639,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2005,rl,0.451,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,rl,0.895,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,rl,0.962,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,rl,0.825,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,rl,0.6983857264231096,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2005,rl,0.724,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,rl,0.946,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,rl,0.975,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,rl,0.806,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,rl,0.6655112651646448,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2005,rl,0.724,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,rl,0.89,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,rl,0.942,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,rl,0.8200000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,rl,0.6686903729401561,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2005,rl,0.6759999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,rl,0.858,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,rl,0.924,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,rl,0.613,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,rl,0.3822115384615384,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2005,rl,0.594,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,rl,0.927,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,rl,0.986,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,rl,0.673,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,rl,0.6767764298093587,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2005,rl,0.777,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,rl,0.9339999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,rl,0.975,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,rl,0.773,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,rl,0.5763358778625954,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MDG,Madagascar,Sub-Saharan Africa,Low income,2005,rl,0.481,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MLI,Mali,Sub-Saharan Africa,Low income,2005,rl,0.916,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MLI,Mali,Sub-Saharan Africa,Low income,2005,rl,0.995,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2005,rl,0.884,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2005,rl,0.7661016949152543,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2005,rl,0.58,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,rl,0.888,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,rl,0.955,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,rl,0.823,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,rl,0.7595048629531388,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MOZ,Mozambique,Sub-Saharan Africa,Low income,2005,rl,0.816,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MWI,Malawi,Sub-Saharan Africa,Low income,2005,rl,0.926,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MWI,Malawi,Sub-Saharan Africa,Low income,2005,rl,0.988,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2005,rl,0.897,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2005,rl,0.8075278015397775,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2005,rl,0.8119999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,rl,0.843,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,rl,0.906,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,rl,0.834,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,rl,0.6486486486486487,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2005,rl,0.6970000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,rl,0.901,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,rl,0.926,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,rl,0.839,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,rl,0.1576017130620985,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2005,rl,0.379,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,rl,0.759,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,rl,0.924,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,rl,0.871,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,rl,0.8622262773722628,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2005,rl,0.8140000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,rl,0.918,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,rl,0.984,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,rl,0.7829999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,rl,0.8591549295774648,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2005,rl,0.8919999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,UGA,Uganda,Sub-Saharan Africa,Low income,2005,rl,0.854,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,UGA,Uganda,Sub-Saharan Africa,Low income,2005,rl,0.94,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2005,rl,0.8029999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2005,rl,0.6349873843566022,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2005,rl,0.763,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,rl,0.899,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,rl,0.95,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,rl,0.685,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,rl,0.4897872340425532,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2005,rl,0.716,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,rl,0.878,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,rl,0.981,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,rl,0.727,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,rl,0.3172995780590717,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2005,rl,0.495,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,rl,0.3948126801152738,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2005,rl,0.555,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,rl,0.863,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,rl,0.968,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,rl,0.838,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,rl,0.547,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,rl,0.528,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,rl,0.787,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,rl,0.923,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,rl,0.715,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,rl,0.6970000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,rl,0.6779999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,rl,0.898,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,rl,0.969,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,rl,0.6459999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,rl,0.714,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,rl,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,rl,0.937,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,rl,0.969,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,rl,0.863,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,rl,0.489,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2008,rl,0.552,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,rl,0.879,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,rl,0.802,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,rl,0.478,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,rl,0.603,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,rl,0.901,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,rl,0.965,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,rl,0.5940000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,rl,0.276,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,rl,0.4289999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LBR,Liberia,Sub-Saharan Africa,Low income,2008,rl,0.786,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LBR,Liberia,Sub-Saharan Africa,Low income,2008,rl,0.937,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LBR,Liberia,Sub-Saharan Africa,Low income,2008,rl,0.742,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LBR,Liberia,Sub-Saharan Africa,Low income,2008,rl,0.329,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LBR,Liberia,Sub-Saharan Africa,Low income,2008,rl,0.45,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,rl,0.902,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,rl,0.972,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,rl,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,rl,0.601,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,rl,0.667,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,rl,0.967,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,rl,0.985,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,rl,0.793,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,rl,0.501,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,rl,0.425,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MLI,Mali,Sub-Saharan Africa,Low income,2008,rl,0.906,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MLI,Mali,Sub-Saharan Africa,Low income,2008,rl,0.974,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2008,rl,0.834,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2008,rl,0.532,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2008,rl,0.443,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,rl,0.855,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,rl,0.981,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,rl,0.738,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,rl,0.631,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,rl,0.766,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MWI,Malawi,Sub-Saharan Africa,Low income,2008,rl,0.898,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MWI,Malawi,Sub-Saharan Africa,Low income,2008,rl,0.975,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2008,rl,0.749,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2008,rl,0.7070000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2008,rl,0.781,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,rl,0.879,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,rl,0.937,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,rl,0.878,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,rl,0.716,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,rl,0.765,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,rl,0.857,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,rl,0.918,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,rl,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,rl,0.259,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,rl,0.422,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,rl,0.786,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,rl,0.969,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,rl,0.801,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,rl,0.827,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,rl,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,rl,0.931,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,rl,0.982,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,rl,0.787,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,rl,0.616,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,rl,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,UGA,Uganda,Sub-Saharan Africa,Low income,2008,rl,0.808,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,UGA,Uganda,Sub-Saharan Africa,Low income,2008,rl,0.923,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2008,rl,0.769,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2008,rl,0.382,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2008,rl,0.5309999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,rl,0.84,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,rl,0.929,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,rl,0.655,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,rl,0.44,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,rl,0.636,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,rl,0.909,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,rl,0.979,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,rl,0.746,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,rl,0.513,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,rl,0.626,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,rl,0.864,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,rl,0.942,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,rl,0.613,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,rl,0.473,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,rl,0.5489999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BDI,Burundi,Sub-Saharan Africa,Low income,2011,rl,0.9299999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BDI,Burundi,Sub-Saharan Africa,Low income,2011,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BDI,Burundi,Sub-Saharan Africa,Low income,2011,rl,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BDI,Burundi,Sub-Saharan Africa,Low income,2011,rl,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BDI,Burundi,Sub-Saharan Africa,Low income,2011,rl,0.67,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,rl,0.89,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,rl,1.0,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,rl,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,rl,0.5700000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2011,rl,0.6000000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,rl,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,rl,0.99,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,rl,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,rl,0.66,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2011,rl,0.63,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,rl,0.88,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,rl,0.72,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,rl,0.6100000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2011,rl,0.6699999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,rl,0.89,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,rl,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,rl,0.41,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2011,rl,0.43,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,rl,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,rl,0.94,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,rl,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,rl,0.4,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2011,rl,0.42,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,rl,0.9,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,rl,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,rl,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2011,rl,0.69,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,rl,0.99,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,rl,0.99,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,rl,0.95,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,rl,0.82,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,DZA,Algeria,Middle East & North Africa,Upper middle income,2011,rl,0.63,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,rl,1.0,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,rl,0.6000000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,rl,0.38,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2011,rl,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,rl,0.85,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,rl,0.91,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,rl,0.42,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2011,rl,0.56,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,rl,0.91,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,rl,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,rl,0.43,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2011,rl,0.46,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,rl,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,rl,0.95,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,rl,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,rl,0.32,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2011,rl,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LBR,Liberia,Sub-Saharan Africa,Low income,2011,rl,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LBR,Liberia,Sub-Saharan Africa,Low income,2011,rl,0.93,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LBR,Liberia,Sub-Saharan Africa,Low income,2011,rl,0.78,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LBR,Liberia,Sub-Saharan Africa,Low income,2011,rl,0.32,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LBR,Liberia,Sub-Saharan Africa,Low income,2011,rl,0.45,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,rl,0.88,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,rl,0.95,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,rl,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,rl,0.55,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2011,rl,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,rl,0.94,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,rl,0.85,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,rl,0.35,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MAR,Morocco,Middle East & North Africa,Lower middle income,2011,rl,0.34,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,rl,0.95,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,rl,0.99,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,rl,0.61,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,rl,0.51,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MDG,Madagascar,Sub-Saharan Africa,Low income,2011,rl,0.39,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MLI,Mali,Sub-Saharan Africa,Low income,2011,rl,0.92,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MLI,Mali,Sub-Saharan Africa,Low income,2011,rl,0.99,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2011,rl,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2011,rl,0.48,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2011,rl,0.46,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,rl,0.84,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,rl,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,rl,0.65,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MOZ,Mozambique,Sub-Saharan Africa,Low income,2011,rl,0.62,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,rl,1.0,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,rl,0.94,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,rl,0.67,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2011,rl,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MWI,Malawi,Sub-Saharan Africa,Low income,2011,rl,0.84,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MWI,Malawi,Sub-Saharan Africa,Low income,2011,rl,0.96,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2011,rl,0.71,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2011,rl,0.6799999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2011,rl,0.8,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,rl,0.9,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,rl,0.91,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,rl,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2011,rl,0.75,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NER,Niger,Sub-Saharan Africa,Low income,2011,rl,0.9299999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NER,Niger,Sub-Saharan Africa,Low income,2011,rl,1.0,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NER,Niger,Sub-Saharan Africa,Low income,2011,rl,0.91,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NER,Niger,Sub-Saharan Africa,Low income,2011,rl,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NER,Niger,Sub-Saharan Africa,Low income,2011,rl,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,rl,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,rl,0.96,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,rl,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,rl,0.16,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2011,rl,0.43,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,rl,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,rl,1.0,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,rl,0.71,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,rl,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2011,rl,0.72,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,rl,0.78,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,rl,0.9299999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,rl,0.79,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,rl,0.34,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2011,rl,0.51,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,rl,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,rl,0.96,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,rl,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,rl,0.6000000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2011,rl,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TGO,Togo,Sub-Saharan Africa,Low income,2011,rl,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TGO,Togo,Sub-Saharan Africa,Low income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TGO,Togo,Sub-Saharan Africa,Low income,2011,rl,0.73,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TGO,Togo,Sub-Saharan Africa,Low income,2011,rl,0.44,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TGO,Togo,Sub-Saharan Africa,Low income,2011,rl,0.4,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,rl,0.96,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,rl,0.99,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,rl,0.63,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,rl,0.49,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TUN,Tunisia,Middle East & North Africa,Lower middle income,2011,rl,0.42,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,rl,0.84,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,rl,0.76,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,rl,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,rl,0.6,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2011,rl,0.74,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,UGA,Uganda,Sub-Saharan Africa,Low income,2011,rl,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,UGA,Uganda,Sub-Saharan Africa,Low income,2011,rl,0.94,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2011,rl,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2011,rl,0.51,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2011,rl,0.64,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,rl,0.9,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,rl,0.64,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,rl,0.49,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2011,rl,0.66,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,rl,0.83,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,rl,0.87,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,rl,0.48,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2011,rl,0.62,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,rl,0.8,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,rl,0.77,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,rl,0.48,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2011,rl,0.61,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BDI,Burundi,Sub-Saharan Africa,Low income,2014,rl,0.9299999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BDI,Burundi,Sub-Saharan Africa,Low income,2014,rl,0.987,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BDI,Burundi,Sub-Saharan Africa,Low income,2014,rl,0.975,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BDI,Burundi,Sub-Saharan Africa,Low income,2014,rl,0.733,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BDI,Burundi,Sub-Saharan Africa,Low income,2014,rl,0.716,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,rl,0.823,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,rl,0.973,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,rl,0.931,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,rl,0.528,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2014,rl,0.49,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,rl,0.864,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,rl,0.963,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,rl,0.8300000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,rl,0.6060000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2014,rl,0.694,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,rl,0.896,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,rl,0.955,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,rl,0.9299999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,rl,0.418,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2014,rl,0.366,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,rl,0.711,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,rl,0.9339999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,rl,0.892,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,rl,0.488,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2014,rl,0.427,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,rl,0.916,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,rl,0.969,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,rl,0.874,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,rl,0.551,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2014,rl,0.6140000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,rl,0.825,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,rl,0.973,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,rl,0.929,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,rl,0.352,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2014,rl,0.415,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,rl,0.864,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,rl,0.964,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,rl,0.892,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,rl,0.354,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2014,rl,0.573,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,rl,0.89,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,rl,0.984,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,rl,0.8240000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,rl,0.565,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2014,rl,0.657,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,rl,0.94,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,rl,0.988,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,rl,0.754,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,rl,0.369,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MDG,Madagascar,Sub-Saharan Africa,Low income,2014,rl,0.289,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MLI,Mali,Sub-Saharan Africa,Low income,2014,rl,0.892,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MLI,Mali,Sub-Saharan Africa,Low income,2014,rl,0.994,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2014,rl,0.894,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2014,rl,0.511,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2014,rl,0.449,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,rl,0.967,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,rl,0.995,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,rl,0.987,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,rl,0.605,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2014,rl,0.7130000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MWI,Malawi,Sub-Saharan Africa,Low income,2014,rl,0.7989999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MWI,Malawi,Sub-Saharan Africa,Low income,2014,rl,0.9339999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2014,rl,0.808,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2014,rl,0.614,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2014,rl,0.712,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,rl,0.846,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,rl,0.961,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,rl,0.935,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,rl,0.7,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2014,rl,0.729,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,rl,0.852,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,rl,0.908,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,rl,0.921,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,rl,0.221,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2014,rl,0.386,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,rl,0.825,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,rl,0.988,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,rl,0.898,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,rl,0.7090000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2014,rl,0.6439999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,rl,0.896,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,rl,0.978,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,rl,0.9,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,rl,0.628,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2014,rl,0.636,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TGO,Togo,Sub-Saharan Africa,Low income,2014,rl,0.765,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TGO,Togo,Sub-Saharan Africa,Low income,2014,rl,0.973,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TGO,Togo,Sub-Saharan Africa,Low income,2014,rl,0.899,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TGO,Togo,Sub-Saharan Africa,Low income,2014,rl,0.425,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TGO,Togo,Sub-Saharan Africa,Low income,2014,rl,0.367,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,rl,0.903,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,rl,0.984,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,rl,0.981,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,rl,0.601,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2014,rl,0.6739999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,rl,0.837,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,rl,0.959,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,rl,0.899,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,rl,0.472,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2014,rl,0.585,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,rl,0.86,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,rl,0.984,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,rl,0.922,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,rl,0.5,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2014,rl,0.63,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,rl,0.842,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,rl,0.979,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,rl,0.901,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,rl,0.705,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2015,rl,0.549,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,rl,0.9359999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,rl,0.958,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,rl,0.976,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,rl,0.55,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,DZA,Algeria,Middle East & North Africa,Upper middle income,2015,rl,0.36,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,rl,0.986,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,rl,0.957,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,rl,0.618,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2015,rl,0.6539999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,rl,0.92,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,rl,0.983,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,rl,0.929,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,rl,0.477,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2015,rl,0.4320000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LBR,Liberia,Sub-Saharan Africa,Low income,2015,rl,0.69,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LBR,Liberia,Sub-Saharan Africa,Low income,2015,rl,0.8260000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LBR,Liberia,Sub-Saharan Africa,Low income,2015,rl,0.874,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LBR,Liberia,Sub-Saharan Africa,Low income,2015,rl,0.225,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LBR,Liberia,Sub-Saharan Africa,Low income,2015,rl,0.319,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NER,Niger,Sub-Saharan Africa,Low income,2015,rl,0.901,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NER,Niger,Sub-Saharan Africa,Low income,2015,rl,0.989,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NER,Niger,Sub-Saharan Africa,Low income,2015,rl,0.981,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NER,Niger,Sub-Saharan Africa,Low income,2015,rl,0.858,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NER,Niger,Sub-Saharan Africa,Low income,2015,rl,0.8029999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SDN,Sudan,Sub-Saharan Africa,Low income,2015,rl,0.8009999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SDN,Sudan,Sub-Saharan Africa,Low income,2015,rl,0.9319999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SDN,Sudan,Sub-Saharan Africa,Low income,2015,rl,0.906,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SDN,Sudan,Sub-Saharan Africa,Low income,2015,rl,0.478,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SDN,Sudan,Sub-Saharan Africa,Low income,2015,rl,0.513,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,rl,0.831,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,rl,0.971,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,rl,0.891,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,rl,0.315,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2015,rl,0.331,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,rl,0.967,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,rl,0.984,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,rl,0.863,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,rl,0.6839999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TUN,Tunisia,Middle East & North Africa,Lower middle income,2015,rl,0.599,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,UGA,Uganda,Sub-Saharan Africa,Low income,2015,rl,0.7909999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,UGA,Uganda,Sub-Saharan Africa,Low income,2015,rl,0.959,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2015,rl,0.81,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2015,rl,0.562,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2015,rl,0.5549999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,rl,0.862,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,rl,0.962,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,rl,0.774,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,rl,0.446,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2015,rl,0.565,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,rl,0.795,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,rl,0.944,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,rl,0.865,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,rl,0.513,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2017,rl,0.522,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,rl,0.9209999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,rl,0.9880000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,rl,0.9159999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,rl,0.7390000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2017,rl,0.636,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,rl,0.851,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,rl,0.9269999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,rl,0.916,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,rl,0.617,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2017,rl,0.6679999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,rl,0.919,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,rl,0.978,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,rl,0.927,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,rl,0.552,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2017,rl,0.519,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,rl,0.7460000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,rl,0.9390000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,rl,0.925,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,rl,0.477,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2017,rl,0.4159999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,rl,0.9119999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,rl,0.973,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,rl,0.9420000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,rl,0.535,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2017,rl,0.549,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,rl,0.8160000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,rl,0.9359999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,rl,0.875,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,rl,0.328,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2017,rl,0.338,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,rl,0.855,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,rl,0.9839999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,rl,0.9420000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,rl,0.398,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2017,rl,0.5670000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,rl,0.8960000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,rl,0.985,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,rl,0.868,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,rl,0.42,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2017,rl,0.345,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,rl,0.7939999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,rl,0.972,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,rl,0.9449999999999998,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,rl,0.598,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2017,rl,0.635,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,rl,0.818,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,rl,0.9619999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,rl,0.92,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,rl,0.34,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2017,rl,0.522,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LBR,Liberia,Sub-Saharan Africa,Low income,2017,rl,0.7040000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LBR,Liberia,Sub-Saharan Africa,Low income,2017,rl,0.9380000000000002,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LBR,Liberia,Sub-Saharan Africa,Low income,2017,rl,0.845,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LBR,Liberia,Sub-Saharan Africa,Low income,2017,rl,0.342,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LBR,Liberia,Sub-Saharan Africa,Low income,2017,rl,0.429,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,rl,0.8410000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,rl,0.972,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,rl,0.8059999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,rl,0.4379999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2017,rl,0.4940000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,rl,0.968,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,rl,0.9789999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,rl,0.977,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,rl,0.664,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MAR,Morocco,Middle East & North Africa,Lower middle income,2017,rl,0.446,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,rl,0.9039999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,rl,0.983,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,rl,0.6910000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,rl,0.3990000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MDG,Madagascar,Sub-Saharan Africa,Low income,2017,rl,0.334,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MLI,Mali,Sub-Saharan Africa,Low income,2017,rl,0.8859999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MLI,Mali,Sub-Saharan Africa,Low income,2017,rl,0.9819999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2017,rl,0.785,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2017,rl,0.524,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2017,rl,0.381,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,rl,0.8519999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,rl,0.9470000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,rl,0.8589999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,rl,0.643,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MOZ,Mozambique,Sub-Saharan Africa,Low income,2017,rl,0.621,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,rl,0.9819999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,rl,0.996,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,rl,0.978,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,rl,0.498,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2017,rl,0.518,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,MWI,Malawi,Sub-Saharan Africa,Low income,2017,rl,0.8340000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,MWI,Malawi,Sub-Saharan Africa,Low income,2017,rl,0.9570000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2017,rl,0.931,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2017,rl,0.53,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2017,rl,0.59,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,rl,0.847,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,rl,0.951,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,rl,0.8739999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,rl,0.632,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2017,rl,0.5770000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NER,Niger,Sub-Saharan Africa,Low income,2017,rl,0.855,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NER,Niger,Sub-Saharan Africa,Low income,2017,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NER,Niger,Sub-Saharan Africa,Low income,2017,rl,0.968,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NER,Niger,Sub-Saharan Africa,Low income,2017,rl,0.7630000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NER,Niger,Sub-Saharan Africa,Low income,2017,rl,0.67,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,rl,0.843,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,rl,0.9209999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,rl,0.948,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,rl,0.268,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2017,rl,0.396,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SDN,Sudan,Sub-Saharan Africa,Low income,2017,rl,0.794,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SDN,Sudan,Sub-Saharan Africa,Low income,2017,rl,0.978,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SDN,Sudan,Sub-Saharan Africa,Low income,2017,rl,0.927,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SDN,Sudan,Sub-Saharan Africa,Low income,2017,rl,0.515,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SDN,Sudan,Sub-Saharan Africa,Low income,2017,rl,0.547,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,rl,0.7760000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,rl,0.956,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,rl,0.8749999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,rl,0.855,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2017,rl,0.6409999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,rl,0.818,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,rl,0.97,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,rl,0.863,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,rl,0.368,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2017,rl,0.563,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,rl,0.9010000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,rl,0.9839999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,rl,0.985,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,rl,0.325,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2017,rl,0.296,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,rl,0.7979999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,rl,0.9410000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,rl,0.8219999999999998,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,rl,0.607,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2017,rl,0.703,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TGO,Togo,Sub-Saharan Africa,Low income,2017,rl,0.7589999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TGO,Togo,Sub-Saharan Africa,Low income,2017,rl,0.9630000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TGO,Togo,Sub-Saharan Africa,Low income,2017,rl,0.8819999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TGO,Togo,Sub-Saharan Africa,Low income,2017,rl,0.427,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TGO,Togo,Sub-Saharan Africa,Low income,2017,rl,0.357,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,rl,0.9519999999999998,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,rl,0.9789999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,rl,0.907,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,rl,0.581,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TUN,Tunisia,Middle East & North Africa,Lower middle income,2017,rl,0.6259999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,rl,0.8730000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,rl,0.9889999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,rl,0.9680000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,rl,0.62,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2017,rl,0.67,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,UGA,Uganda,Sub-Saharan Africa,Low income,2017,rl,0.746,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,UGA,Uganda,Sub-Saharan Africa,Low income,2017,rl,0.956,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2017,rl,0.7929999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2017,rl,0.5539999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2017,rl,0.575,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,rl,0.773,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,rl,0.9179999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,rl,0.7070000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,rl,0.332,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2017,rl,0.513,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,rl,0.815,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,rl,0.98,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,rl,0.8859999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,rl,0.476,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2017,rl,0.631,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Had something stolen from house,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,rl,0.8830000000000001,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Have been physically attacked,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,rl,0.985,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,rl,0.9289999999999999,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,rl,0.508,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2017,rl,0.649,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,rl,0.7918038368225098,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,rl,0.3790911734104156,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,AGO,Angola,Sub-Saharan Africa,Lower middle income,2019,rl,0.3887962996959686,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,rl,0.8740451335906982,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,rl,0.6219990849494934,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2019,rl,0.5234547257423401,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,rl,0.7555586099624634,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,rl,0.7604629397392273,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2019,rl,0.5151526927947998,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,rl,0.9071845412254333,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,rl,0.6551620960235596,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2019,rl,0.6505227088928223,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,rl,0.9185828566551208,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,rl,0.4445780217647552,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2019,rl,0.4315140843391418,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,rl,0.8438684940338135,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,rl,0.451208770275116,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2019,rl,0.3374003469944,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,rl,0.8595319390296936,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,rl,0.4755150079727173,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2019,rl,0.4952533841133118,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ETH,Ethiopia,Sub-Saharan Africa,,2019,rl,0.9232056140899658,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ETH,Ethiopia,Sub-Saharan Africa,,2019,rl,0.5301257371902466,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ETH,Ethiopia,Sub-Saharan Africa,,2019,rl,0.5189312100410461,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,rl,0.8054231405258179,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,rl,0.2497299313545227,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2019,rl,0.299722284078598,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,rl,0.8983191251754761,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,rl,0.3910727202892303,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2019,rl,0.4807133972644806,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,rl,0.8533999919891357,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,rl,0.4122657179832458,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2019,rl,0.33147132396698,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,rl,0.8696122765541077,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,rl,0.5753201246261597,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2019,rl,0.5123347043991089,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,rl,0.882225751876831,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,rl,0.3895246088504791,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2019,rl,0.5681495666503906,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LBR,Liberia,Sub-Saharan Africa,Low income,2019,rl,0.9101693034172058,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LBR,Liberia,Sub-Saharan Africa,Low income,2019,rl,0.2578768730163574,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LBR,Liberia,Sub-Saharan Africa,Low income,2019,rl,0.3359974920749664,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,rl,0.7885397672653198,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,rl,0.3037114441394806,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2019,rl,0.425453245639801,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,rl,0.9682294726371765,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,rl,0.7546866536140442,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MAR,Morocco,Middle East & North Africa,Lower middle income,2019,rl,0.5868131518363953,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2019,rl,0.6092861890792847,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2019,rl,0.5462984442710876,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2019,rl,0.359533280134201,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,rl,0.9764783978462219,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,rl,0.5420780777931213,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2019,rl,0.620968759059906,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2019,rl,0.9040423631668091,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2019,rl,0.4907741248607635,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2019,rl,0.6760343313217163,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,rl,0.7866719961166382,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,rl,0.6279528737068176,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2019,rl,0.582588791847229,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NER,Niger,Sub-Saharan Africa,Low income,2019,rl,0.9445788860321045,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NER,Niger,Sub-Saharan Africa,Low income,2019,rl,0.7895709276199341,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NER,Niger,Sub-Saharan Africa,Low income,2019,rl,0.6686862707138062,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,rl,0.8666957020759583,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,rl,0.2420164048671722,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2019,rl,0.3264772593975067,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SDN,Sudan,Sub-Saharan Africa,Low income,2019,rl,0.853458046913147,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SDN,Sudan,Sub-Saharan Africa,Low income,2019,rl,0.3767312467098236,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SDN,Sudan,Sub-Saharan Africa,Low income,2019,rl,0.4191707074642181,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,rl,0.9269855618476868,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,rl,0.7587975263595581,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2019,rl,0.5210018754005432,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,rl,0.9661630988121033,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,rl,0.2612906098365784,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2019,rl,0.3796193897724152,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,rl,0.873668372631073,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,rl,0.4121656715869904,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2019,rl,0.5457090735435486,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TGO,Togo,Sub-Saharan Africa,Low income,2019,rl,0.9386917352676392,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TGO,Togo,Sub-Saharan Africa,Low income,2019,rl,0.5031055212020874,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TGO,Togo,Sub-Saharan Africa,Low income,2019,rl,0.3980565071105957,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,rl,0.8731256127357483,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,rl,0.6911375522613525,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TUN,Tunisia,Middle East & North Africa,Lower middle income,2019,rl,0.6461010575294495,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,rl,0.9648729562759399,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,rl,0.8401009440422058,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2019,rl,0.9033426642417908,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2019,rl,0.8320000171661377,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2019,rl,0.3797993659973145,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2019,rl,0.466522216796875,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,rl,0.7592023015022278,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,rl,0.2670964002609253,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2019,rl,0.4267368614673615,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,rl,0.8403647541999817,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,rl,0.4877352118492126,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2019,rl,0.6432937979698181,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,rl,0.7677029371261597,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,rl,0.3217537701129913,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,AGO,Angola,Sub-Saharan Africa,Lower middle income,2022,rl,0.3568118512630463,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,rl,0.9026327729225159,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,rl,0.6968178749084473,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2022,rl,0.5342075228691101,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,rl,0.717485785484314,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,rl,0.7356593608856201,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2022,rl,0.5075686573982239,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,rl,0.8521219491958618,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,rl,0.4699662029743195,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2022,rl,0.5236386656761169,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,rl,0.9410948753356934,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,rl,0.4485062062740326,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2022,rl,0.4137739539146423,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,rl,0.8692556619644165,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,rl,0.4512855708599091,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2022,rl,0.3634468615055084,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,rl,0.8645172119140625,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,rl,0.5954304933547974,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2022,rl,0.5930007100105286,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,rl,0.8249940276145935,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,rl,0.2537345290184021,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2022,rl,0.3095556795597076,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,rl,0.8891240954399109,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,rl,0.2773593366146088,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2022,rl,0.3546973466873169,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,rl,0.8623499870300293,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,rl,0.3781478404998779,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2022,rl,0.3438769280910492,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,rl,0.8515362739562988,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,rl,0.5194820165634155,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2022,rl,0.4534988105297089,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LBR,Liberia,Sub-Saharan Africa,Low income,2022,rl,0.7673895359039307,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LBR,Liberia,Sub-Saharan Africa,Low income,2022,rl,0.265321671962738,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LBR,Liberia,Sub-Saharan Africa,Low income,2022,rl,0.3067646622657776,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,rl,0.7458207607269287,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,rl,0.3351458311080933,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2022,rl,0.4442155063152313,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,rl,0.9833676218986511,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,rl,0.6633368134498596,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MAR,Morocco,Middle East & North Africa,Lower middle income,2022,rl,0.6037866473197937,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,rl,0.7621371746063232,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,rl,0.5076007843017578,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MDG,Madagascar,Sub-Saharan Africa,Low income,2022,rl,0.2683825194835663,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MLI,Mali,Sub-Saharan Africa,Low income,2022,rl,0.7194083333015442,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MLI,Mali,Sub-Saharan Africa,Low income,2022,rl,0.583820641040802,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MLI,Mali,Sub-Saharan Africa,Low income,2022,rl,0.4083389043807983,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,rl,0.8859406113624573,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,rl,0.5833861231803894,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2022,rl,0.5254864692687988,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,rl,0.9899412393569946,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,rl,0.4489706754684448,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2022,rl,0.4754502475261688,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MWI,Malawi,Sub-Saharan Africa,Low income,2022,rl,0.9086081981658936,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MWI,Malawi,Sub-Saharan Africa,Low income,2022,rl,0.4650023877620697,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MWI,Malawi,Sub-Saharan Africa,Low income,2022,rl,0.6203094720840454,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NER,Niger,Sub-Saharan Africa,Low income,2022,rl,0.9025906324386597,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NER,Niger,Sub-Saharan Africa,Low income,2022,rl,0.765358567237854,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NER,Niger,Sub-Saharan Africa,Low income,2022,rl,0.6703382134437561,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,rl,0.8429930210113525,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,rl,0.1384684443473816,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2022,rl,0.2641085386276245,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SDN,Sudan,Sub-Saharan Africa,Low income,2022,rl,0.856633722782135,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SDN,Sudan,Sub-Saharan Africa,Low income,2022,rl,0.4032370448112488,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SDN,Sudan,Sub-Saharan Africa,Low income,2022,rl,0.4667493402957916,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,rl,0.8417229056358337,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,rl,0.7816054821014404,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2022,rl,0.4800927340984344,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,rl,0.8867859244346619,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,rl,0.1983368098735809,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2022,rl,0.3554169535636902,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,rl,0.9382234215736389,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,rl,0.2337804585695267,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,STP,São Tomé and Príncipe,Sub-Saharan Africa,Lower middle income,2022,rl,0.2696592509746552,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,rl,0.7610384225845337,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,rl,0.231721505522728,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SWZ,Eswatini,Sub-Saharan Africa,Lower middle income,2022,rl,0.2728548049926758,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TGO,Togo,Sub-Saharan Africa,Low income,2022,rl,0.8722519278526306,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TGO,Togo,Sub-Saharan Africa,Low income,2022,rl,0.6041775941848755,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TGO,Togo,Sub-Saharan Africa,Low income,2022,rl,0.4566512703895569,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,rl,0.8943982720375061,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,rl,0.4758083522319794,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TUN,Tunisia,Middle East & North Africa,Lower middle income,2022,rl,0.4301716983318329,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,rl,0.9449076652526855,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,rl,0.7947394847869873,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2022,rl,0.8887028098106384,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,UGA,Uganda,Sub-Saharan Africa,Low income,2022,rl,0.7975285053253174,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,UGA,Uganda,Sub-Saharan Africa,Low income,2022,rl,0.4134764969348907,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,UGA,Uganda,Sub-Saharan Africa,Low income,2022,rl,0.5012233853340149,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,rl,0.6548876762390137,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,rl,0.3243933916091919,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2022,rl,0.4928789734840393,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,rl,0.8812113404273987,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,rl,0.4621064066886902,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2022,rl,0.6462214589118958,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,rl,0.807849645614624,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,rl,0.3970901966094971,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2022,rl,0.5246579051017761,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,rl,0.4008096754550934,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,AGO,Angola,Sub-Saharan Africa,Lower middle income,2023,rl,0.3378292918205261,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,rl,0.5909572243690491,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BEN,Benin,Sub-Saharan Africa,Lower middle income,2023,rl,0.476327121257782,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,rl,0.4675237834453583,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2023,rl,0.5047571063041687,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,rl,0.4727990329265594,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2023,rl,0.439814954996109,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,rl,0.3779006898403168,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2023,rl,0.2944096922874451,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,rl,0.3051120042800903,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2023,rl,0.2878901362419128,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,rl,0.4640231430530548,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,CPV,Cabo Verde,Sub-Saharan Africa,Upper middle income,2023,rl,0.4224099814891815,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,ETH,Ethiopia,Sub-Saharan Africa,,2023,rl,0.9039502739906311,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,ETH,Ethiopia,Sub-Saharan Africa,,2023,rl,0.5705664157867432,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,ETH,Ethiopia,Sub-Saharan Africa,,2023,rl,0.5972396731376648,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,rl,0.3290025293827057,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GAB,Gabon,Sub-Saharan Africa,Upper middle income,2023,rl,0.3135747313499451,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,rl,0.2781777679920197,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2023,rl,0.3581203520298004,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,rl,0.3836902976036072,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2023,rl,0.3764576017856598,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,rl,0.5560994744300842,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,GMB,"Gambia, The",Sub-Saharan Africa,Low income,2023,rl,0.4576483368873596,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,rl,0.3582399487495422,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2023,rl,0.5038179755210876,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,rl,0.4062677919864655,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2023,rl,0.5045574903488159,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,rl,0.7620381712913513,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MAR,Morocco,Middle East & North Africa,Lower middle income,2023,rl,0.726839542388916,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,rl,0.7613201141357422,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,rl,0.5489675402641296,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MOZ,Mozambique,Sub-Saharan Africa,Low income,2023,rl,0.6314635872840881,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,rl,0.5219196677207947,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2023,rl,0.5605551600456238,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2023,rl,0.5422120094299316,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2023,rl,0.50425124168396,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,How often feared crime in home,SYC,Seychelles,Sub-Saharan Africa,High income,2023,rl,0.9620041251182556,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,SYC,Seychelles,Sub-Saharan Africa,High income,2023,rl,0.4012081027030945,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,SYC,Seychelles,Sub-Saharan Africa,High income,2023,rl,0.464975118637085,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust Police,TCD,Chad,Sub-Saharan Africa,Low income,2023,rl,0.2708016037940979,0,1,1
+AFR,Afrobarometer,Afrobarometer Surveys,Trust courts of law,TCD,Chad,Sub-Saharan Africa,Low income,2023,rl,0.3283304572105408,0,1,1

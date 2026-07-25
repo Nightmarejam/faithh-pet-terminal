@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-03-31T02:25:55.914469+00:00",
+  "queue_path": "reports/inventory/x_staging_conversion_queue.csv",
+  "zip_rows_seen": 3,
+  "samples_created": 2,
+  "failures": [],
+  "records": [
+    {
+      "zip_path": "/mnt/c/Users/jonat/x_staging_cache/V-Dem-CD-v16_csv.zip",
+      "member_name": "V-Dem-CD-v16.csv",
+      "member_size_bytes": 840699684,
+      "sample_csv": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-CD-v16_csv/V-Dem-CD-v16__sample.csv",
+      "schema_md": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-CD-v16_csv/V-Dem-CD-v16__schema.md",
+      "sampled_rows_including_header": 5001
+    },
+    {
+      "zip_path": "/mnt/c/Users/jonat/x_staging_cache/V-Dem-Coder-Level-v16_csv.zip",
+      "member_name": "Coder-Level-Dataset-v16.csv",
+      "member_size_bytes": 1863094606,
+      "sample_csv": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__sample.csv",
+      "schema_md": "docs/data/governance_sources/windows_staging_import/converted/zip_samples/V-Dem-Coder-Level-v16_csv/Coder-Level-Dataset-v16__schema.md",
+      "sampled_rows_including_header": 5001
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "windsurf.workspace.name": "FAITHH AI Stack",
+  "windsurf.workspace.recentWorkspaces": ["wsl+Ubuntu/home/jonat/ai-stack"],
+  "windsurf.chat.preserveHistory": true,
+  "windsurf.chat.autoSave": true,
+  "windsurf.terminal.defaultProfile": "bash",
+  "windsurf.terminal.cwd": "/home/jonat/ai-stack",
+  "files.associations": {
+    "*.md": "markdown"
+  },
+  "search.exclude": {
+    "**/venv/**": true,
+    "**/__pycache__/**": true,
+    "**/node_modules/**": true,
+    "**/.git/**": true
+  },
+  "python.defaultInterpreterPath": "/home/jonat/ai-stack/venv/bin/python3",
+  "python.terminal.activateEnvironment": true
+}

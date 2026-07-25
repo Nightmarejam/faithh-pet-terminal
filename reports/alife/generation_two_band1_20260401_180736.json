@@ -1,0 +1,94 @@
+{
+  "experiment": "generation_two",
+  "generation": 2,
+  "population": "A",
+  "parameters": {
+    "agents": 50,
+    "ticks": 10,
+    "acquisition": "0.3-1.2",
+    "loss": "0.5-1.5",
+    "option": "A_negative_drift"
+  },
+  "timestamp": "2026-04-01T18:07:36.816331",
+  "fitness_summary": {
+    "mean": 6.746,
+    "max": 9.014,
+    "min": 5.183,
+    "stdev": 0.951,
+    "top_10pct_threshold": 8.084
+  },
+  "survival": {
+    "agents_with_any_depletion": 0,
+    "agents_fully_survived": 50,
+    "total_depletion_events": 0,
+    "avg_depleted_ticks": 0
+  },
+  "band2_candidates": 50,
+  "top_5_agents": [
+    {
+      "id": "gen2_agent_001",
+      "fitness": 9.014,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_005",
+      "fitness": 8.558,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_049",
+      "fitness": 8.308,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_000",
+      "fitness": 8.15,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_045",
+      "fitness": 8.084,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    }
+  ],
+  "bottom_5_agents": [
+    {
+      "id": "gen2_agent_012",
+      "fitness": 5.488,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_046",
+      "fitness": 5.474,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_043",
+      "fitness": 5.344,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_013",
+      "fitness": 5.282,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    },
+    {
+      "id": "gen2_agent_032",
+      "fitness": 5.183,
+      "survival_ticks": 10,
+      "depleted_ticks": 0
+    }
+  ],
+  "chroma_documents_written": 500,
+  "alife_lineage_count_before": 51450,
+  "alife_lineage_count_after": 51950
+}

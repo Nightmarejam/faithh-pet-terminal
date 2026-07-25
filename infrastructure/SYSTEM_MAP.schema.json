@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FAITHH Infrastructure System Map",
+  "type": "object",
+  "required": ["metadata", "units", "services", "connections"],
+  "additionalProperties": false,
+  "properties": {
+    "metadata": { "$ref": "#/$defs/metadata" },
+    "units": { "type": "array", "items": { "$ref": "#/$defs/unit" } },
+    "services": { "type": "array", "items": { "$ref": "#/$defs/service" } },
+    "connections": { "type": "array", "items": { "$ref": "#/$defs/connection" } },
+    "practices": { "type": "array", "items": { "$ref": "#/$defs/practice" } },
+    "notes": { "type": "string" }
+  },
+  "$defs": {
+    "metadata": {
+      "type": "object",
+      "required": ["generated_at", "version", "source"],
+      "additionalProperties": false,
+      "properties": {
+        "generated_at": { "type": "string" },
+        "version": { "type": "string" },
+        "source": { "type": "string" },
+        "maintainer": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "os": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "version": { "type": "string" },
+        "kernel": { "type": "string" }
+      }
+    },
+    "addresses": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "lan": { "type": "array", "items": { "type": "string" } },
+        "tailscale": { "type": "array", "items": { "type": "string" } },
+        "local": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "gpu": {
+      "type": "object",
+      "required": ["name"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "vram_gb": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "hardware": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "cpu": { "type": "string" },
+        "ram_gb": { "type": "number" },
+        "gpus": { "type": "array", "items": { "$ref": "#/$defs/gpu" } },
+        "notes": { "type": "string" }
+      }
+    },
+    "storage": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mount": { "type": "string" },
+        "device": { "type": "string" },
+        "total_gb": { "type": "number" },
+        "free_gb": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "access": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ssh": { "type": "string" },
+        "local_path": { "type": "string" },
+        "shell": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "practices_block": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": { "type": "array", "items": { "type": "string" } },
+        "stop": { "type": "array", "items": { "type": "string" } },
+        "restart": { "type": "array", "items": { "type": "string" } },
+        "logs": { "type": "array", "items": { "type": "string" } },
+        "health_checks": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "unit": {
+      "type": "object",
+      "required": ["id", "name", "role", "os"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "status": { "type": "string" },
+        "os": { "$ref": "#/$defs/os" },
+        "hostnames": { "type": "array", "items": { "type": "string" } },
+        "addresses": { "$ref": "#/$defs/addresses" },
+        "hardware": { "$ref": "#/$defs/hardware" },
+        "storage": { "type": "array", "items": { "$ref": "#/$defs/storage" } },
+        "services": { "type": "array", "items": { "type": "string" } },
+        "state_files": { "type": "array", "items": { "type": "string" } },
+        "data_sources": { "type": "array", "items": { "type": "string" } },
+        "access": { "$ref": "#/$defs/access" },
+        "practices": { "$ref": "#/$defs/practices_block" },
+        "notes": { "type": "string" }
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": { "type": "string" },
+        "path": { "type": "string" },
+        "url": { "type": "string" },
+        "purpose": { "type": "string" }
+      }
+    },
+    "service": {
+      "type": "object",
+      "required": ["id", "name", "unit_id", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "unit_id": { "type": "string" },
+        "type": { "type": "string" },
+        "status": { "type": "string" },
+        "ports": { "type": "array", "items": { "type": "integer" } },
+        "endpoints": { "type": "array", "items": { "$ref": "#/$defs/endpoint" } },
+        "dependencies": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      }
+    },
+    "connection": {
+      "type": "object",
+      "required": ["from_unit", "to_unit", "type"],
+      "additionalProperties": false,
+      "properties": {
+        "from_unit": { "type": "string" },
+        "to_unit": { "type": "string" },
+        "type": { "type": "string" },
+        "ports": { "type": "array", "items": { "type": "integer" } },
+        "description": { "type": "string" }
+      }
+    },
+    "practice": {
+      "type": "object",
+      "required": ["id", "description", "steps"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "unit_id": { "type": "string" },
+        "service_id": { "type": "string" },
+        "description": { "type": "string" },
+        "steps": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

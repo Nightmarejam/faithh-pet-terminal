@@ -1,0 +1,170 @@
+{
+  "generated_at": "2026-05-17T20:43:08.543945",
+  "generator": "scripts/generate_fingerprint.py",
+  "version": "1.0",
+  "health": {
+    "backend": {
+      "status": "unreachable",
+      "port": 5557,
+      "error": "HTTPConnectionPool(host='localhost', port=5557): Max retries exceeded with url: /health (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=5557): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    },
+    "chromadb": {
+      "status": "healthy",
+      "host": "servicebox.taileb8c60.ts.net",
+      "port": 8000
+    },
+    "ollama": {
+      "status": "unreachable",
+      "port": 11434,
+      "error": "HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/tags (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=11434): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    }
+  },
+  "active_model": {
+    "default": "qwen25-grounded:latest",
+    "reasoning": "deepseek-r1:32b",
+    "provider": "ollama",
+    "groq_available": false,
+    "gemini_available": false
+  },
+  "open_loops": [
+    {
+      "id": "current_focus",
+      "description": "Phase 4: Production hardening, Phase 3 expansion (additional claim types, adaptive thresholding), au",
+      "status": "active",
+      "priority": "high",
+      "created": "2026-02-23"
+    },
+    {
+      "id": "coherence-arbiter-phase3-expansion",
+      "description": "",
+      "status": "ready_for_implementation",
+      "priority": "medium",
+      "created": "2026-02-23"
+    },
+    {
+      "id": "claude-cli-mcp-integration-issue",
+      "description": "",
+      "status": "known_issue_documented",
+      "priority": "medium",
+      "created": "2026-02-23"
+    },
+    {
+      "id": "form-1065-filing",
+      "description": "",
+      "status": "pending_cpa",
+      "priority": "medium",
+      "created": "2026-01-26"
+    },
+    {
+      "id": "faithh-memory-staleness",
+      "description": "",
+      "status": "solved",
+      "priority": "medium",
+      "created": "2026-02-07"
+    }
+  ],
+  "recent_decisions": [
+    {
+      "id": "infra_002",
+      "decision": "Never load SentenceTransformer in WSL scripts \u2014 use ChromaDB default embedding or route through back",
+      "date": "2026-03-01",
+      "status": "implemented",
+      "project": "infrastructure"
+    },
+    {
+      "id": "faithh_007",
+      "decision": "Proceed with Qwen 2.5 14B grounding fine-tune",
+      "date": "2026-02-16",
+      "status": "implemented",
+      "project": "faithh"
+    },
+    {
+      "id": "faithh_008",
+      "decision": "Fix qwen25-grounded chat template conflict",
+      "date": "2026-02-18",
+      "status": "implemented",
+      "project": "faithh"
+    },
+    {
+      "id": "faithh_009",
+      "decision": "Set qwen25-grounded:latest as default model",
+      "date": "2026-02-18",
+      "status": "implemented",
+      "project": "faithh"
+    },
+    {
+      "id": "faithh_008",
+      "decision": "Build PULSE Reflection Engine \u2014 tiered ML self-reflection protocol",
+      "date": "2026-02-15",
+      "status": "in_progress",
+      "project": "faithh"
+    }
+  ],
+  "projects": {
+    "last_updated": "2026-04-12",
+    "current_quarter": "Q1 2026",
+    "projects": {
+      "FAITHH": {
+        "name": "FAITHH (AI Stack)",
+        "phase": "Phase 4 Active",
+        "status": "operational"
+      },
+      "gen8_services": {
+        "name": "Gen8 MicroServer (servicebox)",
+        "phase": "Production deployment",
+        "status": "operational"
+      },
+      "tomcat_sound": {
+        "name": "Tom Cat Sound LLC",
+        "phase": "Operations & Growth",
+        "status": "ongoing"
+      },
+      "floating_garden_soundworks": {
+        "name": "Floating Garden Soundworks (FGS)",
+        "phase": "Pre-Phase 1 \u2014 Data Aggregation",
+        "status": "in_progress"
+      },
+      "inner_monologue_engine": {
+        "name": "Inner Monologue Engine (IME)",
+        "phase": "Architecture Design",
+        "status": "in_progress"
+      },
+      "constella_harmony": {
+        "name": "Constella Harmony Framework",
+        "phase": "Phase 1 Integration",
+        "status": "in_progress"
+      },
+      "alife": {
+        "name": "ALIFE (Artificial Life Simulation)",
+        "phase": "Experiments 0-9 complete (canonical series + Track B stress tests)",
+        "status": "complete"
+      }
+    }
+  },
+  "ml_chips": {
+    "total_chips": 660,
+    "chip_names": [
+      "Pi Hole / Pi / Hole",
+      "Messages En / Messages En Json",
+      "Land / 197 / Ors",
+      "2024 / Llc / Kevin",
+      "7860 / Taskname / Scheduledtas",
+      "Stars / Scaffolding / Rating",
+      "Partnership / Partner / Schedu",
+      "Mastering / Xmax / Intercity",
+      "Lets / Let / Yeah",
+      "Blank Lines / Blanks / Heading",
+      "Inference / Compose / Gpus",
+      "Llama / Llama Cpp Binaries / L",
+      "Unifi To Pihole / Docker Scrip",
+      "Pulse / Avatar / Chip",
+      "Ai Toolkit / Jonathan Ai / Too"
+    ]
+  },
+  "session_context": {
+    "last_query": null,
+    "conversation_id": null,
+    "chips_activated": []
+  },
+  "overall_status": "degraded"
+}

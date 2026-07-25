@@ -1,0 +1,16 @@
+{
+  "interaction_data": {
+    "coherence_indicator": [
+      {
+        "timestamp": "2026-02-23T20:39:07.912249",
+        "type": "click",
+        "context": {
+          "session_id": "test_session"
+        },
+        "session_id": "test_session"
+      }
+    ]
+  },
+  "layout_configs": {},
+  "performance_metrics": {}
+}

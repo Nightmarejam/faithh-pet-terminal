@@ -1,0 +1,176 @@
+{
+  "experiment": "generation_four",
+  "generation": 4,
+  "timestamp": "2026-04-01T18:17:52.271484",
+  "parameters": {
+    "agents_per_population": 50,
+    "ticks": 10,
+    "starting_resources": 3.0,
+    "acquisition": "0.3-1.2",
+    "loss": "0.5-1.5",
+    "noise_level_pop_b": 0.4,
+    "informed_fraction_pop_b": 0.2
+  },
+  "population_a": {
+    "population": "A",
+    "tick_summaries": [
+      {
+        "tick": 1,
+        "alive": 50,
+        "avg_fitness": 0.79
+      },
+      {
+        "tick": 2,
+        "alive": 50,
+        "avg_fitness": 1.485
+      },
+      {
+        "tick": 3,
+        "alive": 50,
+        "avg_fitness": 2.119
+      },
+      {
+        "tick": 4,
+        "alive": 50,
+        "avg_fitness": 2.691
+      },
+      {
+        "tick": 5,
+        "alive": 48,
+        "avg_fitness": 3.306
+      },
+      {
+        "tick": 6,
+        "alive": 46,
+        "avg_fitness": 3.907
+      },
+      {
+        "tick": 7,
+        "alive": 44,
+        "avg_fitness": 4.644
+      },
+      {
+        "tick": 8,
+        "alive": 42,
+        "avg_fitness": 5.441
+      },
+      {
+        "tick": 9,
+        "alive": 39,
+        "avg_fitness": 6.146
+      },
+      {
+        "tick": 10,
+        "alive": 36,
+        "avg_fitness": 6.717
+      }
+    ],
+    "fitness": {
+      "mean": 6.717,
+      "max": 8.834,
+      "min": 4.793,
+      "stdev": 1.184
+    },
+    "survival": {
+      "band2_candidates": 30,
+      "agents_depleted": 20,
+      "total_depletion_events": 45,
+      "final_alive": 36
+    },
+    "informed_vs_uninformed": {
+      "informed_count": 50,
+      "uninformed_count": 0,
+      "informed_mean_fitness": 6.717,
+      "uninformed_mean_fitness": null,
+      "informed_band2": 30,
+      "uninformed_band2": 0
+    },
+    "docs_written": 500
+  },
+  "population_b": {
+    "population": "B",
+    "tick_summaries": [
+      {
+        "tick": 1,
+        "alive": 50,
+        "avg_fitness": 0.792
+      },
+      {
+        "tick": 2,
+        "alive": 50,
+        "avg_fitness": 1.466
+      },
+      {
+        "tick": 3,
+        "alive": 50,
+        "avg_fitness": 2.096
+      },
+      {
+        "tick": 4,
+        "alive": 50,
+        "avg_fitness": 2.721
+      },
+      {
+        "tick": 5,
+        "alive": 46,
+        "avg_fitness": 3.427
+      },
+      {
+        "tick": 6,
+        "alive": 46,
+        "avg_fitness": 4.088
+      },
+      {
+        "tick": 7,
+        "alive": 44,
+        "avg_fitness": 4.606
+      },
+      {
+        "tick": 8,
+        "alive": 42,
+        "avg_fitness": 5.201
+      },
+      {
+        "tick": 9,
+        "alive": 41,
+        "avg_fitness": 5.933
+      },
+      {
+        "tick": 10,
+        "alive": 41,
+        "avg_fitness": 6.746
+      }
+    ],
+    "fitness": {
+      "mean": 6.746,
+      "max": 9.216,
+      "min": 4.917,
+      "stdev": 0.982
+    },
+    "survival": {
+      "band2_candidates": 34,
+      "agents_depleted": 16,
+      "total_depletion_events": 40,
+      "final_alive": 41
+    },
+    "informed_vs_uninformed": {
+      "informed_count": 10,
+      "uninformed_count": 40,
+      "informed_mean_fitness": 6.903,
+      "uninformed_mean_fitness": 6.707,
+      "informed_band2": 6,
+      "uninformed_band2": 28
+    },
+    "docs_written": 500
+  },
+  "hypothesis_check": {
+    "pop_a_band2": 30,
+    "pop_b_band2": 34,
+    "pop_a_better_survival": false,
+    "pop_a_lower_depletion": false,
+    "uninformed_disadvantaged": true
+  },
+  "alife_lineage_count_before": 52450,
+  "alife_lineage_count_after": 53450,
+  "total_docs_written": 1000
+}

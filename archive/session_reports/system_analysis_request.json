@@ -1,0 +1,4 @@
+{
+  "message": "I need you to perform a comprehensive system architecture analysis of the FAITHH project. Please analyze: 1) Current system structure and organization 2) File classification by status (Active, Legacy, Deprecated, Duplicate) 3) Documentation consistency issues 4) Code organization problems 5) Version conflicts 6) Opportunities for PLC-like deterministic behavior 7) State management improvements 8) UI/backend integration issues. Focus on identifying what needs updating, what's outdated, and how to better organize the multi-state system for predictable, PLC-like operation.",
+  "provider": "anthropic"
+}

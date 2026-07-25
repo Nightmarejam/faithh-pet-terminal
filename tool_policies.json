@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0",
+  "description": "Tool execution security policies for FAITHH",
+  "default_policy": {
+    "allow": false,
+    "max_timeout_ms": 30000,
+    "require_permissions": true
+  },
+  "tools": {
+    "read_file": {
+      "allow": true,
+      "allowed_paths": ["~/ai-stack", "/tmp/faithh_*"],
+      "blocked_paths": ["/etc/shadow", "/etc/passwd", "~/.ssh"],
+      "permissions": ["file.read"],
+      "max_file_size_bytes": 10485760
+    },
+    "write_file": {
+      "allow": true,
+      "allowed_paths": ["~/ai-stack", "/tmp/faithh_*"],
+      "blocked_paths": ["~/ai-stack/.env", "~/ai-stack/keyring.json"],
+      "permissions": ["file.read", "file.write"],
+      "max_file_size_bytes": 5242880
+    },
+    "run_command": {
+      "allow": true,
+      "blocked_commands": ["rm -rf", "mkfs", "dd if=", "chmod 777", "> /dev/", "curl | sh", "wget | sh"],
+      "allowed_commands": ["echo", "cat", "ls", "grep", "find", "python", "node", "git"],
+      "permissions": ["process.execute", "process.read"],
+      "max_timeout_ms": 60000
+    },
+    "web_search": {
+      "allow": true,
+      "allowed_domains": ["*"],
+      "blocked_domains": [],
+      "permissions": ["network.read"],
+      "max_timeout_ms": 15000
+    },
+    "file_upload": {
+      "allow": true,
+      "allowed_extensions": [".txt", ".md", ".json", ".yaml", ".yml", ".py", ".js", ".ts", ".csv"],
+      "blocked_extensions": [".exe", ".sh", ".bat", ".cmd", ".dll", ".so"],
+      "max_file_size_bytes": 10485760,
+      "upload_directory": "~/ai-stack/uploads",
+      "permissions": ["file.read", "file.write"]
+    }
+  }
+}

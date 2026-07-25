@@ -1,0 +1,41 @@
+{
+  "experiment": "exp8_protocol_evolution",
+  "date": "2026-03-26T18:58:54.475193",
+  "parameters": {
+    "max_ticks": 30000,
+    "population": 40,
+    "protocol_memory_size": 10,
+    "transmission_range": 60,
+    "learning_rate": 0.7,
+    "mutation_rate": 0.1,
+    "generation_interval": 10000
+  },
+  "results": {
+    "total_protocols": 16499,
+    "average_complexity": 3.0,
+    "total_transmissions": 0,
+    "cultural_archive_size": 0,
+    "persistent_protocols": 0,
+    "total_encoded_insights": 49497,
+    "generations": 3,
+    "transmission_events": 0,
+    "persistence_events": 0
+  },
+  "success_criteria": {
+    "protocol_evolution": true,
+    "cultural_transmission": false,
+    "knowledge_encoding": true,
+    "generational_persistence": false
+  },
+  "protocol_details": {
+    "total_created": 16499,
+    "innovations": 16499,
+    "transmissions": 0,
+    "archived": 0,
+    "generation_turnovers": 3
+  },
+  "cultural_events": {
+    "transmission_events": 0,
+    "persistence_events": 0
+  }
+}

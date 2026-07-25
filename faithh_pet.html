@@ -1,0 +1,3720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET TERMINAL v4.0</title>
+    <!-- Markdown rendering with syntax highlighting -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
+    <style>
+        /* ===================================
+           BASE STYLES
+           =================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #00ffff;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* ===================================
+           SCANLINE EFFECTS
+           =================================== */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 255, 255, 0.05) 0px,
+                rgba(0, 255, 255, 0.05) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.2) 0px,
+                transparent 1px,
+                transparent 3px
+            );
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        /* ===================================
+           CORNER ACCENT SYSTEM
+           =================================== */
+        .corner-accent {
+            position: relative;
+        }
+
+        .corner-accent::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid #00ffff;
+            border-left: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+            z-index: 10;
+        }
+
+        .corner-accent::after {
+            content: '';
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            width: 20px;
+            height: 20px;
+            border-top: 3px solid #00ffff;
+            border-right: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+            z-index: 10;
+        }
+
+        .corner-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .corner-bottom::before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: -3px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 3px solid #00ffff;
+            border-left: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        .corner-bottom::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            right: -3px;
+            width: 20px;
+            height: 20px;
+            border-bottom: 3px solid #00ffff;
+            border-right: 3px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+        }
+
+        /* ===================================
+           MAIN CONTAINER
+           =================================== */
+        .pet-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(10, 14, 39, 0.95);
+            border: 3px solid #3b5a9d;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 
+                0 0 30px rgba(59, 90, 157, 0.5),
+                inset 0 0 50px rgba(0, 0, 0, 0.3);
+            animation: subtle-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes subtle-pulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(59, 90, 157, 0.5), inset 0 0 50px rgba(0, 0, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(59, 90, 157, 0.7), inset 0 0 50px rgba(0, 0, 0, 0.3); }
+        }
+
+        /* ===================================
+           HEADER
+           =================================== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: rgba(59, 90, 157, 0.2);
+            border: 2px solid #3b5a9d;
+            border-radius: 10px;
+        }
+
+        .pet-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffa500;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background: #00ff00;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .terminal-title {
+            font-size: 24px;
+            letter-spacing: 4px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+        }
+
+        .status-link {
+            font-size: 14px;
+            color: #00ffff;
+            text-decoration: none;
+            border: 1px solid #3b5a9d;
+            padding: 4px 8px;
+            border-radius: 6px;
+            background: rgba(59, 90, 157, 0.2);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .status-link:hover {
+            background: rgba(0, 255, 255, 0.15);
+            color: #fff;
+        }
+
+        .clock {
+            font-size: 16px;
+            color: #ffa500;
+            letter-spacing: 2px;
+        }
+
+        /* ===================================
+           MAIN CONTENT AREA
+           =================================== */
+        .main-content {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            min-height: 500px;
+        }
+
+        /* ===================================
+           LEFT SIDEBAR - FAITHH PANEL
+           =================================== */
+        .faithh-sidebar {
+            width: 200px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .avatar-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .avatar-container {
+            width: 120px;
+            height: 150px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .avatar-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+        }
+
+        .avatar-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .avatar-subtitle {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .status-online {
+            color: #00ff00;
+            font-size: 12px;
+        }
+
+        /* ===================================
+           ACTIVE CHIPS MINI PANEL
+           =================================== */
+        .active-chips-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #b44cff;
+            border-radius: 15px;
+            padding: 12px;
+        }
+
+        .active-chips-title {
+            font-size: 11px;
+            color: #b44cff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .active-chips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .mini-chip {
+            aspect-ratio: 1;
+            background: rgba(30, 35, 60, 0.8);
+            border: 2px solid #3b5a9d;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .mini-chip.active {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.15);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+        }
+
+        .mini-chip.empty {
+            border-style: dashed;
+            border-color: #2a3050;
+        }
+
+        .mini-chip .chip-icon {
+            opacity: 0.3;
+        }
+
+        .mini-chip.active .chip-icon {
+            opacity: 1;
+        }
+
+        /* ===================================
+           CHAT PANEL
+           =================================== */
+        .chat-panel {
+            flex: 1;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-display {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            background: rgba(5, 10, 25, 0.5);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            min-height: 350px;
+            max-height: 450px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(20, 25, 50, 0.6);
+            border-left: 3px solid #3b5a9d;
+        }
+
+        .message.user-message {
+            border-left-color: #ffa500;
+            background: rgba(255, 165, 0, 0.1);
+        }
+
+        .message.system-message {
+            border-left-color: #b44cff;
+            background: rgba(180, 76, 255, 0.1);
+        }
+
+        .message-header {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #00ffff;
+        }
+
+        .message.user-message .message-header {
+            color: #ffa500;
+        }
+
+        .message-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #e0e0e0;
+            white-space: pre-wrap;
+        }
+
+        .message-meta {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(59, 90, 157, 0.3);
+            font-size: 11px;
+            color: #666;
+        }
+
+        .chips-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .chip-tag {
+            background: rgba(0, 255, 255, 0.15);
+            border: 1px solid #00ffff;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 10px;
+            color: #00ffff;
+        }
+
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex: 1;
+            background: rgba(5, 10, 25, 0.8);
+            border: 2px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 12px 15px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+
+        .chat-input:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .chat-input::placeholder {
+            color: #4a5a7a;
+        }
+
+        .btn-send {
+            background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 25px;
+            color: #0a0e27;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-send:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 165, 0, 0.4);
+        }
+
+        /* ===================================
+           NAVIGATION TABS
+           =================================== */
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-tab {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 10px;
+            padding: 12px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .nav-tab:hover {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        .nav-tab.active {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        /* ===================================
+           ENHANCED MESSAGE STYLES
+           =================================== */
+
+        /* Smooth scroll anchor */
+        .chat-display {
+            overflow-anchor: none;
+            scroll-behavior: smooth;
+        }
+
+        .scroll-anchor {
+            overflow-anchor: auto;
+            height: 1px;
+        }
+
+        /* Typing indicator animation */
+        .typing-indicator .typing-dots {
+            display: inline-flex;
+            gap: 4px;
+        }
+
+        .typing-indicator .typing-dots span {
+            width: 8px;
+            height: 8px;
+            background: #00ffff;
+            border-radius: 50%;
+            animation: typing-bounce 1.4s ease-in-out infinite;
+        }
+
+        .typing-indicator .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .typing-indicator .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing-bounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-6px); }
+        }
+
+        /* Code blocks */
+        .message-content pre {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 0;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: rgba(59, 90, 157, 0.3);
+            border-bottom: 1px solid #3b5a9d;
+        }
+
+        .language-badge {
+            font-size: 11px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .copy-btn {
+            background: transparent;
+            border: 1px solid #3b5a9d;
+            border-radius: 4px;
+            padding: 4px 10px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .copy-btn:hover {
+            background: rgba(0, 255, 255, 0.15);
+            border-color: #00ffff;
+        }
+
+        .copy-btn.copied {
+            color: #00ff00;
+            border-color: #00ff00;
+        }
+
+        .message-content pre code {
+            display: block;
+            padding: 12px;
+            overflow-x: auto;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* Inline code */
+        .message-content code:not(pre code) {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-size: 13px;
+            color: #00ffff;
+        }
+
+        /* Message actions */
+        .message-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(59, 90, 157, 0.2);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .message:hover .message-actions {
+            opacity: 1;
+        }
+
+        .action-btn {
+            background: rgba(30, 35, 60, 0.6);
+            border: 1px solid #3b5a9d;
+            border-radius: 4px;
+            padding: 5px 10px;
+            color: #888;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .action-btn:hover {
+            background: rgba(0, 255, 255, 0.1);
+            border-color: #00ffff;
+            color: #00ffff;
+        }
+
+        .action-btn.success {
+            color: #00ff00;
+            border-color: #00ff00;
+        }
+
+        /* Streaming cursor effect */
+        .streaming-cursor::after {
+            content: '▋';
+            animation: blink-cursor 1s step-end infinite;
+            color: #00ffff;
+        }
+
+        @keyframes blink-cursor {
+            50% { opacity: 0; }
+        }
+
+        .auto-route-info {
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 0.75em;
+        }
+
+        .auto-route-info small {
+            color: #888;
+            font-style: italic;
+        }
+
+        .tab-icon {
+            font-size: 16px;
+        }
+
+        /* ===================================
+           PAGE CONTAINERS
+           =================================== */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: flex;
+        }
+
+        /* ===================================
+           CHIPS PAGE
+           =================================== */
+        .chips-page {
+            flex-direction: column;
+            gap: 20px;
+            min-height: 500px;
+        }
+
+        .chips-page-content {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .chip-library {
+            flex: 1;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #b44cff;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .chip-library-title {
+            font-size: 16px;
+            color: #b44cff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(180, 76, 255, 0.3);
+        }
+
+        .chip-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 12px;
+        }
+
+        /* ===================================
+           MMBN-STYLE CHIP CARDS
+           =================================== */
+        .chip-card {
+            width: 90px;
+            height: 110px;
+            background: linear-gradient(180deg, #000080 0%, #000040 100%);
+            border: 2px solid #4169E1;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6px 4px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .chip-card:hover {
+            box-shadow: 0 0 15px rgba(0, 206, 209, 0.7);
+            transform: translateY(-2px);
+        }
+
+        .chip-card.selected {
+            border-color: #00ff99;
+            box-shadow: 0 0 15px rgba(0, 255, 153, 0.5);
+        }
+
+        .chip-card .chip-icon {
+            width: 50px;
+            height: 50px;
+            background: #001040;
+            border: 1px solid #60A0FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-top: 6px;
+        }
+
+        .chip-card .chip-name {
+            font-size: 10px;
+            color: #fff;
+            margin-top: 6px;
+            text-transform: uppercase;
+        }
+
+        .chip-card .chip-code {
+            position: absolute;
+            top: 4px;
+            right: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .chip-card .chip-mb {
+            position: absolute;
+            bottom: 4px;
+            right: 6px;
+            font-size: 8px;
+            color: #aaa;
+        }
+
+        .chip-card .element-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .chip-card.aqua .element-bar { background: #00CED1; }
+        .chip-card.fire .element-bar { background: #FF4500; }
+        .chip-card.elec .element-bar { background: #FFD700; }
+        .chip-card.wood .element-bar { background: #32CD32; }
+        .chip-card.null .element-bar { background: #9370DB; }
+        .chip-card.break .element-bar { background: #FF69B4; }
+
+        .chip-card.small {
+            width: 75px;
+            height: 95px;
+            padding: 4px;
+        }
+
+        .chip-card.small .chip-icon {
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+        }
+
+        .chip-card.small .chip-name {
+            font-size: 9px;
+        }
+
+        .chip-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(30, 35, 60, 0.6);
+            border: 2px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 12px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .chip-item:hover {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        .chip-item.selected {
+            border-color: #00ff00;
+            background: rgba(0, 255, 0, 0.1);
+        }
+
+        .chip-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chip-icon-large {
+            font-size: 24px;
+        }
+
+        .chip-details h4 {
+            color: #00ffff;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .chip-details p {
+            color: #666;
+            font-size: 11px;
+        }
+
+        .chip-toggle {
+            background: rgba(59, 90, 157, 0.3);
+            border: 2px solid #3b5a9d;
+            border-radius: 6px;
+            padding: 8px 15px;
+            color: #00ffff;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .chip-toggle:hover {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: #00ffff;
+        }
+
+        .chip-item.selected .chip-toggle {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+
+        .loadout-panel {
+            width: 300px;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .loadout-title {
+            font-size: 16px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .loadout-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .loadout-slot {
+            aspect-ratio: 1;
+            background: rgba(30, 35, 60, 0.8);
+            border: 2px solid #3b5a9d;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .loadout-slot.filled {
+            border-color: #00ffff;
+            background: rgba(0, 255, 255, 0.15);
+        }
+
+        .loadout-slot.empty {
+            border-style: dashed;
+            border-color: #2a3050;
+        }
+
+        .loadout-slot .slot-label {
+            font-size: 9px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .auto-select-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(30, 35, 60, 0.6);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .toggle-switch {
+            width: 40px;
+            height: 22px;
+            background: #2a3050;
+            border-radius: 11px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-switch.on {
+            background: rgba(0, 255, 0, 0.4);
+        }
+
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: #fff;
+            border-radius: 50%;
+            top: 2px;
+            left: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-switch.on::after {
+            left: 20px;
+            background: #00ff00;
+        }
+
+        .toggle-label {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* ===================================
+           STATUS PAGE
+           =================================== */
+        .status-page {
+            gap: 20px;
+            min-height: 500px;
+        }
+
+        .pulse-panel {
+            width: 200px;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b82f6;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .pulse-avatar-container {
+            width: 120px;
+            height: 150px;
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pulse-avatar-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+        }
+
+        .pulse-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #3b82f6;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .pulse-subtitle {
+            font-size: 11px;
+            color: #888;
+        }
+
+        .status-panels {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .status-section {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #3b5a9d;
+            border-radius: 15px;
+            padding: 15px 20px;
+        }
+
+        .pulse-dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+        }
+
+        .pulse-dashboard-card {
+            background: rgba(30, 35, 60, 0.6);
+            border: 1px solid #3b5a9d;
+            border-radius: 10px;
+            padding: 12px;
+        }
+
+        .pulse-card-title {
+            font-size: 11px;
+            color: #8fb3ff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .model-select {
+            width: 100%;
+            background: rgba(10, 15, 35, 0.8);
+            border: 1px solid #3b5a9d;
+            color: #00ffff;
+            border-radius: 6px;
+            padding: 6px 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+
+        .model-select:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 6px rgba(0, 255, 255, 0.4);
+        }
+
+        .model-help {
+            margin-top: 6px;
+            font-size: 10px;
+            color: #7a8fb0;
+        }
+
+        .quick-status-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .quick-status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #c8d4f0;
+        }
+
+        .quick-status-value {
+            color: #00ffcc;
+            font-size: 12px;
+        }
+
+        .quick-status-value.offline {
+            color: #ff6666;
+        }
+
+        .rag-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px;
+            background: rgba(30, 35, 60, 0.6);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .rag-toggle .rag-label {
+            font-size: 12px;
+            color: #b5c7ee;
+        }
+
+        .stats-mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .collector-badges {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .collector-badge {
+            flex: 1;
+            min-width: 90px;
+            background: rgba(20, 25, 45, 0.7);
+            border: 1px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .collector-badge.ok { border-color: #10b981; }
+        .collector-badge.fail { border-color: #ef4444; }
+
+        .collector-badge .badge-label {
+            font-size: 11px;
+            color: #8fb3ff;
+        }
+
+        .collector-badge .badge-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e5e7eb;
+            margin-top: 4px;
+        }
+
+        .collector-meta {
+            margin-top: 8px;
+            font-size: 11px;
+            color: #9ca3af;
+        }
+
+        /* Director Card Styles */
+        .director-card {
+            background: linear-gradient(135deg, rgba(0, 40, 60, 0.9), rgba(0, 20, 40, 0.95));
+            border: 1px solid #00d4aa;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .director-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(0, 212, 170, 0.3);
+        }
+
+        .director-card .card-icon {
+            font-size: 20px;
+        }
+
+        .director-card .card-title {
+            color: #00d4aa;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            flex-grow: 1;
+        }
+
+        .director-card .refresh-btn {
+            background: transparent;
+            border: 1px solid #00d4aa;
+            color: #00d4aa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .director-card .refresh-btn:hover {
+            background: rgba(0, 212, 170, 0.2);
+        }
+
+        .context-summary {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 12px;
+            border-radius: 6px;
+            color: #e0e0e0;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            border-left: 3px solid #00d4aa;
+        }
+
+        .status-badges {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .status-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 6px;
+            min-width: 80px;
+        }
+
+        .status-badge.healthy {
+            background: rgba(0, 200, 100, 0.2);
+            border: 1px solid #00c864;
+        }
+
+        .status-badge.warning {
+            background: rgba(255, 180, 0, 0.2);
+            border: 1px solid #ffb400;
+        }
+
+        .status-badge.critical {
+            background: rgba(255, 60, 60, 0.2);
+            border: 1px solid #ff3c3c;
+        }
+
+        .status-badge .badge-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #9ca3af;
+            margin-bottom: 4px;
+        }
+
+        .status-badge .badge-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .status-badge.healthy .badge-value { color: #00c864; }
+        .status-badge.warning .badge-value { color: #ffb400; }
+        .status-badge.critical .badge-value { color: #ff3c3c; }
+
+        .attention-items {
+            margin-top: 12px;
+            padding: 12px;
+            background: rgba(255, 180, 0, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(255, 180, 0, 0.3);
+        }
+
+        .attention-items h4 {
+            color: #ffb400;
+            font-size: 12px;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+        }
+
+        .attention-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 12px;
+            color: #e0e0e0;
+        }
+
+        .attention-item:last-child {
+            border-bottom: none;
+        }
+
+        .attention-item .priority-badge {
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .priority-badge.critical { background: #ff3c3c; color: white; }
+        .priority-badge.high { background: #ff6b35; color: white; }
+        .priority-badge.medium { background: #ffb400; color: black; }
+        .priority-badge.low { background: #6b7280; color: white; }
+
+        .suggested-actions {
+            margin-top: 12px;
+            padding: 12px;
+            background: rgba(0, 150, 255, 0.1);
+            border-radius: 6px;
+            border: 1px solid rgba(0, 150, 255, 0.3);
+        }
+
+        .suggested-actions h4 {
+            color: #0096ff;
+            font-size: 12px;
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+        }
+
+        .suggested-action {
+            padding: 4px 0;
+            font-size: 12px;
+            color: #e0e0e0;
+        }
+
+        .suggested-action::before {
+            content: "→ ";
+            color: #0096ff;
+        }
+
+        .director-meta {
+            margin-top: 8px;
+            font-size: 11px;
+            color: #6b7280;
+            text-align: right;
+        }
+
+        /* Security Card Styles */
+        .security-card {
+            background: rgba(25, 35, 60, 0.85);
+            border: 1px solid #14b8a6;
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 16px;
+        }
+
+        .security-card .card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(20, 184, 166, 0.4);
+            padding-bottom: 6px;
+        }
+
+        .security-card .card-header .refresh-btn {
+            margin-left: auto;
+            font-size: 11px;
+            padding: 4px 8px;
+        }
+
+        .security-card .card-title {
+            color: #14b8a6;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            flex: 1;
+        }
+
+        .security-meta {
+            font-size: 12px;
+            color: #cbd5e1;
+            margin-bottom: 6px;
+        }
+
+        .security-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .security-btn {
+            background: transparent;
+            border: 1px solid #14b8a6;
+            color: #14b8a6;
+            padding: 6px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .security-btn:hover {
+            background: rgba(20, 184, 166, 0.15);
+        }
+
+        .security-summary {
+            font-size: 12px;
+            color: #e5e7eb;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        .security-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 6px;
+        }
+
+        .security-badge {
+            background: rgba(20, 184, 166, 0.15);
+            border: 1px solid rgba(20, 184, 166, 0.4);
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 11px;
+            color: #e5e7eb;
+        }
+
+        .security-badge.warn { border-color: #f97316; color: #f97316; }
+        .security-badge.crit { border-color: #ef4444; color: #ef4444; }
+
+        .security-input {
+            width: 100%;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(20, 184, 166, 0.4);
+            border-radius: 6px;
+            color: #e5e7eb;
+            font-size: 12px;
+        }
+
+        .stat-card {
+            background: rgba(10, 15, 35, 0.8);
+            border: 1px solid #3b5a9d;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 16px;
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 9px;
+            color: #7a8fb0;
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-section-title {
+            font-size: 14px;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .status-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: rgba(30, 35, 60, 0.4);
+            border-radius: 6px;
+        }
+
+        .status-name {
+            color: #888;
+            font-size: 12px;
+        }
+
+        .status-value {
+            color: #00ff00;
+            font-size: 12px;
+        }
+
+        .status-value.offline {
+            color: #ff6666;
+        }
+
+        .status-value.warning {
+            color: #ffa500;
+        }
+
+        /* ===================================
+           SCROLLBAR STYLING
+           =================================== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 14, 39, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3b5a9d;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ffff;
+        }
+
+        /* ===================================
+           TYPING INDICATOR
+           =================================== */
+        .typing-indicator .message-content::after {
+            content: '...';
+            animation: typing 1s infinite;
+        }
+
+        @keyframes typing {
+            0%, 100% { content: '.'; }
+            33% { content: '..'; }
+            66% { content: '...'; }
+        }
+
+        /* ===================================
+           PROGRAM ADVANCE CELEBRATION
+           =================================== */
+        .pa-celebration-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .pa-celebration-overlay.active {
+            display: flex;
+            animation: flashIn 0.2s ease-out;
+        }
+
+        @keyframes flashIn {
+            0% { background: rgba(255, 255, 255, 0.9); }
+            100% { background: rgba(0, 0, 0, 0.8); }
+        }
+
+        .pa-title {
+            font-family: 'Courier New', monospace;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow:
+                0 0 10px rgba(255, 215, 0, 0.8),
+                0 0 20px rgba(255, 215, 0, 0.6),
+                0 0 40px rgba(255, 140, 0, 0.4),
+                3px 3px 0 #FF8C00;
+            animation: slamIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            text-align: center;
+        }
+
+        @keyframes slamIn {
+            0% { transform: scale(8) rotate(-5deg); opacity: 0; }
+            50% { opacity: 0.5; }
+            80% { transform: scale(1.1) rotate(2deg); }
+            100% { transform: scale(1) rotate(0deg); opacity: 1; }
+        }
+
+        .pa-name {
+            font-family: 'Courier New', monospace;
+            font-size: 2rem;
+            color: #00CED1;
+            text-shadow: 0 0 10px rgba(0, 206, 209, 0.8);
+            margin-top: 1rem;
+            animation: fadeSlideUp 0.5s ease-out 0.3s both;
+        }
+
+        @keyframes fadeSlideUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .pa-message {
+            font-size: 1rem;
+            color: #aaa;
+            margin-top: 1rem;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeSlideUp 0.5s ease-out 0.5s both;
+        }
+
+        .pa-dismiss {
+            margin-top: 2rem;
+            padding: 0.5rem 2rem;
+            background: linear-gradient(180deg, #4169E1 0%, #2040A0 100%);
+            border: 2px solid #60A0FF;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            cursor: pointer;
+            animation: fadeSlideUp 0.5s ease-out 0.7s both;
+        }
+
+        .pa-dismiss:hover {
+            box-shadow: 0 0 15px rgba(96, 160, 255, 0.7);
+        }
+
+        .screen-shake {
+            animation: shake 0.3s ease-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20% { transform: translateX(-5px); }
+            40% { transform: translateX(5px); }
+            60% { transform: translateX(-3px); }
+            80% { transform: translateX(3px); }
+        }
+
+        /* ===================================
+           COMPASS DASHBOARD
+           =================================== */
+        .compass-page {
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .compass-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            grid-template-rows: auto 1fr auto;
+            gap: 20px;
+            height: 100%;
+        }
+
+        .compass-header {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 20px;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+        }
+
+        .compass-header h2 {
+            flex: 1;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .compass-updated {
+            color: #4a5a7a;
+            font-size: 12px;
+        }
+
+        .compass-refresh {
+            background: rgba(0, 255, 255, 0.2);
+            border: 1px solid #00ffff;
+            color: #00ffff;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Courier New', monospace;
+        }
+
+        .compass-refresh:hover {
+            background: rgba(0, 255, 255, 0.4);
+        }
+
+        /* The main "whiteboard" area */
+        .compass-board {
+            grid-column: 1;
+            grid-row: 2;
+            background: rgba(5, 10, 25, 0.8);
+            border: 2px solid #3b5a9d;
+            border-radius: 15px;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-content: flex-start;
+            min-height: 400px;
+            max-height: 600px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /* Project node cards */
+        .project-node {
+            width: 280px;
+            background: rgba(15, 20, 45, 0.95);
+            border: 2px solid #3b5a9d;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .project-node:hover {
+            border-color: #00ffff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .project-node.status-active {
+            border-left: 4px solid #00ff88;
+        }
+
+        .project-node.status-production {
+            border-left: 4px solid #00ffff;
+        }
+
+        .project-node.status-planning {
+            border-left: 4px solid #ffa500;
+        }
+
+        .project-node-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .project-node-name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #00ffff;
+        }
+
+        .project-node-phase {
+            font-size: 11px;
+            color: #b44cff;
+            background: rgba(180, 76, 255, 0.2);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .project-node-summary {
+            font-size: 12px;
+            color: #8a9ab5;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .project-node-steps {
+            border-top: 1px solid rgba(59, 90, 157, 0.5);
+            padding-top: 10px;
+        }
+
+        .project-node-steps h4 {
+            font-size: 11px;
+            color: #ffa500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .next-step-item {
+            font-size: 11px;
+            color: #6a7a9a;
+            padding: 4px 0;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .next-step-item::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #ffa500;
+        }
+
+        .step-count-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 165, 0, 0.3);
+            color: #ffa500;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+
+        /* Right sidebar panels */
+        .compass-log-panel,
+        .compass-next-panel {
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #b44cff;
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        .compass-log-panel {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .compass-next-panel {
+            grid-column: 1 / -1;
+            grid-row: 3;
+        }
+
+        .compass-log-panel h3,
+        .compass-next-panel h3 {
+            color: #b44cff;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .log-input-row {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .log-input-row select,
+        .log-input-row input {
+            background: rgba(5, 10, 25, 0.8);
+            border: 1px solid #3b5a9d;
+            color: #00ffff;
+            padding: 8px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .log-input-row select:focus,
+        .log-input-row input:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+        }
+
+        .log-input-row button {
+            background: linear-gradient(135deg, #b44cff 0%, #8a2be2 100%);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s;
+        }
+
+        .log-input-row button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(180, 76, 255, 0.4);
+        }
+
+        .recent-logs {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .log-entry {
+            font-size: 11px;
+            padding: 8px;
+            border-bottom: 1px solid rgba(59, 90, 157, 0.3);
+            color: #8a9ab5;
+        }
+
+        .log-entry-time {
+            color: #4a5a7a;
+        }
+
+        .log-entry-project {
+            color: #00ffff;
+            font-weight: bold;
+        }
+
+        #next-steps-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pet-container">
+        <!-- HEADER -->
+        <div class="header">
+            <div class="pet-indicator">
+                <div class="status-dot"></div>
+                <div class="terminal-title">PET TERMINAL v4.0</div>
+            </div>
+            <div class="clock" id="clock">--:--:--</div>
+            <div>
+                <a class="status-link" href="/collectors/status" target="_blank">Collectors Status</a>
+            </div>
+        </div>
+
+        <!-- ==================== CHAT PAGE ==================== -->
+        <div class="main-content page active" id="chatPage">
+            <!-- LEFT SIDEBAR -->
+            <div class="faithh-sidebar">
+                <!-- FAITHH Avatar Panel -->
+                <div class="avatar-panel corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="avatar-container">
+                        <img src="/images/faithh.png" alt="FAITHH" onerror="this.onerror=null;this.src='images/faithh.png';">
+                    </div>
+                    <div class="avatar-name">FAITHH</div>
+                    <div class="avatar-subtitle">AI Assistant</div>
+                    <span class="status-online">● Online</span>
+                </div>
+
+                <!-- Active Chips Mini Panel -->
+                <div class="active-chips-panel corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="active-chips-title">
+                        <span>🎴</span>
+                        <span>ACTIVE CHIPS</span>
+                    </div>
+                    <div class="active-chips-grid" id="activeChipsGrid">
+                        <!-- Chips will be populated dynamically -->
+                        <div class="mini-chip empty"><span class="chip-icon">+</span></div>
+                        <div class="mini-chip empty"><span class="chip-icon">+</span></div>
+                        <div class="mini-chip empty"><span class="chip-icon">+</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAT PANEL -->
+            <div class="chat-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="chat-display" id="chatDisplay">
+                    <div class="message">
+                        <div class="message-header">FAITHH</div>
+                        <div class="message-content">System initialized. Battle chips loaded. How can I assist you today?</div>
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" id="chatInput" placeholder="Enter your message...">
+                    <button class="btn-send" onclick="sendMessage()">SEND</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CHIPS PAGE ==================== -->
+        <div class="chips-page page" id="chipsPage">
+            <div class="chips-page-content">
+                <!-- Chip Library -->
+                <div class="chip-library corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="chip-library-title">📚 Available Chips</div>
+                    <div class="chip-list" id="chipList">
+                        <!-- Chips populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Active Loadout -->
+                <div class="loadout-panel corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="loadout-title">⚔️ Active Loadout</div>
+                    <div class="loadout-grid" id="loadoutGrid">
+                        <!-- 6 slots max -->
+                    </div>
+                    <div class="auto-select-toggle" onclick="toggleAutoSelect()">
+                        <div class="toggle-switch on" id="autoSelectToggle"></div>
+                        <span class="toggle-label">Auto-select chips based on query</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== STATUS PAGE ==================== -->
+        <div class="status-page page" id="statusPage">
+            <!-- PULSE Panel -->
+            <div class="pulse-panel corner-accent">
+                <div class="corner-bottom"></div>
+                <div class="pulse-avatar-container">
+                    <img src="/images/pulse.png" alt="PULSE" onerror="this.onerror=null;this.src='images/pulse.png';">
+                </div>
+                <div class="pulse-name">PULSE</div>
+                <div class="pulse-subtitle">System Monitor</div>
+            </div>
+
+            <!-- Status Panels -->
+            <div class="status-panels">
+                <div class="status-section corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="status-section-title">
+                        <span>📡</span>
+                        <span>PULSE DASHBOARD</span>
+                    </div>
+                    <div class="pulse-dashboard-grid">
+                        <div class="pulse-dashboard-card">
+                            <div class="pulse-card-title">MODEL SELECT</div>
+                            <select id="modelSelect" class="model-select"></select>
+                            <div class="model-help" id="modelHelp">Applies to new chat requests.</div>
+                        </div>
+
+                        <div class="pulse-dashboard-card">
+                            <div class="pulse-card-title">QUICK STATUS</div>
+                            <div class="quick-status-list">
+                                <div class="quick-status-item">
+                                    <span>Backend</span>
+                                    <span class="quick-status-value" id="quickBackendStatus">—</span>
+                                </div>
+                                <div class="quick-status-item">
+                                    <span>ChromaDB</span>
+                                    <span class="quick-status-value" id="quickChromaStatus">—</span>
+                                </div>
+                                <div class="quick-status-item">
+                                    <span>Ollama</span>
+                                    <span class="quick-status-value" id="quickOllamaStatus">—</span>
+                                </div>
+                                <div class="quick-status-item">
+                                    <span>Gemini</span>
+                                    <span class="quick-status-value" id="quickGeminiStatus">—</span>
+                                </div>
+                            </div>
+                            <div class="rag-toggle" id="ragToggle">
+                                <div class="toggle-switch on" id="ragToggleSwitch"></div>
+                                <span class="rag-label">Knowledge Base (RAG)</span>
+                            </div>
+                        </div>
+
+                        <div class="pulse-dashboard-card">
+                            <div class="pulse-card-title">SESSION STATS</div>
+                            <div class="stats-mini-grid">
+                                <div class="stat-card">
+                                    <div class="stat-value" id="dashMessages">0</div>
+                                    <div class="stat-label">Messages</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value" id="dashTokens">0</div>
+                                    <div class="stat-label">Tokens</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-value" id="dashRag">0</div>
+                                    <div class="stat-label">RAG hits</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pulse-dashboard-card">
+                            <div class="pulse-card-title">COLLECTORS</div>
+                            <div class="collector-badges">
+                                <div class="collector-badge">
+                                    <div class="badge-label">Total</div>
+                                    <div class="badge-value" id="collectorTotal">--</div>
+                                </div>
+                                <div class="collector-badge ok">
+                                    <div class="badge-label">OK</div>
+                                    <div class="badge-value" id="collectorOk">--</div>
+                                </div>
+                                <div class="collector-badge fail">
+                                    <div class="badge-label">Fail</div>
+                                    <div class="badge-value" id="collectorFail">--</div>
+                                </div>
+                            </div>
+                            <div class="collector-meta" id="collectorMeta">Aggregated: --</div>
+                        </div>
+
+                        <!-- Director Status Card -->
+                        <div class="director-card">
+                            <div class="card-header">
+                                <span class="card-icon">🧭</span>
+                                <span class="card-title">SYSTEM DIRECTOR</span>
+                                <button class="refresh-btn" onclick="refreshDirectorStatus()">↻</button>
+                            </div>
+                            <div class="director-content">
+                                <div class="context-summary" id="directorContext">Loading...</div>
+                                <div class="status-badges">
+                                    <div class="status-badge healthy" id="directorHealthy">
+                                        <span class="badge-label">Healthy</span>
+                                        <span class="badge-value" id="directorServicesOk">-</span>
+                                    </div>
+                                    <div class="status-badge warning" id="directorWarning" style="display:none;">
+                                        <span class="badge-label">Attention</span>
+                                        <span class="badge-value" id="directorAttentionCount">0</span>
+                                    </div>
+                                    <div class="status-badge critical" id="directorCritical" style="display:none;">
+                                        <span class="badge-label">Critical</span>
+                                        <span class="badge-value" id="directorCriticalCount">0</span>
+                                    </div>
+                                </div>
+                                <div class="attention-items" id="attentionItems" style="display:none;"></div>
+                                <div class="suggested-actions" id="suggestedActions" style="display:none;"></div>
+                                <div class="director-meta">
+                                    <span id="directorTimestamp">--</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pulse Security Card -->
+                        <div class="security-card">
+                            <div class="card-header">
+                                <span class="card-icon">🛡️</span>
+                                <span class="card-title">PULSE SECURITY</span>
+                                <button class="refresh-btn" onclick="refreshSecuritySummary()">↻</button>
+                            </div>
+                            <div class="security-meta" id="securitySummary">Ready</div>
+                            <div class="security-badges" id="securityBadges"></div>
+                            <textarea class="security-input" id="securityText" rows="2" placeholder="Scan text for injection/secrets..."></textarea>
+                            <div class="security-buttons">
+                                <button class="security-btn" onclick="runSecurityScan('input')">Scan Input</button>
+                                <button class="security-btn" onclick="runSecurityScan('output')">Scan Output</button>
+                                <button class="security-btn" onclick="refreshHealthStatus()">Health Check</button>
+                                <button class="security-btn" onclick="runHealingCycle(true)">Heal (dry-run)</button>
+                                <button class="security-btn" onclick="fetchAuditSummary()">Audit Summary</button>
+                                <button class="security-btn" onclick="fetchRecentAuditEvents()">Audit Events</button>
+                            </div>
+                            <div class="security-summary" id="securityDetail"></div>
+                            <table class="security-table" id="securityAuditTable">
+                                <thead>
+                                    <tr><th>Time</th><th>Type</th><th>Actor</th><th>Summary</th></tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <div class="security-hints">
+                                <div>Health hints (dev vs prod):</div>
+                                <ul>
+                                    <li>Ollama healthy: HTTP 2xx; dev &le; 1200ms, prod &le; 800ms</li>
+                                    <li>ChromaDB healthy: HTTP 2xx; dev &le; 900ms, prod &le; 600ms</li>
+                                    <li>FAITHH backend healthy: HTTP 2xx; dev &le; 500ms, prod &le; 300ms</li>
+                                    <li>"unreachable" means no TCP/HTTP; "warn" when latency above thresholds</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-section corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="status-section-title">
+                        <span>⚡</span>
+                        <span>SERVICES</span>
+                    </div>
+                    <div class="status-grid" id="servicesGrid">
+                        <div class="status-item">
+                            <span class="status-name">Backend</span>
+                            <span class="status-value" id="statusBackend">● CHECKING</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">ChromaDB</span>
+                            <span class="status-value" id="statusChroma">● CHECKING</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Ollama</span>
+                            <span class="status-value" id="statusOllama">● CHECKING</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Gemini</span>
+                            <span class="status-value" id="statusGemini">● CHECKING</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-section corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="status-section-title">
+                        <span>🗄️</span>
+                        <span>RAG DATABASE</span>
+                    </div>
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <span class="status-name">Total Documents</span>
+                            <span class="status-value" id="totalDocs">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Last Indexed</span>
+                            <span class="status-value" id="lastIndexed">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Collections</span>
+                            <span class="status-value" id="collections">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Embedding Model</span>
+                            <span class="status-value" id="embeddingModel">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="status-section corner-accent">
+                    <div class="corner-bottom"></div>
+                    <div class="status-section-title">
+                        <span>📊</span>
+                        <span>SESSION</span>
+                    </div>
+                    <div class="status-grid">
+                        <div class="status-item">
+                            <span class="status-name">Queries This Session</span>
+                            <span class="status-value" id="sessionQueries">0</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Avg Response Time</span>
+                            <span class="status-value" id="avgResponseTime">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Active Model</span>
+                            <span class="status-value" id="activeModel">--</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="status-name">Session Started</span>
+                            <span class="status-value" id="sessionStarted">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== COMPASS PAGE ==================== -->
+        <div class="compass-page page" id="compassPage">
+            <div class="compass-container">
+                <!-- Header with timestamp -->
+                <div class="compass-header">
+                    <h2>🧭 PROJECT COMPASS</h2>
+                    <span class="compass-updated">Last sync: <span id="compass-timestamp">--</span></span>
+                    <button class="compass-refresh" onclick="refreshCompass()">↻ Refresh</button>
+                </div>
+
+                <!-- Main visualization area - the "whiteboard" -->
+                <div class="compass-board" id="compass-board">
+                    <!-- Project nodes will be injected here -->
+                </div>
+
+                <!-- Quick log panel (interstitial journaling) -->
+                <div class="compass-log-panel">
+                    <h3>📝 Quick Log</h3>
+                    <div class="log-input-row">
+                        <select id="log-project">
+                            <option value="faithh">FAITHH</option>
+                            <option value="constella">Constella</option>
+                            <option value="tomcat_sound">Tom Cat Sound</option>
+                            <option value="general">General</option>
+                        </select>
+                        <input type="text" id="log-note" placeholder="What did you just work on?">
+                        <input type="number" id="log-hours" placeholder="hrs" min="0" max="12" step="0.25">
+                        <button onclick="submitWorkLog()">Log</button>
+                    </div>
+                    <div class="recent-logs" id="recent-logs">
+                        <!-- Recent log entries appear here -->
+                    </div>
+                </div>
+
+                <!-- Next steps summary -->
+                <div class="compass-next-panel">
+                    <h3>⚡ Adjacent Possible</h3>
+                    <div id="next-steps-list">
+                        <!-- Aggregated next steps from all projects -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVIGATION TABS -->
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-page="chatPage">
+                <span class="tab-icon">💬</span>
+                <span>CHAT</span>
+            </div>
+            <div class="nav-tab" data-page="chipsPage">
+                <span class="tab-icon">🎴</span>
+                <span>CHIPS</span>
+            </div>
+            <div class="nav-tab" data-page="statusPage">
+                <span class="tab-icon">⚙️</span>
+                <span>PULSE</span>
+            </div>
+            <div class="nav-tab" data-page="compassPage">
+                <span class="tab-icon">🧭</span>
+                <span>COMPASS</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================================
+         PROGRAM ADVANCE CELEBRATION OVERLAY
+         =================================== -->
+    <div id="paCelebrationOverlay" class="pa-celebration-overlay" aria-hidden="true">
+        <div class="pa-title">PROGRAM ADVANCE!</div>
+        <div class="pa-name" id="paCelebrationName">—</div>
+        <div class="pa-message" id="paCelebrationMessage">—</div>
+        <button class="pa-dismiss" id="paCelebrationDismissBtn">JACK OUT</button>
+    </div>
+
+    <script>
+        // ===================================
+        // CHIP DEFINITIONS
+        // ===================================
+        const CHIPS = {
+            'rag_search': {
+                name: 'RAG Search',
+                icon: '📚',
+                description: 'Semantic search across all documents',
+                color: '#00ffff'
+            },
+            'rag_search_fallback': {
+                name: 'RAG Fallback',
+                icon: '📚',
+                description: 'Fallback search across indexed documents',
+                color: '#00ffff'
+            },
+            'conversation_history': {
+                name: 'Conversation History',
+                icon: '💬',
+                description: 'Recent conversation context',
+                color: '#00ffff'
+            },
+            'constella': {
+                name: 'Constella',
+                icon: '🏛️',
+                description: 'Civic governance framework context',
+                color: '#b44cff'
+            },
+            'scaffolding': {
+                name: 'Scaffolding',
+                icon: '🧭',
+                description: 'Position awareness and orientation',
+                color: '#00ff00'
+            },
+            'decisions': {
+                name: 'Decisions',
+                icon: '📋',
+                description: 'Decision history and rationale',
+                color: '#ffa500'
+            },
+            'project_state': {
+                name: 'Project State',
+                icon: '📌',
+                description: 'Current project phase and priorities',
+                color: '#ff69b4'
+            },
+            'self_awareness': {
+                name: 'Self Awareness',
+                icon: '🤖',
+                description: 'FAITHH self-awareness context',
+                color: '#9370db'
+            },
+            'life_map': {
+                name: 'Life Map',
+                icon: '🗺️',
+                description: 'High-level direction and priorities',
+                color: '#ff6b6b'
+            },
+            'self_query': {
+                name: 'Self Query',
+                icon: '🤖',
+                description: 'FAITHH self-awareness context',
+                color: '#4ecdc4'
+            }
+        };
+
+        const CHIP_LIBRARY_ORDER = [
+            'rag_search',
+            'rag_search_fallback',
+            'conversation_history',
+            'decisions',
+            'scaffolding',
+            'constella',
+            'project_state',
+            'self_awareness',
+            'life_map'
+        ];
+
+        const CHIP_STYLES = {
+            'rag_search': { code: 'R', element: 'aqua', color: '#00CED1', mb: 20 },
+            'rag_search_fallback': { code: 'F', element: 'aqua', color: '#00CED1', mb: 18 },
+            'conversation_history': { code: 'H', element: 'aqua', color: '#00CED1', mb: 22 },
+            'decisions': { code: 'D', element: 'elec', color: '#FFD700', mb: 30 },
+            'scaffolding': { code: 'S', element: 'wood', color: '#32CD32', mb: 25 },
+            'constella': { code: 'C', element: 'fire', color: '#FF4500', mb: 40 },
+            'self_awareness': { code: 'A', element: 'null', color: '#9370DB', mb: 15 },
+            'project_state': { code: 'P', element: 'break', color: '#FF69B4', mb: 35 },
+            'life_map': { code: 'L', element: 'fire', color: '#ff6b6b', mb: 28 },
+            'self_query': { code: 'A', element: 'null', color: '#9370DB', mb: 15 }
+        };
+
+        // ===================================
+        // STATE
+        // ===================================
+        let activeChips = new Set();
+        let autoSelectEnabled = true;
+        let sessionQueries = 0;
+        let totalResponseTime = 0;
+        let sessionStartTime = new Date();
+        let currentModel = 'llama31-faithh:latest';
+        let ragEnabled = true;
+
+        const API_BASE = (window.FAITHH_API_BASE || '').replace(/\/$/, '');
+        const FAITHH_ENV = (window.FAITHH_ENV || 'dev').toLowerCase();
+        const HEALTH_THRESHOLDS = {
+            dev: { ollama: 1200, chromadb: 900, faithh_backend: 500 },
+            prod: { ollama: 800, chromadb: 600, faithh_backend: 300 }
+        };
+
+        function buildApiUrl(path) {
+            if (!API_BASE) {
+                return path;
+            }
+            return `${API_BASE}${path}`;
+        }
+
+        const MODEL_OPTIONS = [
+            // Quick
+            { id: 'qwen2.5:7b', label: '⚡ Qwen2.5 (7B) - Fastest', category: 'quick' },
+            
+            // FAITHH Persona
+            { id: 'llama31-faithh:latest', label: '🤖 Llama31 FAITHH (8B) - Daily Chat', category: 'faithh' },
+            { id: 'qwen3-faithh:latest', label: '🤖 Qwen3 FAITHH (30.5B) - Deep Analysis', category: 'faithh' },
+            
+            // Specialists
+            { id: 'qwen2.5-coder:14b', label: '💻 Qwen2.5-Coder (14B) - Code', category: 'specialist' },
+            { id: 'deepseek-r1:32b', label: '🧠 DeepSeek-R1 (32B) - Reasoning', category: 'specialist' },
+            
+            // Auto
+            { id: 'auto', label: '🔄 Auto-Select (Smart Routing)', category: 'auto' }
+        ];
+
+        // ===================================
+        // SMART MODEL ROUTER
+        // ===================================
+        function detectIntent(message) {
+            const lower = message.toLowerCase();
+            
+            // Coding patterns
+            const codePatterns = [
+                /write\s+(a\s+)?(code|function|script|class|program)/i,
+                /\b(python|javascript|js|typescript|ts|bash|shell|sql|html|css|react|node)\b/i,
+                /\b(debug|fix|refactor|optimize|implement|code review)\b/i,
+                /```[\s\S]*```/,  // Code blocks
+                /\b(api|endpoint|http|rest|graphql|database|query)\b/i,
+                /\b(error|exception|bug|stacktrace|traceback)\b/i,
+                /how\s+do\s+i\s+(write|create|make|build|implement)/i
+            ];
+            
+            // Reasoning patterns
+            const reasoningPatterns = [
+                /\b(why|explain|analyze|compare|evaluate|assess)\b/i,
+                /\b(pros?\s+and\s+cons?|trade-?offs?|implications)\b/i,
+                /\b(strategy|architecture|design|plan|approach)\b/i,
+                /\b(should\s+i|what\s+if|how\s+would|best\s+way)\b/i,
+                /step\s+by\s+step/i,
+                /\b(reasoning|logic|think\s+through|break\s+down)\b/i,
+                /\b(complex|difficult|challenging|tricky)\b/i
+            ];
+            
+            // Quick/simple patterns
+            const quickPatterns = [
+                /^(hi|hello|hey|thanks|thank\s+you|ok|okay|got\s+it)/i,
+                /^what\s+(is|are)\s+\w+\??$/i,  // Simple "what is X?"
+                /^(yes|no|sure|please|help)\s*\??$/i
+            ];
+            
+            // FAITHH-specific patterns (project context)
+            const faithhPatterns = [
+                /\b(faithh|project|constella|tom\s*cat|gen8|chromadb)\b/i,
+                /\b(my\s+project|our\s+project|this\s+project)\b/i,
+                /\b(session|context|remember|recall)\b/i
+            ];
+            
+            // Score each category
+            let scores = { coding: 0, reasoning: 0, quick: 0, faithh: 0 };
+            
+            codePatterns.forEach(p => { if (p.test(lower)) scores.coding += 2; });
+            reasoningPatterns.forEach(p => { if (p.test(lower)) scores.reasoning += 2; });
+            quickPatterns.forEach(p => { if (p.test(lower)) scores.quick += 3; });
+            faithhPatterns.forEach(p => { if (p.test(lower)) scores.faithh += 2; });
+            
+            // Length heuristics
+            if (message.length < 30) scores.quick += 1;
+            if (message.length > 200) scores.reasoning += 1;
+            if (message.includes('```')) scores.coding += 3;
+            
+            // Determine winner
+            const maxScore = Math.max(...Object.values(scores));
+            if (maxScore === 0) return { intent: 'general', model: 'llama31-faithh:latest', reason: 'default' };
+            
+            const intent = Object.keys(scores).find(k => scores[k] === maxScore);
+            
+            // Map intent to model
+            const modelMap = {
+                coding: { model: 'qwen2.5-coder:14b', reason: 'code-related query detected' },
+                reasoning: { model: 'deepseek-r1:32b', reason: 'complex reasoning required' },
+                quick: { model: 'qwen2.5:7b', reason: 'simple query, using fastest model' },
+                faithh: { model: 'llama31-faithh:latest', reason: 'FAITHH context detected' }
+            };
+            
+            return { intent, ...modelMap[intent] };
+        }
+        
+        function getEffectiveModel(userMessage) {
+            const selectedModel = document.getElementById('modelSelect')?.value || currentModel;
+            
+            if (selectedModel !== 'auto') {
+                return { model: selectedModel, isAuto: false };
+            }
+            
+            const detection = detectIntent(userMessage);
+            console.log(`[Auto-Router] Intent: ${detection.intent}, Model: ${detection.model}, Reason: ${detection.reason}`);
+            return { model: detection.model, isAuto: true, reason: detection.reason };
+        }
+
+        // ===================================
+        // PROGRAM ADVANCE CELEBRATION
+        // ===================================
+        const PA_SEEN_KEY = 'faithh_seen_program_advances_v1';
+        const PA_POLL_INTERVAL_MS = 60000;
+
+        function getSeenPAs() {
+            try {
+                return JSON.parse(localStorage.getItem(PA_SEEN_KEY) || '[]');
+            } catch (e) {
+                return [];
+            }
+        }
+
+        // ===================================
+        // PULSE SECURITY
+        // ===================================
+        async function runSecurityScan(type = 'input') {
+            const textEl = document.getElementById('securityText');
+            const summaryEl = document.getElementById('securitySummary');
+            const detailEl = document.getElementById('securityDetail');
+            const badgesEl = document.getElementById('securityBadges');
+            if (!textEl || !summaryEl || !detailEl || !badgesEl) return;
+
+            summaryEl.textContent = 'Scanning...';
+            detailEl.textContent = '';
+            badgesEl.innerHTML = '';
+
+            try {
+                const resp = await fetch(buildApiUrl('/api/pulse/security/scan'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: textEl.value || '', type }),
+                });
+                const data = await resp.json();
+                summaryEl.textContent = data.is_safe ? 'Safe' : 'Threats detected';
+                const badges = [];
+                badges.push(`<div class="security-badge">Risk: ${Math.round((data.risk_score || 0) * 100)}%</div>`);
+                if (data.threats_detected && data.threats_detected.length) {
+                    badges.push(`<div class="security-badge warn">${data.threats_detected.join(', ')}</div>`);
+                }
+                badgesEl.innerHTML = badges.join('');
+                detailEl.textContent = `Time: ${data.scan_time_ms || 0} ms`;
+            } catch (e) {
+                summaryEl.textContent = 'Scan error';
+                detailEl.textContent = e.message || e.toString();
+            }
+        }
+
+        async function refreshHealthStatus() {
+            const summaryEl = document.getElementById('securitySummary');
+            const detailEl = document.getElementById('securityDetail');
+            const badgesEl = document.getElementById('securityBadges');
+            if (!summaryEl || !detailEl || !badgesEl) return;
+            summaryEl.textContent = 'Checking health...';
+            detailEl.textContent = '';
+            badgesEl.innerHTML = '';
+            try {
+                const resp = await fetch(buildApiUrl('/api/pulse/health/check'));
+                const data = await resp.json();
+                summaryEl.textContent = 'Health check complete';
+                const envThresholds = HEALTH_THRESHOLDS[FAITHH_ENV] || HEALTH_THRESHOLDS.dev;
+                const badges = Object.entries(data).map(([svc, info]) => {
+                    const status = info.status || 'unknown';
+                    const rt = info.response_time_ms || 0;
+                    const limit = envThresholds[svc] || 1000;
+                    let cls = '';
+                    if (status === 'unreachable') cls = 'crit';
+                    else if (status !== 'healthy') cls = 'warn';
+                    else if (rt > limit) cls = 'warn';
+                    return `<div class="security-badge ${cls}">${svc}: ${status} (${rt}ms)</div>`;
+                });
+                badgesEl.innerHTML = badges.join('');
+                detailEl.textContent = `Env: ${FAITHH_ENV} | thresholds (ms) – ollama ${envThresholds.ollama}, chromadb ${envThresholds.chromadb}, backend ${envThresholds.faithh_backend}`;
+            } catch (e) {
+                summaryEl.textContent = 'Health check error';
+                detailEl.textContent = e.message || e.toString();
+            }
+        }
+
+        async function runHealingCycle(dryRun = true) {
+            const summaryEl = document.getElementById('securitySummary');
+            const detailEl = document.getElementById('securityDetail');
+            const badgesEl = document.getElementById('securityBadges');
+            if (!summaryEl || !detailEl || !badgesEl) return;
+            summaryEl.textContent = dryRun ? 'Healing (dry-run)...' : 'Healing...';
+            detailEl.textContent = '';
+            badgesEl.innerHTML = '';
+            try {
+                const resp = await fetch(buildApiUrl('/api/pulse/health/heal'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ dry_run: dryRun }),
+                });
+                const data = await resp.json();
+                summaryEl.textContent = 'Healing cycle done';
+                const badges = (data.actions || []).map(a => {
+                    const cls = a.success ? '' : 'warn';
+                    return `<div class="security-badge ${cls}">${a.service}: ${a.action}</div>`;
+                });
+                badgesEl.innerHTML = badges.join('');
+                detailEl.textContent = `Dry run: ${data.dry_run ? 'yes' : 'no'}`;
+            } catch (e) {
+                summaryEl.textContent = 'Healing error';
+                detailEl.textContent = e.message || e.toString();
+            }
+        }
+
+        async function fetchAuditSummary() {
+            const summaryEl = document.getElementById('securitySummary');
+            const detailEl = document.getElementById('securityDetail');
+            const badgesEl = document.getElementById('securityBadges');
+            if (!summaryEl || !detailEl || !badgesEl) return;
+            summaryEl.textContent = 'Loading audit summary...';
+            detailEl.textContent = '';
+            badgesEl.innerHTML = '';
+            try {
+                const resp = await fetch(buildApiUrl('/api/pulse/audit/summary'));
+                const data = await resp.json();
+                summaryEl.textContent = `Audit: ${data.total_events || 0} events today`;
+                const badges = [];
+                if (data.security_events !== undefined) badges.push(`<div class="security-badge crit">Security: ${data.security_events}</div>`);
+                if (data.healing_events !== undefined) badges.push(`<div class="security-badge">Healing: ${data.healing_events}</div>`);
+                if (data.failed_events !== undefined) badges.push(`<div class="security-badge warn">Failed: ${data.failed_events}</div>`);
+                badgesEl.innerHTML = badges.join('');
+                detailEl.textContent = Object.entries(data.by_type || {}).map(([k, v]) => `${k}: ${v}`).join(' | ');
+            } catch (e) {
+                summaryEl.textContent = 'Audit error';
+                detailEl.textContent = e.message || e.toString();
+            }
+        }
+
+        async function fetchRecentAuditEvents() {
+            const table = document.getElementById('securityAuditTable');
+            const body = table ? table.querySelector('tbody') : null;
+            const summaryEl = document.getElementById('securitySummary');
+            if (!body || !summaryEl) return;
+            summaryEl.textContent = 'Loading audit events...';
+            body.innerHTML = '';
+            try {
+                const resp = await fetch(buildApiUrl('/api/pulse/audit/recent'));
+                const data = await resp.json();
+                const events = data.events || data || [];
+                if (!events.length) {
+                    body.innerHTML = '<tr><td colspan="4">No recent events</td></tr>';
+                } else {
+                    const rows = events.slice(0, 10).map(ev => {
+                        const ts = ev.timestamp || ev.time || '';
+                        const type = ev.event_type || ev.type || 'event';
+                        const actor = ev.actor || ev.user || 'system';
+                        const summary = ev.summary || ev.message || ev.text || '';
+                        return `<tr><td>${ts}</td><td>${type}</td><td>${actor}</td><td>${summary}</td></tr>`;
+                    });
+                    body.innerHTML = rows.join('');
+                }
+                summaryEl.textContent = 'Audit events loaded';
+            } catch (e) {
+                summaryEl.textContent = 'Audit events error';
+                body.innerHTML = `<tr><td colspan="4">${e.message || e.toString()}</td></tr>`;
+            }
+        }
+
+        async function refreshSecuritySummary() {
+            await fetchAuditSummary();
+            await refreshHealthStatus();
+            await fetchRecentAuditEvents();
+        }
+
+        // ===================================
+        // DIRECTOR STATUS
+        // ===================================
+        async function refreshDirectorStatus() {
+            const ctxEl = document.getElementById('directorContext');
+            const servicesOkEl = document.getElementById('directorServicesOk');
+            const warnBadge = document.getElementById('directorWarning');
+            const warnCountEl = document.getElementById('directorAttentionCount');
+            const critBadge = document.getElementById('directorCritical');
+            const critCountEl = document.getElementById('directorCriticalCount');
+            const attentionContainer = document.getElementById('attentionItems');
+            const actionsContainer = document.getElementById('suggestedActions');
+            const tsEl = document.getElementById('directorTimestamp');
+
+            if (!ctxEl || !servicesOkEl || !warnBadge || !critBadge || !attentionContainer || !actionsContainer || !tsEl) {
+                return;
+            }
+
+            try {
+                const resp = await fetch(buildApiUrl('/api/compass/director'));
+                const data = await resp.json();
+
+                if (!data.success) {
+                    ctxEl.textContent = 'Director unavailable: ' + (data.error || 'Unknown error');
+                    warnBadge.style.display = 'none';
+                    critBadge.style.display = 'none';
+                    attentionContainer.style.display = 'none';
+                    actionsContainer.style.display = 'none';
+                    tsEl.textContent = '';
+                    return;
+                }
+
+                ctxEl.textContent = data.context_for_ai || 'No context available';
+                servicesOkEl.textContent = (data.raw_summary && data.raw_summary.services_healthy) || '-';
+
+                const attentionItems = data.attention_items || [];
+                const criticalCount = (data.raw_summary && data.raw_summary.critical) || 0;
+                const totalAttention = attentionItems.length;
+
+                if (totalAttention > 0 && criticalCount === 0) {
+                    warnBadge.style.display = 'flex';
+                    warnCountEl.textContent = totalAttention;
+                } else {
+                    warnBadge.style.display = 'none';
+                }
+
+                if (criticalCount > 0) {
+                    critBadge.style.display = 'flex';
+                    critCountEl.textContent = criticalCount;
+                } else {
+                    critBadge.style.display = 'none';
+                }
+
+                if (totalAttention > 0) {
+                    attentionContainer.style.display = 'block';
+                    attentionContainer.innerHTML = '<h4>⚠️ Attention Required</h4>' +
+                        attentionItems.map(item => `
+                            <div class="attention-item">
+                                <span class="priority-badge ${item.priority}">${item.priority}</span>
+                                <span>${item.message || ''}</span>
+                            </div>
+                        `).join('');
+                } else {
+                    attentionContainer.style.display = 'none';
+                }
+
+                const actions = data.suggested_actions || [];
+                if (actions.length > 0) {
+                    actionsContainer.style.display = 'block';
+                    actionsContainer.innerHTML = '<h4>💡 Suggested Actions</h4>' +
+                        actions.map(act => `<div class="suggested-action">${act}</div>`).join('');
+                } else {
+                    actionsContainer.style.display = 'none';
+                }
+
+                const ts = data.generated_at ? new Date(data.generated_at).toLocaleTimeString() : '--';
+                tsEl.textContent = 'Updated: ' + ts;
+            } catch (error) {
+                console.error('Director fetch error:', error);
+                ctxEl.textContent = 'Error fetching director status';
+                warnBadge.style.display = 'none';
+                critBadge.style.display = 'none';
+                attentionContainer.style.display = 'none';
+                actionsContainer.style.display = 'none';
+                tsEl.textContent = '';
+            }
+        }
+
+        function markPASeen(name) {
+            const seen = new Set(getSeenPAs());
+            seen.add(name);
+            try {
+                localStorage.setItem(PA_SEEN_KEY, JSON.stringify([...seen]));
+            } catch (e) {
+                console.warn('Failed to persist PA de-dupe:', e);
+            }
+        }
+
+        function hasSeenPA(name) {
+            return getSeenPAs().includes(name);
+        }
+
+        function showPACelebration(pa) {
+            if (!pa || !pa.name) return;
+            if (hasSeenPA(pa.name)) return;
+
+            const overlay = document.getElementById('paCelebrationOverlay');
+            const nameEl = document.getElementById('paCelebrationName');
+            const msgEl = document.getElementById('paCelebrationMessage');
+
+            if (!overlay || !nameEl || !msgEl) return;
+
+            nameEl.textContent = pa.name;
+            msgEl.textContent = pa.message || 'New synergy unlocked.';
+
+            document.body.classList.add('screen-shake');
+            setTimeout(() => document.body.classList.remove('screen-shake'), 350);
+
+            overlay.classList.add('active');
+            overlay.setAttribute('aria-hidden', 'false');
+
+            markPASeen(pa.name);
+        }
+
+        function dismissPACelebration() {
+            const overlay = document.getElementById('paCelebrationOverlay');
+            if (!overlay) return;
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+        }
+
+        async function pollProgramAdvancesOnce() {
+            try {
+                const response = await fetch(buildApiUrl('/api/pulse/chips'));
+                if (!response.ok) return;
+                const data = await response.json();
+                const pas = data.program_advances || [];
+
+                for (const pa of pas) {
+                    const name = typeof pa === 'string' ? pa : pa.name;
+                    if (name && !hasSeenPA(name)) {
+                        showPACelebration({
+                            name: name,
+                            message: pa.message || 'Program Advance detected!'
+                        });
+                        break;
+                    }
+                }
+            } catch (e) {
+                console.warn('PA poll failed:', e);
+            }
+        }
+
+        // Expose globally for console testing
+        window.showPACelebration = showPACelebration;
+        window.dismissPACelebration = dismissPACelebration;
+
+        // ===================================
+        // CLOCK
+        // ===================================
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const displayHours = (hours % 12 || 12).toString().padStart(2, '0');
+            document.getElementById('clock').textContent = `${displayHours}:${minutes}:${seconds} ${ampm}`;
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        function updateSessionTime() {
+            const now = new Date();
+            const elapsed = Math.floor((now - sessionStartTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const hours = Math.floor(minutes / 60);
+            const timeText = hours > 0 ? `${hours}h ${minutes % 60}m` : `${minutes}m`;
+            const sessionTimeEl = document.getElementById('dashSessionTime');
+            if (sessionTimeEl) {
+                sessionTimeEl.textContent = timeText;
+            }
+        }
+
+        function updateDashboardStats() {
+            const messagesEl = document.getElementById('dashMessages');
+            if (messagesEl) {
+                messagesEl.textContent = sessionQueries;
+            }
+            const avgEl = document.getElementById('dashAvgMs');
+            if (avgEl) {
+                avgEl.textContent = sessionQueries ? `${Math.round(totalResponseTime / sessionQueries)}ms` : '--';
+            }
+        }
+
+        // ===================================
+        // COLLECTOR STATUS (PULSE DASH)
+        // ===================================
+        async function refreshCollectorsStatus() {
+            const totalEl = document.getElementById('collectorTotal');
+            const okEl = document.getElementById('collectorOk');
+            const failEl = document.getElementById('collectorFail');
+            const metaEl = document.getElementById('collectorMeta');
+            if (!totalEl || !okEl || !failEl || !metaEl) return;
+
+            try {
+                const resp = await fetch(buildApiUrl('/api/context/collectors/status'));
+                if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+                const data = await resp.json();
+                if (!data.success) throw new Error(data.error || 'Unknown error');
+
+                const summary = data.summary || {};
+                const entries = Object.values(summary);
+                const total = entries.length;
+                const ok = entries.filter(e => e.success).length;
+                const fail = total - ok;
+
+                totalEl.textContent = total;
+                okEl.textContent = ok;
+                failEl.textContent = fail;
+                metaEl.textContent = `Aggregated: ${data.aggregated_at || 'unknown'}`;
+            } catch (e) {
+                totalEl.textContent = '--';
+                okEl.textContent = '--';
+                failEl.textContent = '--';
+                metaEl.textContent = `Error: ${e.message}`;
+            }
+        }
+
+        // ===================================
+        // NAVIGATION
+        // ===================================
+        const tabsContainer = document.querySelector('.nav-tabs');
+        if (tabsContainer) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.setAttribute('aria-hidden', page.classList.contains('active') ? 'false' : 'true');
+            });
+
+            tabsContainer.addEventListener('click', function(event) {
+                const tab = event.target.closest('.nav-tab');
+                if (!tab) return;
+
+                const pageId = tab.dataset.page;
+                const targetPage = document.getElementById(pageId);
+                if (!targetPage) return;
+
+                // Update tab active state
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                // Show corresponding page
+                document.querySelectorAll('.page').forEach(p => {
+                    p.classList.remove('active');
+                    p.setAttribute('aria-hidden', 'true');
+                });
+                targetPage.classList.add('active');
+                targetPage.setAttribute('aria-hidden', 'false');
+
+                // Load compass data when switching to compass page
+                if (pageId === 'compassPage') {
+                    refreshCompass();
+                }
+                if (pageId === 'statusPage') {
+                    refreshDirectorStatus();
+                    refreshCollectorsStatus();
+                }
+            });
+        }
+
+        // Initial load
+        refreshDirectorStatus();
+        refreshCollectorsStatus();
+
+        // ===================================
+        // CHAT FUNCTIONALITY - ENHANCED
+        // ===================================
+
+        // Configure marked for syntax highlighting
+        marked.setOptions({
+            highlight: function(code, lang) {
+                if (lang && hljs.getLanguage(lang)) {
+                    return hljs.highlight(code, { language: lang }).value;
+                }
+                return hljs.highlightAuto(code).value;
+            },
+            breaks: true,
+            gfm: true
+        });
+
+        // Custom renderer for code blocks with copy button
+        const renderer = new marked.Renderer();
+        renderer.code = function(token) {
+            const code = token.text;
+            const lang = token.lang;
+            
+            // Defensive checks
+            if (!code || typeof code !== 'string') {
+                return '<pre><code></code></pre>';
+            }
+            
+            // Language validation
+            const validLanguage = lang && hljs.getLanguage(lang) ? lang : 'plaintext';
+            
+            try {
+                const highlighted = hljs.highlight(code, { language: validLanguage }).value;
+                return `<pre><code class="hljs language-${validLanguage}">${highlighted}</code></pre>`;
+            } catch (e) {
+                console.error('Highlight error:', e);
+                return `<pre><code>${code}</code></pre>`;
+            }
+        };
+        marked.use({ renderer });
+
+        // Copy code block function
+        function copyCodeBlock(btn) {
+            const codeBlock = btn.closest('pre').querySelector('code');
+            const code = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span>✓</span> Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        // Copy entire message
+        function copyMessage(btn) {
+            const messageContent = btn.closest('.message').querySelector('.message-content');
+            const text = messageContent.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✓ Copied';
+                btn.classList.add('success');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('success');
+                }, 2000);
+            });
+        }
+
+        // Regenerate message
+        async function regenerateMessage(btn) {
+            const message = btn.closest('.message');
+            const previousUserMessage = message.previousElementSibling;
+            
+            if (previousUserMessage && previousUserMessage.classList.contains('user-message')) {
+                const userText = previousUserMessage.querySelector('.message-content').textContent;
+                // Remove this response
+                message.remove();
+                // Re-send the previous message
+                document.getElementById('chatInput').value = userText;
+                await sendMessage();
+            }
+        }
+
+        // Throttled DOM update buffer
+        let updateBuffer = '';
+        let updateTimeout = null;
+        const UPDATE_THROTTLE_MS = 50;
+
+        function flushUpdateBuffer(contentDiv) {
+            if (updateBuffer) {
+                // Render markdown
+                contentDiv.innerHTML = marked.parse(updateBuffer);
+                updateBuffer = '';
+                
+                // Scroll to bottom if user hasn't scrolled away
+                const chatDisplay = document.getElementById('chatDisplay');
+                const isNearBottom = chatDisplay.scrollHeight - chatDisplay.scrollTop - chatDisplay.clientHeight < 100;
+                if (isNearBottom) {
+                    requestAnimationFrame(() => {
+                        chatDisplay.scrollTop = chatDisplay.scrollHeight;
+                    });
+                }
+            }
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            const chatDisplay = document.getElementById('chatDisplay');
+            
+            // Add user message
+            const userDiv = document.createElement('div');
+            userDiv.className = 'message user-message';
+            userDiv.innerHTML = `
+                <div class="message-header">USER</div>
+                <div class="message-content">${escapeHtml(message)}</div>
+            `;
+            chatDisplay.appendChild(userDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+            
+            input.value = '';
+            
+            // Create response container with typing indicator
+            const responseDiv = document.createElement('div');
+            responseDiv.className = 'message';
+            responseDiv.innerHTML = `
+                <div class="message-header">FAITHH</div>
+                <div class="message-content">
+                    <div class="typing-dots"><span></span><span></span><span></span></div>
+                </div>
+            `;
+            chatDisplay.appendChild(responseDiv);
+            chatDisplay.scrollTop = chatDisplay.scrollHeight;
+
+            const contentDiv = responseDiv.querySelector('.message-content');
+            const startTime = Date.now();
+            
+            // Smart model routing
+            const routing = getEffectiveModel(message);
+            const effectiveModel = routing.model;
+            
+            // Show auto-routing info if applicable
+            if (routing.isAuto) {
+                const routeInfo = document.createElement('div');
+                routeInfo.className = 'auto-route-info';
+                routeInfo.innerHTML = `<small style="color: #888; font-style: italic;">🔄 Auto-selected: ${effectiveModel.split(':')[0]} (${routing.reason})</small>`;
+                responseDiv.querySelector('.message-header').appendChild(routeInfo);
+            }
+            
+            // Try streaming first, fallback to non-streaming
+            const streamEndpoint = buildApiUrl('/api/chat');
+            const regularEndpoint = buildApiUrl('/api/chat');
+            
+            try {
+                // First try streaming endpoint
+                const response = await fetch(streamEndpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: message,
+                        model: effectiveModel,
+                        use_rag: ragEnabled
+                    })
+                });
+                
+                if (response.ok && response.headers.get('content-type')?.includes('text/event-stream')) {
+                    // Handle SSE streaming
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    let fullResponse = '';
+                    
+                    contentDiv.innerHTML = '';
+                    contentDiv.classList.add('streaming-cursor');
+                    
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) break;
+                        
+                        const chunk = decoder.decode(value, { stream: true });
+                        const lines = chunk.split('\n');
+                        
+                        for (const line of lines) {
+                            if (line.startsWith('data: ')) {
+                                const data = line.slice(6);
+                                if (data === '[DONE]') continue;
+                                
+                                try {
+                                    const parsed = JSON.parse(data);
+                                    if (parsed.text || parsed.delta || parsed.content) {
+                                        fullResponse += parsed.text || parsed.delta || parsed.content;
+                                        updateBuffer = fullResponse;
+                                        
+                                        if (!updateTimeout) {
+                                            updateTimeout = setTimeout(() => {
+                                                flushUpdateBuffer(contentDiv);
+                                                updateTimeout = null;
+                                            }, UPDATE_THROTTLE_MS);
+                                        }
+                                    }
+                                } catch (e) {
+                                    // Not JSON, might be raw text
+                                    fullResponse += data;
+                                    updateBuffer = fullResponse;
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Final flush
+                    contentDiv.classList.remove('streaming-cursor');
+                    updateBuffer = fullResponse;
+                    flushUpdateBuffer(contentDiv);
+                    
+                } else {
+                    // Streaming endpoint not available or failed, fallback to regular endpoint
+                    const regularResponse = await fetch(regularEndpoint, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            message: message,
+                            model: effectiveModel,
+                            use_rag: ragEnabled
+                        })
+                    });
+                    
+                    const data = await regularResponse.json();
+                    
+                    if (data && data.success === false) {
+                        contentDiv.innerHTML = `<span style="color: #ff6666;">${escapeHtml(data.error || 'Backend error')}</span>`;
+                        return;
+                    }
+                    
+                    // Render markdown
+                    contentDiv.innerHTML = marked.parse(data.response || 'No response received');
+                    
+                    // Handle integrations
+                    if (data.integrations_used || data.context_sources) {
+                        const integrationsUsed = parseIntegrations(data);
+                        updateActiveChips(integrationsUsed);
+                        
+                        if (integrationsUsed.length > 0) {
+                            const metaDiv = document.createElement('div');
+                            metaDiv.className = 'message-meta';
+                            metaDiv.innerHTML = `
+                                <span>Chips used:</span>
+                                <div class="chips-used">
+                                    ${integrationsUsed.map(chip => 
+                                        `<span class="chip-tag">${CHIPS[chip]?.icon || '📎'} ${CHIPS[chip]?.name || chip}</span>`
+                                    ).join('')}
+                                </div>
+                            `;
+                            responseDiv.appendChild(metaDiv);
+                        }
+                    }
+                }
+                
+                // Add message actions
+                const actionsDiv = document.createElement('div');
+                actionsDiv.className = 'message-actions';
+                actionsDiv.innerHTML = `
+                    <button class="action-btn" onclick="copyMessage(this)" title="Copy message">
+                        📋 Copy
+                    </button>
+                    <button class="action-btn" onclick="regenerateMessage(this)" title="Regenerate response">
+                        🔄 Regenerate
+                    </button>
+                `;
+                responseDiv.appendChild(actionsDiv);
+                
+                // Update stats
+                const responseTime = Date.now() - startTime;
+                sessionQueries++;
+                totalResponseTime += responseTime;
+                document.getElementById('sessionQueries').textContent = sessionQueries;
+                document.getElementById('avgResponseTime').textContent = 
+                    Math.round(totalResponseTime / sessionQueries) + 'ms';
+                updateDashboardStats();
+                
+                chatDisplay.scrollTop = chatDisplay.scrollHeight;
+                
+            } catch (error) {
+                console.error('Chat error:', error);
+                contentDiv.innerHTML = `
+                    <span style="color: #ff6666;">
+                        ${error.name === 'AbortError' 
+                            ? 'Request timed out. Try a simpler message.' 
+                            : 'Connection error. Check backend on port 5557.'}
+                    </span>
+                `;
+            }
+        }
+
+        // Parse which integrations were used from backend response
+        function parseIntegrations(data) {
+            const integrations = [];
+            
+            // Check for integration hints in response metadata
+            // This assumes backend returns integration info - adjust based on actual backend
+            if (data.integrations_used) {
+                return data.integrations_used;
+            }
+            
+            // Fallback: detect from response content or context
+            if (data.context_sources) {
+                if (data.context_sources.includes('constella')) integrations.push('constella');
+                if (data.context_sources.includes('scaffolding')) integrations.push('scaffolding');
+                if (data.context_sources.includes('decisions')) integrations.push('decisions');
+                if (data.context_sources.includes('self')) integrations.push('self_query');
+                if (data.context_sources.includes('rag')) integrations.push('rag_search');
+            }
+            
+            // If backend doesn't provide this info yet, show RAG as default when use_rag is true
+            if (integrations.length === 0 && data.response) {
+                integrations.push('rag_search');
+            }
+            
+            return integrations;
+        }
+
+        // Update the active chips display in sidebar
+        function updateActiveChips(chipIds) {
+            const grid = document.getElementById('activeChipsGrid');
+            grid.innerHTML = '';
+            
+            // Always show at least 3 slots, expand to 6 if needed
+            const slotCount = Math.max(3, Math.min(6, chipIds.length));
+            const showSecondRow = chipIds.length > 3;
+            
+            for (let i = 0; i < slotCount; i++) {
+                const chip = document.createElement('div');
+                if (i < chipIds.length && CHIPS[chipIds[i]]) {
+                    chip.className = 'mini-chip active';
+                    chip.innerHTML = `<span class="chip-icon">${CHIPS[chipIds[i]].icon}</span>`;
+                    chip.title = CHIPS[chipIds[i]].name;
+                } else {
+                    chip.className = 'mini-chip empty';
+                    chip.innerHTML = '<span class="chip-icon">+</span>';
+                }
+                grid.appendChild(chip);
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Enter key to send
+        document.getElementById('chatInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // ===================================
+        // CHIPS PAGE
+        // ===================================
+        function initChipsPage() {
+            const chipList = document.getElementById('chipList');
+            const loadoutGrid = document.getElementById('loadoutGrid');
+            
+            // Populate chip library
+            chipList.innerHTML = '';
+            CHIP_LIBRARY_ORDER.forEach((id) => {
+                const chip = CHIPS[id];
+                if (!chip) return;
+                const style = CHIP_STYLES[id] || { code: '?', element: 'null', mb: 0 };
+                const card = document.createElement('div');
+                card.className = `chip-card ${style.element}` + (activeChips.has(id) ? ' selected' : '');
+                card.dataset.chipId = id;
+                card.title = chip.description;
+                card.innerHTML = `
+                    <div class="chip-code">${style.code}</div>
+                    <div class="chip-icon">${chip.icon}</div>
+                    <div class="chip-name">${chip.name}</div>
+                    <div class="chip-mb">${style.mb}MB</div>
+                    <div class="element-bar"></div>
+                `;
+                card.addEventListener('click', () => toggleChip(id));
+                chipList.appendChild(card);
+            });
+            
+            // Populate loadout grid
+            loadoutGrid.innerHTML = '';
+            const chipArray = Array.from(activeChips);
+            for (let i = 0; i < 6; i++) {
+                const slot = document.createElement('div');
+                if (i < chipArray.length && CHIPS[chipArray[i]]) {
+                    const chipId = chipArray[i];
+                    const chip = CHIPS[chipId];
+                    const style = CHIP_STYLES[chipId] || { code: '?', element: 'null', mb: 0 };
+                    slot.className = 'loadout-slot filled';
+                    slot.innerHTML = `
+                        <div class="chip-card small ${style.element}">
+                            <div class="chip-code">${style.code}</div>
+                            <div class="chip-icon">${chip.icon}</div>
+                            <div class="chip-name">${chip.name}</div>
+                            <div class="chip-mb">${style.mb}MB</div>
+                            <div class="element-bar"></div>
+                        </div>
+                    `;
+                } else {
+                    slot.className = 'loadout-slot empty';
+                    slot.innerHTML = `
+                        <span style="color: #2a3050;">+</span>
+                        <span class="slot-label">EMPTY</span>
+                    `;
+                }
+                loadoutGrid.appendChild(slot);
+            }
+        }
+
+        function toggleChip(chipId) {
+            if (activeChips.has(chipId)) {
+                activeChips.delete(chipId);
+            } else if (activeChips.size < 6) {
+                activeChips.add(chipId);
+            }
+            initChipsPage();
+            updateActiveChips(Array.from(activeChips));
+        }
+
+        function toggleAutoSelect() {
+            autoSelectEnabled = !autoSelectEnabled;
+            const toggle = document.getElementById('autoSelectToggle');
+            toggle.classList.toggle('on', autoSelectEnabled);
+        }
+
+        function initModelSelector() {
+            const modelSelect = document.getElementById('modelSelect');
+            if (!modelSelect) return;
+            modelSelect.innerHTML = '';
+            MODEL_OPTIONS.forEach((model) => {
+                const option = document.createElement('option');
+                option.value = model.id;
+                option.textContent = model.label;
+                if (model.id === currentModel) {
+                    option.selected = true;
+                }
+                modelSelect.appendChild(option);
+            });
+
+            const activeModel = document.getElementById('activeModel');
+            if (activeModel) {
+                activeModel.textContent = modelSelect.options[modelSelect.selectedIndex].textContent;
+            }
+
+            modelSelect.addEventListener('change', () => {
+                currentModel = modelSelect.value;
+                if (currentModel === 'auto') {
+                    console.log('[Model] Auto-routing enabled');
+                }
+                if (activeModel) {
+                    activeModel.textContent = modelSelect.options[modelSelect.selectedIndex].textContent;
+                }
+            });
+        }
+
+        function toggleRAG() {
+            ragEnabled = !ragEnabled;
+            const toggle = document.getElementById('ragToggleSwitch');
+            if (toggle) {
+                toggle.classList.toggle('on', ragEnabled);
+            }
+        }
+
+        // ===================================
+        // STATUS PAGE
+        // ===================================
+        async function checkSystemStatus() {
+            try {
+                const response = await fetch(buildApiUrl('/api/status'));
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Update service statuses
+                    document.getElementById('statusBackend').innerHTML = '● ONLINE';
+                    document.getElementById('statusBackend').className = 'status-value';
+                    updateQuickStatus('quickBackendStatus', 'online');
+
+                    if (data.services) {
+                        updateServiceStatus('statusChroma', data.services.chromadb);
+                        updateServiceStatus('statusOllama', data.services.ollama);
+                        updateServiceStatus('statusGemini', data.services.gemini);
+                        updateQuickStatus('quickChromaStatus', data.services.chromadb);
+                        updateQuickStatus('quickOllamaStatus', data.services.ollama);
+                        updateQuickStatus('quickGeminiStatus', data.services.gemini);
+                    } else {
+                        updateQuickStatus('quickChromaStatus', 'unknown');
+                        updateQuickStatus('quickOllamaStatus', 'unknown');
+                        updateQuickStatus('quickGeminiStatus', 'unknown');
+                    }
+
+                    // Update RAG stats if available
+                    if (data.rag_stats) {
+                        document.getElementById('totalDocs').textContent =
+                            data.rag_stats.total_documents?.toLocaleString() || '--';
+                        document.getElementById('collections').textContent =
+                            data.rag_stats.collections || '--';
+                    }
+
+                    if (data.model) {
+                        document.getElementById('activeModel').textContent = data.model;
+                    }
+                } else {
+                    document.getElementById('statusBackend').innerHTML = '● OFFLINE';
+                    document.getElementById('statusBackend').className = 'status-value offline';
+                    updateQuickStatus('quickBackendStatus', 'offline');
+                }
+            } catch (error) {
+                document.getElementById('statusBackend').innerHTML = '● OFFLINE';
+                document.getElementById('statusBackend').className = 'status-value offline';
+                updateQuickStatus('quickBackendStatus', 'offline');
+            }
+        }
+
+        function normalizeServiceStatus(status) {
+            if (typeof status === 'string') {
+                return status;
+            }
+            if (status && typeof status === 'object') {
+                if (typeof status.status === 'string') {
+                    return status.status;
+                }
+                if (status.reachable === true) {
+                    return 'online';
+                }
+                if (status.reachable === false) {
+                    return 'offline';
+                }
+            }
+            return null;
+        }
+
+        function updateServiceStatus(elementId, status) {
+            const el = document.getElementById(elementId);
+            const normalized = normalizeServiceStatus(status);
+            if (normalized === 'online' || normalized === 'configured') {
+                el.innerHTML = '● ONLINE';
+                el.className = 'status-value';
+            } else if (normalized === 'offline' || normalized === 'error') {
+                el.innerHTML = '● OFFLINE';
+                el.className = 'status-value offline';
+            } else {
+                el.innerHTML = '● ' + ((normalized || 'UNKNOWN').toUpperCase());
+                el.className = 'status-value warning';
+            }
+        }
+
+        function updateQuickStatus(elementId, status) {
+            const el = document.getElementById(elementId);
+            if (!el) return;
+            const normalized = normalizeServiceStatus(status);
+            if (normalized === 'online' || normalized === 'configured') {
+                el.textContent = 'ONLINE';
+                el.className = 'quick-status-value';
+            } else if (normalized === 'offline' || normalized === 'error') {
+                el.textContent = 'OFFLINE';
+                el.className = 'quick-status-value offline';
+            } else {
+                el.textContent = (normalized || 'UNKNOWN').toString().toUpperCase();
+                el.className = 'quick-status-value';
+            }
+        }
+
+        // ===================================
+        // COMPASS DASHBOARD
+        // ===================================
+        let compassData = null;
+
+        async function refreshCompass() {
+            try {
+                const response = await fetch(buildApiUrl('/api/compass'));
+                const data = await response.json();
+
+                if (data.success) {
+                    compassData = data;
+                    renderCompassBoard(data);
+                    renderRecentLogs(data.work_log);
+                    renderNextSteps(data.projects);
+                    document.getElementById('compass-timestamp').textContent = data.last_updated;
+                }
+            } catch (error) {
+                console.error('Failed to load compass data:', error);
+            }
+        }
+
+        function renderCompassBoard(data) {
+            const board = document.getElementById('compass-board');
+            board.innerHTML = '';
+
+            data.projects.forEach(project => {
+                const node = document.createElement('div');
+                node.className = `project-node status-${project.status}`;
+
+                const stepsHtml = project.next_steps.map(step =>
+                    `<div class="next-step-item">${escapeHtml(step)}</div>`
+                ).join('');
+
+                node.innerHTML = `
+                    <div class="step-count-badge">${project.step_count} steps</div>
+                    <div class="project-node-header">
+                        <span class="project-node-name">${escapeHtml(project.name)}</span>
+                    </div>
+                    <div class="project-node-phase">${escapeHtml(project.phase)}</div>
+                    <div class="project-node-summary">${escapeHtml(project.summary.substring(0, 150))}...</div>
+                    <div class="project-node-steps">
+                        <h4>Next Steps</h4>
+                        ${stepsHtml}
+                    </div>
+                `;
+
+                board.appendChild(node);
+            });
+        }
+
+        function renderRecentLogs(workLog) {
+            const container = document.getElementById('recent-logs');
+            container.innerHTML = '';
+
+            if (!workLog) return;
+
+            // Get today and yesterday's entries
+            const today = new Date().toISOString().split('T')[0];
+            const entries = workLog[today]?.entries || [];
+
+            entries.slice(-5).reverse().forEach(entry => {
+                const div = document.createElement('div');
+                div.className = 'log-entry';
+                const time = new Date(entry.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+                div.innerHTML = `
+                    <span class="log-entry-time">${time}</span>
+                    <span class="log-entry-project">[${escapeHtml(entry.project)}]</span>
+                    ${escapeHtml(entry.note)} ${entry.hours ? `(${entry.hours}h)` : ''}
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function renderNextSteps(projects) {
+            const container = document.getElementById('next-steps-list');
+            container.innerHTML = '';
+
+            // Aggregate all next steps with project labels
+            const allSteps = [];
+            projects.forEach(p => {
+                p.next_steps.forEach(step => {
+                    allSteps.push({ project: p.name, step: step });
+                });
+            });
+
+            // Show first 8
+            allSteps.slice(0, 8).forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'next-step-item';
+                div.innerHTML = `<strong style="color:#00ffff">${escapeHtml(item.project)}:</strong> ${escapeHtml(item.step)}`;
+                container.appendChild(div);
+            });
+        }
+
+        async function submitWorkLog() {
+            const project = document.getElementById('log-project').value;
+            const note = document.getElementById('log-note').value;
+            const hours = parseFloat(document.getElementById('log-hours').value) || 0;
+
+            if (!note.trim()) return;
+
+            try {
+                const response = await fetch(buildApiUrl('/api/compass/log'), {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ project, note, hours })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    document.getElementById('log-note').value = '';
+                    document.getElementById('log-hours').value = '';
+                    refreshCompass();
+                }
+            } catch (error) {
+                console.error('Failed to log work:', error);
+            }
+        }
+
+        // ===================================
+        // INITIALIZATION
+        // ===================================
+        function init() {
+            // Set session start time
+            document.getElementById('sessionStarted').textContent = 
+                sessionStartTime.toLocaleTimeString();
+            updateDashboardStats();
+            updateSessionTime();
+            setInterval(updateSessionTime, 1000);
+            
+            // Initialize chips page
+            initChipsPage();
+
+            initModelSelector();
+            const ragToggle = document.getElementById('ragToggle');
+            if (ragToggle) {
+                ragToggle.addEventListener('click', toggleRAG);
+            }
+            
+            // Check system status
+            checkSystemStatus();
+            setInterval(checkSystemStatus, 30000);
+
+            // Wire PA overlay dismiss handlers
+            const dismissBtn = document.getElementById('paCelebrationDismissBtn');
+            const overlay = document.getElementById('paCelebrationOverlay');
+            if (dismissBtn && overlay) {
+                dismissBtn.addEventListener('click', dismissPACelebration);
+                overlay.addEventListener('click', (e) => {
+                    if (e.target === overlay) dismissPACelebration();
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') dismissPACelebration();
+                });
+            }
+
+            pollProgramAdvancesOnce();
+            setInterval(pollProgramAdvancesOnce, PA_POLL_INTERVAL_MS);
+            
+            // Set initial active chips display
+            updateActiveChips([]);
+        }
+
+        init();
+    </script>
+</body>
+</html>

@@ -5,10 +5,13 @@ Chunks documents, generates embeddings, and stores in ChromaDB
 """
 
 import os
+import logging
 import chromadb
 import hashlib
 from pathlib import Path
-from typing import List, Dict, Optional
+from typing import Any, List, Dict, Optional
+
+_rag_norm_log = logging.getLogger("faithh.rag.normalize")
 
 try:
     from sentence_transformers import SentenceTransformer
@@ -20,7 +23,7 @@ except ImportError:
 # Configuration
 CHROMA_HOST = os.environ.get("CHROMA_HOST", "localhost")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
-EMBED_MODEL = os.environ.get("FAITHH_EMBED_MODEL", "all-MiniLM-L6-v2")
+EMBED_MODEL = os.environ.get("FAITHH_EMBED_MODEL", "BAAI/bge-base-en-v1.5")
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 
@@ -173,6 +176,65 @@ def main():
     
     else:
         print(f"Unknown command: {command}")
+
+
+def normalize_rag_hit_for_api(entry: Any) -> Dict[str, Any]:
+    # Logic for Humans: Take whatever shape Chroma returned and output a dict the Canvas UI always understands (document, content, metadata, distance, id).
+    """
+    Normalize Chroma / RAG hits for /api/chat and the Sources UI.
+
+    faithh_pet_v4.html uses: source.document || source.content (then JSON.stringify).
+    Also set source.text to the same excerpt so any consumer expecting `text` or `snippet` works.
+    """
+    if isinstance(entry, str):
+        return {
+            "document": entry,
+            "content": entry,
+            "text": entry,
+            "snippet": entry,
+            "metadata": {},
+            "distance": None,
+            "id": "",
+        }
+    if not isinstance(entry, dict):
+        s = str(entry)
+        return {
+            "document": s,
+            "content": s,
+            "text": s,
+            "snippet": s,
+            "metadata": {},
+            "distance": None,
+            "id": "",
+        }
+
+    out = dict(entry)
+    meta = out.get("metadata")
+    if not isinstance(meta, dict):
+        meta = {}
+
+    body = out.get("document") or out.get("text") or out.get("content") or out.get("snippet") or ""
+    if isinstance(body, (dict, list)):
+        body = str(body)
+    body = str(body or "")
+    if not body.strip():
+        bits = [
+            str(meta.get(k) or "")
+            for k in ("title", "filename", "source", "user_preview", "path", "chunk_index")
+        ]
+        body = " ".join(b for b in bits if b).strip()
+    if not body.strip():
+        body = "(empty excerpt — metadata only; expand in Chroma if needed)"
+
+    out["metadata"] = meta
+    out["document"] = body
+    out["content"] = body
+    out["text"] = body
+    out["snippet"] = body[:500] if len(body) > 500 else body
+    if os.environ.get("FAITHH_RAG_NORMALIZE_TRACE", "").strip() in ("1", "true", "yes"):
+        preview = (body or "")[:100].replace("\n", " ")
+        _rag_norm_log.info("normalize_rag_hit_for_api document_preview=%r", preview)
+    return out
 
 
 if __name__ == "__main__":

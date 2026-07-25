@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ime.dir/src/main.cpp.o CMakeFiles/ime.dir/src/resonance_gate.cpp.o CMakeFiles/ime.dir/src/journal_reader.cpp.o -o ime 

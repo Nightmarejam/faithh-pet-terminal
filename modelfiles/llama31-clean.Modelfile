@@ -1,0 +1,14 @@
+# Clean Llama 3.1 8B - No persona, optimized for RTX 3090
+# This removes the temperature=0.7 customization for baseline testing
+
+FROM llama3.1:8b
+
+# Optimized for RTX 3090 (24GB VRAM) + 47GB RAM
+PARAMETER num_ctx 8192
+PARAMETER num_batch 512
+PARAMETER num_gpu 99
+
+# Stop tokens (required for Llama 3.1)
+PARAMETER stop <|start_header_id|>
+PARAMETER stop <|end_header_id|>
+PARAMETER stop <|eot_id|>

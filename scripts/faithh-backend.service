@@ -1,0 +1,18 @@
+[Unit]
+Description=FAITHH Professional Backend
+After=network.target docker.service
+Wants=docker.service
+
+[Service]
+Type=simple
+User=jonat
+WorkingDirectory=/home/jonat/ai-stack
+Environment="PATH=/home/jonat/ai-stack/venv/bin:/usr/local/bin:/usr/bin:/bin"
+ExecStart=/home/jonat/ai-stack/venv/bin/python3 /home/jonat/ai-stack/faithh_professional_backend_fixed.py
+Restart=on-failure
+RestartSec=10
+StandardOutput=append:/home/jonat/ai-stack/backend.log
+StandardError=append:/home/jonat/ai-stack/backend.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,54 @@
+{
+  "generated_at_utc": "2026-03-31T02:15:40.182835+00:00",
+  "manifest_path": "reports/inventory/x_staging_manifest.csv",
+  "queue_path": "reports/inventory/x_staging_conversion_queue.csv",
+  "manifest_rows": 17,
+  "stage_direct_rows": 3,
+  "convert_required_rows": 14,
+  "conversion_queue_rows": 14,
+  "seeded_action_items_count": 3,
+  "seeded_action_items": [
+    {
+      "action_id": "alife_seed_001",
+      "title": "UCF threshold stress sweep from constitutional source set",
+      "priority": "high",
+      "alife_target_experiment": "exp9_diversity_floor",
+      "input_sources": [
+        "United Nations Charter.md",
+        "Universal Declaration of Human Rights.md",
+        "The Constitution of the United States_ A Transcription _ National Archives.pdf"
+      ],
+      "task": "Run parameter sweep for floor trigger thresholds (0.10 to 0.20) and compare survival, activation cadence, and commons burden.",
+      "acceptance": "Report includes activation intervals, intervention duration distribution, and fail/survive labels.",
+      "status": "pending"
+    },
+    {
+      "action_id": "alife_seed_002",
+      "title": "Governance dataset-to-scenario mapping batch",
+      "priority": "high",
+      "alife_target_experiment": "exp8b_founding_window",
+      "input_sources": [
+        "wgidataset_with_sourcedata-2025.xlsx",
+        "Raw Data from Underlying Data Sources (1996-2024).xlsx",
+        "V-Dem-CD-v16_csv.zip"
+      ],
+      "task": "Extract governance indicators, normalize as scenario seed vectors, and test founding-window sensitivity under diverse initial compositions.",
+      "acceptance": "Scenario seed file produced with source provenance and top indicator weights.",
+      "status": "pending"
+    },
+    {
+      "action_id": "alife_seed_003",
+      "title": "Adversarial adaptation replay from legal corpus",
+      "priority": "medium",
+      "alife_target_experiment": "exp7_strategy_escape",
+      "input_sources": [
+        "xml_uscAll@119-73.zip",
+        "Federal Register __ API Documentation.pdf",
+        "UNdata _ api manual.pdf"
+      ],
+      "task": "Build strategy-shift perturbation scenarios using legal/policy language motifs and measure retreat/dissolution under specialization pressure.",
+      "acceptance": "Comparative run log with baseline vs seeded perturbation outcomes.",
+      "status": "pending"
+    }
+  ]
+}

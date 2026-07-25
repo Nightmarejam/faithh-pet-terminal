@@ -3,3 +3,6 @@ pycoingecko>=3.1.0
 pandas>=2.2.0
 schedule>=1.2.0
 web3>=7.0.0
+chromadb>=1.0.0
+sentence-transformers>=3.0.0
+pypdf>=4.0.0

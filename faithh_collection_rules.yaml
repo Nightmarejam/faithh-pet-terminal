@@ -1,0 +1,169 @@
+# faithh_collection_rules.yaml
+# =====================================
+# Defines how chunks are routed to ChromaDB collections.
+# The router reads this file — add new collection types here
+# without changing any code.
+#
+# Location: ~/ai-stack/faithh_collection_rules.yaml
+# Used by: scripts/collection_router.py
+#
+
+version: "1.0"
+last_updated: "2026-03-12"
+
+# ── Routing behavior ──────────────────────────────────────────────────────────
+routing:
+  # Where unknown/unclassified chunks go (audit these periodically)
+  quarantine_collection: faithh_unclassified
+
+  # What to do when type is unknown:
+  #   "quarantine" = send to faithh_unclassified (recommended)
+  #   "reject"     = don't index at all
+  #   "default"    = send to default_collection
+  unknown_type_behavior: quarantine
+
+  # Fallback if source_type missing entirely
+  default_collection: faithh_conversations
+
+  # Global minimum quality score — chunks below this are rejected entirely
+  # regardless of type. Set to 0.0 to disable.
+  global_min_quality: 0.05
+
+# ── Collections ───────────────────────────────────────────────────────────────
+# Each collection is created automatically if it doesn't exist.
+# Fields:
+#   description:      Human-readable purpose
+#   source_types:     Which source_type values route here
+#   ttl_days:         How long chunks live (9999 = never expire)
+#   min_quality_score: Chunks below this score are rejected (not quarantined)
+#   priority:         Higher = checked first in routing (1-10)
+
+collections:
+  faithh_conversations:
+    description: "Human conversations — highest RAG value, personal context"
+    source_types:
+      - conversation
+      - claude_export
+      - chatgpt_export
+      - project_discussion
+      - decision
+    ttl_days: 730
+    min_quality_score: 0.25
+    priority: 10
+    metadata_defaults:
+      project: "auto-detect"
+      indexed_by: "collection_router"
+
+  faithh_decisions:
+    description: "Decisions log entries with rationale — never expire"
+    source_types:
+      - decision
+      - decisions_log
+      - rationale
+    ttl_days: 9999
+    min_quality_score: 0.0   # all decisions are kept regardless of quality score
+    priority: 10
+    metadata_defaults:
+      project: "auto-detect"
+      indexed_by: "collection_router"
+
+  faithh_documents:
+    description: "Project docs, architecture, Constella framework, markdown files"
+    source_types:
+      - document
+      - markdown
+      - readme
+      - technical_explanation
+      - document_content
+      - code_block
+      - architecture_doc
+      - research_doc
+    ttl_days: 365
+    min_quality_score: 0.2
+    priority: 8
+    metadata_defaults:
+      indexed_by: "collection_router"
+
+  faithh_system_logs:
+    description: "Health checks, git logs, collector outputs — short TTL"
+    source_types:
+      - health_log
+      - git_commit
+      - git_log
+      - terminal
+      - terminal_command
+      - trend
+      - metric_data
+      - log_entry
+      - staleness_report
+      - pulse_output
+      - collector_output
+    ttl_days: 30
+    min_quality_score: 0.4   # higher bar — most logs are noise
+    priority: 5
+    metadata_defaults:
+      indexed_by: "collection_router"
+
+  faithh_ephemeral:
+    description: "Temp data, snapshots, divergence reports — aggressive TTL"
+    source_types:
+      - snapshot
+      - temp
+      - ephemeral
+      - divergence_report
+      - branch_report
+      - auto_journal_draft
+    ttl_days: 7
+    min_quality_score: 0.0
+    priority: 3
+    metadata_defaults:
+      indexed_by: "collection_router"
+
+  faithh_unclassified:
+    description: "Quarantine — unknown types, audit periodically"
+    source_types: []   # nothing routes here directly — it's the fallback
+    ttl_days: 14       # short TTL, audit and re-classify or discard
+    min_quality_score: 0.0
+    priority: 0
+    metadata_defaults:
+      indexed_by: "collection_router"
+      needs_review: "true"
+
+# ── Source type aliases ───────────────────────────────────────────────────────
+# Maps raw source identifiers from collectors to canonical source_types.
+# Add new collector outputs here when you build new collectors.
+
+aliases:
+  # Existing collectors
+  "scripts.collectors.run_collectors --health": health_log
+  "scripts.collectors.run_collectors --git":    git_log
+  "scripts.collectors.run_collectors --files":  document
+  "scripts.collectors.run_collectors --terminal": terminal_command
+  "scripts/trend_tracker.py":                  trend
+  "scripts/staleness_detector.py":             staleness_report
+  "scripts/decision_divergence.py":            divergence_report
+  "scripts/branch_explorer.py":                branch_report
+  "scripts/auto_journal.py":                   auto_journal_draft
+  "scripts/pulse_autonomous.py":               pulse_output
+
+  # Export sources
+  "chatgpt_export":   chatgpt_export
+  "claude_export":    claude_export
+  "conversations":    conversation
+
+  # Document sources
+  "markdown":         document_content
+  "readme":           document_content
+  "architecture":     technical_explanation
+  "research":         research_doc
+
+# ── TTL sweep config ──────────────────────────────────────────────────────────
+ttl_sweep:
+  enabled: true
+  run_schedule: "nightly"   # hint for cron setup
+  dry_run_first: true       # always dry-run first, then confirm
+  batch_size: 500           # delete in batches to avoid timeout
+  log_file: "logs/ttl_sweep.log"
+  # Collections to NEVER sweep (safety net)
+  protected_collections:
+    - faithh_decisions

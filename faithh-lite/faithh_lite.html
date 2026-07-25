@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAITHH Lite</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'SF Mono', 'Menlo', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #00ffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #00ffff33;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffff55;
+        }
+        
+        .status {
+            font-size: 0.8rem;
+            color: #8899aa;
+            margin-top: 5px;
+        }
+        
+        .status.online { color: #00ff00; }
+        .status.offline { color: #ff6666; }
+        
+        .chat-container {
+            background: rgba(15, 20, 45, 0.8);
+            border: 2px solid #00ffff44;
+            border-radius: 10px;
+            padding: 20px;
+            min-height: 400px;
+            max-height: 60vh;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        
+        .message {
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            line-height: 1.5;
+        }
+        
+        .message.user {
+            background: rgba(0, 255, 255, 0.1);
+            border-left: 3px solid #00ffff;
+            color: #e0e0e0;
+        }
+        
+        .message.assistant {
+            background: rgba(255, 165, 0, 0.1);
+            border-left: 3px solid #ffa500;
+            color: #e0e0e0;
+        }
+        
+        .message.error {
+            background: rgba(255, 100, 100, 0.1);
+            border-left: 3px solid #ff6666;
+            color: #ff6666;
+        }
+        
+        .message-meta {
+            font-size: 0.7rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .input-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        input[type="text"] {
+            flex: 1;
+            padding: 15px;
+            background: rgba(15, 20, 45, 0.9);
+            border: 2px solid #00ffff44;
+            border-radius: 8px;
+            color: #00ffff;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #00ffff;
+            box-shadow: 0 0 10px #00ffff33;
+        }
+        
+        input[type="text"]::placeholder {
+            color: #00ffff66;
+        }
+        
+        button {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #00ffff22, #00ffff44);
+            border: 2px solid #00ffff;
+            border-radius: 8px;
+            color: #00ffff;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        button:hover {
+            background: #00ffff33;
+            box-shadow: 0 0 15px #00ffff44;
+        }
+        
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #00ffff33;
+            border-top-color: #00ffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ FAITHH Lite</h1>
+            <div class="status" id="status">Checking connection...</div>
+        </header>
+        
+        <div class="chat-container" id="chat"></div>
+        
+        <div class="input-container">
+            <input type="text" id="input" placeholder="Ask FAITHH anything..." autofocus>
+            <button id="send" onclick="sendMessage()">Send</button>
+        </div>
+        
+        <footer>
+            MacBook Companion • Ollama + llama3.1:8b
+        </footer>
+    </div>
+    
+    <script>
+        const chat = document.getElementById('chat');
+        const input = document.getElementById('input');
+        const sendBtn = document.getElementById('send');
+        const statusEl = document.getElementById('status');
+        
+        // Check status on load
+        checkStatus();
+        setInterval(checkStatus, 30000);
+        
+        // Enter to send
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !sendBtn.disabled) sendMessage();
+        });
+        
+        async function checkStatus() {
+            try {
+                const res = await fetch('/api/status');
+                const data = await res.json();
+                
+                if (data.ollama) {
+                    statusEl.textContent = `● Online • ${data.model} • ${data.context_files.length} context files`;
+                    statusEl.className = 'status online';
+                } else {
+                    statusEl.textContent = '○ Ollama offline';
+                    statusEl.className = 'status offline';
+                }
+            } catch (e) {
+                statusEl.textContent = '○ Backend offline';
+                statusEl.className = 'status offline';
+            }
+        }
+        
+        function addMessage(content, type, meta = '') {
+            const div = document.createElement('div');
+            div.className = `message ${type}`;
+            div.innerHTML = content.replace(/\n/g, '<br>');
+            
+            if (meta) {
+                const metaDiv = document.createElement('div');
+                metaDiv.className = 'message-meta';
+                metaDiv.textContent = meta;
+                div.appendChild(metaDiv);
+            }
+            
+            chat.appendChild(div);
+            chat.scrollTop = chat.scrollHeight;
+        }
+        
+        async function sendMessage() {
+            const message = input.value.trim();
+            if (!message) return;
+            
+            // Show user message
+            addMessage(message, 'user');
+            input.value = '';
+            
+            // Disable input
+            sendBtn.disabled = true;
+            sendBtn.innerHTML = '<span class="loading"></span>';
+            
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message })
+                });
+                
+                const data = await res.json();
+                
+                if (data.success) {
+                    const meta = `${data.model} • ${Math.round(data.eval_duration_ms)}ms${data.context_used ? ' • context' : ''}`;
+                    addMessage(data.response, 'assistant', meta);
+                } else {
+                    addMessage(data.error || 'Unknown error', 'error');
+                }
+            } catch (e) {
+                addMessage('Failed to connect to backend', 'error');
+            }
+            
+            // Re-enable input
+            sendBtn.disabled = false;
+            sendBtn.textContent = 'Send';
+            input.focus();
+        }
+    </script>
+</body>
+</html>

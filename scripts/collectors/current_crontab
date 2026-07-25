@@ -1,0 +1,24 @@
+# Smart Collector Schedule - low_activity (Hour: 11)
+# Generated: 2026-02-19T11:59:44.058598+00:00
+
+# Health collector - always frequent
+*/15 * * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python -m scripts.collectors.run_collectors --health >> /home/jonat/ai-stack/logs/collectors.log 2>&1
+
+# Git collector - dynamic based on activity
+0 */2 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python -m scripts.collectors.run_collectors --git >> /home/jonat/ai-stack/logs/collectors.log 2>&1
+
+# File changes collector - dynamic based on activity
+0 */2 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python -m scripts.collectors.run_collectors --files >> /home/jonat/ai-stack/logs/collectors.log 2>&1
+
+# Terminal collector - dynamic based on activity
+0 */2 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python -m scripts.collectors.run_collectors --terminal >> /home/jonat/ai-stack/logs/collectors.log 2>&1
+
+# Daily full collection and snapshot
+0 0 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python -m scripts.collectors.run_collectors --all --snapshot >> /home/jonat/ai-stack/logs/collectors.log 2>&1
+
+# PULSE Reflection Engine — nightly sweeps
+30 2 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python scripts/staleness_detector.py --output staleness_report >> /home/jonat/ai-stack/logs/pulse.log 2>&1
+45 2 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python scripts/decision_divergence.py --output divergence_report >> /home/jonat/ai-stack/logs/pulse.log 2>&1
+0 3 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python scripts/branch_explorer.py --output branch_report >> /home/jonat/ai-stack/logs/pulse.log 2>&1
+15 3 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python scripts/auto_journal.py --skip-llm >> /home/jonat/ai-stack/logs/journal.log 2>&1
+20 3 * * * cd /home/jonat/ai-stack && /home/jonat/ai-stack/venv/bin/python scripts/pulse_autonomous.py --dry-run >> /home/jonat/ai-stack/logs/pulse.log 2>&1

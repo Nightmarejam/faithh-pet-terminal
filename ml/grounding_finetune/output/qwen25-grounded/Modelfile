@@ -1,0 +1,12 @@
+FROM /home/jonat/ai-stack/ml/grounding_finetune/output/qwen25-grounded/gguf/qwen25-grounded-q4_k_m.gguf
+PARAMETER temperature 0.7
+PARAMETER top_p 0.9
+PARAMETER num_ctx 4096
+PARAMETER stop "<|im_end|>"
+
+TEMPLATE """<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""

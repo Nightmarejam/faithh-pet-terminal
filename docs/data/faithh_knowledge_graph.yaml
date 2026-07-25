@@ -1,0 +1,416 @@
+# FAITHH Knowledge Graph
+# Version: 1.0.0
+# Last Updated: 2025-12-29
+# Purpose: Machine-readable representation of Jonathan's project ecosystem
+# Usage: FAITHH can query this for self-awareness; generates human docs
+
+---
+meta:
+  schema_version: "1.0.0"
+  owner: "Jonathan Morales"
+  last_updated: "2025-12-29"
+  generated_docs:
+    - path: "/docs/ROADMAP.md"
+      type: "markdown"
+      auto_generate: true
+    - path: "/docs/PROJECT_MAP.md"
+      type: "markdown"
+      auto_generate: true
+
+---
+# =============================================================================
+# ENTITIES: The core objects in the ecosystem
+# =============================================================================
+
+entities:
+
+  # ---------------------------------------------------------------------------
+  # PERSON: Jonathan (the operator)
+  # ---------------------------------------------------------------------------
+  jonathan:
+    type: person
+    role: "Audio Producer & AI Developer"
+    traits:
+      - adhd: true
+      - learning_style: "needs to understand 'why' to stay connected"
+      - documentation_preference: "comprehensive, auto-updating systems"
+      - aesthetic_preference: "MegaMan Battle Network theme"
+    philosophy:
+      core: "Celestial Equilibrium - resonance, harmonic alignment, dignity"
+      driving_question: "How do we build systems that actually serve people well?"
+    challenges:
+      - "Maintaining project coherence when attention shifts"
+      - "Context switching between multiple long-term projects"
+    needs:
+      - "Systems that remember 'why' when I lose sight of it"
+      - "Scaffolding that maintains continuity across sessions"
+
+  # ---------------------------------------------------------------------------
+  # BUSINESS: Tom Cat Sound LLC
+  # ---------------------------------------------------------------------------
+  tom_cat_sound:
+    type: business
+    legal_name: "Tom Cat Sound LLC"
+    dba: "Floating Garden Soundworks"
+    jurisdiction: "Oregon"
+    registry_number: "2242571-96"
+    ein: "99-2000135"
+    formed: "2024-03-19"
+    status: active
+    
+    members:
+      - name: "Jonathan Morales"
+        role: "Manager"
+        ownership: 0.34
+        location: "Oregon"
+        status: active
+      - name: "Thomas Charles Gilson"
+        role: "Member"
+        ownership: 0.33
+        location: "South Dakota"
+        status: active
+      - name: "Kevin Dunn"
+        role: "Member"
+        ownership: 0.33
+        location: null
+        status: exiting
+        exit_buyout: 0
+    
+    post_exit_ownership:
+      jonathan: 0.51
+      thomas: 0.49
+    
+    revenue_streams:
+      - name: "Equipment Resale"
+        type: "product"
+        total_revenue: 33000
+        description: "Buying, testing, reselling professional audio gear"
+        platforms: ["Reverb", "eBay", "local"]
+      - name: "Audio Production Services"
+        type: "service"
+        total_revenue: 3625
+        description: "Mixing, mastering, sound design for independent artists"
+        pricing_tiers:
+          indie_starter:
+            price: 150
+            includes: "Mastering only, 5-7 day, 2 revisions"
+          artist_package:
+            price: 400
+            includes: "Mix + master, 3 revisions, multi-format"
+          full_production:
+            price_range: [800, 1500]
+            includes: "Complete production, unlimited revisions"
+    
+    monthly_overhead:
+      rent: 400
+      insurance: 44.14
+      software: 40
+      internet: 40
+      misc: 50
+      total: 574
+    
+    equipment_value:
+      business_items: 46167
+      personal_available: 19175
+      total: 74941
+    
+    outstanding_items:
+      - item: "2024 Form 1065"
+        status: "pending"
+        action: "File with First Time Penalty Abatement"
+        deadline: "ASAP"
+      - item: "Kevin Dunn Exit"
+        status: "in_progress"
+        action: "Sign withdrawal agreement, file OR SOS amendment"
+        cost: 100
+      - item: "Operating Agreement Update"
+        status: "pending"
+        action: "Update after Kevin exit"
+      - item: "Business Bank Account"
+        status: "pending"
+        action: "Open using Banking Resolution"
+
+  # ---------------------------------------------------------------------------
+  # AI SYSTEM: FAITHH
+  # ---------------------------------------------------------------------------
+  faithh:
+    type: ai_system
+    full_name: "Friendly AI Teaching & Helping Hub"
+    status: development
+    theme: "MegaMan Battle Network"
+    
+    purpose:
+      primary: "Maintain coherence across Jonathan's projects when attention shifts"
+      secondary: "Provide contextual memory and scaffolding for AI interactions"
+      philosophy: "Systems that remember 'why' when the human loses sight of it"
+    
+    architecture:
+      components:
+        rag_pipeline:
+          status: operational
+          database: "ChromaDB"
+          documents_indexed: 91000
+          embedding_model: "local"
+          known_issues:
+            - "Embedding dimension mismatches (resolved)"
+            - "GPU routing issues (resolved)"
+        
+        auto_indexer:
+          status: operational
+          location: "Windows host"
+          behavior: "Indexes every response"
+          known_issues:
+            - "Creates noise - indexes low-value responses"
+            - "No quality filtering"
+          proposed_solutions:
+            - "Pre-index quality scoring"
+            - "Tiered storage (indexed/archived/discarded)"
+            - "Negative examples archive"
+        
+        web_interface:
+          status: operational
+          framework: "unknown"  # Need to verify
+          features:
+            - "Chat interface"
+            - "Battle chip theming"
+        
+        local_llm:
+          status: operational
+          gpu: "RTX 3090"
+          performance: "6-7x improvement achieved"
+          models_tested: ["Groq API", "local models"]
+      
+      infrastructure:
+        devices:
+          - name: "Windows Workstation"
+            role: "Primary development, GPU compute"
+            specs: "RTX 3090 + GTX 1080 Ti"
+          - name: "Synology NAS"
+            role: "Storage, file sharing"
+            data: "3.6TB organized"
+          - name: "MacBook"
+            role: "Mobile development"
+        network:
+          vpn: "Tailscale"
+          devices_connected: 6
+          purpose: "Remote access to AI systems while traveling"
+    
+    development_priorities:
+      high:
+        - "Quality filtering for auto-indexer"
+        - "Knowledge graph integration"
+        - "Self-awareness capabilities"
+      medium:
+        - "Improved RAG query relevance"
+        - "Cross-project context linking"
+      low:
+        - "UI improvements"
+        - "Additional model integrations"
+    
+    decisions_log:
+      - date: "2025-11"
+        decision: "Integrated Constella Framework docs into RAG"
+        reasoning: "Unified knowledge base across all projects"
+      - date: "2025-12"
+        decision: "Adopted hybrid knowledge graph approach"
+        reasoning: "Machine-readable + human-friendly, best of both worlds"
+
+  # ---------------------------------------------------------------------------
+  # FRAMEWORK: Constella
+  # ---------------------------------------------------------------------------
+  constella:
+    type: framework
+    full_name: "Constella Framework"
+    status: development
+    version: "1.5.x"
+    repository: "github.com/Nightmarejam"
+    
+    purpose:
+      primary: "Civic governance system exploring token-based community decision-making"
+      philosophy: "Resonance, harmonic alignment, dignity in governance"
+    
+    concepts:
+      tokens:
+        astris:
+          type: "soul-bound"
+          purpose: "Prevent wealth accumulation abuse"
+        auctor:
+          type: "fixed pool"
+          purpose: "Maintain democratic equality"
+      mechanisms:
+        - "Logarithmic decay with plateau"
+        - "Velocity protections"
+        - "Cross-vault rebalancing guardrails"
+    
+    potential_applications:
+      - "Neighborhood associations"
+      - "Cooperatives"
+      - "Intentional communities"
+      - "Municipal participatory budgeting"
+    
+    current_state:
+      documentation: "Complete"
+      indexed_in_faithh: true
+      documents_count: 1904
+
+---
+# =============================================================================
+# RELATIONSHIPS: How entities connect
+# =============================================================================
+
+relationships:
+
+  # Tom Cat Sound relationships
+  - from: tom_cat_sound
+    to: faithh
+    type: "supported_by"
+    description: "FAITHH provides memory/context for business operations"
+  
+  - from: tom_cat_sound
+    to: constella
+    type: "philosophically_aligned"
+    description: "Both emphasize dignity, fair systems, harmonic alignment"
+  
+  # FAITHH relationships
+  - from: faithh
+    to: jonathan
+    type: "serves"
+    description: "Maintains coherence when Jonathan's attention shifts"
+  
+  - from: faithh
+    to: constella
+    type: "indexes"
+    description: "1904 Constella documents indexed in RAG"
+  
+  - from: faithh
+    to: tom_cat_sound
+    type: "indexes"
+    description: "Business docs, conversations indexed in RAG"
+  
+  # Constella relationships
+  - from: constella
+    to: faithh
+    type: "informed_by"
+    description: "FAITHH conversations helped develop Constella concepts"
+  
+  # Meta relationship
+  - from: [tom_cat_sound, faithh, constella]
+    to: jonathan
+    type: "unified_by"
+    description: "All projects answer: 'How do we build systems that serve people well?'"
+
+---
+# =============================================================================
+# INDEXING RULES: For FAITHH auto-indexer quality filtering
+# =============================================================================
+
+indexing_rules:
+  
+  tiers:
+    tier_1_indexed:
+      description: "High-value content, fully indexed in RAG"
+      criteria:
+        - "Contains code blocks (>10 lines)"
+        - "Contains explicit decisions or conclusions"
+        - "Contains technical explanations (>200 words)"
+        - "Contains project-specific terminology"
+        - "Contains financial data or business decisions"
+        - "User explicitly marks as important"
+      storage: "ChromaDB"
+      retention: "permanent"
+    
+    tier_2_archived:
+      description: "Low-value but kept for audit trail"
+      criteria:
+        - "Short responses (<50 words) without code"
+        - "Acknowledgments and confirmations"
+        - "Clarifying questions"
+        - "Intermediate steps in longer workflows"
+      storage: "flat_file"
+      retention: "1 year"
+      searchable: false
+    
+    tier_3_discarded:
+      description: "Noise, not stored"
+      criteria:
+        - "Single word responses"
+        - "Greetings only"
+        - "Empty or error responses"
+        - "Duplicate content"
+      storage: null
+      retention: null
+  
+  negative_examples:
+    description: "Failed approaches kept for learning"
+    criteria:
+      - "Approaches explicitly marked as failed"
+      - "Corrections to previous responses"
+      - "User feedback indicating wrong direction"
+    storage: "separate_collection"
+    metadata_tag: "type: negative_example"
+    purpose: "Avoid repeating mistakes, learn from failures"
+  
+  quality_signals:
+    positive:
+      - keyword_matches: ["decision", "conclusion", "solution", "fixed", "resolved"]
+      - has_code_blocks: true
+      - word_count_min: 100
+      - has_structured_data: true  # tables, lists, YAML
+    negative:
+      - keyword_matches: ["okay", "sure", "got it", "thanks"]
+      - word_count_max: 30
+      - is_question_only: true
+
+---
+# =============================================================================
+# VOCABULARY: Shared terminology across AI interactions
+# =============================================================================
+
+vocabulary:
+  
+  project_names:
+    tom_cat_sound: ["Tom Cat Sound", "TCS", "Tomcat", "the LLC", "the business"]
+    floating_garden: ["Floating Garden Soundworks", "FGS", "Floating Garden"]
+    faithh: ["FAITHH", "the AI system", "the assistant", "the hub"]
+    constella: ["Constella", "Constella Framework", "the governance framework"]
+  
+  people:
+    jonathan: ["Jonathan", "JM", "the founder", "the manager"]
+    thomas: ["Thomas", "TC", "Tom", "the mixer", "SD partner"]
+    kevin: ["Kevin", "the drummer", "exiting member"]
+    lisa: ["Lisa", "Lisa Earls-Kristosik", "SBDC advisor"]
+  
+  concepts:
+    celestial_equilibrium: "Jonathan's unifying philosophy - resonance, harmonic alignment, dignity"
+    harmonic_alignment: "The convergence of all projects toward serving people well"
+    battle_chips: "MegaMan Battle Network theme element in FAITHH"
+    scaffolding: "Systems that maintain context when human attention shifts"
+
+---
+# =============================================================================
+# GENERATED DOCS TEMPLATES
+# =============================================================================
+
+doc_templates:
+  
+  roadmap:
+    output_path: "/docs/ROADMAP.md"
+    sections:
+      - title: "Current State"
+        source: "entities.faithh.architecture"
+      - title: "Known Issues"
+        source: "entities.faithh.architecture.components.*.known_issues"
+      - title: "Development Priorities"
+        source: "entities.faithh.development_priorities"
+      - title: "Recent Decisions"
+        source: "entities.faithh.decisions_log"
+  
+  project_map:
+    output_path: "/docs/PROJECT_MAP.md"
+    sections:
+      - title: "Projects Overview"
+        source: "entities"
+      - title: "How They Connect"
+        source: "relationships"
+      - title: "Unified Vision"
+        source: "entities.jonathan.philosophy"

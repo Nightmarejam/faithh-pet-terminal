@@ -1,0 +1,50 @@
+{
+  "date": "2026-03-25",
+  "activity_level": "\ud83d\ude34 Quiet",
+  "git": {
+    "commits": [],
+    "commit_count": 0,
+    "files_changed": [],
+    "files_changed_count": 0,
+    "stats": []
+  },
+  "conversations": {
+    "count": 0,
+    "conversations": [],
+    "note": "Shows conversations indexed on this date, not original conversation dates"
+  },
+  "pulse_reports": {
+    "staleness": {
+      "generated": "2026-03-25T02:30:25.441277",
+      "summary": [
+        "- **Critical:** 0 files",
+        "- **Warning:** 36 files",
+        "- **OK:** 29 files"
+      ]
+    },
+    "divergence": {
+      "generated": "2026-03-25T02:45:09.974737",
+      "summary": [
+        "- \u2753 **unknown:** 18"
+      ]
+    },
+    "branches": {
+      "generated": "2026-03-25T03:00:04.829481",
+      "summary": []
+    }
+  },
+  "collector_activity": {
+    "entries": 240,
+    "sample": [
+      "2026-03-25 01:00:01,868 - __main__ - INFO - Running health collector...",
+      "2026-03-25 01:00:01,868 - __main__ - INFO - Running health collector...",
+      "2026-03-25 01:00:01,869 - scripts.collectors.collector_runner - INFO - Running health (attempt 1/3)",
+      "2026-03-25 01:00:01,869 - scripts.collectors.collector_runner - INFO - Running health (attempt 1/3)",
+      "2026-03-25 01:00:01,894 - scripts.collectors.collector_runner - INFO - \u2705 health succeeded"
+    ]
+  },
+  "work_log": [],
+  "decisions": [],
+  "generated_at": "2026-03-25T03:15:04.676255",
+  "summary": null
+}

@@ -1,0 +1,36 @@
+{
+  "runs": [
+    {
+      "timestamp": "2026-05-11T23:26:41.953658",
+      "success": false,
+      "duration_seconds": 6.9,
+      "trigger": "forced",
+      "status": {
+        "current_chunks": 56065,
+        "last_synthesis_chunks": 53975,
+        "delta": 2090,
+        "pct_change": 3.9,
+        "threshold_pct": 10,
+        "last_generated": "2026-04-11T12:00:29.400565",
+        "last_topics": 646,
+        "reason": "forced by user"
+      }
+    },
+    {
+      "timestamp": "2026-05-11T23:28:04.833944",
+      "success": false,
+      "duration_seconds": 38.6,
+      "trigger": "forced",
+      "status": {
+        "current_chunks": 56065,
+        "last_synthesis_chunks": 53975,
+        "delta": 2090,
+        "pct_change": 3.9,
+        "threshold_pct": 10,
+        "last_generated": "2026-04-11T12:00:29.400565",
+        "last_topics": 646,
+        "reason": "forced by user"
+      }
+    }
+  ]
+}

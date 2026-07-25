@@ -8,6 +8,7 @@ import re
 
 
 def detect_query_intent(query_text):
+    # Logic for Humans: Regex-scan the user message and set boolean flags (self-query, RAG vs ALIFE, governance, coding, etc.) that downstream chips and RAG use.
     """
     Analyze query to determine which integrations to use
     Returns dict with flags and matched patterns

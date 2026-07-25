@@ -1,0 +1,774 @@
+{
+  "ui_layout_1771907812_0cce135d": {
+    "id": "ui_layout_1771907812_0cce135d",
+    "type": "ui_layout",
+    "current_state": {
+      "current_layout": {
+        "coherence_indicator": {
+          "position": "main",
+          "priority": "high",
+          "visibility": "expanded"
+        },
+        "chat_interface": {
+          "position": "main",
+          "priority": "high",
+          "visibility": "expanded"
+        },
+        "rag_panel": {
+          "position": "sidebar",
+          "priority": "medium",
+          "visibility": "collapsed"
+        },
+        "pulse_dashboard": {
+          "position": "sidebar",
+          "priority": "medium",
+          "visibility": "collapsed"
+        },
+        "ml_chips_display": {
+          "position": "sidebar",
+          "priority": "low",
+          "visibility": "collapsed"
+        },
+        "project_status": {
+          "position": "sidebar",
+          "priority": "medium",
+          "visibility": "expanded"
+        }
+      },
+      "learning_parameters": {
+        "adaptation_threshold": 0.1,
+        "min_interactions_for_adaptation": 10,
+        "layout_refresh_interval_hours": 6
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.06999999999999999,
+      "task_completion_time": 0.6,
+      "error_rate": 0.1
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T20:36:52.906319",
+        "metrics": {
+          "user_satisfaction": 0.7,
+          "task_completion_time": 0.6,
+          "error_rate": 0.1
+        },
+        "context": {
+          "initialization": true
+        },
+        "previous_state": {
+          "current_layout": {
+            "coherence_indicator": {
+              "position": "main",
+              "priority": "high",
+              "visibility": "expanded"
+            },
+            "chat_interface": {
+              "position": "main",
+              "priority": "high",
+              "visibility": "expanded"
+            },
+            "rag_panel": {
+              "position": "sidebar",
+              "priority": "medium",
+              "visibility": "collapsed"
+            },
+            "pulse_dashboard": {
+              "position": "sidebar",
+              "priority": "medium",
+              "visibility": "collapsed"
+            },
+            "ml_chips_display": {
+              "position": "sidebar",
+              "priority": "low",
+              "visibility": "collapsed"
+            },
+            "project_status": {
+              "position": "sidebar",
+              "priority": "medium",
+              "visibility": "expanded"
+            }
+          },
+          "learning_parameters": {
+            "adaptation_threshold": 0.1,
+            "min_interactions_for_adaptation": 10,
+            "layout_refresh_interval_hours": 6
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 20:36:52.906325",
+    "adaptation_rate": 0.1
+  },
+  "model_config_1771907812_0e839fae": {
+    "id": "model_config_1771907812_0e839fae",
+    "type": "model_config",
+    "current_state": {
+      "current_model": "qwen25-grounded:latest",
+      "model_size": 11.840000000000002,
+      "quantization": "Q4_K_M",
+      "provider": "ollama",
+      "performance_targets": {
+        "target_response_time": 3.0,
+        "target_accuracy": 0.8,
+        "target_efficiency": 0.7
+      },
+      "optimization_parameters": {
+        "max_model_size": 70,
+        "min_model_size": 7,
+        "preferred_providers": [
+          "ollama",
+          "gemini",
+          "groq"
+        ]
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.06999999999999999,
+      "efficiency": 0.03,
+      "user_satisfaction": 0.06
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T20:36:52.907105",
+        "metrics": {
+          "accuracy": 0.7,
+          "efficiency": 0.3,
+          "user_satisfaction": 0.6
+        },
+        "context": {
+          "initialization": true
+        },
+        "previous_state": {
+          "current_model": "qwen25-grounded:latest",
+          "model_size": 14.8,
+          "quantization": "Q4_K_M",
+          "provider": "ollama",
+          "performance_targets": {
+            "target_response_time": 3.0,
+            "target_accuracy": 0.8,
+            "target_efficiency": 0.7
+          },
+          "optimization_parameters": {
+            "max_model_size": 70,
+            "min_model_size": 7,
+            "preferred_providers": [
+              "ollama",
+              "gemini",
+              "groq"
+            ]
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 20:36:52.907113",
+    "adaptation_rate": 0.1
+  },
+  "coherence_threshold_1771907812_50d8b47e": {
+    "id": "coherence_threshold_1771907812_50d8b47e",
+    "type": "coherence_threshold",
+    "current_state": {
+      "current_thresholds": {
+        "high_threshold": 0.6,
+        "medium_threshold": 0.3,
+        "anchor_validation_threshold": 0.7
+      },
+      "learning_parameters": {
+        "adaptation_rate": 0.05,
+        "min_samples_for_adaptation": 20,
+        "satisfaction_weight": 0.7
+      },
+      "performance_metrics": {
+        "target_user_satisfaction": 0.8,
+        "target_coherence_accuracy": 0.75
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.0
+    },
+    "learning_history": [],
+    "last_updated": "2026-02-23 20:36:52.904938",
+    "adaptation_rate": 0.1
+  },
+  "routing_strategy_1771907812_9a22f2de": {
+    "id": "routing_strategy_1771907812_9a22f2de",
+    "type": "routing_strategy",
+    "current_state": {
+      "current_strategy": {
+        "selection_method": "performance_based",
+        "fallback_enabled": true,
+        "health_check_interval": 60,
+        "provider_weights": {
+          "ollama": 0.4,
+          "gemini": 0.4,
+          "groq": 0.2
+        }
+      },
+      "learning_parameters": {
+        "performance_window_minutes": 30,
+        "adaptation_threshold": 0.1,
+        "min_requests_for_adaptation": 10
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.0
+    },
+    "learning_history": [],
+    "last_updated": "2026-02-23 20:36:52.905705",
+    "adaptation_rate": 0.1
+  },
+  "ui_layout_1771907829_0cce135d": {
+    "id": "ui_layout_1771907829_0cce135d",
+    "type": "ui_layout",
+    "current_state": {
+      "current_layout": {
+        "coherence_indicator": {
+          "position": "main",
+          "priority": "high",
+          "visibility": "expanded"
+        },
+        "chat_interface": {
+          "position": "main",
+          "priority": "high",
+          "visibility": "expanded"
+        },
+        "rag_panel": {
+          "position": "sidebar",
+          "priority": "medium",
+          "visibility": "collapsed"
+        },
+        "pulse_dashboard": {
+          "position": "sidebar",
+          "priority": "medium",
+          "visibility": "collapsed"
+        },
+        "ml_chips_display": {
+          "position": "sidebar",
+          "priority": "low",
+          "visibility": "collapsed"
+        },
+        "project_status": {
+          "position": "sidebar",
+          "priority": "medium",
+          "visibility": "expanded"
+        }
+      },
+      "learning_parameters": {
+        "adaptation_threshold": 0.1,
+        "min_interactions_for_adaptation": 10,
+        "layout_refresh_interval_hours": 6
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.06999999999999999,
+      "task_completion_time": 0.6,
+      "error_rate": 0.1
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T20:37:09.074039",
+        "metrics": {
+          "user_satisfaction": 0.7,
+          "task_completion_time": 0.6,
+          "error_rate": 0.1
+        },
+        "context": {
+          "initialization": true
+        },
+        "previous_state": {
+          "current_layout": {
+            "coherence_indicator": {
+              "position": "main",
+              "priority": "high",
+              "visibility": "expanded"
+            },
+            "chat_interface": {
+              "position": "main",
+              "priority": "high",
+              "visibility": "expanded"
+            },
+            "rag_panel": {
+              "position": "sidebar",
+              "priority": "medium",
+              "visibility": "collapsed"
+            },
+            "pulse_dashboard": {
+              "position": "sidebar",
+              "priority": "medium",
+              "visibility": "collapsed"
+            },
+            "ml_chips_display": {
+              "position": "sidebar",
+              "priority": "low",
+              "visibility": "collapsed"
+            },
+            "project_status": {
+              "position": "sidebar",
+              "priority": "medium",
+              "visibility": "expanded"
+            }
+          },
+          "learning_parameters": {
+            "adaptation_threshold": 0.1,
+            "min_interactions_for_adaptation": 10,
+            "layout_refresh_interval_hours": 6
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 20:37:09.074045",
+    "adaptation_rate": 0.1
+  },
+  "model_config_1771907829_0e839fae": {
+    "id": "model_config_1771907829_0e839fae",
+    "type": "model_config",
+    "current_state": {
+      "current_model": "qwen25-grounded:latest",
+      "model_size": 11.840000000000002,
+      "quantization": "Q4_K_M",
+      "provider": "ollama",
+      "performance_targets": {
+        "target_response_time": 3.0,
+        "target_accuracy": 0.8,
+        "target_efficiency": 0.7
+      },
+      "optimization_parameters": {
+        "max_model_size": 70,
+        "min_model_size": 7,
+        "preferred_providers": [
+          "ollama",
+          "gemini",
+          "groq"
+        ]
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.06999999999999999,
+      "efficiency": 0.03,
+      "user_satisfaction": 0.06
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T20:37:09.075055",
+        "metrics": {
+          "accuracy": 0.7,
+          "efficiency": 0.3,
+          "user_satisfaction": 0.6
+        },
+        "context": {
+          "initialization": true
+        },
+        "previous_state": {
+          "current_model": "qwen25-grounded:latest",
+          "model_size": 14.8,
+          "quantization": "Q4_K_M",
+          "provider": "ollama",
+          "performance_targets": {
+            "target_response_time": 3.0,
+            "target_accuracy": 0.8,
+            "target_efficiency": 0.7
+          },
+          "optimization_parameters": {
+            "max_model_size": 70,
+            "min_model_size": 7,
+            "preferred_providers": [
+              "ollama",
+              "gemini",
+              "groq"
+            ]
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 20:37:09.075060",
+    "adaptation_rate": 0.1
+  },
+  "coherence_threshold_1771907829_50d8b47e": {
+    "id": "coherence_threshold_1771907829_50d8b47e",
+    "type": "coherence_threshold",
+    "current_state": {
+      "current_thresholds": {
+        "high_threshold": 0.6,
+        "medium_threshold": 0.3,
+        "anchor_validation_threshold": 0.7
+      },
+      "learning_parameters": {
+        "adaptation_rate": 0.05,
+        "min_samples_for_adaptation": 20,
+        "satisfaction_weight": 0.7
+      },
+      "performance_metrics": {
+        "target_user_satisfaction": 0.8,
+        "target_coherence_accuracy": 0.75
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.07500000000000001,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.06999999999999999
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T20:37:09.076079",
+        "metrics": {
+          "accuracy": 0.75,
+          "user_satisfaction": 0.7
+        },
+        "context": {
+          "initialization": true
+        },
+        "previous_state": {
+          "current_thresholds": {
+            "high_threshold": 0.6,
+            "medium_threshold": 0.3,
+            "anchor_validation_threshold": 0.7
+          },
+          "learning_parameters": {
+            "adaptation_rate": 0.05,
+            "min_samples_for_adaptation": 20,
+            "satisfaction_weight": 0.7
+          },
+          "performance_metrics": {
+            "target_user_satisfaction": 0.8,
+            "target_coherence_accuracy": 0.75
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 20:37:09.076084",
+    "adaptation_rate": 0.1
+  },
+  "routing_strategy_1771907829_9a22f2de": {
+    "id": "routing_strategy_1771907829_9a22f2de",
+    "type": "routing_strategy",
+    "current_state": {
+      "current_strategy": {
+        "selection_method": "performance_based",
+        "fallback_enabled": true,
+        "health_check_interval": 60,
+        "provider_weights": {
+          "ollama": 0.4,
+          "gemini": 0.4,
+          "groq": 0.2
+        }
+      },
+      "learning_parameters": {
+        "performance_window_minutes": 30,
+        "adaptation_threshold": 0.1,
+        "min_requests_for_adaptation": 10
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.020000000000000004,
+      "user_satisfaction": 0.06
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T20:37:09.077136",
+        "metrics": {
+          "efficiency": 0.2,
+          "user_satisfaction": 0.6
+        },
+        "context": {
+          "initialization": true
+        },
+        "previous_state": {
+          "current_strategy": {
+            "selection_method": "performance_based",
+            "fallback_enabled": true,
+            "health_check_interval": 60,
+            "provider_weights": {
+              "ollama": 0.4,
+              "gemini": 0.4,
+              "groq": 0.2
+            }
+          },
+          "learning_parameters": {
+            "performance_window_minutes": 30,
+            "adaptation_threshold": 0.1,
+            "min_requests_for_adaptation": 10
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 20:37:09.077141",
+    "adaptation_rate": 0.1
+  },
+  "ui_layout_1771911258_094c738a": {
+    "id": "ui_layout_1771911258_094c738a",
+    "type": "ui_layout",
+    "current_state": {
+      "test": "config"
+    },
+    "performance_metrics": {
+      "accuracy": 0.08000000000000002,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.0
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:34:18.633076",
+        "metrics": {
+          "accuracy": 0.8
+        },
+        "context": {
+          "session_id": "test_session"
+        },
+        "previous_state": {
+          "test": "config"
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:34:18.633081",
+    "adaptation_rate": 0.1
+  },
+  "coherence_threshold_1771911258_8bbc76ad": {
+    "id": "coherence_threshold_1771911258_8bbc76ad",
+    "type": "coherence_threshold",
+    "current_state": {
+      "adapted": true
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.05
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:34:18.635670",
+        "metrics": {
+          "user_satisfaction": 0.5
+        },
+        "context": {},
+        "previous_state": {
+          "current_thresholds": {
+            "high_threshold": 0.6,
+            "medium_threshold": 0.3
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:34:18.635678",
+    "adaptation_rate": 0.1
+  },
+  "coherence_threshold_1771911973_8bbc76ad": {
+    "id": "coherence_threshold_1771911973_8bbc76ad",
+    "type": "coherence_threshold",
+    "current_state": {
+      "current_thresholds": {
+        "high_threshold": 0.54,
+        "medium_threshold": 0.27
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.04000000000000001
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:46:13.936172",
+        "metrics": {
+          "user_satisfaction": 0.4
+        },
+        "context": {},
+        "previous_state": {
+          "current_thresholds": {
+            "high_threshold": 0.6,
+            "medium_threshold": 0.3
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:46:13.936184",
+    "adaptation_rate": 0.1
+  },
+  "ui_layout_1771911978_094c738a": {
+    "id": "ui_layout_1771911978_094c738a",
+    "type": "ui_layout",
+    "current_state": {
+      "test": "config"
+    },
+    "performance_metrics": {
+      "accuracy": 0.08000000000000002,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.0
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:46:18.704456",
+        "metrics": {
+          "accuracy": 0.8
+        },
+        "context": {
+          "session_id": "test_session"
+        },
+        "previous_state": {
+          "test": "config"
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:46:18.704462",
+    "adaptation_rate": 0.1
+  },
+  "coherence_threshold_1771911978_8bbc76ad": {
+    "id": "coherence_threshold_1771911978_8bbc76ad",
+    "type": "coherence_threshold",
+    "current_state": {
+      "current_thresholds": {
+        "high_threshold": 0.54,
+        "medium_threshold": 0.27
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.04000000000000001
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:46:18.719863",
+        "metrics": {
+          "user_satisfaction": 0.4
+        },
+        "context": {},
+        "previous_state": {
+          "current_thresholds": {
+            "high_threshold": 0.6,
+            "medium_threshold": 0.3
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:46:18.719873",
+    "adaptation_rate": 0.1
+  },
+  "ui_layout_1771912091_094c738a": {
+    "id": "ui_layout_1771912091_094c738a",
+    "type": "ui_layout",
+    "current_state": {
+      "test": "config"
+    },
+    "performance_metrics": {
+      "accuracy": 0.08000000000000002,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.0
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:48:11.879066",
+        "metrics": {
+          "accuracy": 0.8
+        },
+        "context": {
+          "session_id": "test_session"
+        },
+        "previous_state": {
+          "test": "config"
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:48:11.879071",
+    "adaptation_rate": 0.1
+  },
+  "coherence_threshold_1771912091_8bbc76ad": {
+    "id": "coherence_threshold_1771912091_8bbc76ad",
+    "type": "coherence_threshold",
+    "current_state": {
+      "current_thresholds": {
+        "high_threshold": 0.54,
+        "medium_threshold": 0.27
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.04000000000000001
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:48:11.889229",
+        "metrics": {
+          "user_satisfaction": 0.4
+        },
+        "context": {},
+        "previous_state": {
+          "current_thresholds": {
+            "high_threshold": 0.6,
+            "medium_threshold": 0.3
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:48:11.889235",
+    "adaptation_rate": 0.1
+  },
+  "ui_layout_1771912141_094c738a": {
+    "id": "ui_layout_1771912141_094c738a",
+    "type": "ui_layout",
+    "current_state": {
+      "test": "config"
+    },
+    "performance_metrics": {
+      "accuracy": 0.08000000000000002,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.0
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:49:01.799969",
+        "metrics": {
+          "accuracy": 0.8
+        },
+        "context": {},
+        "previous_state": {
+          "test": "config"
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:49:01.799973",
+    "adaptation_rate": 0.1
+  },
+  "coherence_threshold_1771912141_8bbc76ad": {
+    "id": "coherence_threshold_1771912141_8bbc76ad",
+    "type": "coherence_threshold",
+    "current_state": {
+      "current_thresholds": {
+        "high_threshold": 0.54,
+        "medium_threshold": 0.27
+      }
+    },
+    "performance_metrics": {
+      "accuracy": 0.0,
+      "efficiency": 0.0,
+      "user_satisfaction": 0.04000000000000001
+    },
+    "learning_history": [
+      {
+        "timestamp": "2026-02-23T21:49:01.806414",
+        "metrics": {
+          "user_satisfaction": 0.4
+        },
+        "context": {},
+        "previous_state": {
+          "current_thresholds": {
+            "high_threshold": 0.6,
+            "medium_threshold": 0.3
+          }
+        }
+      }
+    ],
+    "last_updated": "2026-02-23 21:49:01.806421",
+    "adaptation_rate": 0.1
+  }
+}

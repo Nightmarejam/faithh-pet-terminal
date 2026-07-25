@@ -156,6 +156,7 @@ Configuration managed in `config.yaml` with the following sections:
 - # Allowed directories for file operations
 - allowed_directories:
 - - /home/jonat/ai-stack
+- - /home/jonat/faithh
 - - /tmp/faithh
 - # Blocked shell commands for safety
 - blocked_commands:

@@ -23,11 +23,20 @@ class ServiceStatus(Enum):
 
 class ServiceHealth:
     """Health status for a single service"""
-    
-    def __init__(self, name: str, url: str, timeout: int = 5):
+
+    def __init__(
+        self,
+        name: str,
+        url: str,
+        timeout: int = 5,
+        required_for_overall: bool = True,
+    ):
         self.name = name
         self.url = url
         self.timeout = timeout
+        # If False, failures never mark UNHEALTHY (clamped to DEGRADED) and do not affect
+        # overall_status. Use for optional infra (remote Chroma, provider probes without keys).
+        self.required_for_overall = required_for_overall
         self.status = ServiceStatus.UNKNOWN
         self.last_check = None
         self.response_time = None
@@ -80,6 +89,7 @@ class ServiceHealth:
         }
 
 class ConnectionMonitor:
+    # Logic for Humans: Background poller that pings configured URLs (Chroma, Ollama, Groq, …), tracks healthy/degraded, and powers /api/health summaries.
     """Main connection monitoring system"""
     
     def __init__(self, check_interval: int = 30):
@@ -95,44 +105,51 @@ class ConnectionMonitor:
     
     def _initialize_services(self):
         """Initialize all services to monitor"""
+        # "Unhealthy services: 1" historically came from optional deps marked UNHEALTHY —
+        # e.g. remote Chroma on servicebox timing out or connection refused while
+        # the UI/backend still runs. Groq/Gemini URLs without API keys only return 401/403
+        # (degraded) but timeouts on those would also have been UNHEALTHY before optional.
         services_config = [
-            {
-                'name': 'backend',
-                'url': 'http://localhost:5557/health',
-                'timeout': 3,
-                'fallback_url': None
-            },
+            # Do not HTTP-poll this Flask app from inside the same process (localhost:5557/health).
+            # That produced false "Connection error" / UNHEALTHY during startup and is redundant:
+            # /api/health already proves the server is accepting requests.
             {
                 'name': 'chromadb',
-                'url': 'http://100.79.85.32:8000/api/v1/heartbeat',
-                'timeout': 5,
-                'fallback_url': None
+                # Chroma v1 /api/v1/heartbeat returns HTTP 410 on current server; v2 is canonical.
+                'url': 'http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat',
+                'timeout': 3,
+                'fallback_url': None,
+                'required_for_overall': False,
             },
             {
                 'name': 'ollama',
                 'url': 'http://localhost:11434/api/tags',
                 'timeout': 5,
-                'fallback_url': None
+                'fallback_url': None,
+                'required_for_overall': True,
             },
             {
                 'name': 'groq',
                 'url': 'https://api.groq.com/openai/v1/models',
                 'timeout': 10,
-                'fallback_url': None
+                'fallback_url': None,
+                'required_for_overall': False,
             },
             {
                 'name': 'gemini',
                 'url': 'https://generativelanguage.googleapis.com/v1/models',
                 'timeout': 10,
-                'fallback_url': None
-            }
+                'fallback_url': None,
+                'required_for_overall': False,
+            },
         ]
-        
+
         for config in services_config:
             service = ServiceHealth(
                 name=config['name'],
                 url=config['url'],
-                timeout=config['timeout']
+                timeout=config['timeout'],
+                required_for_overall=config.get('required_for_overall', True),
             )
             service.fallback_url = config['fallback_url']
             self.services[config['name']] = service
@@ -153,20 +170,42 @@ class ConnectionMonitor:
                 service.update_status(ServiceStatus.HEALTHY, response_time)
                 return True, None
             elif response.status_code >= 500:
-                service.update_status(ServiceStatus.UNHEALTHY, response_time, f"HTTP {response.status_code}")
+                st = (
+                    ServiceStatus.UNHEALTHY
+                    if service.required_for_overall
+                    else ServiceStatus.DEGRADED
+                )
+                service.update_status(st, response_time, f"HTTP {response.status_code}")
                 return False, f"Server error: HTTP {response.status_code}"
             else:
                 service.update_status(ServiceStatus.DEGRADED, response_time, f"HTTP {response.status_code}")
                 return True, f"Service degraded: HTTP {response.status_code}"
-                
+
         except requests.exceptions.Timeout:
-            service.update_status(ServiceStatus.UNHEALTHY, None, "Request timeout")
+            # Optional services (e.g. remote Chroma): timeout should not flip /api/health to
+            # "Unhealthy services: N" — treat as degraded reachability only.
+            st = (
+                ServiceStatus.UNHEALTHY
+                if service.required_for_overall
+                else ServiceStatus.DEGRADED
+            )
+            service.update_status(st, None, "Request timeout")
             return False, "Request timeout"
         except requests.exceptions.ConnectionError:
-            service.update_status(ServiceStatus.UNHEALTHY, None, "Connection error")
+            st = (
+                ServiceStatus.UNHEALTHY
+                if service.required_for_overall
+                else ServiceStatus.DEGRADED
+            )
+            service.update_status(st, None, "Connection error")
             return False, "Connection error"
         except Exception as e:
-            service.update_status(ServiceStatus.UNHEALTHY, None, str(e))
+            st = (
+                ServiceStatus.UNHEALTHY
+                if service.required_for_overall
+                else ServiceStatus.DEGRADED
+            )
+            service.update_status(st, None, str(e))
             return False, f"Unexpected error: {str(e)}"
     
     def check_all_services(self) -> Dict[str, Tuple[bool, Optional[str]]]:
@@ -253,30 +292,40 @@ class ConnectionMonitor:
     
     def get_system_health_summary(self) -> Dict:
         """Get overall system health summary"""
-        total_services = len(self.services)
-        healthy_services = len([s for s in self.services.values() if s.status == ServiceStatus.HEALTHY])
-        degraded_services = len([s for s in self.services.values() if s.status == ServiceStatus.DEGRADED])
-        unhealthy_services = len([s for s in self.services.values() if s.status == ServiceStatus.UNHEALTHY])
-        
+        all_svcs = list(self.services.values())
+        required = [s for s in all_svcs if s.required_for_overall]
+
+        total_services = len(all_svcs)
+        healthy_services = len([s for s in all_svcs if s.status == ServiceStatus.HEALTHY])
+        degraded_services = len([s for s in all_svcs if s.status == ServiceStatus.DEGRADED])
+        unhealthy_services = len([s for s in all_svcs if s.status == ServiceStatus.UNHEALTHY])
+
+        # Overall line matches required deps only (Ollama by default; no in-process backend self-ping).
+        req_healthy = len([s for s in required if s.status == ServiceStatus.HEALTHY])
+        req_degraded = len([s for s in required if s.status == ServiceStatus.DEGRADED])
+        req_unhealthy = len([s for s in required if s.status == ServiceStatus.UNHEALTHY])
+
         overall_status = ServiceStatus.HEALTHY
-        if unhealthy_services > 0:
+        if req_unhealthy > 0:
             overall_status = ServiceStatus.UNHEALTHY
-        elif degraded_services > 0:
+        elif req_degraded > 0:
             overall_status = ServiceStatus.DEGRADED
-        
+
         return {
             'overall_status': overall_status.value,
             'total_services': total_services,
             'healthy_services': healthy_services,
             'degraded_services': degraded_services,
             'unhealthy_services': unhealthy_services,
+            'required_unhealthy_services': req_unhealthy,
             'monitoring_active': self.monitoring_active,
             'last_check': max([s.last_check for s in self.services.values() if s.last_check], default=None),
-            'services': self.get_all_statuses()
+            'services': self.get_all_statuses(),
         }
 
 # Fallback handlers for common services
 def ollama_fallback_handler(query: str, model: str = "qwen25-grounded:latest") -> Optional[str]:
+    # Logic for Humans: Last-resort try: hit a secondary Ollama port (11435) if the primary daemon is down.
     """Fallback handler for Ollama service"""
     try:
         # Try alternative Ollama endpoint or different model
@@ -296,6 +345,7 @@ def ollama_fallback_handler(query: str, model: str = "qwen25-grounded:latest") -
     return None
 
 def groq_fallback_handler(query: str, model: str = "llama-3.3-70b-versatile") -> Optional[str]:
+    # Logic for Humans: Placeholder hook for when Groq fails — reserved for future cache or alternate provider logic.
     """Fallback handler for Groq service"""
     try:
         # Switch to different provider or use cached response
@@ -311,6 +361,7 @@ connection_monitor = ConnectionMonitor()
 
 # Flask integration helper
 def with_service_fallback(service_name: str):
+    # Logic for Humans: Decorator — run the real function if the named service is up, otherwise try registered fallback handlers.
     """Decorator to provide automatic fallback for service calls"""
     def decorator(func):
         def wrapper(*args, **kwargs):
@@ -330,6 +381,7 @@ def with_service_fallback(service_name: str):
 
 # Health check endpoint for Flask
 def create_health_endpoint():
+    # Logic for Humans: Factory that returns a Flask view function reporting connection_monitor’s aggregate service health (200 vs 503).
     """Create health check endpoint for Flask"""
     from flask import jsonify
     

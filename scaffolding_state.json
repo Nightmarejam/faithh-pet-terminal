@@ -1,0 +1,204 @@
+{
+  "meta": {
+    "version": "1.5",
+    "last_updated": "2026-04-12T00:00:00",
+    "last_session_summary": "Docs + UI ops refresh (2026-04-12). Architecture docs (API / Chroma / infra / system overview), MASTER_CONTEXT, and this file aligned to AGENTS.md + fingerprint_state.json (~54k KB chunks on Gen8 Chroma, default model qwen25-faithh-v3:latest via config.yaml). faithh_uncertainty_surface collection holds migrated noise rows (not RAG). Canvas RAG source line shows clamped similarity from Chroma distance. restart_backend.sh optional Ollama warm-up (OLLAMA_WARMUP=1)."
+  },
+  "active_context": {
+    "primary_project": "faithh",
+    "structural_position": "Phase 4 Active - IME scaffold built, journal synthesis pending, production hardening in progress",
+    "position_summary": "FAITHH backend v4.0-pulse; canonical Flask on :5557 (faithh_professional_backend_fixed.py). Coherence Arbiter Phase 1–3 UI path. PULSE operational. ChromaDB on Gen8: faithh_knowledge_base ~54k chunks (see fingerprint_state.json); faithh_uncertainty_surface for migrated noise; session metrics in faithh_session_metrics (not RAG). Default chat model: qwen25-faithh-v3:latest (config.yaml). Ollama stop/num_predict caps in backend/llm_providers.py; KB index quality gate in _finalize_response.",
+    "entered_phase": "2026-02-23",
+    "phase_goal": "Phase 4: Production hardening, Phase 3 expansion (additional claim types, adaptive thresholding), autonomous PULSE scheduling"
+  },
+  "recent_completions": [
+    {
+      "what": "Coherence Arbiter Phase 3 - UI Integration and Real-time Feedback",
+      "when": "2026-02-23",
+      "structural_significance": "Complete coherence system with user-facing indicators. Phase 3 adds tier classification (high/medium/low), behavioral suggestions (hedge/ok/recheck_sources), low-coherence hints, and expanded anchor validation (5 evidence types). System now provides real-time coherence feedback to users with 77.5% anchor validation score.",
+      "criteria_met": [
+        "UI coherence indicator with color-coded tiers",
+        "Low-coherence advisory hints for users",
+        "Behavioral suggestions based on confidence levels",
+        "Expanded anchor validation with 5 evidence types",
+        "Comprehensive test coverage (9 tests passing)",
+        "PULSE data refreshed from 40+ hour staleness"
+      ]
+    },
+    {
+      "what": "Coherence Arbiter Phase 1 & 2 Implementation - Major Structural Enhancement",
+      "when": "2026-02-23",
+      "structural_significance": "FAITHH now has semantic convergence measurement between RAG and ML chip routing with ground truth validation. Phase 1: cosine similarity convergence matrix calculation. Phase 2: anchor validation of canonical claims against actual system state. This addresses the core coherence problem and provides quantitative measurement of system alignment.",
+      "criteria_met": [
+        "Phase 1: Convergence matrix calculation (np.mean(np.max(convergence_matrix, axis=1)))",
+        "Phase 1: Signal strength weighting with meaningful variation",
+        "Phase 1: Integration into build_integrated_context() with 100ms timeout",
+        "Phase 1: Coherence metadata in chat response JSON",
+        "Phase 2: AnchorValidator class with dependency injection pattern",
+        "Phase 2: FAITHH project phase validation (ML chips, ChromaDB scale, PULSE engine)",
+        "Phase 2: Validation score: 0.825/1.0 (82.5% - accurate, not inflated)",
+        "Phase 2: Circular imports eliminated (backend → arbiter → validator)",
+        "Phase 2: ChromaDB API limitations documented with graceful fallback",
+        "Environment audit: 3 MCP servers documented, IDE configurations mapped",
+        "Systems map updated with IDE section and MCP inventory"
+      ],
+      "what_remains": "Phase 3 expansion (additional claim types, adaptive thresholding)",
+      "permission": "Coherence Arbiter foundation is solid. Ready for Phase 3 expansion or other structural work."
+    },
+    {
+      "what": "Full stale file refresh + FAITHH backend fixes",
+      "when": "2026-02-07",
+      "structural_significance": "All source-of-truth files now current. FAITHH responds accurately to project, business, and self queries.",
+      "criteria_met": [
+        "faithh_memory.json updated (v2.3, correct embedding model/doc count)",
+        "decisions_log.json updated (10 decisions, Dec 2025 - Feb 2026)",
+        "scaffolding_state.json updated (this file)",
+        "project_states.json updated (tax completion, recent work)",
+        "Chip activation broadened (project_state fires for general queries)",
+        "Personality prompt corrected (32,499 chunks, not 93K)"
+      ],
+      "what_remains": "ML chip synthesis pipeline, RAG quality filtering",
+      "permission": "Documentation is clean enough to build on. Stop polishing, start building."
+    },
+    {
+      "what": "Systems map + context injection + Ollama restoration",
+      "when": "2026-02-07",
+      "structural_significance": "Comprehensive systems map created. Context injection generates CONTEXT.md. Ollama systemd enabled with GPU override, 8 models restored.",
+      "criteria_met": [
+        "SYSTEMS_MAP.md covers all projects, hardware, services, relationships",
+        "FAITHH_QUICKSTART.md created for easy reference",
+        "Ollama running via systemd with RTX 3090",
+        "Groq set as default provider for instant responses"
+      ],
+      "what_remains": "Test context injection with fresh AI sessions",
+      "permission": "Infrastructure is solid. Move to ML work."
+    },
+    {
+      "what": "Tom Cat Sound 2024 tax package completed",
+      "when": "2026-01-26",
+      "structural_significance": "Major business obligation cleared. 192 items inventoried, 1,058 bank transactions extracted.",
+      "criteria_met": [
+        "CPA package assembled in CPA_PACKAGE_2024/",
+        "NAS setup for partner access",
+        "Net operating loss: ~$10,509.90"
+      ],
+      "what_remains": "File Form 1065, Kevin exit, business bank account",
+      "permission": "Tax package is done. CPA handles filing."
+    }
+  ],
+  "open_loops": [
+    {
+      "id": "coherence-arbiter-phase3-expansion",
+      "item": "Expand Coherence Arbiter Phase 3: Additional claim types and adaptive thresholding",
+      "why_structural": "Phase 2 established foundation with single claim validation. Phase 3 should expand to decisions_log.json claims, project_states.json metrics, and scaffolding_state.json consistency checks. Adaptive thresholding based on historical validation patterns.",
+      "created": "2026-02-23",
+      "status": "ready_for_implementation",
+      "blocked_by": null,
+      "suggested_action": "Review decisions_log.json for claim patterns, design adaptive thresholding algorithm, expand AnchorValidator class"
+    },
+    {
+      "id": "claude-cli-mcp-integration-issue",
+      "item": "Investigate and resolve Claude CLI MCP Method Not Found errors (-32601)",
+      "why_structural": "Claude VSCode integration experiencing MCP errors since January 2025. FAITHH extension works via direct backend calls, but Claude CLI tool path may be needed for future work.",
+      "created": "2026-02-23",
+      "status": "known_issue_documented",
+      "blocked_by": "Claude CLI tool not currently in use",
+      "suggested_action": "Document as known issue, revisit when Claude CLI tool is needed for repo work"
+    },
+    {
+      "id": "form-1065-filing",
+      "item": "File Form 1065 for Tom Cat Sound LLC",
+      "why_structural": "Outstanding tax obligation — needs First Time Penalty Abatement",
+      "created": "2026-01-26",
+      "status": "pending_cpa",
+      "blocked_by": "CPA needs to file",
+      "suggested_action": "Follow up with CPA on filing status"
+    },
+    {
+      "id": "faithh-memory-staleness",
+      "item": "Establish protocol for keeping source files fresh",
+      "why_structural": "Files went stale (Nov 2025 → Feb 2026). Now solved by PULSE Tier 1 staleness detector.",
+      "created": "2026-02-07",
+      "status": "solved",
+      "blocked_by": null,
+      "suggested_action": "Run scripts/staleness_detector.py weekly or via cron"
+    }
+  ],
+  "parked_tangents": [
+    {
+      "idea": "Mac lightweight FAITHH setup",
+      "noted": "2025-11-26",
+      "why_parked": "Useful but not structural — current system works from any device via Tailscale",
+      "revisit_when": "After ML chip synthesis is working"
+    },
+    {
+      "idea": "User avatar from chat history (ML personality extraction)",
+      "noted": "2026-02-04",
+      "why_parked": "Exciting but depends on chip synthesis pipeline being built first",
+      "revisit_when": "After topic chips are working and validated",
+      "details": "See docs/RESEARCH_HANDOFF_ChipSynthesis_ML_Avatar_2026-02-04.md"
+    },
+    {
+      "idea": "RAG temporal weighting and knowledge synthesis",
+      "noted": "2025-11-28",
+      "why_parked": "Important architecture question but ML routing may solve this naturally",
+      "revisit_when": "After ML chip synthesis reveals conversation temporal patterns"
+    },
+    {
+      "idea": "Auto-journal generation",
+      "noted": "2025-11-26",
+      "why_parked": "Could be built on top of chip synthesis — chips detect topics, journal summarizes",
+      "revisit_when": "After chip synthesis pipeline is operational"
+    }
+  ],
+  "orientation_prompts": {
+    "session_start": "Last session you {last_session_summary}. You're currently in '{structural_position}'. The next structural milestone is '{phase_goal}'.",
+    "tangent_detected": "This is interesting, but it might be a tangent from '{phase_goal}'. Want to park it and stay on track, or is this actually important right now?",
+    "completion_check": "You've achieved: {criteria_met}. What remains is refinement, not foundation. You have permission to move forward.",
+    "time_check": "You've been working on this for {duration}. Original goal was '{phase_goal}'. Still aligned?"
+  },
+  "project_structural_milestones": {
+    "faithh": {
+      "completed": [
+        "RAG system operational (32,499 chunks)",
+        "Three-tier memory architecture",
+        "Smart integrations (self, decisions, state, scaffolding)",
+        "Backend v4.0-pulse deployed",
+        "PULSE Reflection Engine (3 tiers: staleness, divergence, branches)",
+        "Chat persistence (localStorage, session recovery, sidebar)",
+        "Parallel chip retrieval with token budgeting",
+        "Context injection system (CONTEXT.md)",
+        "Systems map (SYSTEMS_MAP.md)",
+        "12 Gen8 services deployed",
+        "Groq + Ollama + Gemini providers configured",
+        "Coherence Arbiter Phase 1: Semantic convergence measurement",
+        "Coherence Arbiter Phase 2: Ground truth validation (0.825 score)",
+        "Environment audit with MCP server inventory"
+      ],
+      "current": "Coherence Arbiter foundation solid - Phase 3 ready",
+      "next": "Phase 3 expansion (additional claim types, adaptive thresholding)",
+      "after_that": "Production hardening + autonomous PULSE scheduling"
+    },
+    "constella": {
+      "completed": [
+        "Framework v1.5.4 documented",
+        "Governance docs expanded",
+        "1,904 docs indexed into FAITHH"
+      ],
+      "current": "Ready for pilot design work",
+      "next": "Define first pilot parameters",
+      "after_that": "Committee review preparation"
+    },
+    "tom_cat_sound": {
+      "completed": [
+        "2024 tax package assembled",
+        "192 equipment items cataloged",
+        "1,058 bank transactions extracted",
+        "NAS setup for partner access"
+      ],
+      "current": "Form 1065 filing + Kevin exit",
+      "next": "Business bank account",
+      "after_that": "Q1 2026 operations"
+    }
+  }
+}

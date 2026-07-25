@@ -92,7 +92,7 @@ PROGRAM_ADVANCES = {
     },
     "project_deep_dive": {
         "chips": ["project_state", "rag_search", "constella"],
-        "triggers": ["project status", "project state", "project overview", "progress", "phase"],
+        "triggers": ["project status", "project state", "project overview", "progress", "phase", "ucf", "penumbra", "civic floor", "constella", "civic tome", "astris", "auctor", "governance", "constitutional", "founding diversity", "strategy escape"],
         "merge_strategy": "comprehensive",
         "description": "Complete project analysis with framework principles",
         "semantic_queries": [
@@ -101,6 +101,25 @@ PROGRAM_ADVANCES = {
             "give me a project overview",
             "what phase are we in",
             "summarize the project state"
+        ]
+    },
+    "alife_research": {
+        "chips": ["rag_search", "constella"],
+        "triggers": [
+            "experiment", "exp ", "alife", "population", "collapse", "adaptation",
+            "strategy escape", "founding diversity", "floor rider", "gamer",
+            "penumbra zone", "predator", "drain", "genome", "agent", "tick",
+            "oscillat", "arms race", "monoculture", "diversity floor",
+            "naked strategy", "defender", "parasite", "wave", "commons pool"
+        ],
+        "merge_strategy": "evidence_chain",
+        "description": "ALife experiment retrieval with constitutional evidence chain",
+        "semantic_queries": [
+            "what did the alife experiments show",
+            "what happened in experiment",
+            "what does the simulation evidence say",
+            "population dynamics findings",
+            "constitutional principle evidence from alife"
         ]
     }
 }

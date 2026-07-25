@@ -1,0 +1,16 @@
+{
+  "last_runs": {
+    "staleness": "2026-05-17T20:43:07.267063",
+    "divergence": "2026-04-12T00:57:35.071337",
+    "autonomous": "2026-05-17T20:43:08.498490",
+    "fingerprint": "2026-05-17T20:43:08.725360",
+    "branches": "2026-05-17T09:07:48.339572"
+  },
+  "run_counts": {
+    "staleness": 96,
+    "divergence": 35,
+    "autonomous": 439,
+    "fingerprint": 131,
+    "branches": 21
+  }
+}

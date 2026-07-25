@@ -1,0 +1,62 @@
+{
+  "experiment": "Exp 6 — UCF Floor (Track B Constella Stress Test)",
+  "date": "2026-03-29",
+  "hypothesis": "UCF minimum energy floor prevents population collapse observed in Exp 5 (drain=1.5)",
+  "null_hypothesis": "UCF merely delays collapse or causes free-riding collapse",
+  "parameters": {
+    "drain_rate": 1.5,
+    "ucf_floor_threshold": 40,
+    "ucf_injection_per_tick": 5,
+    "ucf_commons_initial": 500000,
+    "ucf_commons_regen_rate": 150,
+    "ticks_run": 50000
+  },
+  "baseline_reference": {
+    "experiment": "Exp 5 drain=1.5",
+    "collapse_tick": 10039,
+    "ucf_active": false
+  },
+  "result": {
+    "collapsed": true,
+    "collapse_tick": 7410,
+    "vs_baseline": "WORSE — collapsed 2629 ticks EARLIER than Exp 5 without UCF",
+    "final_population": 0,
+    "wave_count": 14,
+    "predator_kills": 19459,
+    "parasitic_kills": 0,
+    "thermal_deaths": 0,
+    "total_reproductions": 19259,
+    "ucf_interventions": 1063309,
+    "floor_rider_peak": 833,
+    "commons_depleted_tick": null,
+    "final_commons_pool": 298137,
+    "first_parasite_tick": 878,
+    "first_toxin_tick": 2325,
+    "outcome_code": "UCF_NO_EFFECT"
+  },
+  "failure_analysis": {
+    "root_cause": "Population overshoot from unconditional floor support",
+    "mechanism": [
+      "UCF kept all struggling agents alive long enough to reproduce",
+      "Population inflated to 848 by tick 3000 — above sustainable carrying capacity",
+      "Floor rider peak: 833 agents simultaneously on floor (nearly entire population)",
+      "Predator adaptation scaled to inflated population size",
+      "When shield adaptation maxed at tick 5000 (efficiency 0%), oversized population collapsed faster",
+      "Collapse tick 7410 — 2629 ticks EARLIER than no-UCF baseline"
+    ],
+    "key_metric": "floor_rider_peak=833 out of 848 total population — 98% on floor simultaneously"
+  },
+  "constella_design_decision": {
+    "finding": "Unconditional UCF floor causes population overshoot and accelerates collapse",
+    "decision": "UCF must require minimum participation/engagement to receive support. Cannot be purely existence-based.",
+    "analogy": "Real UBI proposals require residency/participation — not just being alive",
+    "next_experiment": "Exp 7 — UCF with minimum participation gate (agents must have reproduced within N ticks to qualify for floor support)",
+    "penumbra_connection": "The participation gate IS the Penumbra zone — agents who drop below the gate enter mediation state before losing floor access entirely"
+  },
+  "track_b_implications": {
+    "principle_tested": "Universal Civic Floor (UCF)",
+    "result_type": "DESIGN_CHANGE_REQUIRED",
+    "constella_update": "UCF section must add: minimum engagement threshold for floor eligibility",
+    "law_calibration": "The drift from rational baseline shows participants exploit unconditional floors — law must account for this predictable behavior, not assume ideal participation"
+  }
+}

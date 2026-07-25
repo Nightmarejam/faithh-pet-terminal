@@ -1,0 +1,78 @@
+{
+  "timestamp_utc": "2026-03-31T01:30:35.696391+00:00",
+  "allowlist_path": "reports/inventory/nas_ingest_allowlist.csv",
+  "allowlist_rows": 34,
+  "allowlist_by_ingestion_scope": {
+    "alife": 10,
+    "constella": 10,
+    "governance": 14
+  },
+  "staging_manifest": {
+    "path": "reports/index_runs/nas_stage_manifest_20260331_013022.json",
+    "timestamp_utc": "2026-03-31T01:30:22.742199+00:00",
+    "counters": {
+      "rows_in_allowlist_csv": 34,
+      "staged": 12,
+      "fetch_failed": 0,
+      "skipped_extension": 1,
+      "skipped_policy": 0,
+      "skipped_destination_exists": 21,
+      "skipped_limit": 0
+    },
+    "overwrite": false,
+    "ssh_host": "nas"
+  },
+  "staging": {
+    "intake_root": "/home/jonat/ai-stack/docs/data",
+    "files_under_nas_import_by_folder_recursive": {
+      "governance_sources/nas_import": 28,
+      "alife_sources/nas_import": 20,
+      "constella_sources/nas_import": 18
+    },
+    "note": "Counts are recursive regular files under each nas_import (nested layout)."
+  },
+  "policy_applied": {
+    "domain_group_not_personal": true,
+    "review_status_eq_approved": true,
+    "ingestion_scope_in": [
+      "alife",
+      "constella",
+      "governance"
+    ],
+    "sensitivity_not_private": true,
+    "allowlist_build": {
+      "review_status": "approved_only",
+      "domain_group_excludes": [
+        "personal"
+      ],
+      "sensitivity_excludes": [
+        "private"
+      ],
+      "ingestion_scope_in": [
+        "governance",
+        "alife",
+        "constella"
+      ]
+    }
+  },
+  "allowlist_rows_skipped_by_extension_filter": [
+    {
+      "path": "/volume1/AI/projects/Constella_Field_Archive_v1/Constella_Onboarding_Field_Guide.pdf",
+      "ingestion_scope": "constella",
+      "extension": ".pdf"
+    }
+  ],
+  "allowed_extensions_for_staging": [
+    ".csv",
+    ".json",
+    ".md",
+    ".txt",
+    ".yaml",
+    ".yml"
+  ],
+  "overwrite_and_collision_safety": {
+    "default_overwrite": false,
+    "destination_layout": "sanitized_relative_path_under_volume1_per_scope_nas_import",
+    "manifest_actions": "Per-row actions recorded under staging_manifest.path -> files[]."
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "timestamp_utc": "2026-03-31T02:21:13.425609+00:00",
+  "input_root": "docs/data/governance_sources/windows_staging_import",
+  "dry_run": false,
+  "files_discovered": 29,
+  "accepted_files": 26,
+  "skipped_files": 3,
+  "documents_prepared": 3091,
+  "accepted": [
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/Federal_Register____API_Documentation.md",
+      "source_class": "policy_reference",
+      "chunks": 3,
+      "content_hash": "06eec324513b8ae6148eb75a6b971629e3c58661e745b24b32190b66f3d6574e"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/HDX_Python_API.md",
+      "source_class": "policy_reference",
+      "chunks": 28,
+      "content_hash": "3cece2f6d14d31b6b5e889ec77225fcd418c0930df6e7246cce13b25da26fd48"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/Home___Worldwide_Governance_Indicators.md",
+      "source_class": "policy_reference",
+      "chunks": 4,
+      "content_hash": "87c564224e2e2e448316fec8fbdaeb0b6e2dc2f44a74da90e254bf15d657edd4"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/The_Constitution_of_the_United_States__A_Transcription___National_Archives.md",
+      "source_class": "charter",
+      "chunks": 20,
+      "content_hash": "d78758b2c158855fb9d486938f5d270d57faa1806b2a3105c76eb1a009b66719"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/UNSD_SDGs_API.md",
+      "source_class": "treaty",
+      "chunks": 4,
+      "content_hash": "3a4967bff33b429e5d7f9fc9b1cb2771ebf98f91e40cfbd6a966c3a1ddf72419"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/UNdata___api_manual.md",
+      "source_class": "policy_reference",
+      "chunks": 4,
+      "content_hash": "8f12a3fdc605efaa10e38fb0370706cccffe1a4bc6f9f438e27c0b2851efcd57"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_ei_sept21_august2023.md",
+      "source_class": "policy_reference",
+      "chunks": 210,
+      "content_hash": "dfd2a27760dfb0b741d858358a70777e1cb8141219d33bd21055bc2ec5a2679e"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_eureg_nov20.md",
+      "source_class": "policy_reference",
+      "chunks": 209,
+      "content_hash": "c66bbc1b805e9eeba1b5bc7ee21385353a0c9dfdd40bce0a35f45e255ab41576"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/pdf/codebook_std_jan26.md",
+      "source_class": "policy_reference",
+      "chunks": 809,
+      "content_hash": "5beacf8a042d26155e18fda5feec99d454008cfe4b165d94d1b9d773c40a42f2"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/CC.csv",
+      "source_class": "policy_reference",
+      "chunks": 99,
+      "content_hash": "9e12135e6a217bd864203841d57fa3513853667166dab253ba4c8c50ea70bd0d"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/GE.csv",
+      "source_class": "policy_reference",
+      "chunks": 112,
+      "content_hash": "d3cf4b3a62714de19ca5d2effc0f71b685cfa90ec3731e0ead734f9ddc2aa926"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/PV.csv",
+      "source_class": "policy_reference",
+      "chunks": 112,
+      "content_hash": "b448ccab76ef1ab9105e32740ccbb2ec83209bde108f84481494c705cb7265ba"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/RL.csv",
+      "source_class": "policy_reference",
+      "chunks": 87,
+      "content_hash": "35ee13251a77ba857e5a5dfc0222128a7111a4a814d807334d9b9ecdb73fb2bf"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/RQ.csv",
+      "source_class": "policy_reference",
+      "chunks": 102,
+      "content_hash": "cff0311f34b4d3563913813ad4fdc78b33ce41210b7dabb40b335b070f747d3d"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/VA.csv",
+      "source_class": "policy_reference",
+      "chunks": 121,
+      "content_hash": "99c0f08067e84118c11a6899fb96f1519dff1362cf2a8977a666eace443079d9"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/Raw_Data_from_Underlying_Data_Sources_1996-2024_/_workbook_summary.md",
+      "source_class": "policy_reference",
+      "chunks": 1,
+      "content_hash": "dc28982081df80e73ca429dcc8644c29223db12f6000c7779dc214f65d4444a3"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/_workbook_summary.md",
+      "source_class": "policy_reference",
+      "chunks": 1,
+      "content_hash": "55aec6dd9a3cb7906e102be297bc510768915d3ff90d9744a8de5a718584e0d0"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/cc.csv",
+      "source_class": "policy_reference",
+      "chunks": 189,
+      "content_hash": "5f431be9490b63e28edb7cffa8777f0d870311dc644ddeb71f60bb6061544c52"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/ge.csv",
+      "source_class": "policy_reference",
+      "chunks": 186,
+      "content_hash": "94c8be693082265031f7d598b95e706a5bd2c0cbc0cff4d7d17a54d9210b039f"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/pv.csv",
+      "source_class": "policy_reference",
+      "chunks": 191,
+      "content_hash": "aedb569604c8f2f4900051892d6b451b132cebc708a4ef78e605af77ae48dbc4"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/rl.csv",
+      "source_class": "policy_reference",
+      "chunks": 195,
+      "content_hash": "4ee9ac5c14eec54fb2ca500a6b3733d5707c697bbca72ee172df68b29ffef7bf"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/rq.csv",
+      "source_class": "policy_reference",
+      "chunks": 198,
+      "content_hash": "a1a7d537edc9f5c66eec505d46b69df605cb63f3b5c7d111ab34fd57eae3e04f"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/xlsx/wgidataset_with_sourcedata-2025/va.csv",
+      "source_class": "policy_reference",
+      "chunks": 203,
+      "content_hash": "08a07300883f62f0ded58b56857ee0d5602700881b0f13ab2d6ff801598212ef"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip/V-Dem-CD-v16_csv/_zip_manifest.md",
+      "source_class": "policy_reference",
+      "chunks": 1,
+      "content_hash": "e0e66c0d2211f88b536ec07c7a5bd7d1a1c3722d16d03b1f3e88557f63e25b23"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip/V-Dem-Coder-Level-v16_csv/_zip_manifest.md",
+      "source_class": "policy_reference",
+      "chunks": 1,
+      "content_hash": "a3baf3885ec161f067b8115cd6eb1c524343f6e30892f39b4a594a9ca88e4fab"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/converted/zip/xml_uscAll_119-73/_zip_manifest.md",
+      "source_class": "policy_reference",
+      "chunks": 1,
+      "content_hash": "ff40090681fef36da010a20bafe699093023a04667c1c4520ecb70b98b10ba67"
+    }
+  ],
+  "skipped": [
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/United Nations Charter.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/Universal Declaration of Human Rights.md",
+      "reason": "duplicate_hash"
+    },
+    {
+      "path": "docs/data/governance_sources/windows_staging_import/_hello.txt",
+      "reason": "too_short"
+    }
+  ]
+}

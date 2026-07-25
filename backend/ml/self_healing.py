@@ -79,7 +79,7 @@ class SelfHealingSystem:
         """Check ChromaDB health"""
         try:
             # Try to connect to ChromaDB (assuming default port 8000)
-            response = requests.get("http://100.79.85.32:8000/api/v1/heartbeat", timeout=5)
+            response = requests.get("http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat", timeout=5)
             return {
                 'status': 'healthy' if response.status_code < 500 else 'unhealthy',
                 'response_time': response.elapsed.total_seconds(),

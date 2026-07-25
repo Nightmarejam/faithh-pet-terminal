@@ -1,0 +1,84 @@
+{
+  "layout_name": "Current importance layout",
+  "updated": "2026-03-31",
+  "cards": [
+    {
+      "id": "p1-faithh-cpu-startup-fix",
+      "title": "Stabilize FAITHH startup path on this host (CPU-safe default)",
+      "domain": "technical",
+      "project": "FAITHH",
+      "factors": {
+        "strategic_alignment": 5,
+        "urgency": 5,
+        "effort_inverse": 4,
+        "evidence_strength": 5,
+        "energy_match": 4
+      }
+    },
+    {
+      "id": "p2-wire-idea-triage-into-capture",
+      "title": "Wire idea triage into capture flow (chat/import -> score)",
+      "domain": "technical",
+      "project": "FAITHH",
+      "factors": {
+        "strategic_alignment": 5,
+        "urgency": 4,
+        "effort_inverse": 3,
+        "evidence_strength": 4,
+        "energy_match": 4
+      }
+    },
+    {
+      "id": "p3-runbook-phase2-search",
+      "title": "RunBook Phase 2 search layer (index + CLI)",
+      "domain": "technical",
+      "project": "RunBookToRuleThemAll",
+      "factors": {
+        "strategic_alignment": 5,
+        "urgency": 4,
+        "effort_inverse": 3,
+        "evidence_strength": 4,
+        "energy_match": 4
+      }
+    },
+    {
+      "id": "p4-tomcat-1065-and-ops",
+      "title": "Tom Cat Sound: complete 1065 filing + operating cleanup",
+      "domain": "business",
+      "project": "Tom Cat Sound LLC",
+      "factors": {
+        "strategic_alignment": 5,
+        "urgency": 5,
+        "effort_inverse": 2,
+        "evidence_strength": 5,
+        "energy_match": 3
+      }
+    },
+    {
+      "id": "p5-constella-pedagogy-rollout",
+      "title": "Constella pedagogy rollout (cross-link + examples)",
+      "domain": "civic",
+      "project": "Constella",
+      "factors": {
+        "strategic_alignment": 4,
+        "urgency": 3,
+        "effort_inverse": 4,
+        "evidence_strength": 4,
+        "energy_match": 4
+      }
+    },
+    {
+      "id": "p6-fgs-vision-research-capture",
+      "title": "FGS long-horizon research capture (document-first)",
+      "domain": "personal",
+      "project": "Floating Garden Soundworks",
+      "factors": {
+        "strategic_alignment": 3,
+        "urgency": 1,
+        "effort_inverse": 4,
+        "evidence_strength": 3,
+        "energy_match": 3
+      }
+    }
+  ]
+}

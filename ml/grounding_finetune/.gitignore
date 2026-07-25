@@ -1,0 +1,7 @@
+# Training outputs (large binary files)
+output/
+venv/
+llama.cpp/
+unsloth_compiled_cache/
+__pycache__/
+*.pyc

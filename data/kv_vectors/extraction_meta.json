@@ -1,0 +1,16 @@
+{
+  "model_name": "Qwen/Qwen2-1.5B",
+  "layer_indices": [
+    5,
+    12,
+    20
+  ],
+  "k_shape": [
+    240,
+    128
+  ],
+  "v_shape": [
+    240,
+    128
+  ]
+}

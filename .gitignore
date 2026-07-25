@@ -1,31 +1,149 @@
-.env
-.env.*
-*.env
-*credentials*
-*secrets*
-nas-credentials
+# ============================================================
+# FAITHH .gitignore — Canonical (cleaned 2026-02-09)
+# ============================================================
+
+# --- Python ---
 __pycache__/
-*.pyc
+*.py[cod]
 *.pyo
-.Python
+.coverage
+htmlcov/
+
+# --- Virtual environments ---
 venv/
-.venv/
-*.egg-info/
+ml/venv/
+ml/lora_venv/
+knowledge_base/venv/
+
+# --- Editor / office locks ---
+.~lock*
+
+# --- Runtime artifacts ---
 *.log
-backend.log
-faithh_live_state.json
-faithh_memory.json
-fingerprint_state.json
-project_states.json
-scaffolding_state.json
-decisions_log.json
-pulse_patterns.json
-*.sqlite3
-*.db
-ml/output/
-git_info.json
-test_*.json
-send_*.py
+*.pid
+.backend.pid
+.server.pid
+nohup.out
+diagnostic_report.txt
+test_routing_results_*.json
+
+# --- Environment & secrets ---
+.env
+*.env
+ops/monitoring/.env
+credentials.yaml
+setup_anthropic_key.sh
+*anthropic_key*
+*api_key*
+api_configuration_summary.md
+tests/root/
+*_secrets.md
+*_credentials*
+*_private.md
+keyring.json
+
+# --- Large data (DO NOT COMMIT) ---
+projects/crypto/data/
+AI_Chat_Exports/
+chroma_data/
+chroma_db/*.sqlite3
+chroma_db/*.sqlite3-*
+faithh_rag/
+models/
+uploads/
+static/
+knowledge_base/imports/
+knowledge_base/extracted/
+reports/
+ml/lora/training_data/
+ml/lora/output/
+ml/output/*.html
+*.pptx
+portfolio/
+
+# --- Backups ---
+backups/
+*.backup*
+*.broken*
+*.bak
+*_recovery.html
+
+# --- OS / editor ---
 .DS_Store
+<<<<<<< HEAD
 Thumbs.db
 knowledge_base/
+=======
+*.Zone.Identifier
+*:Zone.Identifier
+.aider*
+.claude/settings.local.json
+
+# --- Network security ---
+network-backups/*_audit*.txt
+network-backups/*_passwords*.txt
+network-backups/unifi_backup*.unf
+*.pcap
+!network-backups/*.md
+
+# --- Tom Cat Sound sensitive docs ---
+projects/tomcat-sound/*.pdf
+projects/tomcat-sound/*.xlsx
+projects/tomcat-sound/*.csv
+projects/tomcat-sound/02_financial/*.xlsx
+projects/tomcat-sound/02_financial/*.csv
+projects/tomcat-sound/*.docx
+projects/tomcat-sound/02_financial/Chase Bank Statements JM/
+projects/tomcat-sound/02_financial/Sofi Bank Statements JM/
+projects/tomcat-sound/CPA_PACKAGE_2024/
+
+# --- Passive collectors ---
+collectors/state/
+collectors/daily/
+
+# --- Archive runtime ---
+ARCHIVE/migration_logs/
+
+# --- Ephemeral inventory (regenerate: find per docs/RELEVANCY_REPORT.md) ---
+docs/current_file_inventory.log
+
+# --- Auto-generated outputs (never commit) ---
+collectors/trends/
+ml/output/journal/
+ml/output/comprehensive_monitoring_report.json
+ml/output/knowledge_base_metrics.json
+ml/output/constella_dataset.json
+ml/output/anthropic_optimization_*.json
+
+# --- KV experiment tensors (regenerate: python3 scripts/extract_kv_vectors.py) ---
+data/kv_vectors/K_qwen2_sample.pt
+data/kv_vectors/V_qwen2_sample.pt
+data/kv_vectors/ablation_matrix.log
+
+# --- Session noise (never commit) ---
+send_*_to_sonnet.py
+sonnet_*.md
+sonnet_*.json
+test_*.json
+*_results_2026*.json
+*_report_2026*.json
+*_report_2026*.md
+health_check_results_*.json
+phase*_progress_report_*.md
+day*_implementation_progress_report_*.md
+week*_completion_summary_*.md
+
+# Large data files - too big for GitHub
+docs/data/governance_sources/windows_staging_import/converted/vdem_chunked/
+docs/data/governance_sources/windows_staging_import/converted/zip_samples/
+docs/data/governance_sources/windows_staging_import/converted/zip/
+ml/signal_chunks_temp.json
+data/chromadb/
+unsloth_compiled_cache/
+wsl.localhost/
+git_info.json
+projects/constella-framework/
+
+# Harden: ignore the entire stray tomcat-sound dir (private business/tax; keep out of public repo)
+projects/tomcat-sound/
+>>>>>>> origin/main

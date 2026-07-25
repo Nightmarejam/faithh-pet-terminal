@@ -1,0 +1,96 @@
+{
+  "timestamp_utc": "2026-03-31T00:33:51.949533+00:00",
+  "input_root": "docs/data/governance_sources/nas_import",
+  "dry_run": false,
+  "files_discovered": 14,
+  "accepted_files": 14,
+  "skipped_files": 0,
+  "documents_prepared": 582,
+  "accepted": [
+    {
+      "path": "docs/data/governance_sources/nas_import/Civic Governance Framework Design.txt",
+      "source_class": "policy_reference",
+      "chunks": 57,
+      "content_hash": "90f0371b6c95abd5e9d9050677fb0d5b6430048b3e813e3f217bee06f7cd9fbc"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/Protecting Citizen Rights.txt",
+      "source_class": "policy_reference",
+      "chunks": 6,
+      "content_hash": "470a6ca306c0c96304358da186c33ffd88ad004bdeb7310f19401180f1498698"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/bigquerydatapolicy.v1.json",
+      "source_class": "policy_reference",
+      "chunks": 28,
+      "content_hash": "03f17ecfa9f23435c77b3dc30b4a8024228cd616769f235dd40eb7d508bfbfc2"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/chromepolicy.v1.json",
+      "source_class": "policy_reference",
+      "chunks": 51,
+      "content_hash": "ccb7182f799d366c73aecf4e0dde2b0a23a1bf49ef1bba755366ed85dba80d7c"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/civicinfo.v2.json",
+      "source_class": "policy_reference",
+      "chunks": 33,
+      "content_hash": "ad4bc4a84f678366cd085da3b3d8bafa60ffff221dcbb3e1ada421bb952d63c9"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/orgpolicy.v2.json",
+      "source_class": "policy_reference",
+      "chunks": 45,
+      "content_hash": "bb31ef1862857d5ce0825a4a7a5225309c2546eb519c03e78b1c153b8b725182"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policyanalyzer.v1.json",
+      "source_class": "policy_reference",
+      "chunks": 11,
+      "content_hash": "2fd697824d914092df3af6ba0d3a42b14fded77bf98631810c035b56335fd0d7"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policyanalyzer.v1beta1.json",
+      "source_class": "policy_reference",
+      "chunks": 10,
+      "content_hash": "e42230a80b7827c1c2fbd6355146f55c0b89122cc4f5df7fed1d77c332251dc4"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1.json",
+      "source_class": "policy_reference",
+      "chunks": 76,
+      "content_hash": "ab4db785cc021333df1b9b485fbca0a0918ee4683a1bebd3ef08fa2469805928"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1alpha.json",
+      "source_class": "policy_reference",
+      "chunks": 93,
+      "content_hash": "c2f42b6340f57e9517ff342fdf8ad44c093be62d7d1d34502a900a66d95145f4"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1beta.json",
+      "source_class": "policy_reference",
+      "chunks": 93,
+      "content_hash": "9794cc2d466088ffdb0834f19df68faea36eca55b2a5d459bbf6d584ce2ba4fb"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policysimulator.v1beta1.json",
+      "source_class": "policy_reference",
+      "chunks": 34,
+      "content_hash": "435b9f1984121b4e09e2e7e8674247e2183075e37541e5b57614443aff9bd0fc"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policytroubleshooter.v1.json",
+      "source_class": "policy_reference",
+      "chunks": 23,
+      "content_hash": "ba58ed6bb90fa746435cf6b7dfb359bbff85ccc06185486dba1b68e7cacb9131"
+    },
+    {
+      "path": "docs/data/governance_sources/nas_import/policytroubleshooter.v1beta.json",
+      "source_class": "policy_reference",
+      "chunks": 22,
+      "content_hash": "70b12bd8b968802cd539db3cf08f1507950653cf1c10891f7bac1078cf989aa6"
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,27 @@
+# WSL2 / 9P containment — keep Cursor from hammering heavy paths during agent sessions.
+# See handoff: WSL Crash Recovery — Cursor Server Reinstall Loop (2026-04-10).
+
+**/chroma_db/**
+**/chroma/**
+**/.chroma/**
+
+docs/current_file_inventory.log
+docs/db_map_raw_*.json
+*.log
+
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+node_modules/
+.git/
+
+archive/
+
+faithh_pet_v4.html
+faithh_cockpit.html
+
+staging/
+tmp/

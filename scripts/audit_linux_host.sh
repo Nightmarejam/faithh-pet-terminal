@@ -177,7 +177,7 @@ fi
 if [ -n "$INCLUDE_FAITHH_HANDOFF" ]; then
   echo
   echo "## Phase C — Checklist pointers (FAITHH handoff Section 7)"
-  echo "- **FAITHH → vLLM**: use Phase B2 grep results; point base URL to \`http://192.158.1.204:8000\` (verify current IP in A2)."
+  echo "- **FAITHH → vLLM**: use Phase B2 grep results; point base URL to \`http://faithh.taileb8c60.ts.net:8000\` (verify current IP in A2)."
   echo "- **ai-stack venv**: Phase B1."
   echo "- **QwQ smoke**: A6 model on disk + A5 listener; start server per handoff Section 6 when ready."
   echo "- **Static IP**: Phase A2 netplan + DHCP note."

@@ -1,0 +1,825 @@
+{
+  "generated_at": "2026-02-23T00:41:31.175059",
+  "timeline": [
+    {
+      "date": "2025-11-09T00:00:00",
+      "title": "FAITHH v4 planning guide",
+      "message_count": 24,
+      "domains": [
+        "business",
+        "technical"
+      ],
+      "intensity": 10
+    },
+    {
+      "date": "2025-12-13T00:00:00",
+      "title": "Backend handoff document review",
+      "message_count": 85,
+      "domains": [
+        "civic",
+        "business",
+        "technical"
+      ],
+      "intensity": 10
+    }
+  ],
+  "domain_progress": {
+    "technical": 70,
+    "business": 40,
+    "civic": 20,
+    "personal": 50
+  },
+  "domain_activity": {
+    "civic": [
+      "2025-12-13T00:00:00"
+    ],
+    "business": [
+      "2025-12-13T00:00:00",
+      "2025-11-09T00:00:00"
+    ],
+    "technical": [
+      "2025-12-13T00:00:00",
+      "2025-11-09T00:00:00"
+    ]
+  },
+  "milestones": [
+    {
+      "date": "2025-11-01",
+      "title": "Major Development: 2025-11",
+      "description": "24 messages across 2 domains",
+      "domains": [
+        "business",
+        "technical"
+      ],
+      "type": "milestone"
+    },
+    {
+      "date": "2025-12-01",
+      "title": "Major Development: 2025-12",
+      "description": "85 messages across 3 domains",
+      "domains": [
+        "civic",
+        "business",
+        "technical"
+      ],
+      "type": "milestone"
+    }
+  ],
+  "project_mentions": {
+    "FAITHH": [
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "FAITHH Temporary Backend \u2013 Handoff Document\r\n\r\nStatus: Working / Incremental / Safe to Reset\r\nLast V..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# Harmony Framework - FAITHH Context Reference\n\n**Version:** v4.0.0\n**Last Updated:** 2024-12-11\n**S..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH System - Master Context & Priority Matrix\n\n**Last Updated:** 2024-12-11\n**Current Session:*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Parity File Index\n**Last Updated**: 2025-12-02  \n**Purpose**: Track documentation that mirr..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "This is **excellent**\u2014clear, honest, and exactly what a future model (or human) needs to resume with..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "```json\n{\n  \"schema_version\": \"faithh.handoff.backend.v1\",\n  \"document\": {\n    \"title\": \"FAITHH Temp..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Cool \u2014 starting with **1) Canonical truth sources**.\n\n### 1A) Which files should be the authoritativ..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Yep \u2014 your tiering instinct is right, and we can make it **deterministic** (no \u201cmystical\u201d weighting)..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Resonance Journal\n**Purpose**: Track what FAITHH helps with and what it's missing  \n**Time*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# Harmony Framework - FAITHH Context Reference\n\n**Version:** v4.0.0\n**Last Updated:** 2024-12-11\n**S..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH System - Master Context & Priority Matrix\n\n**Last Updated:** 2024-12-11\n**Current Session:*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Parity File Index\n**Last Updated**: 2025-12-02  \n**Purpose**: Track documentation that mirr..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Perfect. Moving cleanly to **2) Provider Selection Rules**.\n\nThis section defines **deterministic ro..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Awesome \u2014 moving to **3) Metadata contract for UI**.\n\nGoal: the UI (and any future AI/humans) can *a..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## 4) Status endpoint spec\n\nYou\u2019ll want **two layers** of status: a fast \u201cam I alive?\u201d check and an ..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Great \u2014 we\u2019ll lock in:\n\n- \u2705 `/api/status` uses **cached results**\n- \u2705 `/api/status/probe` is **debug..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## 5) Context injection guardrails\n\nGoal: deterministic \u201ctruth seeding\u201d that is **auditable, bounded..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "You\u2019re thinking in exactly the **right direction**, and your intuition about *information overload* ..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Absolutely. Here\u2019s a **scaffold-first schema** that lets FAITHH **self-sort** without \u201cforgetting\u201d\u2014i..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Alright \u2014 let\u2019s draft this into something you can drop into the repo and start using immediately.\n\n#..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `faithh_refinery/README.md` (draft)\n\n```md\n# FAITHH Refinery\n**Purpose:** Convert high-volume, me..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## 1) Cleanup/Migration Script Spec (v1)\n\n### Script name\n`tools/refinery_migrate_v1.py`\n\n### Primar..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## Retrieval Policy Draft (Tiered RAG + Explicit Archive Intent)\n\n### File: `docs/RETRIEVAL_POLICY.m..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Perfect \u2014 we\u2019ll continue **straight through drafting**, keeping everything **drop-in ready** and con..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Yes \u2014 **this is exactly the right moment to switch**. \ud83d\udc4d  \nYou caught this at the *architecturally co..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Great \u2014 here are the **next steps** in a way that keeps your foundations supported, avoids drift, an..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Got it \u2014 proceeding in the safest order: **(1) lock BGE in docs/parity \u2192 (2) draft eval harness spec..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Cool \u2014 continuing with the two implementation-facing drafts:\n\n1) **`/api/chat` orchestration wiring*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Continuing exactly as planned. Below are the **next three support-beam drafts**, written to be **dro..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Cognitive Layer 2: Synthesis\n\nLayer 2 is the \u201ccortex\u201d: it takes **bounded evidence** from L..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Below is a **drop-in Layer 2 Synthesis Prompt Block** you can generate on the backend and prepend as..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Below is **Evidence Packet Format v1** \u2014 designed to be:\n\n- deterministic (backend-generated, no mod..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/chat` Payload + Response Schema Update (Layer 2 + Evidence Packet Builder)\n\nBelow is a clea..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/rag_search` Implementation Contract v1\nIncludes **Chroma query strategy**, **tiered collect..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/rag_upsert` Contract v1\nThis completes the loop: **Refinery outputs \u2192 validated upsert \u2192 ti..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "### Difference in one line\n- **`/api/rag_stats`** = *read-only dashboard / health + counts* (safe, a..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/rag_stats` Full Draft (Schema + codes + UI fields)\n\n---\n\n# 1) Endpoint: `/api/rag_stats`\n\n#..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/status` Integrated Contract v1\nOne lightweight endpoint your UI can poll that unifies:\n- **..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## Status cache invalidation triggers (v1)\nGoal: keep `/api/status?mode=cache` **cheap** while still..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Based on the documents you've shared (like the Week 1 Completion Report, MASTER_ACTION_FAITHH.md, an..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Perfect \u2014 that\u2019s a clear picture of where things stand. You\u2019ve got **FAITHH v4** positioned as a mod..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "I will be sending you some more context before we go on : # \ud83c\udfaf FAITHH Master Context & Project State\r..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent \u2014 this snapshot is detailed enough to function as a complete architectural reference point..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# MASTER ACTION - FAITHH PROJECT\r\n**Project:** FAITHH PET Terminal AI Assistant  \r\n**Timeline:** 2-M..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Perfect \u2014 this version of **MASTER ACTION - FAITHH PROJECT** shows you\u2019ve formalized both your *proj..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83c\udfa8 Local Image Generation Setup Guide\r\n**Goal:** Turn your machine into an image creation powerhous..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "This is an excellent architectural and operational guide \u2014 it reads like a professional local deploy..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83c\udfa8 Why Local Image Generation is Perfect for FAITHH\r\n\r\n**TL;DR:** Free, unlimited, private, and you..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "That\u2019s an excellent, production-quality brief \u2014 perfectly balanced between technical and architectur..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83d\ude80 FAITHH v4 - VS Code Implementation Handoff\r\n**Created:** November 9, 2025  \r\n**From:** Claude.ai..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Nice \u2014 thanks for sending the full handoff. I\u2019ve read everything you provided and built a ready-to-d..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "we don't have to code anything, but I would like you to analyze these documents and this recall of g..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent \u2014 this handoff and the Grok 4 recall together sketch a full system lifecycle for **FAITHH ..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent \u2014 the goal here will be to produce a **clean, AI-readable architectural bundle** in Markdo..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "**Here are two ready-to-drop, AI-optimized Markdown files**  \nCopy-paste them directly into `~/ai-st..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent question \u2014 and yes, it\u2019s a smart consideration now that FAITHH is moving toward a **self-d..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Perfect! Let\u2019s embed **machine-friendly front-matter** into both files so they\u2019re instantly parseabl..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Here are your two FINAL, ready-to-save Markdown files with clean YAML front-matter \u2014 optimized for G..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Here\u2019s the complete content for `FAITHH_V4_ARCHITECTURE_SUMMARY_AI.md` with YAML front-matter ready ..."
+      }
+    ],
+    "Backend": [
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "FAITHH Temporary Backend \u2013 Handoff Document\r\n\r\nStatus: Working / Incremental / Safe to Reset\r\nLast V..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH System - Master Context & Priority Matrix\n\n**Last Updated:** 2024-12-11\n**Current Session:*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Parity File Index\n**Last Updated**: 2025-12-02  \n**Purpose**: Track documentation that mirr..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "This is **excellent**\u2014clear, honest, and exactly what a future model (or human) needs to resume with..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "```json\n{\n  \"schema_version\": \"faithh.handoff.backend.v1\",\n  \"document\": {\n    \"title\": \"FAITHH Temp..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Cool \u2014 starting with **1) Canonical truth sources**.\n\n### 1A) Which files should be the authoritativ..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Yep \u2014 your tiering instinct is right, and we can make it **deterministic** (no \u201cmystical\u201d weighting)..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Resonance Journal\n**Purpose**: Track what FAITHH helps with and what it's missing  \n**Time*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH System - Master Context & Priority Matrix\n\n**Last Updated:** 2024-12-11\n**Current Session:*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Parity File Index\n**Last Updated**: 2025-12-02  \n**Purpose**: Track documentation that mirr..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Perfect. Moving cleanly to **2) Provider Selection Rules**.\n\nThis section defines **deterministic ro..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "UUID is the simplest \u201cno extra moving parts\u201d choice. You don\u2019t need a mapping chart, and you won\u2019t e..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## 4) Status endpoint spec\n\nYou\u2019ll want **two layers** of status: a fast \u201cam I alive?\u201d check and an ..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Great \u2014 we\u2019ll lock in:\n\n- \u2705 `/api/status` uses **cached results**\n- \u2705 `/api/status/probe` is **debug..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## 5) Context injection guardrails\n\nGoal: deterministic \u201ctruth seeding\u201d that is **auditable, bounded..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Absolutely. Here\u2019s a **scaffold-first schema** that lets FAITHH **self-sort** without \u201cforgetting\u201d\u2014i..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Alright \u2014 let\u2019s draft this into something you can drop into the repo and start using immediately.\n\n#..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `faithh_refinery/README.md` (draft)\n\n```md\n# FAITHH Refinery\n**Purpose:** Convert high-volume, me..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## 1) Cleanup/Migration Script Spec (v1)\n\n### Script name\n`tools/refinery_migrate_v1.py`\n\n### Primar..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## Retrieval Policy Draft (Tiered RAG + Explicit Archive Intent)\n\n### File: `docs/RETRIEVAL_POLICY.m..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Perfect \u2014 we\u2019ll continue **straight through drafting**, keeping everything **drop-in ready** and con..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Got it \u2014 proceeding in the safest order: **(1) lock BGE in docs/parity \u2192 (2) draft eval harness spec..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Cool \u2014 continuing with the two implementation-facing drafts:\n\n1) **`/api/chat` orchestration wiring*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Continuing exactly as planned. Below are the **next three support-beam drafts**, written to be **dro..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH Cognitive Layer 2: Synthesis\n\nLayer 2 is the \u201ccortex\u201d: it takes **bounded evidence** from L..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Below is a **drop-in Layer 2 Synthesis Prompt Block** you can generate on the backend and prepend as..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Below is **Evidence Packet Format v1** \u2014 designed to be:\n\n- deterministic (backend-generated, no mod..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "Below is a deterministic **Retrieval \u2192 Evidence Packet Builder Algorithm v1** you can implement in y..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/chat` Payload + Response Schema Update (Layer 2 + Evidence Packet Builder)\n\nBelow is a clea..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/rag_search` Implementation Contract v1\nIncludes **Chroma query strategy**, **tiered collect..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/rag_upsert` Contract v1\nThis completes the loop: **Refinery outputs \u2192 validated upsert \u2192 ti..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "### Difference in one line\n- **`/api/rag_stats`** = *read-only dashboard / health + counts* (safe, a..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/rag_stats` Full Draft (Schema + codes + UI fields)\n\n---\n\n# 1) Endpoint: `/api/rag_stats`\n\n#..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "## `/api/status` Integrated Contract v1\nOne lightweight endpoint your UI can poll that unifies:\n- **..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Based on the documents you've shared (like the Week 1 Completion Report, MASTER_ACTION_FAITHH.md, an..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Perfect \u2014 that\u2019s a clear picture of where things stand. You\u2019ve got **FAITHH v4** positioned as a mod..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "I will be sending you some more context before we go on : # \ud83c\udfaf FAITHH Master Context & Project State\r..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent \u2014 this snapshot is detailed enough to function as a complete architectural reference point..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# MASTER ACTION - FAITHH PROJECT\r\n**Project:** FAITHH PET Terminal AI Assistant  \r\n**Timeline:** 2-M..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Perfect \u2014 this version of **MASTER ACTION - FAITHH PROJECT** shows you\u2019ve formalized both your *proj..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83c\udfa8 Local Image Generation Setup Guide\r\n**Goal:** Turn your machine into an image creation powerhous..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "This is an excellent architectural and operational guide \u2014 it reads like a professional local deploy..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83c\udfa8 Why Local Image Generation is Perfect for FAITHH\r\n\r\n**TL;DR:** Free, unlimited, private, and you..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "That\u2019s an excellent, production-quality brief \u2014 perfectly balanced between technical and architectur..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83d\ude80 FAITHH v4 - VS Code Implementation Handoff\r\n**Created:** November 9, 2025  \r\n**From:** Claude.ai..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Nice \u2014 thanks for sending the full handoff. I\u2019ve read everything you provided and built a ready-to-d..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "we don't have to code anything, but I would like you to analyze these documents and this recall of g..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent \u2014 this handoff and the Grok 4 recall together sketch a full system lifecycle for **FAITHH ..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent \u2014 the goal here will be to produce a **clean, AI-readable architectural bundle** in Markdo..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "**Here are two ready-to-drop, AI-optimized Markdown files**  \nCopy-paste them directly into `~/ai-st..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Perfect! Let\u2019s embed **machine-friendly front-matter** into both files so they\u2019re instantly parseabl..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Here\u2019s the complete content for `FAITHH_V4_ARCHITECTURE_SUMMARY_AI.md` with YAML front-matter ready ..."
+      }
+    ],
+    "PULSE": [
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH System - Master Context & Priority Matrix\n\n**Last Updated:** 2024-12-11\n**Current Session:*..."
+      },
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "# FAITHH System - Master Context & Priority Matrix\n\n**Last Updated:** 2024-12-11\n**Current Session:*..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Based on the documents you've shared (like the Week 1 Completion Report, MASTER_ACTION_FAITHH.md, an..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83c\udfa8 Local Image Generation Setup Guide\r\n**Goal:** Turn your machine into an image creation powerhous..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "This is an excellent architectural and operational guide \u2014 it reads like a professional local deploy..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83c\udfa8 Why Local Image Generation is Perfect for FAITHH\r\n\r\n**TL;DR:** Free, unlimited, private, and you..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "That\u2019s an excellent, production-quality brief \u2014 perfectly balanced between technical and architectur..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "# \ud83d\ude80 FAITHH v4 - VS Code Implementation Handoff\r\n**Created:** November 9, 2025  \r\n**From:** Claude.ai..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "we don't have to code anything, but I would like you to analyze these documents and this recall of g..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Excellent \u2014 the goal here will be to produce a **clean, AI-readable architectural bundle** in Markdo..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "**Here are two ready-to-drop, AI-optimized Markdown files**  \nCopy-paste them directly into `~/ai-st..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Perfect! Let\u2019s embed **machine-friendly front-matter** into both files so they\u2019re instantly parseabl..."
+      },
+      {
+        "date": "2025-11-09T00:00:00",
+        "context": "Here\u2019s the complete content for `FAITHH_V4_ARCHITECTURE_SUMMARY_AI.md` with YAML front-matter ready ..."
+      }
+    ],
+    "Constella": [
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "{\n  \"projects\": {\n    \"constella\": {\n      \"full_name\": \"Constella Framework\",\n      \"current_phase\"..."
+      }
+    ],
+    "Governance Framework": [
+      {
+        "date": "2025-12-13T00:00:00",
+        "context": "{\n  \"projects\": {\n    \"constella\": {\n      \"full_name\": \"Constella Framework\",\n      \"current_phase\"..."
+      }
+    ]
+  },
+  "heatmap_data": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      4
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      5,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "strategic_context": {
+    "current_phase": "Phase 2: Infrastructure",
+    "phase_progress": 35,
+    "strategic_coherence_score": 85
+  }
+}

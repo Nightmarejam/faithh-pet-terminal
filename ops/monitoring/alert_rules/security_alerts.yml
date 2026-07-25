@@ -1,0 +1,92 @@
+groups:
+  - name: security_core
+    interval: 60s
+    rules:
+      - alert: SSHBruteForceDetected
+        expr: |
+          increase(fail2ban_banned_ip_total{jail="sshd"}[5m]) > 0
+          OR
+          (increase(node_systemd_unit_state{name="fail2ban.service"}[1m]) == 0
+           AND on() vector(1))
+        for: 0m
+        labels:
+          severity: critical
+          category: auth
+        annotations:
+          summary: "SSH brute force activity on {{ $labels.instance }}"
+          description: "fail2ban sshd jail has triggered bans. Investigate /var/log/auth.log immediately."
+
+      - alert: AuthFailureBurst
+        expr: |
+          increase(node_textfile_scrape_errors_total[5m]) > 5
+        for: 2m
+        labels:
+          severity: warning
+          category: auth
+        annotations:
+          summary: "Auth failure burst on {{ $labels.instance }}"
+          description: "High rate of authentication failures detected."
+
+      - alert: NewListeningPortDetected
+        expr: |
+          (count by (instance) (node_netstat_Tcp_CurrEstab) - count by (instance) (node_netstat_Tcp_CurrEstab offset 5m)) > 3
+        for: 5m
+        labels:
+          severity: warning
+          category: network
+        annotations:
+          summary: "Unusual connection count change on {{ $labels.instance }}"
+          description: "TCP established connections changed significantly. Possible new service or intrusion."
+
+      - alert: HostDown
+        expr: up{job="node"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          category: availability
+        annotations:
+          summary: "Host {{ $labels.instance }} is down"
+          description: "node_exporter has not responded for 2 minutes."
+
+      - alert: DiskSpaceCritical
+        expr: |
+          (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) < 0.10
+        for: 5m
+        labels:
+          severity: critical
+          category: capacity
+        annotations:
+          summary: "Disk space critical on {{ $labels.instance }}"
+          description: "Less than 10% disk space remaining on root filesystem."
+
+      - alert: OutboundTrafficSpike
+        expr: |
+          increase(node_network_transmit_bytes_total{device!="lo"}[5m]) > 524288000
+        for: 0m
+        labels:
+          severity: warning
+          category: network
+        annotations:
+          summary: "Outbound traffic spike on {{ $labels.instance }}"
+          description: "More than 500MB transmitted in 5 minutes. Possible data exfiltration or backup runaway."
+
+      - alert: MemoryPressureHigh
+        expr: |
+          (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) > 0.90
+        for: 5m
+        labels:
+          severity: warning
+          category: capacity
+        annotations:
+          summary: "Memory pressure high on {{ $labels.instance }}"
+          description: "Over 90% memory in use. Services may degrade."
+
+      - alert: GrafanaDown
+        expr: up{job="grafana"} == 0
+        for: 2m
+        labels:
+          severity: warning
+          category: availability
+        annotations:
+          summary: "Grafana is not responding"
+          description: "Grafana has been unreachable for 2 minutes. Monitoring dashboard is down."

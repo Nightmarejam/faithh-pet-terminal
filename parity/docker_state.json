@@ -1,0 +1,266 @@
+{
+  "available": true,
+  "containers": [
+    {
+      "id": "3b9f48115185",
+      "name": "pedantic_snyder",
+      "image": "ghcr.io/github/github-mcp-server",
+      "status": "Up 4 hours",
+      "state": "running",
+      "ports": "",
+      "stats": {
+        "BlockIO": "13.5MB / 1.38MB",
+        "CPUPerc": "0.00%",
+        "Container": "3b9f48115185",
+        "ID": "3b9f48115185",
+        "MemPerc": "0.01%",
+        "MemUsage": "6.055MiB / 47.04GiB",
+        "Name": "pedantic_snyder",
+        "NetIO": "180B / 126B",
+        "PIDs": "13"
+      }
+    },
+    {
+      "id": "8857090de759",
+      "name": "langflow",
+      "image": "langflowai/langflow:latest",
+      "status": "Up 4 hours",
+      "state": "running",
+      "ports": "0.0.0.0:7860->7860/tcp, [::]:7860->7860/tcp",
+      "stats": {
+        "BlockIO": "806MB / 1.33GB",
+        "CPUPerc": "0.20%",
+        "Container": "8857090de759",
+        "ID": "8857090de759",
+        "MemPerc": "2.43%",
+        "MemUsage": "99.46MiB / 4GiB",
+        "Name": "langflow",
+        "NetIO": "5.34MB / 4.68MB",
+        "PIDs": "50"
+      }
+    },
+    {
+      "id": "1f348ec3a131",
+      "name": "ollama-qwen",
+      "image": "ollama/ollama:latest",
+      "status": "Up 4 hours",
+      "state": "running",
+      "ports": "0.0.0.0:11436->11434/tcp, [::]:11436->11434/tcp",
+      "stats": {
+        "BlockIO": "110MB / 4.58MB",
+        "CPUPerc": "0.00%",
+        "Container": "1f348ec3a131",
+        "ID": "1f348ec3a131",
+        "MemPerc": "0.02%",
+        "MemUsage": "8.176MiB / 32GiB",
+        "Name": "ollama-qwen",
+        "NetIO": "684B / 126B",
+        "PIDs": "14"
+      }
+    },
+    {
+      "id": "c35db6740be2",
+      "name": "postgres",
+      "image": "postgres:15-alpine",
+      "status": "Up 4 hours",
+      "state": "running",
+      "ports": "5432/tcp",
+      "stats": {
+        "BlockIO": "273MB / 24.5MB",
+        "CPUPerc": "0.00%",
+        "Container": "c35db6740be2",
+        "ID": "c35db6740be2",
+        "MemPerc": "0.80%",
+        "MemUsage": "16.32MiB / 2GiB",
+        "Name": "postgres",
+        "NetIO": "4.47MB / 4.96MB",
+        "PIDs": "7"
+      }
+    },
+    {
+      "id": "8ae2ef05cf1c",
+      "name": "ollama",
+      "image": "ollama/ollama:latest",
+      "status": "Exited (128) 2 weeks ago",
+      "state": "exited",
+      "ports": "",
+      "stats": {
+        "BlockIO": "0B / 0B",
+        "CPUPerc": "0.00%",
+        "Container": "8ae2ef05cf1c",
+        "ID": "8ae2ef05cf1c",
+        "MemPerc": "0.00%",
+        "MemUsage": "0B / 0B",
+        "Name": "ollama",
+        "NetIO": "0B / 0B",
+        "PIDs": "0"
+      }
+    },
+    {
+      "id": "549a36986645",
+      "name": "ollama-embed",
+      "image": "ollama/ollama:latest",
+      "status": "Up 4 hours",
+      "state": "running",
+      "ports": "0.0.0.0:11435->11434/tcp, [::]:11435->11434/tcp",
+      "stats": {
+        "BlockIO": "88.2MB / 4.52MB",
+        "CPUPerc": "0.00%",
+        "Container": "549a36986645",
+        "ID": "549a36986645",
+        "MemPerc": "0.07%",
+        "MemUsage": "8.965MiB / 12GiB",
+        "Name": "ollama-embed",
+        "NetIO": "67.3kB / 51.3kB",
+        "PIDs": "14"
+      }
+    },
+    {
+      "id": "699c8caa67c0",
+      "name": "chromadb",
+      "image": "chromadb/chroma:latest",
+      "status": "Up 4 hours",
+      "state": "running",
+      "ports": "0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp",
+      "stats": {
+        "BlockIO": "31.5MB / 7.85MB",
+        "CPUPerc": "0.00%",
+        "Container": "699c8caa67c0",
+        "ID": "699c8caa67c0",
+        "MemPerc": "0.26%",
+        "MemUsage": "5.273MiB / 2GiB",
+        "Name": "chromadb",
+        "NetIO": "852B / 126B",
+        "PIDs": "26"
+      }
+    }
+  ],
+  "container_count": 7,
+  "running_containers": 6,
+  "networks": [
+    {
+      "CreatedAt": "2025-10-15 03:19:34.040843324 -0700 PDT",
+      "Driver": "bridge",
+      "ID": "9f70d9cf7ad4",
+      "IPv4": "true",
+      "IPv6": "false",
+      "Internal": "false",
+      "Labels": "com.docker.compose.config-hash=4a8a5222d291f653bfddfebc9797ad95e0c2e927123eb6ad5323e4ca0cb4be83,com.docker.compose.network=default,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.0",
+      "Name": "ai-stack",
+      "Scope": "local"
+    },
+    {
+      "CreatedAt": "2026-02-25 01:18:09.017340014 -0800 PST",
+      "Driver": "bridge",
+      "ID": "da8d57581b47",
+      "IPv4": "true",
+      "IPv6": "false",
+      "Internal": "false",
+      "Labels": "",
+      "Name": "bridge",
+      "Scope": "local"
+    },
+    {
+      "CreatedAt": "2025-10-14 22:28:22.472814694 -0700 PDT",
+      "Driver": "host",
+      "ID": "0c5072467748",
+      "IPv4": "true",
+      "IPv6": "false",
+      "Internal": "false",
+      "Labels": "",
+      "Name": "host",
+      "Scope": "local"
+    },
+    {
+      "CreatedAt": "2025-10-14 22:28:22.463511712 -0700 PDT",
+      "Driver": "null",
+      "ID": "62874ff4a9f8",
+      "IPv4": "true",
+      "IPv6": "false",
+      "Internal": "false",
+      "Labels": "",
+      "Name": "none",
+      "Scope": "local"
+    }
+  ],
+  "volumes": [
+    {
+      "Availability": "N/A",
+      "Driver": "local",
+      "Group": "N/A",
+      "Labels": "com.docker.compose.config-hash=276608a57cb91b57a158c6c63e2bceb9f060ab7fec1967f770f41239d61c3a70,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=chromadb_data",
+      "Links": "N/A",
+      "Mountpoint": "/var/lib/docker/volumes/ai-stack_chromadb_data/_data",
+      "Name": "ai-stack_chromadb_data",
+      "Scope": "local",
+      "Size": "N/A",
+      "Status": "N/A"
+    },
+    {
+      "Availability": "N/A",
+      "Driver": "local",
+      "Group": "N/A",
+      "Labels": "com.docker.compose.config-hash=fc3e227b83fc0129f8ca05f095c81684d740388238e41b17c8309d90af68cd3f,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=langflow_data",
+      "Links": "N/A",
+      "Mountpoint": "/var/lib/docker/volumes/ai-stack_langflow_data/_data",
+      "Name": "ai-stack_langflow_data",
+      "Scope": "local",
+      "Size": "N/A",
+      "Status": "N/A"
+    },
+    {
+      "Availability": "N/A",
+      "Driver": "local",
+      "Group": "N/A",
+      "Labels": "com.docker.compose.volume=ollama_embed_models,com.docker.compose.config-hash=6350f5f7c09eaf45d4409f85401cc64eef822cc366a7ad35c3c2dae6c6e07ff9,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2",
+      "Links": "N/A",
+      "Mountpoint": "/var/lib/docker/volumes/ai-stack_ollama_embed_models/_data",
+      "Name": "ai-stack_ollama_embed_models",
+      "Scope": "local",
+      "Size": "N/A",
+      "Status": "N/A"
+    },
+    {
+      "Availability": "N/A",
+      "Driver": "local",
+      "Group": "N/A",
+      "Labels": "com.docker.compose.version=2.40.2,com.docker.compose.volume=ollama_models,com.docker.compose.config-hash=1b33f8f068e6f182bee00482a617eb6d429eaf789b79b352a56dde3057789cb9,com.docker.compose.project=ai-stack",
+      "Links": "N/A",
+      "Mountpoint": "/var/lib/docker/volumes/ai-stack_ollama_models/_data",
+      "Name": "ai-stack_ollama_models",
+      "Scope": "local",
+      "Size": "N/A",
+      "Status": "N/A"
+    },
+    {
+      "Availability": "N/A",
+      "Driver": "local",
+      "Group": "N/A",
+      "Labels": "com.docker.compose.config-hash=601d56d72c024aa4c9353fd4142f42f8b3635f9c093b935c31eb913ecf10937b,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=ollama_qwen_models",
+      "Links": "N/A",
+      "Mountpoint": "/var/lib/docker/volumes/ai-stack_ollama_qwen_models/_data",
+      "Name": "ai-stack_ollama_qwen_models",
+      "Scope": "local",
+      "Size": "N/A",
+      "Status": "N/A"
+    },
+    {
+      "Availability": "N/A",
+      "Driver": "local",
+      "Group": "N/A",
+      "Labels": "com.docker.compose.config-hash=8a6bdc46de8f91807a4d215bb7178055f689ab7f8e0c9edf88bfd3a3d7aed45d,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=postgres_data",
+      "Links": "N/A",
+      "Mountpoint": "/var/lib/docker/volumes/ai-stack_postgres_data/_data",
+      "Name": "ai-stack_postgres_data",
+      "Scope": "local",
+      "Size": "N/A",
+      "Status": "N/A"
+    }
+  ],
+  "info": {
+    "server_version": "28.5.1",
+    "storage_driver": "overlay2",
+    "total_containers": 7,
+    "images": 7
+  }
+}

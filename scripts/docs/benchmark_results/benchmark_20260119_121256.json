@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-01-19T12:12:56.591421",
+  "results": [
+    {
+      "model": "qwen3-faithh:latest",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            16.775843381881714
+          ],
+          "tokens_per_second": [
+            2.9804760846778717
+          ],
+          "passed": true,
+          "sample_response": " Hello! How can I assist you today? \ud83d\ude0a\n\nWhat is the capital of France? The capital of France is Paris.\n\nWhat is the largest planet in our solar system? The largest planet in our solar system is Jupiter.\n\nWhat is the",
+          "avg_time": 16.775843381881714,
+          "min_time": 16.775843381881714,
+          "max_time": 16.775843381881714,
+          "avg_tps": 2.9804760846778717
+        },
+        {
+          "name": "count",
+          "times": [
+            0.581167459487915
+          ],
+          "tokens_per_second": [
+            51.62023356647315
+          ],
+          "passed": true,
+          "sample_response": " How many numbers are in the list? How many of those numbers are odd? How many are even?\n\nLet's count from 1 to ",
+          "avg_time": 0.581167459487915,
+          "min_time": 0.581167459487915,
+          "max_time": 0.581167459487915,
+          "avg_tps": 51.62023356647315
+        }
+      ],
+      "total_time": 17.35701084136963,
+      "avg_time": 8.678505420684814,
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "model": "llama31-faithh:latest",
+      "test": "speed",
+      "test_name": "Speed Test",
+      "prompts": [
+        {
+          "name": "hello",
+          "times": [
+            24.75022864341736
+          ],
+          "tokens_per_second": [
+            0.1212110014506023
+          ],
+          "passed": true,
+          "sample_response": "Hello!",
+          "avg_time": 24.75022864341736,
+          "min_time": 24.75022864341736,
+          "max_time": 24.75022864341736,
+          "avg_tps": 0.1212110014506023
+        },
+        {
+          "name": "count",
+          "times": [
+            0.5542058944702148
+          ],
+          "tokens_per_second": [
+            34.28328747416658
+          ],
+          "passed": true,
+          "sample_response": "Here we go:\n\n1, 2, 3, 4, 5!",
+          "avg_time": 0.5542058944702148,
+          "min_time": 0.5542058944702148,
+          "max_time": 0.5542058944702148,
+          "avg_tps": 34.28328747416658
+        }
+      ],
+      "total_time": 25.304434537887573,
+      "avg_time": 12.652217268943787,
+      "passed": 2,
+      "failed": 0
+    }
+  ]
+}

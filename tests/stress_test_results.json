@@ -1,0 +1,336 @@
+{
+  "timestamp": "2026-02-08T22:10:41.299610",
+  "backend_url": "http://localhost:5557",
+  "test_count": 13,
+  "summary": {
+    "pass": 12,
+    "warn": 0,
+    "fail": 1
+  },
+  "results": [
+    {
+      "name": "LLM/AI query \u2192 llm_ai_tools",
+      "category": "chip_activation",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 3,
+      "chip_labels": [
+        "LLM & AI Tools",
+        "Tom Cat Sound / Audio",
+        "Hardware & System Config"
+      ],
+      "elapsed": 2.02,
+      "response_preview": "Fine-tuning a language model with LoRA adapters using Ollama is an exciting project. Since you've be",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "2.0s"
+        ],
+        "chip_activation": [
+          "PASS",
+          "matched 'llm' in chips"
+        ]
+      }
+    },
+    {
+      "name": "Docker/Infra query \u2192 infrastructure_docker",
+      "category": "chip_activation",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 3,
+      "chip_labels": [
+        "Infrastructure & Docker",
+        "ChromaDB & RAG Indexing",
+        "LLM & AI Tools"
+      ],
+      "elapsed": 1.73,
+      "response_preview": "To configure `docker-compose` for the ChromaDB and Ollama containers, let's break it down into steps",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.7s"
+        ],
+        "chip_activation": [
+          "PASS",
+          "matched 'infrastructure' in chips"
+        ]
+      }
+    },
+    {
+      "name": "Security query \u2192 networking_security",
+      "category": "chip_activation",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 1,
+      "chip_labels": [
+        "Networking & Security"
+      ],
+      "elapsed": 1.88,
+      "response_preview": "Excellent progress on setting up your firewall rules and SSH keys for secure remote access. I'm exci",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.9s"
+        ],
+        "chip_activation": [
+          "PASS",
+          "matched 'networking' in chips"
+        ]
+      }
+    },
+    {
+      "name": "FAITHH project query \u2192 faithh_core",
+      "category": "chip_activation",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 5,
+      "chip_labels": [
+        "Hardware & System Config",
+        "FAITHH Core System",
+        "Gen8 Server & Homelab"
+      ],
+      "elapsed": 1.61,
+      "response_preview": "The FAITHH system architecture is designed to be modular and scalable, with a clean separation betwe",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.6s"
+        ],
+        "chip_activation": [
+          "PASS",
+          "matched 'faithh' in chips"
+        ]
+      }
+    },
+    {
+      "name": "Server/Homelab query \u2192 server_gen8",
+      "category": "chip_activation",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 5,
+      "chip_labels": [
+        "Gen8 Server & Homelab",
+        "Infrastructure & Docker",
+        "Hardware & System Config"
+      ],
+      "elapsed": 1.25,
+      "response_preview": "Let's check on the Gen8 server's current state. When we last discussed the server's configuration, w",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.2s"
+        ],
+        "chip_activation": [
+          "PASS",
+          "matched 'server' in chips"
+        ]
+      }
+    },
+    {
+      "name": "Audio/Business query \u2192 audio_business",
+      "category": "chip_activation",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 3,
+      "chip_labels": [
+        "Tom Cat Sound / Audio",
+        "Gen8 Server & Homelab",
+        "FAITHH Core System"
+      ],
+      "elapsed": 1.07,
+      "response_preview": "The Tom Cat Sound LLC audio engineering and production business is currently in the Operations & Gro",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.1s"
+        ],
+        "chip_activation": [
+          "PASS",
+          "matched 'audio' in chips"
+        ]
+      }
+    },
+    {
+      "name": "RAG: FAITHH project knowledge",
+      "category": "rag",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 5,
+      "chip_labels": [
+        "FAITHH Core System",
+        "Constella Framework",
+        "Git & Version Control"
+      ],
+      "elapsed": 1.03,
+      "response_preview": "I am FAITHH, Jonathan's personal AI assistant and thought partner. My purpose is to help maintain pr",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.0s"
+        ],
+        "chip_activation": [
+          "PASS",
+          "matched 'faithh' in chips"
+        ],
+        "rag": [
+          "PASS",
+          "expected=yes, got=yes"
+        ]
+      }
+    },
+    {
+      "name": "RAG: General knowledge (RAG still used by design)",
+      "category": "rag",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 0,
+      "chip_labels": [],
+      "elapsed": 0.68,
+      "response_preview": "The capital of France is Paris. I'm glad we could take a quick break from our projects to look up so",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "0.7s"
+        ],
+        "rag": [
+          "PASS",
+          "expected=yes, got=yes"
+        ]
+      }
+    },
+    {
+      "name": "Default provider (should use env MODEL_PROVIDER=groq)",
+      "category": "routing",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 5,
+      "chip_labels": [
+        "File Organization & Archives",
+        "ChromaDB & RAG Indexing",
+        "Constella Framework"
+      ],
+      "elapsed": 0.6,
+      "response_preview": "Python list comprehensions - a powerful tool in our coding arsenal. You've used them extensively in ",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "0.6s"
+        ],
+        "provider": [
+          "PASS",
+          "expected=Groq, got=Groq"
+        ]
+      }
+    },
+    {
+      "name": "Explicit Ollama override (tests model name mapping fix)",
+      "category": "routing",
+      "success": true,
+      "provider": "Meta (via Ollama)",
+      "model": "llama31-faithh:latest",
+      "rag_used": true,
+      "chips_activated": 5,
+      "chip_labels": [
+        "Hardware & System Config",
+        "Constella Framework",
+        "Health & Wellness"
+      ],
+      "elapsed": 14.43,
+      "response_preview": "\ud83e\udd16 I'd be delighted to help you understand polymorphism! \ud83d\ude80\n\nPolymorphism is a fundamental concept in ",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "14.4s"
+        ],
+        "provider": [
+          "FAIL",
+          "expected=Ollama, got=Meta (via Ollama)"
+        ]
+      }
+    },
+    {
+      "name": "Context: Establish topic",
+      "category": "context",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 4,
+      "chip_labels": [
+        "ChromaDB & RAG Indexing",
+        "LLM & AI Tools",
+        "File Organization & Archives"
+      ],
+      "elapsed": 1.07,
+      "response_preview": "When we optimized the RAG system for our FAITHH backend, we also explored various libraries for WebS",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.1s"
+        ]
+      }
+    },
+    {
+      "name": "Context: Follow-up (should remember Flask/WebSocket)",
+      "category": "context",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 0,
+      "chip_labels": [],
+      "elapsed": 1.45,
+      "response_preview": "Integrating `flask-socketio` with your existing Flask application is relatively straightforward. Whe",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.5s"
+        ],
+        "context": [
+          "PASS",
+          "found context refs: ['flask', 'websocket', 'socket']"
+        ]
+      }
+    },
+    {
+      "name": "Context: Second follow-up",
+      "category": "context",
+      "success": true,
+      "provider": "Groq",
+      "model": "llama-3.3-70b-versatile",
+      "rag_used": true,
+      "chips_activated": 0,
+      "chip_labels": [],
+      "elapsed": 1.54,
+      "response_preview": "Handling authentication in your Flask application with WebSocket support is crucial. When we discuss",
+      "checks": {
+        "api_call": [
+          "PASS",
+          "1.5s"
+        ],
+        "context": [
+          "PASS",
+          "found context refs: ['flask', 'websocket', 'socket', 'auth']"
+        ]
+      }
+    }
+  ]
+}

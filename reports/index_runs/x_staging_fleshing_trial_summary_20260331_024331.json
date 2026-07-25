@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-03-31T02:43:31.693072+00:00",
+  "phase": "x_staging_dataset_fleshing_and_trial",
+  "conversion_completed": 14,
+  "queue_status": {
+    "completed": 14
+  },
+  "zip_large_csv_samples_created": 2,
+  "governance_ingest": {
+    "files_discovered": 29,
+    "accepted_files": 26,
+    "documents_prepared": 3091
+  },
+  "trial_run": {
+    "collapsed": false,
+    "collapse_tick": null,
+    "final_population": 840,
+    "floor_activations": 9,
+    "max_adapt_reached": 0.6000000000000001,
+    "strategy_escape_tick": null
+  },
+  "enough_data_for_next_step": true,
+  "next_gap": "Full V-Dem CSV ingestion still sampled, not complete exhaustive load."
+}

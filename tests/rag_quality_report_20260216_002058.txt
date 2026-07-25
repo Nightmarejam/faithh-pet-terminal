@@ -1,0 +1,101 @@
+
+================================================================================
+RAG RETRIEVAL QUALITY REPORT
+================================================================================
+Generated: 2026-02-16 00:20:58
+Connection: HttpClient(100.79.85.32:8000)
+Collection: faithh_knowledge_base
+Results Retrieved per Query: 5
+
+SUMMARY
+--------------------------------------------------------------------------------
+Total Tests: 10
+Total Score: 16/20 (80.0%)
+
+✅ Good Hits (2 pts):   6 ( 60.0%)
+⚠️  Partial Hits (1 pt):  4 ( 40.0%)
+❌ Misses (0 pts):      0 (  0.0%)
+
+QUALITY GRADE
+--------------------------------------------------------------------------------
+Grade: B (Good)
+Assessment: RAG retrieval is generally reliable with minor gaps.
+
+DETAILED RESULTS
+--------------------------------------------------------------------------------
+
+1. What is FAITHH?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Basic project identity query
+   Keywords found: ['friendly ai', 'teaching', 'helping', 'hub']
+   Sources found: []
+   Top result: project_docs:docs/architecture/SYSTEM_OVERVIEW.md (distance: 0.8836)
+
+2. Describe the phase flip zone in Harmony
+   Status: ✅ GOOD | Score: 2/2
+   Type: Specific framework concept query
+   Keywords found: ['phase flip', 'controller', 'exploration', 'consolidation']
+   Sources found: ['harmony']
+   Top result: project_docs:docs/archive/legacy/HARMONY_CONTEXT.md (distance: 0.9092)
+
+3. What is Constella?
+   Status: ✅ GOOD | Score: 2/2
+   Type: Related project query
+   Keywords found: ['civic', 'governance', 'astris', 'auctor']
+   Sources found: ['constella']
+   Top result: project_docs:docs/reference/CONSTELLA.md (distance: 1.1653)
+
+4. Why did we choose ChromaDB?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Technical decision rationale
+   Keywords found: ['embedding', 'database']
+   Sources found: []
+   Top result: project_docs:docs/reference/CONSTELLA.md (distance: 1.2185)
+
+5. How do I start the FAITHH backend?
+   Status: ✅ GOOD | Score: 2/2
+   Type: Operational how-to query
+   Keywords found: ['python', 'flask', '5557', 'backend']
+   Sources found: ['guide', 'readme', 'architecture']
+   Top result: project_docs:SYSTEMS_MAP.md (distance: 0.7695)
+
+6. What embedding model does FAITHH use?
+   Status: ✅ GOOD | Score: 2/2
+   Type: Technical specification query
+   Keywords found: ['mpnet', '768']
+   Sources found: ['architecture']
+   Top result: project_docs:docs/architecture/SYSTEM_OVERVIEW.md (distance: 1.0706)
+
+7. What is the Penumbra Accord?
+   Status: ✅ GOOD | Score: 2/2
+   Type: Specific Constella concept
+   Keywords found: ['mediation', 'governance']
+   Sources found: ['constella']
+   Top result: project_docs:docs/reference/CONSTELLA.md (distance: 1.0888)
+
+8. What audio gear does Jonathan use?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Personal context query
+   Keywords found: ['wavelab', 'volt']
+   Sources found: []
+   Top result: project_docs:CONTEXT.md (distance: 1.3315)
+
+9. What providers does FAITHH support?
+   Status: ⚠️  PARTIAL | Score: 1/2
+   Type: Current capabilities query
+   Keywords found: ['groq', 'ollama', 'local', 'provider']
+   Sources found: []
+   Top result: project_docs:docs/architecture/SYSTEM_OVERVIEW.md (distance: 0.8995)
+
+10. What is the human standard?
+   Status: ✅ GOOD | Score: 2/2
+   Type: Philosophical framework query
+   Keywords found: ['human standard']
+   Sources found: ['constella']
+   Top result: project_docs:docs/reference/CONSTELLA.md (distance: 1.4917)
+
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+Issues detected. Consider:
+
+================================================================================

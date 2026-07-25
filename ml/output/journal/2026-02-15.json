@@ -1,0 +1,87 @@
+{
+  "date": "2026-02-15",
+  "activity_level": "\ud83d\udd25 Very Active",
+  "git": {
+    "commits": [
+      "ccdf26c feat: PWA conversion \u2014 FAITHH installable as desktop app",
+      "18ad81a feat: VS Code extension \u2014 PULSE mood in status bar + new API methods",
+      "7ad0021 feat: PULSE Tier 4 autonomous actions + avatar state machine",
+      "2b56005 feat: ML pipeline expansion \u2014 avatar extraction, auto-journal, RAG temporal weighting",
+      "41f7953 feat: Chat persistence polish + scaffolding update",
+      "f860e85 feat: Backend v4.0-pulse \u2014 PULSE Reflection Engine integration",
+      "8dc3941 feat: PULSE Tier 3 \u2014 branch explorer + all tiers operational",
+      "0164c10 feat: PULSE Tier 2 \u2014 decision divergence tracker",
+      "67c1c97 feat: PULSE roadmap spec + Sonnet conversation indexed + state files updated",
+      "797b5f1 feat: PULSE Reflection Engine Tier 1 \u2014 staleness detector",
+      "ca39f9f refactor: complete docs/ consolidation \u2014 230 files \u2192 28 active + 189 archived"
+    ],
+    "commit_count": 11,
+    "files_changed": [
+      "docs/business/PORTFOLIO_OVERVIEW.md",
+      "sw.js",
+      "docs/archive/session-reports/MASTER_ACTION_FAITHH.md",
+      "docs/archive/handoffs/windsurf_tomcat_q4_finances(1).md",
+      "docs/archive/session-reports/MONDAY_COMPLETE_SUMMARY.md",
+      "docs/CONTEXT_PARITY_GUIDE.md",
+      "docs/CHROMADB_STATUS.md",
+      "docs/archive/handoffs/WINDSURF_HANDOFF_MODEL_ROUTING.md",
+      "docs/archive/session-reports/2026-01-08_GPT_CODEX_HANDOFF.md",
+      "docs/archive/legacy/RAG_SCRIPTS_AUDIT.md",
+      "docs/archive/legacy/old-testing/test_results_20260125_173946.json",
+      "docs/archive/handoffs/HANDOFF_UI_FIX_AND_CHIP_ART.md",
+      "docs/archive/legacy/FAITHH_COMPLETE_ARCHITECTURE.md",
+      "docs/archive/legacy/old-reference/ROOT_FILES_GUIDE.md",
+      "docs/GIT_COMMIT_INSTRUCTIONS.md",
+      "docs/archive/handoffs/WINDSURF_HANDOFF_v2_2026-01-15.md",
+      "docs/archive/handoffs/WINDSURF_HANDOFF_FILE_LOCATION_FIX_2026-01-18.md",
+      "docs/archive/legacy/FAITHH_CONTEXT.md",
+      "docs/reference/IDEA_VAULT.md",
+      "docs/archive/legacy/GEN8_SETUP_CHECKLIST.md",
+      "docs/architecture/INFRASTRUCTURE.md",
+      "docs/archive/legacy/SESSION_COMPLETE.md",
+      "scripts/auto_journal.py",
+      "docs/archive/legacy/COMPLETION_CHECKLIST.md",
+      "docs/archive/legacy/old-generated/INDEXING_SPEC.md",
+      "docs/business/TAX_GUIDE.md",
+      "docs/archive/legacy/UI_MODULAR_UPDATE_GUIDE.md",
+      "docs/archive/legacy/GEN8_BACKUP_SETUP.md",
+      "scripts/Disable-WakeOnLAN.ps1",
+      "docs/RESEARCH_AI_CONTEXT_INJECTION_2026-02-04.md"
+    ],
+    "files_changed_count": 258,
+    "stats": [
+      "6 files changed, 210 insertions(+), 1 deletion(-)",
+      "2 files changed, 56 insertions(+), 1 deletion(-)",
+      "3 files changed, 513 insertions(+)",
+      "8 files changed, 1249 insertions(+), 186 deletions(-)",
+      "2 files changed, 72 insertions(+), 12 deletions(-)",
+      "2 files changed, 265 insertions(+), 18 deletions(-)",
+      "2 files changed, 640 insertions(+)",
+      "3 files changed, 526 insertions(+), 1 deletion(-)",
+      "4 files changed, 401 insertions(+), 16 deletions(-)",
+      "4 files changed, 669 insertions(+), 11 deletions(-)",
+      "231 files changed, 2327 insertions(+), 5297 deletions(-)"
+    ]
+  },
+  "conversations": {
+    "error": "Expected where operator to be one of $gt, $gte, $lt, $lte, $ne, $eq, $in, $nin, got $contains in get.",
+    "count": 0,
+    "conversations": []
+  },
+  "pulse_reports": {},
+  "collector_activity": {
+    "entries": 1,
+    "sample": [
+      "  [OK] Snapshot saved to: /home/jonat/ai-stack/collectors/daily/2026-02-15.json"
+    ]
+  },
+  "work_log": [],
+  "decisions": [
+    {
+      "id": "faithh_008",
+      "title": "Build PULSE Reflection Engine \u2014 tiered ML self-reflection protocol"
+    }
+  ],
+  "generated_at": "2026-03-03T04:50:38.819060",
+  "summary": null
+}

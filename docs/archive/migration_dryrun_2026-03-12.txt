@@ -1,0 +1,29 @@
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+
+  FAITHH Metadata Migration [DRY RUN]
+  Target: 100.79.85.32:8000/faithh_knowledge_base
+
+  Total chunks: 42,370
+  Processing: 1,000 chunks in batches of 200
+
+  [ 20%] 200/1,000  tagged: 200  skipped: 0  [ 40%] 400/1,000  tagged: 400  skipped: 0  [ 60%] 600/1,000  tagged: 600  skipped: 0  [ 80%] 800/1,000  tagged: 800  skipped: 0  [100%] 1,000/1,000  tagged: 1,000  skipped: 0
+
+  ==================================================
+  Migration (DRY RUN) complete
+  Tagged:  1,000
+  Skipped: 0 (already tagged)
+
+  Type breakdown:
+    project_discussion             238
+    unknown                        196
+    conversation                   127
+    technical_explanation          121
+    health_log                     101
+    terminal_command               95
+    json_data                      51
+    document_content               35
+    metric_data                    14
+    log_entry                      11
+
+  Run without --dry-run to apply changes.
+

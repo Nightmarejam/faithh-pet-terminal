@@ -1,0 +1,1001 @@
+DataSourceCode,Organization,DataSource,indicator,econ_code,econ_name,region,income_class,production_year,wgi_dimension,value,minimum,maximum,orientation
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AFG,Afghanistan,South Asia,Low income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AFG,Afghanistan,South Asia,Low income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AGO,Angola,Sub-Saharan Africa,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AGO,Angola,Sub-Saharan Africa,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ALB,Albania,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ALB,Albania,Europe & Central Asia,Upper middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARE,United Arab Emirates,Middle East & North Africa,High income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARE,United Arab Emirates,Middle East & North Africa,High income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARG,Argentina,Latin America & Caribbean,Upper middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARG,Argentina,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARM,Armenia,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARM,Armenia,Europe & Central Asia,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BDI,Burundi,Sub-Saharan Africa,Low income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BDI,Burundi,Sub-Saharan Africa,Low income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BEN,Benin,Sub-Saharan Africa,Lower middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGD,Bangladesh,South Asia,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGD,Bangladesh,South Asia,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGR,Bulgaria,Europe & Central Asia,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGR,Bulgaria,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BHR,Bahrain,Middle East & North Africa,High income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BHR,Bahrain,Middle East & North Africa,High income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BLR,Belarus,Europe & Central Asia,Upper middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BLR,Belarus,Europe & Central Asia,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BRA,Brazil,Latin America & Caribbean,Upper middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BRA,Brazil,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CAF,Central African Republic,Sub-Saharan Africa,Low income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHL,Chile,Latin America & Caribbean,High income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHL,Chile,Latin America & Caribbean,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHN,China,East Asia & Pacific,Upper middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHN,China,East Asia & Pacific,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COL,Colombia,Latin America & Caribbean,Upper middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COL,Colombia,Latin America & Caribbean,Upper middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CRI,Costa Rica,Latin America & Caribbean,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CRI,Costa Rica,Latin America & Caribbean,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CUB,Cuba,Latin America & Caribbean,Upper middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CUB,Cuba,Latin America & Caribbean,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CZE,Czechia,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CZE,Czechia,Europe & Central Asia,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DZA,Algeria,Middle East & North Africa,Upper middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DZA,Algeria,Middle East & North Africa,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ERI,Eritrea,Sub-Saharan Africa,Low income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EST,Estonia,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EST,Estonia,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ETH,Ethiopia,Sub-Saharan Africa,,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ETH,Ethiopia,Sub-Saharan Africa,,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GEO,Georgia,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GEO,Georgia,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HND,Honduras,Latin America & Caribbean,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HND,Honduras,Latin America & Caribbean,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HRV,Croatia,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HRV,Croatia,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HTI,Haiti,Latin America & Caribbean,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HTI,Haiti,Latin America & Caribbean,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HUN,Hungary,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HUN,Hungary,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IDN,Indonesia,East Asia & Pacific,Upper middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IDN,Indonesia,East Asia & Pacific,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IND,India,South Asia,Lower middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IND,India,South Asia,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JOR,Jordan,Middle East & North Africa,Lower middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JOR,Jordan,Middle East & North Africa,Lower middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KHM,Cambodia,East Asia & Pacific,Lower middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KHM,Cambodia,East Asia & Pacific,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KOR,"Korea, Rep.",East Asia & Pacific,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KOR,"Korea, Rep.",East Asia & Pacific,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBN,Lebanon,Middle East & North Africa,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBN,Lebanon,Middle East & North Africa,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBR,Liberia,Sub-Saharan Africa,Low income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBR,Liberia,Sub-Saharan Africa,Low income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBY,Libya,Middle East & North Africa,Upper middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBY,Libya,Middle East & North Africa,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LKA,Sri Lanka,South Asia,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LKA,Sri Lanka,South Asia,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LTU,Lithuania,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LTU,Lithuania,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LVA,Latvia,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LVA,Latvia,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MAR,Morocco,Middle East & North Africa,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MAR,Morocco,Middle East & North Africa,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDA,Moldova,Europe & Central Asia,Upper middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDA,Moldova,Europe & Central Asia,Upper middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDG,Madagascar,Sub-Saharan Africa,Low income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MEX,Mexico,Latin America & Caribbean,Upper middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MEX,Mexico,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MLI,Mali,Sub-Saharan Africa,Low income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MLI,Mali,Sub-Saharan Africa,Low income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MMR,Myanmar,East Asia & Pacific,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MMR,Myanmar,East Asia & Pacific,Lower middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MNG,Mongolia,East Asia & Pacific,Upper middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MNG,Mongolia,East Asia & Pacific,Upper middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MOZ,Mozambique,Sub-Saharan Africa,Low income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MWI,Malawi,Sub-Saharan Africa,Low income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MWI,Malawi,Sub-Saharan Africa,Low income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MYS,Malaysia,East Asia & Pacific,Upper middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MYS,Malaysia,East Asia & Pacific,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NER,Niger,Sub-Saharan Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NER,Niger,Sub-Saharan Africa,Low income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NPL,Nepal,South Asia,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NPL,Nepal,South Asia,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAK,Pakistan,South Asia,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAK,Pakistan,South Asia,Lower middle income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAN,Panama,Latin America & Caribbean,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAN,Panama,Latin America & Caribbean,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PER,Peru,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PER,Peru,Latin America & Caribbean,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PHL,Philippines,East Asia & Pacific,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PHL,Philippines,East Asia & Pacific,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,POL,Poland,Europe & Central Asia,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,POL,Poland,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ROU,Romania,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ROU,Romania,Europe & Central Asia,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RUS,Russian Federation,Europe & Central Asia,High income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RUS,Russian Federation,Europe & Central Asia,High income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RWA,Rwanda,Sub-Saharan Africa,Low income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SAU,Saudi Arabia,Middle East & North Africa,High income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SAU,Saudi Arabia,Middle East & North Africa,High income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SDN,Sudan,Sub-Saharan Africa,Low income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SDN,Sudan,Sub-Saharan Africa,Low income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SGP,Singapore,East Asia & Pacific,High income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SGP,Singapore,East Asia & Pacific,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SRB,Serbia,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SRB,Serbia,Europe & Central Asia,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVK,Slovak Republic,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVK,Slovak Republic,Europe & Central Asia,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVN,Slovenia,Europe & Central Asia,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVN,Slovenia,Europe & Central Asia,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TCD,Chad,Sub-Saharan Africa,Low income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TCD,Chad,Sub-Saharan Africa,Low income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TGO,Togo,Sub-Saharan Africa,Low income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TGO,Togo,Sub-Saharan Africa,Low income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,THA,Thailand,East Asia & Pacific,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,THA,Thailand,East Asia & Pacific,Upper middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUN,Tunisia,Middle East & North Africa,Lower middle income,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUN,Tunisia,Middle East & North Africa,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUR,Türkiye,Europe & Central Asia,Upper middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUR,Türkiye,Europe & Central Asia,Upper middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TWN,"Taiwan, China",East Asia & Pacific,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TWN,"Taiwan, China",East Asia & Pacific,High income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UGA,Uganda,Sub-Saharan Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UGA,Uganda,Sub-Saharan Africa,Low income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UKR,Ukraine,Europe & Central Asia,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UKR,Ukraine,Europe & Central Asia,Upper middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,URY,Uruguay,Latin America & Caribbean,High income,2004,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,URY,Uruguay,Latin America & Caribbean,High income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VEN,"Venezuela, RB",Latin America & Caribbean,,2004,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VEN,"Venezuela, RB",Latin America & Caribbean,,2004,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2004,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2004,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2004,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2004,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2004,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2004,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2004,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AFG,Afghanistan,South Asia,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AFG,Afghanistan,South Asia,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AGO,Angola,Sub-Saharan Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AGO,Angola,Sub-Saharan Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ALB,Albania,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ALB,Albania,Europe & Central Asia,Upper middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARE,United Arab Emirates,Middle East & North Africa,High income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARE,United Arab Emirates,Middle East & North Africa,High income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARG,Argentina,Latin America & Caribbean,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARG,Argentina,Latin America & Caribbean,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARM,Armenia,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARM,Armenia,Europe & Central Asia,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BDI,Burundi,Sub-Saharan Africa,Low income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BDI,Burundi,Sub-Saharan Africa,Low income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BEN,Benin,Sub-Saharan Africa,Lower middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGD,Bangladesh,South Asia,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGD,Bangladesh,South Asia,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGR,Bulgaria,Europe & Central Asia,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGR,Bulgaria,Europe & Central Asia,High income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BHR,Bahrain,Middle East & North Africa,High income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BHR,Bahrain,Middle East & North Africa,High income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BLR,Belarus,Europe & Central Asia,Upper middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BLR,Belarus,Europe & Central Asia,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BRA,Brazil,Latin America & Caribbean,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BRA,Brazil,Latin America & Caribbean,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BTN,Bhutan,South Asia,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BTN,Bhutan,South Asia,Lower middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CAF,Central African Republic,Sub-Saharan Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHL,Chile,Latin America & Caribbean,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHL,Chile,Latin America & Caribbean,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHN,China,East Asia & Pacific,Upper middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHN,China,East Asia & Pacific,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COL,Colombia,Latin America & Caribbean,Upper middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COL,Colombia,Latin America & Caribbean,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CRI,Costa Rica,Latin America & Caribbean,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CRI,Costa Rica,Latin America & Caribbean,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CUB,Cuba,Latin America & Caribbean,Upper middle income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CUB,Cuba,Latin America & Caribbean,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CZE,Czechia,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CZE,Czechia,Europe & Central Asia,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DZA,Algeria,Middle East & North Africa,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DZA,Algeria,Middle East & North Africa,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ERI,Eritrea,Sub-Saharan Africa,Low income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EST,Estonia,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EST,Estonia,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ETH,Ethiopia,Sub-Saharan Africa,,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ETH,Ethiopia,Sub-Saharan Africa,,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GEO,Georgia,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GEO,Georgia,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HND,Honduras,Latin America & Caribbean,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HND,Honduras,Latin America & Caribbean,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HRV,Croatia,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HRV,Croatia,Europe & Central Asia,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HTI,Haiti,Latin America & Caribbean,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HTI,Haiti,Latin America & Caribbean,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HUN,Hungary,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HUN,Hungary,Europe & Central Asia,High income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IDN,Indonesia,East Asia & Pacific,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IND,India,South Asia,Lower middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IND,India,South Asia,Lower middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IRQ,Iraq,Middle East & North Africa,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IRQ,Iraq,Middle East & North Africa,Upper middle income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JOR,Jordan,Middle East & North Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JOR,Jordan,Middle East & North Africa,Lower middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KHM,Cambodia,East Asia & Pacific,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KHM,Cambodia,East Asia & Pacific,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KOR,"Korea, Rep.",East Asia & Pacific,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KWT,Kuwait,Middle East & North Africa,High income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KWT,Kuwait,Middle East & North Africa,High income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBN,Lebanon,Middle East & North Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBN,Lebanon,Middle East & North Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBR,Liberia,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBR,Liberia,Sub-Saharan Africa,Low income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBY,Libya,Middle East & North Africa,Upper middle income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBY,Libya,Middle East & North Africa,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LKA,Sri Lanka,South Asia,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LKA,Sri Lanka,South Asia,Lower middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LTU,Lithuania,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LTU,Lithuania,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LVA,Latvia,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LVA,Latvia,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MAR,Morocco,Middle East & North Africa,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MAR,Morocco,Middle East & North Africa,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDA,Moldova,Europe & Central Asia,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDA,Moldova,Europe & Central Asia,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDG,Madagascar,Sub-Saharan Africa,Low income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MEX,Mexico,Latin America & Caribbean,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MEX,Mexico,Latin America & Caribbean,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MLI,Mali,Sub-Saharan Africa,Low income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MLI,Mali,Sub-Saharan Africa,Low income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MMR,Myanmar,East Asia & Pacific,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MMR,Myanmar,East Asia & Pacific,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MNE,Montenegro,Europe & Central Asia,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MNE,Montenegro,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MNG,Mongolia,East Asia & Pacific,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MOZ,Mozambique,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MWI,Malawi,Sub-Saharan Africa,Low income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MWI,Malawi,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MYS,Malaysia,East Asia & Pacific,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MYS,Malaysia,East Asia & Pacific,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NER,Niger,Sub-Saharan Africa,Low income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NER,Niger,Sub-Saharan Africa,Low income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NPL,Nepal,South Asia,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NPL,Nepal,South Asia,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,OMN,Oman,Middle East & North Africa,High income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,OMN,Oman,Middle East & North Africa,High income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAK,Pakistan,South Asia,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAK,Pakistan,South Asia,Lower middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAN,Panama,Latin America & Caribbean,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAN,Panama,Latin America & Caribbean,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PER,Peru,Latin America & Caribbean,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PER,Peru,Latin America & Caribbean,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PHL,Philippines,East Asia & Pacific,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PHL,Philippines,East Asia & Pacific,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,POL,Poland,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,POL,Poland,Europe & Central Asia,High income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ROU,Romania,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ROU,Romania,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RUS,Russian Federation,Europe & Central Asia,High income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RUS,Russian Federation,Europe & Central Asia,High income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RWA,Rwanda,Sub-Saharan Africa,Low income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SAU,Saudi Arabia,Middle East & North Africa,High income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SAU,Saudi Arabia,Middle East & North Africa,High income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SDN,Sudan,Sub-Saharan Africa,Low income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SDN,Sudan,Sub-Saharan Africa,Low income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SGP,Singapore,East Asia & Pacific,High income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SGP,Singapore,East Asia & Pacific,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SRB,Serbia,Europe & Central Asia,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SRB,Serbia,Europe & Central Asia,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVK,Slovak Republic,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVK,Slovak Republic,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVN,Slovenia,Europe & Central Asia,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVN,Slovenia,Europe & Central Asia,High income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TCD,Chad,Sub-Saharan Africa,Low income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TCD,Chad,Sub-Saharan Africa,Low income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TGO,Togo,Sub-Saharan Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TGO,Togo,Sub-Saharan Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,THA,Thailand,East Asia & Pacific,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,THA,Thailand,East Asia & Pacific,Upper middle income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUN,Tunisia,Middle East & North Africa,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUN,Tunisia,Middle East & North Africa,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUR,Türkiye,Europe & Central Asia,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUR,Türkiye,Europe & Central Asia,Upper middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TWN,"Taiwan, China",East Asia & Pacific,High income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UGA,Uganda,Sub-Saharan Africa,Low income,2006,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UGA,Uganda,Sub-Saharan Africa,Low income,2006,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UKR,Ukraine,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UKR,Ukraine,Europe & Central Asia,Upper middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,URY,Uruguay,Latin America & Caribbean,High income,2006,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,URY,Uruguay,Latin America & Caribbean,High income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VEN,"Venezuela, RB",Latin America & Caribbean,,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VEN,"Venezuela, RB",Latin America & Caribbean,,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2006,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2006,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2006,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2006,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2006,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2006,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2006,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AFG,Afghanistan,South Asia,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AFG,Afghanistan,South Asia,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AGO,Angola,Sub-Saharan Africa,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AGO,Angola,Sub-Saharan Africa,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ALB,Albania,Europe & Central Asia,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ALB,Albania,Europe & Central Asia,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARE,United Arab Emirates,Middle East & North Africa,High income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARE,United Arab Emirates,Middle East & North Africa,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARG,Argentina,Latin America & Caribbean,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARG,Argentina,Latin America & Caribbean,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARM,Armenia,Europe & Central Asia,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARM,Armenia,Europe & Central Asia,Upper middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BDI,Burundi,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BDI,Burundi,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGD,Bangladesh,South Asia,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGD,Bangladesh,South Asia,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGR,Bulgaria,Europe & Central Asia,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGR,Bulgaria,Europe & Central Asia,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BHR,Bahrain,Middle East & North Africa,High income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BHR,Bahrain,Middle East & North Africa,High income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BLR,Belarus,Europe & Central Asia,Upper middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BLR,Belarus,Europe & Central Asia,Upper middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BRA,Brazil,Latin America & Caribbean,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BRA,Brazil,Latin America & Caribbean,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BTN,Bhutan,South Asia,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BTN,Bhutan,South Asia,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CAF,Central African Republic,Sub-Saharan Africa,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHL,Chile,Latin America & Caribbean,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHL,Chile,Latin America & Caribbean,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHN,China,East Asia & Pacific,Upper middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHN,China,East Asia & Pacific,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COL,Colombia,Latin America & Caribbean,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COL,Colombia,Latin America & Caribbean,Upper middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CRI,Costa Rica,Latin America & Caribbean,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CRI,Costa Rica,Latin America & Caribbean,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CUB,Cuba,Latin America & Caribbean,Upper middle income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CUB,Cuba,Latin America & Caribbean,Upper middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CZE,Czechia,Europe & Central Asia,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CZE,Czechia,Europe & Central Asia,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DZA,Algeria,Middle East & North Africa,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DZA,Algeria,Middle East & North Africa,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ERI,Eritrea,Sub-Saharan Africa,Low income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EST,Estonia,Europe & Central Asia,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EST,Estonia,Europe & Central Asia,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ETH,Ethiopia,Sub-Saharan Africa,,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ETH,Ethiopia,Sub-Saharan Africa,,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GEO,Georgia,Europe & Central Asia,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GEO,Georgia,Europe & Central Asia,Upper middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HND,Honduras,Latin America & Caribbean,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HND,Honduras,Latin America & Caribbean,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HRV,Croatia,Europe & Central Asia,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HRV,Croatia,Europe & Central Asia,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HTI,Haiti,Latin America & Caribbean,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HTI,Haiti,Latin America & Caribbean,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HUN,Hungary,Europe & Central Asia,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HUN,Hungary,Europe & Central Asia,High income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IDN,Indonesia,East Asia & Pacific,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IDN,Indonesia,East Asia & Pacific,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IND,India,South Asia,Lower middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IND,India,South Asia,Lower middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IRQ,Iraq,Middle East & North Africa,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IRQ,Iraq,Middle East & North Africa,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JOR,Jordan,Middle East & North Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JOR,Jordan,Middle East & North Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KHM,Cambodia,East Asia & Pacific,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KOR,"Korea, Rep.",East Asia & Pacific,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KOR,"Korea, Rep.",East Asia & Pacific,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KWT,Kuwait,Middle East & North Africa,High income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KWT,Kuwait,Middle East & North Africa,High income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBN,Lebanon,Middle East & North Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBN,Lebanon,Middle East & North Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBR,Liberia,Sub-Saharan Africa,Low income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBR,Liberia,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBY,Libya,Middle East & North Africa,Upper middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBY,Libya,Middle East & North Africa,Upper middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LKA,Sri Lanka,South Asia,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LKA,Sri Lanka,South Asia,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LTU,Lithuania,Europe & Central Asia,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LTU,Lithuania,Europe & Central Asia,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LVA,Latvia,Europe & Central Asia,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LVA,Latvia,Europe & Central Asia,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MAR,Morocco,Middle East & North Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MAR,Morocco,Middle East & North Africa,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDA,Moldova,Europe & Central Asia,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDA,Moldova,Europe & Central Asia,Upper middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MEX,Mexico,Latin America & Caribbean,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MEX,Mexico,Latin America & Caribbean,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MLI,Mali,Sub-Saharan Africa,Low income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MLI,Mali,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MMR,Myanmar,East Asia & Pacific,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MMR,Myanmar,East Asia & Pacific,Lower middle income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MNE,Montenegro,Europe & Central Asia,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MNE,Montenegro,Europe & Central Asia,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MNG,Mongolia,East Asia & Pacific,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MNG,Mongolia,East Asia & Pacific,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MWI,Malawi,Sub-Saharan Africa,Low income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MWI,Malawi,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MYS,Malaysia,East Asia & Pacific,Upper middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MYS,Malaysia,East Asia & Pacific,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NER,Niger,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NER,Niger,Sub-Saharan Africa,Low income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NPL,Nepal,South Asia,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NPL,Nepal,South Asia,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,OMN,Oman,Middle East & North Africa,High income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,OMN,Oman,Middle East & North Africa,High income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAK,Pakistan,South Asia,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAK,Pakistan,South Asia,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAN,Panama,Latin America & Caribbean,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAN,Panama,Latin America & Caribbean,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PER,Peru,Latin America & Caribbean,Upper middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PER,Peru,Latin America & Caribbean,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PHL,Philippines,East Asia & Pacific,Lower middle income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PHL,Philippines,East Asia & Pacific,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,POL,Poland,Europe & Central Asia,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,POL,Poland,Europe & Central Asia,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,QAT,Qatar,Middle East & North Africa,High income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,QAT,Qatar,Middle East & North Africa,High income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ROU,Romania,Europe & Central Asia,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ROU,Romania,Europe & Central Asia,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RUS,Russian Federation,Europe & Central Asia,High income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RUS,Russian Federation,Europe & Central Asia,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RWA,Rwanda,Sub-Saharan Africa,Low income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SAU,Saudi Arabia,Middle East & North Africa,High income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SAU,Saudi Arabia,Middle East & North Africa,High income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SDN,Sudan,Sub-Saharan Africa,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SDN,Sudan,Sub-Saharan Africa,Low income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SGP,Singapore,East Asia & Pacific,High income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SGP,Singapore,East Asia & Pacific,High income,2008,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SRB,Serbia,Europe & Central Asia,Upper middle income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SRB,Serbia,Europe & Central Asia,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVK,Slovak Republic,Europe & Central Asia,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVK,Slovak Republic,Europe & Central Asia,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVN,Slovenia,Europe & Central Asia,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVN,Slovenia,Europe & Central Asia,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TCD,Chad,Sub-Saharan Africa,Low income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TCD,Chad,Sub-Saharan Africa,Low income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TGO,Togo,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TGO,Togo,Sub-Saharan Africa,Low income,2008,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,THA,Thailand,East Asia & Pacific,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,THA,Thailand,East Asia & Pacific,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUN,Tunisia,Middle East & North Africa,Lower middle income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUN,Tunisia,Middle East & North Africa,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUR,Türkiye,Europe & Central Asia,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUR,Türkiye,Europe & Central Asia,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TWN,"Taiwan, China",East Asia & Pacific,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TWN,"Taiwan, China",East Asia & Pacific,High income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UGA,Uganda,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UGA,Uganda,Sub-Saharan Africa,Low income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UKR,Ukraine,Europe & Central Asia,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UKR,Ukraine,Europe & Central Asia,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,URY,Uruguay,Latin America & Caribbean,High income,2008,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,URY,Uruguay,Latin America & Caribbean,High income,2008,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VEN,"Venezuela, RB",Latin America & Caribbean,,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VEN,"Venezuela, RB",Latin America & Caribbean,,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,XKX,Kosovo,Europe & Central Asia,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,XKX,Kosovo,Europe & Central Asia,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2008,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2008,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2008,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2008,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2008,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AFG,Afghanistan,South Asia,Low income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AFG,Afghanistan,South Asia,Low income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AGO,Angola,Sub-Saharan Africa,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AGO,Angola,Sub-Saharan Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ALB,Albania,Europe & Central Asia,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ALB,Albania,Europe & Central Asia,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARE,United Arab Emirates,Middle East & North Africa,High income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARE,United Arab Emirates,Middle East & North Africa,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARG,Argentina,Latin America & Caribbean,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARG,Argentina,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ARM,Armenia,Europe & Central Asia,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ARM,Armenia,Europe & Central Asia,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AZE,Azerbaijan,Europe & Central Asia,Upper middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BDI,Burundi,Sub-Saharan Africa,Low income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BDI,Burundi,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BEN,Benin,Sub-Saharan Africa,Lower middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BEN,Benin,Sub-Saharan Africa,Lower middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BFA,Burkina Faso,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGD,Bangladesh,South Asia,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGD,Bangladesh,South Asia,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BGR,Bulgaria,Europe & Central Asia,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BGR,Bulgaria,Europe & Central Asia,High income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BHR,Bahrain,Middle East & North Africa,High income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BHR,Bahrain,Middle East & North Africa,High income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BLR,Belarus,Europe & Central Asia,Upper middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BLR,Belarus,Europe & Central Asia,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BOL,Bolivia,Latin America & Caribbean,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BRA,Brazil,Latin America & Caribbean,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BRA,Brazil,Latin America & Caribbean,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BTN,Bhutan,South Asia,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BTN,Bhutan,South Asia,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,BWA,Botswana,Sub-Saharan Africa,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CAF,Central African Republic,Sub-Saharan Africa,Low income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CAF,Central African Republic,Sub-Saharan Africa,Low income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHL,Chile,Latin America & Caribbean,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHL,Chile,Latin America & Caribbean,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CHN,China,East Asia & Pacific,Upper middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CHN,China,East Asia & Pacific,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CIV,Côte d’Ivoire,Sub-Saharan Africa,Lower middle income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CMR,Cameroon,Sub-Saharan Africa,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COD,"Congo, Dem. Rep.",Sub-Saharan Africa,Low income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COG,"Congo, Rep.",Sub-Saharan Africa,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,COL,Colombia,Latin America & Caribbean,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,COL,Colombia,Latin America & Caribbean,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CRI,Costa Rica,Latin America & Caribbean,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CRI,Costa Rica,Latin America & Caribbean,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CUB,Cuba,Latin America & Caribbean,Upper middle income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CUB,Cuba,Latin America & Caribbean,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,CZE,Czechia,Europe & Central Asia,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,CZE,Czechia,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DOM,Dominican Republic,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,DZA,Algeria,Middle East & North Africa,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,DZA,Algeria,Middle East & North Africa,Upper middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ECU,Ecuador,Latin America & Caribbean,Upper middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EGY,"Egypt, Arab Rep.",Middle East & North Africa,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ERI,Eritrea,Sub-Saharan Africa,Low income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ERI,Eritrea,Sub-Saharan Africa,Low income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,EST,Estonia,Europe & Central Asia,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,EST,Estonia,Europe & Central Asia,High income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ETH,Ethiopia,Sub-Saharan Africa,,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ETH,Ethiopia,Sub-Saharan Africa,,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GEO,Georgia,Europe & Central Asia,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GEO,Georgia,Europe & Central Asia,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GHA,Ghana,Sub-Saharan Africa,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GIN,Guinea,Sub-Saharan Africa,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,GTM,Guatemala,Latin America & Caribbean,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HND,Honduras,Latin America & Caribbean,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HND,Honduras,Latin America & Caribbean,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HRV,Croatia,Europe & Central Asia,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HRV,Croatia,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HTI,Haiti,Latin America & Caribbean,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HTI,Haiti,Latin America & Caribbean,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,HUN,Hungary,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,HUN,Hungary,Europe & Central Asia,High income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IDN,Indonesia,East Asia & Pacific,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IDN,Indonesia,East Asia & Pacific,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IND,India,South Asia,Lower middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IND,India,South Asia,Lower middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IRN,"Iran, Islamic Rep.",Middle East & North Africa,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,IRQ,Iraq,Middle East & North Africa,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,IRQ,Iraq,Middle East & North Africa,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JAM,Jamaica,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,JOR,Jordan,Middle East & North Africa,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,JOR,Jordan,Middle East & North Africa,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KEN,Kenya,Sub-Saharan Africa,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KHM,Cambodia,East Asia & Pacific,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KHM,Cambodia,East Asia & Pacific,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KOR,"Korea, Rep.",East Asia & Pacific,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KOR,"Korea, Rep.",East Asia & Pacific,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,KWT,Kuwait,Middle East & North Africa,High income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,KWT,Kuwait,Middle East & North Africa,High income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LAO,Lao PDR,East Asia & Pacific,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBN,Lebanon,Middle East & North Africa,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBN,Lebanon,Middle East & North Africa,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBR,Liberia,Sub-Saharan Africa,Low income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBR,Liberia,Sub-Saharan Africa,Low income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LBY,Libya,Middle East & North Africa,Upper middle income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LBY,Libya,Middle East & North Africa,Upper middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LKA,Sri Lanka,South Asia,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LKA,Sri Lanka,South Asia,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LSO,Lesotho,Sub-Saharan Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LTU,Lithuania,Europe & Central Asia,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LTU,Lithuania,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,LVA,Latvia,Europe & Central Asia,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,LVA,Latvia,Europe & Central Asia,High income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MAR,Morocco,Middle East & North Africa,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MAR,Morocco,Middle East & North Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDA,Moldova,Europe & Central Asia,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDA,Moldova,Europe & Central Asia,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MDG,Madagascar,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MDG,Madagascar,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MEX,Mexico,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MEX,Mexico,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MKD,North Macedonia,Europe & Central Asia,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MLI,Mali,Sub-Saharan Africa,Low income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MLI,Mali,Sub-Saharan Africa,Low income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MMR,Myanmar,East Asia & Pacific,Lower middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MMR,Myanmar,East Asia & Pacific,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MNE,Montenegro,Europe & Central Asia,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MNE,Montenegro,Europe & Central Asia,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MNG,Mongolia,East Asia & Pacific,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MOZ,Mozambique,Sub-Saharan Africa,Low income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MOZ,Mozambique,Sub-Saharan Africa,Low income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MRT,Mauritania,Sub-Saharan Africa,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MUS,Mauritius,Sub-Saharan Africa,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MWI,Malawi,Sub-Saharan Africa,Low income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MWI,Malawi,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,MYS,Malaysia,East Asia & Pacific,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,MYS,Malaysia,East Asia & Pacific,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NAM,Namibia,Sub-Saharan Africa,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NER,Niger,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NER,Niger,Sub-Saharan Africa,Low income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NGA,Nigeria,Sub-Saharan Africa,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NIC,Nicaragua,Latin America & Caribbean,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,NPL,Nepal,South Asia,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,NPL,Nepal,South Asia,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,OMN,Oman,Middle East & North Africa,High income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,OMN,Oman,Middle East & North Africa,High income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAK,Pakistan,South Asia,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAK,Pakistan,South Asia,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PAN,Panama,Latin America & Caribbean,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PAN,Panama,Latin America & Caribbean,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PER,Peru,Latin America & Caribbean,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PER,Peru,Latin America & Caribbean,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PHL,Philippines,East Asia & Pacific,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,POL,Poland,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,POL,Poland,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,PRY,Paraguay,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,QAT,Qatar,Middle East & North Africa,High income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,QAT,Qatar,Middle East & North Africa,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ROU,Romania,Europe & Central Asia,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ROU,Romania,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RUS,Russian Federation,Europe & Central Asia,High income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RUS,Russian Federation,Europe & Central Asia,High income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,RWA,Rwanda,Sub-Saharan Africa,Low income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,RWA,Rwanda,Sub-Saharan Africa,Low income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SAU,Saudi Arabia,Middle East & North Africa,High income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SAU,Saudi Arabia,Middle East & North Africa,High income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SDN,Sudan,Sub-Saharan Africa,Low income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SDN,Sudan,Sub-Saharan Africa,Low income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SEN,Senegal,Sub-Saharan Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SGP,Singapore,East Asia & Pacific,High income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SGP,Singapore,East Asia & Pacific,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLE,Sierra Leone,Sub-Saharan Africa,Low income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SLV,El Salvador,Latin America & Caribbean,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SOM,Federal Republic of Somalia,Sub-Saharan Africa,Low income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SRB,Serbia,Europe & Central Asia,Upper middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SRB,Serbia,Europe & Central Asia,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVK,Slovak Republic,Europe & Central Asia,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVK,Slovak Republic,Europe & Central Asia,High income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SVN,Slovenia,Europe & Central Asia,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SVN,Slovenia,Europe & Central Asia,High income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,SYR,Syrian Arab Republic,Middle East & North Africa,Low income,2010,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TCD,Chad,Sub-Saharan Africa,Low income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TCD,Chad,Sub-Saharan Africa,Low income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TGO,Togo,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TGO,Togo,Sub-Saharan Africa,Low income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,THA,Thailand,East Asia & Pacific,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,THA,Thailand,East Asia & Pacific,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TJK,Tajikistan,Europe & Central Asia,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TKM,Turkmenistan,Europe & Central Asia,Upper middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUN,Tunisia,Middle East & North Africa,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUN,Tunisia,Middle East & North Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TUR,Türkiye,Europe & Central Asia,Upper middle income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TUR,Türkiye,Europe & Central Asia,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TWN,"Taiwan, China",East Asia & Pacific,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,TZA,Tanzania,Sub-Saharan Africa,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UGA,Uganda,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UGA,Uganda,Sub-Saharan Africa,Low income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UKR,Ukraine,Europe & Central Asia,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UKR,Ukraine,Europe & Central Asia,Upper middle income,2010,pv,5.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,URY,Uruguay,Latin America & Caribbean,High income,2010,pv,10.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,URY,Uruguay,Latin America & Caribbean,High income,2010,pv,9.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,UZB,Uzbekistan,Europe & Central Asia,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VEN,"Venezuela, RB",Latin America & Caribbean,,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VEN,"Venezuela, RB",Latin America & Caribbean,,2010,pv,1.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,VNM,Viet Nam,East Asia & Pacific,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,XKX,Kosovo,Europe & Central Asia,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,XKX,Kosovo,Europe & Central Asia,Upper middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,YEM,"Yemen, Rep.",Middle East & North Africa,Low income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2010,pv,8.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZAF,South Africa,Sub-Saharan Africa,Upper middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2010,pv,6.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZMB,Zambia,Sub-Saharan Africa,Lower middle income,2010,pv,7.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2010,pv,3.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,ZWE,Zimbabwe,Sub-Saharan Africa,Lower middle income,2010,pv,2.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Anti-Democratic Actors,AFG,Afghanistan,South Asia,Low income,2012,pv,4.0,0,10,1
+BTI,Bertelsmann Foundation,Bertelsmann Transformation Index,Consensus-Building – Cleavage/Conflict Management,AFG,Afghanistan,South Asia,Low income,2012,pv,4.0,0,10,1

@@ -1,0 +1,16 @@
+[Unit]
+Description=FAITHH PULSE Scheduler Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=jonat
+WorkingDirectory=/home/jonat/ai-stack
+ExecStart=/home/jonat/ai-stack/venv/bin/python3 /home/jonat/ai-stack/scripts/pulse_scheduler.py --daemon
+Restart=on-failure
+RestartSec=30
+StandardOutput=append:/home/jonat/ai-stack/logs/pulse_scheduler.log
+StandardError=append:/home/jonat/ai-stack/logs/pulse_scheduler.log
+
+[Install]
+WantedBy=multi-user.target

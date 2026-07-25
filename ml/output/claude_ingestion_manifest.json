@@ -1,0 +1,671 @@
+{
+  "version": "1.0",
+  "conversations": {
+    "c01d5e1a-df29-4769-a0b2-493ef716e594": {
+      "name": "iPhone cable compatibility with Thunderbolt 3 dock",
+      "content_hash": "4e2f444c4de94beb86faf4fdec706c9f",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:00:08.086857",
+      "updated_at": "2026-01-26T18:12:54.719732Z"
+    },
+    "4f7bf5f7-7c3c-40db-b404-80172f02f3ee": {
+      "name": "Tom Cat Sound LLC 2024 tax preparation review",
+      "content_hash": "34aa958c5dc0a9e7543ea232168e6fb9",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:00:08.086871",
+      "updated_at": "2026-01-26T09:36:08.438438Z"
+    },
+    "6dca0865-5df5-4e33-8ad5-6d5007c1fb1f": {
+      "name": "High volume family photo scanner comparison",
+      "content_hash": "7eed06e122148db12166168796035c6a",
+      "message_count": 8,
+      "indexed_at": "2026-02-16T03:00:08.086875",
+      "updated_at": "2026-01-25T22:44:10.449336Z"
+    },
+    "7a035620-f045-4b39-bc0a-25a4f60dd0d7": {
+      "name": "Finding a heavy-duty hole puncher for large batches",
+      "content_hash": "6590a8f4c4b56f407f454823b9064e9b",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:00:08.086878",
+      "updated_at": "2026-01-10T08:56:50.396778Z"
+    },
+    "eea577a0-61fb-4761-8f84-9f1c6b8670b6": {
+      "name": "Configuring GPU allocation for Ollama",
+      "content_hash": "e9c143f74ab657c5ab6ae3038dfedcb6",
+      "message_count": 36,
+      "indexed_at": "2026-02-16T03:00:08.086881",
+      "updated_at": "2026-01-15T06:21:32.010257Z"
+    },
+    "1a913f71-004e-4ff4-8571-25af370cd27d": {
+      "name": "Continuing conversation with file additions",
+      "content_hash": "b030585543de990d42d0c9a4258bc3a3",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:00:08.086883",
+      "updated_at": "2026-01-13T02:49:43.670825Z"
+    },
+    "3cb3ee58-e00f-495f-9a6c-039d23fa955f": {
+      "name": "Infrastructure reindexing and drift prevention",
+      "content_hash": "a95a9151d084ff750b7147c26ce59162",
+      "message_count": 26,
+      "indexed_at": "2026-02-16T03:00:08.086885",
+      "updated_at": "2026-01-13T02:27:55.202292Z"
+    },
+    "d828ae22-fb24-4d5d-a1c2-f6f1cc123e6e": {
+      "name": "Adding type hints to collect_system_state.py",
+      "content_hash": "4508a79989ba81502946dbf1af46120d",
+      "message_count": 26,
+      "indexed_at": "2026-02-16T03:00:08.086887",
+      "updated_at": "2026-01-15T02:02:02.719183Z"
+    },
+    "280f1c21-8b87-44a7-9ec0-5dc792a00d58": {
+      "name": "Opus and SWE 1.5 progress review",
+      "content_hash": "10db441bfc1c8b7fe1ee77e5af66569c",
+      "message_count": 18,
+      "indexed_at": "2026-02-16T03:00:08.086890",
+      "updated_at": "2026-01-19T21:15:23.356704Z"
+    },
+    "5a38b660-f5e0-4e8f-845c-ad51e2ee587d": {
+      "name": "Ollama environment setup for RTX 3090",
+      "content_hash": "72ad4545739c19ff443538f7c108d178",
+      "message_count": 70,
+      "indexed_at": "2026-02-16T03:00:08.086891",
+      "updated_at": "2026-01-25T23:11:01.027423Z"
+    },
+    "6c2c8c7d-3b0e-4e3f-81f4-02913014a84e": {
+      "name": "ChatGPT Plus refund after accidental charge",
+      "content_hash": "b5d71f0195f0b8303fc4bc68d8934f3c",
+      "message_count": 46,
+      "indexed_at": "2026-02-16T03:00:08.086893",
+      "updated_at": "2026-01-13T20:07:08.895257Z"
+    },
+    "76cfb2df-ed0d-4510-845c-26af3c6967c5": {
+      "name": "Key logging and external access commands",
+      "content_hash": "746fac9d38b9c14283d374457cd8316c",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425651",
+      "updated_at": "2025-12-05T08:23:17.450260Z"
+    },
+    "19e55366-1b35-4f94-8a59-73d5f0f21dbc": {
+      "name": "Free PDF editor for signing and filling forms",
+      "content_hash": "6ef64b8608128575ffdbdaf521adb3ce",
+      "message_count": 4,
+      "indexed_at": "2026-02-16T03:02:43.425663",
+      "updated_at": "2025-12-04T21:28:03.322221Z"
+    },
+    "82c4c632-c2de-4980-aee1-22e218ccc85e": {
+      "name": "Setting up high-quality audio mastering on MacBook Pro",
+      "content_hash": "46f0b15a7bb1d112f14e517594d17e21",
+      "message_count": 13,
+      "indexed_at": "2026-02-16T03:02:43.425665",
+      "updated_at": "2025-11-24T01:12:01.142876Z"
+    },
+    "bf534e75-9f86-43f9-aaf1-0274abf33e5d": {
+      "name": "Updating markdown files with latest information",
+      "content_hash": "0ef77e4cce4900f30fad5b9601cbcb78",
+      "message_count": 18,
+      "indexed_at": "2026-02-16T03:02:43.425667",
+      "updated_at": "2025-12-10T06:43:15.659609Z"
+    },
+    "9d002938-7a62-42e6-9836-d658a42f9402": {
+      "name": "Conversation history highlights",
+      "content_hash": "53e0802a1afb98998da552a7f8b9d50f",
+      "message_count": 4,
+      "indexed_at": "2026-02-16T03:02:43.425670",
+      "updated_at": "2025-11-08T08:56:39.768749Z"
+    },
+    "d9e29d75-e593-4ff5-bfaa-d771119feb43": {
+      "name": "Setting up professional audio streaming for live mastering",
+      "content_hash": "4b77181603a5638ca8399bba1644a655",
+      "message_count": 10,
+      "indexed_at": "2026-02-16T03:02:43.425672",
+      "updated_at": "2025-11-06T10:32:35.142245Z"
+    },
+    "bf0388a8-c062-4840-ab75-ba89c0c07da7": {
+      "name": "High-fidelity audio streaming for remote mastering",
+      "content_hash": "a33455c7176f7cb02b4f1dfc32c72bfb",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425674",
+      "updated_at": "2025-11-06T00:41:52.368164Z"
+    },
+    "754c71cb-ebe5-4f58-9d04-d0b205673e38": {
+      "name": "Project status and Desktop Commander setup",
+      "content_hash": "a645ebeab3d2af25eb048761658065a4",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425676",
+      "updated_at": "2025-11-08T09:57:42.974203Z"
+    },
+    "be18855d-db5a-4e4d-b0c8-6a2146090963": {
+      "name": "Claude code experience",
+      "content_hash": "8dd58dddbfb33f99ea21de55428d5bc2",
+      "message_count": 8,
+      "indexed_at": "2026-02-16T03:02:43.425678",
+      "updated_at": "2025-10-28T04:58:07.317664Z"
+    },
+    "8319035c-32c5-49de-ad1d-3ef3b2b37c7b": {
+      "name": "Organizing WSL project folder structure",
+      "content_hash": "d22bf7644f6aba1c3e0aab40765ab067",
+      "message_count": 27,
+      "indexed_at": "2026-02-16T03:02:43.425680",
+      "updated_at": "2025-11-09T09:37:12.337937Z"
+    },
+    "9b929362-5419-4129-9276-f61c8f61d6a8": {
+      "name": "GitHub project context file organization",
+      "content_hash": "63c26be988634cb49c1bc58c9d2c59f1",
+      "message_count": 12,
+      "indexed_at": "2026-02-16T03:02:43.425683",
+      "updated_at": "2025-11-08T08:48:04.755026Z"
+    },
+    "57f8d335-6654-40e1-92b5-c211d0f9c44b": {
+      "name": "Optimizing Opus 4.1 usage for parity file updates",
+      "content_hash": "b7dcf72b7e669b2f992d7df1800fd9f5",
+      "message_count": 14,
+      "indexed_at": "2026-02-16T03:02:43.425685",
+      "updated_at": "2025-11-21T02:36:24.336775Z"
+    },
+    "2fd5ff66-ee32-4a1e-9e25-7a37b803fa4a": {
+      "name": "Backend vs UI debugging confusion",
+      "content_hash": "0f6115282521d32306cef7e91f40b750",
+      "message_count": 18,
+      "indexed_at": "2026-02-16T03:02:43.425687",
+      "updated_at": "2025-11-14T07:14:17.474400Z"
+    },
+    "f27257a1-cce9-4a1f-99aa-2b1cd606f37c": {
+      "name": "Week 1 completion with 95% test success",
+      "content_hash": "43ee4afbcb74a30683d7dbb5866f547b",
+      "message_count": 10,
+      "indexed_at": "2026-02-16T03:02:43.425689",
+      "updated_at": "2025-11-10T00:48:24.836062Z"
+    },
+    "de2aea49-e8f2-43a6-b259-f0c11e050f25": {
+      "name": "Digital world atlas project concept",
+      "content_hash": "a296cfc6c8bbdfb6a13e9480883d380c",
+      "message_count": 85,
+      "indexed_at": "2026-02-16T03:02:43.425691",
+      "updated_at": "2025-12-07T09:24:22.440241Z"
+    },
+    "5489808c-138f-4228-aa0c-d88483e270af": {
+      "name": "Resuming previous conversation",
+      "content_hash": "086621c9418c11b0c147688204053fbf",
+      "message_count": 12,
+      "indexed_at": "2026-02-16T03:02:43.425693",
+      "updated_at": "2025-11-05T01:15:19.548669Z"
+    },
+    "b23ceb33-f2b4-4a40-8a47-fe3ae1e51937": {
+      "name": "Code cleanup and version control setup",
+      "content_hash": "690e0aeec610cd8b72e97b6ab0cf8b73",
+      "message_count": 12,
+      "indexed_at": "2026-02-16T03:02:43.425695",
+      "updated_at": "2025-11-04T02:14:05.361007Z"
+    },
+    "12f222b1-3ac7-4143-9bce-f6431c6ab255": {
+      "name": "Document with chat recall notes",
+      "content_hash": "06ac005560b4e5374354f090a68209ae",
+      "message_count": 5,
+      "indexed_at": "2026-02-16T03:02:43.425697",
+      "updated_at": "2025-11-04T23:27:26.448258Z"
+    },
+    "f129ea83-9797-45ba-bd32-aa04438375b7": {
+      "name": "AI microservices workflow and RAG integration",
+      "content_hash": "7b48451f85169a213fa66abae38bf5ee",
+      "message_count": 10,
+      "indexed_at": "2026-02-16T03:02:43.425699",
+      "updated_at": "2025-11-14T02:52:53.869239Z"
+    },
+    "5a51147f-6d6d-4050-8a83-41d5640e8745": {
+      "name": "Debugging backend service and database connections",
+      "content_hash": "6c0bbfe44745ed57d5b05db49c3af988",
+      "message_count": 116,
+      "indexed_at": "2026-02-16T03:02:43.425701",
+      "updated_at": "2025-11-14T22:45:03.790670Z"
+    },
+    "f192f3a3-4ef1-44bf-a5d7-09c20ea3ac21": {
+      "name": "System handoff and priority task execution",
+      "content_hash": "92841a01aff3101f0096b6cd2e083ffc",
+      "message_count": 125,
+      "indexed_at": "2026-02-16T03:02:43.425702",
+      "updated_at": "2025-12-03T23:40:23.401196Z"
+    },
+    "22313b27-a02e-493b-9a3d-3205fbdf65e3": {
+      "name": "Continuing previous conversation",
+      "content_hash": "caa655e0424e79f822d41e869528eb0e",
+      "message_count": 44,
+      "indexed_at": "2026-02-16T03:02:43.425704",
+      "updated_at": "2025-11-10T11:12:41.075848Z"
+    },
+    "56c3cf82-c287-4274-81ee-24bdcaa91d05": {
+      "name": "Chinampa-inspired business icon design",
+      "content_hash": "5acf6a59ce4c6748e59bb75947920c78",
+      "message_count": 4,
+      "indexed_at": "2026-02-16T03:02:43.425706",
+      "updated_at": "2025-10-14T00:06:01.754714Z"
+    },
+    "96802761-65d2-42f8-8549-95987a40b9ca": {
+      "name": "WSL GPU configuration troubleshooting",
+      "content_hash": "c913c49cd2c021110e95104f69024348",
+      "message_count": 64,
+      "indexed_at": "2026-02-16T03:02:43.425708",
+      "updated_at": "2025-10-30T07:29:17.462889Z"
+    },
+    "4f3c69cb-ef3e-4e6a-abc5-54c3faf675c2": {
+      "name": "Continuing a previous conversation",
+      "content_hash": "8de70550df74e2ae0f7fd2ea3ceb87f9",
+      "message_count": 246,
+      "indexed_at": "2026-02-16T03:02:43.425710",
+      "updated_at": "2025-11-25T07:10:59.825862Z"
+    },
+    "09f3c934-bf11-4e6e-a8af-06ca827a8bbc": {
+      "name": "Web server html update troubleshooting",
+      "content_hash": "20d594e343078be9e95bb0ba45dd6499",
+      "message_count": 20,
+      "indexed_at": "2026-02-16T03:02:43.425711",
+      "updated_at": "2025-10-26T05:43:58.616048Z"
+    },
+    "f23be9d3-fbca-43ea-9f86-613f4813338a": {
+      "name": "Floating Garden Soundworks business blueprint",
+      "content_hash": "8807d08a2c181ff81d7d98bfe716e9cf",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425713",
+      "updated_at": "2025-10-11T00:34:35.983862Z"
+    },
+    "81b516ad-91b6-4b83-9fa1-561c6d18026d": {
+      "name": "PDF conversion request",
+      "content_hash": "c331251b0e75b929fa8c9b9ecad428db",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425715",
+      "updated_at": "2025-10-14T03:00:39.364332Z"
+    },
+    "917b1f2b-214a-4f1d-b098-c673d7e53abd": {
+      "name": "System check",
+      "content_hash": "c0c2b41441ebbc1a7f837f00d981ea78",
+      "message_count": 22,
+      "indexed_at": "2026-02-16T03:02:43.425717",
+      "updated_at": "2025-10-11T07:21:32.617691Z"
+    },
+    "ea764acc-f833-4fb8-91b4-af975ca1bcec": {
+      "name": "FAITHH project startup checklist",
+      "content_hash": "4ae667d87f462575d99137d50ddc38b6",
+      "message_count": 46,
+      "indexed_at": "2026-02-16T03:02:43.425719",
+      "updated_at": "2025-10-25T08:29:15.874352Z"
+    },
+    "3bb420c2-2f86-4032-b9b5-2862758e244a": {
+      "name": "AI stack system review and architecture analysis",
+      "content_hash": "e1425a2b382354343dd61cb06b1af65c",
+      "message_count": 160,
+      "indexed_at": "2026-02-16T03:02:43.425721",
+      "updated_at": "2025-12-01T10:12:10.318996Z"
+    },
+    "aa9e7e14-7716-476f-874e-78eb93b467d3": {
+      "name": "Docker hub models for GPU setup",
+      "content_hash": "82715f4842bf03d4206bc06d258db032",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425723",
+      "updated_at": "2025-09-16T04:48:19.275352Z"
+    },
+    "156c340d-aeb3-40f8-ab59-41590ecfaf29": {
+      "name": "RAG system embedding shards",
+      "content_hash": "6cb268881e6201d7a6a826826896f2dc",
+      "message_count": 26,
+      "indexed_at": "2026-02-16T03:02:43.425732",
+      "updated_at": "2025-10-27T07:54:35.379791Z"
+    },
+    "edf8595c-334d-448d-8651-c3df7555b830": {
+      "name": "Rebuilding AI system infrastructure",
+      "content_hash": "621233c6ec806ca96d30271f8cdd937c",
+      "message_count": 62,
+      "indexed_at": "2026-02-16T03:02:43.425734",
+      "updated_at": "2025-10-20T04:56:14.848950Z"
+    },
+    "1513e8dd-1bd7-409c-8088-fbd7c1d053cb": {
+      "name": "Constella v1.5.5 AI Review Protocol",
+      "content_hash": "92c8f27fbd6a39f8c2fd96ab2519ad56",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425736",
+      "updated_at": "2025-08-17T00:48:47.643547Z"
+    },
+    "e13b9c2e-bb78-42d3-89cb-ca8623971080": {
+      "name": "Chatgpt conversation file parsing",
+      "content_hash": "71058b865a6665bfd66f3e1c405bd57c",
+      "message_count": 84,
+      "indexed_at": "2026-02-16T03:02:43.425737",
+      "updated_at": "2025-10-22T21:16:14.923710Z"
+    },
+    "ffd42526-2006-4c23-976c-10368d2c723a": {
+      "name": "Handoff documentation with Sonnet and Faithh",
+      "content_hash": "bee97c4f4fb4219f336d4a59708e7861",
+      "message_count": 95,
+      "indexed_at": "2026-02-16T03:02:43.425739",
+      "updated_at": "2025-12-10T01:20:18.429923Z"
+    },
+    "4f04f10a-be96-45c0-b647-e94b99b56783": {
+      "name": "Project Eden Housing Retrofits",
+      "content_hash": "232a06922e2e8668651e6d04fde669a2",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425741",
+      "updated_at": "2025-08-16T09:36:31.503317Z"
+    },
+    "a12a6d1d-0ff0-4d27-843f-a2e92961e4b1": {
+      "name": "Project Eden Housing Retrofits",
+      "content_hash": "95c1d54a819b4bbf28ff5378a249da1b",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425742",
+      "updated_at": "2025-08-16T09:46:41.780321Z"
+    },
+    "099beb21-6a64-49d8-8254-bd617b335a03": {
+      "name": "AI stack development strategy",
+      "content_hash": "c84b6969dadbaa64fb736cd3c3f39a00",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425744",
+      "updated_at": "2025-10-03T22:47:43.687943Z"
+    },
+    "010864ab-8111-40fe-90e6-3cd922930073": {
+      "name": "Ollama model configuration and setup",
+      "content_hash": "b7bafa35622bd0ecbe13cbb738d84026",
+      "message_count": 62,
+      "indexed_at": "2026-02-16T03:02:43.425746",
+      "updated_at": "2025-10-08T00:14:28.940001Z"
+    },
+    "5f80ed6f-d629-46a8-a0b0-303bdf3fb62c": {
+      "name": "Finding the right UPS for computer and audio setup",
+      "content_hash": "64979e184297c84d4814bf928255ee15",
+      "message_count": 11,
+      "indexed_at": "2026-02-16T03:02:43.425747",
+      "updated_at": "2026-02-11T14:18:56.259146Z"
+    },
+    "53f9c97c-2b65-4ed3-8ffd-c01c0a1d900e": {
+      "name": "Seasonal job earnings and bankruptcy timing",
+      "content_hash": "5250a48d092d3be29922108783842e53",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425749",
+      "updated_at": "2026-02-06T02:30:43.424339Z"
+    },
+    "e1dac868-0c55-48e7-86bf-b515a76b7ec7": {
+      "name": "AI Review Process Documentation",
+      "content_hash": "b3f5ea61bf69c92741c7f4c5a8c52002",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425750",
+      "updated_at": "2025-08-17T01:30:37.393395Z"
+    },
+    "6f608400-ae20-4e82-bc9b-c18f7785b341": {
+      "name": "Thunderbolt dock for MOTU and UAD setup",
+      "content_hash": "5ff8953281805accbb8d6117a07eff56",
+      "message_count": 4,
+      "indexed_at": "2026-02-16T03:02:43.425752",
+      "updated_at": "2026-01-17T17:45:31.998229Z"
+    },
+    "efb9999b-8113-441d-8a97-f45d8ccfb9d0": {
+      "name": "Software project planning strategy",
+      "content_hash": "5e594e296d19d132cb7c5c9efd0746a2",
+      "message_count": 24,
+      "indexed_at": "2026-02-16T03:02:43.425753",
+      "updated_at": "2025-10-04T13:59:04.752492Z"
+    },
+    "6b83005e-e6b0-4717-91e6-01808e7c890f": {
+      "name": "Constella v1.5.5 Priority Thread Ranking",
+      "content_hash": "4a5e7011adc08a125856ddc2bd350265",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425755",
+      "updated_at": "2025-08-16T08:06:27.731659Z"
+    },
+    "a5253969-ffe2-4fab-8351-2076a45f39b1": {
+      "name": "Constella v1.5.5 AI Document Review",
+      "content_hash": "fb71effa9ea32ad38116d4164f80d6c2",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425757",
+      "updated_at": "2025-08-16T08:08:20.514216Z"
+    },
+    "af0d69a1-7321-422b-a201-29aa5eb61e72": {
+      "name": "Constella Framework Critical Analysis",
+      "content_hash": "12b02bceab2286bebf63e3d8e5f550bb",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425759",
+      "updated_at": "2025-08-08T15:44:55.076693Z"
+    },
+    "0df37bf0-375d-4fe1-8383-e4042040561f": {
+      "name": "Experimental Review Ranking Framework",
+      "content_hash": "2710bbeb583b9a96d868bfe051f343aa",
+      "message_count": 64,
+      "indexed_at": "2026-02-16T03:02:43.425761",
+      "updated_at": "2025-08-12T06:54:46.976834Z"
+    },
+    "317d0ebb-a561-46fd-90be-54152964ea07": {
+      "name": "Restarting Docker services in WSL",
+      "content_hash": "b370111b5a904115aa3927048de8941c",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425762",
+      "updated_at": "2026-02-02T07:38:34.131803Z"
+    },
+    "5da4f224-4725-4fe3-bb51-92609c0d4310": {
+      "name": "Free alternatives to GPT",
+      "content_hash": "302224cc7a4af34e7681beaf6e967c7f",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425764",
+      "updated_at": "2026-01-13T04:34:33.980593Z"
+    },
+    "8c474ccf-599d-4479-ba43-550506ef86cf": {
+      "name": "Civic Governance Framework Design",
+      "content_hash": "5cb85e7d4a674348e60ff6adce10057b",
+      "message_count": 43,
+      "indexed_at": "2026-02-16T03:02:43.425766",
+      "updated_at": "2025-08-09T07:52:20.668181Z"
+    },
+    "e3b0514e-d46f-46d2-96c7-06914a2845f3": {
+      "name": "Constella framework accuracy review",
+      "content_hash": "e015df5ab01467e66209fb2cd3d17e87",
+      "message_count": 409,
+      "indexed_at": "2026-02-16T03:02:43.425767",
+      "updated_at": "2025-12-25T01:47:51.315026Z"
+    },
+    "69d5902b-cc00-4e6d-a8be-4c47dc29e712": {
+      "name": "Documenting projects as machine-readable system maps",
+      "content_hash": "6b31e2ae4b723fc05546917185d519c7",
+      "message_count": 21,
+      "indexed_at": "2026-02-16T03:02:43.425769",
+      "updated_at": "2026-02-04T09:31:16.790936Z"
+    },
+    "0f42fd26-240c-4546-a441-9dc492aea47c": {
+      "name": "Tomcat Sound LLC documentation review",
+      "content_hash": "20531bb66cdf951a5d15817b16fe8715",
+      "message_count": 10,
+      "indexed_at": "2026-02-16T03:02:43.425771",
+      "updated_at": "2026-01-31T08:44:00.355515Z"
+    },
+    "b4d801d3-a8f1-434a-9785-93c6784e2f66": {
+      "name": "Streaming text rendering optimization",
+      "content_hash": "49076779fd61563b0300671d1bd1883d",
+      "message_count": 35,
+      "indexed_at": "2026-02-16T03:02:43.425773",
+      "updated_at": "2026-01-20T00:50:40.807421Z"
+    },
+    "ff202b6c-c379-4660-9ec8-dd26eeb6a9a8": {
+      "name": "Command hanging on file path pattern",
+      "content_hash": "3aa661a37318d9886adc4df7e6c8f4a8",
+      "message_count": 37,
+      "indexed_at": "2026-02-16T03:02:43.425775",
+      "updated_at": "2026-01-19T09:06:01.499937Z"
+    },
+    "88c395b1-5ae3-4a38-b057-8f59e0e1a861": {
+      "name": "",
+      "content_hash": "25e47ef1f1f9402f5766431de518d826",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425776",
+      "updated_at": "2025-12-31T23:51:27.730148Z"
+    },
+    "37350543-69f6-4f38-98e2-578fee1492ff": {
+      "name": "",
+      "content_hash": "85adbe377a1645dbac2de36e104a3e8c",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425778",
+      "updated_at": "2025-12-31T01:16:27.718573Z"
+    },
+    "fc5f4fdd-8108-46e0-842a-6f8a8e776062": {
+      "name": "Resume review and job application preparation",
+      "content_hash": "d084f8e88c284da00675d76f6bf7aaf6",
+      "message_count": 10,
+      "indexed_at": "2026-02-16T03:02:43.425780",
+      "updated_at": "2026-01-07T05:55:36.268861Z"
+    },
+    "6ff55f3a-5cb5-40c8-9f88-02b8d9914e8d": {
+      "name": "Portable.dev AI mobile development platform",
+      "content_hash": "dd76476fa8d5d65fb00965816adfbd2d",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425781",
+      "updated_at": "2026-01-10T03:00:24.110313Z"
+    },
+    "aa33cfa9-6d1d-479f-b73c-07f075669914": {
+      "name": "Mac restart and process termination",
+      "content_hash": "6c52b6f36be26910e62cac110bffbe78",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425783",
+      "updated_at": "2025-12-26T22:50:26.821879Z"
+    },
+    "87004b10-022e-4611-9e24-60a20a0d3bde": {
+      "name": "Updating Floating Gardens Soundworks project folder",
+      "content_hash": "a81ac8d60d0b915c12129ce75a1e50c4",
+      "message_count": 69,
+      "indexed_at": "2026-02-16T03:02:43.425784",
+      "updated_at": "2026-01-10T02:49:27.702676Z"
+    },
+    "04a22aaf-d36a-468b-80dc-38d0cbd5c670": {
+      "name": "Evaluating AI tools for development workflow",
+      "content_hash": "4ab7688f73c28fcd367b8bbcf200d968",
+      "message_count": 44,
+      "indexed_at": "2026-02-16T03:02:43.425786",
+      "updated_at": "2026-01-26T20:47:07.047534Z"
+    },
+    "9c240d91-9e04-4c55-abbe-0754ecb9ea46": {
+      "name": "Intel DP67BG motherboard eBay listing review",
+      "content_hash": "cccc12c07331fa3a981dfbcc137e4865",
+      "message_count": 23,
+      "indexed_at": "2026-02-16T03:02:43.425788",
+      "updated_at": "2026-01-01T00:14:07.533498Z"
+    },
+    "149b467d-5cd8-405a-b8f6-01c50478eb88": {
+      "name": "Windsurf model selection for coding projects",
+      "content_hash": "d798201b31c34af11c9042b46603597d",
+      "message_count": 49,
+      "indexed_at": "2026-02-16T03:02:43.425790",
+      "updated_at": "2026-01-19T04:58:07.316026Z"
+    },
+    "a67f60c1-bdef-4d49-b36f-a35c93d8da7e": {
+      "name": "Program advance overlay bug fix and testing",
+      "content_hash": "5a33dcb395988a489334884efbf7d79b",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425792",
+      "updated_at": "2026-01-06T17:20:15.731219Z"
+    },
+    "974c4bb7-9876-48f4-8a2a-43fc9ba0cad0": {
+      "name": "Japan move vs. staying in America",
+      "content_hash": "d665afaa8df4a86f9b6dcc54dc4a012b",
+      "message_count": 18,
+      "indexed_at": "2026-02-16T03:02:43.425794",
+      "updated_at": "2026-01-02T01:18:42.510327Z"
+    },
+    "fcbdfaa6-eae9-4e2e-937a-47fa35b4e4a4": {
+      "name": "Bilingual portfolio pamphlets for family review",
+      "content_hash": "ce64e60642f0c3b0adad93476cc2de5e",
+      "message_count": 3,
+      "indexed_at": "2026-02-16T03:02:43.425796",
+      "updated_at": "2025-12-25T22:16:52.831305Z"
+    },
+    "d8349726-ed51-4bd2-bc82-6206cc319935": {
+      "name": "Bilingual portfolio slide deck continuation",
+      "content_hash": "cd0a146756abab67d11d19a336461a16",
+      "message_count": 8,
+      "indexed_at": "2026-02-16T03:02:43.425798",
+      "updated_at": "2025-12-27T13:10:51.755869Z"
+    },
+    "1651ed80-1ed3-469f-a2fa-284de74bf23a": {
+      "name": "Converting markdown files to PDF format",
+      "content_hash": "a0445f4a80d0f7388d2bacca29bed928",
+      "message_count": 23,
+      "indexed_at": "2026-02-16T03:02:43.425800",
+      "updated_at": "2026-01-03T22:06:49.565642Z"
+    },
+    "7293e42f-d6b9-42ed-bc84-beebb6c05718": {
+      "name": "Bilingual portfolio pamphlet for family review",
+      "content_hash": "8fc7050fe7b153b07cab38846c5b99e4",
+      "message_count": 16,
+      "indexed_at": "2026-02-16T03:02:43.425801",
+      "updated_at": "2025-12-26T02:57:43.668535Z"
+    },
+    "9f419cf0-55bf-40aa-a05e-a865822c1b5b": {
+      "name": "Maximizing Claude usage with portfolio and database projects",
+      "content_hash": "c6a00c8ae0ae42141e55c089d995ce24",
+      "message_count": 88,
+      "indexed_at": "2026-02-16T03:02:43.425803",
+      "updated_at": "2025-12-27T00:53:05.277846Z"
+    },
+    "0ceb1607-0a58-4248-baaa-8a386fd9c241": {
+      "name": "Company compliance checklist with evidence",
+      "content_hash": "5dac49cf5d365570d131e1e64366a09e",
+      "message_count": 52,
+      "indexed_at": "2026-02-16T03:02:43.425805",
+      "updated_at": "2026-01-13T06:02:06.974960Z"
+    },
+    "f71cb983-ccda-4216-bc9b-09ddd7a84d7a": {
+      "name": "Recovering stranded database and consolidating git commits",
+      "content_hash": "af2f5027efef46a630b1f32da2695f77",
+      "message_count": 51,
+      "indexed_at": "2026-02-16T03:02:43.425811",
+      "updated_at": "2026-01-08T19:00:44.645554Z"
+    },
+    "e7051349-9440-4775-8e51-5d6b77c3a144": {
+      "name": "Organizing multiple projects and development priorities",
+      "content_hash": "e2a7555caa030194c4b1df4d87b00818",
+      "message_count": 68,
+      "indexed_at": "2026-02-16T03:02:43.425813",
+      "updated_at": "2026-01-16T07:19:09.651835Z"
+    },
+    "c17767ff-5fb6-4b20-bc2f-ed9c4c4e7a56": {
+      "name": "Groq integration for FAITHH backend",
+      "content_hash": "49e8b88573dc74d08fc852f371ab63c5",
+      "message_count": 188,
+      "indexed_at": "2026-02-16T03:02:43.425815",
+      "updated_at": "2025-12-29T08:47:30.678991Z"
+    },
+    "caf3f01a-b544-420c-8704-bcfd251306fb": {
+      "name": "Project review and artifact analysis",
+      "content_hash": "85466324a5b9026ccc7de8afe56a9417",
+      "message_count": 230,
+      "indexed_at": "2026-02-16T03:02:43.425817",
+      "updated_at": "2026-01-04T06:34:59.686771Z"
+    },
+    "1fb23d99-b5dc-49fa-a188-5240bce3fce5": {
+      "name": "Evaluating UPS units for network setup",
+      "content_hash": "b0199119a8b656cfad3e2d4944b5887c",
+      "message_count": 2,
+      "indexed_at": "2026-02-16T03:02:43.425819",
+      "updated_at": "2026-02-11T13:37:08.062190Z"
+    },
+    "f23ed287-d0ba-40f6-8542-e5e2738401e4": {
+      "name": "Transformable buildings for earthquake resilience",
+      "content_hash": "10ba4b53bad1cd04f868d8accb8dc5df",
+      "message_count": 5,
+      "indexed_at": "2026-02-16T03:02:43.425821",
+      "updated_at": "2026-02-14T21:51:47.623954Z"
+    },
+    "8c1ac9d9-47e7-4845-a70c-7c8c6f2fa251": {
+      "name": "Oregon take-home pay calculation",
+      "content_hash": "a84d8596ec46f89c5b1f404ceb20c3df",
+      "message_count": 6,
+      "indexed_at": "2026-02-16T03:02:43.425822",
+      "updated_at": "2026-02-07T02:42:45.502265Z"
+    },
+    "697289a2-ad9f-4293-95c1-57df36f357b7": {
+      "name": "Reconstructing life's evolutionary midpoint",
+      "content_hash": "e4e30742d1aac78b949bab2a8b6a619e",
+      "message_count": 24,
+      "indexed_at": "2026-02-16T03:02:43.425824",
+      "updated_at": "2026-02-15T02:04:18.676678Z"
+    },
+    "4bc51781-a6d8-43cd-97e1-e3210800ceea": {
+      "name": "Allowing Stremio on macOS despite malware warnings",
+      "content_hash": "0497be545bdcb3e299a88fd0e2f15262",
+      "message_count": 13,
+      "indexed_at": "2026-02-16T03:02:43.425825",
+      "updated_at": "2026-02-09T07:07:00.447702Z"
+    }
+  },
+  "last_ingestion": "2026-02-16T03:02:43.425894"
+}

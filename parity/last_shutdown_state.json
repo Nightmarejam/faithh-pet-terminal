@@ -1,0 +1,690 @@
+{
+  "metadata": {
+    "collected_at": "2026-02-25T02:46:01.805364",
+    "hostname": "DESKTOP-JJ1SUHB",
+    "platform": "Linux",
+    "platform_release": "6.6.87.2-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "python_version": "3.12.3"
+  },
+  "hardware": {
+    "cpu": {
+      "model": "AMD Ryzen 9 3900X 12-Core Processor",
+      "cores_physical": 12,
+      "cores_logical": 24,
+      "frequency_mhz": {
+        "current": 3792.8880000000013,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "usage_percent": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "usage_average": 0.3
+    },
+    "memory": {
+      "total_gb": 47.04,
+      "available_gb": 44.57,
+      "used_gb": 1.98,
+      "percent_used": 5.2
+    },
+    "swap": {
+      "total_gb": 16.0,
+      "used_gb": 3.15,
+      "percent_used": 19.7
+    }
+  },
+  "gpu": {
+    "gpus": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce GTX 1080 Ti",
+        "temperature_c": 51.0,
+        "utilization_percent": 61.0,
+        "memory_utilization_percent": 15.0,
+        "memory_used_mb": 3756.0,
+        "memory_total_mb": 11264.0,
+        "power_draw_w": 191.97,
+        "power_limit_w": 250.0,
+        "clock_graphics_mhz": 1974.0,
+        "clock_memory_mhz": 5508.0,
+        "pcie_gen": 3,
+        "pcie_width": 1
+      },
+      {
+        "index": 1,
+        "name": "NVIDIA GeForce RTX 3090",
+        "temperature_c": 40.0,
+        "utilization_percent": 0.0,
+        "memory_utilization_percent": 0.0,
+        "memory_used_mb": 0.0,
+        "memory_total_mb": 24576.0,
+        "power_draw_w": 10.11,
+        "power_limit_w": 350.0,
+        "clock_graphics_mhz": 0.0,
+        "clock_memory_mhz": 405.0,
+        "pcie_gen": 4,
+        "pcie_width": 16
+      }
+    ],
+    "driver_version": "581.57\n581.57",
+    "cuda_version": "Field \"cuda_version\" is not a valid field to query.",
+    "persistence_mode": false,
+    "compute_mode": "Unknown"
+  },
+  "storage": {
+    "partitions": [
+      {
+        "device": "/dev/sdd",
+        "mountpoint": "/",
+        "fstype": "ext4",
+        "total_gb": 1006.85,
+        "used_gb": 281.11,
+        "free_gb": 674.53,
+        "percent_used": 29.4
+      },
+      {
+        "device": "/dev/sdd",
+        "mountpoint": "/mnt/wslg/distro",
+        "fstype": "ext4",
+        "total_gb": 1006.85,
+        "used_gb": 281.11,
+        "free_gb": 674.53,
+        "percent_used": 29.4
+      },
+      {
+        "device": "/dev/sdd",
+        "mountpoint": "/snap",
+        "fstype": "ext4",
+        "total_gb": 1006.85,
+        "used_gb": 281.11,
+        "free_gb": 674.53,
+        "percent_used": 29.4
+      },
+      {
+        "device": "/dev/sdd",
+        "mountpoint": "/var/lib/docker",
+        "fstype": "ext4",
+        "total_gb": 1006.85,
+        "used_gb": 281.11,
+        "free_gb": 674.53,
+        "percent_used": 29.4
+      }
+    ],
+    "io_stats": {
+      "read_count": 676922,
+      "write_count": 215478,
+      "read_mb": 9650.22,
+      "write_mb": 6718.0
+    }
+  },
+  "network": {
+    "interfaces": {
+      "lo": {
+        "addresses": [
+          {
+            "type": "ipv4",
+            "address": "127.0.0.1",
+            "netmask": "255.0.0.0"
+          },
+          {
+            "type": "ipv4",
+            "address": "10.255.255.254",
+            "netmask": "255.255.255.255"
+          },
+          {
+            "type": "ipv6",
+            "address": "::1"
+          }
+        ],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 0,
+          "mtu": 65536
+        }
+      },
+      "eth0": {
+        "addresses": [
+          {
+            "type": "ipv4",
+            "address": "100.115.225.100",
+            "netmask": "255.255.255.255"
+          },
+          {
+            "type": "ipv6",
+            "address": "fd7a:115c:a1e0::1b01:e167"
+          },
+          {
+            "type": "ipv6",
+            "address": "fe80::716:3851:4402:a5d7%eth0"
+          }
+        ],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1280
+        }
+      },
+      "eth1": {
+        "addresses": [
+          {
+            "type": "ipv4",
+            "address": "192.168.1.232",
+            "netmask": "255.255.255.0"
+          },
+          {
+            "type": "ipv6",
+            "address": "fe80::1d4:9ae1:83e3:4225%eth1"
+          }
+        ],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "docker0": {
+        "addresses": [
+          {
+            "type": "ipv4",
+            "address": "172.17.0.1",
+            "netmask": "255.255.0.0"
+          }
+        ],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "br-9f70d9cf7ad4": {
+        "addresses": [
+          {
+            "type": "ipv4",
+            "address": "172.18.0.1",
+            "netmask": "255.255.0.0"
+          }
+        ],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "loopback0": {
+        "addresses": [],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "veth944d10a": {
+        "addresses": [],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "veth71978d8": {
+        "addresses": [],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "vethdb51cee": {
+        "addresses": [],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "veth5db585b": {
+        "addresses": [],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "vethddb035e": {
+        "addresses": [],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      },
+      "vethc1e3bf8": {
+        "addresses": [],
+        "stats": {
+          "is_up": true,
+          "speed_mbps": 10000,
+          "mtu": 1500
+        }
+      }
+    },
+    "tailscale": {
+      "available": false,
+      "error": "Tailscale not available or not running"
+    },
+    "active_connections": 115,
+    "connections_by_status": {
+      "TIME_WAIT": 63,
+      "LISTEN": 19,
+      "ESTABLISHED": 28,
+      "NONE": 5
+    }
+  },
+  "docker": {
+    "available": true,
+    "containers": [
+      {
+        "id": "3b9f48115185",
+        "name": "pedantic_snyder",
+        "image": "ghcr.io/github/github-mcp-server",
+        "status": "Up 2 hours",
+        "state": "running",
+        "ports": "",
+        "stats": {
+          "BlockIO": "13.5MB / 1.3MB",
+          "CPUPerc": "0.00%",
+          "Container": "3b9f48115185",
+          "ID": "3b9f48115185",
+          "MemPerc": "0.01%",
+          "MemUsage": "6.184MiB / 47.04GiB",
+          "Name": "pedantic_snyder",
+          "NetIO": "180B / 126B",
+          "PIDs": "13"
+        }
+      },
+      {
+        "id": "8857090de759",
+        "name": "langflow",
+        "image": "langflowai/langflow:latest",
+        "status": "Up 2 hours",
+        "state": "running",
+        "ports": "0.0.0.0:7860->7860/tcp, [::]:7860->7860/tcp",
+        "stats": {
+          "BlockIO": "794MB / 1.32GB",
+          "CPUPerc": "0.21%",
+          "Container": "8857090de759",
+          "ID": "8857090de759",
+          "MemPerc": "3.08%",
+          "MemUsage": "126MiB / 4GiB",
+          "Name": "langflow",
+          "NetIO": "4.52MB / 4.09MB",
+          "PIDs": "50"
+        }
+      },
+      {
+        "id": "1f348ec3a131",
+        "name": "ollama-qwen",
+        "image": "ollama/ollama:latest",
+        "status": "Up 2 hours",
+        "state": "running",
+        "ports": "0.0.0.0:11436->11434/tcp, [::]:11436->11434/tcp",
+        "stats": {
+          "BlockIO": "110MB / 4.53MB",
+          "CPUPerc": "0.00%",
+          "Container": "1f348ec3a131",
+          "ID": "1f348ec3a131",
+          "MemPerc": "0.03%",
+          "MemUsage": "8.48MiB / 32GiB",
+          "Name": "ollama-qwen",
+          "NetIO": "684B / 126B",
+          "PIDs": "14"
+        }
+      },
+      {
+        "id": "c35db6740be2",
+        "name": "postgres",
+        "image": "postgres:15-alpine",
+        "status": "Up 2 hours",
+        "state": "running",
+        "ports": "5432/tcp",
+        "stats": {
+          "BlockIO": "237MB / 24.3MB",
+          "CPUPerc": "0.00%",
+          "Container": "c35db6740be2",
+          "ID": "c35db6740be2",
+          "MemPerc": "1.02%",
+          "MemUsage": "20.86MiB / 2GiB",
+          "Name": "postgres",
+          "NetIO": "4.07MB / 4.21MB",
+          "PIDs": "7"
+        }
+      },
+      {
+        "id": "8ae2ef05cf1c",
+        "name": "ollama",
+        "image": "ollama/ollama:latest",
+        "status": "Exited (128) 2 weeks ago",
+        "state": "exited",
+        "ports": "",
+        "stats": {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.00%",
+          "Container": "8ae2ef05cf1c",
+          "ID": "8ae2ef05cf1c",
+          "MemPerc": "0.00%",
+          "MemUsage": "0B / 0B",
+          "Name": "ollama",
+          "NetIO": "0B / 0B",
+          "PIDs": "0"
+        }
+      },
+      {
+        "id": "549a36986645",
+        "name": "ollama-embed",
+        "image": "ollama/ollama:latest",
+        "status": "Up 2 hours",
+        "state": "running",
+        "ports": "0.0.0.0:11435->11434/tcp, [::]:11435->11434/tcp",
+        "stats": {
+          "BlockIO": "87.9MB / 4.34MB",
+          "CPUPerc": "0.00%",
+          "Container": "549a36986645",
+          "ID": "549a36986645",
+          "MemPerc": "0.07%",
+          "MemUsage": "8.832MiB / 12GiB",
+          "Name": "ollama-embed",
+          "NetIO": "1.84kB / 1.07kB",
+          "PIDs": "14"
+        }
+      },
+      {
+        "id": "699c8caa67c0",
+        "name": "chromadb",
+        "image": "chromadb/chroma:latest",
+        "status": "Up 2 hours",
+        "state": "running",
+        "ports": "0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp",
+        "stats": {
+          "BlockIO": "31.4MB / 7.59MB",
+          "CPUPerc": "0.00%",
+          "Container": "699c8caa67c0",
+          "ID": "699c8caa67c0",
+          "MemPerc": "0.27%",
+          "MemUsage": "5.469MiB / 2GiB",
+          "Name": "chromadb",
+          "NetIO": "852B / 126B",
+          "PIDs": "26"
+        }
+      }
+    ],
+    "container_count": 7,
+    "running_containers": 6,
+    "networks": [
+      {
+        "CreatedAt": "2025-10-15 03:19:34.040843324 -0700 PDT",
+        "Driver": "bridge",
+        "ID": "9f70d9cf7ad4",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "com.docker.compose.version=2.40.0,com.docker.compose.config-hash=4a8a5222d291f653bfddfebc9797ad95e0c2e927123eb6ad5323e4ca0cb4be83,com.docker.compose.network=default,com.docker.compose.project=ai-stack",
+        "Name": "ai-stack",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2026-02-25 01:18:09.017340014 -0800 PST",
+        "Driver": "bridge",
+        "ID": "da8d57581b47",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "bridge",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2025-10-14 22:28:22.472814694 -0700 PDT",
+        "Driver": "host",
+        "ID": "0c5072467748",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "host",
+        "Scope": "local"
+      },
+      {
+        "CreatedAt": "2025-10-14 22:28:22.463511712 -0700 PDT",
+        "Driver": "null",
+        "ID": "62874ff4a9f8",
+        "IPv4": "true",
+        "IPv6": "false",
+        "Internal": "false",
+        "Labels": "",
+        "Name": "none",
+        "Scope": "local"
+      }
+    ],
+    "volumes": [
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.compose.config-hash=276608a57cb91b57a158c6c63e2bceb9f060ab7fec1967f770f41239d61c3a70,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=chromadb_data",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/ai-stack_chromadb_data/_data",
+        "Name": "ai-stack_chromadb_data",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      },
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.compose.config-hash=fc3e227b83fc0129f8ca05f095c81684d740388238e41b17c8309d90af68cd3f,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=langflow_data",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/ai-stack_langflow_data/_data",
+        "Name": "ai-stack_langflow_data",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      },
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.compose.config-hash=6350f5f7c09eaf45d4409f85401cc64eef822cc366a7ad35c3c2dae6c6e07ff9,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=ollama_embed_models",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/ai-stack_ollama_embed_models/_data",
+        "Name": "ai-stack_ollama_embed_models",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      },
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.compose.config-hash=1b33f8f068e6f182bee00482a617eb6d429eaf789b79b352a56dde3057789cb9,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=ollama_models",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/ai-stack_ollama_models/_data",
+        "Name": "ai-stack_ollama_models",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      },
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.compose.version=2.40.2,com.docker.compose.volume=ollama_qwen_models,com.docker.compose.config-hash=601d56d72c024aa4c9353fd4142f42f8b3635f9c093b935c31eb913ecf10937b,com.docker.compose.project=ai-stack",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/ai-stack_ollama_qwen_models/_data",
+        "Name": "ai-stack_ollama_qwen_models",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      },
+      {
+        "Availability": "N/A",
+        "Driver": "local",
+        "Group": "N/A",
+        "Labels": "com.docker.compose.config-hash=8a6bdc46de8f91807a4d215bb7178055f689ab7f8e0c9edf88bfd3a3d7aed45d,com.docker.compose.project=ai-stack,com.docker.compose.version=2.40.2,com.docker.compose.volume=postgres_data",
+        "Links": "N/A",
+        "Mountpoint": "/var/lib/docker/volumes/ai-stack_postgres_data/_data",
+        "Name": "ai-stack_postgres_data",
+        "Scope": "local",
+        "Size": "N/A",
+        "Status": "N/A"
+      }
+    ],
+    "info": {
+      "server_version": "28.5.1",
+      "storage_driver": "overlay2",
+      "total_containers": 7,
+      "images": 7
+    }
+  },
+  "services": {
+    "ollama_11434": {
+      "available": true,
+      "status_code": 200,
+      "response_time_ms": 2.87
+    },
+    "ollama_11435": {
+      "available": true,
+      "status_code": 200,
+      "response_time_ms": 3.49
+    },
+    "ollama_11437": {
+      "available": false,
+      "error": "Connection refused"
+    },
+    "chromadb": {
+      "available": true,
+      "status_code": 410,
+      "response_time_ms": 3.57
+    },
+    "faithh_backend": {
+      "available": true,
+      "status_code": 200,
+      "response_time_ms": 21.05
+    },
+    "langflow": {
+      "available": true,
+      "status_code": 200,
+      "response_time_ms": 5.67
+    }
+  },
+  "performance": {
+    "uptime_seconds": 1772010871,
+    "load_average": [
+      0.28857421875,
+      0.29443359375,
+      0.22119140625
+    ],
+    "boot_time": "2026-02-25T01:14:31",
+    "processes": {
+      "total": 103,
+      "top_cpu": [
+        {
+          "cpu_percent": 4.4,
+          "pid": 1789,
+          "name": "node"
+        },
+        {
+          "cpu_percent": 2.8,
+          "pid": 2274,
+          "name": "language_server_linux_x64"
+        },
+        {
+          "cpu_percent": 0.3,
+          "pid": 2687,
+          "name": "langflow"
+        },
+        {
+          "cpu_percent": 0.2,
+          "pid": 2131,
+          "name": "node"
+        },
+        {
+          "cpu_percent": 0.1,
+          "pid": 255,
+          "name": "containerd"
+        }
+      ],
+      "top_memory": [
+        {
+          "pid": 2274,
+          "name": "language_server_linux_x64",
+          "memory_percent": 1.82551775805881
+        },
+        {
+          "pid": 1789,
+          "name": "node",
+          "memory_percent": 0.4587310330801911
+        },
+        {
+          "pid": 2657,
+          "name": "node",
+          "memory_percent": 0.3468438330229095
+        },
+        {
+          "pid": 2825,
+          "name": "node",
+          "memory_percent": 0.14796388892920834
+        },
+        {
+          "pid": 16822,
+          "name": "python3",
+          "memory_percent": 0.09462325970926358
+        }
+      ]
+    }
+  },
+  "environment": {
+    "paths": {
+      "home": "/home/jonat",
+      "ai_stack": "/home/jonat/ai-stack",
+      "faithh": null
+    },
+    "environment_variables": {
+      "PATH": "/home/jonat/ai-stack/venv/bin:/home/jonat/.npm-global/bin:/home/jonat/.npm-global/bin:/home/jonat/.windsurf-server/bin/16cc024632923bc387171d59cf5638057d4c8918/bin/remote-cli:/home/jonat/.local/bin:/home/jonat/.npm-global/bin:/home/jonat/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/libnvvp:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/PuTTY/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Users/jonat/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/jonat/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/jonat/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.2.2/:/mnt/c/ffmpeg/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Git LFS:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/Tailscale/:/mnt/c/Program Files/GitHub CLI/:/mnt/c/Program Files/nodejs/:/mnt/c/Users/jonat/.local/bin:/mnt/c/Users/jonat/AppData/Local/com.Langflow/uv:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.2/libnvvp:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/PuTTY/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/WINDOWS/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/mnt/c/Users/jonat/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/jonat/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/jonat/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2023.2.2/:/mnt/c/Users/jonat/.dotnet/tools:/mnt/c/Users/jonat/AppData/Local/Programs/Ollama:/mnt/c/Users/jonat/AppData/Local/Microsoft/WinGet/Links:/mnt/c/Users/jonat/AppData/Local/Google/Cloud SDK/google-cloud-sdk/bin:/mnt/c/Users/jonat/AppData/Local/Programs/cursor/resources/app/bin:/mnt/c/Users/jonat/AppData/Local/Programs/Windsurf/bin:/mnt/c/Users/jonat/AppData/Roaming/npm:/mnt/c/Users/jonat/.local/bin:/snap/bin:/home/jonat/.windsurf-server/extensions/ms-python.debugpy-2025.18.0-linux-x64/bundled/scripts/noConfigScripts",
+      "CUDA_VISIBLE_DEVICES": "1",
+      "DOCKER_HOST": null
+    },
+    "shell": "/bin/bash",
+    "user": "jonat"
+  },
+  "health": {
+    "status": "healthy",
+    "health_score": 100,
+    "issues": [],
+    "warnings": [],
+    "checks_performed": "2026-02-25T02:49:08.939586"
+  }
+}

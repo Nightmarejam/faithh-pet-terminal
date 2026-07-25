@@ -1,0 +1,63 @@
+models:
+  - name: faithh-primary
+    provider: ollama
+    model: qwen25-grounded:latest
+    contextWindow: 4096
+    temperature: 0.7
+    
+  - name: groq-primary
+    provider: groq
+    model: llama-3.3-70b-versatile
+    apiKey: $GROQ_API_KEY
+    contextWindow: 8192
+    temperature: 0.7
+    
+  - name: groq-fast
+    provider: groq
+    model: openai/gpt-oss-20b
+    apiKey: $GROQ_API_KEY
+    contextWindow: 8192
+    temperature: 0.7
+    
+  - name: swe-1.5
+    provider: anthropic
+    model: claude-3.5-sonnet
+    apiKey: $ANTHROPIC_API_KEY
+    contextWindow: 200000
+    temperature: 0.1
+    
+  - name: haiku
+    provider: anthropic
+    model: claude-3-haiku-20240307
+    apiKey: $ANTHROPIC_API_KEY
+    contextWindow: 200000
+    temperature: 0.1
+
+rules:
+  - name: faithh-grounding
+    pattern: ".*"
+    action: "route"
+    destination: "faithh-primary"
+    conditions:
+      - type: "context_contains"
+        values: ["alife", "experiment", "faithh", "wave", "agent"]
+    
+  - name: complex-coding
+    pattern: ".*"
+    action: "route"
+    destination: "swe-1.5"
+    conditions:
+      - type: "context_length"
+        operator: ">"
+        value: 50000
+      - type: "has_external_apis"
+        value: true
+    
+  - name: fast-reasoning
+    pattern: ".*"
+    action: "route"
+    destination: "groq-fast"
+    conditions:
+      - type: "context_length"
+        operator: "<"
+        value: 1000

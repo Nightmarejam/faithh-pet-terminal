@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAITHH — Strategic Journey Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  :root {
+    --bg: #090d14;
+    --surface: #0d1520;
+    --surface2: #111d2e;
+    --border: #1a2d45;
+    --accent: #00d4ff;
+    --accent2: #ff6b35;
+    --accent3: #39ff5a;
+    --accent4: #bf5fff;
+    --text: #c8dae8;
+    --muted: #4a6580;
+    --gold: #ffd166;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Star field background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: 
+      radial-gradient(1px 1px at 10% 20%, rgba(0,212,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 70%, rgba(0,212,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 50%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 90%, rgba(57,255,90,0.2) 0%, transparent 100%),
+      radial-gradient(2px 2px at 20% 40%, rgba(191,95,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.1) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .scanline {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0,212,255,0.3), transparent);
+    animation: scan 8s linear infinite;
+    pointer-events: none;
+    z-index: 1000;
+  }
+
+  @keyframes scan {
+    0% { top: -2px; }
+    100% { top: 100vh; }
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  header {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .logo-area h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, var(--accent), var(--accent4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+  }
+
+  .logo-area .subtitle {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 6px;
+  }
+
+  .header-stats {
+    display: flex;
+    gap: 32px;
+    align-items: flex-end;
+  }
+
+  .stat-chip {
+    text-align: right;
+  }
+
+  .stat-chip .val {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-chip .lbl {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* STATUS BAR */
+  .status-bar {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    overflow-x: auto;
+  }
+
+  .status-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent3);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  .dot.warn { background: var(--gold); }
+  .dot.info { background: var(--accent); }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* GRID LAYOUT */
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    opacity: 0.6;
+  }
+
+  .card.accent2::before { background: linear-gradient(90deg, var(--accent2), transparent); }
+  .card.accent3::before { background: linear-gradient(90deg, var(--accent3), transparent); }
+  .card.accent4::before { background: linear-gradient(90deg, var(--accent4), transparent); }
+  .card.gold::before { background: linear-gradient(90deg, var(--gold), transparent); }
+
+  .card-title {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-title .icon { font-size: 14px; }
+
+  /* SPAN CLASSES */
+  .span-2 { grid-column: span 2; }
+  .span-3 { grid-column: span 3; }
+
+  /* PHASE OVERVIEW */
+  .phase-track {
+    display: flex;
+    gap: 0;
+    height: 48px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+
+  .phase-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: flex 0.8s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .phase-seg span { position: relative; z-index: 1; }
+
+  .phase-seg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+  }
+
+  .phase-seg.p1 { background: rgba(0,212,255,0.2); color: var(--accent); flex: 1; }
+  .phase-seg.p2 { background: rgba(57,255,90,0.15); color: var(--accent3); flex: 3; }
+  .phase-seg.p3 { background: rgba(191,95,255,0.15); color: var(--accent4); flex: 5; }
+  .phase-seg.p4 { background: rgba(255,209,102,0.1); color: var(--gold); flex: 8; }
+  .phase-seg.now {
+    box-shadow: inset 0 0 0 2px var(--gold);
+    animation: borderPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes borderPulse {
+    0%, 100% { box-shadow: inset 0 0 0 2px var(--gold); }
+    50% { box-shadow: inset 0 0 0 2px rgba(255,209,102,0.3); }
+  }
+
+  .phase-labels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+
+  .phase-label {
+    font-size: 10px;
+    color: var(--muted);
+  }
+
+  .phase-label .pl-name { color: var(--text); font-weight: 700; }
+
+  /* PROGRESS RINGS */
+  .rings-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .ring-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ring-container {
+    position: relative;
+    width: 70px;
+    height: 70px;
+  }
+
+  .ring-container svg {
+    transform: rotate(-90deg);
+    width: 70px;
+    height: 70px;
+  }
+
+  .ring-bg {
+    fill: none;
+    stroke: var(--border);
+    stroke-width: 5;
+  }
+
+  .ring-fill {
+    fill: none;
+    stroke-width: 5;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .ring-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+  }
+
+  .ring-name {
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* ACTIVITY HEATMAP */
+  .heatmap {
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 2px;
+    height: 80px;
+  }
+
+  .hm-cell {
+    border-radius: 1px;
+    background: var(--border);
+    transition: background 0.3s ease;
+  }
+
+  .hm-cell.l1 { background: rgba(0,212,255,0.2); }
+  .hm-cell.l2 { background: rgba(0,212,255,0.4); }
+  .hm-cell.l3 { background: rgba(0,212,255,0.65); }
+  .hm-cell.l4 { background: rgba(0,212,255,0.9); }
+  .hm-cell.l5 { background: var(--accent3); }
+
+  .heatmap-legend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    font-size: 10px;
+    color: var(--muted);
+    justify-content: flex-end;
+  }
+
+  .hm-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent4), transparent);
+  }
+
+  .timeline-entry {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: -17px;
+    top: 5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 1px solid var(--bg);
+  }
+
+  .timeline-entry.done::before { background: var(--accent3); }
+  .timeline-entry.active::before {
+    background: var(--gold);
+    box-shadow: 0 0 8px var(--gold);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  .timeline-entry.future::before { background: var(--muted); }
+
+  .timeline-date {
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+  }
+
+  .timeline-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .timeline-desc {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* DOMAIN MATRIX */
+  .domain-matrix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .domain-card {
+    padding: 14px;
+    background: var(--surface2);
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .domain-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.05;
+    transform: translate(20px, 20px);
+  }
+
+  .domain-card.tech::after { background: var(--accent); }
+  .domain-card.biz::after { background: var(--accent2); }
+  .domain-card.civic::after { background: var(--accent4); }
+  .domain-card.personal::after { background: var(--accent3); }
+
+  .domain-icon { font-size: 20px; margin-bottom: 6px; }
+  .domain-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .domain-status { font-size: 11px; color: var(--muted); line-height: 1.4; margin-bottom: 8px; }
+
+  .mini-progress {
+    height: 3px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .mini-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1.5s ease;
+  }
+
+  /* MILESTONE LIST */
+  .milestone-list { display: flex; flex-direction: column; gap: 8px; }
+
+  .milestone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    background: var(--surface2);
+    border-radius: 3px;
+    font-size: 12px;
+    border-left: 2px solid transparent;
+  }
+
+  .milestone.done { border-color: var(--accent3); }
+  .milestone.active { border-color: var(--gold); }
+  .milestone.future { border-color: var(--muted); opacity: 0.6; }
+
+  .milestone .check { font-size: 14px; flex-shrink: 0; }
+  .milestone .text { flex: 1; line-height: 1.3; }
+  .milestone .phase { font-size: 10px; color: var(--muted); letter-spacing: 1px; }
+
+  /* NORTH STAR */
+  .north-star {
+    text-align: center;
+    padding: 24px;
+    background: linear-gradient(135deg, rgba(0,212,255,0.03), rgba(191,95,255,0.03));
+    border: 1px solid rgba(0,212,255,0.1);
+    border-radius: 4px;
+    margin-bottom: 0;
+  }
+
+  .north-star .phrase {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .north-star .attribution {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 2px;
+    margin-top: 10px;
+  }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .main-grid { grid-template-columns: 1fr 1fr; }
+    .span-3 { grid-column: span 2; }
+    .rings-grid { grid-template-columns: repeat(2, 1fr); }
+    .header-stats { gap: 16px; }
+  }
+
+  @media (max-width: 600px) {
+    .main-grid { grid-template-columns: 1fr; }
+    .span-2, .span-3 { grid-column: 1; }
+    .header-stats { display: none; }
+    .domain-matrix { grid-template-columns: 1fr; }
+    .rings-grid { grid-template-columns: repeat(4, 1fr); }
+    .phase-labels { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="scanline"></div>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-area">
+      <h1>FAITHH</h1>
+      <div class="subtitle">Strategic Journey Dashboard · 2025–2031</div>
+    </div>
+    <div class="header-stats">
+      <div class="stat-chip">
+        <span class="val" id="daysCounter">~180</span>
+        <span class="lbl">Days Active</span>
+      </div>
+      <div class="stat-chip">
+        <span class="val" style="color:var(--accent3)" id="docsIndexed">37K+</span>
+        <span class="lbl">Docs Indexed</span>
+      </div>
+      <div class="stat-chip">
+        <span class="val" style="color:var(--accent4)">4</span>
+        <span class="lbl">Active Domains</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    <div class="status-item"><div class="dot"></div> FAITHH Backend v4.0-pulse HEALTHY</div>
+    <div class="status-item"><div class="dot info"></div> ChromaDB <span id="docCount">37,779</span> docs</div>
+    <div class="status-item"><div class="dot warn"></div> Tier 1 API — Rate limit monitor active</div>
+    <div class="status-item"><div class="dot"></div> RAG pipeline operational</div>
+    <div class="status-item"><div class="dot"></div> Q1 2026 In Progress</div>
+    <div class="status-item"><div class="dot info"></div> Live from chat archives</div>
+  </div>
+
+  <!-- MAIN GRID -->
+  <div class="main-grid">
+
+    <!-- 1: PHASE OVERVIEW span-3 -->
+    <div class="card span-3 gold">
+      <div class="card-title"><span class="icon">🧭</span> Journey Phases — 2025 to 2031</div>
+
+      <div class="phase-track">
+        <div class="phase-seg p1"><span>Foundation</span></div>
+        <div class="phase-seg p2 now"><span>▶ Infrastructure</span></div>
+        <div class="phase-seg p3"><span>Scale</span></div>
+        <div class="phase-seg p4"><span>Legacy</span></div>
+      </div>
+
+      <div class="phase-labels">
+        <div class="phase-label"><div class="pl-name">Phase 1</div>Aug–Dec 2025 · Done</div>
+        <div class="phase-label"><div class="pl-name">Phase 2 ← NOW</div>Q1 2026 · Active</div>
+        <div class="phase-label"><div class="pl-name">Phase 3</div>2027–2028 · Scale</div>
+        <div class="phase-label"><div class="pl-name">Phase 4</div>2029–2031 · Legacy</div>
+      </div>
+    </div>
+
+    <!-- 2: DOMAIN PROGRESS RINGS -->
+    <div class="card accent3">
+      <div class="card-title"><span class="icon">⚡</span> Domain Progress</div>
+      <div class="rings-grid" id="ringsGrid">
+        <!-- Rings will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- 3: TIMELINE -->
+    <div class="card accent2 span-2">
+      <div class="card-title"><span class="icon">📍</span> Key Milestones from Chat Archives</div>
+      <div class="timeline" id="timeline">
+        <!-- Timeline will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- 4: ACTIVITY HEATMAP span-2 -->
+    <div class="card span-2">
+      <div class="card-title"><span class="icon">🔥</span> Build Activity — ~6 Month Window</div>
+      <div class="heatmap" id="heatmap"></div>
+      <div class="heatmap-legend">
+        <span>Less</span>
+        <div class="hm-swatch" style="background:var(--border)"></div>
+        <div class="hm-swatch" style="background:rgba(0,212,255,0.2)"></div>
+        <div class="hm-swatch" style="background:rgba(0,212,255,0.45)"></div>
+        <div class="hm-swatch" style="background:rgba(0,212,255,0.7)"></div>
+        <div class="hm-swatch" style="background:var(--accent3)"></div>
+        <span>More</span>
+      </div>
+    </div>
+
+    <!-- 5: DOMAIN MATRIX span-2 -->
+    <div class="card span-2 accent4">
+      <div class="card-title"><span class="icon">🌐</span> Domain Status Matrix</div>
+      <div class="domain-matrix" id="domainMatrix">
+        <!-- Domain cards will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- 6: ACCOMPLISHMENTS -->
+    <div class="card">
+      <div class="card-title"><span class="icon">✅</span> Verified Accomplishments</div>
+      <div class="milestone-list" id="accomplishments">
+        <!-- Milestones will be populated by JavaScript -->
+      </div>
+    </div>
+
+    <!-- 7: NORTH STAR -->
+    <div class="north-star span-3">
+      <div class="phrase">"I see the whole gestalt and the path remains clear, even as I walk it differently than I first imagined."</div>
+      <div class="attribution">— FAITHH Strategic Planning System · 2026</div>
+    </div>
+
+  </div><!-- end main-grid -->
+
+  <footer>
+    <span>FAITHH Strategic Dashboard · Generated from Chat Archives</span>
+    <span>Jonathan · Individual Workspace · Live Data</span>
+    <span>Last updated: <span id="lastUpdated">Just now</span></span>
+  </footer>
+
+</div><!-- end container -->
+
+<script>
+  // Load dashboard data
+  let dashboardData = null;
+  
+  async function loadDashboardData() {
+    try {
+      const response = await fetch('dashboard_data.json');
+      dashboardData = await response.json();
+      console.log('Dashboard data loaded:', dashboardData);
+      populateDashboard();
+    } catch (error) {
+      console.error('Error loading dashboard data:', error);
+      // Use fallback data for demonstration
+      dashboardData = {
+        domain_progress: { technical: 70, business: 40, civic: 20, personal: 50 },
+        timeline: [
+          { date: '2025-11-09', title: 'FAITHH v4 planning', domains: ['technical', 'business'], intensity: 10 },
+          { date: '2025-12-13', title: 'Backend handoff review', domains: ['technical', 'business', 'civic'], intensity: 10 }
+        ],
+        milestones: [
+          { title: 'FAITHH Backend v4.0 deployed', type: 'milestone', domains: ['technical'] },
+          { title: '37,779 documents indexed', type: 'milestone', domains: ['technical'] },
+          { title: '5-Year strategic plan integrated', type: 'milestone', domains: ['technical', 'business', 'civic', 'personal'] }
+        ],
+        heatmap_data: generateFallbackHeatmap(),
+        strategic_context: { current_phase: 'Phase 2: Infrastructure', phase_progress: 35 }
+      };
+      populateDashboard();
+    }
+  }
+
+  function generateFallbackHeatmap() {
+    const heatmap = [];
+    for (let week = 0; week < 26; week++) {
+      const weekData = [];
+      for (let day = 0; day < 7; day++) {
+        // Simulate some activity patterns
+        const intensity = Math.random() > 0.7 ? Math.floor(Math.random() * 4) + 1 : 0;
+        weekData.push(intensity);
+      }
+      heatmap.push(weekData);
+    }
+    return heatmap;
+  }
+
+  function populateDashboard() {
+    if (!dashboardData) return;
+
+    // Populate domain progress rings
+    populateRings();
+    
+    // Populate timeline
+    populateTimeline();
+    
+    // Populate heatmap
+    populateHeatmap();
+    
+    // Populate domain matrix
+    populateDomainMatrix();
+    
+    // Populate accomplishments
+    populateAccomplishments();
+    
+    // Update timestamp
+    document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
+  }
+
+  function populateRings() {
+    const ringsGrid = document.getElementById('ringsGrid');
+    const domains = [
+      { key: 'technical', name: 'Technical', color: 'var(--accent)', icon: '⚙️' },
+      { key: 'business', name: 'Business', color: 'var(--accent2)', icon: '🎵' },
+      { key: 'civic', name: 'Civic', color: 'var(--accent4)', icon: '🏛️' },
+      { key: 'personal', name: 'Personal', color: 'var(--accent3)', icon: '🌱' }
+    ];
+
+    ringsGrid.innerHTML = domains.map(domain => {
+      const progress = dashboardData.domain_progress[domain.key] || 0;
+      const circumference = 2 * Math.PI * 28;
+      const offset = circumference - (progress / 100) * circumference;
+      
+      return `
+        <div class="ring-item">
+          <div class="ring-container">
+            <svg viewBox="0 0 70 70">
+              <circle class="ring-bg" cx="35" cy="35" r="28"/>
+              <circle class="ring-fill" cx="35" cy="35" r="28" 
+                stroke="${domain.color}"
+                stroke-dasharray="${circumference}" 
+                stroke-dashoffset="${offset}"/>
+            </svg>
+            <div class="ring-label" style="color:${domain.color}">${progress}%</div>
+          </div>
+          <div class="ring-name">${domain.name}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function populateTimeline() {
+    const timeline = document.getElementById('timeline');
+    if (!dashboardData.timeline || dashboardData.timeline.length === 0) {
+      timeline.innerHTML = '<div style="text-align: center; color: var(--muted); padding: 40px;">No timeline data available</div>';
+      return;
+    }
+
+    timeline.innerHTML = dashboardData.timeline.map((entry, index) => {
+      const date = new Date(entry.date);
+      const isLatest = index === 0;
+      const statusClass = isLatest ? 'active' : 'done';
+      
+      return `
+        <div class="timeline-entry ${statusClass}">
+          <div class="timeline-date">${date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</div>
+          <div class="timeline-title">${entry.title}</div>
+          <div class="timeline-desc">${entry.message_count} messages across ${entry.domains.length} domains</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function populateHeatmap() {
+    const heatmap = document.getElementById('heatmap');
+    const data = dashboardData.heatmap_data || generateFallbackHeatmap();
+    
+    heatmap.innerHTML = data.flat().map(intensity => {
+      const level = intensity > 0 ? ` l${Math.min(intensity, 5)}` : '';
+      return `<div class="hm-cell${level}"></div>`;
+    }).join('');
+  }
+
+  function populateDomainMatrix() {
+    const domainMatrix = document.getElementById('domainMatrix');
+    const domains = [
+      { key: 'technical', name: 'FAITHH / Technical', icon: '⚙️', color: 'var(--accent)', 
+        status: 'Backend v4.0 live. 37K docs indexed. RAG + ML chips + PULSE active.' },
+      { key: 'business', name: 'Tom Cat Sound', icon: '🎵', color: 'var(--accent2)', 
+        status: 'Active client work. CRM system planned Q2. Business model evolving.' },
+      { key: 'civic', name: 'Constella / Civic', icon: '🏛️', color: 'var(--accent4)', 
+        status: 'Framework architecture documented. Public launch pre-phase.' },
+      { key: 'personal', name: 'Life / Permaculture', icon: '🌱', color: 'var(--accent3)', 
+        status: 'Mexico cross-border lifestyle. Spanish routine developing.' }
+    ];
+
+    domainMatrix.innerHTML = domains.map(domain => {
+      const progress = dashboardData.domain_progress[domain.key] || 0;
+      return `
+        <div class="domain-card ${domain.key}">
+          <div class="domain-icon">${domain.icon}</div>
+          <div class="domain-name" style="color:${domain.color}">${domain.name}</div>
+          <div class="domain-status">${domain.status}</div>
+          <div class="mini-progress">
+            <div class="mini-fill" style="width:${progress}%;background:${domain.color}"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function populateAccomplishments() {
+    const accomplishments = document.getElementById('accomplishments');
+    const milestones = dashboardData.milestones || [];
+    
+    if (milestones.length === 0) {
+      accomplishments.innerHTML = '<div style="text-align: center; color: var(--muted); padding: 20px;">No milestones available</div>';
+      return;
+    }
+
+    accomplishments.innerHTML = milestones.map((milestone, index) => {
+      const statusClass = index < 2 ? 'done' : index === 2 ? 'active' : 'future';
+      const check = statusClass === 'done' ? '✓' : statusClass === 'active' ? '▶' : '○';
+      const domains = milestone.domains ? milestone.domains.join(', ') : 'Technical';
+      
+      return `
+        <div class="milestone ${statusClass}">
+          <span class="check">${check}</span>
+          <div>
+            <div class="text">${milestone.title}</div>
+            <div class="phase">${domains}</div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Initialize dashboard
+  document.addEventListener('DOMContentLoaded', loadDashboardData);
+  
+  // Auto-refresh every 5 minutes
+  setInterval(loadDashboardData, 5 * 60 * 1000);
+</script>
+
+</body>
+</html>

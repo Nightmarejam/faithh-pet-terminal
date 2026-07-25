@@ -1,0 +1,9 @@
+# Optimized Qwen2.5 7B - For speed, RTX 3090
+# Official model already clean, this adds hardware optimizations
+
+FROM qwen2.5:7b
+
+# Optimized for RTX 3090 - maximize speed
+PARAMETER num_ctx 4096
+PARAMETER num_batch 512
+PARAMETER num_gpu 99

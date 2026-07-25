@@ -1,0 +1,438 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-03-27T23:21:49.199449",
+  "universal_principles": [
+    {
+      "id": "udhr_article_1",
+      "title": "Equality and Dignity",
+      "description": "All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood.",
+      "source": "Universal Declaration of Human Rights, Article 1",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366075",
+      "domain_applicability": [
+        "all"
+      ],
+      "keywords": [
+        "equality",
+        "dignity",
+        "freedom",
+        "brotherhood"
+      ]
+    },
+    {
+      "id": "udhr_article_2",
+      "title": "Non-Discrimination",
+      "description": "Everyone is entitled to all the rights and freedoms set forth in this Declaration, without distinction of any kind, such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status.",
+      "source": "Universal Declaration of Human Rights, Article 2",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366081",
+      "domain_applicability": [
+        "all"
+      ],
+      "keywords": [
+        "non-discrimination",
+        "equality",
+        "rights",
+        "freedoms"
+      ]
+    },
+    {
+      "id": "udhr_article_3",
+      "title": "Right to Life",
+      "description": "Everyone has the right to life, liberty and security of person.",
+      "source": "Universal Declaration of Human Rights, Article 3",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366083",
+      "domain_applicability": [
+        "all"
+      ],
+      "keywords": [
+        "life",
+        "liberty",
+        "security",
+        "person"
+      ]
+    },
+    {
+      "id": "udhr_article_12",
+      "title": "Privacy Protection",
+      "description": "No one shall be subjected to arbitrary interference with his privacy, family, home or correspondence, nor to attacks upon his honour and reputation. Everyone has the right to the protection of the law against such interference or attacks.",
+      "source": "Universal Declaration of Human Rights, Article 12",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366084",
+      "domain_applicability": [
+        "genomic_research",
+        "personal_assistance",
+        "civic_engagement"
+      ],
+      "keywords": [
+        "privacy",
+        "family",
+        "home",
+        "correspondence",
+        "honor",
+        "reputation"
+      ]
+    },
+    {
+      "id": "udhr_article_19",
+      "title": "Freedom of Opinion",
+      "description": "Everyone has the right to freedom of opinion and expression. This right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers.",
+      "source": "Universal Declaration of Human Rights, Article 19",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366085",
+      "domain_applicability": [
+        "all"
+      ],
+      "keywords": [
+        "opinion",
+        "expression",
+        "information",
+        "ideas",
+        "media"
+      ]
+    },
+    {
+      "id": "udhr_article_27",
+      "title": "Scientific Progress",
+      "description": "Everyone has the right freely to participate in the cultural life of the community, to enjoy the arts and to share in scientific advancement and its benefits.",
+      "source": "Universal Declaration of Human Rights, Article 27",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366152",
+      "domain_applicability": [
+        "genomic_research",
+        "creative_arts",
+        "civic_engagement"
+      ],
+      "keywords": [
+        "culture",
+        "arts",
+        "science",
+        "advancement",
+        "benefits"
+      ]
+    }
+  ],
+  "modern_rights": [
+    {
+      "id": "modern_united_nations_0",
+      "title": "Right to Privacy in Digital Age",
+      "description": "Everyone has the right to privacy, including in digital communications and data processing",
+      "source": "United Nations Human Rights Council",
+      "weight": 0.9,
+      "last_updated": "2026-03-27T23:21:49.198607",
+      "domain_applicability": [
+        "technology",
+        "ai",
+        "data_science",
+        "general"
+      ],
+      "keywords": [
+        "privacy",
+        "data_protection",
+        "digital_rights",
+        "surveillance"
+      ]
+    },
+    {
+      "id": "modern_united_nations_1",
+      "title": "Freedom of Expression Online",
+      "description": "Everyone has the right to freedom of opinion and expression, including through digital media",
+      "source": "United Nations Human Rights Council",
+      "weight": 0.85,
+      "last_updated": "2026-03-27T23:21:49.198613",
+      "domain_applicability": [
+        "technology",
+        "media",
+        "communication",
+        "general"
+      ],
+      "keywords": [
+        "freedom_of_expression",
+        "speech",
+        "media",
+        "internet"
+      ]
+    },
+    {
+      "id": "modern_united_nations_2",
+      "title": "Right to Digital Access",
+      "description": "Everyone has the right to access digital technologies and the internet",
+      "source": "United Nations Human Rights Council",
+      "weight": 0.8,
+      "last_updated": "2026-03-27T23:21:49.198616",
+      "domain_applicability": [
+        "technology",
+        "education",
+        "infrastructure",
+        "general"
+      ],
+      "keywords": [
+        "digital_access",
+        "internet",
+        "technology_access",
+        "digital_divide"
+      ]
+    },
+    {
+      "id": "modern_united_nations_3",
+      "title": "Protection from Algorithmic Discrimination",
+      "description": "Everyone has the right to be protected from discriminatory algorithmic decision-making",
+      "source": "United Nations Human Rights Council",
+      "weight": 0.9,
+      "last_updated": "2026-03-27T23:21:49.198618",
+      "domain_applicability": [
+        "ai",
+        "technology",
+        "law",
+        "employment",
+        "general"
+      ],
+      "keywords": [
+        "algorithmic_bias",
+        "discrimination",
+        "ai_ethics",
+        "fairness"
+      ]
+    },
+    {
+      "id": "modern_united_nations_4",
+      "title": "Right to Digital Dignity",
+      "description": "Everyone has the right to dignity and respect in digital interactions and representations",
+      "source": "United Nations Human Rights Council",
+      "weight": 0.85,
+      "last_updated": "2026-03-27T23:21:49.198620",
+      "domain_applicability": [
+        "ai",
+        "technology",
+        "media",
+        "social_media",
+        "general"
+      ],
+      "keywords": [
+        "digital_dignity",
+        "respect",
+        "online_harassment",
+        "digital_identity"
+      ]
+    },
+    {
+      "id": "modern_eu_charter_5",
+      "title": "Right to Data Protection",
+      "description": "Everyone has the right to the protection of personal data concerning them",
+      "source": "European Union Charter of Fundamental Rights",
+      "weight": 0.95,
+      "last_updated": "2026-03-27T23:21:49.198681",
+      "domain_applicability": [
+        "technology",
+        "ai",
+        "data_science",
+        "business",
+        "general"
+      ],
+      "keywords": [
+        "data_protection",
+        "gdpr",
+        "privacy",
+        "personal_data"
+      ]
+    },
+    {
+      "id": "modern_eu_charter_6",
+      "title": "Right to Non-Discrimination in AI",
+      "description": "Any discrimination based on grounds such as sex, racial or ethnic origin, religion, disability, age or sexual orientation shall be prohibited",
+      "source": "European Union Charter of Fundamental Rights",
+      "weight": 0.9,
+      "last_updated": "2026-03-27T23:21:49.198684",
+      "domain_applicability": [
+        "ai",
+        "technology",
+        "employment",
+        "business",
+        "general"
+      ],
+      "keywords": [
+        "non_discrimination",
+        "equality",
+        "ai_bias",
+        "fair_treatment"
+      ]
+    },
+    {
+      "id": "modern_eu_charter_7",
+      "title": "Right to Explainability in Automated Decisions",
+      "description": "Everyone has the right to obtain an explanation of automated decisions made about them",
+      "source": "European Union Charter of Fundamental Rights",
+      "weight": 0.85,
+      "last_updated": "2026-03-27T23:21:49.198686",
+      "domain_applicability": [
+        "ai",
+        "technology",
+        "law",
+        "finance",
+        "general"
+      ],
+      "keywords": [
+        "explainability",
+        "transparency",
+        "automated_decisions",
+        "ai_explanation"
+      ]
+    },
+    {
+      "id": "modern_human_rights_watch_8",
+      "title": "Protection from Digital Surveillance",
+      "description": "Governments must protect citizens from unlawful digital surveillance and data collection",
+      "source": "Human Rights Watch",
+      "weight": 0.85,
+      "last_updated": "2026-03-27T23:21:49.198776",
+      "domain_applicability": [
+        "technology",
+        "law",
+        "government",
+        "general"
+      ],
+      "keywords": [
+        "surveillance",
+        "government_monitoring",
+        "privacy",
+        "civil_liberties"
+      ]
+    },
+    {
+      "id": "modern_human_rights_watch_9",
+      "title": "Right to Internet Freedom",
+      "description": "Everyone has the right to access and share information online without government censorship",
+      "source": "Human Rights Watch",
+      "weight": 0.8,
+      "last_updated": "2026-03-27T23:21:49.198780",
+      "domain_applicability": [
+        "technology",
+        "media",
+        "communication",
+        "general"
+      ],
+      "keywords": [
+        "internet_freedom",
+        "censorship",
+        "access_to_information",
+        "digital_rights"
+      ]
+    },
+    {
+      "id": "modern_amnesty_international_10",
+      "title": "Protection from Online Harassment",
+      "description": "Everyone has the right to be protected from online harassment, hate speech, and digital violence",
+      "source": "Amnesty International",
+      "weight": 0.85,
+      "last_updated": "2026-03-27T23:21:49.198866",
+      "domain_applicability": [
+        "technology",
+        "social_media",
+        "law",
+        "general"
+      ],
+      "keywords": [
+        "online_harassment",
+        "hate_speech",
+        "digital_violence",
+        "online_safety"
+      ]
+    },
+    {
+      "id": "modern_amnesty_international_11",
+      "title": "Right to Digital Assembly",
+      "description": "Everyone has the right to peaceful assembly and association online",
+      "source": "Amnesty International",
+      "weight": 0.8,
+      "last_updated": "2026-03-27T23:21:49.198868",
+      "domain_applicability": [
+        "technology",
+        "social_media",
+        "activism",
+        "general"
+      ],
+      "keywords": [
+        "digital_assembly",
+        "online_activism",
+        "digital_protest",
+        "association_rights"
+      ]
+    }
+  ],
+  "civic_principles": [
+    {
+      "id": "constella_democratic_participation",
+      "title": "Democratic Participation",
+      "description": "All individuals have the right to participate in democratic processes and civic engagement without barriers. AI systems should facilitate rather than hinder democratic participation.",
+      "source": "Constella Framework - Democratic Values",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366160",
+      "domain_applicability": [
+        "civic_engagement",
+        "personal_assistance"
+      ],
+      "keywords": [
+        "democracy",
+        "participation",
+        "civic",
+        "engagement"
+      ]
+    },
+    {
+      "id": "constella_community_building",
+      "title": "Community Building",
+      "description": "AI systems should support community building and social cohesion, fostering connections between people and strengthening community bonds.",
+      "source": "Constella Framework - Community Principles",
+      "weight": 0.8,
+      "last_updated": "2026-03-27T18:59:34.366162",
+      "domain_applicability": [
+        "civic_engagement",
+        "personal_assistance"
+      ],
+      "keywords": [
+        "community",
+        "social",
+        "cohesion",
+        "connections"
+      ]
+    },
+    {
+      "id": "constella_transparency",
+      "title": "Transparency and Accountability",
+      "description": "AI systems must operate transparently and be accountable for their decisions and actions. Users should understand how decisions are made and have recourse for errors.",
+      "source": "Constella Framework - Governance Principles",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366163",
+      "domain_applicability": [
+        "all"
+      ],
+      "keywords": [
+        "transparency",
+        "accountability",
+        "decisions",
+        "recourse"
+      ]
+    },
+    {
+      "id": "constella_ethical_innovation",
+      "title": "Ethical Innovation",
+      "description": "Technological innovation must be guided by ethical considerations and serve human wellbeing. AI should enhance rather than diminish human capabilities and dignity.",
+      "source": "Constella Framework - Innovation Principles",
+      "weight": 1.0,
+      "last_updated": "2026-03-27T18:59:34.366164",
+      "domain_applicability": [
+        "genomic_research",
+        "creative_arts"
+      ],
+      "keywords": [
+        "innovation",
+        "ethics",
+        "wellbeing",
+        "capabilities",
+        "dignity"
+      ]
+    }
+  ],
+  "domain_adaptations": {}
+}

@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-03-31T01:36:45.890397+00:00",
+  "intake_root": "docs/data",
+  "intake_roots_scanned": [
+    {
+      "path": "/home/jonat/ai-stack/docs/data/alife_sources/nas_import",
+      "status": "ok"
+    },
+    {
+      "path": "/home/jonat/ai-stack/docs/data/constella_sources/nas_import",
+      "status": "ok"
+    }
+  ],
+  "collection": "faithh_knowledge_base",
+  "chroma_host": "100.79.85.32",
+  "chroma_port": 8000,
+  "files": {
+    "scanned_total": 38,
+    "indexed": 38,
+    "skipped": []
+  },
+  "chunks_produced": 780,
+  "upserts_performed": 780,
+  "stale_chunk_ids_deleted": 390,
+  "per_domain_record_counts": {
+    "alife": 468,
+    "constella_constitutional": 312
+  },
+  "errors": [],
+  "finished_utc": "2026-03-31T01:37:17.158903+00:00"
+}

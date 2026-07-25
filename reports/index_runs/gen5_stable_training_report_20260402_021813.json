@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-04-02T02:18:13.922754+00:00",
+  "experiment": "gen5_stable_training_export",
+  "seed_start": 505001,
+  "seed_count": 20,
+  "summary": {
+    "runs": 20,
+    "sign_lock": {
+      "pop_a_better_survival_rate": 0.8,
+      "pop_a_lower_depletion_rate": 0.9,
+      "uninformed_disadvantaged_rate": 0.3
+    },
+    "effect_means": {
+      "delta_mean_fitness_b_minus_a": -0.04257019606328347,
+      "delta_band2_b_minus_a": -0.7,
+      "delta_dep_events_b_minus_a": 2.9
+    },
+    "dominant_effect_signs": {
+      "delta_mean_fitness_b_minus_a_sign": -1,
+      "delta_band2_b_minus_a_sign": -1,
+      "delta_dep_events_b_minus_a_sign": 1
+    },
+    "consistency_threshold": 0.7,
+    "causal_contrast_lock_pass": true
+  },
+  "stable_seed_count": 15,
+  "stable_seed_fraction": 0.75,
+  "stable_seeds": [
+    505002,
+    505003,
+    505004,
+    505005,
+    505007,
+    505008,
+    505010,
+    505011,
+    505012,
+    505013,
+    505014,
+    505015,
+    505016,
+    505017,
+    505020
+  ],
+  "output_jsonl": "/home/jonat/ai-stack/ml/training_data/seeded_batches/gen5_stable_training_20260402_021813.jsonl",
+  "examples_written": 16
+}

@@ -1,0 +1,23 @@
+{
+  "timestamp_utc": "2026-03-31T02:16:09.374883+00:00",
+  "pipeline": "x_staging_seeded_ingestion",
+  "inputs": {
+    "manifest": "reports/inventory/x_staging_manifest.csv",
+    "conversion_queue": "reports/inventory/x_staging_conversion_queue.csv",
+    "governance_staged_root": "docs/data/governance_sources/windows_staging_import"
+  },
+  "outputs": {
+    "governance_ingest_report": "reports/index_runs/governance_ingest_report_20260331_021521.json",
+    "links_jsonl": "reports/inventory/governance_alife_links.jsonl",
+    "constella_synthesis_jsonl": "reports/inventory/constella_synthesis_set.jsonl",
+    "seeded_action_items_report": "reports/index_runs/alife_seeded_action_items.json",
+    "seeded_action_items_jsonl": "reports/inventory/alife_seeded_action_items.jsonl",
+    "validation_report": "reports/index_runs/validation_x_staging_seeded_20260330_191549.json"
+  },
+  "index_counts": {
+    "governance_docs_prepared": 45,
+    "governance_seed_links_indexed": 4,
+    "constella_synthesis_records_indexed": 12,
+    "alife_seeded_action_items_indexed": 3
+  }
+}

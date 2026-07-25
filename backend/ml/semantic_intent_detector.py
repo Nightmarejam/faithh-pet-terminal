@@ -10,6 +10,11 @@ import json
 import sys
 import os
 
+try:
+    import torch
+except ImportError:
+    torch = None  # type: ignore
+
 # Add parent directory to path for imports
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 from backend.intent_detection import detect_query_intent
@@ -23,18 +28,45 @@ class SemanticIntentDetector:
         self.intent_embeddings = {}
         self.similarity_threshold = 0.7
         self.confidence_threshold = 0.6
+        self.device = self._pick_device()
         self._load_model()
         self._precompute_intent_embeddings()
+
+    @staticmethod
+    def _pick_device() -> str:
+        """Prefer CUDA with compute capability >= 7.0 (Volta+); else CPU (avoids sm_61 crashes)."""
+        if torch is None or not torch.cuda.is_available():
+            return "cpu"
+        device = "cpu"
+        try:
+            for i in range(torch.cuda.device_count()):
+                props = torch.cuda.get_device_properties(i)
+                if props.major >= 7:
+                    device = f"cuda:{i}"
+                    break
+        except Exception:
+            return "cpu"
+        return "cpu"
     
     def _load_model(self):
         """Load sentence transformer model"""
         try:
-            print(f"📦 Loading semantic model: {self.model_name}")
-            self.model = SentenceTransformer(self.model_name)
+            print(f"📦 Loading semantic model: {self.model_name} (device={self.device})")
+            self.model = SentenceTransformer(self.model_name, device=self.device)
             print(f"✅ Model loaded successfully")
         except Exception as e:
             print(f"❌ Error loading model: {e}")
+            if self.device != "cpu":
+                try:
+                    print("⚠️ Retrying on CPU...")
+                    self.device = "cpu"
+                    self.model = SentenceTransformer(self.model_name, device="cpu")
+                    print("✅ Model loaded on CPU")
+                    return
+                except Exception as e2:
+                    print(f"❌ CPU fallback failed: {e2}")
             print("⚠️ Falling back to regex-only intent detection")
+            self.model = None
     
     def _precompute_intent_embeddings(self):
         """Precompute embeddings for intent patterns"""

@@ -16,5 +16,8 @@ data/pool/*.json
 data/pool/*.jsonl
 data/whitepapers/*.pdf
 data/whitepapers/*.json
+<<<<<<< HEAD
 data/ops/*.json
 data/ops/*.log
+=======
+>>>>>>> origin/main
