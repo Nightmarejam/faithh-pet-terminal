@@ -2,86 +2,25 @@
   "chip_sequences": [
     {
       "chips": [
-        "project_structure",
-        "constella",
-        "rag_search"
+        "project_structure"
       ],
-      "timestamp": "2026-05-11T23:34:52.732940",
-      "query_snippet": "so what do you think of the alife program?"
-    },
-    {
-      "chips": [
-        "project_structure",
-        "self_awareness"
-      ],
-      "timestamp": "2026-05-11T23:45:25.008454",
-      "query_snippet": "What is the FAITHH project?"
-    },
-    {
-      "chips": [
-        "project_structure",
-        "self_awareness"
-      ],
-      "timestamp": "2026-05-12T00:00:21.697238",
-      "query_snippet": "What is FAITHH?"
-    },
-    {
-      "chips": [
-        "project_structure",
-        "self_awareness"
-      ],
-      "timestamp": "2026-05-12T00:20:32.534797",
-      "query_snippet": "What is FAITHH?"
-    },
-    {
-      "chips": [
-        "project_structure",
-        "self_awareness"
-      ],
-      "timestamp": "2026-05-12T00:26:18.172209",
-      "query_snippet": "What is FAITHH?"
+      "timestamp": "2026-07-26T23:04:35.474784",
+      "query_snippet": "In one sentence, what is the confirmability tier system?"
     },
     {
       "chips": [
         "project_structure"
       ],
-      "timestamp": "2026-05-15T01:26:35.166511",
-      "query_snippet": "So, it seems I ran out of session use from the other LLMS. Lets figure out what we should look into "
+      "timestamp": "2026-07-26T23:04:48.299722",
+      "query_snippet": "In one sentence, what is the confirmability tier system?"
     },
     {
       "chips": [
         "project_structure",
-        "conversation_history",
-        "project_state"
+        "self_awareness"
       ],
-      "timestamp": "2026-05-15T01:28:07.812228",
-      "query_snippet": "Let's review changes and see what we have access to in terms of database pulling. Lets find out what"
-    },
-    {
-      "chips": [
-        "project_structure",
-        "self_awareness",
-        "rag_search_fallback"
-      ],
-      "timestamp": "2026-05-17T02:52:43.086936",
-      "query_snippet": "What do you know about the FAITHH ChromaDB setup?"
-    },
-    {
-      "chips": [
-        "project_structure",
-        "self_awareness",
-        "rag_search_fallback"
-      ],
-      "timestamp": "2026-05-17T02:56:00.284890",
-      "query_snippet": "What do you know about the FAITHH ChromaDB setup?"
-    },
-    {
-      "chips": [
-        "project_structure",
-        "rag_search"
-      ],
-      "timestamp": "2026-05-17T08:21:07.043618",
-      "query_snippet": "I was able to update the dimensions and the chips for the RGA. Lets figure out if we have access to "
+      "timestamp": "2026-07-26T23:05:03.136623",
+      "query_snippet": "What is FAITHH and what is it for?"
     }
   ],
   "topic_clusters": {},
@@ -89,80 +28,25 @@
     "night": [
       {
         "chips": [
-          "project_structure",
-          "constella",
-          "rag_search"
+          "project_structure"
         ],
-        "timestamp": "2026-05-11T23:34:52.732940"
-      },
-      {
-        "chips": [
-          "project_structure",
-          "self_awareness"
-        ],
-        "timestamp": "2026-05-11T23:45:25.008454"
-      },
-      {
-        "chips": [
-          "project_structure",
-          "self_awareness"
-        ],
-        "timestamp": "2026-05-12T00:00:21.697238"
-      },
-      {
-        "chips": [
-          "project_structure",
-          "self_awareness"
-        ],
-        "timestamp": "2026-05-12T00:20:32.534797"
-      },
-      {
-        "chips": [
-          "project_structure",
-          "self_awareness"
-        ],
-        "timestamp": "2026-05-12T00:26:18.172209"
+        "timestamp": "2026-07-26T23:04:35.474784"
       },
       {
         "chips": [
           "project_structure"
         ],
-        "timestamp": "2026-05-15T01:26:35.166511"
+        "timestamp": "2026-07-26T23:04:48.299722"
       },
       {
         "chips": [
           "project_structure",
-          "conversation_history",
-          "project_state"
+          "self_awareness"
         ],
-        "timestamp": "2026-05-15T01:28:07.812228"
-      },
-      {
-        "chips": [
-          "project_structure",
-          "self_awareness",
-          "rag_search_fallback"
-        ],
-        "timestamp": "2026-05-17T02:52:43.086936"
-      },
-      {
-        "chips": [
-          "project_structure",
-          "self_awareness",
-          "rag_search_fallback"
-        ],
-        "timestamp": "2026-05-17T02:56:00.284890"
+        "timestamp": "2026-07-26T23:05:03.136623"
       }
     ],
-    "morning": [
-      {
-        "chips": [
-          "project_structure",
-          "rag_search"
-        ],
-        "timestamp": "2026-05-17T08:21:07.043618"
-      }
-    ],
+    "morning": [],
     "afternoon": [],
     "evening": []
   },
@@ -172,7 +56,7 @@
     "experiment": 1372,
     "from": 1275,
     "agents": 1178,
-    "faithh": 1068,
+    "faithh": 1069,
     "model": 902,
     "phase": 863,
     "system": 816,
@@ -398,9 +282,9 @@
     "infrastructure": 147,
     "let's": 147,
     "stop": 146,
+    "tier": 146,
     "correct": 145,
     "specialist": 144,
-    "tier": 144,
     "free": 144,
     "good": 144,
     "actual": 144,
@@ -2168,5 +2052,5 @@
     "multi-wave": 10,
     "distance": 10
   },
-  "last_updated": "2026-05-17T08:21:07.043926"
+  "last_updated": "2026-07-26T23:05:03.137078"
 }

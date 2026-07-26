@@ -96,7 +96,7 @@ class WeightOptimizer:
         common_models = ['qwen25-grounded', 'llama3.3', 'deepseek-r1:32b']
         
         for model in common_models:
-            features[f'model_{model.replace(':', '_')}'] = 1.0 if model_used == model else 0.0
+            features[f"model_{model.replace(':', '_')}"] = 1.0 if model_used == model else 0.0
         
         # Provider features (one-hot encoded)
         provider_used = record.get('provider_used', 'unknown')

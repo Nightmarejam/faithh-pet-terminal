@@ -49,7 +49,8 @@ chroma_data/
 chroma_db/*.sqlite3
 chroma_db/*.sqlite3-*
 faithh_rag/
-models/
+# models/  (was over-matching app/models — see app/models.py header)
+/models/
 uploads/
 static/
 knowledge_base/imports/
@@ -70,10 +71,8 @@ backups/
 
 # --- OS / editor ---
 .DS_Store
-<<<<<<< HEAD
 Thumbs.db
 knowledge_base/
-=======
 *.Zone.Identifier
 *:Zone.Identifier
 .aider*
@@ -146,4 +145,7 @@ projects/constella-framework/
 
 # Harden: ignore the entire stray tomcat-sound dir (private business/tax; keep out of public repo)
 projects/tomcat-sound/
->>>>>>> origin/main
+
+# local backups of secret-bearing / machine-local config
+.env.bak-*
+config.yaml.bak-*

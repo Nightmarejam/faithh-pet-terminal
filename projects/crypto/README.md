@@ -35,11 +35,7 @@ python pipeline/fetch_prices.py
 python pipeline/ingest_whitepaper.py \
   --source "https://bitcoin.org/bitcoin.pdf" \
   --symbol BTC \
-<<<<<<< HEAD
-  --chroma-host 192.158.1.10 \
-=======
   --chroma-host servicebox.taileb8c60.ts.net \
->>>>>>> origin/main
   --chroma-port 8000 \
   --collection faithh_knowledge_base
 ```
@@ -140,7 +136,6 @@ Outputs:
 
 - `data/signals/profit_candidates_YYYYMMDD.json`
 - `data/signals/latest_candidates.json`
-<<<<<<< HEAD
 
 ### API readiness check
 
@@ -181,5 +176,3 @@ Outputs:
 - `data/ops/datadog_kc_snapshot_YYYYMMDDTHHMMSSZ.json`
 - `data/ops/datadog_kc_snapshot_latest.json`
 - `data/ops/datadog_kc_pages_YYYYMMDDTHHMMSSZ.jsonl`
-=======
->>>>>>> origin/main
