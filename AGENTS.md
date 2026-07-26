@@ -53,6 +53,28 @@ unreachable and that name does not resolve. Do not assume the backend or vLLM is
 inference instead of vLLM. Note the old model path `/mnt/nas/models/...` is dead — models now
 live on the NAS at `homelab/ai/models/`.
 
+### RAG: embedder and collection MUST match dimension
+
+The backend embeds queries with `BAAI/bge-base-en-v1.5` (**768-dim**, set by
+`FAITHH_EMBED_MODEL` in `backend/rag_processor.py`). It therefore only works against a
+768-dim collection:
+
+| Collection | Docs | Dim | Embedder | Use |
+|---|---|---|---|---|
+| `faithh_knowledge_base_v2` | ~33.9k | **768** | BGE-base-en-v1.5 | ✅ **current** — `CHROMA_COLLECTION` |
+| `faithh_knowledge_base` | ~56k | 384 | all-MiniLM-L6-v2 | legacy; incompatible with BGE queries |
+| `governance_corpus` | ~18.8k | 384 | default | legacy dim |
+| `alife_lineage` | ~340k | 384 | default | legacy dim |
+
+**Failure mode seen 2026-07-26:** `.env` pointed `CHROMA_COLLECTION` at the 384-dim
+`faithh_knowledge_base` while queries were 768-dim. Chroma rejected every query, the
+backend swallowed it, and `best_distance` reported a default **1.0** — answers looked
+fluent but were completely ungrounded. After repointing to `_v2`, distances are ~0.53-0.64.
+
+**Rule:** if `best_distance` is exactly 1.0 on every query, suspect a dimension mismatch
+before anything else. Re-indexing a legacy collection with BGE is the only way to bring its
+documents into scope — do not "fix" this by changing the embedder, which would orphan `_v2`.
+
 **Addressing:** never hardcode an IP. MagicDNS names (`<host>.taileb8c60.ts.net`) are canonical
 and the source of truth is `infra/hosts.yaml` in the **homelab** repo. Any `192.158.*` literal
 is a typo of `192.168.*` and was never routable — it is dead code by definition.
