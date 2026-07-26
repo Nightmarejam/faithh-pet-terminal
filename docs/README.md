@@ -1,8 +1,14 @@
-# FAITHH Documentation Index
+# FAITHH Documentation — key documents
 
-**Last Updated:** 2026-03-30
+**Last updated:** 2026-07-25
 
-This is the master index for all FAITHH project documentation. Every document lives in a categorized subfolder. If a document isn't listed here, it's in `archive/` and considered stale.
+A curated list of the documents worth starting from, organized by category. **This is not an
+exhaustive index** — as of 2026-07-25 it lists 52 of ~247 live documents, so *absence from this
+list means nothing*. (It previously claimed the opposite: that anything unlisted was stale.
+That rule had been false for months and is removed.)
+
+For live project state, hard rules, and active tracks, read **[`AGENTS.md`](../AGENTS.md)** at
+the repo root — the single living context document.
 
 ---
 

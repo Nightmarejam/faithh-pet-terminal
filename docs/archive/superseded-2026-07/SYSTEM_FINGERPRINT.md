@@ -1,3 +1,10 @@
+> ⚠️ **SUPERSEDED 2026-07-25.** This was one of six competing "master" context documents.
+> All live context now lives in **`AGENTS.md`** at the repo root. Kept for history only —
+> its state claims were stale (services listed as running that had been down for months).
+> Do not read this as current.
+
+---
+
 # FAITHH System Fingerprint
 
 > **Purpose:** This document is the authoritative reference for any AI session interacting with the FAITHH system. Read this first to understand identity, capabilities, constraints, and current state.

@@ -1,7 +1,10 @@
-# Master Documentation Index
+# Consolidated docs index (March 2026 snapshot)
 
-**Generated**: 2026-03-27 17:39:11  
-**Status**: ✅ Complete - All documentation consolidated
+**Generated**: 2026-03-27 17:39:11 — **point-in-time snapshot, not maintained**
+
+> This indexes the `docs/consolidated/` set only. It is not the repo's documentation index
+> (see [`docs/README.md`](../README.md)) and not the live context document
+> (see [`AGENTS.md`](../../AGENTS.md)). Retitled 2026-07-25 to stop competing for authority.
 
 ---
 

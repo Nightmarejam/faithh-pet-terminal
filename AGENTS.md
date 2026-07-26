@@ -1,174 +1,189 @@
-# Repository Guidelines (Updated 2026-02-15)
+# AGENTS.md — the one live context file
 
-## Project Structure & Module Organization
-FAITHH is a Python-first repo with a Flask backend and static HTML UI.
+**Last verified: 2026-07-25** (live checks against the fleet)
 
-**CURRENT ARCHITECTURE STATUS (April 2026):**
-- **Primary Backend**: `faithh_professional_backend_fixed.py` (canonical, port **5557**) — all main `/api/*` routes, including genomic endpoints when enabled.
-- **Sidecar apps** (separate Flask processes, **not** imported by the canonical backend): `services/rag_api.py` (RAG microservice, port **5001**), `services/project_hub/app.py` (Program Advance / project API, port **5001** if run standalone).
-- **Legacy backends** live under `archive/legacy/` (do not run in production).
+> **Read this first, and read only this.** It replaces the six competing "master" context
+> documents this repo used to carry (`CONTEXT.md`, `CURSOR_CONTEXT.md`, `MASTER_CONTEXT.md`,
+> `SYSTEM_FINGERPRINT.md`, `SYSTEMS_MAP.md`). Those are archived under
+> `docs/archive/superseded-2026-07/`. **Do not create a new context doc** — update this one.
+> If you find another file claiming to be canonical, it is stale by definition.
 
-**Active code at root (DO NOT move these):**
-- `faithh_professional_backend_fixed.py` — Main backend (CURRENTLY RUNNING)
-- `filesystem_chip.py` — Filesystem operations chip (imported by backend)
-- `knowledge_graph.py` — Knowledge graph module (imported by backend)
-- `pulse_pattern_tracker.py` — PULSE learning tracker (imported by backend)
-- `faithh_pet_v4.html` — Primary Canvas UI
-- `faithh_cockpit.html` — Mission Control / diagnostics Canvas (served at `/cockpit`)
+---
 
-**Modular directories (Canvas / unification):**
-- `backend/` — Shared Python imported by the canonical backend (loaders, `llm_providers`, security, etc.)
-- `services/` — Standalone Flask apps and sidecars (`rag_api.py`, `project_hub/`)
-- `modules/` — Reserved for shared import-only libraries (empty package scaffold + README)
-- `vendor/` — Reserved for large third-party trees (e.g. `llama.cpp` migration); see `vendor/README.md`
+## 1. Owner and intent
 
-**Service Registry (Canvas Phase 3):** Any **new user-facing backend capability** (routes, optional modules, or tools the pet UI should expose) **must** be reflected in **`build_workspace_registry()`** and **`GET /api/workspace/registry`** in `faithh_professional_backend_fixed.py` so `faithh_pet_v4.html` can adapt navigation and send **`workspace_registry`** hints with **`POST /api/chat`**. Internal-only features should be marked inactive or omitted from `navigation` rather than left stale.
+**Jonathan** — audio producer and AI developer. Business: Tom Cat Sound LLC (dba Floating
+Garden Soundworks); partner Thomas Charles Gilson (remote, South Dakota).
 
-**Backend modules (extracted for modularity):**
-- `backend/data_loaders.py` — JSON file I/O (memory, decisions, projects, scaffolding)
-- `backend/intent_detection.py` — Query intent pattern matching
-- `backend/context_builders.py` — Context assembly + personality prompt + project structure snapshot
-- `backend/llm_providers.py` — Multi-provider LLM dispatch (Groq, Ollama, Gemini)
+**Core challenge:** maintaining project coherence when attention shifts across long-running
+projects (ADHD). **What the system is for:** remembering *why* when he's lost sight of it.
 
-**State files:** `faithh_memory.json`, `decisions_log.json`, `project_states.json`, `scaffolding_state.json`, `config.yaml`
-**Infra:** `docker-compose.yml` (Ollama, ChromaDB, Langflow, Postgres)
-**Scripts:** All utility/one-off scripts live in `scripts/`
-**Tests:** `tests/` (Python + shell)
-**ML:** `ml/` (chip synthesis, LoRA training)
+**Philosophy:** Celestial Equilibrium — resonance, harmonic alignment, dignity.
+**Driving question:** *"How do we build systems that actually serve people well?"*
 
-**Documentation structure (see `docs/README.md` for full index):**
-- `docs/architecture/` — System design (SYSTEM_OVERVIEW, BACKEND_API, INFRASTRUCTURE)
-- `docs/guides/` — How-to guides (QUICKSTART, GIT_WORKFLOW, IMAGE_GENERATION, SSH, DIAGNOSTICS)
-- `docs/reference/` — Facts & inventories (CONSTELLA, LIFE_MAP, HARDWARE, MODELS, IDEAS)
-- `docs/business/` — Business & financial (PORTFOLIO, TAX_GUIDE, TOMCAT_DASHBOARD)
-- `docs/research/` — Research findings (7 consolidated research docs)
-- `docs/roadmaps/` — Future plans (VS Code extension, passive collection, phase 2)
-- `docs/data/` — Non-markdown reference data (JSON, YAML)
-- `docs/archive/` — All consumed handoffs, stale reports, legacy docs
+### What FAITHH is
+FAITHH (Friendly AI Teaching & Helping Hub) — a thought partner that surfaces relevant context
+when returning to a project, gently challenges while accepting incremental progress, and
+surfaces connections across domains.
 
-## Build, Test, and Development Commands
-- `./restart_backend.sh` – stop any running instance and start the Flask server on `:5557`.
-- `./stop_backend.sh` – stop running backend instances.
-- `python faithh_professional_backend_fixed.py` – run the backend directly (useful for debugging).
-- `docker-compose up -d` – bring up Ollama/ChromaDB/Langflow/Postgres.
-- `python -m pytest tests/ -v` – run Python tests.
-- `tests/test_harmony.sh` or `tests/test_groq.sh` – run shell-based checks.
-- `scripts/start_comfyui.sh` – start ComfyUI on RTX 3090.
+### What FAITHH is NOT
+- NOT a religious/philosophical framework about "faith"
+- NOT a search engine or Q&A bot
+- NOT a task executor — closer to a live journal with feedback
 
-## Critical File Locations (READ THIS FIRST)
-- **Canonical frontend UI:** `faithh_pet_v4.html` (ROOT level, 5,034 lines)
-- **Backend serves from ROOT:** `faithh_professional_backend_fixed.py` serves `faithh_pet_v4.html` from the project root
-- **BEFORE editing any frontend file:** Verify which file the backend serves with: `grep "send_from_directory" faithh_professional_backend_fixed.py`
-- **Test UI changes** by accessing `http://localhost:5557/` NOT by opening HTML files directly
-- **Scripts go in `scripts/`** — do NOT add new .py scripts to root
-- **Docs go in `docs/`** — do NOT add new .md files to root (except AGENTS.md, CONTEXT.md, SYSTEMS_MAP.md, README.md)
+---
 
-## Coding Style & Naming Conventions
-- Follow existing style in each file; Python uses 4-space indentation.
-- Prefer snake_case for Python functions/variables and UpperCamelCase for classes.
-- Keep HTML/JS IDs and CSS classes lowercase with hyphens (e.g., `rag-panel`).
+## 2. Current state (verified 2026-07-25)
 
-## Testing Guidelines
-- Test suite lives in `tests/`; name new tests `test_*.py`.
-- Use pytest for Python tests; shell tests live alongside as `.sh`.
-- If you add backend endpoints, add a small test in `tests/`.
+⚠️ **The FAITHH VM (VM 100) is DOWN** pending the Proxmox rebuild. Anything on `faithh.*` is
+unreachable and that name does not resolve. Do not assume the backend or vLLM is running.
 
-## Commit Guidelines
-- Commit messages: descriptive subject with scope, multi-line body for substantial changes.
-- See `docs/guides/GIT_WORKFLOW.md` for the latest pattern.
+| Component | State | Where |
+|---|---|---|
+| ChromaDB | ✅ running, ~450k docs across 4 collections | `servicebox.taileb8c60.ts.net:8000` |
+| Gen8 (`servicebox`) | ✅ up, 19 containers | SSH `jonat@servicebox.taileb8c60.ts.net` |
+| NAS (`nas`) | ✅ up (recovered 2026-07-24) | SSH `nas` |
+| Cloud LLM keys | ✅ Groq / Anthropic / Gemini configured | `.env`, `FAITHH_FORCE_LOCAL=0` |
+| FAITHH backend (:5557) | ❌ down with VM 100 | — |
+| vLLM (:8000 on faithh) | ❌ down with VM 100 | — |
+| Ollama | ❌ **not installed on the Gen8** | older docs claiming active models are wrong |
+| PVE host | ❌ rebuild pending | backups verified on NAS `pve` share |
 
-## Configuration & Security Notes
-- Service ports: backend `5557`, ChromaDB `8000`, Ollama `11434+`.
-- Runtime settings: `config.yaml`; secrets: `.env` (gitignored).
-- **Default LLM model:** When `config.yaml` sets `ai.default_model` (and the active Ollama provider block), that value is authoritative; `.env` `DEFAULT_MODEL` is only a fallback when YAML does not pin the model.
-- NEVER commit `.env`, `keyring.json`, or files in `uploads/`.
+**The backend can run today without the VM**: on the Gen8, against local ChromaDB, using cloud
+inference instead of vLLM. Note the old model path `/mnt/nas/models/...` is dead — models now
+live on the NAS at `homelab/ai/models/`.
 
-## AI Continuity Documentation Pattern ⭐4
+**Addressing:** never hardcode an IP. MagicDNS names (`<host>.taileb8c60.ts.net`) are canonical
+and the source of truth is `infra/hosts.yaml` in the **homelab** repo. Any `192.158.*` literal
+is a typo of `192.168.*` and was never routable — it is dead code by definition.
 
-Established framework for ensuring AI session continuity across tools and time:
+---
 
-1. **AGENTS.md** (this file) — permanent repo-level rules, always read first
-2. **SYSTEM_FINGERPRINT.md** — system identity, capabilities, guardrails, routing logic
-3. **fingerprint_state.json** — dynamic state snapshot (health, models, open loops, recent decisions)
-4. **CONTEXT.md** — framing snapshots for FAITHH's personality and project state
-5. **docs/** structure — authoritative reference by category (architecture, guides, reference, research, business, roadmaps)
-6. **State files** (`faithh_memory.json`, `decisions_log.json`, `project_states.json`, `scaffolding_state.json`) — machine-readable current state
-7. **ML outputs** (`ml/output/`) — distilled insights, reports, chip data
+## 3. Repository structure
 
-**Rule:** New AI sessions should read AGENTS.md + SYSTEM_FINGERPRINT.md + fingerprint_state.json before starting work. Refresh fingerprint with `python3 scripts/generate_fingerprint.py`. Handoff docs go to `docs/archive/` after consumption. State files are the single source of truth for project status.
+Python-first: Flask backend + static HTML UI.
 
-**Recent handoff (2026-04-12):** `docs/archive/HANDOFF_2026-04-12_model-fix-and-kb-cleanup.md` — Ollama runaway fixes, KB indexing quality gate, `qwen25-faithh-v3` baseline, config authority, and queued audits (KB noise, uncertainty surface, chat export filters, RAG UI score, warm-up script).
+**Canonical backend:** `faithh_professional_backend_fixed.py` (port **5557**) — all main
+`/api/*` routes. Sidecars are separate processes, **not** imported by it:
+`services/rag_api.py` (:5001), `services/project_hub/app.py`. Legacy backends live in
+`archive/legacy/` and must not run.
 
-## AI Agent Behavior Rules
-- After completing a task and verifying it works, **REPORT FINDINGS AND STOP**
-- Do NOT continue running verification commands in a loop
-- Run verification commands ONCE, confirm success, then summarize and end
-- If a task fails, report the failure and ask for guidance — don't retry indefinitely
-- Always read handoff docs in `docs/` before starting work if referenced
-- **New scripts → `scripts/`**, **New docs → `docs/`**, keep root clean
-- **Before marking any task complete:** consult `DEPS.md` to identify which other files need updating
-- **Technical questions about this repo:** Before answering, check `GET http://127.0.0.1:5557/api/workspace/registry` (or the Canvas `workspace_registry` snapshot sent with chat) for live services—RAG signal, pulse, genomic, diagnostics—so answers reflect runtime capability instead of guessing.
-- **Session metrics:** Operational telemetry is written to the Chroma collection `faithh_session_metrics` (env `CHROMA_METRICS_COLLECTION`), never to `faithh_knowledge_base` or conversation collections. Do not treat session metrics as RAG knowledge or merge them into retrieval.
+**Active root files (do not move):**
+- `faithh_professional_backend_fixed.py` — main backend
+- `filesystem_chip.py`, `knowledge_graph.py`, `pulse_pattern_tracker.py` — imported by it
+- `faithh_pet_v4.html` — primary Canvas UI (backend serves it from root)
+- `faithh_cockpit.html` — Mission Control / diagnostics, served at `/cockpit`
 
-## Operational standards (FAITHH operator contract)
+**Directories:** `backend/` (shared imports: `data_loaders`, `intent_detection`,
+`context_builders`, `llm_providers`) · `services/` (standalone apps) · `modules/` (import-only
+libs) · `vendor/` (third-party trees) · `scripts/` (all utilities) · `tests/` · `ml/` ·
+`projects/crypto/` (own venv).
 
-Human and model answers about **repo state, git history, Compass projects, and live metrics** must follow the **evidence-only** rules in **`docs/guides/FAITHH_OPERATOR_CONTRACT.md`** (immutable commit subjects, latency reporting without invented splits, silo separation for `scaffolding_state.json` vs `faithh_live_state.json` vs git, raw field names for ambiguous JSON, and horizon / sync-date boundaries). New agents and prompt changes should keep that doc and `backend/context_builders.py` `get_faithh_personality()` aligned.
+**State files:** `faithh_memory.json`, `decisions_log.json`, `project_states.json`,
+`scaffolding_state.json`, `config.yaml`.
 
-## RAG low confidence behavior
+**Docs:** `docs/architecture/` · `guides/` · `reference/` · `business/` · `research/` ·
+`roadmaps/` · `data/` · `archive/`.
 
-When `rag_signal.low_confidence` is True (retrieval distance above `RAG_MAX_DISTANCE_CONFIDENT`), the backend prepends an explicit no-fabrication banner to the context sent to the model. The LLM must not invent API endpoints, file paths, collection names, or system states. If the context does not contain the answer, respond with something like: “I don’t have reliable context for that — check [relevant source]” (e.g. `GET /api/workspace/registry`, `docs/architecture/BACKEND_API.md`, or the repo file named in metadata).
+**Service Registry:** any new user-facing backend capability **must** be reflected in
+`build_workspace_registry()` and `GET /api/workspace/registry` so `faithh_pet_v4.html` can adapt
+navigation and send `workspace_registry` hints with `POST /api/chat`.
 
-## Project Maintenance Protocols (NEW - March 2026)
+---
 
-### Monthly Major Cleanup
-1. **Backend Architecture Review**
-   - Verify single canonical backend
-   - Archive experimental variants
-   - Update SYSTEM_FINGERPRINT.md with current reality
-   - Check for endpoint conflicts
+## 4. Commands
 
-2. **File Organization Audit**
-   - Archive legacy backend files to `archive/legacy/`
-   - Organize experiments into `experiments/` subdirectories
-   - Clean root directory (< 20 files)
-   - Consolidate archive locations
+```
+./restart_backend.sh                      # stop + start Flask on :5557
+./stop_backend.sh
+python faithh_professional_backend_fixed.py   # run directly (debugging)
+docker-compose up -d                      # ChromaDB / Langflow / Postgres
+python -m pytest tests/ -v
+tests/test_harmony.sh | tests/test_groq.sh
+```
 
-3. **Documentation Synchronization**
-   - Regenerate CONTEXT.md with current state
-   - Update project_states.json with recent progress
-   - Review and update decisions_log.json
-   - Verify all top-level docs reflect reality
+**Before editing any frontend file**, confirm what the backend serves:
+`grep "send_from_directory" faithh_professional_backend_fixed.py`. Test UI changes at
+`http://localhost:5557/`, never by opening HTML files directly.
 
-### Weekly Minor Maintenance
-1. **Documentation Updates**
-   - Regenerate CONTEXT.md
-   - Update project_states.json
-   - Review recent decisions
+---
 
-2. **Backend Health Check**
-   - Verify canonical backend running
-   - Test key endpoints
-   - Check log files for issues
+## 5. Hard rules — never violate
 
-3. **Experiment Organization**
-   - Move any new experiments to `experiments/`
-   - Update experiment documentation
+1. Never commit `.env`, `keyring.json`, or anything in `uploads/`.
+2. Never use `query_texts=` in ChromaDB — always `query_embeddings=`.
+3. Never revert the LLM priority order (Groq is primary).
+4. Never `pip install` in the main venv without updating `requirements.txt`.
+5. Always use the venv python: `/home/jonat/ai-stack/venv/bin/python`.
+6. Never modify `faithh_professional_backend_fixed.py` without a backup commit first.
+7. Never add `knowledge_base/` to git.
+8. The crypto pipeline uses its own venv at `projects/crypto/venv/`.
+9. Commit after each working milestone — small, descriptive commits.
+10. After any backend change: `curl http://localhost:5557/health`.
+11. **Never hardcode an IP address.** Use MagicDNS names; see `infra/hosts.yaml` in homelab.
 
-### Cleanup Protocol Triggers
-**IMMEDIATE CLEANUP REQUIRED WHEN:**
-- Backend files exceed 5 variants
-- Root directory exceeds 20 files
-- Documentation drift detected (docs don't match reality)
-- Experiments completed but endpoints inaccessible
+---
 
-**CLEANUP AUTOMATION:**
-- Use `scripts/maintenance/cleanup_project.py` for automated tasks
-- Manual review required for architectural decisions
-- Sonnet consultation for major changes
+## 6. Agent behavior
 
-### Decision Log for Architecture Changes
-All backend architecture changes MUST be documented in `decisions_log.json` with:
-- `rationale`: Why the change was needed
-- `alternatives_considered`: Other options evaluated
-- `impact`: What this change affects
-- `status`: implemented/planned/deprecated
+- After completing a task and verifying it works, **report findings and stop.** Do not loop
+  verification commands. If a task fails, report it and ask — don't retry indefinitely.
+- **New scripts → `scripts/`. New docs → `docs/`.** Keep the root clean (except this file and
+  `README.md`).
+- Before marking a task complete, consult `DEPS.md` for files that need updating alongside.
+- For technical questions about live capability, check `GET /api/workspace/registry` rather
+  than guessing.
+- **Session metrics** go to the Chroma collection `faithh_session_metrics` — never to
+  `faithh_knowledge_base` or conversation collections, and never treated as RAG knowledge.
+- Answers about repo state, git history, and live metrics follow the evidence-only rules in
+  `docs/guides/FAITHH_OPERATOR_CONTRACT.md`.
+- **RAG low confidence:** when `rag_signal.low_confidence` is true, the backend prepends a
+  no-fabrication banner. Never invent endpoints, paths, collection names, or system states —
+  say "I don't have reliable context for that" and name the source to check.
+
+### Style
+Python 4-space, `snake_case` functions, `UpperCamelCase` classes. HTML/JS IDs and CSS classes
+lowercase-with-hyphens. Commit messages: descriptive subject with scope, body for substantial
+changes (see `docs/guides/GIT_WORKFLOW.md`).
+
+---
+
+## 7. Active tracks
+
+| # | Track | State (2026-07-25) |
+|---|---|---|
+| 1 | **Crypto pipeline** (`projects/crypto/`) | **BUILT** — `fetch_prices`, `ingest_whitepaper`, `signal_engine`, `mining_switch`, paper execution + journal scoring, `mining_ledger` polling 2Miners. Own venv. |
+| 2 | **Mining** | Blocked — was hosted on the FAITHH VM (RTX 3090), down with PVE. Hard rule: stop vLLM before starting the miner, never concurrent. |
+| 3 | **FAITHH maintenance** | Open: `ARCHITECTURE.md` needs updating (Groq primary, BGE embeddings, new collection names); verify `governance_corpus` intent routing (`is_legal_query`). RAG preflight threshold `best_distance > 0.60`. |
+| 4 | **Proxmox rebuild** | Pending — the gating task. Runbook: `docs/hardware/proxmox-rebuild-runbook.md` in **homelab**. Backups verified on the NAS `pve` share. |
+| 5 | **Tom Cat Sound LLC** | Tax return due **2026-09-15** (Form 7004 filed). Members: Jonathan 34%, Thomas 33%, Kevin 33%. Member meeting required before restructuring. |
+| 6 | **Gen8 GPU** | **DONE** — an **RTX A1000 8GB** is installed and in use (Plex NVENC). Supersedes the old "T1000 pending" note. |
+
+---
+
+## 8. Documentation rules
+
+**One live doc per topic.** This file is the only living context document. Tool-specific files
+(`CLAUDE.md`, `CURSOR_CONTEXT.md`, `.windsurf/rules/*`) are thin pointers here and must stay
+that way — never let them accumulate content.
+
+- **Living docs**: plain noun filename, no date in the name, a `Last verified:` line inside,
+  exactly one per topic. Update in place.
+- **Point-in-time docs**: date in the filename (`SYSTEM_AUDIT_2026_03_30.md`). Never updated —
+  they are snapshots.
+- **Superseded docs**: move to `docs/archive/` with a header saying what replaced them.
+- Nothing claims "master" / "canonical" / "single source of truth" unless it is the only one.
+- **When a machine's state changes, grep for its name across the repos the same day.** Both
+  directions of drift (claiming down when up, claiming running when dead) have cost real time.
+
+### Maintenance protocols
+
+**Monthly:** verify a single canonical backend; archive experimental variants; clean root
+(< 20 files); reconcile this file against reality; check endpoint conflicts.
+**Weekly:** update `project_states.json`, review recent decisions, backend health check, move
+new experiments into `experiments/`.
+**Immediate cleanup when:** backend variants exceed 5, root exceeds 20 files, documentation
+drift is detected, or experiments complete but endpoints are inaccessible.
+
+All backend architecture changes go in `decisions_log.json` with `rationale`,
+`alternatives_considered`, `impact`, `status`.

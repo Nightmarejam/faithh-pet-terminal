@@ -1,3 +1,10 @@
+> ⚠️ **SUPERSEDED 2026-07-25.** This was one of six competing "master" context documents.
+> All live context now lives in **`AGENTS.md`** at the repo root. Kept for history only —
+> its state claims were stale (services listed as running that had been down for months).
+> Do not read this as current.
+
+---
+
 # AI Stack - Master Context
 
 **Last Updated:** 2026-04-12  
