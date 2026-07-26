@@ -32,11 +32,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--faithh-host",
-<<<<<<< HEAD
-        default=os.environ.get("FAITHH_HOST", "192.158.1.100"),
-=======
         default=os.environ.get("FAITHH_HOST", "faithh.taileb8c60.ts.net"),
->>>>>>> origin/main
         help="faithh VM hostname/IP.",
     )
     parser.add_argument(

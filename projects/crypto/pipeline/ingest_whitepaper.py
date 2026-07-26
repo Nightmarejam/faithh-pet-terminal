@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-"""G2 placeholder: whitepaper ingestion into ChromaDB."""
-=======
 #!/usr/bin/env python3
 """G2 whitepaper ingestion: PDF -> chunk -> embed -> ChromaDB."""
 
@@ -412,4 +409,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
->>>>>>> origin/main

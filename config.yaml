@@ -52,10 +52,10 @@ logging:
 
 # AI Provider configuration
 ai:
-  primary_provider: ollama
+  primary_provider: groq
   fallback_provider: anthropic
   # Default Ollama tag when the client omits model or sends "auto" while auto_route is false.
-  default_model: qwen25-faithh-v3:latest
+  default_model: llama-3.3-70b-versatile
   # When false, /api/chat does not run smart multi-provider auto-routing; uses default_model +
   # OLLAMA_GROUNDED_MODEL instead of Groq/Gemini selection (good for local calibration).
   auto_route: false
