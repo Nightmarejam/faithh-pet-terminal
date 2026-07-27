@@ -85,10 +85,17 @@ MODE_SIGNALS: Dict[str, List[str]] = {
         r"\bconcept\b", r"\bbrainstorm", r"\bwhat should (?:we|i)\b", r"\bplan(?:ning)? to\b",
         r"\broadmap\b", r"\bblueprint\b", r"\bapproach (?:would|could)\b",
     ],
+    # Bare \berror\b was catastrophic: "margin of error" / "prediction error" gave a
+    # zebra-stripe biology chat 126 hits and ranked it top runbook candidate. Every
+    # pattern here must imply someone is actually stuck on something.
     "troubleshooting": [
-        r"\berror\b", r"\bnot working\b", r"\bfail(?:ed|ing|s)\b", r"\bbroken\b",
-        r"\bwhy (?:does|is|isn't|won't)\b", r"\bstuck\b", r"\bissue\b", r"\bfix\b",
-        r"\bcrash", r"\bwon't start\b", r"\btraceback\b",
+        r"\b(?:an?|the|this|getting an?|got an?) error\b", r"error:", r"\berrors?\s+(?:when|while|on)\b",
+        r"\bnot working\b", r"\bdoesn'?t work\b", r"\bwon'?t (?:start|boot|run|connect|load|build)\b",
+        r"\bfailed to\b", r"\bunable to\b", r"\bcan'?t (?:get|connect|run|access|find)\b",
+        r"\bbroken\b", r"\bstuck (?:on|at|with)\b", r"\bcrash(?:ed|ing|es)?\b",
+        r"\btraceback\b", r"\bstack trace\b", r"\bexit code\b", r"\bpermission denied\b",
+        r"\bconnection refused\b", r"\btimed? ?out\b", r"\bwhy (?:does|is|isn'?t|won'?t|can'?t)\b",
+        r"\bhow do i fix\b", r"\btroubleshoot",
     ],
     "reference": [
         r"\bwhat is\b", r"\bhow do i\b", r"\bhow does\b", r"\bcan you explain\b",
