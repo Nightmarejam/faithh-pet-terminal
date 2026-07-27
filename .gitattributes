@@ -1,0 +1,3 @@
+
+# --- ingest tooling (Windows) ---
+*.cmd text eol=crlf
