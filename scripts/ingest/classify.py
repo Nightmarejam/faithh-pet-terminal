@@ -198,19 +198,26 @@ def classify(title: str, messages: List[dict]) -> Result:
             sample = next((p.pattern for p in pats if p.search(human_text)), "")
             evidence.append(f"{label}:{hits}x:{sample[:22]}")
 
-    # Structural adjustments — the shape of the conversation, not its words.
+    # Structural adjustments — the shape of the exchange, not its words.
+    #
+    # Rule: structure AMPLIFIES keyword evidence, it does not manufacture it. An
+    # earlier version granted synthetic hits here, so "short human turns + >6
+    # messages" alone asserted troubleshooting — which is just the shape of any
+    # Q&A. That put "Agave price crash" and "Seized camshaft repair costs" in the
+    # runbook list, 17 of them piled at exactly ts_density=0.20.
+    #
+    # journal is the one exception: a human writing long, self-directed passages
+    # IS the primary evidence of journaling, not a hint that corroborates one.
     if st.human_ratio > 0.42 and st.avg_human_msg > 700:
         mode_hits["journal"] = mode_hits.get("journal", 0) + MIN_HITS
         mode_scores["journal"] = round(mode_scores.get("journal", 0) + 0.35, 3)
         evidence.append("struct:long-human-turns")
-    if st.human_ratio < 0.18 and st.messages > 6:
-        mode_hits["troubleshooting"] = mode_hits.get("troubleshooting", 0) + MIN_HITS
-        mode_scores["troubleshooting"] = round(mode_scores.get("troubleshooting", 0) + 0.20, 3)
-        evidence.append("struct:short-human-turns")
-    if st.messages <= 2:
-        mode_scores["reference"] = round(mode_scores.get("reference", 0) + 0.25, 3)
-        mode_hits["reference"] = mode_hits.get("reference", 0) + MIN_HITS
-        evidence.append("struct:single-exchange")
+    if st.human_ratio < 0.18 and st.messages > 6 and mode_hits.get("troubleshooting", 0) > 0:
+        mode_scores["troubleshooting"] = round(mode_scores["troubleshooting"] + 0.20, 3)
+        evidence.append("struct:short-human-turns(amplify)")
+    if st.messages <= 2 and mode_hits.get("reference", 0) > 0:
+        mode_scores["reference"] = round(mode_scores["reference"] + 0.25, 3)
+        evidence.append("struct:single-exchange(amplify)")
 
     # Require BOTH density and a real hit count. Structural boosts carry their own
     # synthetic hits so they can still assert on their own.
