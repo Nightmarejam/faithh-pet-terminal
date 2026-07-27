@@ -31,53 +31,16 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from classify import classify  # noqa: E402
+
 CHUNK_SIZE = 5
 MIN_CHUNK_CHARS = 200
 COLLECTION = "faithh_knowledge_base_v2"
 CHROMA = "http://servicebox.taileb8c60.ts.net:8000"
 BASE = "/api/v2/tenants/default_tenant/databases/default_database/collections"
 
-# --- classification -----------------------------------------------------------
-# Deterministic and inspectable on purpose: no model call, so the same input
-# always bins the same way and you can audit why. Order matters — first match by
-# score wins, ties break toward the more specific class.
-SIGNALS: dict[str, list[str]] = {
-    "speculative": [
-        r"\bwhat if\b", r"\bsuppose\b", r"\bhypothes", r"\bspeculat", r"\bthought experiment\b",
-        r"\bin theory\b", r"\bcould we\b", r"\bimagine (?:if|a|that)\b", r"\bunproven\b",
-        r"\bconjecture\b", r"\bmight be possible\b",
-    ],
-    "idea": [
-        r"\bidea\b", r"\bproposal\b", r"\bdesign\b", r"\bconcept\b", r"\bframework\b",
-        r"\bbrainstorm", r"\bwhat should\b", r"\bplan for\b", r"\bapproach\b", r"\bblueprint\b",
-    ],
-    "journal": [
-        r"\bi feel\b", r"\bi'm feeling\b", r"\btoday i\b", r"\bi've been\b", r"\bi think i\b",
-        r"\breflect", r"\bi realized\b", r"\bi noticed\b", r"\bi want to\b", r"\bi need to\b",
-        r"\bmy goal\b", r"\bstruggl", r"\bfrustrat", r"\bexcited\b", r"\bworried\b",
-    ],
-    "technical": [
-        r"\berror\b", r"\btraceback\b", r"\bstack trace\b", r"\bdocker\b", r"\bpython\b",
-        r"\bgit\b", r"\bcommit\b", r"\bapi\b", r"\bserver\b", r"\bconfig", r"\bdebug",
-        r"\bfunction\b", r"\bcompile", r"\bdeploy", r"```",
-    ],
-}
-COMPILED = {k: [re.compile(p, re.I) for p in v] for k, v in SIGNALS.items()}
-
-
-def classify(title: str, text: str) -> tuple[str, dict[str, int]]:
-    """Return (label, per-class hit counts). Weighted: title hits count triple."""
-    sample = text[:20000]
-    scores: dict[str, int] = {}
-    for label, pats in COMPILED.items():
-        n = sum(len(p.findall(sample)) for p in pats)
-        n += 3 * sum(1 for p in pats if p.search(title or ""))
-        scores[label] = n
-    if not any(scores.values()):
-        return "unclassified", scores
-    # normalise by signal-set size so classes with more patterns don't dominate
-    ranked = sorted(scores.items(), key=lambda kv: kv[1] / len(SIGNALS[kv[0]]), reverse=True)
-    return ranked[0][0], scores
+# Classification lives in classify.py (v2: topic and mode as separate axes).
 
 
 # --- parsing ------------------------------------------------------------------
@@ -178,7 +141,13 @@ def main() -> int:
             if not chunks:
                 continue
             full = "\n".join(c["text"] for c in chunks)
-            label, scores = classify(conv.get("name") or "", full)
+            msgs = [
+                {"sender": m.get("sender"), "text": message_text(m)}
+                for m in (conv.get("chat_messages") or [])
+            ]
+            res = classify(conv.get("name") or "", msgs)
+            label = res.primary_mode
+            scores = res.mode_scores
             uuid = conv.get("uuid") or "nouuid"
             ids = [f"claude_chunk_{uuid}_{c['chunk_num']}" for c in chunks]
             all_ids += ids
@@ -193,6 +162,10 @@ def main() -> int:
                     "chars": len(full),
                     "label": label,
                     "scores": scores,
+                    "topic": res.topic,
+                    "modes": res.modes,
+                    "structure": res.structure,
+                    "evidence": res.evidence,
                     "ids": ids,
                 }
             )
@@ -223,16 +196,38 @@ def main() -> int:
     if days:
         print(f"date span              : {days[0]} -> {days[-1]}  ({len(days)} distinct days)")
 
-    print("\nclassification (conversations / new chunks):")
-    for label, n in by_label.most_common():
-        print(f"  {label:<14} {n:>4}  /  {chunks_by_label[label]:>5}")
+    by_topic = Counter(r.get("topic", "?") for r in records)
+    print("\nTOPIC — what it is about (single label):")
+    for label, n in by_topic.most_common():
+        print(f"  {label:<16} {n:>4}")
 
-    print("\nsample titles per class:")
+    mode_counts = Counter()
+    for r in records:
+        for m in r.get("modes") or ["unclassified"]:
+            mode_counts[m] += 1
+    print("\nMODE — how it is written (multi-label, conversations may appear twice):")
+    for label, n in mode_counts.most_common():
+        print(f"  {label:<16} {n:>4}")
+
+    print("\nprimary mode / new chunks:")
+    for label, n in by_label.most_common():
+        print(f"  {label:<16} {n:>4}  /  {chunks_by_label[label]:>5}")
+
+    print("\nsample per primary mode (with evidence):")
     for label in by_label:
         picks = [r for r in records if r["label"] == label][:3]
         print(f"  [{label}]")
         for p in picks:
-            print(f"     {p['date']}  {p['chunks']:>3}ch  {p['title']}")
+            print(f"     {p['date']}  {p['chunks']:>3}ch  topic={p.get('topic','?'):<15} {p['title'][:52]}")
+            if p.get("evidence"):
+                print(f"        why: {', '.join(p['evidence'][:3])}")
+
+    journals = [r for r in records if "journal" in (r.get("modes") or [])]
+    if journals:
+        print(f"\njournal-mode conversations: {len(journals)}  across {len({j['date'] for j in journals})} days")
+        for j in sorted(journals, key=lambda r: r["chars"], reverse=True)[:5]:
+            s = j.get("structure", {})
+            print(f"   {j['date']}  human_ratio={s.get('human_ratio')}  avg_msg={s.get('avg_human_msg')}  {j['title'][:50]}")
 
     if tot_new == 0 and tot_chunks:
         print("\n>> everything in scope is already indexed; nothing new to ingest.")
