@@ -28,11 +28,45 @@ CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 
 
+def _resolve_device() -> str:
+    """Pick the embedding device.
+
+    Historically pinned to CPU because SentenceTransformer detected cuda:0 and
+    crashed under WSL. That constraint is gone — the backend runs on the Gen8
+    (native Linux, RTX A1000). Measured 2026-07-26 on this host with
+    BAAI/bge-base-en-v1.5, batch 64: CPU 3.8 docs/sec vs CUDA 135 docs/sec (~36x),
+    which is the difference between a 30-hour and a 50-minute re-index.
+
+    Override with FAITHH_EMBED_DEVICE=cpu when the GPU is busy (it is shared with
+    Plex transcoding) or on a host without CUDA.
+    """
+    forced = os.environ.get("FAITHH_EMBED_DEVICE")
+    if forced:
+        return forced
+    try:
+        import torch
+
+        if torch.cuda.is_available():
+            return "cuda"
+    except Exception:  # torch missing or broken driver — fall back quietly
+        pass
+    return "cpu"
+
+
 def _get_embedder():
-    """Lazy-load the sentence-transformers model (CPU to avoid GPU compat issues)."""
+    """Lazy-load the sentence-transformers model (GPU when available)."""
     global _EMBEDDER
     if _EMBEDDER is None and SentenceTransformer is not None:
-        _EMBEDDER = SentenceTransformer(EMBED_MODEL, device="cpu")
+        device = _resolve_device()
+        try:
+            _EMBEDDER = SentenceTransformer(EMBED_MODEL, device=device)
+        except Exception as exc:  # noqa: BLE001 - never let device choice break RAG
+            if device == "cpu":
+                raise
+            logging.getLogger("faithh.rag").warning(
+                "embedder failed on %s (%s); falling back to CPU", device, exc
+            )
+            _EMBEDDER = SentenceTransformer(EMBED_MODEL, device="cpu")
     return _EMBEDDER
 
 class RAGProcessor:
