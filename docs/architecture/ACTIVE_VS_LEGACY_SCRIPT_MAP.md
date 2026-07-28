@@ -1,3 +1,9 @@
+> **Superseded 2026-07-28** by [COMPONENT_INDEX.md](COMPONENT_INDEX.md), which is
+> generated from the source and covers all 85 modules. This one was hand-written,
+> partial, and had drifted. Kept for history.
+
+---
+
 # Active vs Legacy Script Map
 
 Last updated: 2026-03-30

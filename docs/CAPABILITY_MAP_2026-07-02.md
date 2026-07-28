@@ -1,3 +1,9 @@
+> **Superseded 2026-07-28** by [COMPONENT_INDEX.md](COMPONENT_INDEX.md), which is
+> generated from the source and covers all 85 modules. This one was hand-written,
+> partial, and had drifted. Kept for history.
+
+---
+
 # FAITHH Capability Map — concepts ↔ code reconciliation
 Phase 1, part 2 (follows BACKEND_AUDIT_2026-07-02.md). Static-only; `confirmed` from
 the tree. Answers: what do the live modules actually own, and which documented concepts

@@ -1,3 +1,9 @@
+> **Superseded 2026-07-28** by [COMPONENT_INDEX.md](COMPONENT_INDEX.md), which is
+> generated from the source and covers all 85 modules. This one was hand-written,
+> partial, and had drifted. Kept for history.
+
+---
+
 # FAITHH backend — structural overview
 
 **Canonical process:** `faithh_professional_backend_fixed.py` (Flask, default port **5557**).  
