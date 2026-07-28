@@ -41,6 +41,10 @@ def main() -> int:
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=8000)
     ap.add_argument("--device", default=None, help="cpu|cuda (default: auto)")
+    # Defaults preserve the Claude ingest exactly — its 3,199 chunks are already
+    # written under claude_chunk_* and must stay addressable for idempotency.
+    ap.add_argument("--id-prefix", default="claude_chunk", help="chunk id prefix")
+    ap.add_argument("--source-label", default="claude_export", help="value for the `source` metadata field")
     args = ap.parse_args()
 
     import chromadb
@@ -78,11 +82,11 @@ def main() -> int:
             res = classify(conv.get("name") or "", msgs)
             uuid = conv.get("uuid") or "nouuid"
             for c in chunks:
-                ids.append(f"claude_chunk_{uuid}_{c['chunk_num']}")
+                ids.append(f"{args.id_prefix}_{uuid}_{c['chunk_num']}")
                 docs.append(c["text"])
                 metas.append(
                     {
-                        "source": "claude_export",
+                        "source": args.source_label,
                         "source_account": source,
                         "conversation_uuid": uuid,
                         "conversation_title": (conv.get("name") or "Untitled")[:200],

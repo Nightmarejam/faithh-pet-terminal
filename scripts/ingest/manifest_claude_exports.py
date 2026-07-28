@@ -35,6 +35,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from classify import classify  # noqa: E402
 
 CHUNK_SIZE = 5
+ID_PREFIX = "claude_chunk"   # override via --id-prefix
 MIN_CHUNK_CHARS = 200
 COLLECTION = "faithh_knowledge_base_v2"
 CHROMA = "http://servicebox.taileb8c60.ts.net:8000"
@@ -120,6 +121,7 @@ def main() -> int:
     ap.add_argument("--json", dest="json_out", help="write the machine-readable manifest here")
     ap.add_argument("--since", help="only include conversations created on/after YYYY-MM-DD")
     ap.add_argument("--no-dedupe", action="store_true", help="skip the Chroma existence check")
+    ap.add_argument("--id-prefix", default=ID_PREFIX, help="chunk id prefix (must match the ingest run)")
     args = ap.parse_args()
 
     since = datetime.fromisoformat(args.since).date() if args.since else None
@@ -149,7 +151,7 @@ def main() -> int:
             label = res.primary_mode
             scores = res.mode_scores
             uuid = conv.get("uuid") or "nouuid"
-            ids = [f"claude_chunk_{uuid}_{c['chunk_num']}" for c in chunks]
+            ids = [f"{args.id_prefix}_{uuid}_{c['chunk_num']}" for c in chunks]
             all_ids += ids
             records.append(
                 {
