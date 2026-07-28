@@ -95,8 +95,7 @@ class EnhancedGenomicLargeScaleExperiment:
         print(f"📄 Results saved to: {filename}")
         
         # Print summary
-        print(f"
-✅ Overall Success Rate: {results['success_rate']:.1%}")
+        print(f"\n✅ Overall Success Rate: {results['success_rate']:.1%}")
         print(f"⏱️  Duration: {results['duration']:.1f} seconds")
         
         return results
@@ -244,8 +243,7 @@ def main():
     experiment = EnhancedGenomicLargeScaleExperiment()
     results = experiment.run_enhanced_experiment()
     
-    print("
-🚀 Enhanced Genomic Large-Scale Experiment Completed Successfully!")
+    print("\n🚀 Enhanced Genomic Large-Scale Experiment Completed Successfully!")
 
 if __name__ == "__main__":
     main()

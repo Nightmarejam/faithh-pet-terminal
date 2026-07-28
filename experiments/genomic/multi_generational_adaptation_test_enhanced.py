@@ -125,8 +125,7 @@ def main():
     experiment = EnhancedMultiGenerational()
     results = experiment.run_enhanced_evolution()
     
-    print("
-🚀 Enhanced Multi-Generational Evolution Completed!")
+    print("\n🚀 Enhanced Multi-Generational Evolution Completed!")
 
 if __name__ == "__main__":
     main()

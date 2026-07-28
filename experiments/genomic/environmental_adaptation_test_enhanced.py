@@ -114,8 +114,7 @@ def main():
     experiment = EnhancedEnvironmentalAdaptation()
     results = experiment.run_enhanced_adaptation()
     
-    print("
-🚀 Enhanced Environmental Adaptation Experiment Completed!")
+    print("\n🚀 Enhanced Environmental Adaptation Experiment Completed!")
 
 if __name__ == "__main__":
     main()
