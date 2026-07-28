@@ -35,33 +35,27 @@ Modules with no importer are candidates for archiving.
 | module | what it does | used by | reachable |
 |---|---|---|---|
 | `anthropic_provider.py` | Anthropic provider implementation | `sync_anthropic_provider.py`, `provider_service.py` | — |
-| `sync_anthropic_provider.py` | Synchronous Anthropic Provider Wrapper | — | — |
+| `sync_anthropic_provider.py` | Synchronous Anthropic Provider Wrapper | `__init__.py` | — |
 
 ## `app/services/`
 
 | module | what it does | used by | reachable |
 |---|---|---|---|
-| `__init___moon.py` | Business logic services | — | — |
-| `__init___new.py` | Business logic services | — | — |
-| `__init___parasitic.py` | Business logic services | — | — |
-| `__init___phase3b.py` | Business logic services | — | — |
-| `alife_parasitic_integration.py` | Alife Parasitic Integration Service | `__init___phase3b.py` | — |
-| `alife_parasitic_integration_final.py` | Alife Parasitic Integration Service - Final Fixed Version | — | — |
-| `alife_parasitic_integration_fixed.py` | Alife Parasitic Integration Service - Fixed | — | — |
-| `alife_service.py` | Alife Data Processing Service | `__init___moon.py`, `__init___new.py`, `__init___parasitic.py` +1 | — |
-| `chat_service.py` | Chat processing service | `__init___moon.py`, `__init___new.py`, `__init___parasitic.py` +1 | — |
+| `alife_parasitic_integration.py` | Alife Parasitic Integration Service | — | — |
+| `alife_parasitic_integration_final.py` | Alife Parasitic Integration Service - Final Fixed Version | `__init__.py` | — |
+| `alife_service.py` | Alife Data Processing Service | `__init__.py` | — |
+| `chat_service.py` | Chat processing service | `__init__.py` | — |
 | `constella_constitution.py` | Constella Framework Universal Constitution | `focus_management.py`, `faithh_professional_backend_fixed.py` | yes |
 | `cosmic_ripple_integration.py` | Cosmic Ripple Integration Service | `faithh_professional_backend_fixed.py` | yes |
 | `focus_management.py` | Focus Management System | `faithh_professional_backend_fixed.py` | yes |
-| `genomic_biasing_engine.py` | Genomic Biasing Engine Service | — | — |
+| `genomic_biasing_engine.py` | Genomic Biasing Engine Service | `__init__.py` | — |
 | `genomic_biasing_engine_fixed.py` | Genomic Biasing Engine Service (Fixed Version) | `faithh_professional_backend_fixed.py` | yes |
-| `genomic_impedance_sensor.py` | Genomic Impedance Sensor Service | `faithh_professional_backend_fixed.py` | yes |
-| `health_service.py` | Health check and monitoring service | `__init___moon.py`, `__init___new.py`, `__init___parasitic.py` +1 | — |
-| `parasitic_alife_service.py` | **(does not parse — see the Python 3.10 notes in AGENTS.md)** | `__init___parasitic.py` | — |
-| `parasitic_alife_service_fixed.py` | Parasitic Alife Service | `__init___phase3b.py`, `faithh_professional_backend_fixed.py` | yes |
-| `provider_service.py` | Provider management service | `__init___moon.py`, `__init___new.py`, `__init___parasitic.py` +2 | — |
-| `standing_wave_moon_service.py` | Standing Wave Resonance Service with Moon Damping | `__init___moon.py`, `__init___parasitic.py`, `__init___phase3b.py` | — |
-| `standing_wave_service.py` | Standing Wave Resonance Service | `__init___moon.py`, `__init___new.py`, `__init___parasitic.py` +1 | — |
+| `genomic_impedance_sensor.py` | Genomic Impedance Sensor Service | `__init__.py`, `faithh_professional_backend_fixed.py` | yes |
+| `health_service.py` | Health check and monitoring service | `__init__.py` | — |
+| `parasitic_alife_service_fixed.py` | Parasitic Alife Service | `__init__.py`, `faithh_professional_backend_fixed.py` | yes |
+| `provider_service.py` | Provider management service | `__init__.py`, `chat_service.py` | — |
+| `standing_wave_moon_service.py` | Standing Wave Resonance Service with Moon Damping | `__init__.py` | — |
+| `standing_wave_service.py` | Standing Wave Resonance Service | `__init__.py` | — |
 | `universal_impedance_field.py` | Universal Impedance Field Service | — | — |
 | `universal_impedance_field_optimized.py` | Universal Impedance Field Service - Optimized Version | `faithh_professional_backend_fixed.py` | yes |
 | `user_authentication_service.py` | User Authentication Service | `faithh_professional_backend_fixed.py` | yes |
@@ -142,14 +136,7 @@ each should either be documented as such or moved to `archive/`.
 - `app/analytics/constitutional_analytics.py`
 - `app/analytics/focus_analytics.py`
 - `app/analytics/system_analytics.py`
-- `app/providers/sync_anthropic_provider.py`
-- `app/services/__init___moon.py`
-- `app/services/__init___new.py`
-- `app/services/__init___parasitic.py`
-- `app/services/__init___phase3b.py`
-- `app/services/alife_parasitic_integration_final.py`
-- `app/services/alife_parasitic_integration_fixed.py`
-- `app/services/genomic_biasing_engine.py`
+- `app/services/alife_parasitic_integration.py`
 - `app/services/universal_impedance_field.py`
 - `backend/advanced_analytics.py`
 - `backend/coherence_sensor.py`
@@ -181,4 +168,4 @@ each should either be documented as such or moved to `archive/`.
 | `faithh_pet.html` | 135 KB | not referenced in the entrypoint |
 | `faithh_pet_v4.html` | 344 KB | referenced by the backend |
 
-_85 modules indexed, 39 reachable from the entrypoint, 33 unreferenced._
+_79 modules indexed, 39 reachable from the entrypoint, 26 unreferenced._

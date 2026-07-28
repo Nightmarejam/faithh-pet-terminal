@@ -29,7 +29,12 @@ SCAN_DIRS = ["backend", "app/services", "app/providers", "app/analytics", "servi
 SKIP_PARTS = {".git", "node_modules", "venv", ".venv", "archive", "__pycache__", "experiments"}
 
 
-def modules() -> list[pathlib.Path]:
+def modules(include_inits: bool = False) -> list[pathlib.Path]:
+    """Modules to index. `include_inits` is used when building the import graph:
+    package __init__.py files re-export submodules, so skipping them made
+    anything imported *through* a package look orphaned (this misclassified
+    app/services/alife_parasitic_integration_final.py as dead when the real
+    __init__.py imports it)."""
     out = []
     for d in SCAN_DIRS:
         p = ROOT / d
@@ -38,7 +43,7 @@ def modules() -> list[pathlib.Path]:
         for f in sorted(p.rglob("*.py")):
             if any(s in f.parts for s in SKIP_PARTS):
                 continue
-            if f.name == "__init__.py":
+            if f.name == "__init__.py" and not include_inits:
                 continue
             out.append(f)
     for f in sorted(ROOT.glob("*.py")):
@@ -115,7 +120,8 @@ def _build() -> int:
 
     # reverse dependency map: module stem -> set of files importing it
     users: dict[str, set[str]] = defaultdict(set)
-    all_files = mods + ([entry] if entry.exists() else [])
+    # Scan __init__.py too — they re-export, and their imports are real edges.
+    all_files = modules(include_inits=True) + ([entry] if entry.exists() else [])
     stems = {key(m) for m in mods}
     for f in all_files:
         rel = f.relative_to(ROOT).as_posix()
