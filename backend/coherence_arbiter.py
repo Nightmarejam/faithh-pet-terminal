@@ -140,6 +140,11 @@ class CoherenceArbiter:
             
             # Extract signals
             rag_embeddings = self._extract_rag_embeddings(rag_results)
+            # Do NOT derive ids from ml_chips: the backend only appends to
+            # ML_CHIP_IDS for chips that had a valid 384/768-dim centroid, while
+            # ML_CHIPS holds every chip. Deriving ids from ml_chips would produce a
+            # longer list and silently misalign the id->centroid zip. Both halves are
+            # resolved together from the backend module so they stay a matched pair.
             chip_embeddings = self._extract_chip_embeddings(chip_activations)
             
             # Handle edge cases
@@ -283,21 +288,40 @@ class CoherenceArbiter:
             
         return embeddings
     
-    def _extract_chip_embeddings(self, chip_activations: List[Dict]) -> List[np.ndarray]:
+    def _extract_chip_embeddings(self, chip_activations: List[Dict],
+                                 ml_chip_centroids=None,
+                                 ml_chip_ids=None) -> List[np.ndarray]:
         """Extract centroids from activated ML chips"""
         embeddings = []
-        
-        # Import the global ML_CHIP_CENTROIDS and ML_CHIP_IDS to access centroids
-        try:
-            from faithh_professional_backend_fixed import ML_CHIP_CENTROIDS, ML_CHIP_IDS
-        except ImportError as e:
+
+        if ml_chip_centroids is None or ml_chip_ids is None:
+            # Read the centroids off the already-loaded backend module instead of
+            # importing it.
+            #
+            # The backend runs as `python faithh_professional_backend_fixed.py`, so it
+            # lives in sys.modules as "__main__". Importing it *by name* creates a
+            # second module object and re-executes the file top to bottom, which
+            # re-registers its Prometheus collectors against the default global
+            # registry and raises:
+            #     ValueError: Duplicated timeseries in CollectorRegistry:
+            #                 {'faithh_requests_total', 'faithh_requests_created', ...}
+            # That is not an ImportError, so the old `except ImportError` here never
+            # caught it. It propagated to measure_convergence's handler, which
+            # returned a hardcoded 0.5 — every coherence score the system reported
+            # was that constant, not a measurement.
+            import sys
+            _mod = (sys.modules.get("faithh_professional_backend_fixed")
+                    or sys.modules.get("__main__"))
+            if ml_chip_centroids is None:
+                ml_chip_centroids = getattr(_mod, "ML_CHIP_CENTROIDS", None)
+            if ml_chip_ids is None:
+                ml_chip_ids = getattr(_mod, "ML_CHIP_IDS", None)
+
+        if ml_chip_centroids is None or ml_chip_ids is None:
             return embeddings
-        
-        if ML_CHIP_CENTROIDS is None or ML_CHIP_IDS is None:
-            return embeddings
-        
+
         # Create mapping from chip ID to centroid
-        id_to_centroid = dict(zip(ML_CHIP_IDS, ML_CHIP_CENTROIDS))
+        id_to_centroid = dict(zip(ml_chip_ids, ml_chip_centroids))
         
         for chip in chip_activations:
             chip_id = chip.get('id')

@@ -47,6 +47,7 @@ from prometheus_client import (
     Counter,
     Gauge,
     Histogram,
+    REGISTRY,
     CONTENT_TYPE_LATEST,
     generate_latest,
 )
@@ -649,6 +650,28 @@ except Exception as e:
     print(f"⚠️ Could not load configs/model_config.yaml: {e}")
 
 
+def _models_for_provider(provider_key: str) -> set:
+    """Model names a provider serves, read from model_config.yaml.
+
+    Derived from config rather than hardcoded so the chat dispatch cannot drift
+    from the routing table — renaming a model in the YAML is enough.
+    """
+    try:
+        cfg = (FAITHH_MODEL_CONFIG.get("providers") or {}).get(provider_key) or {}
+        name = cfg.get("model")
+        return {str(name).strip()} if name else set()
+    except Exception:
+        return set()
+
+
+# Bare model names (no ':' or '/') that belong to the local vLLM server rather
+# than Ollama. Without this, "qwen2.5-14b" fell through to the ollama default.
+# Deliberately vllm only: local_webui is configured with the same
+# "qwen25-grounded-gen5-delta:latest" name Ollama uses, so including it here
+# would silently re-route the FAITHH Local models away from Ollama.
+_VLLM_MODELS = _models_for_provider("vllm")
+
+
 def _load_faithh_repo_config_yaml() -> dict:
     # Logic for Humans: Load repo-root config.yaml for high-level AI settings that aren’t per-provider routing.
     path = BASE_DIR / "config.yaml"
@@ -841,18 +864,36 @@ faithh_chromadb_documents_sampled = Gauge(
     registry=_FAITHH_PROM_REGISTRY,
 )
 
-# Compatibility stub metrics for external Prometheus/Grafana wiring.
-FAITHH_REQUEST_COUNT = Counter(
+# Compatibility stub metrics for external Prometheus/Grafana wiring. These go to
+# the default global registry (unlike the _FAITHH_PROM_REGISTRY block above), so
+# they are the ones that collide if this module is ever executed twice — e.g. run
+# as __main__ and then imported by name, which re-runs the file top to bottom.
+# That collision raises ValueError, not ImportError, so it surfaces far from here.
+def _metric_once(factory, name, *args, **kwargs):
+    """Create a collector, or return the existing one if already registered."""
+    try:
+        return factory(name, *args, **kwargs)
+    except ValueError:
+        existing = getattr(REGISTRY, "_names_to_collectors", {}).get(name)
+        if existing is not None:
+            return existing
+        raise
+
+
+FAITHH_REQUEST_COUNT = _metric_once(
+    Counter,
     "faithh_requests_total",
     "Total requests to FAITHH backend",
     ["endpoint"],
 )
-FAITHH_REQUEST_LATENCY = Histogram(
+FAITHH_REQUEST_LATENCY = _metric_once(
+    Histogram,
     "faithh_request_latency_seconds",
     "Request latency by endpoint",
     ["endpoint"],
 )
-FAITHH_CHROMA_DOCS = Gauge(
+FAITHH_CHROMA_DOCS = _metric_once(
+    Gauge,
     "faithh_chroma_document_count",
     "Total documents in ChromaDB faithh_knowledge_base",
 )
@@ -2472,6 +2513,10 @@ def chat():
             provider = provider_override.lower()
         elif auto_route:
             provider = (MODEL_PROVIDER or "ollama").lower()
+        elif model in _VLLM_MODELS:
+            # Checked before the ':' rule so a vLLM model name containing a colon
+            # is not mistaken for an Ollama tag.
+            provider = "vllm"
         elif ":" in model:
             # Ollama models always have ':' (e.g. llama31-grounded:latest)
             provider = "ollama"
@@ -2874,7 +2919,10 @@ These rules override ALL other instructions. Violating them produces harmful mis
             "auto",
         )
         provider_preference_rl = provider if explicit_model_choice_rl else "auto"
-        if provider_preference_rl not in ("auto", "groq", "ollama", "local_webui"):
+        # "vllm" belongs here too — without it, explicitly picking the vLLM model in
+        # the UI was silently downgraded to "auto" and the router was free to answer
+        # from Groq instead.
+        if provider_preference_rl not in ("auto", "groq", "ollama", "local_webui", "vllm"):
             provider_preference_rl = "auto"
         chat_route_cfg = copy.deepcopy(FAITHH_MODEL_CONFIG)
         if FAITHH_FORCE_LOCAL:

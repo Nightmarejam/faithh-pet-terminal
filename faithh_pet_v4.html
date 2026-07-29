@@ -5567,9 +5567,14 @@ const distance = isObject ? formatRagHitSimilarity(source.distance) : '';
             { id: 'claude-sonnet-4-6', label: '🧠 Claude Sonnet 4.6 (Architectural)', category: 'anthropic', provider: 'anthropic' },
             { id: 'claude-haiku-4-5', label: '⚡ Claude Haiku 4.5 (Fast)', category: 'anthropic', provider: 'anthropic' },
 
-            // FAITHH Local
-            { id: 'qwen25-grounded-gen5-delta:latest', label: '🎯 FAITHH Grounded Gen5 Δ (14B)', category: 'faithh' },
-            { id: 'qwen25-grounded:latest', label: '🎯 FAITHH Grounded (14B)', category: 'faithh' },
+            // Local — vLLM on the RTX 3090 (the live local inference path)
+            { id: 'qwen2.5-14b', label: '🔥 Qwen2.5 14B (vLLM · RTX 3090)', category: 'local', provider: 'vllm' },
+
+            // FAITHH Local — Ollama on the Gen8. Inference moved to the 3090 because
+            // the Gen8 cannot sustain GPU load, so nothing serves :11434 there. Left
+            // visible but disabled: the models exist, the runtime does not.
+            { id: 'qwen25-grounded-gen5-delta:latest', label: '🎯 FAITHH Grounded Gen5 Δ (14B) — Ollama offline', category: 'faithh', disabled: true },
+            { id: 'qwen25-grounded:latest', label: '🎯 FAITHH Grounded (14B) — Ollama offline', category: 'faithh', disabled: true },
 
             // Cloud — Groq Production
             { id: 'llama-3.3-70b-versatile', label: '☁️ Llama 3.3 70B (Groq)', category: 'cloud', provider: 'groq' },
@@ -8194,6 +8199,7 @@ const distance = isObject ? formatRagHitSimilarity(source.distance) : '';
                 'llama31-clean:latest': '📋 L31 Ref',
                 'qwen3-clean:latest': '📋 Q3 Ref',
                 'auto': '🔄 Auto',
+                'qwen2.5-14b': '🔥 Qwen2.5 14B',
                 'qwen25-grounded-gen5-delta:latest': '🎯 Gen5 Δ'
             };
 
@@ -8203,6 +8209,12 @@ const distance = isObject ? formatRagHitSimilarity(source.distance) : '';
                 option.value = model.id;
                 option.textContent = shortLabels[model.id] || model.label;
                 if (model.id === currentModel) option.selected = true;
+                // Honour `disabled` here too — initModelSelector() did, this did not,
+                // so offline models stayed pickable from the inline dropdown.
+                if (model.disabled) {
+                    option.disabled = true;
+                    option.style.color = '#666';
+                }
                 inlineSelect.appendChild(option);
             });
 

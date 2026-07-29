@@ -5,7 +5,10 @@
 providers:
   groq:
     type: "groq"
-    model: "qwen/qwen3-32b"
+    # qwen/qwen3-32b was retired by Groq and 404s. Verified against the live list
+    # 2026-07-28; re-check with:
+    #   curl -s https://api.groq.com/openai/v1/models -H "Authorization: Bearer $GROQ_API_KEY"
+    model: "llama-3.3-70b-versatile"
     temperature: 0.2
     max_tokens: 800
     timeout_s: 45
