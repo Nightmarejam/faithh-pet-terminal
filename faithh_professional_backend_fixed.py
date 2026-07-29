@@ -2131,12 +2131,34 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
             try:
                 fallback_results = query_collection(query_text, n_results=3)
                 if fallback_results and fallback_results.get('documents') and fallback_results['documents'][0]:
-                    rag_results = fallback_results['documents'][0]
+                    # Keep the per-hit distance Chroma already returned (query_collection
+                    # asks for it via include=[..., "distances"]). Flattening to bare
+                    # strings here threw it away, so the /api/chat pre-flight hook found
+                    # no distances, fell through to its `else 1.0` default, and tripped
+                    # _preflight_failed on *every* fallback query — injecting a
+                    # "RAG CONFIDENCE LOW / DO NOT fabricate" hazard into the prompt while
+                    # retrieval was in fact working. Shape matches
+                    # rag_processor.normalize_rag_hit_for_api.
+                    _f_docs = fallback_results['documents'][0]
+                    _f_dists = (fallback_results.get('distances') or [[]])[0] or []
+                    _f_metas = (fallback_results.get('metadatas') or [[]])[0] or []
+                    _f_ids = (fallback_results.get('ids') or [[]])[0] or []
+                    rag_results = [
+                        {
+                            'document': _d,
+                            'content': _d,
+                            'text': _d,
+                            'metadata': _f_metas[_i] if _i < len(_f_metas) else {},
+                            'distance': _f_dists[_i] if _i < len(_f_dists) else None,
+                            'id': _f_ids[_i] if _i < len(_f_ids) else '',
+                        }
+                        for _i, _d in enumerate(_f_docs)
+                    ]
                     integrations_used.append('rag_search_fallback')
                     print(f"   ✅ RAG fallback found {len(rag_results)} results")
                     rag_context = "\n[CTX:KNOWLEDGE BASE]\n"
-                    for i, doc in enumerate(rag_results[:3]):
-                        rag_context += f"{i+1}. {doc[:1000]}...\n\n"
+                    for i, _hit in enumerate(rag_results[:3]):
+                        rag_context += f"{i+1}. {_hit['document'][:1000]}...\n\n"
                     rag_context += "[CTX_END]\n"
                     context_parts.append(rag_context.strip())
             except Exception as e:
