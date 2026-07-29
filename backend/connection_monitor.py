@@ -132,11 +132,24 @@ class ConnectionMonitor:
                 'required_for_overall': False,
             },
             {
+                # Inference moved off this host: the Gen8 cannot sustain GPU load, so
+                # generation runs on the Windows RTX 3090 under vLLM. This is now the
+                # service that has to be up for FAITHH to answer at all.
+                'name': 'vllm',
+                'url': 'http://desktop-iifeikl.taileb8c60.ts.net:8000/v1/models',
+                'timeout': 10,
+                'fallback_url': None,
+                'required_for_overall': True,
+            },
+            {
+                # Kept as an optional local fallback. No longer required: with nothing
+                # served on 11434 here, leaving it required pinned overall health to
+                # "degraded" permanently and drowned out real failures.
                 'name': 'ollama',
                 'url': 'http://localhost:11434/api/tags',
                 'timeout': 5,
                 'fallback_url': None,
-                'required_for_overall': True,
+                'required_for_overall': False,
             },
             {
                 'name': 'groq',

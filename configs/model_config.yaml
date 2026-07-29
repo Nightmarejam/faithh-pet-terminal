@@ -31,8 +31,14 @@ providers:
 
   vllm:
     type: "openai_compatible"
-    base_url: "http://localhost:8000/v1"
-    model: "qwen3-coder-30b"
+    # vLLM runs on the Windows box's RTX 3090, NOT on this host. "localhost:8000"
+    # here was pointing at the Gen8's own ChromaDB, which answers /api/v2/heartbeat
+    # and 404s /v1/chat/completions — so every vllm attempt failed and fell through
+    # the route list. Reachable over the tailnet thanks to WSL mirrored networking.
+    base_url: "http://desktop-iifeikl.taileb8c60.ts.net:8000/v1"
+    # Must match what vLLM advertises; verify:
+    #   curl -s http://desktop-iifeikl.taileb8c60.ts.net:8000/v1/models
+    model: "qwen2.5-14b"
     temperature: 0.2
     max_tokens: 2048
     timeout_s: 300
