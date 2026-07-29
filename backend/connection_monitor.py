@@ -7,6 +7,7 @@ for all external services that FAITHH depends on.
 Priority: Phase 4.1 - Reliability Foundation
 """
 
+import os
 import time
 import threading
 from datetime import datetime, timedelta
@@ -30,10 +31,15 @@ class ServiceHealth:
         url: str,
         timeout: int = 5,
         required_for_overall: bool = True,
+        auth: Optional[Tuple[str, str, str]] = None,
     ):
         self.name = name
         self.url = url
         self.timeout = timeout
+        # (env_var, header_name, value_template) for authenticated probes. Resolved at
+        # check time, not here — the key may be loaded after this object is built, and
+        # capturing it at init made a later-set key invisible to the monitor.
+        self.auth = auth
         # If False, failures never mark UNHEALTHY (clamped to DEGRADED) and do not affect
         # overall_status. Use for optional infra (remote Chroma, provider probes without keys).
         self.required_for_overall = required_for_overall
@@ -107,8 +113,12 @@ class ConnectionMonitor:
         """Initialize all services to monitor"""
         # "Unhealthy services: 1" historically came from optional deps marked UNHEALTHY —
         # e.g. remote Chroma on servicebox timing out or connection refused while
-        # the UI/backend still runs. Groq/Gemini URLs without API keys only return 401/403
-        # (degraded) but timeouts on those would also have been UNHEALTHY before optional.
+        # the UI/backend still runs.
+        #
+        # Groq/Gemini used to be probed with no credentials, so they returned 401/403 on
+        # every check and sat permanently "degraded" with 0% uptime whether the keys were
+        # valid, invalid, or absent — a reading that carried no information. They now send
+        # the configured key (see `auth` below), so degraded means something again.
         services_config = [
             # Do not HTTP-poll this Flask app from inside the same process (localhost:5557/health).
             # That produced false "Connection error" / UNHEALTHY during startup and is redundant:
@@ -134,13 +144,17 @@ class ConnectionMonitor:
                 'timeout': 10,
                 'fallback_url': None,
                 'required_for_overall': False,
+                'auth': ('GROQ_API_KEY', 'Authorization', 'Bearer {key}'),
             },
             {
                 'name': 'gemini',
+                # Key goes in a header, never a ?key= query param: URLs leak into logs,
+                # proxies and error messages.
                 'url': 'https://generativelanguage.googleapis.com/v1/models',
                 'timeout': 10,
                 'fallback_url': None,
                 'required_for_overall': False,
+                'auth': (('GEMINI_API_KEY', 'GOOGLE_API_KEY'), 'x-goog-api-key', '{key}'),
             },
         ]
 
@@ -150,6 +164,7 @@ class ConnectionMonitor:
                 url=config['url'],
                 timeout=config['timeout'],
                 required_for_overall=config.get('required_for_overall', True),
+                auth=config.get('auth'),
             )
             service.fallback_url = config['fallback_url']
             self.services[config['name']] = service
@@ -160,12 +175,30 @@ class ConnectionMonitor:
             return False, f"Service {service_name} not configured"
         
         service = self.services[service_name]
-        
+
+        # Authenticated probes: without a key, /models returns 401 (Groq) or 403 (Gemini)
+        # unconditionally, so the monitor reported a health it never actually measured.
+        headers = {}
+        if service.auth:
+            env_names, header_name, template = service.auth
+            if isinstance(env_names, str):
+                env_names = (env_names,)
+            key = next((os.environ[n] for n in env_names if os.environ.get(n)), None)
+            if not key:
+                # No key is a configuration state, not a service outage. Say so plainly
+                # rather than reporting the provider as broken.
+                service.update_status(
+                    ServiceStatus.DEGRADED, None,
+                    f"API key not configured ({' or '.join(env_names)})",
+                )
+                return False, "API key not configured"
+            headers[header_name] = template.format(key=key)
+
         try:
             start_time = time.time()
-            response = requests.get(service.url, timeout=service.timeout)
+            response = requests.get(service.url, headers=headers, timeout=service.timeout)
             response_time = time.time() - start_time
-            
+
             if response.status_code == 200:
                 service.update_status(ServiceStatus.HEALTHY, response_time)
                 return True, None
