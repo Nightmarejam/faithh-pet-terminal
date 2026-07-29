@@ -3359,11 +3359,17 @@ These rules override ALL other instructions. Violating them produces harmful mis
             latency_s = float(routing.get("latency_ms") or 0) / 1000.0
             record_provider_performance(pkey, latency_s, True)
 
+            # Check the provider key before falling back to model-name guessing. The
+            # "llama"/"qwen" branches below infer the runtime from the *weights*, so a
+            # qwen served by vLLM reported "Alibaba (via Ollama)" — naming a runtime
+            # that is not even running on this host.
             mi = model_used.lower()
             if pkey == "groq":
                 provider_name = "Groq"
             elif pkey == "local_webui":
                 provider_name = "Local (text-generation-webui)"
+            elif pkey == "vllm":
+                provider_name = "vLLM (RTX 3090)"
             elif "llama" in mi:
                 provider_name = "Meta (via Ollama)"
             elif "qwen" in mi or "deepseek" in mi:
