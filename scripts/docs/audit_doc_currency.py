@@ -34,6 +34,12 @@ REPO = pathlib.Path(__file__).resolve().parents[2]
 ALLOW: dict[str, set[str]] = {
     "embedder-384": {
         "AGENTS.md",
+        "docs/roadmaps/PULSE_REFLECTION_ENGINE.md",  # corrected, cites the old value
+        "docs/guides/GIT_WORKFLOW.md",  # changelog entry, annotated as historical
+        "docs/WSL_DEPENDENCIES.md",
+        "docs/ENVIRONMENT_SPEC.md",
+        "docs/architecture/ACTIVE_INDEXING_PIPELINE.md",
+        "docs/reference/METADATA_AUTOMATION_SYSTEM.md",
         "docs/architecture/SYSTEM_TRANSPARENCY_IMPLEMENTATION_CHECKLIST.md",
         "docs/architecture/EMBEDDINGS.md",
         "docs/architecture/VECTOR_STORE_REVIEW.md",
@@ -54,6 +60,8 @@ ALLOW: dict[str, set[str]] = {
         "docs/guides/QUICKSTART.md",
     },
     "alife-live": {
+        "docs/architecture/RETRIEVAL_FILTER_PROFILE.md",
+        "docs/guides/RUNBOOK_SYNTHESIS_MVP.md",
         "docs/architecture/VECTOR_STORE_REVIEW.md",
         "docs/consolidated/SYSTEM_OVERVIEW.md",
     },
@@ -74,8 +82,10 @@ RULES = [
         "id": "embedder-384",
         "severity": "high",
         "pattern": re.compile(r"all-MiniLM-L6-v2|384[- ]dim", re.I),
-        "why": "Live embedder is BAAI/bge-base-en-v1.5 (768-dim). A 384-dim embedder "
-               "against faithh_knowledge_base_v2 yields best_distance 1.0 on every query.",
+        "why": "Live KB embedder is BAAI/bge-base-en-v1.5 (768-dim). A 384-dim embedder "
+               "against faithh_knowledge_base_v2 yields best_distance 1.0 on every query. "
+               "NOTE: all-MiniLM-L6-v2 is still correct for scripts/auto_metadata_tagger.py, "
+               "which does topic tagging, not retrieval — check the context before editing.",
         "ref": "docs/architecture/EMBEDDINGS.md",
     },
     {
@@ -143,6 +153,12 @@ SEV_ORDER = {"high": 0, "medium": 1, "low": 2}
 # snapshot describing the collection as it was in April is correct, not stale — it is
 # a record. Only living documents are expected to track current state.
 SNAPSHOT_NAME = re.compile(r"\d{4}[-_]\d{2}([-_]\d{2})?")
+# Completion reports, phase status and post-mortems are records of what was true when
+# written. Treating them as live docs generates noise that trains you to ignore the
+# audit — the failure mode that lets a real finding slide past.
+RECORD_NAME = re.compile(
+    r"(PHASE\d|_STATUS|_REPORT|COMPLETION|_ANALYSIS|RELEVANCY)", re.I
+)
 # Likewise, a document whose body is explicitly a dated record.
 SNAPSHOT_BODY = re.compile(
     r"^\s*(>?\s*)?\*{0,2}(recorded|snapshot|as of|captured|sample run)\b", re.I | re.M
@@ -150,8 +166,11 @@ SNAPSHOT_BODY = re.compile(
 
 
 def is_snapshot(rel: str, text: str) -> bool:
-    return bool(SNAPSHOT_NAME.search(pathlib.Path(rel).name)) or bool(
-        SNAPSHOT_BODY.search(text[:1500])
+    name = pathlib.Path(rel).name
+    return (
+        bool(SNAPSHOT_NAME.search(name))
+        or bool(RECORD_NAME.search(name))
+        or bool(SNAPSHOT_BODY.search(text))
     )
 
 

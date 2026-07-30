@@ -30,7 +30,8 @@ Design notes:
 Entry point: `query_alife_collection()`
 
 Default behavior (non-lineage query):
-- Query and merge high-signal ALife sources from `faithh_knowledge_base`:
+- Query and merge high-signal ALife sources from `faithh_knowledge_base_v2`:
+  (ALife telemetry itself now lives in SQLite, not Chroma — see VECTOR_STORE_REVIEW.md)
   - `domain=alife AND source_type=alife_experiment`
   - `domain=alife AND source_type=synthesis_document`
   - `domain=alife AND source_type=alife_cross_experiment_pattern`

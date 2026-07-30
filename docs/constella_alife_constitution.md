@@ -222,24 +222,24 @@ This is the most complex mapping and requires the most new experimental design. 
 ```
 Source                          NAS Location                    ChromaDB Collection
 ------                          ------------                    -------------------
-Oregon SOS API                  /volume1/raw_ingest/gov_api/    faithh_knowledge_base
+Oregon SOS API                  /volume1/raw_ingest/gov_api/    faithh_knowledge_base_v2
   (cooperative/LLC filings,     oregon_sos/                     metadata: domain=constella,
    amendment history)                                           source_type=government_api
 
-Census / ACS data               /volume1/raw_ingest/gov_api/    faithh_knowledge_base
+Census / ACS data               /volume1/raw_ingest/gov_api/    faithh_knowledge_base_v2
   (UCF baseline modeling,       census/                         metadata: domain=constella,
    Oregon poverty thresholds)                                   source_type=demographic
 
-Academic papers (PDF)           /volume1/projects/constella/    faithh_knowledge_base
+Academic papers (PDF)           /volume1/projects/constella/    faithh_knowledge_base_v2
   (restorative justice,         research/papers/                metadata: domain=constella,
    token decay, deliberative                                    source_type=academic
    democracy)
 
-ALife experiment results        /volume1/projects/alife/        faithh_knowledge_base
+ALife experiment results        /volume1/projects/alife/        faithh_knowledge_base_v2
   (experiments 3-9)             results/                        metadata: domain=alife,
                                                                 source_type=alife_experiment
 
-Constella design docs           /volume1/projects/constella/    faithh_knowledge_base
+Constella design docs           /volume1/projects/constella/    faithh_knowledge_base_v2
   (the 88k+ lines already       design_docs/                    metadata: domain=constella,
    partially indexed)                                           source_type=design_doc
 ```

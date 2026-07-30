@@ -151,7 +151,9 @@ Every package and service in WSL2 exists to support FAITHH. If it's not listed h
 ### Vector Database
 - **Location**: Gen8 MicroServer via Tailscale
 - **Chunks**: 37,000+ documents indexed
-- **Embedding Model**: all-MiniLM-L6-v2 (384-dim)
+- **Embedding Model**: `BAAI/bge-base-en-v1.5` (768-dim) for the knowledge base.
+  (`all-MiniLM-L6-v2` / 384-dim is still used by `scripts/auto_metadata_tagger.py`
+  for topic tagging only — never for KB ingest or query.)
 - **Active Files**: 35 docs (excludes archive/)
 
 ### Model Files

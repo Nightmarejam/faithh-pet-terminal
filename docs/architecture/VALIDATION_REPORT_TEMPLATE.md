@@ -5,7 +5,7 @@ Run ID: `<generated>`
 
 ## Scope
 
-- Collection: `faithh_knowledge_base`
+- Collection: `faithh_knowledge_base_v2`  <!-- template: keep in sync with CHROMA_COLLECTION -->
 - Top-k: 5
 - Query classes:
   - governance principle

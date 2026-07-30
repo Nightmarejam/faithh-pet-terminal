@@ -6,7 +6,7 @@ This note maps the Harmonic Body framework ([`docs/research/harmonic_body/HARMON
 
 Before mapping **Node of Ranvier** to retrieval thresholds, the current codebase uses:
 
-- **Retrieval path:** `smart_rag_query()` in `faithh_professional_backend_fixed.py` — semantic query against the configured Chroma collection (default name `faithh_knowledge_base`, overridable via `CHROMA_COLLECTION`).
+- **Retrieval path:** `smart_rag_query()` in `faithh_professional_backend_fixed.py` — semantic query against the configured Chroma collection (default name `faithh_knowledge_base_v2`, overridable via `CHROMA_COLLECTION`).
 - **Numeric gate:** `RAG_MAX_DISTANCE_CONFIDENT` — distances above this are treated as low confidence. Default `0.55`; override with environment variable `RAG_MAX_DISTANCE_CONFIDENT`.
 - **API surface:** `GET /api/workspace/registry` exposes `knowledge_base.distance_threshold`, which is the same numeric value as `RAG_MAX_DISTANCE_CONFIDENT`.
 - **RAG microservice:** `services/rag_api.py` also references `RAG_MAX_DISTANCE_CONFIDENT` for consistent low-confidence signaling when using that sidecar.

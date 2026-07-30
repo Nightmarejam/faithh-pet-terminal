@@ -111,7 +111,7 @@ Fall back to general knowledge base
 
 ### ChromaDB Collection
 
-- **Collection:** `faithh_knowledge_base`
+- **Collection:** `faithh_knowledge_base_v2` (768-dim BGE)
 - **Domain:** `constella_constitutional`
 - **Documents:** 17 total (14 principles + 3 mapping chunks)
 

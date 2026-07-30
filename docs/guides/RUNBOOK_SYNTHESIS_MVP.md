@@ -17,7 +17,8 @@ cd /home/jonat/ai-stack && source venv/bin/activate
 python3 scripts/runbook_seed_from_search.py \
   --query "alife governance experiment execution" \
   --max-chunks 8 \
-  --collections "faithh_knowledge_base,alife_lineage" \
+  --collections "faithh_knowledge_base_v2" \
+  # alife_lineage was exported to SQLite and deleted 2026-07-30; naming it fails.
   --output-dir reports/runbook_seeds
 ```
 
@@ -35,7 +36,7 @@ cd /home/jonat/ai-stack && source venv/bin/activate
 python3 scripts/runbook_seed_after_experiment.py \
   --enable \
   --report reports/alife/band2_generation8_n0p4_r01_20260402_100353.json \
-  --collections "faithh_knowledge_base,alife_lineage" \
+  --collections "faithh_knowledge_base_v2" \
   --output-dir reports/runbook_seeds
 ```
 

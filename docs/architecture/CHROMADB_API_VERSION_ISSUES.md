@@ -17,11 +17,11 @@ curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 # Returns: {"nanosecond heartbeat": 1771901150685085006}
 
 # ❌ Failing - v1 count (410 Gone)
-curl http://servicebox.taileb8c60.ts.net:8000/api/v1/collections/faithh_knowledge_base/count
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/tenants/default_tenant/databases/default_database/collections/faithh_knowledge_base_v2/count
 # Returns: {"error":"Unimplemented","message":"The v1 API is unimplemented"}
 
 # ❌ Failing - v2 count (no response)
-curl http://servicebox.taileb8c60.ts.net:8000/api/v2/collections/faithh_knowledge_base/count
+curl http://servicebox.taileb8c60.ts.net:8000/api/v2/tenants/default_tenant/databases/default_database/collections/faithh_knowledge_base_v2/count
 # Returns: No response (likely incorrect endpoint format)
 ```
 

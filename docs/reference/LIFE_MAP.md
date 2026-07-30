@@ -225,7 +225,7 @@ You keep building **infrastructure for coherence** (FAITHH) instead of **using w
 - **Status:** Operational (Phase 2 Complete / Phase 3 Planning)
 - **Backend:** `faithh_professional_backend_fixed.py` on **WSL2** (localhost:5557)
 - **Knowledge Base:** Gen8 ChromaDB at `http://servicebox.taileb8c60.ts.net:8000`
-  - **Collection:** `faithh_knowledge_base`
+  - **Collection:** `faithh_knowledge_base_v2` (768-dim BGE)
   - **Total chunks:** 29,041
   - **Conversations indexed:** 285 (Feb 2024 → Jan 2026)
   - **Embedding:** BAAI/bge-base-en-v1.5 (768-dim)

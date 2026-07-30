@@ -35,7 +35,11 @@ Each tier builds on the outputs of the previous one. All tiers store results as 
 
 ### What It Does
 1. Discovers all active documentation (28 docs + 5 state files)
-2. Embeds each doc with `all-MiniLM-L6-v2` (384-dim)
+2. Embeds each doc with `BAAI/bge-base-en-v1.5` (768-dim)
+   > Roadmap originally specified all-MiniLM-L6-v2 (384-dim). That predates the
+   > migration to BGE and would not be comparable against the 768-dim
+   > `faithh_knowledge_base_v2` chunks step 3 samples — the comparison would be
+   > meaningless, not merely inaccurate. See docs/architecture/EMBEDDINGS.md.
 3. Compares embeddings against 200 sampled ChromaDB conversation chunks
 4. Checks git history for file age
 5. Scans for broken file references in markdown + JSON

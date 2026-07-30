@@ -105,7 +105,7 @@ git commit -m "feat: Add ChromaDB connection pooling for better performance"
 git commit -m "fix: Resolve RAG hallucination by improving chunk overlap
 
 - Increased chunk overlap from 100 to 200 chars
-- Updated embedding model to all-MiniLM-L6-v2
+- Updated embedding model to all-MiniLM-L6-v2  *(historical entry; the KB embedder is now BAAI/bge-base-en-v1.5, 768-dim)*
 - Reindexed 32,499 chunks with proper metadata"
 
 git commit -m "docs: Create comprehensive FAITHH_GUIDE.md as single source of truth"
