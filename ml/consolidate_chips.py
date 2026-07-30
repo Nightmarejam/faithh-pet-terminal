@@ -56,7 +56,14 @@ EMBEDDING_MODEL = os.environ.get("FAITHH_EMBEDDER_MODEL", "BAAI/bge-base-en-v1.5
 MACRO_CHIPS = {
     "faithh_core": {
         "label": "FAITHH Core System",
-        "description": "FAITHH backend, chip system, PULSE, memory architecture",
+        # Names the chip machinery explicitly. Previously this said only "chip system",
+        # which lost chip-architecture questions to Inference & Model Serving because
+        # that chip's description happened to contain "routing" and "provider".
+        "description": (
+            "FAITHH backend internals: the chip system and chip fusion, "
+            "parallel_chip_engine, Program Advances, PULSE, the Coherence Arbiter, "
+            "memory architecture and context assembly"
+        ),
         "match_keywords": ["robocopy", "mir", "backup_parallel", "dryrun", "resonance", "resonant", "earth", "energy", "ilo", "iso", "spp", "boot", "usb", "fgsjson", "floating_gardens_soundworks", "reverb", "wav", "llc", "cpa", "synology", "macvlan", "pi hole", "traefik", "8080", "llama_cpp", "cuda", "torch", "pytorch", "binaries", "5557", "backend", "faithh_professional_backend_fixed", "jonat ai", "ubuntu bash", 
             "faithh", "pulse", "chip", "backend", "rag", "memory", "scaffold",
             "context", "session", "awareness", "stars", "journal", "rating",
@@ -137,14 +144,22 @@ MACRO_CHIPS = {
     },
     "inference_serving": {
         "label": "Inference & Model Serving",
+        # Deliberately avoids the bare words "routing", "route" and "provider". The
+        # centroid is the embedding of description + keywords, and those terms describe
+        # chip fusion and retrieval routing just as well as model serving — which is why
+        # "What did we decide about parallel_chip_engine?" activated this chip at 0.683,
+        # ahead of FAITHH Core System at 0.65. Keep the vocabulary to serving hardware
+        # and named LLM backends, which nothing else in this system talks about.
         "description": (
-            "vLLM, model serving and routing, provider selection, GPU allocation "
-            "and the power constraint that moved inference off the Gen8"
+            "Serving language models on GPU hardware: vLLM, AWQ quantisation, "
+            "which LLM backend answers a request, VRAM allocation, and the power "
+            "constraint that moved inference off the Gen8 onto the RTX 3090"
         ),
         "match_keywords": [
-            "vllm", "inference", "serving", "awq", "quantization", "provider",
-            "routing", "route", "groq", "gemini", "qwen", "model_config",
-            "3090", "gpu", "psu", "power fault", "transient", "wsl",
+            "vllm", "awq", "quantization", "quantisation", "served_model_name",
+            "groq", "gemini", "ollama", "qwen2.5-14b", "model_config.yaml",
+            "3090", "1080 ti", "vram", "gpu memory", "cuda_visible_devices",
+            "psu", "power fault", "current transient", "wsl2", "tokens per second",
         ],
     },
     "coding_dotnet": {

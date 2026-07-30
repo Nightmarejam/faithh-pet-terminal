@@ -1,33 +1,33 @@
 # Chip Consolidation Report
-**Generated:** 2026-07-30 20:15:25  
-**Duration:** 16.1s  
+**Generated:** 2026-07-30 20:32:47  
+**Duration:** 17.1s  
 **Input:** 971 micro-topics  
 **Output:** 18 macro-chips  
-**Assigned:** 604 micro-topics (31,979 docs)  
-**Unassigned:** 367 micro-topics (16,639 docs)  
+**Assigned:** 602 micro-topics (31,893 docs)  
+**Unassigned:** 369 micro-topics (16,725 docs)  
 
 ## Macro-Chips
 
 | Rank | Chip | Docs | Micro-Topics | Top Keywords |
 |------|------|------|-------------|-------------|
-| 1 | **FAITHH Core System** | 6,332 | 104 | chip, faithh langflow, chips, div, faithh inference |
+| 1 | **FAITHH Core System** | 6,451 | 107 | chip, faithh langflow, chips, div, faithh inference |
 | 2 | **Git & Version Control** | 5,249 | 103 | index, democracy index, democracy, expression index, freedom expression |
 | 3 | **File Management & Backup** | 5,241 | 139 | democracy index, democracy, participatory democracy, electoral democracy, egalitarian democracy |
-| 4 | **LLM & AI Tools** | 2,046 | 31 | false, maxtokens, gpt codex, gpt, isinternal |
+| 4 | **LLM & AI Tools** | 2,071 | 32 | false, maxtokens, gpt codex, gpt, isinternal |
 | 5 | **Infrastructure & Docker** | 1,920 | 27 | pihole, volume1 docker, volume1, docker pihole, td |
 | 6 | **Constella Framework** | 1,864 | 32 | astris, line length, sweden, eden, civic |
-| 7 | **Desktop App Development** | 1,614 | 30 | faithh desktop, faithh src, faithh faithh, hdx, border |
+| 7 | **Desktop App Development** | 1,697 | 33 | faithh desktop, faithh src, faithh faithh, hdx, border |
 | 8 | **PowerShell & Windows Scripts** | 1,292 | 17 | mexico year, country mexico, 7077, 7077 processed, employment |
-| 9 | **Hardware & System Config** | 1,266 | 15 | inf, usb, thunderbolt, dock, driver |
-| 10 | **ChromaDB & RAG Indexing** | 1,088 | 25 | chatgpt, conversations, jsonl, schema, google cloud |
+| 9 | **Hardware & System Config** | 1,178 | 14 | inf, usb, thunderbolt, dock, driver |
+| 10 | **ChromaDB & RAG Indexing** | 1,110 | 26 | chatgpt, conversations, jsonl, schema, google cloud |
 | 11 | **Gen8 Server & Homelab** | 869 | 18 | ssh, docs security, gen8, langflow services, langflow |
 | 12 | **Networking & Security** | 858 | 18 | vailability, portugal, emissions, year vailability, vailability country |
-| 13 | **Inference & Model Serving** | 490 | 13 | vllm, faithh_force_local, wsl_migration, ops vllm, cc_proxy |
-| 14 | **Health & Wellness** | 468 | 9 | headings, blanks, blank lines, expected actual, blank |
-| 15 | **Philosophy & Universe** | 427 | 4 | nan, ok ok, ok, earth, sun |
-| 16 | **Architecture & Documentation** | 426 | 8 | parity, phase flip, label, power bi, coherence |
-| 17 | **Audio & Music Business** | 278 | 5 | fgsjson, jonat floating_gardens_soundworks, floating_gardens_soundworks, operational_pillars, phase_1_financials |
-| 18 | **Retrieval & Embeddings** | 251 | 6 | mali, add member, country guatemala, guatemala year, guatemala |
+| 13 | **Health & Wellness** | 468 | 9 | headings, blanks, blank lines, expected actual, blank |
+| 14 | **Philosophy & Universe** | 427 | 4 | nan, ok ok, ok, earth, sun |
+| 15 | **Architecture & Documentation** | 426 | 8 | parity, phase flip, label, power bi, coherence |
+| 16 | **Audio & Music Business** | 278 | 5 | fgsjson, jonat floating_gardens_soundworks, floating_gardens_soundworks, operational_pillars, phase_1_financials |
+| 17 | **Retrieval & Embeddings** | 251 | 6 | mali, add member, country guatemala, guatemala year, guatemala |
+| 18 | **Inference & Model Serving** | 243 | 4 | vllm, ops vllm, cc_proxy, stack ops, dockerd |
 
 ## Unassigned Micro-Topics (Top 20)
 
