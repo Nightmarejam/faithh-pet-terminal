@@ -1150,6 +1150,11 @@ RAG_EXCLUDE_MODEL_OUTPUT = os.environ.get("RAG_EXCLUDE_MODEL_OUTPUT", "1").strip
 # catches the exports that carry no document_type at all.
 _DOC_TYPE_WEIGHT = {
     "architecture_doc": RAG_SOURCE_BOOST,   # 5,309 — curated ADRs and design docs
+    # Historical: phase reports, dated audits, post-mortems. Kept retrievable — they
+    # are the record of how things got here — but not boosted, so a completion report
+    # from April cannot outrank a living document about current state. Assigned by
+    # scripts/ingest/index_docs.py:is_record().
+    "doc_record": 0.0,
     "session_handoff": 0.05,                # 1,920 — written up, but narrative
     "chat_export": -0.20,                   # 31,923 — raw transcripts
     # Model output written back by the auto-indexer. Penalised at least as hard as a

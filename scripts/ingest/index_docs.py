@@ -84,6 +84,27 @@ def slug(rel: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", rel.lower()).strip("_")
 
 
+# A record describes what was true when it was written; a living document is expected
+# to track current state. Both belong in the repo — deleting records loses history —
+# but they must not compete equally in retrieval. A PHASE2 completion report was
+# getting the same tier-1 boost as EMBEDDINGS.md, so a question about the current
+# embedder could be answered from a report about April.
+#
+# Same rules as scripts/docs/audit_doc_currency.py, which skips records for the same
+# reason. Keep the two in sync.
+RECORD_NAME = re.compile(
+    r"(\d{4}[-_]\d{2}([-_]\d{2})?|PHASE\d|_STATUS|_REPORT|COMPLETION|_ANALYSIS|RELEVANCY)",
+    re.I,
+)
+RECORD_BODY = re.compile(
+    r"^\s*(>?\s*)?\*{0,2}(recorded|snapshot|as of|captured|sample run)\b", re.I | re.M
+)
+
+
+def is_record(rel: str, text: str) -> bool:
+    return bool(RECORD_NAME.search(pathlib.Path(rel).name)) or bool(RECORD_BODY.search(text))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -106,6 +127,7 @@ def main() -> int:
             continue
         if not text.strip():
             continue
+        doc_type = "doc_record" if is_record(rel, text) else "architecture_doc"
         for i, chunk in enumerate(split_markdown(text)):
             records.append({
                 "id": f"docs_{slug(rel)}_{i}",
@@ -115,7 +137,11 @@ def main() -> int:
                     "path": rel,
                     "title": f.stem,
                     "chunk_index": i,
-                    "document_type": "architecture_doc",
+                    # architecture_doc = living, carries the tier-1 boost and is
+                    # eligible for whole-document expansion.
+                    # doc_record      = historical; retrievable, but must not outrank
+                    #                   a living document about current state.
+                    "document_type": doc_type,
                 },
             })
 
