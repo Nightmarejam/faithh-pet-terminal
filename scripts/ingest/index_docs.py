@@ -96,13 +96,22 @@ RECORD_NAME = re.compile(
     r"(\d{4}[-_]\d{2}([-_]\d{2})?|PHASE\d|_STATUS|_REPORT|COMPLETION|_ANALYSIS|RELEVANCY)",
     re.I,
 )
+# A record declares itself in its header, not incidentally in prose. Scanning the whole
+# body with a line-anchored pattern misfired: GEN8_POWER_CONSTRAINT.md contains
+# a doc whose prose happened to wrap the word "recorded" to the start of a line.
+# GEN8_POWER_CONSTRAINT.md hit exactly that, was typed doc_record, lost its
+# tier-1 boost, and dropped out of retrieval for the question it answers.
+# start of a line, the doc was typed doc_record, lost its tier-1 boost, and dropped out
+# of retrieval for the exact question it answers. Header only.
+RECORD_HEADER_LINES = 12
 RECORD_BODY = re.compile(
     r"^\s*(>?\s*)?\*{0,2}(recorded|snapshot|as of|captured|sample run)\b", re.I | re.M
 )
 
 
 def is_record(rel: str, text: str) -> bool:
-    return bool(RECORD_NAME.search(pathlib.Path(rel).name)) or bool(RECORD_BODY.search(text))
+    header = "\n".join(text.splitlines()[:RECORD_HEADER_LINES])
+    return bool(RECORD_NAME.search(pathlib.Path(rel).name)) or bool(RECORD_BODY.search(header))
 
 
 def is_reference(rel: str) -> bool:

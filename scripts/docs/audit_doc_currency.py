@@ -34,6 +34,7 @@ REPO = pathlib.Path(__file__).resolve().parents[2]
 ALLOW: dict[str, set[str]] = {
     "embedder-384": {
         "AGENTS.md",
+        "docs/guides/RUNBOOK_SYSTEM_REVIEW.md",  # teaches the distinction, must name the value
         "docs/architecture/PULSE_PROPOSALS.md",  # quotes the value as example evidence
         "docs/roadmaps/PULSE_REFLECTION_ENGINE.md",  # corrected, cites the old value
         "docs/guides/GIT_WORKFLOW.md",  # changelog entry, annotated as historical
@@ -161,6 +162,14 @@ RECORD_NAME = re.compile(
     r"(PHASE\d|_STATUS|_REPORT|COMPLETION|_ANALYSIS|RELEVANCY)", re.I
 )
 # Likewise, a document whose body is explicitly a dated record.
+# A record declares itself in its header, not incidentally in prose. Scanning the whole
+# body with a line-anchored pattern misfired: GEN8_POWER_CONSTRAINT.md contains
+# a doc whose prose happened to wrap the word "recorded" to the start of a line.
+# GEN8_POWER_CONSTRAINT.md hit exactly that, was typed doc_record, lost its
+# tier-1 boost, and dropped out of retrieval for the question it answers.
+# start of a line, the doc was typed doc_record, lost its tier-1 boost, and dropped out
+# of retrieval for the exact question it answers. Header only.
+RECORD_HEADER_LINES = 12
 SNAPSHOT_BODY = re.compile(
     r"^\s*(>?\s*)?\*{0,2}(recorded|snapshot|as of|captured|sample run)\b", re.I | re.M
 )
@@ -168,10 +177,11 @@ SNAPSHOT_BODY = re.compile(
 
 def is_snapshot(rel: str, text: str) -> bool:
     name = pathlib.Path(rel).name
+    header = "\n".join(text.splitlines()[:RECORD_HEADER_LINES])
     return (
         bool(SNAPSHOT_NAME.search(name))
         or bool(RECORD_NAME.search(name))
-        or bool(SNAPSHOT_BODY.search(text))
+        or bool(SNAPSHOT_BODY.search(header))
     )
 
 
