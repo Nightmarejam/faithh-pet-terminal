@@ -65,7 +65,11 @@ def sample(host: str) -> dict | None:
     return {
         "sm": num(base[0]), "mem_util": num(base[1]), "mem_mb": num(base[2]),
         "clock": num(base[3]), "temp": num(base[4]),
-        # The A1000 reports power.draw as [N/A] unless persistence mode is on.
+        # The RTX A1000 does not expose instantaneous power draw at all — it reports
+        # [N/A] even with persistence mode enabled and a power cap applied. Verified
+        # 2026-07-30 (persistence Enabled, limit 35W, draw still N/A). Use SM clock and
+        # utilisation as the proxy; the cap is enforced in hardware regardless of
+        # whether the card will tell you what it is drawing.
         "watts": num(base[5], default=-1.0),
         "enc": enc_pct, "dec": dec_pct,
     }
@@ -114,7 +118,9 @@ def main() -> int:
     if peak("watts") >= 0:
         print(f"  power       peak {peak('watts'):>5.1f} W  mean {mean('watts'):>5.1f} W")
     else:
-        print("  power       unavailable — enable persistence mode: sudo nvidia-smi -pm 1")
+        print("  power       not reported by this card (A1000 exposes no draw telemetry,")
+        print("              even with persistence mode on) — read SM clock as the proxy:")
+        print(f"              clock peak {peak('clock'):>5.0f} MHz of 2100 max")
 
     print()
     if peak("enc") > 5 and peak("sm") < 30:

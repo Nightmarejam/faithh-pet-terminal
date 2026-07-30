@@ -1,0 +1,27 @@
+[Unit]
+Description=Cap the RTX A1000 at 35W and enable persistence mode
+Documentation=file:///home/jonat/ai-stack/docs/architecture/GEN8_POWER_CONSTRAINT.md
+After=multi-user.target
+Wants=multi-user.target
+
+[Service]
+# The Gen8's 12-year-old 150W PSU cannot absorb the microsecond current transients a
+# GPU draws under sustained CUDA load; over-current protection trips and the machine
+# loses power outright with no shutdown sequence. Capping the board bounds those
+# transients in hardware rather than by policy.
+#
+# 35W of a 50W default. NVENC/NVDEC (what Plex transcoding uses) are fixed-function
+# blocks well under this ceiling, so transcoding is unaffected. It constrains the CUDA
+# array, which is the load that has preceded every power-loss event on this host.
+#
+# nvidia-smi settings do NOT survive a reboot, which is why this unit exists.
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/nvidia-smi -pm 1
+ExecStart=/usr/bin/nvidia-smi -pl 35
+# Do not fail the boot if the GPU is absent or the driver has not loaded yet.
+SuccessExitStatus=0 2
+TimeoutStartSec=60
+
+[Install]
+WantedBy=multi-user.target
