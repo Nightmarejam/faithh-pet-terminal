@@ -105,6 +105,18 @@ def is_record(rel: str, text: str) -> bool:
     return bool(RECORD_NAME.search(pathlib.Path(rel).name)) or bool(RECORD_BODY.search(text))
 
 
+def is_reference(rel: str) -> bool:
+    """External source material, not FAITHH's own documentation.
+
+    docs/data/ holds imported primary sources — the UN Charter, the Universal
+    Declaration of Human Rights, the US Constitution, V-Dem codebooks, third-party
+    API manuals. They are worth retrieving, but they are not design decisions about
+    this system, and giving them the same authority as an ADR means a question about
+    FAITHH's architecture can be answered from the UN Charter.
+    """
+    return "/data/" in rel or rel.startswith("data/")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -127,7 +139,12 @@ def main() -> int:
             continue
         if not text.strip():
             continue
-        doc_type = "doc_record" if is_record(rel, text) else "architecture_doc"
+        if is_reference(rel):
+            doc_type = "reference_doc"
+        elif is_record(rel, text):
+            doc_type = "doc_record"
+        else:
+            doc_type = "architecture_doc"
         for i, chunk in enumerate(split_markdown(text)):
             records.append({
                 "id": f"docs_{slug(rel)}_{i}",

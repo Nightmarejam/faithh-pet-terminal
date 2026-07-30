@@ -1155,6 +1155,12 @@ _DOC_TYPE_WEIGHT = {
     # from April cannot outrank a living document about current state. Assigned by
     # scripts/ingest/index_docs.py:is_record().
     "doc_record": 0.0,
+    # External primary sources imported into docs/data/ — UN Charter, UDHR, the US
+    # Constitution, V-Dem codebooks, third-party API manuals. Retrievable and useful,
+    # but they are not decisions about this system: without this, a question about
+    # FAITHH's architecture could be answered from the UN Charter with tier-1
+    # authority. Assigned by scripts/ingest/index_docs.py:is_reference().
+    "reference_doc": 0.05,
     "session_handoff": 0.05,                # 1,920 — written up, but narrative
     "chat_export": -0.20,                   # 31,923 — raw transcripts
     # Model output written back by the auto-indexer. Penalised at least as hard as a
