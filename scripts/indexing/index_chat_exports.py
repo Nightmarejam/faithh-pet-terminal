@@ -513,11 +513,21 @@ def _default_embed_device() -> str:
     return d if d in ("cuda", "cpu") else "cuda"
 
 
+# Must match the backend, which reads the same variable and defaults to BGE. This
+# script previously defaulted to all-MiniLM-L6-v2 (384-dim) while stamping
+# metadata={"dimension": 768} on the collection it created — a 384-dim store
+# labelled 768. See docs/architecture/EMBEDDINGS.md.
+DEFAULT_EMBED_MODEL = "BAAI/bge-base-en-v1.5"
+
+
+def _embed_model_id() -> str:
+    return (os.environ.get("FAITHH_EMBEDDER_MODEL") or DEFAULT_EMBED_MODEL).strip()
+
+
 def _make_embedding_function(args: argparse.Namespace):
     """Local SentenceTransformer embedder; vectors are sent to remote Chroma (Gen8)."""
-    model = os.environ.get("FAITHH_EMBEDDER_MODEL", "all-MiniLM-L6-v2").strip()
     return embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name=model,
+        model_name=_embed_model_id(),
         device=args.embed_device,
     )
 
@@ -703,13 +713,41 @@ def main() -> None:
         ),
     )
     ef = _make_embedding_function(args)
-    model_id = os.environ.get("FAITHH_EMBEDDER_MODEL", "all-MiniLM-L6-v2").strip()
+    model_id = _embed_model_id()
     print(f"Client-side embeddings: model={model_id!r} device={args.embed_device!r} → {host}:{port}")
 
+    # Measure the real dimension instead of asserting one. Stamping a hardcoded
+    # 768 was how a 384-dim collection ended up labelled 768.
+    embed_dim = len(ef(["dimension probe"])[0])
+    print(f"Embedder reports {embed_dim}-dim vectors")
+
+    target = args.collection.strip()
+    # Refuse to write into a collection of a different width. Chroma would reject
+    # the insert anyway, but late and per-batch; failing here says why.
+    try:
+        existing = client.get_collection(name=target)
+        pk = existing.peek(limit=1)
+        pe = pk.get("embeddings")
+        cur_dim = len(pe[0]) if pe is not None and len(pe) > 0 and pe[0] is not None else None
+        if cur_dim and cur_dim != embed_dim:
+            print(
+                f"\nREFUSING TO WRITE: collection {target!r} holds {cur_dim}-dim vectors "
+                f"but {model_id!r} produces {embed_dim}-dim.\n"
+                f"  Either set FAITHH_EMBEDDER_MODEL to the model that built {target!r},\n"
+                f"  or pick a different --collection. See docs/architecture/EMBEDDINGS.md",
+                file=sys.stderr,
+            )
+            # sys.exit, not `return`: main() is invoked bare at the bottom of this
+            # file, so a return value would be discarded and the shell would see a
+            # successful exit for a run that wrote nothing.
+            sys.exit(2)
+    except Exception:
+        pass  # collection does not exist yet; it is created below
+
     collection = client.get_or_create_collection(
-        name=args.collection.strip(),
+        name=target,
         embedding_function=ef,
-        metadata={"dimension": 768},
+        metadata={"dimension": embed_dim},
     )
     pre_count = collection.count()
 

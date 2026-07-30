@@ -833,6 +833,49 @@ try:
     doc_count = collection.count()
     print(f"✅ ChromaDB connected to {CHROMA_HOST}:{CHROMA_PORT}")
     print(f"✅ Collection '{CHROMA_COLLECTION}': {doc_count} documents")
+
+    # ---- startup invariant: embedder dimension == collection dimension ----------
+    # An embedding is only comparable to one made by the same model. Only
+    # faithh_knowledge_base_v2 is 768-dim; the other collections are 384. Getting
+    # this wrong does not crash — retrieval silently returns nothing useful and
+    # best_distance reads exactly 1.0 on every query. That has cost real debugging
+    # time more than once, so assert it out loud at boot.
+    # See docs/architecture/EMBEDDINGS.md
+    _q_dim = _c_dim = None
+    try:
+        if query_embedder is not None:
+            _q_dim = query_embedder.get_sentence_embedding_dimension()
+    except Exception:
+        pass
+    try:
+        _pk = collection.peek(limit=1)
+        _pe = _pk.get("embeddings")
+        if _pe is not None and len(_pe) > 0 and _pe[0] is not None:
+            _c_dim = len(_pe[0])
+    except Exception:
+        pass
+
+    if _q_dim and _c_dim and _q_dim != _c_dim:
+        _bar = "=" * 72
+        print(_bar)
+        print("🚨 EMBEDDING DIMENSION MISMATCH — retrieval will not work")
+        print(f"   query embedder : {EMBEDDING_MODEL_ID} -> {_q_dim}-dim")
+        print(f"   collection     : {CHROMA_COLLECTION} -> {_c_dim}-dim")
+        print("   Every query will report best_distance = 1.0 and answers will be ungrounded.")
+        print("   Fix: point CHROMA_COLLECTION at a matching collection, or re-index with")
+        print("        scripts/ingest/reindex_collection.py  (see docs/architecture/EMBEDDINGS.md)")
+        print(_bar)
+        logger.error(
+            "Embedding dimension mismatch: embedder %s is %s-dim, collection %s is %s-dim",
+            EMBEDDING_MODEL_ID, _q_dim, CHROMA_COLLECTION, _c_dim,
+        )
+    elif _q_dim and _c_dim:
+        print(f"✅ Embedding dimensions agree: {_q_dim}-dim "
+              f"({EMBEDDING_MODEL_ID} ↔ {CHROMA_COLLECTION})")
+    else:
+        # Empty collection or an embedder that failed to load — cannot verify.
+        print(f"⚠️ Could not verify embedding dimensions "
+              f"(embedder={_q_dim}, collection={_c_dim}) — retrieval unverified")
 except Exception as e:
     CHROMA_CONNECTED = False
     collection = None
