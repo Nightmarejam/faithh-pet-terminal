@@ -796,7 +796,13 @@ def get_query_embedder():
             if EMBEDDER_ALLOW_DOWNLOAD:
                 try:
                     query_embedder = _SentenceTransformer(EMBEDDING_MODEL_ID, device='cpu')
-                    print("✅ Query embedder loaded (BAAI/bge-base-en-v1.5, 384-dim, CPU-only)")
+                    # Second hardcoded "384-dim" for a 768-dim model — same lie as
+                    # the primary path had. Report what the model actually returns.
+                    try:
+                        _dim2 = query_embedder.get_sentence_embedding_dimension()
+                    except Exception:
+                        _dim2 = "unknown"
+                    print(f"✅ Query embedder loaded ({EMBEDDING_MODEL_ID}, {_dim2}-dim, CPU-only)")
                 except Exception as inner:
                     _embedder_load_error = inner
                     query_embedder = None
@@ -808,6 +814,14 @@ def get_query_embedder():
             _embedder_load_error = e
             query_embedder = None
             print(f"⚠️ Query embedder not loaded: {e}")
+
+        # Covers every success path above. Both sides now exist, so this is the
+        # first moment the dimension invariant can actually be checked.
+        if query_embedder is not None:
+            try:
+                _verify_embedding_dimensions()
+            except Exception as _ve:
+                logger.warning("Dimension verification skipped: %s", _ve)
 
         return query_embedder
     finally:
@@ -834,54 +848,86 @@ try:
     print(f"✅ ChromaDB connected to {CHROMA_HOST}:{CHROMA_PORT}")
     print(f"✅ Collection '{CHROMA_COLLECTION}': {doc_count} documents")
 
-    # ---- startup invariant: embedder dimension == collection dimension ----------
-    # An embedding is only comparable to one made by the same model. Only
-    # faithh_knowledge_base_v2 is 768-dim; the other collections are 384. Getting
-    # this wrong does not crash — retrieval silently returns nothing useful and
-    # best_distance reads exactly 1.0 on every query. That has cost real debugging
-    # time more than once, so assert it out loud at boot.
-    # See docs/architecture/EMBEDDINGS.md
-    _q_dim = _c_dim = None
-    try:
-        if query_embedder is not None:
-            _q_dim = query_embedder.get_sentence_embedding_dimension()
-    except Exception:
-        pass
+    # The dimension invariant is checked by _verify_embedding_dimensions(), called
+    # from the lazy embedder loader. It cannot run here: query_embedder is loaded on
+    # first query, not at import, so at this point it is always None.
+    _collection_dim_at_boot = None
     try:
         _pk = collection.peek(limit=1)
         _pe = _pk.get("embeddings")
         if _pe is not None and len(_pe) > 0 and _pe[0] is not None:
-            _c_dim = len(_pe[0])
+            _collection_dim_at_boot = len(_pe[0])
+            print(f"✅ Collection vector width: {_collection_dim_at_boot}-dim "
+                  f"(verified against the embedder on first query)")
     except Exception:
         pass
-
-    if _q_dim and _c_dim and _q_dim != _c_dim:
-        _bar = "=" * 72
-        print(_bar)
-        print("🚨 EMBEDDING DIMENSION MISMATCH — retrieval will not work")
-        print(f"   query embedder : {EMBEDDING_MODEL_ID} -> {_q_dim}-dim")
-        print(f"   collection     : {CHROMA_COLLECTION} -> {_c_dim}-dim")
-        print("   Every query will report best_distance = 1.0 and answers will be ungrounded.")
-        print("   Fix: point CHROMA_COLLECTION at a matching collection, or re-index with")
-        print("        scripts/ingest/reindex_collection.py  (see docs/architecture/EMBEDDINGS.md)")
-        print(_bar)
-        logger.error(
-            "Embedding dimension mismatch: embedder %s is %s-dim, collection %s is %s-dim",
-            EMBEDDING_MODEL_ID, _q_dim, CHROMA_COLLECTION, _c_dim,
-        )
-    elif _q_dim and _c_dim:
-        print(f"✅ Embedding dimensions agree: {_q_dim}-dim "
-              f"({EMBEDDING_MODEL_ID} ↔ {CHROMA_COLLECTION})")
-    else:
-        # Empty collection or an embedder that failed to load — cannot verify.
-        print(f"⚠️ Could not verify embedding dimensions "
-              f"(embedder={_q_dim}, collection={_c_dim}) — retrieval unverified")
 except Exception as e:
     CHROMA_CONNECTED = False
     collection = None
     alife_collection = None
     chroma_client = None
     print(f"⚠️ ChromaDB not connected: {e}")
+
+
+_dim_check_done = False
+
+
+def _verify_embedding_dimensions() -> None:
+    """Assert that the query embedder and the live collection agree on width.
+
+    An embedding is only comparable to one made by the same model. Only
+    faithh_knowledge_base_v2 is 768-dim; every other collection here is 384.
+    Getting this wrong does not crash — retrieval silently returns nothing useful
+    and best_distance reads exactly 1.0 on every query, which has cost real
+    debugging time more than once. So say it out loud, once, as soon as both sides
+    exist. See docs/architecture/EMBEDDINGS.md.
+
+    Called from the lazy embedder loader rather than at import: query_embedder is
+    built on first query, so at import time there is nothing to compare.
+    """
+    global _dim_check_done
+    if _dim_check_done:
+        return
+
+    q_dim = c_dim = None
+    try:
+        if query_embedder is not None:
+            q_dim = query_embedder.get_sentence_embedding_dimension()
+    except Exception:
+        pass
+    try:
+        if collection is not None:
+            pk = collection.peek(limit=1)
+            pe = pk.get("embeddings")
+            if pe is not None and len(pe) > 0 and pe[0] is not None:
+                c_dim = len(pe[0])
+    except Exception:
+        pass
+
+    if q_dim and c_dim:
+        _dim_check_done = True
+        if q_dim != c_dim:
+            bar = "=" * 74
+            print(bar)
+            print("🚨 EMBEDDING DIMENSION MISMATCH — retrieval will not work")
+            print(f"   query embedder : {EMBEDDING_MODEL_ID} -> {q_dim}-dim")
+            print(f"   collection     : {CHROMA_COLLECTION} -> {c_dim}-dim")
+            print("   Every query will report best_distance = 1.0 and answers will be ungrounded.")
+            print("   Fix: point CHROMA_COLLECTION at a matching collection, or re-index with")
+            print("        scripts/ingest/reindex_collection.py")
+            print("   Reference: docs/architecture/EMBEDDINGS.md")
+            print(bar)
+            logger.error(
+                "Embedding dimension mismatch: embedder %s is %s-dim, collection %s is %s-dim",
+                EMBEDDING_MODEL_ID, q_dim, CHROMA_COLLECTION, c_dim,
+            )
+        else:
+            print(f"✅ Embedding dimensions agree: {q_dim}-dim "
+                  f"({EMBEDDING_MODEL_ID} ↔ {CHROMA_COLLECTION})")
+    else:
+        # Do not latch: an empty collection or a failed embedder may resolve later.
+        print(f"⚠️ Embedding dimensions unverified "
+              f"(embedder={q_dim}, collection={c_dim})")
 
 metrics_collection = None
 if CHROMA_CONNECTED and chroma_client is not None:
@@ -2135,6 +2181,17 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
     # Parallel to rag_results but never merged into it — see the RAG fallback below.
     rag_embeddings_for_coherence = None
 
+    # Greetings are not knowledge-base questions. Retrieval on "how are you" pulled
+    # unrelated infrastructure notes into the prompt, tripped the low-confidence
+    # hazard, and produced an answer about port 5557 to a social opener. The
+    # retrieval was working — there was simply nothing relevant, which the flat
+    # ML-topic spread already showed. See intent_detection.detect_query_intent
+    # (pattern 10) for the guards that keep real questions out of this branch.
+    if use_rag and intent and intent.get('is_social'):
+        use_rag = False
+        integrations_used.append('rag_skipped_social')
+        print("   💬 Social/greeting intent — skipping RAG retrieval")
+
     # PRE-DETECT PROGRAM ADVANCES (Hybrid: trigger phrases + semantic)
     # This ensures PA combinations can actually trigger by forcing required chips
     pa_chips_needed = get_pa_chips_for_query(query_text)
@@ -2938,7 +2995,13 @@ These rules override ALL other instructions. Violating them produces harmful mis
         _preflight_failed = False
         _best_distance = 0.0
         _rag_hit_count = 0
-        if use_rag:
+        # `use_rag` here is the *request* flag. build_integrated_context may have
+        # declined to retrieve anyway — a greeting sets rag_skipped_social — and in
+        # that case there is no confidence to assess. Without this guard the hook saw
+        # zero hits, defaulted best_distance to 1.0, tripped _preflight_failed, and
+        # injected "RAG CONFIDENCE LOW / DO NOT fabricate" into a hello.
+        _rag_deliberately_skipped = 'rag_skipped_social' in (integrations_used or [])
+        if use_rag and not _rag_deliberately_skipped:
             _rag_distances = []
             if isinstance(rag_results, dict):
                 _row = (rag_results.get("distances") or [[]])[0] or []
@@ -3117,7 +3180,12 @@ These rules override ALL other instructions. Violating them produces harmful mis
             response_data["rag_relevance"] = rag_relevance
 
             response_data["preflight_failed"] = _preflight_failed
-            response_data["best_distance"] = round(_best_distance, 4)
+            # null, not 0.0, when retrieval never ran. _best_distance initialises to
+            # 0.0, and 0.0 means "perfect match" — reporting it for a skipped lookup
+            # would be one more constant impersonating a measurement, which is the
+            # exact bug class that hid behind best_distance 1.0 and coherence 0.5.
+            _rag_ran = 'rag_search' in integrations_used or 'rag_search_fallback' in integrations_used
+            response_data["best_distance"] = round(_best_distance, 4) if _rag_ran else None
             response_data["rag_hits"] = _rag_hit_count
 
             if system_data_labels:

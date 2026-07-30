@@ -28,6 +28,7 @@ def detect_query_intent(query_text):
         'is_reasoning': False,
         'is_coding': False,
         'is_complex_query': False,
+        'is_social': False,
         'patterns_matched': []
     }
     
@@ -232,5 +233,61 @@ def detect_query_intent(query_text):
     if len(query_text) > 100 and (' and ' in query_lower or ' or ' in query_lower):
         intent['is_complex_query'] = True
         intent['patterns_matched'].append("complex: long multi-part query")
-    
+
+    # Pattern 10: Social / smalltalk — a greeting is not a knowledge-base question.
+    #
+    # "Hello there, it has been a while. How are you" used to fire RAG, pull in
+    # unrelated infrastructure notes, and get answered with speculation about port
+    # 5557. The retrieval was working; it simply had nothing relevant, which the
+    # flat ML-topic spread (top match 55%) already showed.
+    #
+    # Two guards keep this from suppressing real questions:
+    #   - nothing substantive may have matched, so "Hi, what is Constella?" still
+    #     retrieves (is_constella_query wins)
+    #   - the message must be short, so a greeting prefixed to a long technical
+    #     question does not silence retrieval for the whole thing
+    _substantive = any(intent[k] for k in (
+        'is_self_query', 'is_why_question', 'is_next_action_query',
+        'is_project_query', 'is_constella_query', 'is_business_query',
+        'is_recent_changes_query', 'is_alife_query', 'is_coding',
+        'is_reasoning', 'needs_orientation', 'is_complex_query',
+    ))
+    social_patterns = [
+        r'^\s*(hi|hey|hello|yo|sup|howdy|greetings)\b',
+        r'\bhow are you\b',
+        r"\bhow'?s it going\b",
+        r'\bhow have you been\b',
+        r'\bgood (morning|afternoon|evening|night)\b',
+        r"\bit'?s been a while\b",
+        r'\bit has been a while\b',
+        r'\blong time no see\b',
+        r'\bnice to (meet|see) you\b',
+        r'^\s*(thanks|thank you|thx|ty)\b',
+        r'^\s*(bye|goodbye|see ya|later|goodnight)\b',
+    ]
+    # Filler that carries no retrievable content once the greeting is removed.
+    _social_filler = {
+        'there', 'again', 'friend', 'buddy', 'today', 'tonight', 'much', 'well',
+        'doing', 'you', 'your', 'i', 'am', 'is', 'it', 'a', 'the', 'and', 'so',
+        'just', 'ok', 'okay', 'lol', 'haha', 'my', 'me', 'to', 'been', 'of',
+    }
+    if not _substantive and len(query_lower.split()) <= 14:
+        matched = None
+        for pattern in social_patterns:
+            if re.search(pattern, query_lower):
+                matched = pattern
+                break
+        if matched:
+            # Strip every social phrase and see what is left. A word-count cap alone
+            # is not enough: "hello, why did the backend fail on port 5557?" is short
+            # and starts with a greeting, but the remainder is a real question.
+            residual = query_lower
+            for pattern in social_patterns:
+                residual = re.sub(pattern, ' ', residual)
+            residual = re.sub(r'[^a-z0-9\s]', ' ', residual)
+            content = [w for w in residual.split() if w not in _social_filler]
+            if len(content) <= 2:
+                intent['is_social'] = True
+                intent['patterns_matched'].append(f"social: {matched}")
+
     return intent
