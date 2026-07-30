@@ -23,7 +23,16 @@ except ImportError:
 # Configuration
 CHROMA_HOST = os.environ.get("CHROMA_HOST", "localhost")
 CHROMA_PORT = int(os.environ.get("CHROMA_PORT", "8000"))
-EMBED_MODEL = os.environ.get("FAITHH_EMBED_MODEL", "BAAI/bge-base-en-v1.5")
+# Accept both spellings. The backend reads FAITHH_EMBEDDER_MODEL while this module
+# read FAITHH_EMBED_MODEL, so setting either one alone left the two halves of the
+# system on different embedders — and a query embedder that disagrees with the
+# ingest embedder is exactly the dimension mismatch that yields best_distance 1.0.
+# FAITHH_EMBEDDER_MODEL is canonical; FAITHH_EMBED_MODEL is kept for compatibility.
+EMBED_MODEL = (
+    os.environ.get("FAITHH_EMBEDDER_MODEL")
+    or os.environ.get("FAITHH_EMBED_MODEL")
+    or "BAAI/bge-base-en-v1.5"
+)
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 50
 

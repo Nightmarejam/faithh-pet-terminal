@@ -782,7 +782,15 @@ def get_query_embedder():
             if EMBEDDER_LOCAL_ONLY and not EMBEDDER_ALLOW_DOWNLOAD:
                 kwargs["local_files_only"] = True
             query_embedder = _SentenceTransformer(EMBEDDING_MODEL_ID, **kwargs)
-            print("✅ Query embedder loaded (BAAI/bge-base-en-v1.5, 384-dim)")
+            # Report the real dimension, not a literal. This line used to hardcode
+            # "384-dim" for a 768-dim model, which is actively misleading when
+            # debugging the one failure this system keeps producing: a dimension
+            # mismatch between the query embedder and the target collection.
+            try:
+                _dim = query_embedder.get_sentence_embedding_dimension()
+            except Exception:
+                _dim = "unknown"
+            print(f"✅ Query embedder loaded ({EMBEDDING_MODEL_ID}, {_dim}-dim)")
         except TypeError as e:
             _embedder_load_error = e
             if EMBEDDER_ALLOW_DOWNLOAD:

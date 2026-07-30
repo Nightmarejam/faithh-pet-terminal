@@ -101,6 +101,35 @@ about it. It also *fixes* the ALife blend rather than working around it: a 768-d
 Effect: Chroma drops from 473k to ~135k documents, and the one path that
 currently throws starts working.
 
+**Export done 2026-07-29** — `scripts/alife/export_to_sqlite.py`, non-destructive:
+
+```
+wrote 339,900 rows to data/alife_lineage.sqlite  (270 MB)
+verify: sqlite=339,900  chroma=339,900  -> MATCH
+```
+
+Core filter fields (`event_type`, `experiment`, `tick`, `generation`, `agent_id`,
+`flagged`, `fitness`, `resources`, `noise_amp`) are indexed columns; the rest of
+each record is kept verbatim in a JSON column, queryable with `json_extract()`.
+The metadata is heterogeneous — agent events carry genome/energy fields,
+population snapshots carry aggregates, only 1.8% carry `flag_reason` — so a wide
+table would have been mostly NULL.
+
+The queries this unlocks are the ones that were always the real questions:
+
+```
+('generation_zero',    0, 3.6425,  500)     -- experiment, generation,
+('band2_cooperation',  1, 1.4699,  900)     -- mean fitness, n
+('generation_one',     1, 3.9586,  500)
+('band2_cooperation',  4, 1.0707, 9000)
+```
+
+That is `GROUP BY experiment, generation` over 339,900 rows in milliseconds — and
+it is not expressible as a similarity search at all. **The Chroma copy is now
+redundant** and can be dropped once you are satisfied with the SQLite file; the
+1,348 snapshots/flags should be re-embedded at 768-dim first if you want FAITHH to
+discuss the experiments.
+
 ### 3. Decide on `faithh_knowledge_base` (legacy, 384)
 
 Previously established as ~86% covered by the v2 ingests, with the ~34 remaining
