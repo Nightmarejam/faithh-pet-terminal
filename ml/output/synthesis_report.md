@@ -1,46 +1,46 @@
 # Chip Synthesis Report
-**Generated:** 2026-05-12 04:06:55  
-**Pipeline Duration:** 12252.8s  
-**Documents Processed:** 56,066  
-**Clustered:** 38,717 (69.1%)  
-**Outliers:** 17,349 (30.9%)  
-**Topics Discovered:** 660  
+**Generated:** 2026-07-30 13:00:27  
+**Pipeline Duration:** 582.9s  
+**Documents Processed:** 63,738  
+**Clustered:** 48,618 (76.3%)  
+**Outliers:** 15,120 (23.7%)  
+**Topics Discovered:** 971  
 
 ## Discovered Chips
 
 | Rank | Chip Name | Docs | Top Keywords |
 |------|-----------|------|-------------|
-| 1 | Pi Hole / Pi / Hole | 976 | pi hole, pi, hole, pihole, dns |
-| 2 | Messages En / Messages En Json / Messages Messages En | 691 | messages_en, messages_en json, messages messages_en, json handling, 22 get_message_dict |
-| 3 | Land / 197 / Ors | 494 | land, 197, ors, 215, land use |
-| 4 | 2024 / Llc / Kevin | 460 | 2024, llc, kevin, cpa, reverb |
-| 5 | 7860 / Taskname / Scheduledtask | 445 | 7860, taskname, scheduledtask, venv ps, port |
-| 6 | Stars / Scaffolding / Rating | 303 | stars, scaffolding, rating, awareness, journal |
-| 7 | Partnership / Partner / Schedule | 301 | partnership, partner, schedule, income, form |
-| 8 | Mastering / Xmax / Intercity | 300 | mastering, xmax, intercity, tegeler, eq |
-| 9 | Lets / Let / Yeah | 279 | lets, let, yeah, sounds, sounds good |
-| 10 | Blank Lines / Blanks / Headings | 277 | blank lines, blanks, headings, expected actual, blank |
-| 11 | Inference / Compose / Gpus | 276 | inference, compose, gpus, container, docker compose |
-| 12 | Llama / Llama Cpp Binaries / Llama Cpp | 266 | llama, llama_cpp_binaries, llama cpp, cpp, llama_cpp |
-| 13 | Unifi To Pihole / Docker Scripts / Unifi To Pihole Py | 261 | unifi_to_pihole, docker scripts, unifi_to_pihole py, scripts unifi_to_pihole, volume1 docker |
-| 14 | Pulse / Avatar / Chip | 256 | pulse, avatar, chip, chips, prioritizer |
-| 15 | Ai Toolkit / Jonathan Ai / Toolkit | 230 | ai toolkit, jonathan ai, toolkit, webui, generation webui |
-| 16 | Limited Liability / Liability Company / Liability | 228 | limited liability, liability company, liability, company, cooperative |
-| 17 | Windsurf / Handoff / Current Device | 212 | windsurf, handoff, current device, block supported, supported current |
-| 18 | Staticresource / Grid / Border | 206 | staticresource, grid, border, stackpanel, setter |
-| 19 | Isaidgoodday / Pihole / Isaidgoodday Volume1 | 206 | isaidgoodday, pihole, isaidgoodday volume1, nightmarejam isaidgoodday, docker pihole |
-| 20 | Royalty / Label / Artist | 199 | royalty, label, artist, publishing, distribution |
-| 21 | Chip / Chip Retrieval / Budget | 196 | chip, chip retrieval, budget, token, chips |
-| 22 | Llamacpp / Modelpath / Llama | 193 | llamacpp, modelpath, llama, llamacpp ps1, start fast |
-| 23 | Astris / Constellum / Civic | 186 | astris, constellum, civic, minting, decay |
-| 24 | Thunderbolt / Dock / Cable | 185 | thunderbolt, dock, cable, usb, owc |
-| 25 | Bankruptcy / Credit / Debt | 180 | bankruptcy, credit, debt, debts, loan |
-| 26 | Edc / Pbo / Ppt | 179 | edc, pbo, ppt, cpu, boost |
-| 27 | Mhz / Voltage / Dram | 175 | mhz, voltage, dram, 3466, fclk |
-| 28 | Merit / Bounty / Fund | 167 | merit, bounty, fund, bounties, contributors |
-| 29 | Use Production / 5557 / Venv Jonat | 159 | use production, 5557, venv jonat, jj1suhb ai, running http |
-| 30 | Pr / Gh / Merge | 153 | pr, gh, merge, gh pr, branch |
-| ... | *630 more topics* | | |
+| 1 | Pihole / Pihole Pihole / Pi Hole | 387 | pihole, pihole pihole, pi hole, pi, docker pihole |
+| 2 | Venv Ps / 7860 / Scheduledtask | 359 | venv ps, 7860, scheduledtask, taskname, userprofile documents |
+| 3 | Windsurf / Indexed Batch / Indexed | 302 | windsurf, indexed batch, indexed, batch, 252 |
+| 4 | Earth / Sun / Solar | 287 | earth, sun, solar, resonance, moon |
+| 5 | Unifi To Pihole / Docker Scripts / Unifi To Pihole Py | 268 | unifi_to_pihole, docker scripts, unifi_to_pihole py, scripts unifi_to_pihole, volume1 docker |
+| 6 | Cpa / Llc / Kevin | 265 | cpa, llc, kevin, 2024, tax |
+| 7 | Llama / Loader / Llama Cpp | 241 | llama, loader, llama cpp, cpp, llama_cpp_binaries |
+| 8 | Xaml / Faithh Desktop / Faithh Faithh | 222 | xaml, faithh desktop, faithh faithh, faithh src, src |
+| 9 | Stars / Opus / Journal | 215 | stars, opus, journal, rating, questions |
+| 10 | Voicemeeter / Obs / Audio | 214 | voicemeeter, obs, audio, elgato, streaming |
+| 11 | Faithh Professional Backend Fixed / Faithh Professional Backend Fixed Py / Faithh Backend Log | 212 | faithh_professional_backend_fixed, faithh_professional_backend_fixed py, faithh_backend log, 5557, faithh_backend |
+| 12 | Robocopy / Old Files / Destination | 200 | robocopy, old files, destination, backups old, old |
+| 13 | Inf / Driver / Drivercert | 197 | inf, driver, drivercert, nvidia, ven_10de |
+| 14 | Chip / Chips / Budget | 196 | chip, chips, budget, token, chip retrieval |
+| 15 | Tick / Shield / Population | 194 | tick, shield, population, ticks, agents |
+| 16 | Eden / Review V1 / Consensus | 189 | eden, review v1, consensus, v1 improve, improve |
+| 17 | Scheduler / Dockerfile / Ingest | 187 | scheduler, dockerfile, ingest, qdrant, ingest_chats |
+| 18 | False / Maxtokens / Gpt Codex | 183 | false, maxtokens, gpt codex, gpt, isinternal |
+| 19 | Thunderbolt / Dock / Cable | 178 | thunderbolt, dock, cable, usb, owc |
+| 20 | Headings / Blanks / Blank Lines | 177 | headings, blanks, blank lines, expected actual, blank |
+| 21 | Groq / Provider / Local Webui | 160 | groq, provider, local_webui, 7001, webui |
+| 22 | Faithh Git / Faithh Core / Push | 157 | faithh git, faithh core, push, git, documents faithh |
+| 23 | Ai Toolkit / Jonathan Ai / Toolkit | 157 | ai toolkit, jonathan ai, toolkit, jonathan, generation webui |
+| 24 | Merit / Wellness / Bounty | 156 | merit, wellness, bounty, contributors, contribution |
+| 25 | Mhz / Voltage / Dram | 155 | mhz, voltage, dram, 3466, 3200 |
+| 26 | Conversations / Grok / Conversations Json | 144 | conversations, grok, conversations json, chatgpt, conv |
+| 27 | Cultural / Transmission / Cultural Transmission | 142 | cultural, transmission, cultural transmission, analytics, docs implementation_summary |
+| 28 | Backend / Chromadb / Rag | 141 | backend, chromadb, rag, faithh_professional_backend_fixed, faithh backend |
+| 29 | Sensorbridge / Sensorbridge Sensorbridge / Wmi | 140 | sensorbridge, sensorbridge sensorbridge, wmi, ps sensorbridge, sensor |
+| 30 | Archive / Tar / Exclude | 138 | archive, tar, exclude, faithh archive_old_20251002_202030, archive_old_20251002_202030 |
+| ... | *941 more topics* | | |
 
 ## Integration Notes
 
