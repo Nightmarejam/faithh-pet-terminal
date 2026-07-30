@@ -7,7 +7,8 @@ with computed centroids for semantic routing.
 
 Steps:
   1. Load micro-chips from chips.json
-  2. Pull embeddings from ChromaDB for centroid computation
+  2. Embed `description + keywords` per macro-chip (NOT document embeddings —
+     ChromaDB is not consulted; centroids are keyword-defined)
   3. Group micro-topics into macro-chips via keyword/category rules
   4. Compute centroid embedding per macro-chip
   5. Output consolidated_chips.json for FAITHH backend
@@ -31,7 +32,6 @@ from pathlib import Path
 os.environ["CUDA_VISIBLE_DEVICES"] = ""  # Force CPU-only
 
 import numpy as np
-import chromadb
 from sentence_transformers import SentenceTransformer
 
 # ============================================================
@@ -108,6 +108,43 @@ MACRO_CHIPS = {
             "chromadb", "collection", "embedding", "indexing", "conversations",
             "exports", "grok", "claude", "chunks", "reindex", "jsonl",
             "inbox", "create_time", "chatgpt", "chat gpt", "get_message_dict", "schema org", "json schema", "content type", "type application",
+        ],
+    },
+    "retrieval_embeddings": {
+        "label": "Retrieval & Embeddings",
+        "description": (
+            "Embedding models and dimensions, vector search quality, chunking, "
+            "reranking, retrieval provenance and grounding"
+        ),
+        "match_keywords": [
+            "embedding", "embeddings", "bge", "768", "384", "dimension", "dimensions",
+            "best_distance", "distance", "cosine", "rerank", "reranking", "chunk",
+            "chunking", "retrieval", "grounding", "provenance", "similarity",
+            "sentence transformer", "vector", "nearest neighbour", "recall",
+        ],
+    },
+    "system_docs": {
+        "label": "Architecture & Documentation",
+        "description": (
+            "Architecture decision records, design docs, runbooks, documentation "
+            "currency and the system review process"
+        ),
+        "match_keywords": [
+            "runbook", "adr", "decision record", "architecture", "design doc",
+            "documentation", "audit", "stale", "currency", "observer",
+            "system review", "invariant", "phase", "handoff",
+        ],
+    },
+    "inference_serving": {
+        "label": "Inference & Model Serving",
+        "description": (
+            "vLLM, model serving and routing, provider selection, GPU allocation "
+            "and the power constraint that moved inference off the Gen8"
+        ),
+        "match_keywords": [
+            "vllm", "inference", "serving", "awq", "quantization", "provider",
+            "routing", "route", "groq", "gemini", "qwen", "model_config",
+            "3090", "gpu", "psu", "power fault", "transient", "wsl",
         ],
     },
     "coding_dotnet": {
@@ -234,6 +271,13 @@ def compute_centroids(assignments, embedding_model):
     """Compute centroid embedding for each macro-chip using representative keywords."""
     centroids = {}
 
+    # A macro-chip with no assigned micro-topic is still a real routing target. The
+    # documentation chips below match nothing in chips.json, because that file predates
+    # the documentation corpus — but their centroids are built the same way every other
+    # centroid is (description + keywords), so they route correctly regardless.
+    for macro_id in MACRO_CHIPS:
+        assignments.setdefault(macro_id, [])
+
     for macro_id, micro_chips in assignments.items():
         # Collect all unique keywords from constituent micro-chips
         all_keywords = []
@@ -242,7 +286,8 @@ def compute_centroids(assignments, embedding_model):
 
         # Also include the macro-chip description
         macro_def = MACRO_CHIPS[macro_id]
-        text_for_centroid = macro_def["description"] + ". " + ", ".join(set(all_keywords))
+        seed_keywords = set(all_keywords) or set(macro_def.get("match_keywords", []))
+        text_for_centroid = macro_def["description"] + ". " + ", ".join(sorted(seed_keywords))
 
         # Embed the combined text
         embedding = embedding_model.encode(text_for_centroid, normalize_embeddings=True)
