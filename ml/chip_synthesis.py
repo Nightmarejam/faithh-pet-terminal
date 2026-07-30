@@ -57,8 +57,18 @@ CHIPS_FILE = OUTPUT_DIR / "chips.json"
 REPORT_FILE = OUTPUT_DIR / "synthesis_report.md"
 
 # Model config
-EMBEDDING_MODEL = "BAAI/bge-base-en-v1.5"  # Match ChromaDB collection (768-dim)
-DEVICE = "cuda"
+EMBEDDING_MODEL = os.environ.get("FAITHH_EMBEDDER_MODEL", "BAAI/bge-base-en-v1.5")
+# Must match the collection's width (768). Read from the environment so the ingest
+# venv and this script cannot drift onto different embedders.
+
+# Bare "cuda" means cuda:0, and torch enumerates the RTX 3090 as cuda:0 — which is
+# where vLLM lives at 0.90 memory utilisation, leaving under 1 GB free. Embedding
+# 63k documents there would OOM, and taking vLLM down to build chips is the wrong
+# trade. cuda:1 is the idle GTX 1080 Ti with 11 GB.
+#
+# Do NOT run this on the Gen8 at any device setting: sustained GPU compute causes
+# power loss there (docs/architecture/GEN8_POWER_CONSTRAINT.md).
+DEVICE = os.environ.get("FAITHH_EMBED_DEVICE", "cuda:1")
 
 
 def pull_chunks(host, port, collection_name, batch_size=5000):
