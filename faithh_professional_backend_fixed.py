@@ -1122,6 +1122,42 @@ RAG_TEMPORAL_WEIGHT = float(os.environ.get("RAG_TEMPORAL_WEIGHT", "0.15"))
 RAG_TEMPORAL_HALFLIFE_DAYS = float(os.environ.get("RAG_TEMPORAL_HALFLIFE_DAYS", "30"))
 RAG_SOURCE_BOOST = float(os.environ.get("RAG_SOURCE_BOOST", "0.20"))
 
+# Provenance weights, applied in _apply_reranking. Counts are from the live
+# faithh_knowledge_base_v2 as of 2026-07-30, so the table reflects what is actually
+# in the store rather than what was once assumed.
+#
+# document_type is checked first because it is the more specific signal; `source`
+# catches the exports that carry no document_type at all.
+_DOC_TYPE_WEIGHT = {
+    "architecture_doc": RAG_SOURCE_BOOST,   # 5,309 — curated ADRs and design docs
+    "session_handoff": 0.05,                # 1,920 — written up, but narrative
+    "chat_export": -0.20,                   # 31,923 — raw transcripts
+    # Model output written back by the auto-indexer. Penalised at least as hard as a
+    # transcript: a transcript is at least something a human said.
+    "live_conversation": -0.25,
+    # NOT boosted: "decision" is assigned by scripts/auto_metadata_tagger, not by a
+    # human, and in practice it lands on FAITHH's own answers. Boosting it promoted
+    # the model's wrong VRAM explanation above GEN8_POWER_CONSTRAINT.md. Curated
+    # decisions live in docs/ and carry document_type=architecture_doc.
+    "decision": -0.25,
+}
+_SOURCE_WEIGHT = {
+    "repo_docs": RAG_SOURCE_BOOST,          # 5,309 — same corpus as architecture_doc
+    "session_doc": 0.05,                    # 602
+    # These exports carry no document_type, so they previously escaped the
+    # transcript penalty entirely and competed with docs on raw similarity.
+    "claude_export": -0.20,                 # 3,199
+    "chatgpt_export": -0.20,                # 2,558
+    "cursor": -0.20,                        # 1,104
+    "claude": -0.20,                        # 9,530
+    "chatgpt": -0.20,                       # 22,393
+    # Numeric panel data (country-year democracy indicators). Templated rows embed
+    # into a tight cluster and match loosely against almost any governance question,
+    # so they crowd out prose. Belongs in SQLite — see VECTOR_STORE_REVIEW.md.
+    "vdem_v16": -0.10,                      # 18,612
+}
+
+
 def _apply_reranking(results, n_results):
     # Logic for Humans: Re-order Chroma hits so newer and “project doc” sources float up and noisy live-chat chunks sink, before we trim to top N.
     """Rerank RAG results by blending cosine similarity with recency and source-type boosts.
@@ -1161,17 +1197,36 @@ def _apply_reranking(results, n_results):
                     pass
             recency = float(np.exp(-decay * age_days))
 
-        # Source-type boost: project_docs are authoritative, conversation chunks are noisy
+        # ---- provenance weighting -------------------------------------------
+        # Curated docs are where decisions were *recorded*; chat exports are where
+        # the thinking happened. On pure similarity the transcripts win, because a
+        # rambling conversation about GPUs looks more "about GPUs" than the one
+        # paragraph that states the decision. Observed directly: asking why
+        # inference moved to the 3090 retrieved GEN8_POWER_CONSTRAINT.md at rank 2
+        # and answered from a stale chat log at rank 1, citing the wrong reason.
+        #
+        # Note the pre-existing `category` checks below were effectively dead:
+        # `category` is unset on 63,684 of 63,709 documents, so the project_docs
+        # boost never fired for anything.
         source_boost = 0.0
-        category = (meta or {}).get("category", "")
-        source = (meta or {}).get("source", "")
-        document_type = (meta or {}).get("document_type", "")
-        if category == "project_docs" or source.startswith("project_docs:"):
+        category = (meta or {}).get("category", "") or ""
+        source = (meta or {}).get("source", "") or ""
+        document_type = (meta or {}).get("document_type", "") or ""
+
+        # Provenance is checked before anything else, and on the most tamper-proof
+        # signals available: the record's own `type` and its id prefix. Records written
+        # before 2026-07-30 had `category` overwritten to "general" by the auto-tagger,
+        # so category alone cannot be trusted to identify model output.
+        if (meta or {}).get("type") == "live_conversation" or str(doc_id).startswith("live_conv_"):
+            source_boost = -0.25
+        elif category == "project_docs" or source.startswith("project_docs:"):
             source_boost = RAG_SOURCE_BOOST
         elif category == "live_chat":
-            source_boost = -0.15  # Penalize live_chat to prevent conversation noise
-        elif document_type == "chat_export":
-            source_boost = -0.20  # Penalize chat_export more aggressively
+            source_boost = -0.15
+        elif document_type in _DOC_TYPE_WEIGHT:
+            source_boost = _DOC_TYPE_WEIGHT[document_type]
+        elif source in _SOURCE_WEIGHT:
+            source_boost = _SOURCE_WEIGHT[source]
 
         blended = (similarity * (1 - RAG_TEMPORAL_WEIGHT) +
                    recency * RAG_TEMPORAL_WEIGHT +
@@ -1561,6 +1616,21 @@ def index_conversation_background(user_msg, assistant_msg, metadata):
             
             # Merge auto-generated metadata (auto-generated takes precedence)
             meta.update(auto_metadata)
+
+            # ...except for provenance, which is a fact and not an inference.
+            #
+            # The tagger classifies *topic*, and it labels turns like "why did we X"
+            # as document_type=decision. Letting that overwrite category=live_chat
+            # laundered FAITHH's own output into the knowledge base as a curated
+            # decision: a wrong answer got indexed, retrieved as authoritative on the
+            # next identical question, and reinforced. Nine such records existed by
+            # 2026-07-30, several of them the same wrong answer about why inference
+            # moved to the 3090 — outranking the doc that contradicts them.
+            #
+            # This is model output. It must stay labelled as model output.
+            meta['type'] = 'live_conversation'
+            meta['category'] = 'live_chat'
+            meta['document_type'] = 'live_conversation'
             meta['auto_tagged'] = True
             meta['indexed_at'] = timestamp.isoformat()
             
