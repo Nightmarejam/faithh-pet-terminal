@@ -509,7 +509,12 @@ CHIP_EXECUTOR = ThreadPoolExecutor(max_workers=5, thread_name_prefix="chip_")
 
 # Token budget configuration (~5,400 total for chips with 8k context)
 CHIP_TOKEN_BUDGETS = {
-    'rag_search': 1800,      # Primary knowledge
+    # Raised from 1800 for small-to-big retrieval: one reassembled document (~7,000
+    # chars ≈ 1,750 tokens) plus two ordinary 1,000-char hits no longer fits in 1800,
+    # and truncate_to_budget would clip the tail off the expanded document — exactly
+    # the section that usually answers the question. vLLM serves 16,384 context, so
+    # the extra ~800 tokens is affordable.
+    'rag_search': 2600,      # Primary knowledge
     'scaffolding': 600,      # Project context
     'decisions': 675,        # Decision history
     'project_state': 450,    # Structured state
@@ -1121,6 +1126,8 @@ def activate_ml_chips(query_text, top_k=5, threshold=0.15):
 RAG_TEMPORAL_WEIGHT = float(os.environ.get("RAG_TEMPORAL_WEIGHT", "0.15"))
 RAG_TEMPORAL_HALFLIFE_DAYS = float(os.environ.get("RAG_TEMPORAL_HALFLIFE_DAYS", "30"))
 RAG_SOURCE_BOOST = float(os.environ.get("RAG_SOURCE_BOOST", "0.20"))
+# Never ground an answer on FAITHH's own previous answers. See _apply_reranking.
+RAG_EXCLUDE_MODEL_OUTPUT = os.environ.get("RAG_EXCLUDE_MODEL_OUTPUT", "1").strip().lower() not in ("0", "false", "no")
 
 # Provenance weights, applied in _apply_reranking. Counts are from the live
 # faithh_knowledge_base_v2 as of 2026-07-30, so the table reflects what is actually
@@ -1176,6 +1183,34 @@ def _apply_reranking(results, n_results):
     
     # Ensure all metas are dicts, never None
     metas = [meta if meta is not None else {} for meta in metas]
+
+    # Drop FAITHH's own past answers before scoring. Ranking them low was not enough:
+    # with GEN8_POWER_CONSTRAINT.md at rank 1 and two live_conversation records at 2
+    # and 3, the model still answered from the pair that agreed with each other. A
+    # wrong answer that has been indexed twice outvotes the document that corrects it.
+    #
+    # These are model output, not evidence. Conversation continuity is served by the
+    # dedicated history chip, which does not need them to be retrievable as facts.
+    # Set RAG_EXCLUDE_MODEL_OUTPUT=0 to disable.
+    if RAG_EXCLUDE_MODEL_OUTPUT:
+        keep = [
+            i for i, (m, _id) in enumerate(zip(metas, ids))
+            if (m or {}).get("type") != "live_conversation"
+            and not str(_id).startswith("live_conv_")
+        ]
+        if len(keep) < len(docs):
+            dropped = len(docs) - len(keep)
+            docs = [docs[i] for i in keep]
+            metas = [metas[i] for i in keep]
+            distances = [distances[i] for i in keep]
+            ids = [ids[i] for i in keep]
+            print(f"   🚫 Dropped {dropped} model-output hit(s) from grounding context")
+        if not docs:
+            results["documents"] = [[]]
+            results["metadatas"] = [[]]
+            results["distances"] = [[]]
+            results["ids"] = [[]]
+            return results
 
     now = datetime.now()
     decay = 0.693 / max(RAG_TEMPORAL_HALFLIFE_DAYS, 1)  # ln(2) / half-life
@@ -1247,6 +1282,95 @@ def _apply_reranking(results, n_results):
     return results
 
 
+# Small-to-big retrieval. Chunks are the right unit to *match* on — small and
+# specific — but the wrong unit to *reason* from. GEN8_POWER_CONSTRAINT.md is 7
+# chunks; the query "why did we move inference to the 3090" matched its title chunk,
+# so the model received the heading and never saw chunk 1, which is the one that says
+# "It is electrical, not thermal, and not VRAM". It then answered from neighbouring
+# chat exports and got it wrong while citing the right document.
+#
+# So: match small, return big. When a curated document wins a top slot, reassemble it
+# from its sibling chunks in order and hand the model the whole argument.
+RAG_EXPAND_DOCS = os.environ.get("RAG_EXPAND_DOCS", "1").strip().lower() not in ("0", "false", "no")
+RAG_EXPAND_MAX_DOCS = int(os.environ.get("RAG_EXPAND_MAX_DOCS", "2"))
+# ~1,750 tokens, sized to fit inside CHIP_TOKEN_BUDGETS['rag_search'] alongside two
+# ordinary hits. Raise both together or truncate_to_budget will clip the tail.
+RAG_EXPAND_MAX_CHARS = int(os.environ.get("RAG_EXPAND_MAX_CHARS", "7000"))
+
+
+def _expand_document_hits(results):
+    """Replace top curated-doc chunks with the full document, assembled in order."""
+    if not RAG_EXPAND_DOCS or not results or not results.get("documents"):
+        return results
+    docs = results["documents"][0]
+    if not docs:
+        return results
+    metas = results["metadatas"][0] if results.get("metadatas") else [{}] * len(docs)
+    dists = results["distances"][0] if results.get("distances") else [0.5] * len(docs)
+    ids = results["ids"][0] if results.get("ids") else [""] * len(docs)
+
+    expanded_paths = set()
+    out_docs, out_metas, out_dists, out_ids = [], [], [], []
+
+    for doc, meta, dist, _id in zip(docs, metas, dists, ids):
+        meta = meta or {}
+        path = meta.get("path")
+        is_curated = meta.get("document_type") == "architecture_doc" and path
+        if not is_curated or path in expanded_paths or len(expanded_paths) >= RAG_EXPAND_MAX_DOCS:
+            # Not curated, already assembled, or past the budget — pass through as-is.
+            if path and path in expanded_paths:
+                continue  # sibling chunk of a document already included in full
+            out_docs.append(doc)
+            out_metas.append(meta)
+            out_dists.append(dist)
+            out_ids.append(_id)
+            continue
+        try:
+            sib = collection.get(
+                where={"path": path}, limit=200, include=["documents", "metadatas"]
+            )
+            pairs = []
+            for sd, sm in zip(sib.get("documents") or [], sib.get("metadatas") or []):
+                idx = (sm or {}).get("chunk_index")
+                pairs.append((idx if isinstance(idx, int) else 10**6, sd or ""))
+            if not pairs:
+                raise ValueError("no sibling chunks")
+            pairs.sort(key=lambda p: p[0])
+
+            # Each chunk repeats a "# <path>" header from the indexer; keep the first.
+            body_parts, total = [], 0
+            for n, (_, text) in enumerate(pairs):
+                t = text if n == 0 else re.sub(r"^#\s+\S+\.md\s*\n+", "", text)
+                if total + len(t) > RAG_EXPAND_MAX_CHARS:
+                    body_parts.append(f"\n\n[... {len(pairs) - n} further section(s) omitted]")
+                    break
+                body_parts.append(t)
+                total += len(t)
+            full = "\n\n".join(body_parts)
+
+            out_docs.append(full)
+            m2 = dict(meta)
+            m2["expanded_from_chunks"] = len(pairs)
+            m2["chunk_index"] = None
+            out_metas.append(m2)
+            out_dists.append(dist)          # keep the best matching chunk's distance
+            out_ids.append(f"doc::{path}")
+            expanded_paths.add(path)
+            print(f"   📄 Expanded {path} -> {len(pairs)} chunks, {len(full)} chars")
+        except Exception as e:
+            print(f"   ⚠️ Doc expansion failed for {path}: {e}")
+            out_docs.append(doc)
+            out_metas.append(meta)
+            out_dists.append(dist)
+            out_ids.append(_id)
+
+    results["documents"] = [out_docs]
+    results["metadatas"] = [out_metas]
+    results["distances"] = [out_dists]
+    results["ids"] = [out_ids]
+    return results
+
+
 def query_collection(query_text, n_results=5, where=None):
     # Logic for Humans: Run the main knowledge-base Chroma query — embed the question, pull from “project docs” plus the full collection, merge, rerank, return snippets for the model.
     """Query collection with manual embedding, two-tier retrieval, and reranking.
@@ -1271,10 +1395,15 @@ def query_collection(query_text, n_results=5, where=None):
         # Tier 1: Query project_docs specifically (authoritative sources)
         # If a where-filter is provided, constrain tier-1 to that same scope
         # so project_docs boosting does not leak unrelated domains.
+        # Tier 1 filtered on category="project_docs", which is set on ZERO of the
+        # 63,709 documents — so the authoritative tier has never returned anything and
+        # every query has effectively been single-tier broad recall. The field that
+        # actually marks curated documentation is document_type="architecture_doc"
+        # (5,309 chunks), written by scripts/ingest/index_docs.py.
         project_docs_results = None
-        project_docs_where = {"category": "project_docs"}
+        project_docs_where = {"document_type": "architecture_doc"}
         if where:
-            project_docs_where = {"$and": [{"category": "project_docs"}, where]}
+            project_docs_where = {"$and": [{"document_type": "architecture_doc"}, where]}
         try:
             project_docs_results = collection.query(
                 query_embeddings=query_embedding,
@@ -1305,7 +1434,10 @@ def query_collection(query_text, n_results=5, where=None):
         # Merge tier 1 + tier 2 (deduplicate by ID)
         merged = _merge_results(project_docs_results, full_results)
 
-        return _apply_reranking(merged, n_results)
+        # Order matters: rank on chunks (precise), then expand the winners into whole
+        # documents. Expanding first would let one long document dominate scoring.
+        ranked = _apply_reranking(merged, n_results)
+        return _expand_document_hits(ranked)
     except Exception as e:
         print(f"⚠️ Query failed: {e}")
         return None
@@ -2189,8 +2321,13 @@ def retrieve_rag(query_text, intent, use_rag):
 
             for i, doc in enumerate(results['documents'][0][:3]):
                 doc_text = doc if isinstance(doc, str) else (str(doc) if doc is not None else "")
-                preview = (doc_text[:1000] + "...") if len(doc_text) > 1000 else doc_text
                 meta_i = metas0[i] if i < len(metas0) and metas0[i] else {}
+                # A document reassembled by _expand_document_hits must not be sliced
+                # back to 1000 chars — that would undo the expansion and re-create the
+                # exact failure it fixes (the model seeing a heading but not the
+                # paragraph that answers the question).
+                _limit = RAG_EXPAND_MAX_CHARS if (meta_i or {}).get("expanded_from_chunks") else 1000
+                preview = (doc_text[:_limit] + "...") if len(doc_text) > _limit else doc_text
                 rag_context += f"{i+1}. {_tier_tag(meta_i)} {preview}\n\n"
                 # Build full result object for coherence arbiter
                 try:
@@ -2390,7 +2527,12 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
                     print(f"   ✅ RAG fallback found {len(rag_results)} results")
                     rag_context = "\n[CTX:KNOWLEDGE BASE]\n"
                     for i, _hit in enumerate(rag_results[:3]):
-                        rag_context += f"{i+1}. {_hit['document'][:1000]}...\n\n"
+                        # Same expansion-aware limit as the chip path above.
+                        _lim = (RAG_EXPAND_MAX_CHARS
+                                if (_hit.get('metadata') or {}).get('expanded_from_chunks')
+                                else 1000)
+                        _body = _hit['document'][:_lim]
+                        rag_context += f"{i+1}. {_body}{'...' if len(_hit['document']) > _lim else ''}\n\n"
                     rag_context += "[CTX_END]\n"
                     context_parts.append(rag_context.strip())
             except Exception as e:
