@@ -45,6 +45,51 @@ unplanned power loss during a Chroma write is how stores get corrupted.
 UI was not consulted. The hard-power-loss signature is inferred from the abrupt log
 truncation, consistent with the two confirmed 2026-07-27 events.*
 
+## Measured: Plex transcoding is not the risk
+
+**2026-07-30**, `scripts/ops/gpu_load_sample.py`, 30 samples across one live transcode:
+
+| | idle | during transcode |
+|---|---:|---:|
+| encoder (NVENC) | 0% | **100% peak, 34% mean** |
+| decoder (NVDEC) | 0% | 20% peak |
+| **CUDA cores (sm)** | 0% | **16% peak, 5.2% mean** |
+| GPU memory | 565 MB | 1,206 MB |
+| SM clock | 210 MHz | 1,860 MHz (of 2,100) |
+| temperature | 43 °C | 62 °C |
+
+This confirms what the failure history already suggested: **every power-loss event on
+this host followed CUDA compute, never a transcode.** They are different silicon.
+Transcoding saturates the fixed-function NVENC block while the CUDA array stays
+near-idle at 5% mean; embedding does the opposite and drives the array toward the
+board's ceiling.
+
+Two details worth keeping:
+
+- The trace is **bursty** — rows alternate between 100% encoder and 0%. That is the
+  transcoder throttle buffer filling and pausing, which is the desirable shape for a
+  marginal PSU: short bursts with idle gaps rather than a sustained draw.
+- The 16% CUDA peak during transcode is **HDR tone mapping**, which runs as a shader.
+  It is the only CUDA component of a Plex transcode. Disabling it would remove that
+  load at the cost of washed-out HDR — not recommended, but it is the lever if one is
+  ever needed.
+
+Practical consequence: **limiting simultaneous transcodes is not a power mitigation on
+this host.** An earlier change set `TranscodeCountLimit=2` on that reasoning; the
+reasoning was wrong. The A1000 will exhaust encoder capacity long before transcoding
+becomes an electrical problem.
+
+### Power cap
+
+Applied 2026-07-30: `nvidia-smi -pm 1 && nvidia-smi -pl 35` — 35 W of a 50 W default,
+persisted by `infra/systemd/nvidia-powercap.service` because nvidia-smi settings reset
+on every boot (a manual cap disappears at exactly the moment it matters).
+
+The cap bounds *sustained* draw. The diagnosed failure is microsecond transients, which
+a power limit smooths by holding clocks lower rather than eliminating. It reduces risk;
+it does not fix the PSU. Note the A1000 reports no `power.draw` telemetry at all, even
+with persistence enabled — SM clock is the proxy.
+
 ## Consequences
 
 1. **Never run sustained GPU compute on the Gen8.** Embedding, fine-tuning, and
