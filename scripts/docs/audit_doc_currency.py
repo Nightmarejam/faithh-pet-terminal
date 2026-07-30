@@ -51,6 +51,8 @@ ALLOW: dict[str, set[str]] = {
     },
     "legacy-collection": {
         "AGENTS.md",
+        # living doc containing a dated sample run; the mention is the record, not a claim
+        "docs/architecture/ECOSYSTEM_METRICS.md",
         "docs/FAITHH_STACK_RUNBOOK.md",      # labels it "legacy" correctly
         "docs/ENVIRONMENT_SPEC.md",          # documents both, correctly
         "docs/architecture/ACTIVE_INDEXING_PIPELINE.md",
