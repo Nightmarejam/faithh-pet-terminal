@@ -65,12 +65,21 @@
 
 ### LLM Providers
 
+**Verified 2026-07-30.** Routing table lives in `configs/model_config.yaml`.
+
 | Provider | Model | Use Case | Status |
 |----------|-------|----------|--------|
-| **Ollama** | `qwen25-grounded:latest` | Default, grounded responses | ✅ Active |
-| **Ollama** | `deepseek-r1:32b` | Heavy reasoning, complex queries | ✅ Active |
+| **vLLM** | `qwen2.5-14b` (AWQ) | **Default local inference — RTX 3090** | ✅ Active |
 | **Groq** | `llama-3.3-70b-versatile` | Fast cloud responses | ✅ Available |
 | **Gemini** | `gemini-2.0-flash-exp` | Fallback, cost-efficient | ✅ Available |
+| **Ollama** | `qwen25-grounded-gen5-delta:latest` | Legacy local | ❌ Nothing serves :11434 |
+
+Inference does **not** run on the Gen8. Its PSU cannot supply the current transients
+a GPU draws under sustained compute, so it loses power outright — see
+[GEN8_POWER_CONSTRAINT.md](../architecture/GEN8_POWER_CONSTRAINT.md). vLLM runs under
+WSL2 on the workstation and the Gen8 consumes it over the tailnet. The models listed
+here must match `configs/model_config.yaml`; `qwen/qwen3-32b` was retired by Groq and
+404s.
 
 ### Not Available
 - Real-time web search (no live internet access from backend)
@@ -88,17 +97,31 @@
 | `decisions_log.json` | Root | Decision history with rationale | Per decision |
 | `scaffolding_state.json` | Root | Open loops, active tasks | Per session |
 | `config.yaml` | Root | System configuration, model settings | Rarely |
-| ChromaDB | Gen8:8000 | 38K+ indexed conversation chunks | Batch indexing |
-| ML Chips | `ml/output/chips.json` | 15 macro-chips for semantic routing | Synthesis runs |
-| `CONTEXT.md` | Root | Auto-generated project snapshot | Script-generated |
+| ChromaDB | Gen8:8000 | Indexed conversations + repo documentation | Batch indexing |
+| ML Chips | `ml/output/consolidated_chips.json` | 15 macro-chips (768-dim centroids) for semantic routing | Synthesis runs |
 | `AGENTS.md` | Root | Repository guidelines, AI rules | Manual |
 
+> `CONTEXT.md` was removed. It was one of six competing "master" context documents;
+> they were consolidated into `AGENTS.md`, which is the single live context file.
+
 ### ChromaDB Statistics
-- **Collection:** `faithh_knowledge_base`
-- **Total Chunks:** ~38,000
-- **Conversations Indexed:** 306 (208 ChatGPT + 98 Claude)
-- **Embedding Model:** all-MiniLM-L6-v2 (384-dim)
-- **Chunking:** 1500 chars with 200 char overlap
+
+**Verified 2026-07-30.** Authoritative reference:
+[docs/architecture/EMBEDDINGS.md](../architecture/EMBEDDINGS.md).
+
+- **Collection:** `faithh_knowledge_base_v2`
+- **Total Chunks:** ~63,700 (58,400 conversations + 5,300 repo documentation)
+- **Embedding Model:** **`BAAI/bge-base-en-v1.5` — 768-dim**
+- **Chunking:** conversations 5 messages/chunk; repo docs split on H2 at 1,400 chars
+- **Other collections:** `faithh_knowledge_base` (56,066) and `governance_corpus`
+  (18,768) are **legacy 384-dim** and not comparable with the live query embedder.
+
+> **Do not take a 384-dim embedder from any older document.** This section
+> previously said all-MiniLM-L6-v2 / 384-dim / 1500-char chunks, which is the exact
+> configuration that produces `best_distance: 1.0` on every query against the live
+> collection. `alife_lineage` (339,900 rows of simulation telemetry) was exported to
+> SQLite and removed on 2026-07-30 — see
+> [VECTOR_STORE_REVIEW.md](../architecture/VECTOR_STORE_REVIEW.md).
 
 ---
 

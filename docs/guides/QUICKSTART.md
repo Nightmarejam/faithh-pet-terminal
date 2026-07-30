@@ -339,9 +339,14 @@ curl http://servicebox.taileb8c60.ts.net:8000/api/v2/heartbeat
 ```
 
 ### RAG returns irrelevant results
-- ChromaDB collection: `faithh_knowledge_base`
-- 32,499 chunks with `all-MiniLM-L6-v2` (384-dim) embeddings
-- If embeddings seem off, reindex: `python scripts/reindex_with_metadata.py`
+- ChromaDB collection: `faithh_knowledge_base_v2`
+- ~63.7k chunks with **`BAAI/bge-base-en-v1.5` (768-dim)** embeddings
+- First check the dimension invariant — the backend prints it on the first query.
+  A `best_distance` of exactly 1.0 on every query means the embedder and the
+  collection disagree, or distances were dropped in code. See
+  [EMBEDDINGS.md](../architecture/EMBEDDINGS.md).
+- To re-index docs: `python scripts/ingest/index_docs.py` (embed on the workstation,
+  never on the Gen8)
 
 ---
 

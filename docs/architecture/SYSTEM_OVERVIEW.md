@@ -87,10 +87,15 @@ FAITHH (Friendly AI Teaching & Helping Hub) is a personal AI thought partner and
 
 ### Warm Memory (ChromaDB vector database)
 - **Host:** Gen8 server at servicebox.taileb8c60.ts.net:8000 (`CHROMA_HOST` / `CHROMA_PORT` in `.env`)
-- **Primary collection:** `faithh_knowledge_base` — on the order of **~54k** chunks (see `fingerprint_state.json` `health.backend.chromadb_docs` after `scripts/generate_fingerprint.py`)
+- **Primary collection:** `faithh_knowledge_base_v2` — ~63.7k chunks as of 2026-07-30
 - **Maintenance collection:** `faithh_uncertainty_surface` — gated / noisy rows migrated out of the main KB (not used as RAG knowledge)
 - **Session metrics:** `faithh_session_metrics` (or `CHROMA_METRICS_COLLECTION`) — telemetry only; **not** RAG (per `AGENTS.md`)
-- **Embedding:** `all-MiniLM-L6-v2` (384 dimensions) for KB ingest/query in typical paths
+- **Embedding:** **`BAAI/bge-base-en-v1.5` — 768 dimensions**, for both ingest and query.
+  This line previously said `all-MiniLM-L6-v2` (384-dim) and was wrong: that is the
+  legacy model behind `faithh_knowledge_base` and `governance_corpus`, which the live
+  768-dim query embedder cannot compare against. Mixing them yields
+  `best_distance: 1.0` on every query. Authoritative reference:
+  [EMBEDDINGS.md](EMBEDDINGS.md).
 - **Search:** Semantic similarity; low-confidence path when best distance exceeds `RAG_MAX_DISTANCE_CONFIDENT`
 
 ### Live Context (project structure snapshot)

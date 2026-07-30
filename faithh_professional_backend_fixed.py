@@ -526,6 +526,13 @@ CHIP_TOKEN_BUDGETS = {
 
 # Phase 4 — RAG distance signal (updated when RAG runs; exposed via workspace registry + /api/chat)
 RAG_MAX_DISTANCE_CONFIDENT = float(os.environ.get("RAG_MAX_DISTANCE_CONFIDENT", "0.55"))
+# The line above which the system already treats retrieval as weak evidence. Was a
+# bare 0.60 inline in the /api/chat pre-flight while 0.55 next to it was a named
+# constant — two thresholds governing the same judgement, one of them invisible.
+RAG_PREFLIGHT_MAX_DISTANCE = float(os.environ.get("RAG_PREFLIGHT_MAX_DISTANCE", "0.60"))
+# How many characters of an ordinary (non-expanded) hit reach the model. Was a magic
+# 1000 repeated at two call sites.
+RAG_SNIPPET_CHARS = int(os.environ.get("RAG_SNIPPET_CHARS", "1500"))
 RAG_SIGNAL_STALE_SECONDS = float(os.environ.get("RAG_SIGNAL_STALE_SECONDS", "900"))
 LAST_RAG_RETRIEVAL_SIGNAL: dict = {}
 
@@ -1293,6 +1300,12 @@ def _apply_reranking(results, n_results):
 # from its sibling chunks in order and hand the model the whole argument.
 RAG_EXPAND_DOCS = os.environ.get("RAG_EXPAND_DOCS", "1").strip().lower() not in ("0", "false", "no")
 RAG_EXPAND_MAX_DOCS = int(os.environ.get("RAG_EXPAND_MAX_DOCS", "2"))
+# Relevance floor. Expansion makes a hit *bigger*, so expanding a weak match spends
+# real context on something the system already distrusts: a hardware question pulled
+# docs/ops/GIT_DIVERGENCE.md at 0.678 and reassembled all 7 of its chunks. Reuses the
+# pre-flight threshold rather than inventing a second one — if a hit is too weak to
+# ground on, it is too weak to enlarge.
+RAG_EXPAND_MAX_DISTANCE = float(os.environ.get("RAG_EXPAND_MAX_DISTANCE", str(RAG_PREFLIGHT_MAX_DISTANCE)))
 # ~1,750 tokens, sized to fit inside CHIP_TOKEN_BUDGETS['rag_search'] alongside two
 # ordinary hits. Raise both together or truncate_to_budget will clip the tail.
 RAG_EXPAND_MAX_CHARS = int(os.environ.get("RAG_EXPAND_MAX_CHARS", "7000"))
@@ -1310,13 +1323,26 @@ def _expand_document_hits(results):
     ids = results["ids"][0] if results.get("ids") else [""] * len(docs)
 
     expanded_paths = set()
+    # Shared across every expansion in this result set, not per document. Two docs at
+    # the per-doc cap would be ~3,500 tokens against a 2,600 chip budget, and
+    # truncate_to_budget would clip the tail of the second — silently, and precisely
+    # where the answer usually lives.
+    expand_budget_left = RAG_EXPAND_MAX_CHARS
     out_docs, out_metas, out_dists, out_ids = [], [], [], []
 
     for doc, meta, dist, _id in zip(docs, metas, dists, ids):
         meta = meta or {}
         path = meta.get("path")
         is_curated = meta.get("document_type") == "architecture_doc" and path
-        if not is_curated or path in expanded_paths or len(expanded_paths) >= RAG_EXPAND_MAX_DOCS:
+        try:
+            close_enough = float(dist) <= RAG_EXPAND_MAX_DISTANCE
+        except (TypeError, ValueError):
+            close_enough = False
+        if is_curated and path and not close_enough and path not in expanded_paths:
+            print(f"   ↔ Not expanding {path}: distance {dist:.4f} > {RAG_EXPAND_MAX_DISTANCE}")
+        if (not is_curated or not close_enough
+                or path in expanded_paths or len(expanded_paths) >= RAG_EXPAND_MAX_DOCS
+                or expand_budget_left < 800):
             # Not curated, already assembled, or past the budget — pass through as-is.
             if path and path in expanded_paths:
                 continue  # sibling chunk of a document already included in full
@@ -1341,12 +1367,13 @@ def _expand_document_hits(results):
             body_parts, total = [], 0
             for n, (_, text) in enumerate(pairs):
                 t = text if n == 0 else re.sub(r"^#\s+\S+\.md\s*\n+", "", text)
-                if total + len(t) > RAG_EXPAND_MAX_CHARS:
+                if total + len(t) > expand_budget_left:
                     body_parts.append(f"\n\n[... {len(pairs) - n} further section(s) omitted]")
                     break
                 body_parts.append(t)
                 total += len(t)
             full = "\n\n".join(body_parts)
+            expand_budget_left -= total
 
             out_docs.append(full)
             m2 = dict(meta)
@@ -2326,7 +2353,7 @@ def retrieve_rag(query_text, intent, use_rag):
                 # back to 1000 chars — that would undo the expansion and re-create the
                 # exact failure it fixes (the model seeing a heading but not the
                 # paragraph that answers the question).
-                _limit = RAG_EXPAND_MAX_CHARS if (meta_i or {}).get("expanded_from_chunks") else 1000
+                _limit = RAG_EXPAND_MAX_CHARS if (meta_i or {}).get("expanded_from_chunks") else RAG_SNIPPET_CHARS
                 preview = (doc_text[:_limit] + "...") if len(doc_text) > _limit else doc_text
                 rag_context += f"{i+1}. {_tier_tag(meta_i)} {preview}\n\n"
                 # Build full result object for coherence arbiter
@@ -2530,7 +2557,7 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
                         # Same expansion-aware limit as the chip path above.
                         _lim = (RAG_EXPAND_MAX_CHARS
                                 if (_hit.get('metadata') or {}).get('expanded_from_chunks')
-                                else 1000)
+                                else RAG_SNIPPET_CHARS)
                         _body = _hit['document'][:_lim]
                         rag_context += f"{i+1}. {_body}{'...' if len(_hit['document']) > _lim else ''}\n\n"
                     rag_context += "[CTX_END]\n"
@@ -3238,7 +3265,7 @@ These rules override ALL other instructions. Violating them produces harmful mis
             else:
                 _rag_hit_count = 0
             _best_distance = min(_rag_distances) if _rag_distances else 1.0
-            _preflight_failed = _best_distance > 0.60 or _rag_hit_count < 2
+            _preflight_failed = _best_distance > RAG_PREFLIGHT_MAX_DISTANCE or _rag_hit_count < 2
             if _preflight_failed:
                 full_prompt += (
                     "\n\n[SYSTEM HAZARD: RAG CONFIDENCE LOW "
