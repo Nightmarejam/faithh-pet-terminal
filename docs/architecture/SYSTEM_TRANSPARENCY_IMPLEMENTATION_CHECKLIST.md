@@ -197,7 +197,7 @@ Avoid by default:
 ## 5) CPU-Only Embedding Operations (Until T1000)
 
 - Keep embeddings standardized:
-  - model: `all-MiniLM-L6-v2`
+  - model: `BAAI/bge-base-en-v1.5` (768-dim; was all-MiniLM-L6-v2 / 384-dim)
   - dimension: `384`
 - Force CPU path for indexing scripts where needed:
   - `CUDA_VISIBLE_DEVICES=""`

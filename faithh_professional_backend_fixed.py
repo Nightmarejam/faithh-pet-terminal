@@ -747,7 +747,13 @@ if CHROMA_URL:
 CHROMA_HOST, CHROMA_PORT = _normalize_host_port(CHROMA_HOST, CHROMA_PORT)
 CHROMA_BASE_URL = _build_chroma_base_url()
 
-CHROMA_COLLECTION = os.environ.get('CHROMA_COLLECTION', 'faithh_knowledge_base')
+# Default is v2 (768-dim, BGE). It used to be the unsuffixed legacy collection, which
+# is 384-dim: the service only worked because its systemd unit sets CHROMA_COLLECTION
+# explicitly. Lose that env var — run it by hand, edit the unit, rebuild the host —
+# and every query would return best_distance 1.0 against a collection the embedder
+# cannot compare with. The startup dimension check now catches it, but the default
+# should not be the broken one. See docs/architecture/EMBEDDINGS.md.
+CHROMA_COLLECTION = os.environ.get('CHROMA_COLLECTION', 'faithh_knowledge_base_v2')
 METRICS_COLLECTION_NAME = os.environ.get("CHROMA_METRICS_COLLECTION", "faithh_session_metrics")
 
 # Load embedding model lazily for manual query embedding

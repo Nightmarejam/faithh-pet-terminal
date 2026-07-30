@@ -4,7 +4,8 @@ Last updated: 2026-03-30
 
 ## Canonical collection
 
-- `faithh_knowledge_base` on ChromaDB (`servicebox.taileb8c60.ts.net:8000`)
+- `faithh_knowledge_base_v2` on ChromaDB (`servicebox.taileb8c60.ts.net:8000`) — BGE 768-dim.
+  The unsuffixed `faithh_knowledge_base` is the legacy 384-dim collection; do not index into it.
 
 ## Primary active indexers
 

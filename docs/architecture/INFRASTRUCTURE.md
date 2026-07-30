@@ -63,7 +63,7 @@
 
 | Service | Port | Purpose |
 |---------|------|---------|
-| ChromaDB | 8000 | Primary RAG database (`faithh_knowledge_base` — ~54k chunks; see live `GET /health` or fingerprint) |
+| ChromaDB | 8000 | Primary RAG database (`faithh_knowledge_base_v2` — ~63.7k chunks, BGE 768-dim; see live `GET /health`) |
 | Grafana | 3000 | Monitoring UI |
 | Prometheus | 9090 | Metrics collection |
 | Pi-hole | 80/53 | DNS filtering |

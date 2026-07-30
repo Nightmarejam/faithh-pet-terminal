@@ -6,7 +6,8 @@ _Last refreshed: 2026-04-08. Counts are live samples from the configured Chroma 
 
 | Collection | Role | Document count (sample) |
 |------------|------|-------------------------:|
-| `faithh_knowledge_base` | Primary RAG corpus for general retrieval | 25,255 |
+| `faithh_knowledge_base_v2` | **Primary RAG corpus** — BGE 768-dim | ~63.7k |
+| `faithh_knowledge_base` | Legacy 384-dim (MiniLM); not comparable with the live query embedder | 56,066 |
 | `alife_lineage` | ALIFE experiment / lineage payloads | 339,900 |
 | `governance_corpus` | Governance / civic corpus slice | 18,768 |
 
@@ -39,7 +40,7 @@ Connection: `CHROMA_HOST` / `CHROMA_PORT` (see `.env.example`). Default in many 
 | `OLLAMA_COMPLEX_MODEL` | Ollama model when complexity resolves to `complex`. |
 | `RAG_MAX_DISTANCE_CONFIDENT` | Distance threshold for “confident” RAG hits (default `0.55`). |
 | `CHROMA_HOST` / `CHROMA_PORT` | Chroma HTTP API target. |
-| `CHROMA_COLLECTION` | Primary collection name (default `faithh_knowledge_base`). |
+| `CHROMA_COLLECTION` | Primary collection name (default `faithh_knowledge_base_v2`). Setting this to a 384-dim collection breaks retrieval — see [EMBEDDINGS.md](architecture/EMBEDDINGS.md). |
 | `FAITHH_RAG_NORMALIZE_TRACE` | Set to `1` to log the first ~100 chars of each normalized RAG hit (`normalize_rag_hit_for_api`). |
 
 ## Gen8 (LAN)
