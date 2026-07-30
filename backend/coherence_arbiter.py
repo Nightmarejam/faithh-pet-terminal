@@ -116,9 +116,10 @@ class CoherenceArbiter:
             self.anchor_validator = None
             self.phase2_enabled = False
         
-    def measure_convergence(self, rag_results: List[Dict], chip_activations: List[Dict], 
+    def measure_convergence(self, rag_results: List[Dict], chip_activations: List[Dict],
                           query_embedding: Optional[np.ndarray] = None,
-                          ml_chips=None, ml_chip_centroids=None) -> Dict[str, Any]:
+                          ml_chips=None, ml_chip_centroids=None,
+                          rag_embeddings: Optional[List] = None) -> Dict[str, Any]:
         """
         Measure semantic convergence between RAG and chip signals
         
@@ -139,7 +140,14 @@ class CoherenceArbiter:
                 return _enrich_phase3_metadata(self._fallback_result("timeout"))
             
             # Extract signals
-            rag_embeddings = self._extract_rag_embeddings(rag_results)
+            # Prefer embeddings handed in directly. They cannot travel inside
+            # rag_results: normalize_rag_hit_for_api does `out = dict(entry)` and passes
+            # every key into the /api/chat JSON, so numpy arrays there break jsonify on
+            # every request. Passing them alongside keeps them out of the response.
+            if rag_embeddings:
+                rag_embeddings = [np.asarray(e) for e in rag_embeddings if e is not None]
+            else:
+                rag_embeddings = self._extract_rag_embeddings(rag_results)
             # Do NOT derive ids from ml_chips: the backend only appends to
             # ML_CHIP_IDS for chips that had a valid 384/768-dim centroid, while
             # ML_CHIPS holds every chip. Deriving ids from ml_chips would produce a
@@ -147,6 +155,21 @@ class CoherenceArbiter:
             # resolved together from the backend module so they stay a matched pair.
             chip_embeddings = self._extract_chip_embeddings(chip_activations)
             
+            # Dimension guard. Only faithh_knowledge_base_v2 is 768-dim; the other
+            # collections are 384. If CHROMA_COLLECTION ever points at one of those,
+            # the cosine matrix would raise on shape mismatch — and a raised exception
+            # here is what previously masqueraded as a real 0.5 score. Degrade to the
+            # signal-strength path with an explicit reason instead.
+            if rag_embeddings and chip_embeddings:
+                _rd = np.asarray(rag_embeddings[0]).shape[-1]
+                _cd = np.asarray(chip_embeddings[0]).shape[-1]
+                if _rd != _cd:
+                    logger.warning(
+                        "Coherence dimension mismatch: rag=%s chip=%s — "
+                        "convergence unavailable (check CHROMA_COLLECTION)", _rd, _cd
+                    )
+                    rag_embeddings = []
+
             # Handle edge cases
             if not rag_embeddings or not chip_embeddings:
                 # If we don't have embeddings, we can still provide a meaningful score

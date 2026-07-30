@@ -2028,13 +2028,19 @@ def retrieve_rag(query_text, intent, use_rag):
                 # Build full result object for coherence arbiter
                 try:
                     embedding = None
-                    if results.get('embeddings') and results['embeddings'][0]:
-                        emb = results['embeddings'][0][i]
-                        if emb is not None:
-                            if hasattr(emb, 'tolist'):
-                                embedding = emb.tolist()
-                            else:
-                                embedding = list(emb)
+                    # `results['embeddings']` is a numpy array. Truth-testing it raises
+                    # "The truth value of an array with more than one element is
+                    # ambiguous", which the except below swallowed — so embedding was
+                    # always None and the Coherence Arbiter could never compute
+                    # convergence on this path, reporting signal_strength_only forever.
+                    # Compare against None and use len(); never rely on array truthiness.
+                    _embs = results.get('embeddings')
+                    if _embs is not None and len(_embs) > 0:
+                        _row = _embs[0]
+                        if _row is not None and i < len(_row):
+                            emb = _row[i]
+                            if emb is not None:
+                                embedding = emb.tolist() if hasattr(emb, 'tolist') else list(emb)
                 except Exception as emb_e:
                     print(f"   ⚠️ Embedding processing error: {emb_e}")
                     embedding = None
@@ -2075,6 +2081,8 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
     context_parts = []
     integrations_used = []
     rag_results = []
+    # Parallel to rag_results but never merged into it — see the RAG fallback below.
+    rag_embeddings_for_coherence = None
 
     # PRE-DETECT PROGRAM ADVANCES (Hybrid: trigger phrases + semantic)
     # This ensures PA combinations can actually trigger by forcing required chips
@@ -2184,6 +2192,11 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
                     _f_dists = (fallback_results.get('distances') or [[]])[0] or []
                     _f_metas = (fallback_results.get('metadatas') or [[]])[0] or []
                     _f_ids = (fallback_results.get('ids') or [[]])[0] or []
+                    # Held aside for the Coherence Arbiter, deliberately NOT placed in
+                    # rag_results: those dicts are serialised into the /api/chat response.
+                    _emb0 = fallback_results.get('embeddings')
+                    if _emb0 is not None and len(_emb0) > 0 and _emb0[0] is not None:
+                        rag_embeddings_for_coherence = list(_emb0[0])
                     rag_results = [
                         {
                             'document': _d,
@@ -2272,7 +2285,8 @@ def build_integrated_context(query_text, intent, use_rag=True, session_id=None):
                     rag_results=rag_results,
                     chip_activations=ml_activated,
                     ml_chips=ML_CHIPS,
-                    ml_chip_centroids=ML_CHIP_CENTROIDS
+                    ml_chip_centroids=ML_CHIP_CENTROIDS,
+                    rag_embeddings=rag_embeddings_for_coherence,
                 )
             else:
                 coherence_metadata = {"convergence_score": 0.0, "convergence_signals": ["disabled"]}
