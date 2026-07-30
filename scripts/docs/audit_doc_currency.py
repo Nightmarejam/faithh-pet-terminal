@@ -34,6 +34,7 @@ REPO = pathlib.Path(__file__).resolve().parents[2]
 ALLOW: dict[str, set[str]] = {
     "embedder-384": {
         "AGENTS.md",
+        "docs/architecture/PULSE_PROPOSALS.md",  # quotes the value as example evidence
         "docs/roadmaps/PULSE_REFLECTION_ENGINE.md",  # corrected, cites the old value
         "docs/guides/GIT_WORKFLOW.md",  # changelog entry, annotated as historical
         "docs/WSL_DEPENDENCIES.md",
