@@ -59,12 +59,28 @@ The backend embeds queries with `BAAI/bge-base-en-v1.5` (**768-dim**, set by
 `FAITHH_EMBED_MODEL` in `backend/rag_processor.py`). It therefore only works against a
 768-dim collection:
 
+Counted live against `servicebox` 2026-07-31 (`/api/v2/.../collections/<id>/count`).
+These are the **only four collections that exist** — one tenant, one database:
+
 | Collection | Docs | Dim | Embedder | Use |
 |---|---|---|---|---|
-| `faithh_knowledge_base_v2` | ~33.9k | **768** | BGE-base-en-v1.5 | ✅ **current** — `CHROMA_COLLECTION` |
-| `faithh_knowledge_base` | ~56k | 384 | all-MiniLM-L6-v2 | legacy; incompatible with BGE queries |
-| `governance_corpus` | ~18.8k | 384 | default | legacy dim |
-| `alife_lineage` | ~340k | 384 | default | legacy dim |
+| `faithh_knowledge_base_v2` | **63,770** | **768** | BGE-base-en-v1.5 | ✅ **current** — `CHROMA_COLLECTION` |
+| `faithh_knowledge_base` | 56,066 | 384 | all-MiniLM-L6-v2 | legacy; incompatible with BGE queries |
+| `faithh_uncertainty_surface` | 175 | 384 | default | KB maintenance signal |
+| `faithh_session_metrics` | 101 | 384 | default | session telemetry |
+
+Corrected 2026-07-31 by direct measurement. Previously this table claimed `_v2`
+held ~33.9k (it has since grown to 63,770) and listed `governance_corpus`
+(~18.8k) and `alife_lineage` (~340k) — **neither collection exists** on the live
+instance, in any tenant or database. `faithh_uncertainty_surface` and
+`faithh_session_metrics` do exist and were missing here.
+
+⚠️ **`faithh_knowledge_base` metadata lies about its own dimension.** Chroma
+reports the collection as 384-dim while its metadata block says
+`{"dimension": 768}`. Trust the reported dimension, never the metadata — this is
+the exact trap behind the 2026-07-26 failure below. The BGE migration produced
+`_v2` and left the original untouched; it was never a completed in-place
+migration, whatever the commit history implies.
 
 **Failure mode seen 2026-07-26:** `.env` pointed `CHROMA_COLLECTION` at the 384-dim
 `faithh_knowledge_base` while queries were 768-dim. Chroma rejected every query, the
