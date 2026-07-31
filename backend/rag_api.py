@@ -3,6 +3,8 @@
 Simple Flask API for RAG document search
 """
 
+import os
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
@@ -18,7 +20,13 @@ CHROMA_PORT = 8000
 
 # Initialize ChromaDB client
 client = chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
-collection = client.get_or_create_collection(name="documents")
+# Was get_or_create_collection("documents"): no such collection exists on any
+# instance, and get_or_create would silently CREATE one using Chroma's default
+# 384-dim embedder — then this module writes BGE vectors into it. Fixed 2026-07-31
+# to get_collection on the configured name, so a missing collection fails loudly
+# instead of conjuring a broken one.
+collection = client.get_collection(
+    os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base_v2"))
 
 
 def get_embedding(text: str):

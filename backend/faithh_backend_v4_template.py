@@ -17,6 +17,17 @@ from datetime import datetime
 from dotenv import load_dotenv
 from pathlib import Path
 
+def _configured_collection() -> str:
+    """The collection to query, from CHROMA_COLLECTION.
+
+    Replaces `collections[0].name` at three call sites (fixed 2026-07-31). Picking
+    "whichever collection Chroma lists first" is arbitrary — the instance holds
+    five, at two different embedding dimensions, and adding a sixth silently
+    changes which one every query hits. Two of those call sites were live
+    retrieval, so a new collection could have redirected real answers.
+    """
+    return os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base_v2")
+
 # Load environment variables
 load_dotenv()
 
@@ -128,7 +139,7 @@ def status():
                 
                 # Get document count from first collection
                 if collections:
-                    main_collection = chroma_client.get_collection(collections[0].name)
+                    main_collection = chroma_client.get_collection(_configured_collection())
                     chromadb_status["documents"] = main_collection.count()
                     
             except Exception as e:
@@ -316,7 +327,7 @@ def search():
         if not collections:
             return jsonify({"error": "No collections found"}), 404
         
-        collection = chroma_client.get_collection(collections[0].name)
+        collection = chroma_client.get_collection(_configured_collection())
         
         # Perform search
         results = collection.query(
@@ -341,7 +352,7 @@ def search():
             "results": formatted_results,
             "total_results": len(formatted_results),
             "query_time": query_time,
-            "collection": collections[0].name
+            "collection": _configured_collection()
         })
         
     except Exception as e:
@@ -486,7 +497,7 @@ def get_rag_context(query, top_k=5):
         if not collections:
             return "", []
         
-        collection = chroma_client.get_collection(collections[0].name)
+        collection = chroma_client.get_collection(_configured_collection())
         
         # Query ChromaDB
         results = collection.query(

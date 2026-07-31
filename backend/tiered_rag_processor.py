@@ -64,8 +64,12 @@ class TieredRAGProcessor:
         # Tier 2: Gen8 warm storage
         try:
             self.tiers[2]['client'] = chromadb.HttpClient(host='servicebox.taileb8c60.ts.net', port=8000)
-            # Use existing collection for now, create separate later
-            self.tiers[2]['collection'] = self.tiers[2]['client'].get_collection('faithh_knowledge_base')
+            # Was 'faithh_knowledge_base' — 384-dim legacy, incompatible with the
+            # BGE-768 embedder. Fixed 2026-07-31. Note this file is *storage*
+            # tiering (hot/warm cache by access frequency); confirmability tiering
+            # lives in source_tier.py. Same word, unrelated jobs.
+            self.tiers[2]['collection'] = self.tiers[2]['client'].get_collection(
+                os.environ.get('CHROMA_COLLECTION', 'faithh_knowledge_base_v2'))
             print(f"✅ Tier 2 (warm storage) initialized: {self.tiers[2]['collection'].count()} docs")
         except Exception as e:
             print(f"⚠️ Tier 2 initialization failed: {e}")

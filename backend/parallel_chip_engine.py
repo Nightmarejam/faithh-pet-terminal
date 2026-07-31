@@ -151,8 +151,15 @@ class ChipRetriever:
         """Initialize ChromaDB connection."""
         try:
             import chromadb
-            self.chroma_client = chromadb.HttpClient(host="servicebox.taileb8c60.ts.net", port=8000)
-            self.collection = self.chroma_client.get_collection("faithh_knowledge_base")
+            self.chroma_client = chromadb.HttpClient(
+                host=os.environ.get("CHROMA_HOST", "servicebox.taileb8c60.ts.net"),
+                port=int(os.environ.get("CHROMA_PORT", "8000")))
+            # Was hardcoded to "faithh_knowledge_base", which is **384-dim** legacy
+            # while every query embedder here is BGE-768. Chroma rejects the query,
+            # the except below swallows it, and the engine silently degrades to no
+            # RAG at all — the 2026-07-26 failure mode wearing a different hat.
+            self.collection = self.chroma_client.get_collection(
+                os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base_v2"))
         except Exception as e:
             print(f"ChromaDB connection failed: {e}")
             self.chroma_client = None

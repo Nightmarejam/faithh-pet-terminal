@@ -81,10 +81,13 @@ def _get_embedder():
 class RAGProcessor:
     def __init__(self):
         self.client = chromadb.HttpClient(host=CHROMA_HOST, port=CHROMA_PORT)
-        self.collection = self.client.get_or_create_collection(
-            name="documents",
-            metadata={"description": "User documents for RAG"}
-        )
+        # Was get_or_create_collection(name="documents"). Two bugs in one line:
+        # it ignored CHROMA_COLLECTION entirely, and "documents" exists on no
+        # instance — so get_or_create would CREATE it with Chroma's default 384-dim
+        # embedder, into which get_embedding() then writes BGE-768 vectors.
+        # get_collection so a missing collection fails loudly. Fixed 2026-07-31.
+        self.collection = self.client.get_collection(
+            os.environ.get("CHROMA_COLLECTION", "faithh_knowledge_base_v2"))
     
     def chunk_text(self, text: str, filename: str) -> List[Dict]:
         chunks = []
