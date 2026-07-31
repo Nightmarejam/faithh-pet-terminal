@@ -30,9 +30,25 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-# Target RTX 3090 (GPU 1) — GTX 1080 Ti (GPU 0) lacks sm_70+ support
-os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+# GPU selection. Two things interact here and both have bitten before:
+#
+# 1. CUDA_DEVICE_ORDER=PCI_BUS_ID is required because torch and nvidia-smi otherwise
+#    disagree on ordering. Under PCI_BUS_ID: 0 = GTX 1080 Ti, 1 = RTX 3090.
+#
+# 2. CUDA_VISIBLE_DEVICES *masks* the rest, so inside this process the selected GPU is
+#    always cuda:0 regardless of which physical card it is. Setting it to "1" and then
+#    asking for "cuda:1" raises "invalid device ordinal" — only one device is visible.
+#
+# Default is the 1080 Ti, not the 3090: vLLM holds the 3090 at 0.90 memory
+# utilisation (~1 GB free), so embedding 63k documents there would OOM. The old
+# comment here claimed the 1080 Ti "lacks sm_70+ support"; that is not true for this
+# native-Windows venv, where torch 2.6.0+cu124 has embedded tens of thousands of
+# chunks on it. (The WSL-specific 1080 Ti crash in decisions_log infra_002 is a
+# different environment.)
+#
+# Override with FAITHH_CUDA_DEVICES=1 to use the 3090 when vLLM is stopped.
+os.environ.setdefault("CUDA_DEVICE_ORDER", "PCI_BUS_ID")
+os.environ.setdefault("CUDA_VISIBLE_DEVICES", os.environ.get("FAITHH_CUDA_DEVICES", "0"))
 
 import numpy as np
 import chromadb
@@ -61,14 +77,13 @@ EMBEDDING_MODEL = os.environ.get("FAITHH_EMBEDDER_MODEL", "BAAI/bge-base-en-v1.5
 # Must match the collection's width (768). Read from the environment so the ingest
 # venv and this script cannot drift onto different embedders.
 
-# Bare "cuda" means cuda:0, and torch enumerates the RTX 3090 as cuda:0 — which is
-# where vLLM lives at 0.90 memory utilisation, leaving under 1 GB free. Embedding
-# 63k documents there would OOM, and taking vLLM down to build chips is the wrong
-# trade. cuda:1 is the idle GTX 1080 Ti with 11 GB.
+# After the CUDA_VISIBLE_DEVICES mask above, the chosen GPU is cuda:0 inside this
+# process — so this is plain "cuda", not an index. Pick the card with
+# FAITHH_CUDA_DEVICES, not here.
 #
 # Do NOT run this on the Gen8 at any device setting: sustained GPU compute causes
 # power loss there (docs/architecture/GEN8_POWER_CONSTRAINT.md).
-DEVICE = os.environ.get("FAITHH_EMBED_DEVICE", "cuda:1")
+DEVICE = os.environ.get("FAITHH_EMBED_DEVICE", "cuda")
 
 
 def pull_chunks(host, port, collection_name, batch_size=5000):
