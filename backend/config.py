@@ -48,8 +48,14 @@ class ChromaConfig:
     host: str = field(default_factory=lambda: _env("CHROMA_HOST", "CHROMADB_HOST",
                                                     default="servicebox.taileb8c60.ts.net"))  # MagicDNS; see homelab/infra/hosts.yaml
     port: int = field(default_factory=lambda: _int("CHROMA_PORT", "CHROMADB_PORT", default=8000))
+    # Default MUST be a 768-dim collection: rag_processor.py defaults the embedder to
+    # BAAI/bge-base-en-v1.5 (768). This previously defaulted to faithh_knowledge_base,
+    # which is 384-dim — so an unconfigured environment reproduced the 2026-07-26
+    # failure by construction: every query rejected, best_distance pinned at 1.0,
+    # answers fluent but ungrounded. Verified 2026-07-31 against the live instance:
+    # faithh_knowledge_base_v2 is the only 768-dim collection that exists.
     collection: str = field(default_factory=lambda: _env("CHROMA_COLLECTION",
-                                                          default="faithh_knowledge_base"))
+                                                          default="faithh_knowledge_base_v2"))
 
 
 @dataclass(frozen=True)
