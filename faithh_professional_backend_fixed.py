@@ -754,6 +754,9 @@ CHROMA_BASE_URL = _build_chroma_base_url()
 # cannot compare with. The startup dimension check now catches it, but the default
 # should not be the broken one. See docs/architecture/EMBEDDINGS.md.
 CHROMA_COLLECTION = os.environ.get('CHROMA_COLLECTION', 'faithh_knowledge_base_v2')
+# Curated entries from homelab/pipeline stage 4. Both are 768-dim, so one query
+# embedding serves both.
+CURATED_COLLECTION = os.environ.get('FAITHH_CURATED_COLLECTION', 'faithh_curated')
 METRICS_COLLECTION_NAME = os.environ.get("CHROMA_METRICS_COLLECTION", "faithh_session_metrics")
 
 # Load embedding model lazily for manual query embedding
@@ -860,6 +863,18 @@ try:
     except Exception as e:
         alife_collection = None
         print(f"⚠️ ALIFE collection not available: {e}")
+
+    # Curated entries from the conversation pipeline (homelab/pipeline stage 4).
+    # A separate collection on purpose: a few hundred reviewed entries mixed into
+    # 63k raw chunks would never surface on distance alone — roughly 1:280. Kept
+    # apart and weighted up in _apply_reranking via confirmability tier.
+    try:
+        curated_collection = chroma_client.get_collection(name=CURATED_COLLECTION)
+        print(f"✅ Curated collection '{CURATED_COLLECTION}': "
+              f"{curated_collection.count()} entries")
+    except Exception as e:
+        curated_collection = None
+        print(f"⚠️ Curated collection not available: {e}")
     
     CHROMA_CONNECTED = True
     doc_count = collection.count()
@@ -883,6 +898,7 @@ except Exception as e:
     CHROMA_CONNECTED = False
     collection = None
     alife_collection = None
+    curated_collection = None
     chroma_client = None
     print(f"⚠️ ChromaDB not connected: {e}")
 
@@ -1172,6 +1188,21 @@ _DOC_TYPE_WEIGHT = {
     # decisions live in docs/ and carry document_type=architecture_doc.
     "decision": -0.25,
 }
+# Confirmability tiers from the conversation pipeline, on the same additive scale
+# as the tables above. Schema: constella-framework docs/reference/confirmability.md.
+#
+# `confirmed` outranks architecture_doc (0.20) because it carries a receipt that was
+# actually run, which a design document does not. `asserted` sits level with curated
+# docs. `speculative` is retrievable but must not outrank anything attested.
+# `refuted` is dropped outright rather than ranked last — a claim checked and found
+# false must never be offered as supporting evidence.
+_TIER_WEIGHT = {
+    "confirmed": 0.30,
+    "asserted": 0.20,
+    "speculative": 0.02,
+}
+_TIER_DROP = {"refuted"}
+
 _SOURCE_WEIGHT = {
     "repo_docs": RAG_SOURCE_BOOST,          # 5,309 — same corpus as architecture_doc
     "session_doc": 0.05,                    # 602
@@ -1216,6 +1247,19 @@ def _apply_reranking(results, n_results):
     # These are model output, not evidence. Conversation continuity is served by the
     # dedicated history chip, which does not need them to be retrievable as facts.
     # Set RAG_EXCLUDE_MODEL_OUTPUT=0 to disable.
+    # Refuted entries are dropped unconditionally, regardless of
+    # RAG_EXCLUDE_MODEL_OUTPUT. A claim that was checked against the system and
+    # found false is not weak evidence — it is counter-evidence, and grounding an
+    # answer on it would be worse than having no source at all.
+    _refuted = [i for i, m in enumerate(metas) if (m or {}).get("tier") in _TIER_DROP]
+    if _refuted:
+        keep = [i for i in range(len(docs)) if i not in set(_refuted)]
+        docs = [docs[i] for i in keep]
+        metas = [metas[i] for i in keep]
+        distances = [distances[i] for i in keep]
+        ids = [ids[i] for i in keep]
+        print(f"   🚫 Dropped {len(_refuted)} refuted entry(s) from grounding context")
+
     if RAG_EXCLUDE_MODEL_OUTPUT:
         keep = [
             i for i, (m, _id) in enumerate(zip(metas, ids))
@@ -1276,7 +1320,13 @@ def _apply_reranking(results, n_results):
         # signals available: the record's own `type` and its id prefix. Records written
         # before 2026-07-30 had `category` overwritten to "general" by the auto-tagger,
         # so category alone cannot be trusted to identify model output.
-        if (meta or {}).get("type") == "live_conversation" or str(doc_id).startswith("live_conv_"):
+        # Pipeline-curated entries are checked first: they are the only records that
+        # carry a confirmability tier, and the tier is a stronger provenance signal
+        # than document_type or source, both of which are inferred by scripts.
+        tier = (meta or {}).get("tier", "") or ""
+        if (meta or {}).get("origin") == "pipeline-stage3" and tier in _TIER_WEIGHT:
+            source_boost = _TIER_WEIGHT[tier]
+        elif (meta or {}).get("type") == "live_conversation" or str(doc_id).startswith("live_conv_"):
             source_boost = -0.25
         elif category == "project_docs" or source.startswith("project_docs:"):
             source_boost = RAG_SOURCE_BOOST
@@ -1475,8 +1525,24 @@ def query_collection(query_text, n_results=5, where=None):
                 include=["documents", "metadatas", "distances", "embeddings"]
             )
 
-        # Merge tier 1 + tier 2 (deduplicate by ID)
+        # Tier 0: pipeline-curated entries. Queried separately because they live in
+        # their own collection — see the note at CURATED_COLLECTION. Failure here is
+        # non-fatal: the curated layer is an improvement on bulk recall, not a
+        # dependency of it.
+        curated_results = None
+        if curated_collection is not None:
+            try:
+                curated_results = curated_collection.query(
+                    query_embeddings=query_embedding,
+                    n_results=min(fetch_n, 20),
+                    include=["documents", "metadatas", "distances", "embeddings"]
+                )
+            except Exception as exc:
+                print(f"⚠️ Curated collection query failed: {exc}")
+
+        # Merge tier 1 + tier 2 (deduplicate by ID), then fold in curated.
         merged = _merge_results(project_docs_results, full_results)
+        merged = _merge_results(curated_results, merged)
 
         # Order matters: rank on chunks (precise), then expand the winners into whole
         # documents. Expanding first would let one long document dominate scoring.
