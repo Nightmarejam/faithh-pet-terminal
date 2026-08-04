@@ -28,12 +28,24 @@ pdfplumber = None
 # CONFIGURATION
 # ─────────────────────────────────────────────────────────────────────────────
 
-# Destination priority: NAS first, E: drive fallback
+# Destination priority.
+# NOTE 2026-08-01: the original list (/mnt/x, /mnt/z, /mnt/e) was written for the old
+# Windows drive mappings and is dead on servicebox — the NAS `ai/` share is NOT mounted
+# here (only media, backups, archive, personal are). A run against the old list found no
+# writable destination at all. The live corpus lives on the NAS at
+#   /volume1/homelab/ai/misfiled/AI/legal_tax_db
+# which is reachable over SSH but not via a local mount, so we write locally and sync.
 DEST_PRIORITY = [
-    Path("/mnt/x/AI/legal_tax_db"),      # NAS via X: drive
-    Path("/mnt/z/AI/legal_tax_db"),      # NAS via Z: drive (legacy)
-    Path("/mnt/e/legal_tax_db"),         # E: drive fallback
+    Path("/mnt/nas/ai/legal_tax_db"),                 # if the ai/ share ever gets mounted
+    Path("/home/jonat/ai-stack/data/legal_tax_db"),   # servicebox local (788G free) ← current
+    Path("/mnt/x/AI/legal_tax_db"),                   # legacy Windows X: mapping
+    Path("/mnt/e/legal_tax_db"),                      # legacy E: fallback
 ]
+
+# After a run, sync to the NAS copy with:
+#   rsync -av /home/jonat/ai-stack/data/legal_tax_db/ \
+#     nas:/volume1/homelab/ai/misfiled/AI/legal_tax_db/
+# (and consider moving it out of a folder literally named "misfiled")
 
 CHROMADB_HOST = "servicebox.taileb8c60.ts.net"
 CHROMADB_PORT = 8000
@@ -65,6 +77,22 @@ IRS_PDFS = {
     "i1040se_schedule_e":        "https://www.irs.gov/pub/irs-pdf/i1040se.pdf",
     "i1040sse_self_employment":  "https://www.irs.gov/pub/irs-pdf/i1040sse.pdf",
     "i1040sc_schedule_c":        "https://www.irs.gov/pub/irs-pdf/i1040sc.pdf",
+
+    # ── added 2026-08-01 — all URLs HEAD-verified 200/application-pdf before commit ──
+    # Filing gaps found while working the 2024/2025 Form 1065
+    "i1065sk1_partner_k1":       "https://www.irs.gov/pub/irs-pdf/i1065sk1.pdf",
+    "i4562_depreciation_form":   "https://www.irs.gov/pub/irs-pdf/i4562.pdf",
+    "p3402_llc_taxation":        "https://www.irs.gov/pub/irs-pdf/p3402.pdf",
+    "p544_dispositions_assets":  "https://www.irs.gov/pub/irs-pdf/p544.pdf",
+    "p542_corporations":         "https://www.irs.gov/pub/irs-pdf/p542.pdf",
+    # Insolvency / discharge-of-debt tax treatment
+    "p908_bankruptcy_tax_guide": "https://www.irs.gov/pub/irs-pdf/p908.pdf",
+    "p4681_canceled_debts":      "https://www.irs.gov/pub/irs-pdf/p4681.pdf",
+    "f982_debt_discharge":       "https://www.irs.gov/pub/irs-pdf/f982.pdf",
+    # Coalition / exempt-entity formation
+    "p557_taxexempt_status":     "https://www.irs.gov/pub/irs-pdf/p557.pdf",
+    "i1023ez_exempt_app":        "https://www.irs.gov/pub/irs-pdf/i1023ez.pdf",
+    "i1024_exempt_app":          "https://www.irs.gov/pub/irs-pdf/i1024.pdf",
 }
 
 OREGON_HTML = {
@@ -76,6 +104,19 @@ OREGON_HTML = {
     "ors_060_biz_corps": "https://www.oregonlegislature.gov/bills_laws/ors/ors060.html",
     "ors_215_landuse":   "https://www.oregonlegislature.gov/bills_laws/ors/ors215.html",
     "ors_197_planning":  "https://www.oregonlegislature.gov/bills_laws/ors/ors197.html",
+
+    # ── added 2026-08-01 — all HEAD-verified 200 ──
+    # ors_063 already covers LLC dissolution/reinstatement (63.647-63.657) — the sections
+    # that established the 5-year reinstatement window. Keeping it indexed is load-bearing.
+    "ors_065_nonprofit":        "https://www.oregonlegislature.gov/bills_laws/ors/ors065.html",
+    "ors_128_charitable_trusts":"https://www.oregonlegislature.gov/bills_laws/ors/ors128.html",
+    # Debtor exemptions — ORS 18.345/18.348 are the Oregon exemption schedules
+    "ors_018_exemptions":       "https://www.oregonlegislature.gov/bills_laws/ors/ors018.html",
+    # Water / submerged land — the actual controlling law for a floating structure,
+    # which county zoning largely is not (see LOCAL_LAND_USE note below)
+    "ors_274_submerged_lands":  "https://www.oregonlegislature.gov/bills_laws/ors/ors274.html",
+    "ors_196_removal_fill":     "https://www.oregonlegislature.gov/bills_laws/ors/ors196.html",
+    "ors_830_marine_board":     "https://www.oregonlegislature.gov/bills_laws/ors/ors830.html",
 }
 
 FEDERAL_LAW_HTML = {
@@ -84,6 +125,120 @@ FEDERAL_LAW_HTML = {
     "usc_17_copyright":     "https://www.law.cornell.edu/uscode/text/17",
     "usc_15_commerce":      "https://www.law.cornell.edu/uscode/text/15/chapter-2",
     "cfr_26_part1":         "https://www.law.cornell.edu/cfr/text/26/part-1",
+
+    # ── added 2026-08-01 — all HEAD-verified 200 ──
+    # Title 11 overview plus the four sections that decide what a debtor keeps,
+    # what the estate takes, what survives discharge, and what forfeits discharge.
+    "usc_11_bankruptcy":              "https://www.law.cornell.edu/uscode/text/11",
+    "usc_11_522_exemptions":          "https://www.law.cornell.edu/uscode/text/11/522",
+    "usc_11_541_estate_property":     "https://www.law.cornell.edu/uscode/text/11/541",
+    "usc_11_523_discharge_exceptions":"https://www.law.cornell.edu/uscode/text/11/523",
+    "usc_11_727_discharge":           "https://www.law.cornell.edu/uscode/text/11/727",
+    # Federal reservoir permitting — Detroit Lake is an Army Corps project
+    "usc_33_403_rivers_harbors":      "https://www.law.cornell.edu/uscode/text/33/403",
+    "usc_33_1344_cwa_404":            "https://www.law.cornell.edu/uscode/text/33/1344",
+}
+
+# Local / agency land-use sources (added 2026-08-01).
+#
+# WHY THIS IS THIN, DELIBERATELY: Detroit, Oregon sits on Detroit Lake — a federal
+# reservoir behind an Army Corps dam, ringed by Willamette National Forest. For a
+# literally floating structure, the binding constraints are federal and state-agency
+# (Corps §10/§404, USFS special-use permit, DSL submerged-land authorization, Marion
+# County only for any upland component). County zoning is likely the LEAST binding
+# constraint, so the statutes above matter more than the code below.
+#
+# codepublishing.com (the usual host for Marion County Code Titles 16/17) returns
+# HTTP 403 to non-browser user agents — verified. The county's own site serves the
+# Rural Zone Code as per-chapter PDFs and does not block; that is the better source.
+LOCAL_LAND_USE_HTML = {
+    "marion_planning_zoning_index": "https://www.co.marion.or.us/PW/Planning/zoning",
+    "detroit_or_ordinances":        "https://detroitoregon.us/ordinances/",
+    "oregon_statewide_planning_goals":"https://www.oregon.gov/lcd/OP/Pages/Goals.aspx",
+}
+
+# Marion County Rural Zone Code, county-hosted PDFs (Title 17 = outside urban growth
+# boundaries, which is what Detroit-area rural land is). 17.110 verified 200; add
+# further chapters once the applicable zone for a specific parcel is known.
+LOCAL_LAND_USE_PDFS = {
+    "mcc_17_110_general_provisions":
+        "https://www.co.marion.or.us/PW/Planning/zoning/Documents/RuralZoneCode/CHAP17.110.pdf",
+}
+
+# ─────────────────────────────────────────────────────────────────────────────
+# BLANK FILING FORMS  (added 2026-08-01)
+#
+# The corpus had INSTRUCTIONS (i1065, i4562, i1040...) but not the FORMS themselves,
+# so it could explain a return but not be used to prepare one.
+#
+# ⚠ TAX-YEAR SPECIFIC. Tom Cat Sound's first return is a SHORT YEAR ending 2024-12-31,
+# so it must be filed on TY2024 forms, not current-year. IRS keeps prior years under
+# /pub/irs-prior/ with the `name--YYYY.pdf` convention. All HEAD-verified 200.
+#
+# Schedule B-2 (election out of the BBA centralized audit regime) has no TY2024 file in
+# the prior-year archive — the current revision is the one IRS serves, so it's taken from
+# /pub/irs-pdf/. Confirm it's the right revision for a 2024 return before filing.
+# ─────────────────────────────────────────────────────────────────────────────
+TAX_FORMS_PDFS = {
+    # ── TY2024 partnership return ──
+    "f1065_2024":               "https://www.irs.gov/pub/irs-prior/f1065--2024.pdf",
+    "f1065sk1_2024":            "https://www.irs.gov/pub/irs-prior/f1065sk1--2024.pdf",
+    "f4562_2024":               "https://www.irs.gov/pub/irs-prior/f4562--2024.pdf",
+    "i1065_2024":               "https://www.irs.gov/pub/irs-prior/i1065--2024.pdf",
+    "i1065sk1_2024":            "https://www.irs.gov/pub/irs-prior/i1065sk1--2024.pdf",
+    "i4562_2024":               "https://www.irs.gov/pub/irs-prior/i4562--2024.pdf",
+    # BBA elect-out — current revision (no TY2024 in the prior-year archive)
+    "f1065sb2_electout":        "https://www.irs.gov/pub/irs-pdf/f1065sb2.pdf",
+    "i1065sb2_electout":        "https://www.irs.gov/pub/irs-pdf/i1065sb2.pdf",
+    # ── Attachments that Form 1065 page 1 explicitly requires ──
+    # Line 2  "Cost of goods sold (attach Form 1125-A)"
+    # Line 6  "Net gain (loss) from Form 4797, Part II, line 17 (attach Form 4797)"
+    # Which of the two the Reverb equipment sales belong on is an OPEN QUESTION — see
+    # FILING_WORKSPACE.md in the tomcat-sound repo. Both are fetched so either path works.
+    # (Form 1125-A carries its instructions on the form itself; there is no separate i1125a.)
+    "f1125a_cogs_2024":         "https://www.irs.gov/pub/irs-prior/f1125a--2024.pdf",
+    "f4797_2024":               "https://www.irs.gov/pub/irs-prior/f4797--2024.pdf",
+    "i4797_2024":               "https://www.irs.gov/pub/irs-prior/i4797--2024.pdf",
+    "f4797_2025":               "https://www.irs.gov/pub/irs-prior/f4797--2025.pdf",
+    "i4797_2025":               "https://www.irs.gov/pub/irs-prior/i4797--2025.pdf",
+    # ── TY2024 personal ──
+    "f1040_2024":               "https://www.irs.gov/pub/irs-prior/f1040--2024.pdf",
+    "f1040s1_2024":             "https://www.irs.gov/pub/irs-prior/f1040s1--2024.pdf",
+    "f1040se_2024":             "https://www.irs.gov/pub/irs-prior/f1040se--2024.pdf",
+    "i1040gi_2024":             "https://www.irs.gov/pub/irs-prior/i1040gi--2024.pdf",
+    # ── amendment path (TAX_FAST_PATH strategy: file personal now, amend for the K-1) ──
+    "f1040x":                   "https://www.irs.gov/pub/irs-pdf/f1040x.pdf",
+    "i1040x":                   "https://www.irs.gov/pub/irs-pdf/i1040x.pdf",
+    # ── penalty abatement ──
+    "f843_abatement":           "https://www.irs.gov/pub/irs-pdf/f843.pdf",
+    "i843_abatement":           "https://www.irs.gov/pub/irs-pdf/i843.pdf",
+    # ── TY2025 partnership (the still-accruing return) ──
+    # Deliberately using /pub/irs-prior/ rather than /pub/irs-pdf/: the latter silently
+    # rolls to the next tax year, so a re-run months from now would fetch TY2026 under
+    # the same filename. Prior-year URLs are stable. All HEAD-verified 200.
+    "f1065_2025":               "https://www.irs.gov/pub/irs-prior/f1065--2025.pdf",
+    "f1065sk1_2025":            "https://www.irs.gov/pub/irs-prior/f1065sk1--2025.pdf",
+    "f4562_2025":               "https://www.irs.gov/pub/irs-prior/f4562--2025.pdf",
+    "i1065_2025":               "https://www.irs.gov/pub/irs-prior/i1065--2025.pdf",
+    "i1065sk1_2025":            "https://www.irs.gov/pub/irs-prior/i1065sk1--2025.pdf",
+    "i4562_2025":               "https://www.irs.gov/pub/irs-prior/i4562--2025.pdf",
+    # ── TY2025 personal ──
+    "f1040_2025":               "https://www.irs.gov/pub/irs-prior/f1040--2025.pdf",
+    "f1040s1_2025":             "https://www.irs.gov/pub/irs-prior/f1040s1--2025.pdf",
+    "f1040se_2025":             "https://www.irs.gov/pub/irs-prior/f1040se--2025.pdf",
+    "i1040gi_2025":             "https://www.irs.gov/pub/irs-prior/i1040gi--2025.pdf",
+    # ── Oregon ──
+    "or65_partnership_2024":
+        "https://www.oregon.gov/dor/forms/FormsPubs/form-or-65_101-065_2024.pdf",
+    "or65_partnership_2025":
+        "https://www.oregon.gov/dor/forms/FormsPubs/form-or-65_101-065_2025.pdf",
+}
+
+# HTML references that belong with the forms rather than the statute set.
+TAX_FORMS_HTML = {
+    "irm_20_1_1_penalty_relief": "https://www.irs.gov/irm/part20/irm_20-001-001r",
+    "irs_penalty_relief":        "https://www.irs.gov/payments/penalty-relief",
+    "or_dor_forms_index":        "https://www.oregon.gov/dor/forms/Pages/default.aspx",
 }
 
 MUSIC_LAW_PDFS = {
@@ -101,6 +256,14 @@ INDEX_THESE = [
     "usc_17_copyright",
     "circ01_copyright_basics", "circ56a_sound_recordings",
     "circ50_musical_compositions",
+    # ── added 2026-08-01 ──
+    "i1065sk1", "i4562", "p3402", "p544",
+    "p908", "p4681", "f982",
+    "p557", "i1023ez", "i1024",
+    "ors_065_nonprofit", "ors_018_exemptions",
+    "ors_274_submerged_lands", "ors_196_removal_fill", "ors_830_marine_board",
+    "usc_11_", "usc_33_",
+    "mcc_17_", "detroit_or_ordinances", "oregon_statewide_planning_goals",
 ]
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -236,12 +399,30 @@ def chunk_text(text: str, chunk_size: int = CHUNK_SIZE * 4, overlap: int = CHUNK
 
 def get_category(doc_key: str) -> str:
     """Determine category from document key."""
-    if doc_key.startswith(('p', 'i1')):
+    # Check specific prefixes before the broad 'p'/'i1' IRS catch-all, since several
+    # 2026-08 additions (p908, p4681, f982, p557...) are topical rather than generic.
+    if doc_key.startswith('mcc_') or doc_key.startswith(('marion_', 'detroit_', 'oregon_statewide')):
+        return "land_use_local"
+    elif doc_key.startswith(('p908', 'p4681', 'f982')):
+        return "insolvency"
+    elif doc_key.startswith(('p557', 'i1023', 'i1024')):
+        return "exempt_org"
+    elif doc_key.startswith(('p', 'i1', 'f')):
         return "irs_pub"
     elif doc_key.startswith('ors_'):
         if 'landuse' in doc_key or 'planning' in doc_key:
             return "land_use"
+        if doc_key.startswith(('ors_274', 'ors_196', 'ors_830')):
+            return "water_submerged_land"
+        if doc_key.startswith('ors_018'):
+            return "debtor_exemptions"
+        if doc_key.startswith(('ors_065', 'ors_128')):
+            return "nonprofit"
         return "oregon_tax"
+    elif doc_key.startswith('usc_11'):
+        return "bankruptcy"
+    elif doc_key.startswith('usc_33'):
+        return "federal_water"
     elif doc_key.startswith(('usc_', 'cfr_')):
         return "federal_law"
     elif doc_key.startswith('circ'):
@@ -251,7 +432,9 @@ def get_category(doc_key: str) -> str:
 
 def get_jurisdiction(doc_key: str) -> str:
     """Determine jurisdiction from document key."""
-    if doc_key.startswith('ors_'):
+    if doc_key.startswith(('mcc_', 'marion_', 'detroit_')):
+        return "oregon_local"
+    if doc_key.startswith(('ors_', 'oregon_statewide')):
         return "oregon"
     return "federal"
 
@@ -271,11 +454,40 @@ def get_hats(doc_key: str) -> str:
         hats.append("business_law")
     if doc_key in ['ors_215_landuse', 'ors_197_planning']:
         hats.append("land_use")
+    # ── added 2026-08-01 ──
+    if doc_key in ['i1065sk1_partner_k1', 'i4562_depreciation_form', 'p3402_llc_taxation',
+                   'p544_dispositions_assets', 'p542_corporations']:
+        hats.append("tax_partnership")
+    if doc_key in ['p908_bankruptcy_tax_guide', 'p4681_canceled_debts', 'f982_debt_discharge',
+                   'ors_018_exemptions', 'usc_11_bankruptcy', 'usc_11_522_exemptions',
+                   'usc_11_541_estate_property', 'usc_11_523_discharge_exceptions',
+                   'usc_11_727_discharge']:
+        hats.append("insolvency")
+    if doc_key in ['p557_taxexempt_status', 'i1023ez_exempt_app', 'i1024_exempt_app',
+                   'ors_065_nonprofit', 'ors_128_charitable_trusts']:
+        hats.append("coalition_formation")
+    if doc_key in ['ors_274_submerged_lands', 'ors_196_removal_fill', 'ors_830_marine_board',
+                   'usc_33_403_rivers_harbors', 'usc_33_1344_cwa_404',
+                   'mcc_17_110_general_provisions', 'marion_planning_zoning_index',
+                   'detroit_or_ordinances', 'oregon_statewide_planning_goals']:
+        hats.append("land_use")
     return ",".join(hats) if hats else "general"
 
 
 def should_index(doc_key: str) -> bool:
     """Check if document should be indexed to ChromaDB."""
+    # --no-index: fetch to disk only, skip embedding.
+    #
+    # Added 2026-08-01. index_to_chromadb() uses ChromaDB's DEFAULT embedding function
+    # over HttpClient, which means the *server* embeds — i.e. on the Gen8's CPU. The
+    # standing rule for this fleet is to embed on the Windows 3090 and write to Chroma
+    # over the tailnet, precisely to keep sustained compute off the Gen8. Indexing the
+    # 2026-08 additions (ORS chapters ~900KB each, p17 ~3MB, Title 11) is thousands of
+    # chunks and would pin that box for a long stretch.
+    #
+    # Fetching is cheap and safe to run any time. Index as a separate, deliberate pass.
+    if "--no-index" in sys.argv:
+        return False
     for pattern in INDEX_THESE:
         if pattern in doc_key:
             return True
@@ -362,6 +574,8 @@ def main():
         "federal_law": dest / "federal_law",
         "oregon_state": dest / "oregon_state",
         "music_law": dest / "music_law",
+        "land_use_local": dest / "land_use_local",   # added 2026-08-01
+        "filing_forms": dest / "filing_forms",       # added 2026-08-01
     }
     for folder in folders.values():
         folder.mkdir(parents=True, exist_ok=True)
@@ -455,7 +669,90 @@ def main():
                 stats["indexed_chunks"] += chunks
                 if chunks > 0:
                     stats["indexed_docs"] += 1
-        
+
+        time.sleep(REQUEST_DELAY)
+
+    # ─── Download local / agency land-use sources (added 2026-08-01) ───
+    print("\n🗺️ Downloading local & agency land-use sources...")
+    for doc_key, url in LOCAL_LAND_USE_HTML.items():
+        print(f"  → {doc_key}")
+        dest_path = folders["land_use_local"] / f"{doc_key}.html"
+        result = download_file(url, dest_path, is_pdf=False)
+        download_log.append(result)
+
+        if result["status"] == "success":
+            stats["downloaded"] += 1
+        elif result["status"] == "skipped_exists":
+            stats["skipped"] += 1
+        else:
+            stats["failed"] += 1
+            print(f"    ✗ {result.get('error', 'Unknown error')}")
+
+        if should_index(doc_key) and dest_path.exists():
+            text = extract_html_text(dest_path)
+            if text:
+                title = doc_key.replace('_', ' ').upper()
+                chunks = index_to_chromadb(doc_key, f"Local {title}", text, url, dest)
+                stats["indexed_chunks"] += chunks
+                if chunks > 0:
+                    stats["indexed_docs"] += 1
+
+        time.sleep(REQUEST_DELAY)
+
+    # ─── Download blank filing forms (added 2026-08-01) ───
+    # Never indexed: fillable PDFs extract as noise and would pollute retrieval.
+    print("\n🧾 Downloading blank filing forms (TY2024-specific)...")
+    for doc_key, url in TAX_FORMS_PDFS.items():
+        print(f"  → {doc_key}")
+        dest_path = folders["filing_forms"] / f"{doc_key}.pdf"
+        result = download_file(url, dest_path, is_pdf=True)
+        download_log.append(result)
+        if result["status"] == "success":
+            stats["downloaded"] += 1
+        elif result["status"] == "skipped_exists":
+            stats["skipped"] += 1
+        else:
+            stats["failed"] += 1
+            print(f"    ✗ {result.get('error', 'Unknown error')}")
+        time.sleep(REQUEST_DELAY)
+
+    for doc_key, url in TAX_FORMS_HTML.items():
+        print(f"  → {doc_key}")
+        dest_path = folders["filing_forms"] / f"{doc_key}.html"
+        result = download_file(url, dest_path, is_pdf=False)
+        download_log.append(result)
+        if result["status"] == "success":
+            stats["downloaded"] += 1
+        elif result["status"] == "skipped_exists":
+            stats["skipped"] += 1
+        else:
+            stats["failed"] += 1
+            print(f"    ✗ {result.get('error', 'Unknown error')}")
+        time.sleep(REQUEST_DELAY)
+
+    for doc_key, url in LOCAL_LAND_USE_PDFS.items():
+        print(f"  → {doc_key}")
+        dest_path = folders["land_use_local"] / f"{doc_key}.pdf"
+        result = download_file(url, dest_path, is_pdf=True)
+        download_log.append(result)
+
+        if result["status"] == "success":
+            stats["downloaded"] += 1
+        elif result["status"] == "skipped_exists":
+            stats["skipped"] += 1
+        else:
+            stats["failed"] += 1
+            print(f"    ✗ {result.get('error', 'Unknown error')}")
+
+        if should_index(doc_key) and dest_path.exists():
+            text = extract_pdf_text(dest_path)
+            if text:
+                title = doc_key.replace('_', ' ').upper()
+                chunks = index_to_chromadb(doc_key, f"Marion County {title}", text, url, dest)
+                stats["indexed_chunks"] += chunks
+                if chunks > 0:
+                    stats["indexed_docs"] += 1
+
         time.sleep(REQUEST_DELAY)
     
     # ─── Download Music Law PDFs ───
