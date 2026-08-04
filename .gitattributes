@@ -1,3 +1,25 @@
+# Normalise line endings on the way into git.
+#
+# Without this, a Windows checkout committed CRLF into the tree while the Gen8
+# deployment reads and rewrites the same files with LF. `git diff` on the live box
+# then reported 2,079 changed lines across five backend modules when the real
+# change was 186 insertions and 18 deletions -- the signal was buried under a 10x
+# noise floor, and "is production carrying uncommitted fixes?" became unanswerable
+# at a glance.
+#
+# text=auto: store text as LF in the repo, check out native on Windows.
+* text=auto
 
-# --- ingest tooling (Windows) ---
-*.cmd text eol=crlf
+# Always LF: these run on Linux (the Gen8) and CRLF breaks shebangs and heredocs.
+*.sh    text eol=lf
+*.py    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+
+# Never touched -- normalising these corrupts them.
+*.png   binary
+*.jpg   binary
+*.ico   binary
+*.db    binary
+*.sqlite binary
+*.gguf  binary
