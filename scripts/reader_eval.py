@@ -62,14 +62,21 @@ CASES = [
         "why": "the backend names the provider that served the request",
     },
     {
-        "claim": "Cosine similarity of embeddings can distinguish a contradiction "
-                "from an agreement.",
+        # Reworded 2026-08-04. The original read "can distinguish a contradiction
+        # from an agreement", which is defensible either way: the scores ARE
+        # separable, just inverted, so a reader answering SUPPORTS was not wrong.
+        # Labeling that SUPPORTS would teach the reader that
+        # technically-separable-but-backwards counts as working -- the exact
+        # reasoning failure the arbiter exists to catch. The ordering claim below
+        # has no reading under which it holds.
+        "claim": "Cosine similarity scores agreeing statements higher than "
+                "contradicting ones.",
         "evidence": "Using BAAI/bge-base-en-v1.5: three directly contradictory "
                     "sentence pairs scored 0.8439, 0.8965 and 0.9515. A pair that "
                     "genuinely agreed scored 0.5010. An unrelated pair scored 0.5007.",
         "gold": "REFUTES",
-        "why": "contradictions scored higher than agreement, and agreement was "
-               "indistinguishable from unrelated text",
+        "why": "agreement scored 0.5010 while contradictions scored 0.84-0.95, so "
+               "the ordering is inverted",
     },
     {
         "claim": "Ollama is installed and running on the Gen8.",
@@ -90,12 +97,23 @@ CASES = [
                "window",
     },
     {
-        "claim": "pipeline/extract.py is deterministic.",
-        "evidence": "A search of the module for 'random', 'seed', 'temperature', "
-                    "model or API calls, and network access returned no matches. "
-                    "It is a pure function from conversation text to a tiered entry.",
+        # Rewritten 2026-08-04, twice over. The original evidence ended "It is a
+        # pure function from conversation text to a tiered entry" -- an assertion,
+        # not an observation, which handed the reader its answer. Replaced with a
+        # measurement.
+        #
+        # The claim was also narrowed. Running the test surfaced what the code
+        # search had missed: extract.py takes --date, defaulting to
+        # date.today().isoformat(), so the same conversation extracted tomorrow
+        # yields a different entry. The unqualified claim is false. It is the tier
+        # decision that is deterministic, and that is what repair re-derivation
+        # actually depends on.
+        "claim": "extract.py's tier decision is deterministic.",
+        "evidence": "choose_tier was run three times over the same three inputs. "
+                    "The SHA-256 of its output was 6c2b54cca53c0300 on all three "
+                    "runs.",
         "gold": "SUPPORTS",
-        "why": "no nondeterminism sources are present",
+        "why": "identical input produced byte-identical output across repeated runs",
     },
 ]
 
